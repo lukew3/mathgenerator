@@ -1,6 +1,6 @@
 import random
 
-def addition(maxSum, maxAddend):
+def addition(maxSum = 99, maxAddend = 50):
     """
     DESCRIPTION:
         Generates addition problems with positive addends less than maxAddend and sum less than maxSum
@@ -18,7 +18,7 @@ def addition(maxSum, maxAddend):
     solution = str(c)
     return problem, solution
 
-def subtraction(maxDiff, maxMinuend):
+def subtraction(maxMinuend = 99, maxDiff = 99):
     """
     DESCRIPTION:
         Generates subtraction problems with difference between 0 and maxDiff. Minuend and subtrahend are between 0 and maxMinuend.
@@ -35,3 +35,5 @@ def subtraction(maxDiff, maxMinuend):
     problem = str(a) + "-" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+print(subtraction())

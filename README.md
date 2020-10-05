@@ -5,11 +5,11 @@ To try out generators, go to todarith.ml/generate
 
 ## List of Generators
 
-| Skill                      | Id   | Difficulty    | Current Status | Contributors | Example problem | Example Solution  |
-|----------------------------|------|---------------|----------------|--------------|-----------------|-------------------|
-| Addition                   | 2    | Low           | Complete       | @lukew3      | 1+5=            | 6                 |
-| Subtraction                | 3    | Low           | Complete       | @lukew3      | 9-4=            | 5                 |
-| Multiplication             | 4    | Low           | In Progress    | @lukew3      | 4*6=            | 24                |
-| Division                   | 5    | Low           | In Progress    | @lukew3      | 4/2=            | 2                 |
-| Factoring                  | -    | Medium        | Not Started    | -            | x^2+x-6         | (x-2)(x+3)        |
-| Power Rule Differentiation | -    | Medium        | Not Started    | -            | x^5             | 5x^4              |
+| Id   | Skill                      | Ex. problem | Ex. Solution  | Usage                            | Status      |
+|------|----------------------------|-------------|---------------|----------------------------------|-------------|
+| 2    | Addition                   | 1+5=        | 6             | addition(maxSum, maxAddend)      | Complete    |
+| 3    | Subtraction                | 9-4=        | 5             | subtraction(maxMinuend, maxDiff) | Complete    |
+| 4    | Multiplication             | 4*6=        | 24            |                                  | In Progress |
+| 5    | Division                   | 4/2=        | 2             |                                  | In Progress |
+| -    | Factoring                  | x^2+x-6     | (x-2)(x+3)    |                                  | Not Started |
+| -    | Power Rule Differentiation | x^5         | 5x^4          |                                  | Not Started |
