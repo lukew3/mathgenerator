@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='mathGenerator',
-    version='1.0.0',
+    name='mathgenerator',
+    version='1.0.1',
     description='An open source solution for generating math problems',
-    url='https://github.com/todarith/mathGenerator',
+    url='https://github.com/todarith/mathgenerator',
     author='Luke Weiler',
     author_email='lukew25073@gmail.com',
     license='MIT',
@@ -14,7 +14,7 @@ setup(
     ],
     entry_points={
 	   'console_scripts': [
-            'mathGenerator=mathGenerator.mainGen:main'
+            'mathgenerator=mathgenerator.generator:main'
 	   ],
     },
 )

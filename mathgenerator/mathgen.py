@@ -19,7 +19,7 @@ class Generator:
 
 # || Functions
 
-def addition(maxSum = 99, maxAddend = 50):
+def additionFunc(maxSum = 99, maxAddend = 50):
     a = random.randint(0, maxAddend)
     b = random.randint(0, min((maxSum-a), maxAddend)) #The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
     c = a+b
@@ -38,11 +38,6 @@ def subtraction(maxMinuend = 99, maxDiff = 99):
 # || Class Instances
 
 #Format is:
-#g<id> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
-g2 = Generator("Addition", 2, "a+b=", "c", addition)
-g3 = Generator("Subtraction", 3, "a-b=", "c", subtraction)
-
-# || Testing Zone
-print(g2)
-print(g2())
-print(g3())
+#<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
+subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)

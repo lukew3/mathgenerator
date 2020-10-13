@@ -8,26 +8,16 @@ This project was created with contributions at it's core. We need your help to e
 As of right now, all of our generators are being coded in python. Your generator will be an object of the Generator class and will have a function created seperately.
 Your object instantiation should follow this format:
 ```
-#g<id> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+#<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 
 ```
 and look something like this:
 ```
-g2 = Generator("Addition", 2, "a+b=", "c", addition)
+addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 ```
 Your function should look something like the following:
 ```
-def addition(maxSum, maxAddend):
-    """
-    DESCRIPTION:
-        Generates addition problems with positive addends less than maxAddend and sum less than maxSum
-    SKILLID:
-        2
-    PROBLEM:
-        "a+b="
-    SOLUTION:
-        "c"
-    """
+def additionFunc(maxSum, maxAddend):
     a = random.randint(0, maxAddend)
     b = random.randint(0, min((maxSum-a), maxAddend)) #The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
     c = a+b
