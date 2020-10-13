@@ -5,7 +5,17 @@ This project was created with contributions at it's core. We need your help to e
 ## How You Can Help
 
 ### Coding Generators
-As of right now, all of our generators are being coded in python. Each generator should be contained in a function. Your function should look something like the following:
+As of right now, all of our generators are being coded in python. Your generator will be an object of the Generator class and will have a function created seperately.
+Your object instantiation should follow this format:
+```
+#g<id> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+
+```
+and look something like this:
+```
+g2 = Generator("Addition", 2, "a+b=", "c", addition)
+```
+Your function should look something like the following:
 ```
 def addition(maxSum, maxAddend):
     """
@@ -25,6 +35,7 @@ def addition(maxSum, maxAddend):
     solution = str(c)
     return problem, solution
 ```
+
 Before coding, please check README.md to see if someone has already created the generator you plan to make.
 Skillid is determined by the next available id as can be determined in the table.
 
