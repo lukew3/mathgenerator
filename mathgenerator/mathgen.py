@@ -27,7 +27,7 @@ def additionFunc(maxSum = 99, maxAddend = 50):
     solution = str(c)
     return problem, solution
 
-def subtraction(maxMinuend = 99, maxDiff = 99):
+def subtractionFunc(maxMinuend = 99, maxDiff = 99):
     a = random.randint(0, maxMinuend)
     b = random.randint(max(0, (a-maxDiff)), a)
     c = a-b
