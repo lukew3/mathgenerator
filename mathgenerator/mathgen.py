@@ -51,7 +51,7 @@ def divisionFunc(maxRes = 99, maxDivid = 99):
     solution = str(c)
     return problem, solution
 
-def binary_1s_Complement(maxDigits = 10):
+def binaryComplement1sFunc(maxDigits = 10):
     question = ''
     answer = ''    
     for i in range(random.randint(1,maxDigits)): 
@@ -71,5 +71,5 @@ addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 5, "a/b=", "c", divisionFunc)
-binary_complement_1s = Generator("binary_complement_1s", 6, "(1010)=", "0101", binary_1s_Complement)
+binaryComplement1s = Generator("binary_complement_1s", 6, "(1010)=", "0101", binaryComplement1sFunc)
 
