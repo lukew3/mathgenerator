@@ -35,9 +35,18 @@ def subtractionFunc(maxMinuend = 99, maxDiff = 99):
     solution = str(c)
     return problem, solution
 
+def multiplicationFunc(maxProd = 10000, maxTerm = 100):
+    a = random.randint(0, maxTerm)
+    b = random.randint(0, maxTerm)
+    c = a*b
+    problem = str(a) + "*" + str(b) + "="
+    solution = str(c)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
 #<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
+multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
