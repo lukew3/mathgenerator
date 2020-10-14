@@ -79,8 +79,8 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         if i > 0:
             problem += " + "
             solution += " + "
-        coefficient = random.randint(0, maxCoef)
-        exponent = random.randint(0, maxExp)
+        coefficient = random.randint(1, maxCoef)
+        exponent = random.randint(1, maxExp)
         problem += str(coefficient) + "x^" + str(exponent)
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
