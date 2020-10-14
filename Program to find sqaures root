@@ -1,0 +1,4 @@
+# Python program to find square root of a number
+num = int(input(CENTER THE NUMBER'))
+num2 = int(num ** 0.5)
+print('square root of given number is =',num2)
