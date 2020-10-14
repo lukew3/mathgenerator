@@ -71,6 +71,27 @@ def moduloFunc(maxRes = 99, maxModulo= 99):
     solution = str(c)
     return problem, solution
 
+def squareRootFunction(minNo = 1, maxNo = 12):
+    b = random.randint(minNo, maxNo)
+    a = b*b
+    problem = "sqrt(" + str(a) + ")="
+    solution = str(b)
+    return problem, solution
+
+def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
+    numTerms = random.randint(1, maxTerms)
+    problem = ""
+    solution = ""
+    for i in range(numTerms):
+        if i > 0:
+            problem += " + "
+            solution += " + "
+        coefficient = random.randint(1, maxCoef)
+        exponent = random.randint(1, maxExp)
+        problem += str(coefficient) + "x^" + str(exponent)
+        solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -81,4 +102,5 @@ multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 5, "a/b=", "c", divisionFunc)
 binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binaryComplement1sFunc)
 moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
-
+squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
+powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
