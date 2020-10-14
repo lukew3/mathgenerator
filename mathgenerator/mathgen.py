@@ -92,6 +92,25 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
 
+def basicAlgebraFunc(maxVariable = 10):
+    a = random.randint(1, maxVariable)
+    b = random.randint(1, maxVariable)
+    c = random.randint(b, maxVariable)
+    # calculate gcd
+    def calculate_gcd(x, y):
+        while(y):
+            x, y = y, x % y
+        return x
+    i = calculate_gcd((c - b), a)
+    x = f"{(c - b)//i}/{a//i}"
+    if (c - b == 0):
+        x = "0"
+    problem = f"{a}x + {b} = {c}"
+    solution = x
+    return problem, solution
+
+
+
 # || Class Instances
 
 #Format is:
@@ -104,3 +123,8 @@ binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binar
 moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square _Root", 8, "sqrt(a)=", "b", squareRootFunction)
 powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
+
+
+
+
