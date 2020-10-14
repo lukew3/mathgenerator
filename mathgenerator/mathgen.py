@@ -50,6 +50,19 @@ def divisionFunc(maxRes = 99, maxDivid = 99):
     problem = str(a) + "/" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+def binaryComplement1sFunc(maxDigits = 10):
+    question = ''
+    answer = ''    
+    for i in range(random.randint(1,maxDigits)): 
+        temp = str(random.randint(0, 1)) 
+        question += temp
+        answer += "0" if temp == "1" else "1" 
+   
+    problem = question    
+    solution = answer
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -58,4 +71,5 @@ addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 5, "a/b=", "c", divisionFunc)
+binaryComplement1s = Generator("binary_complement_1s", 6, "(1010)=", "0101", binaryComplement1sFunc)
 
