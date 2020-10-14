@@ -99,6 +99,27 @@ def squareFunc(maxSquareNum = 20):
     solution = str(b)
     return problem, solution
 
+def gcdFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"GCD of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
+def lcmFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    c = a * b
+    while(y):
+        x, y = y, x % y
+    d = c // x
+    problem = f"LCM of {a} and {b} = "
+    solution = str(d)
+    return problem, solution
 
 # || Class Instances
 
@@ -113,3 +134,5 @@ moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
 powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
 square = Generator("Square", 10,"a^2", "b", squareFunc)
+lcm = Generator("Lcm_generator", 11, "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
