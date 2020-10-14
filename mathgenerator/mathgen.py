@@ -92,6 +92,28 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
 
+def gcdFunc(maxVal=100):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"GCD of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
+def lcmFunc(maxVal=100):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    c = a * b
+    while(y):
+        x, y = y, x % y
+    d = c // x
+    problem = f"LCM of {a} and {b} = "
+    solution = str(d)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -104,3 +126,5 @@ binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binar
 moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
 powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+lcm = Generator("Lcm_generator", 11, "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
