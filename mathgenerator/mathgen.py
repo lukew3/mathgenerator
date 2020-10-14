@@ -92,6 +92,14 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
 
+def squareFunc(maxSquareNum = 20):
+    a = random.randint(1, maxSquareNum)
+    b = a * a
+    problem = str(a) + "^2" + "="
+    solution = str(b)
+    return problem, solution
+
+
 # || Class Instances
 
 #Format is:
@@ -104,3 +112,4 @@ binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binar
 moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
 powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+square = Generator("Square", 10,"a^2", "b", squareFunc)
