@@ -43,15 +43,13 @@ def multiplicationFunc(maxRes = 99, maxMulti = 99):
     solution = str(c)
     return problem, solution
 
-def moduloFunc(maxRes = 99, maxDivid = 99):
-    a = random.randint(0, maxDivid)
-    b = random.randint(0, min(maxRes, maxDivid))
-    c = a/b
-    problem = str(a) + "/" + str(b) + "="
+def moduloFunc(maxRes = 99, maxModulo= 99):
+    a = random.randint(0, maxModulo)
+    b = random.randint(0, min(maxRes, maxModulo))
+    c = a%b
+    problem = str(a) + "%" + str(b) + "="
     solution = str(c)
     return problem, solution
-
-    return problem, solutionFunc(maxRes = 99, maxModulo= 99):
 # || Class Instances
 
 #Format is:
@@ -60,5 +58,5 @@ addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 5, "a/b=", "c", divisionFunc)
-Modulo division = Generator("Modulo_Division", 5, "a%b=", "c", moduloFunc)
+modulo division = Generator("Modulo_Division", 5, "a%b=", "c", moduloFunc)
 
