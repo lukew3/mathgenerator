@@ -58,5 +58,5 @@ addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 5, "a/b=", "c", divisionFunc)
-modulo division = Generator("Modulo_Division", 5, "a%b=", "c", moduloFunc)
+modulo division = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc)
 
