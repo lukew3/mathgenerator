@@ -19,11 +19,11 @@ problem, solution = mathgen.addition()
 ```
 ## List of Generators
 
-| Id   | Skill                      | Example problem | Example Solution  | Function Name  | Status      |
-|------|----------------------------|-----------------|-------------------|----------------|-------------|
-| 2    | Addition                   | 1+5=            | 6                 | addition       | Complete    |
-| 3    | Subtraction                | 9-4=            | 5                 | subtraction    | Complete    |
-| 4    | Multiplication             | 4*6=            | 24                |                | Not Started |
-| 5    | Division                   | 4/2=            | 2                 |                | Not Started |
-| -    | Factoring                  | x^2+x-6         | (x-2)(x+3)        |                | Not Started |
-| -    | Power Rule Differentiation | x^5             | 5x^4              |                | Not Started |
+| Id   | Skill                      | Example problem | Example Solution  | Function Name      | Status      |
+|------|----------------------------|-----------------|-------------------|--------------------|-------------|
+| 2    | Addition                   | 1+5=            | 6                 | addition           | Complete    |
+| 3    | Subtraction                | 9-4=            | 5                 | subtraction        | Complete    |
+| 4    | Multiplication             | 4*6=            | 24                | multiplication     | Complete    |
+| 5    | Division                   | 4/2=            | 2                 | division           | Complete    |
+| 6    | Binary Complement 1s       | 1010=           | 0101              | binaryComplement1s | Complete    |
+| 7    | Modulo Division            | 10%3=           | 1                 | moduloDivision     | Complete    |
