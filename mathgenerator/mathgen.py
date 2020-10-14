@@ -44,6 +44,7 @@ def multiplicationFunc(maxRes = 99, maxMulti = 99):
         if(c%i == 0): #If the remainder is 0, the number is a factor
             d[j] = i #Store the factor
             j += 1 #Move to the next index
+            i += 1 #Next number
     a = random.randint(0, c) #Generate a multiplicant
     b = c/a #Find the other multiplicant
     problem = str(a) + "*" + str(b) + "="
