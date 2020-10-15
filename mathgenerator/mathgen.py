@@ -216,6 +216,28 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
 
+def factoringFunc(range_x1 = 10, range_x2 = 10):
+  x1 = random.randint(-range_x1, range_x1)
+  x2 = random.randint(-range_x2, range_x2)
+  def intParser(int):
+    if (int == 0):
+      return ""
+    if (int > 0):
+      return "+" + str(int)
+    if (int < 0):
+      return "-" + str(abs(int))
+
+  b = intParser(x1 + x2)
+  c = intParser(x1 * x2)
+
+  if (b == ""):
+    b = "+"
+
+  problem = f"x^2{b}x{c}"
+  x1 = intParser(x1)
+  x2 = intParser(x2)
+  solution = f"(x{x1})(x{x2})"
+  return problem, solution
 
 # || Class Instances
 
@@ -239,3 +261,4 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
+factoring = Generator("Subtraction", 18, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2", factoringFunc)
