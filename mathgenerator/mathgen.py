@@ -206,6 +206,17 @@ def divideFractionsFunc(maxVal=10):
     solution = x
     return problem, solution
 
+def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
+    a = random.randint(0, maxMatrixVal)
+    b = random.randint(0, maxMatrixVal)
+    c = random.randint(0, maxMatrixVal)
+    d = random.randint(0, maxMatrixVal)
+    constant = random.randint(0, int(maxRes/max(a,b,c,d)))
+    problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
+    solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
+    return problem, solution
+
+
 def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	a = random.randint(1, maxA)
 	b = random.randint(1, maxB)
@@ -215,7 +226,6 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) " = " 
 	solution = area
 	return problem, solution
-
 # || Class Instances
 
 #Format is:
@@ -237,4 +247,5 @@ intDivision = Generator("Easy Division", 13,"a/b=","c",divisionToIntFunc)
 decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToBinaryFunc)
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
+intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
 areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
