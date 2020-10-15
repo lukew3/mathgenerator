@@ -36,17 +36,9 @@ def subtractionFunc(maxMinuend = 99, maxDiff = 99):
     return problem, solution
 
 def multiplicationFunc(maxRes = 99, maxMulti = 99):
-    c = random.randint(0, maxMulti) # Generate the solution to the problem
-    i = int(1)
-    j = 0 #Indices for the loop
-    d = [] #Array to store the factors
-    while(i<=c): #Factors are less than or equal to the number
-        if(c%i == 0): #If the remainder is 0, the number is a factor
-            d[j] = i #Store the factor
-            j += 1 #Move to the next index
-            i += 1 #Next number
-    a = random.randint(0, c) #Generate a multiplicant
-    b = c/a #Find the other multiplicant
+    a = random.randint(0, maxMulti)
+    b = random.randint(0, min(int(maxMulti/a), maxRes))
+    c = a*b
     problem = str(a) + "*" + str(b) + "="
     solution = str(c)
     return problem, solution
