@@ -157,12 +157,21 @@ def divisionToIntFunc(maxA=25, maxB=25):
     solution=int(divisor/dividend)
     return problem,solution
 
-def decimalToBinary(max_dec=99):
+def DecimalToBinary(max_dec=99):
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")  
     problem = "Binary of "+str(a)+"="
     solution = str(b)
     return problem, solution
+
+def BinaryToDecimal(max_dig=10):
+	problem=''
+	for i in range(random.randint(1,max_dig)): 
+		temp = str(random.randint(0, 1))
+		problem += temp
+
+	solution=int(problem, 2);
+	return problem, solution
 
 def divideFractionsFunc(maxVal=10):
     a = random.randint(1, maxVal)
@@ -188,7 +197,6 @@ def divideFractionsFunc(maxVal=10):
     solution = x
     return problem, solution
 
-
 # || Class Instances
 
 #Format is:
@@ -207,5 +215,6 @@ gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
 basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
 log = Generator("Logarithm", 13, "log2(8)", "3", logFunc)
 intdivision = Generator("Easy Divisio",14,"a/b=","c",divisionToIntFunc)
-decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",decimalToBinary)
-fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
+decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",DecimalToBinary)
+binarytodecimal = Generator("Binary to Decimal",16,"Decimal of a=","b",BinaryToDecimal)
+fractionDivision = Generator("Fraction Division", 17, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
