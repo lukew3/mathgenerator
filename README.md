@@ -1,22 +1,28 @@
 # mathgenerator
+
 A math problem generator, created for the purpose of giving self-studying students and teaching organizations the means to easily get access to random math problems to suit their needs.
 
-To try out generators, go to https://todarith.ml/generate/
+To try out generators, go to <https://todarith.ml/generate/>
 
 If you have an idea for a generator, please add it as an issue and tag it with the "New Generator" label.
 
 ## Usage
+
 The project can be install via pip
-```
+
+```bash
 pip install mathgenerator
 ```
+
 Here is an example of how you would generate an addition problem:
-```
+
+```python
 from mathgenerator import mathgen
 
 #generate an addition problem
 problem, solution = mathgen.addition()
 ```
+
 ## List of Generators
 
 | Id   | Skill                             | Example problem    | Example Solution  | Function Name            |
@@ -35,3 +41,7 @@ problem, solution = mathgen.addition()
 | 11   | Basic Algebra                     | 9x + 7 = 10        | 1/3               | basicAlgebra             |
 | 12   | Logarithm                         | log3(3)            | 1                 | log                      |
 | 13   | Easy Division                     | 270/15 =           | 18                | intDivision              |
+| 14   | Decimal to Binary                 | Binary of a=       | b                 | decimalToBinary          |
+| 15   | Binary to Decimal                 | Decimal of a=      | b                 | binaryToDecimal          |
+| 16   | Fraction Division                 | (a/b)/(c/d)=       | x/y               | fractionDivision         |
+| 17   | Fraction Division                 | k * [[a,b],[c,d]]= | [[k*a,k*b],[k*c,k*d]] | intMatrix22Multiplication|
