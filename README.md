@@ -19,13 +19,19 @@ problem, solution = mathgen.addition()
 ```
 ## List of Generators
 
-| Id   | Skill                      | Example problem | Example Solution  | Function Name            | Status      |
-|------|----------------------------|-----------------|-------------------|--------------------------|-------------|
-| 0    | Addition                   | 1+5=            | 6                 | addition                 | Complete    |
-| 1    | Subtraction                | 9-4=            | 5                 | subtraction              | Complete    |
-| 2    | Multiplication             | 4*6=            | 24                | multiplication           | Complete    |
-| 3    | Division                   | 4/2=            | 2                 | division                 | Complete    |
-| 4    | Binary Complement 1s       | 1010=           | 0101              | binaryComplement1s       | Complete    |
-| 5    | Modulo Division            | 10%3=           | 1                 | moduloDivision           | Complete    |
-| 6    | Square Root                | sqrt(a)=        | b                 | squareRootFunction       | Complete    |
-| 7    | Power Rule Differentiation | nx^m            | (n*m)x^(m-1)      | powerRuleDifferentiation | Complete    |
+| Id   | Skill                             | Example problem    | Example Solution  | Function Name            |
+|------|-----------------------------------|--------------------|-------------------|--------------------------|
+| 0    | Addition                          | 1+5=               | 6                 | addition                 |
+| 1    | Subtraction                       | 9-4=               | 5                 | subtraction              |
+| 2    | Multiplication                    | 4*6=               | 24                | multiplication           |
+| 3    | Division                          | 4/3=               | 1.33333333        | division                 |
+| 4    | Binary Complement 1s              | 1010=              | 0101              | binaryComplement1s       |
+| 5    | Modulo Division                   | 10%3=              | 1                 | moduloDivision           |
+| 6    | Square Root                       | sqrt(25)=          | 5                 | squareRootFunction       |
+| 7    | Power Rule Differentiation        | 4x^3               | 12x^2             | powerRuleDifferentiation |
+| 8    | Square                            | 4^2                | 16                | square                   |
+| 9    | LCM (Least Common Multiple)       | LCM of 14 and 9 =  | 126               | lcm                      |
+| 10   | GCD (Greatest Common Denominator) | GCD of 18 and 18 = | 18                | gcd                      |
+| 11   | Basic Algebra                     | 9x + 7 = 10        | 1/3               | basicAlgebra             |
+| 12   | Logarithm                         | log3(3)            | 1                 | log                      |
+| 13   | Easy Division                     | 270/15 =           | 18                | intDivision              |
