@@ -1,5 +1,6 @@
 import random
 
+genList = []
 # || Generator class
 
 class Generator:
@@ -9,6 +10,7 @@ class Generator:
         self.generalProb = generalProb
         self.generalSol = generalSol
         self.func = func
+        genList.append(self)
 
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
@@ -16,6 +18,10 @@ class Generator:
     def __call__(self):
         return self.func()
 
+# || CallbyId
+def genById(id):
+    generator = genList[id-2]
+    return(generator())
 
 # || Functions
 
@@ -53,13 +59,13 @@ def divisionFunc(maxRes = 99, maxDivid = 99):
 
 def binaryComplement1sFunc(maxDigits = 10):
     question = ''
-    answer = ''    
-    for i in range(random.randint(1,maxDigits)): 
-        temp = str(random.randint(0, 1)) 
+    answer = ''
+    for i in range(random.randint(1,maxDigits)):
+        temp = str(random.randint(0, 1))
         question += temp
-        answer += "0" if temp == "1" else "1" 
-   
-    problem = question    
+        answer += "0" if temp == "1" else "1"
+
+    problem = question
     solution = answer
     return problem, solution
 
@@ -159,7 +165,7 @@ def divisionToIntFunc(maxA=25, maxB=25):
 
 def decimalToBinary(max_dec=99):
     a = random.randint(1, max_dec)
-    b = bin(a).replace("0b", "")  
+    b = bin(a).replace("0b", "")
     problem = "Binary of "+str(a)+"="
     solution = str(b)
     return problem, solution
