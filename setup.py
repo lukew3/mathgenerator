@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mathgenerator',
-    version='1.1.0',
+    version='1.1.1',
     description='An open source solution for generating math problems',
     url='https://github.com/todarith/mathgenerator',
     author='Luke Weiler',
