@@ -20,7 +20,7 @@ class Generator:
 
 # || CallbyId
 def genById(id):
-    generator = genList[id-2]
+    generator = genList[id]
     return(generator())
 
 # || Functions
@@ -174,18 +174,18 @@ def decimalToBinary(max_dec=99):
 
 #Format is:
 #<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
-addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
-subtraction = Generator("Subtraction", 3, "a-b=", "c", subtractionFunc)
-multiplication = Generator("Multiplication", 4, "a*b=", "c", multiplicationFunc)
-division = Generator("Division", 5, "a/b=", "c", divisionFunc)
-binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binaryComplement1sFunc)
-moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
-squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
-powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
-square = Generator("Square", 10,"a^2", "b", squareFunc)
-lcm = Generator("Lcm_generator", 11, "LCM of a and b = ", "c", lcmFunc)
-gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
-basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
-log = Generator("Logarithm", 13, "log2(8)", "3", logFunc)
-intdivision = Generator("Easy Divisio",14,"a/b=","c",divisionToIntFunc)
-decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",decimalToBinary)
+addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
+subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
+multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
+division = Generator("Division", 3, "a/b=", "c", divisionFunc)
+binaryComplement1s = Generator("binary_complement_1s", 4, "1010=", "0101", binaryComplement1sFunc)
+moduloDivision = Generator("Modulo_Division", 5, "a%b=", "c", moduloFunc)
+squareRoot = Generator("Square_Root", 6, "sqrt(a)=", "b", squareRootFunction)
+powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 7, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+square = Generator("Square", 8,"a^2", "b", squareFunc)
+lcm = Generator("Lcm_generator", 9, "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("Gcd_generator", 10, "GCD of a and b = ", "c", gcdFunc)
+basicAlgebra = Generator("Basic_Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
+log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)
+intdivision = Generator("Easy Divisio", 13,"a/b=","c",divisionToIntFunc)
+decimaltobinary = Generator("Decimal to Binary", 14,"Binary of a=","b",decimalToBinary)
