@@ -215,6 +215,14 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
+def MidPointOfTwoPoint(maxValue=20):
+	x1=random.randint(-20,maxValue)
+	y1=random.randint(-20,maxValue)
+	x2=random.randint(-20,maxValue)
+	y2=random.randint(-20,maxValue)
+	problem=f"({x1},{y1}),({x2},{y2})="
+	solution=f"({(x1+x2)/2},{(y1+y2)/2})"
+	return problem,solution
 
 
 # || Class Instances
@@ -239,3 +247,4 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
+midPointOfTwoPoint=Generator("Midpoint of the two point",18,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPoint)
