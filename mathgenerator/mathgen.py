@@ -216,16 +216,40 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
 
+def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
+	a = random.randint(1, maxA)
+	b = random.randint(1, maxB)
+	c = random.randint(1, maxC)
+	s = (a+b+c)/2
+	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = " 
+	solution = area
+	return problem, solution
+
+def isTriangleValidFunc(maxSideLength = 50):
+    sideA = random.randint(1, maxSideLength)
+    sideB = random.randint(1, maxSideLength)
+    sideC = random.randint(1, maxSideLength)
+    sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
+    sides = [sideC, sideA, sideB]
+    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2]) 
+    problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
+    if exists:
+        solution = "Yes"
+        return problem, solution
+    solution = "No"
+    return problem, solution
+ 
 def factoringFunc(range_x1 = 10, range_x2 = 10):
   x1 = random.randint(-range_x1, range_x1)
   x2 = random.randint(-range_x2, range_x2)
-  def intParser(int):
-    if (int == 0):
+  def intParser(z):
+    if (z == 0):
       return ""
-    if (int > 0):
-      return "+" + str(int)
-    if (int < 0):
-      return "-" + str(abs(int))
+    if (z > 0):
+      return "+" + str(z)
+    if (z < 0):
+      return "-" + str(abs(z))
 
   b = intParser(x1 + x2)
   c = intParser(x1 * x2)
@@ -261,4 +285,6 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
-factoring = Generator("Subtraction", 18, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2", factoringFunc)
+areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
+doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
+factoring = Generator("Subtraction", 20, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
