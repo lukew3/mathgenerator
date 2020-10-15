@@ -140,6 +140,13 @@ def basicAlgebraFunc(maxVariable = 10):
     solution = x
     return problem, solution
 
+def logFunc(maxBase=3, maxVal=8):
+    a = random.randint(1, maxVal)
+    b = random.randint(2, maxBase)
+    c = pow(b,a)
+    problem = "log"+str(b)+"("+str(c)+")"
+    solution = str(a)
+    return problem, solution
 
 # || Class Instances
 
@@ -157,3 +164,4 @@ square = Generator("Square", 10,"a^2", "b", squareFunc)
 lcm = Generator("Lcm_generator", 11, "LCM of a and b = ", "c", lcmFunc)
 gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
 basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
+log = Generator("Logarithm", 13, "log2(8)", "3", logFunc)
