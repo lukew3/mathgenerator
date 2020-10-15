@@ -163,11 +163,44 @@ def divisionToIntFunc(maxA=25, maxB=25):
     solution=int(divisor/dividend)
     return problem,solution
 
-def decimalToBinary(max_dec=99):
+def DecimalToBinary(max_dec=99):
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")
     problem = "Binary of "+str(a)+"="
     solution = str(b)
+    return problem, solution
+
+def BinaryToDecimal(max_dig=10):
+	problem=''
+	for i in range(random.randint(1,max_dig)): 
+		temp = str(random.randint(0, 1))
+		problem += temp
+
+	solution=int(problem, 2);
+	return problem, solution
+
+def divideFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    while (a == b):
+        b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+    def calculate_gcd(x, y):
+        while(y):
+            x, y = y, x % y
+        return x
+    tmp_n = a * d
+    tmp_d = b * c
+    gcd = calculate_gcd(tmp_n, tmp_d)
+    x = f"{tmp_n//gcd}/{tmp_d//gcd}"
+    if (tmp_d == 1 or tmp_d == gcd):
+        x = f"{tmp_n//gcd}"
+    # for equal numerator and denominators
+    problem = f"({a}/{b})/({c}/{d})"
+    solution = x
     return problem, solution
 
 # || Class Instances
@@ -188,4 +221,7 @@ gcd = Generator("Gcd_generator", 10, "GCD of a and b = ", "c", gcdFunc)
 basicAlgebra = Generator("Basic_Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
 log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)
 intdivision = Generator("Easy Divisio", 13,"a/b=","c",divisionToIntFunc)
-decimaltobinary = Generator("Decimal to Binary", 14,"Binary of a=","b",decimalToBinary)
+
+decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",DecimalToBinary)
+binarytodecimal = Generator("Binary to Decimal",16,"Decimal of a=","b",BinaryToDecimal)
+fractionDivision = Generator("Fraction Division", 17, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
