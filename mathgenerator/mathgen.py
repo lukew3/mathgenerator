@@ -156,6 +156,14 @@ def divisionToIntFunc(maxA=25, maxB=25):
     problem = f"{divisor}/{dividend} = "
     solution=int(divisor/dividend)
     return problem,solution
+
+def decimalToBinary(max_dec=99):
+    a = random.randint(1, max_dec)
+    b = bin(a).replace("0b", "")  
+    problem = "Binary of "+str(a)+"="
+    solution = str(b)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -174,3 +182,4 @@ gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
 basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
 log = Generator("Logarithm", 13, "log2(8)", "3", logFunc)
 intdivision = Generator("Easy Divisio",14,"a/b=","c",divisionToIntFunc)
+decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","c",decimalToBinary)
