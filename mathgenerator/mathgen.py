@@ -217,6 +217,15 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     return problem, solution
 
 
+def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
+	a = random.randint(1, maxA)
+	b = random.randint(1, maxB)
+	c = random.randint(1, maxC)
+	s = (a+b+c)/2
+	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) " = " 
+	solution = area
+	return problem, solution
 # || Class Instances
 
 #Format is:
@@ -239,3 +248,4 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
+areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
