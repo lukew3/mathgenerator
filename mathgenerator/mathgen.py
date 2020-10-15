@@ -77,7 +77,7 @@ def moduloFunc(maxRes = 99, maxModulo= 99):
     solution = str(c)
     return problem, solution
 
-def squareRootFunction(minNo = 1, maxNo = 12):
+def squareRootFunc(minNo = 1, maxNo = 12):
     b = random.randint(minNo, maxNo)
     a = b*b
     problem = "sqrt(" + str(a) + ")="
@@ -163,16 +163,16 @@ def divisionToIntFunc(maxA=25, maxB=25):
     solution=int(divisor/dividend)
     return problem,solution
 
-def DecimalToBinary(max_dec=99):
+def DecimalToBinaryFunc(max_dec=99):
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")
     problem = "Binary of "+str(a)+"="
     solution = str(b)
     return problem, solution
 
-def BinaryToDecimal(max_dig=10):
+def BinaryToDecimalFunc(max_dig=10):
 	problem=''
-	for i in range(random.randint(1,max_dig)): 
+	for i in range(random.randint(1,max_dig)):
 		temp = str(random.randint(0, 1))
 		problem += temp
 
@@ -211,17 +211,16 @@ addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 3, "a/b=", "c", divisionFunc)
-binaryComplement1s = Generator("binary_complement_1s", 4, "1010=", "0101", binaryComplement1sFunc)
-moduloDivision = Generator("Modulo_Division", 5, "a%b=", "c", moduloFunc)
-squareRoot = Generator("Square_Root", 6, "sqrt(a)=", "b", squareRootFunction)
-powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 7, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+binaryComplement1s = Generator("Binary Complement 1s", 4, "1010=", "0101", binaryComplement1sFunc)
+moduloDivision = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc)
+squareRoot = Generator("Square Root", 6, "sqrt(a)=", "b", squareRootFunc)
+powerRuleDifferentiation = Generator("Power Rule Differentiation", 7, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
 square = Generator("Square", 8,"a^2", "b", squareFunc)
-lcm = Generator("Lcm_generator", 9, "LCM of a and b = ", "c", lcmFunc)
-gcd = Generator("Gcd_generator", 10, "GCD of a and b = ", "c", gcdFunc)
-basicAlgebra = Generator("Basic_Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
+lcm = Generator("LCM (Least Common Multiple)", 9, "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("GCD (Greatest Common Denominator)", 10, "GCD of a and b = ", "c", gcdFunc)
+basicAlgebra = Generator("Basic Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
 log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)
-intdivision = Generator("Easy Divisio", 13,"a/b=","c",divisionToIntFunc)
-
-decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",DecimalToBinary)
-binarytodecimal = Generator("Binary to Decimal",16,"Decimal of a=","b",BinaryToDecimal)
-fractionDivision = Generator("Fraction Division", 17, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
+intDivision = Generator("Easy Division", 13,"a/b=","c",divisionToIntFunc)
+decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToBinaryFunc)
+binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
+fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
