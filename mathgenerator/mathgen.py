@@ -37,7 +37,7 @@ def subtractionFunc(maxMinuend = 99, maxDiff = 99):
 
 def multiplicationFunc(maxRes = 99, maxMulti = 99):
     a = random.randint(0, maxMulti)
-    b = random.randint(0, min(maxRes, maxMulti))
+    b = random.randint(0, min(int(maxMulti/a), maxRes))
     c = a*b
     problem = str(a) + "*" + str(b) + "="
     solution = str(c)
@@ -92,6 +92,78 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
 
+def squareFunc(maxSquareNum = 20):
+    a = random.randint(1, maxSquareNum)
+    b = a * a
+    problem = str(a) + "^2" + "="
+    solution = str(b)
+    return problem, solution
+
+def gcdFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"GCD of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
+def lcmFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    c = a * b
+    while(y):
+        x, y = y, x % y
+    d = c // x
+    problem = f"LCM of {a} and {b} = "
+    solution = str(d)
+    return problem, solution
+
+def basicAlgebraFunc(maxVariable = 10):
+    a = random.randint(1, maxVariable)
+    b = random.randint(1, maxVariable)
+    c = random.randint(b, maxVariable)
+    # calculate gcd
+    def calculate_gcd(x, y):
+        while(y):
+            x, y = y, x % y
+        return x
+    i = calculate_gcd((c - b), a)
+    x = f"{(c - b)//i}/{a//i}"
+    if (c - b == 0):
+        x = "0"
+    elif a == 1 or a == i :
+        x = f"{c - b}"
+    problem = f"{a}x + {b} = {c}"
+    solution = x
+    return problem, solution
+
+def logFunc(maxBase=3, maxVal=8):
+    a = random.randint(1, maxVal)
+    b = random.randint(2, maxBase)
+    c = pow(b,a)
+    problem = "log"+str(b)+"("+str(c)+")"
+    solution = str(a)
+    return problem, solution
+
+def divisionToIntFunc(maxA=25, maxB=25):
+    a = random.randint(1,maxA)
+    b = random.randint(1,maxB)
+    divisor = a*b
+    dividend=random.choice([a,b])
+    problem = f"{divisor}/{dividend} = "
+    solution=int(divisor/dividend)
+    return problem,solution
+
+def decimalToBinary(max_dec=99):
+    a = random.randint(1, max_dec)
+    b = bin(a).replace("0b", "")  
+    problem = "Binary of "+str(a)+"="
+    solution = str(b)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -104,3 +176,10 @@ binaryComplement1s = Generator("binary_complement_1s", 6, "1010=", "0101", binar
 moduloDivision = Generator("Modulo_Division", 7, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square_Root", 8, "sqrt(a)=", "b", squareRootFunction)
 powerRuleDifferentiation = Generator("Power_Rule_Differentiation", 9, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+square = Generator("Square", 10,"a^2", "b", squareFunc)
+lcm = Generator("Lcm_generator", 11, "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("Gcd_generator", 12, "GCD of a and b = ", "c", gcdFunc)
+basicAlgebra = Generator("Basic_Algebra", 13, "ax + b = c", "d", basicAlgebraFunc)
+log = Generator("Logarithm", 13, "log2(8)", "3", logFunc)
+intdivision = Generator("Easy Divisio",14,"a/b=","c",divisionToIntFunc)
+decimaltobinary = Generator("Decimal to Binary",15,"Binary of a=","b",decimalToBinary)
