@@ -1,8 +1,8 @@
 import random
 
 genList = []
-# || Generator class
 
+# || Generator class
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
         self.title = title
@@ -10,7 +10,7 @@ class Generator:
         self.generalProb = generalProb
         self.generalSol = generalSol
         self.func = func
-        genList.append(self)
+        genList.append([id, title, self])
 
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
@@ -18,12 +18,15 @@ class Generator:
     def __call__(self):
         return self.func()
 
-# || CallbyId
+# || Non-generator Functions
 def genById(id):
-    generator = genList[id]
+    generator = genList[id][2]
     return(generator())
 
-# || Functions
+def getGenList():
+    return(genList)
+
+# || Generator Functions
 
 def additionFunc(maxSum = 99, maxAddend = 50):
     a = random.randint(0, maxAddend)
