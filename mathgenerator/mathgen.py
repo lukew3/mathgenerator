@@ -276,6 +276,14 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+def thirdAngleOfTriangleFunc(maxAngle=89):
+	angle1 = random.randint(1, maxAngle)
+	angle2 = random.randint(1, maxAngle)
+	angle3 = 180 - (angle1 + angle2)
+	problem = f"Third angle of triangle with angles {angle1} and {angle2} = "
+	solution = angle3
+	return problem, solution
+
 def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
@@ -347,5 +355,6 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
