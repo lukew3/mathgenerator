@@ -638,6 +638,48 @@ def simpleInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10):
         solution = round(d, 2)
         return problem, solution
 
+def matrixMultiplicationFunc(maxVal=100):
+    m= random.randint(2, 10)
+    n= random.randint(2, 10)
+    k= random.randint(2, 10)
+    #generate matrices a and b
+    a=[]
+    for r in range(m):
+        a.append([])
+        for c in range(n):
+            a[r].append(random.randint(-maxVal,maxVal))
+    
+    b=[]
+    for r in range(n):
+        b.append([])
+        for c in range(k):
+            b[r].append(random.randint(-maxVal, maxVal))
+
+    res= []
+    a_string= matrixMultiplicationFuncHelper(a)
+    b_string= matrixMultiplicationFuncHelper(b)
+
+    for r in range(m):
+        res.append([])
+        for c in range(k):
+            temp= 0
+            for t in range(n):
+                temp+=a[r][t]*b[t][c]
+            res[r].append(temp)
+    problem= f"Multiply \n{a_string}\n and \n\n{b_string}" #consider using a, b instead of a_string, b_string if the problem doesn't look right
+    solution= matrixMultiplicationFuncHelper(res)
+    return problem, solution
+
+def matrixMultiplicationFuncHelper(inp):
+    m= len(inp)
+    n= len(inp[0])
+    string= ""
+    for i in range(m):
+        for j in range(n):
+            string+=f"{inp[i][j]: 6d}"
+            string+="  "
+        string+="\n"
+    return string
 # || Class Instances
 
 #Format is:
@@ -689,3 +731,5 @@ permutations= Generator("Permutations",42, "Total permutations of 4 objects at a
 vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
 compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
 simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
+matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
+
