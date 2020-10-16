@@ -222,7 +222,7 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	c = random.randint(1, maxC)
 	s = (a+b+c)/2
 	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) " = " 
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = " 
 	solution = area
 	return problem, solution
 
