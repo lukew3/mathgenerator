@@ -276,12 +276,13 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
-def thirdAngleOfTriangle(maxAngle=180):
+def thirdAngleOfTriangleFunc(maxAngle=180):
 	angle1 = random.randint(1, maxAngle)
 	x1 = random.randint(1, maxAngle)
 	angle3 = 180 - (angle1 + angle2)
 	problem = "Third angle = "
-	
+	solution = angle3
+	return problem, solution
 
 # || Class Instances
 
@@ -309,3 +310,4 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
