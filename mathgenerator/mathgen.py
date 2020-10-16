@@ -591,7 +591,7 @@ def simpleInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10):
         b = random.randint(1, maxRate)
         c = random.randint(1, maxTime)
         d = (a*b*c)/100
-        problem = "Simple interest for a principle amount of " + str(a) +" dollars, " + str(b) + "%% rate of interest and for a time period of " + str(c) + " years is = "
+        problem = "Simple interest for a principle amount of " + str(a) +" dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
         solution = round(d, 2)
         return problem, solution
 
@@ -642,4 +642,4 @@ surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
-simpleInterest = Generator("Simple Interest", 42, "Simple interest for a principle amount of a dollars, b%% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
+simpleInterest = Generator("Simple Interest", 42, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
