@@ -15,8 +15,8 @@ class Generator:
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
 
-    def __call__(self):
-        return self.func()
+    def __call__(self, **kwargs):
+        return self.func(**kwargs)
 
 # || Non-generator Functions
 def genById(id):
@@ -339,6 +339,114 @@ def distanceTwoPointsFunc(maxValXY = 20, minValXY=-20):
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
 
+def pythagoreanTheoremFunc(maxLength = 20):
+    a = random.randint(1, maxLength)
+    b = random.randint(1, maxLength)
+    c = (a**2 + b**2)**0.5
+    problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
+    solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
+    return problem, solution
+
+def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
+    if n > 10:
+        print("[!] n cannot be greater than 10")
+        return None, None
+
+    vars = ['x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g'][:n]
+    soln = [ random.randint(-varRange, varRange) for i in range(n) ]
+
+    problem = list()
+    solution = ", ".join(["{} = {}".format(vars[i], soln[i]) for i in range(n)])
+    for _ in range(n):
+        coeff = [ random.randint(-coeffRange, coeffRange) for i in range(n) ]
+        res = sum([ coeff[i] * soln[i] for i in range(n)])
+        
+        prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
+        while "" in prob:
+            prob.remove("")
+        prob = " + ".join(prob) + " = " + str(res)
+        problem.append(prob)
+    
+    problem = "\n".join(problem)
+    return problem, solution
+
+def primeFactorsFunc(minVal=1, maxVal=200):
+    a = random.randint(minVal, maxVal)
+    n = a
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    problem = f"Find prime factors of {a}"
+    solution = f"{factors}"
+    return problem, solution
+
+def multiplyFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+    def calculate_gcd(x, y):
+        while(y):
+            x, y = y, x % y
+        return x
+    tmp_n = a * c
+    tmp_d = b * d
+    gcd = calculate_gcd(tmp_n, tmp_d)
+    x = f"{tmp_n//gcd}/{tmp_d//gcd}"
+    if (tmp_d == 1 or tmp_d == gcd):
+        x = f"{tmp_n//gcd}"
+    problem = f"({a}/{b})*({c}/{d})"
+    solution = x
+    return problem, solution
+
+def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
+    sideNum = random.randint(minVal, maxVal)
+    problem = f"Find the angle of a regular polygon with {sideNum} sides"
+    exteriorAngle = round((360/sideNum),2)
+    solution = 180 - exteriorAngle
+    return problem, solution 
+  
+def combinationsFunc(maxlength=20):
+    def factorial(a):
+        d=1
+        for i in range(a):
+            a=(i+1)*d
+            d=a
+        return d
+    a= random.randint(10,maxlength)
+    b=random.randint(0,9)
+    solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
+    problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
+    
+    return problem, solution
+  
+
+def factorialFunc(maxInput = 6):
+    a = random.randint(0, maxInput)
+    n = a
+    problem = str(a) + "! = "
+    b = 1
+    if a == 1:
+        solution = str(b)
+        return problem, solution
+    else:
+        while n > 0:
+            b *= n
+            n = n - 1
+        solution = str(b)
+        return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -364,8 +472,15 @@ intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 
 areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
-factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
+pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
+linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
+primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
+fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
+angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
+combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
