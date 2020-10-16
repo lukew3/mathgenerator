@@ -227,7 +227,7 @@ def primeFactors(minVal=10, maxVal=999):
             a //= i
             factors.append(i)
     if a > 1:
-        factors.append(n)
+        factors.append(a)
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
     return problem, solution
