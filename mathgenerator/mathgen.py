@@ -483,4 +483,4 @@ primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b,
 fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
-factorial = Generator("Factorial", 28, "a! = ", "b", factorialFunc)
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
