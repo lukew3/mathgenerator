@@ -276,6 +276,13 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+def thirdAngleOfTriangle(maxAngle=180):
+	angle1 = random.randint(1, maxAngle)
+	x1 = random.randint(1, maxAngle)
+	angle3 = 180 - (angle1 + angle2)
+	problem = "Third angle = "
+	
+
 # || Class Instances
 
 #Format is:
