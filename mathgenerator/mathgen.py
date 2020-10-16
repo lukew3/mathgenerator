@@ -391,7 +391,6 @@ def commonFactors(maxVal=100):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
-    c = a * b
     if (x < y):
         min = x
     else:
