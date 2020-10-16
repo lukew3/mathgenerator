@@ -276,6 +276,14 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+def pythagoreanTheoremFunc(maxLength = 20):
+    a = random.randint(1, maxLength)
+    b = random.randint(1, maxLength)
+    c = (a**2 + b**2)**0.5
+    problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
+    solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -302,3 +310,4 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+pythagoreanTheorem = Generator("Pythagorean Theorem", 22, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
