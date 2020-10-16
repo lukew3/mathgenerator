@@ -308,6 +308,16 @@ def thirdAngleOfTriangleFunc(maxAngle=89):
 	solution = angle3
 	return problem, solution
 
+def fourthAngleOfQuadriFunc(maxAngle = 180):
+    angle1 = random.randint(1, maxAngle)
+    angle2 = random.randint(1, 240-angle1)
+    angle3 = random.randint(1, 340-(angle1 + angle2))
+    sum_ = angle1 + angle2 + angle3
+    angle4 = 360 - sum_
+    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
+    solution = angle4
+    return problem, solution
+
 def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
@@ -657,3 +667,4 @@ commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} =
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
 CubeRoot = Generator("Cube Root",42,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 43, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",44,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
