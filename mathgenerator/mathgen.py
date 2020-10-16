@@ -386,16 +386,20 @@ def primeFactors(minVal=1, maxVal=200):
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
     return problem, solution
-def factorial(maxlength=10):
-    a=random.randint(0,maxlength)
 
-    d=1
-    problem=a
-    for i in range(a):
-        a=(i+1)*d
-        d=a
-    solution=d
-    return " The Factorial for {} is {} ".format(problem, solution)
+def permutationFunc(maxlength=20):
+    def factorial(a):
+        d=1
+        for i in range(a):
+            a=(i+1)*d
+            d=a
+        return d
+    a= random.randint(10,maxlength)
+    b=random.randint(0,9)
+    solution= int(factorial(a)/(factorial(a-b)))
+    problem= "Number of combinations from {} objects picked {} at a time =  ".format(a,b)
+    return problem, solution
+
 
 # || Class Instances
 
@@ -430,4 +434,6 @@ distance2Point = Generator("Distance between 2 points", 24, "Find the distance b
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
 primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
-factorials = Generator("Factorials", 28, "Factorial of a = ", "xyz", factorial)
+
+permutations= Generator("Permutations",28, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
+
