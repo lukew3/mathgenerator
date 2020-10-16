@@ -432,7 +432,6 @@ def combinationsFunc(maxlength=20):
     
     return problem, solution
   
-
 def factorialFunc(maxInput = 6):
     a = random.randint(0, maxInput)
     n = a
@@ -514,6 +513,24 @@ def volumeCone(maxRadius = 20, maxHeight = 50, unit = 'm'):
     solution = f"{ans} {unit}^3"
     return problem, solution
 
+def commonFactorsFunc(maxVal=100):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    if (x < y):
+        min = x
+    else:
+        min = y
+    count = 0
+    arr = []
+    for i in range(1, min + 1):
+        if (x % i == 0):
+            if (y % i == 0):
+                count = count + 1
+                arr.append(i)
+    problem = f"Common Factors of {a} and {b} = "
+    solution = arr
+    return problem, solution
 # || Class Instances
 
 #Format is:
@@ -559,3 +576,4 @@ volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides
 volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
 surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
+commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
