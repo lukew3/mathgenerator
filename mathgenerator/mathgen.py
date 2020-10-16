@@ -216,7 +216,7 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
 
-def primeFactors(minVal=10, maxVal=999):
+def primeFactors(minVal=1, maxVal=200):
     a = random.randint(minVal, maxVal)
     n = a
     i = 2
