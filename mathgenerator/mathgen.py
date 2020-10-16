@@ -215,7 +215,32 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
-def MidPointOfTwoPoint(maxValue=20):
+
+def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
+	a = random.randint(1, maxA)
+	b = random.randint(1, maxB)
+	c = random.randint(1, maxC)
+	s = (a+b+c)/2
+	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) " = " 
+	solution = area
+	return problem, solution
+
+def isTriangleValidFunc(maxSideLength = 50):
+    sideA = random.randint(1, maxSideLength)
+    sideB = random.randint(1, maxSideLength)
+    sideC = random.randint(1, maxSideLength)
+    sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
+    sides = [sideC, sideA, sideB]
+    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2]) 
+    problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
+    if exists:
+        solution = "Yes"
+        return problem, solution
+    solution = "No"
+    return problem, solution
+  
+def MidPointOfTwoPointFunc(maxValue=20):
 	x1=random.randint(-20,maxValue)
 	y1=random.randint(-20,maxValue)
 	x2=random.randint(-20,maxValue)
@@ -223,8 +248,6 @@ def MidPointOfTwoPoint(maxValue=20):
 	problem=f"({x1},{y1}),({x2},{y2})="
 	solution=f"({(x1+x2)/2},{(y1+y2)/2})"
 	return problem,solution
-
-
 # || Class Instances
 
 #Format is:
@@ -247,4 +270,6 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
-midPointOfTwoPoint=Generator("Midpoint of the two point",18,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPoint)
+areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
+doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
+midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
