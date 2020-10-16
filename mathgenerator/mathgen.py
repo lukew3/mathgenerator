@@ -276,6 +276,19 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+def distanceFunc(x1 = 20,y1 = 20,x2 = 20,y2 = 20):
+    x1 = random.randint(-20, x1)
+    y1 = random.randint(-20, y1)
+
+    x2 = random.randint(-20, x2)
+    y2 = random.randint(-20, y2)
+
+    dis = ((((x2 - x1 )**2) + ((y2-y1)**2) )**0.5)
+
+    problem = "Distance between the points ("+str(x1)+","+str(y1)+")"+" and ("+str(x2)+","+str(y2)+") is="
+    solution = str(dis)
+    return problem,solution
+
 # || Class Instances
 
 #Format is:
@@ -302,3 +315,4 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+distanceBetween2Points = Generator("Distance Between 2 points",21,"Distance between 2 points (x1,y1) & (x2,y2) is = ","distance",distanceFunc)
