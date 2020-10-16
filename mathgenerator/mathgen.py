@@ -89,13 +89,6 @@ def squareRootFunc(minNo = 1, maxNo = 12):
     solution = str(b)
     return problem, solution
 
-def cubeRootFunc(minNo = 1, maxNo = 1000):
-    b = random.randint(minNo, maxNo)
-    a = b**(1/3)
-    problem = "cuberoot of " + str(b) + " upto 2 decimal places is:"
-    solution = str(round(a,2))
-    return problem, solution
-
 def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
     numTerms = random.randint(1, maxTerms)
     problem = ""
@@ -108,21 +101,6 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         exponent = random.randint(1, maxExp)
         problem += str(coefficient) + "x^" + str(exponent)
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
-    return problem, solution
-
-def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
-    numTerms = random.randint(1, maxTerms)
-    problem = ""
-    solution = ""
-    for i in range(numTerms):
-        if i > 0:
-            problem += " + "
-            solution += " + "
-        coefficient = random.randint(1, maxCoef)
-        exponent = random.randint(1, maxExp)
-        problem += str(coefficient) + "x^" + str(exponent)
-        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
-    solution = solution + " + c"
     return problem, solution
 
 def squareFunc(maxSquareNum = 20):
@@ -308,16 +286,6 @@ def thirdAngleOfTriangleFunc(maxAngle=89):
 	solution = angle3
 	return problem, solution
 
-def fourthAngleOfQuadriFunc(maxAngle = 180):
-    angle1 = random.randint(1, maxAngle)
-    angle2 = random.randint(1, 240-angle1)
-    angle3 = random.randint(1, 340-(angle1 + angle2))
-    sum_ = angle1 + angle2 + angle3
-    angle4 = 360 - sum_
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
-    solution = angle4
-    return problem, solution
-
 def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
@@ -452,6 +420,7 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     return problem, solution 
   
 def combinationsFunc(maxlength=20):
+
     def factorial(a):
         d=1
         for i in range(a):
@@ -460,6 +429,9 @@ def combinationsFunc(maxlength=20):
         return d
     a= random.randint(10,maxlength)
     b=random.randint(0,9)
+
+
+
     solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
     
@@ -618,6 +590,130 @@ def intersectionOfTwoLinesFunc(
         solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
     return problem, solution
 
+def permutationFunc(maxlength=20):
+    a = random.randint(10,maxlength)
+    b = random.randint(0,9)
+    solution= int(math.factorial(a)/(math.factorial(a-b)))
+    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
+    return problem, solution
+
+def vectorCrossFunc(minVal=-20, maxVal=20):
+    a = [random.randint(minVal, maxVal) for i in range(3)]
+    b = [random.randint(minVal, maxVal) for i in range(3)]
+    c = [a[1]*b[2] - a[2]*b[1],
+         a[2]*b[0] - a[0]*b[2],
+         a[0]*b[1] - a[1]*b[0]]
+    return str(a) + " X " + str(b) + " = ", str(c)
+
+def compareFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+
+    first=a/b
+    second=c/d
+
+    if(first>second):
+        solution=">"
+    elif(first<second):
+        solution="<"
+    else:
+        solution="="
+    
+    problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
+    return problem,solution
+
+def simpleInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10):
+        a = random.randint(1000, maxPrinciple)
+        b = random.randint(1, maxRate)
+        c = random.randint(1, maxTime)
+        d = (a*b*c)/100
+        problem = "Simple interest for a principle amount of " + str(a) +" dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+        solution = round(d, 2)
+        return problem, solution
+
+def matrixMultiplicationFunc(maxVal=100):
+    m= random.randint(2, 10)
+    n= random.randint(2, 10)
+    k= random.randint(2, 10)
+    #generate matrices a and b
+    a=[]
+    for r in range(m):
+        a.append([])
+        for c in range(n):
+            a[r].append(random.randint(-maxVal,maxVal))
+    
+    b=[]
+    for r in range(n):
+        b.append([])
+        for c in range(k):
+            b[r].append(random.randint(-maxVal, maxVal))
+
+    res= []
+    a_string= matrixMultiplicationFuncHelper(a)
+    b_string= matrixMultiplicationFuncHelper(b)
+
+    for r in range(m):
+        res.append([])
+        for c in range(k):
+            temp= 0
+            for t in range(n):
+                temp+=a[r][t]*b[t][c]
+            res[r].append(temp)
+    problem= f"Multiply \n{a_string}\n and \n\n{b_string}" #consider using a, b instead of a_string, b_string if the problem doesn't look right
+    solution= matrixMultiplicationFuncHelper(res)
+    return problem, solution
+
+def matrixMultiplicationFuncHelper(inp):
+    m= len(inp)
+    n= len(inp[0])
+    string= ""
+    for i in range(m):
+        for j in range(n):
+            string+=f"{inp[i][j]: 6d}"
+            string+="  "
+        string+="\n"
+    return string
+
+def cubeRootFunc(minNo = 1, maxNo = 1000):
+    b = random.randint(minNo, maxNo)
+    a = b**(1/3)
+    problem = "cuberoot of " + str(b) + " upto 2 decimal places is:"
+    solution = str(round(a,2))
+    return problem, solution
+
+def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
+    numTerms = random.randint(1, maxTerms)
+    problem = ""
+    solution = ""
+    for i in range(numTerms):
+        if i > 0:
+            problem += " + "
+            solution += " + "
+        coefficient = random.randint(1, maxCoef)
+        exponent = random.randint(1, maxExp)
+        problem += str(coefficient) + "x^" + str(exponent)
+        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
+    solution = solution + " + c"
+    return problem, solution
+
+  
+def fourthAngleOfQuadriFunc(maxAngle = 180):
+    angle1 = random.randint(1, maxAngle)
+    angle2 = random.randint(1, 240-angle1)
+    angle3 = random.randint(1, 340-(angle1 + angle2))
+    sum_ = angle1 + angle2 + angle3
+    angle4 = 360 - sum_
+    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
+    solution = angle4
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -665,6 +761,11 @@ surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
-CubeRoot = Generator("Cube Root",42,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
-powerRuleIntegration = Generator("Power Rule Integration", 43, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
-fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",44,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
+vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
+compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
+simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
+matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
+CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
