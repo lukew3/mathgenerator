@@ -389,20 +389,6 @@ def primeFactorsFunc(minVal=1, maxVal=200):
     solution = f"{factors}"
     return problem, solution
 
-
-def permutationFunc(maxlength=20):
-  def factorial(a):
-        d=1
-        for i in range(a):
-            a=(i+1)*d
-            d=a
-        return d
-    a= random.randint(10,maxlength)
-    b=random.randint(0,9)
-    solution= int(factorial(a)/(factorial(a-b))
-    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
-    return problem, solution
-
 def multiplyFractionsFunc(maxVal=10):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -604,6 +590,12 @@ def intersectionOfTwoLinesFunc(
         solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
     return problem, solution
 
+def permutationFunc(maxlength=20):
+    a = random.randint(10,maxlength)
+    b = random.randint(0,9)
+    solution= int(math.factorial(a)/(math.factorial(a-b)))
+    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
+    return problem, solution
 
 # || Class Instances
 
@@ -637,12 +629,6 @@ systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
-
-primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
-
-permutations= Generator("Permutations",28, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
-
-=======
 primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
 fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
@@ -658,4 +644,4 @@ surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
-
+permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
