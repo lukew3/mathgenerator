@@ -464,6 +464,49 @@ def commonFactorsFunc(maxVal=100):
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
+
+def matrixMultiplicationFunc(maxVal=100):
+    m= random.randint(2, 10)
+    n= random.randint(2, 10)
+    k= random.randint(2, 10)
+    #generate matrices a and b
+    a=[]
+    for r in range(m):
+        a.append([])
+        for c in range(n):
+            a[r].append(random.randint(-maxVal,maxVal))
+    
+    b=[]
+    for r in range(n):
+        b.append([])
+        for c in range(k):
+            b[r].append(random.randint(-maxVal, maxVal))
+
+    res= []
+    a_string= matrixMultiplicationFuncHelper(a)
+    b_string= matrixMultiplicationFuncHelper(b)
+
+    for r in range(m):
+        res.append([])
+        for c in range(k):
+            temp= 0
+            for t in range(n):
+                temp+=a[r][t]*b[t][c]
+            res[r].append(temp)
+    problem= f"Multiply \n{a_string}\n and \n\n{b_string}"
+    solution= matrixMultiplicationFuncHelper(res)
+    return problem, solution
+
+def matrixMultiplicationFuncHelper(inp):
+    m= len(inp)
+    n= len(inp[0])
+    string= ""
+    for i in range(m):
+        for j in range(n):
+            string+=f"{inp[i][j]: 6d}"
+            string+="  "
+        string+="\n"
+    return string
 # || Class Instances
 
 #Format is:
@@ -502,3 +545,4 @@ angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle 
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
 commonFactors = Generator("Common Factors", 32, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+matrixMultiplication =  Generator("Multiplication of two matrices", 33, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
