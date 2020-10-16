@@ -275,7 +275,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   x2 = intParser(x2)
   solution = f"(x{x1})(x{x2})"
   return problem, solution
-
+  
 def thirdAngleOfTriangleFunc(maxAngle=89):
 	angle1 = random.randint(1, maxAngle)
 	angle2 = random.randint(1, maxAngle)
@@ -329,6 +329,16 @@ def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
 
     # Add random (non-zero) multiple of equations to each other
 
+def distanceTwoPointsFunc(maxValXY = 20, minValXY=-20):
+    point1X = random.randint(minValXY, maxValXY+1)
+    point1Y = random.randint(minValXY, maxValXY+1)
+    point2X = random.randint(minValXY, maxValXY+1)
+    point2Y = random.randint(minValXY, maxValXY+1)
+    distanceSq = (point1X - point2X) ** 2 + (point1Y - point2Y) ** 2
+    solution = f"sqrt({distanceSq})"
+    problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -358,3 +368,4 @@ factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", fa
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
+distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
