@@ -1,13 +1,6 @@
 import random
-<<<<<<< HEAD
-<<<<<<< HEAD
 import math
-=======
 import fractions
->>>>>>> Add intersection of two lines.
-=======
-import fractions
->>>>>>> d3ebe8e5fb01015d27b5076a1430b872c779c6b0
 
 genList = []
 
