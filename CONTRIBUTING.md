@@ -11,7 +11,7 @@ Your object instantiation should follow this format:
 #<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 
 ```
-and look something like this:
+and it looks something like this:
 ```
 addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 ```
@@ -19,7 +19,7 @@ Your function should look something like the following:
 ```
 def additionFunc(maxSum, maxAddend):
     a = random.randint(0, maxAddend)
-    b = random.randint(0, min((maxSum-a), maxAddend)) #The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
+    b = random.randint(0, min((maxSum-a), maxAddend)) #The highest value of b will be no higher than the maxSum minus the first number and no higher than the maxAddend as well
     c = a+b
     problem = str(a) + "+" + str(b) + "="
     solution = str(c)
