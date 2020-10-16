@@ -47,4 +47,4 @@ problem, solution = mathgen.addition()
 | 17   | Int 2x2 Matrix Multiplication     | k * [[a,b],[c,d]]=  | [[k*a,k*b],[k*c,k*d]] | intMatrix22Multiplication|
 | 18   | Remainder  -  rest of a dvision   | 17 % 2=             | 1                     | remainder                |
 | 19   | Bhaskara Formula                  | x^2 + 5x + 6 =  0   | x1 = -3 , x2 = -2     | baskara                  |
-| 20   | Delta Formula                     | delta = 5^2 - 4**1**6 | delta = 1             | delta                    |
+| 20   | Delta Formula                     | delta = 5^2 - 4\*1\*6 | delta = 1             | delta                    |
