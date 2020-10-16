@@ -276,25 +276,50 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
-def simplifyRadicalFunc(range_x = 100):
-    x = random.randint(0, range_x)
-    if x == 1 or x == 0:
-        return f"sqrt({x})", str(x)
-    inside = x
-    outside = 1
-    factor = 2
-    while factor * factor <= inside:
-        if inside % (factor * factor) == 0:
-            # move factor^2 from inside to outside
-            inside //= (factor * factor)
-            outside *= factor
-        else:
-            factor += 1
-    problem = f"sqrt({x})"
-    # exclude redundant multiplications by 1
-    solution = str(outside if outside != 1 else '') + \
-               (f"sqrt({inside})" if inside != 1 else "")
+def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
+    # Generate solution point first
+    x = random.randint(-range_x, range_x)
+    y = random.randint(-range_y, range_y)
+    # Start from reduced echelon form (coeffs 1)
+    c1 = [1, 0, x]
+    c2 = [0, 1, y]
+
+    def randNonZero():
+        return random.choice([i for i in range(-coeff_mult_range, coeff_mult_range)
+                              if i != 0])
+    # Add random (non-zero) multiple of equations (rows) to each other
+    c1_mult = randNonZero()
+    c2_mult = randNonZero()
+    new_c1 = [c1[i] + c1_mult * c2[i] for i in range(len(c1))]
+    new_c2 = [c2[i] + c2_mult * c1[i] for i in range(len(c2))]
+
+    # For extra randomness, now add random (non-zero) multiples of original rows
+    # to themselves
+    c1_mult = randNonZero()
+    c2_mult = randNonZero()
+    new_c1 = [new_c1[i] + c1_mult * c1[i] for i in range(len(c1))]
+    new_c2 = [new_c2[i] + c2_mult * c2[i] for i in range(len(c2))]
+
+    def coeffToFuncString(coeffs):
+        # lots of edge cases for perfect formatting!
+        x_sign = '-' if coeffs[0] < 0 else ''
+        # No redundant 1s
+        x_coeff = str(abs(coeffs[0])) if abs(coeffs[0]) != 1 else ''
+        # If x coeff is 0, dont include x
+        x_str = f'{x_sign}{x_coeff}x' if coeffs[0] != 0 else ''
+        # if x isn't included and y is positive, dont include operator
+        op = ' - ' if coeffs[1] < 0 else (' + ' if x_str != '' else '')
+        # No redundant 1s
+        y_coeff = abs(coeffs[1]) if abs(coeffs[1]) != 1 else ''
+        # Don't include if 0, unless x is also 0 (probably never happens)
+        y_str = f'{y_coeff}y' if coeffs[1] != 0 else ('' if x_str != '' else '0')
+        return f'{x_str}{op}{y_str} = {coeffs[2]}'
+
+    problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
+    solution = f"x = {x}, y = {y}"
     return problem, solution
+
+    # Add random (non-zero) multiple of equations to each other
 
 # || Class Instances
 
@@ -322,4 +347,5 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
-simplifyRadical = Generator("Simplify a Radical", 22, "sqrt(72)", "6sqrt(2)", simplifyRadicalFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
+                              systemOfEquationsFunc)
