@@ -218,16 +218,17 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
 
 def primeFactors(minVal=10, maxVal=999):
     a = random.randint(minVal, maxVal)
+    n = a
     i = 2
     factors = []
-    while i*i <= a:
-        if a % i:
+    while i * i <= n:
+        if n % i:
             i += 1
         else:
-            a //= i
+            n //= i
             factors.append(i)
-    if a > 1:
-        factors.append(a)
+    if n > 1:
+        factors.append(n)
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
     return problem, solution
@@ -255,3 +256,6 @@ binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToD
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
 primeFactors = Generator("Prime Factorisation", 18, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
+
+for i in range(0, 10):
+    print(primeFactors())
