@@ -420,6 +420,7 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     return problem, solution 
   
 def combinationsFunc(maxlength=20):
+
     def factorial(a):
         d=1
         for i in range(a):
@@ -428,6 +429,9 @@ def combinationsFunc(maxlength=20):
         return d
     a= random.randint(10,maxlength)
     b=random.randint(0,9)
+
+
+
     solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
     
@@ -586,6 +590,13 @@ def intersectionOfTwoLinesFunc(
         solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
     return problem, solution
 
+def permutationFunc(maxlength=20):
+    a = random.randint(10,maxlength)
+    b = random.randint(0,9)
+    solution= int(math.factorial(a)/(math.factorial(a-b)))
+    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -633,3 +644,4 @@ surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
+permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
