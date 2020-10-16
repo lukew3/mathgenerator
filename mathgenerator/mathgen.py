@@ -370,6 +370,23 @@ def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
     problem = "\n".join(problem)
     return problem, solution
 
+def primeFactors(minVal=1, maxVal=200):
+    a = random.randint(minVal, maxVal)
+    n = a
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    problem = f"Find prime factors of {a}"
+    solution = f"{factors}"
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -402,3 +419,4 @@ systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
+primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
