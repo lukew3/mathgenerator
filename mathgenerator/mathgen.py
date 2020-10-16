@@ -254,10 +254,14 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   b = intParser(x1 + x2)
   c = intParser(x1 * x2)
 
+  if (b == "+1"):
+      b = "+"
+      
   if (b == ""):
-    b = "+"
+    problem = f"x^2{c}"
+  else:
+    problem = f"x^2{b}x{c}"
 
-  problem = f"x^2{b}x{c}"
   x1 = intParser(x1)
   x2 = intParser(x2)
   solution = f"(x{x1})(x{x2})"
