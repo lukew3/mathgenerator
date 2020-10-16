@@ -276,6 +276,13 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+#This is a for to find the mean 
+#and here you can add any number of arguments in this
+def mean(*args):
+	sum_ = sum(args)
+	mean = (sum_)/len(args)
+	return mean
+
 # || Class Instances
 
 #Format is:
