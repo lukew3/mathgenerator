@@ -276,26 +276,6 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
-def simplifyRadicalFunc(range_x = 100):
-    x = random.randint(0, range_x)
-    if x == 1 or x == 0:
-        return f"sqrt({x})", str(x)
-    inside = x
-    outside = 1
-    factor = 2
-    while factor * factor <= inside:
-        if inside % (factor * factor) == 0:
-            # move factor^2 from inside to outside
-            inside //= (factor * factor)
-            outside *= factor
-        else:
-            factor += 1
-    problem = f"sqrt({x})"
-    # exclude redundant multiplications by 1
-    solution = str(outside if outside != 1 else '') + \
-               (f"sqrt({inside})" if inside != 1 else "")
-    return problem, solution
-
 def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
@@ -367,6 +347,5 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
-simplifyRadical = Generator("Simplify a Radical", 22, "sqrt(72)", "6sqrt(2)", simplifyRadicalFunc)
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
