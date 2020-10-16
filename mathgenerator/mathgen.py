@@ -1,4 +1,6 @@
 import random
+import math
+import fractions
 
 genList = []
 
@@ -370,7 +372,7 @@ def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
     problem = "\n".join(problem)
     return problem, solution
 
-def primeFactors(minVal=1, maxVal=200):
+def primeFactorsFunc(minVal=1, maxVal=200):
     a = random.randint(minVal, maxVal)
     n = a
     i = 2
@@ -385,6 +387,214 @@ def primeFactors(minVal=1, maxVal=200):
         factors.append(n)
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
+    return problem, solution
+
+def multiplyFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+    def calculate_gcd(x, y):
+        while(y):
+            x, y = y, x % y
+        return x
+    tmp_n = a * c
+    tmp_d = b * d
+    gcd = calculate_gcd(tmp_n, tmp_d)
+    x = f"{tmp_n//gcd}/{tmp_d//gcd}"
+    if (tmp_d == 1 or tmp_d == gcd):
+        x = f"{tmp_n//gcd}"
+    problem = f"({a}/{b})*({c}/{d})"
+    solution = x
+    return problem, solution
+
+def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
+    sideNum = random.randint(minVal, maxVal)
+    problem = f"Find the angle of a regular polygon with {sideNum} sides"
+    exteriorAngle = round((360/sideNum),2)
+    solution = 180 - exteriorAngle
+    return problem, solution 
+  
+def combinationsFunc(maxlength=20):
+
+    def factorial(a):
+        d=1
+        for i in range(a):
+            a=(i+1)*d
+            d=a
+        return d
+    a= random.randint(10,maxlength)
+    b=random.randint(0,9)
+
+
+
+    solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
+    problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
+    
+    return problem, solution
+  
+def factorialFunc(maxInput = 6):
+    a = random.randint(0, maxInput)
+    n = a
+    problem = str(a) + "! = "
+    b = 1
+    if a == 1:
+        solution = str(b)
+        return problem, solution
+    else:
+        while n > 0:
+            b *= n
+            n = n - 1
+        solution = str(b)
+        return problem, solution
+
+def surfaceAreaCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Surface area of cube with side = {a}{unit} is"
+    ans = 6 * a * a
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Volume of cube with side = {a}{unit} is"
+    ans = a * a * a
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    
+    problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = 2 * (a*b + b*c + c*a)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    problem = f"Volume of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = a * b * c
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCylinder(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Surface area of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(2 * math.pi * a * b + 2 * math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCylinder(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a)
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCone(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    slopingHeight = math.sqrt(a**2 + b**2)
+    problem = f"Surface area of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * slopingHeight + math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCone(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a * (1/3))
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def commonFactorsFunc(maxVal=100):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    if (x < y):
+        min = x
+    else:
+        min = y
+    count = 0
+    arr = []
+    for i in range(1, min + 1):
+        if (x % i == 0):
+            if (y % i == 0):
+                count = count + 1
+                arr.append(i)
+    problem = f"Common Factors of {a} and {b} = "
+    solution = arr
+    return problem, solution
+
+def intersectionOfTwoLinesFunc(
+    minM=-10, maxM=10, minB=-10, maxB=10, minDenominator=1, maxDenominator=6
+):
+    def generateEquationString(m, b):
+        """
+        Generates an equation given the slope and intercept.
+        It handles cases where m is fractional.
+        It also ensures that we don't have weird signs such as y = mx + -b.
+        """
+        if m[1] == 1:
+            m = m[0]
+        else:
+            m = f"{m[0]}/{m[1]}"
+        base = f"y = {m}x"
+        if b > 0:
+            return f"{base} + {b}"
+        elif b < 0:
+            return f"{base} - {b * -1}"
+        else:
+            return base
+
+    def fractionToString(x):
+        """
+        Converts the given fractions.Fraction into a string.
+        """
+        if x.denominator == 1:
+            x = x.numerator
+        else:
+            x = f"{x.numerator}/{x.denominator}"
+        return x
+        
+    m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    b1 = random.randint(minB, maxB)
+    b2 = random.randint(minB, maxB)
+    equation1 = generateEquationString(m1, b1)
+    equation2 = generateEquationString(m2, b2)
+    problem = "Find the point of intersection of the two lines: "
+    problem += f"{equation1} and {equation2}"
+    m1 = fractions.Fraction(*m1)
+    m2 = fractions.Fraction(*m2)
+    # if m1 == m2 then the slopes are equal
+    # This can happen if both line are the same
+    # Or if they are parallel
+    # In either case there is no intersection
+    if m1 == m2:
+        solution = "No Solution"
+    else:
+        intersection_x = (b1 - b2) / (m2 - m1)
+        intersection_y = ((m2 * b1) - (m1 * b2)) / (m2 - m1)
+        solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
+    return problem, solution
+
+def permutationFunc(maxlength=20):
+    a = random.randint(10,maxlength)
+    b = random.randint(0,9)
+    solution= int(math.factorial(a)/(math.factorial(a-b)))
+    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
     return problem, solution
 
 def vectorCrossFunc(minVal=-20, maxVal=20):
@@ -427,5 +637,20 @@ systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
-primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
-vectorCross = Generator("Cross Product of 2 Vectors", 28, "a X b = ", "c", vectorCrossFunc)
+primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
+fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
+angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
+combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
+surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
+surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
+surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
+volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube) 
+volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is","d units^3", volumeCuboid)
+volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
+surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
+volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
+commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
+permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
+vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
