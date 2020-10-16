@@ -21,6 +21,9 @@ from mathgenerator import mathgen
 
 #generate an addition problem
 problem, solution = mathgen.addition()
+
+#another way to generate an addition problem using genById()
+problem, solution = mathgen.genById(0)
 ```
 
 ## List of Generators
