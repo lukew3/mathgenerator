@@ -110,6 +110,21 @@ def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
     return problem, solution
 
+def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
+    numTerms = random.randint(1, maxTerms)
+    problem = ""
+    solution = ""
+    for i in range(numTerms):
+        if i > 0:
+            problem += " + "
+            solution += " + "
+        coefficient = random.randint(1, maxCoef)
+        exponent = random.randint(1, maxExp)
+        problem += str(coefficient) + "x^" + str(exponent)
+        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
+    solution = solution + " + c"
+    return problem, solution
+
 def squareFunc(maxSquareNum = 20):
     a = random.randint(1, maxSquareNum)
     b = a * a
