@@ -15,8 +15,8 @@ class Generator:
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
 
-    def __call__(self):
-        return self.func()
+    def __call__(self, **kwargs):
+        return self.func(**kwargs)
 
 # || Non-generator Functions
 def genById(id):
@@ -347,6 +347,29 @@ def pythagoreanTheoremFunc(maxLength = 20):
     solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
     return problem, solution
 
+def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
+    if n > 10:
+        print("[!] n cannot be greater than 10")
+        return None, None
+
+    vars = ['x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g'][:n]
+    soln = [ random.randint(-varRange, varRange) for i in range(n) ]
+
+    problem = list()
+    solution = ", ".join(["{} = {}".format(vars[i], soln[i]) for i in range(n)])
+    for _ in range(n):
+        coeff = [ random.randint(-coeffRange, coeffRange) for i in range(n) ]
+        res = sum([ coeff[i] * soln[i] for i in range(n)])
+        
+        prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
+        while "" in prob:
+            prob.remove("")
+        prob = " + ".join(prob) + " = " + str(res)
+        problem.append(prob)
+    
+    problem = "\n".join(problem)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -378,3 +401,4 @@ systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y
                               systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
+linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc)
