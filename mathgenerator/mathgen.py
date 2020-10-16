@@ -431,7 +431,6 @@ def combinationsFunc(maxlength=20):
     
     return problem, solution
   
-
 def factorialFunc(maxInput = 6):
     a = random.randint(0, maxInput)
     n = a
@@ -447,6 +446,24 @@ def factorialFunc(maxInput = 6):
         solution = str(b)
         return problem, solution
 
+def commonFactorsFunc(maxVal=100):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    if (x < y):
+        min = x
+    else:
+        min = y
+    count = 0
+    arr = []
+    for i in range(1, min + 1):
+        if (x % i == 0):
+            if (y % i == 0):
+                count = count + 1
+                arr.append(i)
+    problem = f"Common Factors of {a} and {b} = "
+    solution = arr
+    return problem, solution
 # || Class Instances
 
 #Format is:
@@ -484,3 +501,4 @@ fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)="
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
+commonFactors = Generator("Common Factors", 32, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
