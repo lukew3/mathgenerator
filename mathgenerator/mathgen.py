@@ -1,4 +1,5 @@
 import random
+import math
 
 genList = []
 
@@ -447,6 +448,72 @@ def factorialFunc(maxInput = 6):
         solution = str(b)
         return problem, solution
 
+def surfaceAreaCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Surface area of cube with side = {a}{unit} is"
+    ans = 6 * a * a
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Volume of cube with side = {a}{unit} is"
+    ans = a * a * a
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    
+    problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = 2 * (a*b + b*c + c*a)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    problem = f"Volume of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = a * b * c
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCylinder(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Surface area of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(2 * math.pi * a * b + 2 * math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCylinder(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a)
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCone(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    slopingHeight = math.sqrt(a**2 + b**2)
+    problem = f"Surface area of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * slopingHeight + math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCone(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a * (1/3))
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -484,3 +551,11 @@ fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)="
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
+surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
+surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
+surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
+volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube) 
+volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is","d units^3", volumeCuboid)
+volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
+surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
+volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
