@@ -1,6 +1,7 @@
 import random
 import math
 import fractions
+from math import *
 
 genList = []
 
@@ -224,7 +225,7 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	c = random.randint(1, maxC)
 	s = (a+b+c)/2
 	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = " 
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = "
 	solution = area
 	return problem, solution
 
@@ -234,7 +235,7 @@ def isTriangleValidFunc(maxSideLength = 50):
     sideC = random.randint(1, maxSideLength)
     sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
     sides = [sideC, sideA, sideB]
-    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2]) 
+    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2])
     problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
     if exists:
         solution = "Yes"
@@ -267,7 +268,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
 
   if (b == "+1"):
       b = "+"
-      
+
   if (b == ""):
     problem = f"x^2{c}"
   else:
@@ -277,7 +278,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   x2 = intParser(x2)
   solution = f"(x{x1})(x{x2})"
   return problem, solution
-  
+
 def thirdAngleOfTriangleFunc(maxAngle=89):
 	angle1 = random.randint(1, maxAngle)
 	angle2 = random.randint(1, maxAngle)
@@ -362,13 +363,13 @@ def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
     for _ in range(n):
         coeff = [ random.randint(-coeffRange, coeffRange) for i in range(n) ]
         res = sum([ coeff[i] * soln[i] for i in range(n)])
-        
+
         prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
         while "" in prob:
             prob.remove("")
         prob = " + ".join(prob) + " = " + str(res)
         problem.append(prob)
-    
+
     problem = "\n".join(problem)
     return problem, solution
 
@@ -417,8 +418,8 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     problem = f"Find the angle of a regular polygon with {sideNum} sides"
     exteriorAngle = round((360/sideNum),2)
     solution = 180 - exteriorAngle
-    return problem, solution 
-  
+    return problem, solution
+
 def combinationsFunc(maxlength=20):
     def factorial(a):
         d=1
@@ -430,9 +431,9 @@ def combinationsFunc(maxlength=20):
     b=random.randint(0,9)
     solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
-    
+
     return problem, solution
-  
+
 def factorialFunc(maxInput = 6):
     a = random.randint(0, maxInput)
     n = a
@@ -466,11 +467,23 @@ def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
-    
+
     problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
     ans = 2 * (a*b + b*c + c*a)
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+def f(x):
+    return x ** 2
+#For instance f(2) = 4
+def derive(function, value):
+    h = 0.00000000001
+    top = function(value + h) - function(value)
+    bottom = h
+    slope = top / bottom
+    # Returns the slope to the third decimal
+    return float("%.3f" % slope)
+
 
 def volumeCuboid(maxSide = 20, unit = 'm'):
     a = random.randint(1, maxSide)
@@ -563,7 +576,7 @@ def intersectionOfTwoLinesFunc(
         else:
             x = f"{x.numerator}/{x.denominator}"
         return x
-        
+
     m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
     m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
     b1 = random.randint(minB, maxB)
@@ -626,7 +639,7 @@ factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
 surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
 surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
 surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
-volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube) 
+volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube)
 volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is","d units^3", volumeCuboid)
 volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
 surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
