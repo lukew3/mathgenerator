@@ -15,8 +15,8 @@ class Generator:
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
 
-    def __call__(self):
-        return self.func()
+    def __call__(self, **kwargs):
+        return self.func(**kwargs)
 
 # || Non-generator Functions
 def genById(id):
