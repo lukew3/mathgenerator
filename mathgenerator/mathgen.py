@@ -387,6 +387,14 @@ def primeFactors(minVal=1, maxVal=200):
     solution = f"{factors}"
     return problem, solution
 
+def vectorCrossFunc(minVal=-20, maxVal=20):
+    a = [random.randint(minVal, maxVal) for i in range(3)]
+    b = [random.randint(minVal, maxVal) for i in range(3)]
+    c = [a[1]*b[2] - a[2]*b[1],
+         a[2]*b[0] - a[0]*b[2],
+         a[0]*b[1] - a[1]*b[0]]
+    return str(a) + " X " + str(b) + " = ", str(c)
+
 # || Class Instances
 
 #Format is:
@@ -420,3 +428,4 @@ distance2Point = Generator("Distance between 2 points", 24, "Find the distance b
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
 primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
+vectorCross = Generator("Cross Product of 2 Vectors", 28, "a X b = ", "c", vectorCrossFunc)
