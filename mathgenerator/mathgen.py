@@ -629,6 +629,14 @@ def compareFractionsFunc(maxVal=10):
     problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem,solution
 
+def simpleInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10):
+        a = random.randint(1000, maxPrinciple)
+        b = random.randint(1, maxRate)
+        c = random.randint(1, maxTime)
+        d = (a*b*c)/100
+        problem = "Simple interest for a principle amount of " + str(a) +" dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+        solution = round(d, 2)
+        return problem, solution
 
 # || Class Instances
 
@@ -680,4 +688,4 @@ intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the po
 permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
 vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
 compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
-
+simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
