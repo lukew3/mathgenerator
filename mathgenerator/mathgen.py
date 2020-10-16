@@ -605,6 +605,31 @@ def vectorCrossFunc(minVal=-20, maxVal=20):
          a[0]*b[1] - a[1]*b[0]]
     return str(a) + " X " + str(b) + " = ", str(c)
 
+def compareFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+
+    first=a/b
+    second=c/d
+
+    if(first>second):
+        solution=">"
+    elif(first<second):
+        solution="<"
+    else:
+        solution="="
+    
+    problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
+    return problem,solution
+
+
 # || Class Instances
 
 #Format is:
@@ -654,3 +679,5 @@ commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} =
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
 permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
 vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
+compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
+
