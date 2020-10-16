@@ -312,3 +312,4 @@ areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side l
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+remainder = Generator("Remainder", 22, "a%b", "c",remainderFunc)
