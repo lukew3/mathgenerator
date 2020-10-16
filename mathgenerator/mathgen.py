@@ -416,7 +416,20 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     exteriorAngle = round((360/sideNum),2)
     solution = 180 - exteriorAngle
     return problem, solution 
-
+  
+def combinationsFunc(maxlength=20):
+    def factorial(a):
+        d=1
+        for i in range(a):
+            a=(i+1)*d
+            d=a
+        return d
+    a= random.randint(10,maxlength)
+    b=random.randint(0,9)
+    solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
+    problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
+    
+    return problem, solution
 # || Class Instances
 
 #Format is:
@@ -452,3 +465,4 @@ linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-2
 primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
 fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
+combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
