@@ -1,9 +1,13 @@
 import random
 <<<<<<< HEAD
+<<<<<<< HEAD
 import math
 =======
 import fractions
 >>>>>>> Add intersection of two lines.
+=======
+import fractions
+>>>>>>> d3ebe8e5fb01015d27b5076a1430b872c779c6b0
 
 genList = []
 
@@ -626,6 +630,7 @@ fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)="
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
+<<<<<<< HEAD
 surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
 surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
 surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
@@ -635,3 +640,4 @@ volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with
 surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+intersectionOfTwoLines = Generator("Intersection of Two Lines", 33, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
