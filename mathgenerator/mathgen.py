@@ -430,6 +430,23 @@ def combinationsFunc(maxlength=20):
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
     
     return problem, solution
+  
+
+def factorialFunc(maxInput = 6):
+    a = random.randint(0, maxInput)
+    n = a
+    problem = str(a) + "! = "
+    b = 1
+    if a == 1:
+        solution = str(b)
+        return problem, solution
+    else:
+        while n > 0:
+            b *= n
+            n = n - 1
+        solution = str(b)
+        return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -466,3 +483,4 @@ primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b,
 fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
