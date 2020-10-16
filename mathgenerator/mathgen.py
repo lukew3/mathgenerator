@@ -339,6 +339,14 @@ def distanceTwoPointsFunc(maxValXY = 20, minValXY=-20):
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
 
+def pythagoreanTheoremFunc(maxLength = 20):
+    a = random.randint(1, maxLength)
+    b = random.randint(1, maxLength)
+    c = (a**2 + b**2)**0.5
+    problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
+    solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -369,3 +377,4 @@ thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of 
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
+pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
