@@ -239,7 +239,16 @@ def isTriangleValidFunc(maxSideLength = 50):
         return problem, solution
     solution = "No"
     return problem, solution
- 
+
+def MidPointOfTwoPointFunc(maxValue=20):
+	x1=random.randint(-20,maxValue)
+	y1=random.randint(-20,maxValue)
+	x2=random.randint(-20,maxValue)
+	y2=random.randint(-20,maxValue)
+	problem=f"({x1},{y1}),({x2},{y2})="
+	solution=f"({(x1+x2)/2},{(y1+y2)/2})"
+	return problem,solution
+
 def factoringFunc(range_x1 = 10, range_x2 = 10):
   x1 = random.randint(-range_x1, range_x1)
   x2 = random.randint(-range_x2, range_x2)
@@ -291,4 +300,5 @@ fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", div
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
 areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
 doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
-factoring = Generator("Subtraction", 20, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
+factoring = Generator("Subtraction", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
