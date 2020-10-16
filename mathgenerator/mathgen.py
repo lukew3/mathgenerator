@@ -464,6 +464,31 @@ def commonFactorsFunc(maxVal=100):
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
+def compareFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+
+    first=a/b
+    second=c/d
+
+    if(first>second):
+        solution=">"
+    elif(first<second):
+        solution="<"
+    else:
+        solution="="
+    
+    problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?\n"
+    return problem,solution
+    
+
 # || Class Instances
 
 #Format is:
@@ -502,3 +527,4 @@ angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle 
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
 commonFactors = Generator("Common Factors", 32, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+compareFractions=Generator("Compare Fractions",33,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
