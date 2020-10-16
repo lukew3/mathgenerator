@@ -89,6 +89,13 @@ def squareRootFunc(minNo = 1, maxNo = 12):
     solution = str(b)
     return problem, solution
 
+def cubeRootFunc(minNo = 1, maxNo = 1000):
+    b = random.randint(minNo, maxNo)
+    a = b**(1/3)
+    problem = "cuberoot of " + str(b) + " upto 2 decimal places is:"
+    solution = str(round(a,2))
+    return problem, solution
+
 def powerRuleDifferentiationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
     numTerms = random.randint(1, maxTerms)
     problem = ""
@@ -633,3 +640,4 @@ surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
+CubeRoot = Generator("Cube Root",42,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
