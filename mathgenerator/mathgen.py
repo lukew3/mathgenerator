@@ -1,4 +1,6 @@
 import random
+import math
+import fractions
 
 genList = []
 
@@ -418,6 +420,7 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     return problem, solution 
   
 def combinationsFunc(maxlength=20):
+
     def factorial(a):
         d=1
         for i in range(a):
@@ -426,6 +429,9 @@ def combinationsFunc(maxlength=20):
         return d
     a= random.randint(10,maxlength)
     b=random.randint(0,9)
+
+
+
     solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
     
@@ -446,6 +452,72 @@ def factorialFunc(maxInput = 6):
         solution = str(b)
         return problem, solution
 
+def surfaceAreaCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Surface area of cube with side = {a}{unit} is"
+    ans = 6 * a * a
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCube(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    problem = f"Volume of cube with side = {a}{unit} is"
+    ans = a * a * a
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    
+    problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = 2 * (a*b + b*c + c*a)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCuboid(maxSide = 20, unit = 'm'):
+    a = random.randint(1, maxSide)
+    b = random.randint(1, maxSide)
+    c = random.randint(1, maxSide)
+    problem = f"Volume of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
+    ans = a * b * c
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCylinder(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Surface area of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(2 * math.pi * a * b + 2 * math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCylinder(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cylinder with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a)
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
+def surfaceAreaCone(maxRadius = 20, maxHeight = 50,unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    slopingHeight = math.sqrt(a**2 + b**2)
+    problem = f"Surface area of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * slopingHeight + math.pi * b * b)
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
+def volumeCone(maxRadius = 20, maxHeight = 50, unit = 'm'):
+    a = random.randint(1, maxHeight)
+    b = random.randint(1, maxRadius)
+    problem = f"Volume of cone with height = {a}{unit} and radius = {b}{unit} is"
+    ans = int(math.pi * b * b * a * (1/3))
+    solution = f"{ans} {unit}^3"
+    return problem, solution
+
 def commonFactorsFunc(maxVal=100):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -464,6 +536,107 @@ def commonFactorsFunc(maxVal=100):
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
+
+def intersectionOfTwoLinesFunc(
+    minM=-10, maxM=10, minB=-10, maxB=10, minDenominator=1, maxDenominator=6
+):
+    def generateEquationString(m, b):
+        """
+        Generates an equation given the slope and intercept.
+        It handles cases where m is fractional.
+        It also ensures that we don't have weird signs such as y = mx + -b.
+        """
+        if m[1] == 1:
+            m = m[0]
+        else:
+            m = f"{m[0]}/{m[1]}"
+        base = f"y = {m}x"
+        if b > 0:
+            return f"{base} + {b}"
+        elif b < 0:
+            return f"{base} - {b * -1}"
+        else:
+            return base
+
+    def fractionToString(x):
+        """
+        Converts the given fractions.Fraction into a string.
+        """
+        if x.denominator == 1:
+            x = x.numerator
+        else:
+            x = f"{x.numerator}/{x.denominator}"
+        return x
+        
+    m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    b1 = random.randint(minB, maxB)
+    b2 = random.randint(minB, maxB)
+    equation1 = generateEquationString(m1, b1)
+    equation2 = generateEquationString(m2, b2)
+    problem = "Find the point of intersection of the two lines: "
+    problem += f"{equation1} and {equation2}"
+    m1 = fractions.Fraction(*m1)
+    m2 = fractions.Fraction(*m2)
+    # if m1 == m2 then the slopes are equal
+    # This can happen if both line are the same
+    # Or if they are parallel
+    # In either case there is no intersection
+    if m1 == m2:
+        solution = "No Solution"
+    else:
+        intersection_x = (b1 - b2) / (m2 - m1)
+        intersection_y = ((m2 * b1) - (m1 * b2)) / (m2 - m1)
+        solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
+    return problem, solution
+
+def permutationFunc(maxlength=20):
+    a = random.randint(10,maxlength)
+    b = random.randint(0,9)
+    solution= int(math.factorial(a)/(math.factorial(a-b)))
+    problem= "Number of Permutations from {} objects picked {} at a time =  ".format(a,b)
+    return problem, solution
+
+def vectorCrossFunc(minVal=-20, maxVal=20):
+    a = [random.randint(minVal, maxVal) for i in range(3)]
+    b = [random.randint(minVal, maxVal) for i in range(3)]
+    c = [a[1]*b[2] - a[2]*b[1],
+         a[2]*b[0] - a[0]*b[2],
+         a[0]*b[1] - a[1]*b[0]]
+    return str(a) + " X " + str(b) + " = ", str(c)
+
+def compareFractionsFunc(maxVal=10):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    c = random.randint(1, maxVal)
+    d = random.randint(1, maxVal)
+
+    while (a == b):
+        b = random.randint(1, maxVal)
+    while (c == d):
+        d = random.randint(1, maxVal)
+
+    first=a/b
+    second=c/d
+
+    if(first>second):
+        solution=">"
+    elif(first<second):
+        solution="<"
+    else:
+        solution="="
+    
+    problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
+    return problem,solution
+
+def simpleInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10):
+        a = random.randint(1000, maxPrinciple)
+        b = random.randint(1, maxRate)
+        c = random.randint(1, maxTime)
+        d = (a*b*c)/100
+        problem = "Simple interest for a principle amount of " + str(a) +" dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+        solution = round(d, 2)
+        return problem, solution
 
 def matrixMultiplicationFunc(maxVal=100):
     m= random.randint(2, 10)
@@ -493,7 +666,7 @@ def matrixMultiplicationFunc(maxVal=100):
             for t in range(n):
                 temp+=a[r][t]*b[t][c]
             res[r].append(temp)
-    problem= f"Multiply \n{a_string}\n and \n\n{b_string}"
+    problem= f"Multiply \n{a_string}\n and \n\n{b_string}" #consider using a, b instead of a_string, b_string if the problem doesn't look right
     solution= matrixMultiplicationFuncHelper(res)
     return problem, solution
 
@@ -544,5 +717,19 @@ fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)="
 angleRegularPolygon = Generator("Angle of a Regular Polygon",29,"Find the angle of a regular polygon with 6 sides","120",regularPolygonAngleFunc)
 combinations = Generator("Combinations of Objects",30, "Combinations available for picking 4 objects at a time from 6 distinct objects ="," 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
-commonFactors = Generator("Common Factors", 32, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
-matrixMultiplication =  Generator("Multiplication of two matrices", 33, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
+surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
+surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
+surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
+volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube) 
+volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is","d units^3", volumeCuboid)
+volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
+surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
+volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
+commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
+permutations= Generator("Permutations",42, "Total permutations of 4 objects at a time from 10 objects is","5040", permutationFunc)
+vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
+compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
+simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
+matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
+
