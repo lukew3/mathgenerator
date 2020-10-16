@@ -339,6 +339,13 @@ def distanceTwoPointsFunc(maxValXY = 20, minValXY=-20):
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
 
+def multiplyComplexNumbersFunc(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
+    num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    problem = f"{num1} * {num2} = "
+    solution = num1 * num2
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -369,3 +376,4 @@ thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of 
 systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
                               systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
+ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 25, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
