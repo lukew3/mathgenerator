@@ -276,6 +276,16 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   solution = f"(x{x1})(x{x2})"
   return problem, solution
 
+def remainderFunc(maxA = 100, maxB = 100):
+	a = random.randint(1, maxA)
+  	b = random.randint(1, maxB)
+  	c = a % c
+  	problem = "Remainder of" str(a) +"%" + str(b) + " = "
+ 	 solution = c
+  	return problem, solution
+
+  
+
 # || Class Instances
 
 #Format is:
