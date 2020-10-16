@@ -387,6 +387,21 @@ def primeFactors(minVal=1, maxVal=200):
     solution = f"{factors}"
     return problem, solution
 
+def factorialFunc(maxInput = 6):
+    a = random.randint(0, maxInput)
+    n = a
+    problem = str(a) + "! = "
+    b = 1
+    if a == 1:
+        solution = str(b)
+        return problem, solution
+    else:
+        while n > 0:
+            b *= n
+            n = n - 1
+        solution = str(b)
+        return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -420,3 +435,4 @@ distance2Point = Generator("Distance between 2 points", 24, "Find the distance b
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
 primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
+factorial = Generator("Factorial", 28, "a! = ", "b", factorialFunc)
