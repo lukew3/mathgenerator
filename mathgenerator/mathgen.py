@@ -680,6 +680,40 @@ def matrixMultiplicationFuncHelper(inp):
             string+="  "
         string+="\n"
     return string
+
+def cubeRootFunc(minNo = 1, maxNo = 1000):
+    b = random.randint(minNo, maxNo)
+    a = b**(1/3)
+    problem = "cuberoot of " + str(b) + " upto 2 decimal places is:"
+    solution = str(round(a,2))
+    return problem, solution
+
+def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
+    numTerms = random.randint(1, maxTerms)
+    problem = ""
+    solution = ""
+    for i in range(numTerms):
+        if i > 0:
+            problem += " + "
+            solution += " + "
+        coefficient = random.randint(1, maxCoef)
+        exponent = random.randint(1, maxExp)
+        problem += str(coefficient) + "x^" + str(exponent)
+        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
+    solution = solution + " + c"
+    return problem, solution
+
+  
+def fourthAngleOfQuadriFunc(maxAngle = 180):
+    angle1 = random.randint(1, maxAngle)
+    angle2 = random.randint(1, 240-angle1)
+    angle3 = random.randint(1, 340-(angle1 + angle2))
+    sum_ = angle1 + angle2 + angle3
+    angle4 = 360 - sum_
+    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
+    solution = angle4
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -732,4 +766,6 @@ vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vecto
 compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
 simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
 matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
-
+CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
