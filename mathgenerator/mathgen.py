@@ -656,3 +656,4 @@ volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a 
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
 intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
 CubeRoot = Generator("Cube Root",42,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
+powerRuleIntegration = Generator("Power Rule Integration", 43, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
