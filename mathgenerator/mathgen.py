@@ -387,6 +387,13 @@ def primeFactors(minVal=1, maxVal=200):
     solution = f"{factors}"
     return problem, solution
 
+def regularPolygonAngle(minVal = 3,maxVal = 20):
+    sideNum = random.randint(minVal, maxVal)
+    problem = f"Find the angle of a regular polygon with {sideNum} sides"
+    exteriorAngle = (360/sideNum)
+    solution = 180 - exteriorAngle
+    return problem, solution 
+
 # || Class Instances
 
 #Format is:
