@@ -531,6 +531,15 @@ def commonFactorsFunc(maxVal=100):
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
+
+def quadraticEquation(maxVal=100):
+	a = random.randint(1,maxVal)
+	c = random.randint(1,maxVal)
+	b = random.randint(4*a*c,4*maxVal*maxVal)
+	
+	problem = "Zeros of the Quadratic Equation {a}x^2+{b}x+{c}=0".format(a,b,c)
+	solution = str[(-b+sqrt(b^2-4*a*c))/2*a,(-b-sqrt(b^2-4*a*c))/2*a]
+	return problem,solution
 # || Class Instances
 
 #Format is:
@@ -577,3 +586,4 @@ volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with
 surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
 volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is","c units^3", volumeCone)
 commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ","[c, d, ...]",commonFactorsFunc)
+quadraticEquationSolve = Generator("Quadratic Equation", 41, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
