@@ -15,8 +15,8 @@ class Generator:
     def __str__(self):
         return str(self.id) + " " + self.title + " " + self.generalProb + " " + self.generalSol
 
-    def __call__(self):
-        return self.func()
+    def __call__(self, **kwargs):
+        return self.func(**kwargs)
 
 # || Non-generator Functions
 def genById(id):
@@ -216,6 +216,160 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
 
+def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
+	a = random.randint(1, maxA)
+	b = random.randint(1, maxB)
+	c = random.randint(1, maxC)
+	s = (a+b+c)/2
+	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = " 
+	solution = area
+	return problem, solution
+
+def isTriangleValidFunc(maxSideLength = 50):
+    sideA = random.randint(1, maxSideLength)
+    sideB = random.randint(1, maxSideLength)
+    sideC = random.randint(1, maxSideLength)
+    sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
+    sides = [sideC, sideA, sideB]
+    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2]) 
+    problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
+    if exists:
+        solution = "Yes"
+        return problem, solution
+    solution = "No"
+    return problem, solution
+
+def MidPointOfTwoPointFunc(maxValue=20):
+	x1=random.randint(-20,maxValue)
+	y1=random.randint(-20,maxValue)
+	x2=random.randint(-20,maxValue)
+	y2=random.randint(-20,maxValue)
+	problem=f"({x1},{y1}),({x2},{y2})="
+	solution=f"({(x1+x2)/2},{(y1+y2)/2})"
+	return problem,solution
+
+def factoringFunc(range_x1 = 10, range_x2 = 10):
+  x1 = random.randint(-range_x1, range_x1)
+  x2 = random.randint(-range_x2, range_x2)
+  def intParser(z):
+    if (z == 0):
+      return ""
+    if (z > 0):
+      return "+" + str(z)
+    if (z < 0):
+      return "-" + str(abs(z))
+
+  b = intParser(x1 + x2)
+  c = intParser(x1 * x2)
+
+  if (b == "+1"):
+      b = "+"
+      
+  if (b == ""):
+    problem = f"x^2{c}"
+  else:
+    problem = f"x^2{b}x{c}"
+
+  x1 = intParser(x1)
+  x2 = intParser(x2)
+  solution = f"(x{x1})(x{x2})"
+  return problem, solution
+  
+def thirdAngleOfTriangleFunc(maxAngle=89):
+	angle1 = random.randint(1, maxAngle)
+	angle2 = random.randint(1, maxAngle)
+	angle3 = 180 - (angle1 + angle2)
+	problem = f"Third angle of triangle with angles {angle1} and {angle2} = "
+	solution = angle3
+	return problem, solution
+
+def systemOfEquationsFunc(range_x = 10, range_y = 10, coeff_mult_range=10):
+    # Generate solution point first
+    x = random.randint(-range_x, range_x)
+    y = random.randint(-range_y, range_y)
+    # Start from reduced echelon form (coeffs 1)
+    c1 = [1, 0, x]
+    c2 = [0, 1, y]
+
+    def randNonZero():
+        return random.choice([i for i in range(-coeff_mult_range, coeff_mult_range)
+                              if i != 0])
+    # Add random (non-zero) multiple of equations (rows) to each other
+    c1_mult = randNonZero()
+    c2_mult = randNonZero()
+    new_c1 = [c1[i] + c1_mult * c2[i] for i in range(len(c1))]
+    new_c2 = [c2[i] + c2_mult * c1[i] for i in range(len(c2))]
+
+    # For extra randomness, now add random (non-zero) multiples of original rows
+    # to themselves
+    c1_mult = randNonZero()
+    c2_mult = randNonZero()
+    new_c1 = [new_c1[i] + c1_mult * c1[i] for i in range(len(c1))]
+    new_c2 = [new_c2[i] + c2_mult * c2[i] for i in range(len(c2))]
+
+    def coeffToFuncString(coeffs):
+        # lots of edge cases for perfect formatting!
+        x_sign = '-' if coeffs[0] < 0 else ''
+        # No redundant 1s
+        x_coeff = str(abs(coeffs[0])) if abs(coeffs[0]) != 1 else ''
+        # If x coeff is 0, dont include x
+        x_str = f'{x_sign}{x_coeff}x' if coeffs[0] != 0 else ''
+        # if x isn't included and y is positive, dont include operator
+        op = ' - ' if coeffs[1] < 0 else (' + ' if x_str != '' else '')
+        # No redundant 1s
+        y_coeff = abs(coeffs[1]) if abs(coeffs[1]) != 1 else ''
+        # Don't include if 0, unless x is also 0 (probably never happens)
+        y_str = f'{y_coeff}y' if coeffs[1] != 0 else ('' if x_str != '' else '0')
+        return f'{x_str}{op}{y_str} = {coeffs[2]}'
+
+    problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
+    solution = f"x = {x}, y = {y}"
+    return problem, solution
+
+    # Add random (non-zero) multiple of equations to each other
+
+def distanceTwoPointsFunc(maxValXY = 20, minValXY=-20):
+    point1X = random.randint(minValXY, maxValXY+1)
+    point1Y = random.randint(minValXY, maxValXY+1)
+    point2X = random.randint(minValXY, maxValXY+1)
+    point2Y = random.randint(minValXY, maxValXY+1)
+    distanceSq = (point1X - point2X) ** 2 + (point1Y - point2Y) ** 2
+    solution = f"sqrt({distanceSq})"
+    problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
+    return problem, solution
+
+def pythagoreanTheoremFunc(maxLength = 20):
+    a = random.randint(1, maxLength)
+    b = random.randint(1, maxLength)
+    c = (a**2 + b**2)**0.5
+    problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
+    solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
+    return problem, solution
+
+def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
+    if n > 10:
+        print("[!] n cannot be greater than 10")
+        return None, None
+
+    vars = ['x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g'][:n]
+    soln = [ random.randint(-varRange, varRange) for i in range(n) ]
+
+    problem = list()
+    solution = ", ".join(["{} = {}".format(vars[i], soln[i]) for i in range(n)])
+    for _ in range(n):
+        coeff = [ random.randint(-coeffRange, coeffRange) for i in range(n) ]
+        res = sum([ coeff[i] * soln[i] for i in range(n)])
+        
+        prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
+        while "" in prob:
+            prob.remove("")
+        prob = " + ".join(prob) + " = " + str(res)
+        problem.append(prob)
+    
+    problem = "\n".join(problem)
+    return problem, solution
+
 def primeFactors(minVal=1, maxVal=200):
     a = random.randint(minVal, maxVal)
     n = a
@@ -255,7 +409,14 @@ decimalToBinary = Generator("Decimal to Binary",14,"Binary of a=","b",DecimalToB
 binaryToDecimal = Generator("Binary to Decimal",15,"Decimal of a=","b",BinaryToDecimalFunc)
 fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
 intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
-primeFactors = Generator("Prime Factorisation", 18, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
-
-for i in range(0, 10):
-    print(primeFactors())
+areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
+doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?","Yes/No", isTriangleValidFunc)
+midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
+factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
+                              systemOfEquationsFunc)
+distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
+pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
+linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
+primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactors)
