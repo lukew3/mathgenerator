@@ -714,6 +714,12 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def exponentiationFunc(maxBase = 20,maxExpo = 10):
+    base = random.randint(1, maxBase)
+    expo = random.randint(1, maxExpo)
+    problem = f"{base}^{expo} ="
+    solution = str(base ** expo)
+    return problem, solution
 # || Class Instances
 
 #Format is:
@@ -769,3 +775,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+exponentiation = Generator("Exponentiation",50,"a^b = ","c",exponentiationFunc)
