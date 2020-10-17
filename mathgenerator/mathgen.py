@@ -758,6 +758,13 @@ def DiceSumProbFunc(maxDice=3):
     solution="{}/{}".format(count, 6**a)
     return problem, solution
 
+def exponentiationFunc(maxBase = 20,maxExpo = 10):
+    base = random.randint(1, maxBase)
+    expo = random.randint(1, maxExpo)
+    problem = f"{base}^{expo} ="
+    solution = str(base ** expo)
+    return problem, solution
+  
 # || Class Instances
 
 #Format is:
@@ -816,3 +823,4 @@ fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourt
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
 DiceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
+exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
