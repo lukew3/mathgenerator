@@ -81,3 +81,4 @@ problem, solution = mathgen.genById(0)
 | 47 | Cube Root | cuberoot of 711 upto 2 decimal places is: | 8.93 | CubeRoot |
 | 48 | Power Rule Integration | 3x^1 | (3/1)x^2 + c | powerRuleIntegration |
 | 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 94 , 101, 102 = | 63 | fourthAngleOfQuadrilateral |
+| 50 | Sum of Angles of Polygon | Sum of angles of polygon with 4 sides = | 360 | sumOfAnglesOfPolygon |

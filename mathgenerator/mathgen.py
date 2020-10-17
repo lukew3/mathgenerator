@@ -714,6 +714,13 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def sumOfAnglesOfPolygonFunc(maxSides = 12):
+    side = random.randint(3, maxSides)
+    sum = (side - 2) * 180
+    problem = f"Sum of angles of polygon with {side} sides = "
+    solution = sum
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +776,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 50, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
