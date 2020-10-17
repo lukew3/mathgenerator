@@ -785,6 +785,20 @@ def confidenceIntervalFunc():
     solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
     return problem, solution
 
+def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
+    radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
+    degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
+    problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
+    first = math.pow(radicand1, 1/degree1)
+    second = math.pow(radicand2, 1/degree2)
+    solution = "="
+    if first > second:
+        solution = ">"
+    elif first < second:
+        solution = "<"
+    return problem, solution
+    
+
 # || Class Instances
 
 #Format is:
@@ -845,3 +859,4 @@ hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcf
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
+surdsComparison = Generator("Comparing surds", 50, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
