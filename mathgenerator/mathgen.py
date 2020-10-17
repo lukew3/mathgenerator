@@ -907,6 +907,14 @@ def dataSummaryFunc(number_values=15,minval=5,maxval=50):
     solution="The Mean is {} , Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
     return problem,solution
 
+def surfaceAreaSphere(maxSide = 20, unit = 'm'):
+    r = random.randint(1, maxSide)
+
+    problem = f"Surface area of Sphere with radius = {r}{unit} is"
+    ans = 4 * math.pi * r * r
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
 # || Class Instances
 
 # Format is:
@@ -974,3 +982,4 @@ fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a n
 basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
+surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
