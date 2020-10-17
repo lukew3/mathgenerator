@@ -714,6 +714,18 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]):
+    angle=random.choice(angles)
+    function=random.choice(functions)
+
+    problem=f"What is {function}({angle})?\n"
+    expression='math.'+function+'(math.radians(angle))'
+    result_fraction_map={0.0:"0",0.5:"1/2",0.71:"1/√2",0.87:"√3/2",1.0:"1",0.58:"1/√3",1.73:"√3"}
+    
+    solution=result_fraction_map[round(eval(expression),2)] if round(eval(expression),2)<=99999 else "∞"  #for handling the ∞ condition
+
+    return problem,solution
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +781,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+basicTrigonometry=Generator("Trigonometric Values",50,"What is sin(X)?","ans",basicTrigonometryFunc)
