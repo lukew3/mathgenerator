@@ -713,16 +713,16 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
-  
+
 def quadraticEquation(maxVal=100):
 	a = random.randint(1,maxVal)
 	c = random.randint(1,maxVal)
 	b = random.randint(round(math.sqrt(4*a*c))+1,round(math.sqrt(4*maxVal*maxVal)))
-	
+
 	problem = "Zeros of the Quadratic Equation {}x^2+{}x+{}=0".format(a,b,c)
 
 	D = math.sqrt(b*b-4*a*c)
-	
+
 	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
 	return problem,solution
 
@@ -797,18 +797,18 @@ def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
     elif first < second:
         solution = "<"
     return problem, solution
-    
+
 def fibonacciSeriesFunc(minNo=1):
     n = random.randint(minNo,20)
     def createFibList(n):
-    l=[]
-    for i in range(n):
-        if i<2:
-            l.append(i)
-        else:
-            val = l[i-1]+l[i-2]
-            l.append(val)
-    return l
+        l=[]
+        for i in range(n):
+            if i<2:
+                l.append(i)
+            else:
+                val = l[i-1]+l[i-2]
+                l.append(val)
+        return l
     fibList=createFibList(n)
     problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
     solution = fibList
@@ -821,7 +821,7 @@ def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]):
     problem=f"What is {function}({angle})?"
     expression='math.'+function+'(math.radians(angle))'
     result_fraction_map={0.0:"0",0.5:"1/2",0.71:"1/√2",0.87:"√3/2",1.0:"1",0.58:"1/√3",1.73:"√3"}
-    
+
     solution=result_fraction_map[round(eval(expression),2)] if round(eval(expression),2)<=99999 else "∞"  #for handling the ∞ condition
 
     return problem,solution
