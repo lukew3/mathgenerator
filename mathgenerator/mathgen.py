@@ -40,7 +40,7 @@ def additionFunc(maxSum = 99, maxAddend = 50):
 
 def subtractionFunc(maxMinuend = 99, maxDiff = 99):
     a = random.randint(0, maxMinuend)
-    b = random.randint(max(0, (a-maxDiff)), a)
+    b = random.randint(max(0, (a-maxDiff)), a) #The value of b will be higehr than the 0 and the value of a minus the highest differnece
     c = a-b
     problem = str(a) + "-" + str(b) + "="
     solution = str(c)
@@ -150,7 +150,7 @@ def basicAlgebraFunc(maxVariable = 10):
     problem = f"{a}x + {b} = {c}"
     solution = x
     return problem, solution
-
+#It will be the log fun
 def logFunc(maxBase=3, maxVal=8):
     a = random.randint(1, maxVal)
     b = random.randint(2, maxBase)
@@ -158,7 +158,7 @@ def logFunc(maxBase=3, maxVal=8):
     problem = "log"+str(b)+"("+str(c)+")"
     solution = str(a)
     return problem, solution
-
+#It will be changing the division into Fun
 def divisionToIntFunc(maxA=25, maxB=25):
     a = random.randint(1,maxA)
     b = random.randint(1,maxB)
@@ -167,14 +167,14 @@ def divisionToIntFunc(maxA=25, maxB=25):
     problem = f"{divisor}/{dividend} = "
     solution=int(divisor/dividend)
     return problem,solution
-
+#It will be changing the Decimal to binary
 def DecimalToBinaryFunc(max_dec=99):
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")
     problem = "Binary of "+str(a)+"="
     solution = str(b)
     return problem, solution
-
+#It will be changing the Binary to Decimal
 def BinaryToDecimalFunc(max_dig=10):
 	problem=''
 	for i in range(random.randint(1,max_dig)):
@@ -203,7 +203,7 @@ def divideFractionsFunc(maxVal=10):
     x = f"{tmp_n//gcd}/{tmp_d//gcd}"
     if (tmp_d == 1 or tmp_d == gcd):
         x = f"{tmp_n//gcd}"
-    # for equal numerator and denominators
+    # for equal and prominent numerator and denominators
     problem = f"({a}/{b})/({c}/{d})"
     solution = x
     return problem, solution
@@ -215,9 +215,10 @@ def multiplyIntToMatrix22(maxMatrixVal = 10, maxRes = 100):
     d = random.randint(0, maxMatrixVal)
     constant = random.randint(0, int(maxRes/max(a,b,c,d)))
     problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
+	#the multiplation of int matrices
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
-
+#The function for are of triangles
 def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	a = random.randint(1, maxA)
 	b = random.randint(1, maxB)
