@@ -726,7 +726,6 @@ def quadraticEquation(maxVal=100):
 	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
 	return problem,solution
 
-
 def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -764,7 +763,28 @@ def exponentiationFunc(maxBase = 20,maxExpo = 10):
     problem = f"{base}^{expo} ="
     solution = str(base ** expo)
     return problem, solution
-  
+
+def confidenceIntervalFunc():
+    n=random.randint(20,40)
+    j=random.randint(0,3)
+    lst=random.sample(range(200,300),n)
+    lst_per=[80 ,90, 95, 99]
+    lst_t = [1.282, 1.645, 1.960, 2.576]
+    mean=0
+    sd=0
+    for i in lst:
+        count= i + mean
+        mean=count
+    mean = mean/n
+    for i in lst:
+        x=(i-mean)**2+sd
+        sd=x
+    sd=sd/n
+    standard_error = lst_t[j]*math.sqrt(sd/n)
+    problem= 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
+    solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -817,10 +837,11 @@ vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vecto
 compareFractions=Generator("Compare Fractions",44,"Which symbol represents the comparison between a/b and c/d?",">/</=",compareFractionsFunc)
 simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
 matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
-CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
+cubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
-DiceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
+diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
+confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
