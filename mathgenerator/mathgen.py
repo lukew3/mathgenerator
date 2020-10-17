@@ -726,6 +726,17 @@ def quadraticEquation(maxVal=100):
 	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
 	return problem,solution
 
+
+def hcfFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"HCF of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -782,3 +793,4 @@ CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b"
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
+hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
