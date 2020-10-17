@@ -116,7 +116,7 @@ def gcdFunc(maxVal=20):
     x, y = a, b
     while(y):
        x, y = y, x % y
-    problem = f"GCD of {a} and {b} = "
+    problem = f"GCD of {a} and {b} ="
     solution = str(x)
     return problem, solution
 
@@ -128,7 +128,7 @@ def lcmFunc(maxVal=20):
     while(y):
         x, y = y, x % y
     d = c // x
-    problem = f"LCM of {a} and {b} = "
+    problem = f"LCM of {a} and {b} ="
     solution = str(d)
     return problem, solution
 
