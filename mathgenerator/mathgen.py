@@ -914,13 +914,16 @@ def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
-
+def volumeSphereFunc(maxRadius = 100):
+    r=random.randint(1,maxRadius)
+    problem=f"Volume of sphere with radius {r} m = "
+    ans=(4*math.pi/3)*r*r*r
+    solution = f"{ans} m^3"
+    return problem,solution
 # || Class Instances
 
 # Format is:
 # <title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
-
-
 addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
@@ -944,8 +947,7 @@ doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with s
 midPointOfTwoPoint = Generator("Midpoint of the two point", 20, "((X1,Y1),(X2,Y2))=", "((X1+X2)/2,(Y1+Y2)/2)", MidPointOfTwoPointFunc)
 factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
-systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
-                              systemOfEquationsFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)", "sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc)  # This has multiple variables whereas #23 has only x and y
@@ -983,3 +985,4 @@ basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",ba
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
+volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
