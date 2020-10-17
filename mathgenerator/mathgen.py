@@ -790,4 +790,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
-DiceSumProbability=Generator("Probability of a certain sum appearing on faces of dice",50,"If n dices are rolled then probabilty of getting sum of x is", DiceSumProbFunc)
+DiceSumProbability=Generator("Probability of a certain sum appearing on faces of dice",50,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
