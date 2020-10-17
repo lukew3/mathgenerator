@@ -11,7 +11,7 @@ Your object instantiation should follow this format:
 #<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 
 ```
-and look something like this:
+The Object generator reperesentign something like this would be considered:
 ```
 addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
 ```
@@ -30,7 +30,7 @@ Before coding, please check README.md to see if someone has already created the 
 Skillid is determined by the next available id as can be determined in the table.
 
 ### Provide Ideas
-If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue. If you have a lot of ideas, I would suggest adding them to the table in README.md so that they are easier for our team to manage.
+If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue. If you have a lot of ideas, I would suggest adding them to the table in README.md so that they are easier for our team to manage. Idea providing must not be duplicate as it may raise concerns over originality.
 
 ## First Time Contributors
 If you have never contributed to open source before here is a quick explanation of how to contribute.
