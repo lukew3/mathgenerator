@@ -713,6 +713,50 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
+  
+def quadraticEquation(maxVal=100):
+	a = random.randint(1,maxVal)
+	c = random.randint(1,maxVal)
+	b = random.randint(round(math.sqrt(4*a*c))+1,round(math.sqrt(4*maxVal*maxVal)))
+	
+	problem = "Zeros of the Quadratic Equation {}x^2+{}x+{}=0".format(a,b,c)
+
+	D = math.sqrt(b*b-4*a*c)
+	
+	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
+	return problem,solution
+
+
+def hcfFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"HCF of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
+def DiceSumProbFunc(maxDice=3):
+    a = random.randint(1,maxDice)
+    b = random.randint(a,6*a)
+    count=0
+    for i in [1,2,3,4,5,6]:
+        if a==1:
+            if i==b:
+                count=count+1
+        elif a==2:
+            for j in [1,2,3,4,5,6]:
+                if i+j==b:
+                    count=count+1
+        elif a==3:
+            for j in [1,2,3,4,5,6]:
+                for k in [1,2,3,4,5,6]:
+                    if i+j+k==b:
+                        count=count+1
+    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a,b)
+    solution="{}/{}".format(count, 6**a)
+    return problem, solution
 
 def exponentiationFunc(maxBase = 20,maxExpo = 10):
     base = random.randint(1, maxBase)
@@ -720,6 +764,7 @@ def exponentiationFunc(maxBase = 20,maxExpo = 10):
     problem = f"{base}^{expo} ="
     solution = str(base ** expo)
     return problem, solution
+  
 # || Class Instances
 
 #Format is:
@@ -775,4 +820,7 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
-exponentiation = Generator("Exponentiation",50,"a^b = ","c",exponentiationFunc)
+quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
+hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
+DiceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
+exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
