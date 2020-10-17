@@ -699,7 +699,7 @@ def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         coefficient = random.randint(1, maxCoef)
         exponent = random.randint(1, maxExp)
         problem += str(coefficient) + "x^" + str(exponent)
-        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
+        solution += "("+str(coefficient) +"/"+str(exponent + 1) +")x^" + str(exponent +1)
     solution = solution + " + c"
     return problem, solution
 
@@ -767,5 +767,5 @@ compareFractions=Generator("Compare Fractions",44,"Which symbol represents the c
 simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
 matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
-powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m+1)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
