@@ -826,6 +826,13 @@ def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]):
 
     return problem,solution
 
+def sumOfAnglesOfPolygonFunc(maxSides = 12):
+    side = random.randint(3, maxSides)
+    sum = (side - 2) * 180
+    problem = f"Sum of angles of polygon with {side} sides = "
+    solution = sum
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -889,3 +896,4 @@ confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% 
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
 fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
 basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
+sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
