@@ -699,7 +699,7 @@ def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
         coefficient = random.randint(1, maxCoef)
         exponent = random.randint(1, maxExp)
         problem += str(coefficient) + "x^" + str(exponent)
-        solution += "("+str(coefficient) +"/"+str(exponent) +")x^" + str(exponent +1)
+        solution += "("+str(coefficient) +"/"+str(exponent + 1) +")x^" + str(exponent +1)
     solution = solution + " + c"
     return problem, solution
 
@@ -713,7 +713,94 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
-def createFibList(n):
+  
+def quadraticEquation(maxVal=100):
+	a = random.randint(1,maxVal)
+	c = random.randint(1,maxVal)
+	b = random.randint(round(math.sqrt(4*a*c))+1,round(math.sqrt(4*maxVal*maxVal)))
+	
+	problem = "Zeros of the Quadratic Equation {}x^2+{}x+{}=0".format(a,b,c)
+
+	D = math.sqrt(b*b-4*a*c)
+	
+	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
+	return problem,solution
+
+def hcfFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"HCF of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
+def DiceSumProbFunc(maxDice=3):
+    a = random.randint(1,maxDice)
+    b = random.randint(a,6*a)
+    count=0
+    for i in [1,2,3,4,5,6]:
+        if a==1:
+            if i==b:
+                count=count+1
+        elif a==2:
+            for j in [1,2,3,4,5,6]:
+                if i+j==b:
+                    count=count+1
+        elif a==3:
+            for j in [1,2,3,4,5,6]:
+                for k in [1,2,3,4,5,6]:
+                    if i+j+k==b:
+                        count=count+1
+    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a,b)
+    solution="{}/{}".format(count, 6**a)
+    return problem, solution
+
+def exponentiationFunc(maxBase = 20,maxExpo = 10):
+    base = random.randint(1, maxBase)
+    expo = random.randint(1, maxExpo)
+    problem = f"{base}^{expo} ="
+    solution = str(base ** expo)
+    return problem, solution
+
+def confidenceIntervalFunc():
+    n=random.randint(20,40)
+    j=random.randint(0,3)
+    lst=random.sample(range(200,300),n)
+    lst_per=[80 ,90, 95, 99]
+    lst_t = [1.282, 1.645, 1.960, 2.576]
+    mean=0
+    sd=0
+    for i in lst:
+        count= i + mean
+        mean=count
+    mean = mean/n
+    for i in lst:
+        x=(i-mean)**2+sd
+        sd=x
+    sd=sd/n
+    standard_error = lst_t[j]*math.sqrt(sd/n)
+    problem= 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
+    solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
+    return problem, solution
+
+def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
+    radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
+    degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
+    problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
+    first = math.pow(radicand1, 1/degree1)
+    second = math.pow(radicand2, 1/degree2)
+    solution = "="
+    if first > second:
+        solution = ">"
+    elif first < second:
+        solution = "<"
+    return problem, solution
+    
+def fibonacciSeriesFunc(minNo=1):
+    n = random.randint(minNo,20)
+    def createFibList(n):
     l=[]
     for i in range(n):
         if i<2:
@@ -722,9 +809,6 @@ def createFibList(n):
             val = l[i-1]+l[i-2]
             l.append(val)
     return l
-        
-def fibonacciSeriesFunc(minNo=1):
-    n = random.randint(minNo,20)
     fibList=createFibList(n)
     problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
     solution = fibList
@@ -783,6 +867,12 @@ compareFractions=Generator("Compare Fractions",44,"Which symbol represents the c
 simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
 matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
-powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m+1)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
-fibonacciSeries = Generator("Fibonacci Series",50,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
+hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
+diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
+exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
+confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
+surdsComparison = Generator("Comparing surds", 50, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
+fibonacciSeries = Generator("Fibonacci Series",51,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
