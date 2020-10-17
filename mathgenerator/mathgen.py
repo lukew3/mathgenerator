@@ -715,7 +715,7 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     return problem, solution
 def confidenceIntervalFunc():
     n=random.randint(20,40)
-    j=random.randint(1,4)
+    j=random.randint(0,3)
     lst=random.sample(range(200,300),n)
     lst_per=[80 ,90, 95, 99]
     lst_t = [1.282, 1.645, 1.960, 2.576]
