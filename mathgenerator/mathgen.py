@@ -889,6 +889,24 @@ def sumOfAnglesOfPolygonFunc(maxSides = 12):
     solution = sum
     return problem, solution
 
+def dataSummaryFunc(number_values=15,minval=5,maxval=50):
+    random_list=[]
+    for i in range(number_values):
+        n=random.randint(minval,maxval)
+        random_list.append(n)
+    a=sum(random_list)
+    mean=a/number_values
+    var=0
+    for i in range(number_values):
+        var+=(random_list[i]-mean)**2
+    print(random_list)
+    print(mean)
+    print(var/number_values)
+    print((var/number_values)**0.5)
+    problem="Find the mean,standard deviation and variance for the data"+str(random_list)
+    solution="The Mean is {} , Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
+    return problem,solution
+
 # || Class Instances
 
 # Format is:
@@ -955,3 +973,4 @@ surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _
 fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
 basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
+dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
