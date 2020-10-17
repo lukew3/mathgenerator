@@ -814,6 +814,18 @@ def fibonacciSeriesFunc(minNo=1):
     solution = fibList
     return problem,solution
 
+def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
+    angle=random.choice(angles)
+    function=random.choice(functions)
+
+    problem=f"What is {function}({angle})?"
+    expression='math.'+function+'(math.radians(angle))'
+    result_fraction_map={0.0:"0",0.5:"1/2",0.71:"1/√2",0.87:"√3/2",1.0:"1",0.58:"1/√3",1.73:"√3"}
+    
+    solution=result_fraction_map[round(eval(expression),2)] if round(eval(expression),2)<=99999 else "∞"  #for handling the ∞ condition
+
+    return problem,solution
+
 # || Class Instances
 
 #Format is:
@@ -874,5 +886,6 @@ hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcf
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
-surdsComparison = Generator("Comparing surds", 50, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-fibonacciSeries = Generator("Fibonacci Series",51,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
+fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
