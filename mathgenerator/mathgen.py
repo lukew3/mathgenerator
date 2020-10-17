@@ -476,14 +476,6 @@ def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
     solution = f"{ans} {unit}^2"
     return problem, solution
 
-def surfaceAreaSphere(maxSide = 20, unit = 'm'):
-    r = random.randint(1, maxSide)
-
-    problem = f"Surface area of Sphere with radius = {r}{unit} is"
-    ans = 4 * math.pi * r * r
-    solution = f"{ans} {unit}^2"
-    return problem, solution
-
 def volumeCuboid(maxSide = 20, unit = 'm'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
@@ -841,6 +833,14 @@ def sumOfAnglesOfPolygonFunc(maxSides = 12):
     solution = sum
     return problem, solution
 
+def surfaceAreaSphere(maxSide = 20, unit = 'm'):
+    r = random.randint(1, maxSide)
+
+    problem = f"Surface area of Sphere with radius = {r}{unit} is"
+    ans = 4 * math.pi * r * r
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+    
 # || Class Instances
 
 #Format is:
