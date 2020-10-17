@@ -4,7 +4,8 @@ import fractions
 
 genList = []
 
-# || Generator class
+# Generator class
+
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
         self.title = title
@@ -42,7 +43,7 @@ def subtractionFunc(maxMinuend = 99, maxDiff = 99):
     a = random.randint(0, maxMinuend)
     b = random.randint(max(0, (a-maxDiff)), a)
     c = a-b
-    problem = str(a) + "-" + str(b) + "="
+    problem = str(a) + "-" + str(b) + "= "
     solution = str(c)
     return problem, solution
 
@@ -136,6 +137,7 @@ def basicAlgebraFunc(maxVariable = 10):
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
+
     # calculate gcd
     def calculate_gcd(x, y):
         while(y):
@@ -263,6 +265,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
       return "-" + str(abs(z))
 
   b = intParser(x1 + x2)
+	
   c = intParser(x1 * x2)
 
   if (b == "+1"):
@@ -545,6 +548,7 @@ def intersectionOfTwoLinesFunc(
         Generates an equation given the slope and intercept.
         It handles cases where m is fractional.
         It also ensures that we don't have weird signs such as y = mx + -b.
+	
         """
         if m[1] == 1:
             m = m[0]
@@ -561,6 +565,7 @@ def intersectionOfTwoLinesFunc(
     def fractionToString(x):
         """
         Converts the given fractions.Fraction into a string.
+	
         """
         if x.denominator == 1:
             x = x.numerator
@@ -741,6 +746,7 @@ def hcfFunc(maxVal=20):
 
 #Format is:
 #<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+
 addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
@@ -764,8 +770,7 @@ doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with s
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
-systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
-                              systemOfEquationsFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
