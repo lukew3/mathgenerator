@@ -535,10 +535,13 @@ def commonFactorsFunc(maxVal=100):
 def quadraticEquation(maxVal=100):
 	a = random.randint(1,maxVal)
 	c = random.randint(1,maxVal)
-	b = random.randint(4*a*c,4*maxVal*maxVal)
+	b = random.randint(round(math.sqrt(4*a*c))+1,round(math.sqrt(4*maxVal*maxVal)))
 	
-	problem = "Zeros of the Quadratic Equation {a}x^2+{b}x+{c}=0".format(a,b,c)
-	solution = str[(-b+sqrt(b^2-4*a*c))/2*a,(-b-sqrt(b^2-4*a*c))/2*a]
+	problem = "Zeros of the Quadratic Equation {}x^2+{}x+{}=0".format(a,b,c)
+
+	D = math.sqrt(b*b-4*a*c)
+	
+	solution = str([(-b+D)/(2*a),(-b-D)/(2*a)])
 	return problem,solution
 # || Class Instances
 
