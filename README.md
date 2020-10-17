@@ -56,8 +56,7 @@ problem, solution = mathgen.genById(0)
 | 23 | Solve a System of Equations in R^2 | 4x - 8y = 48, 3x - 8y = 40 | x = 8, y = -2 | systemOfEquations |
 | 24 | Distance between 2 points | Find the distance between (-9, -20) and (18, -19) | sqrt(730) | distance2Point |
 | 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 18 and 13 =  | 22.20 | pythagoreanTheorem |
-| 26 | Linear Equations | -11x + -16y = -302
-1x + 20y = 250 | x = 10, y = 12 | linearEquations |
+| 26 | Linear Equations | -11x + -16y = -302 , 1x + 20y = 250 | x = 10, y = 12 | linearEquations |
 | 27 | Prime Factorisation | Find prime factors of 55 | [5, 11] | primeFactors |
 | 28 | Fraction Multiplication | (4/9)*(8/10) | 16/45 | fractionMultiplication |
 | 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 15 sides | 156.0 | angleRegularPolygon |
