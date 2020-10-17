@@ -714,6 +714,20 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def surdsComparison(maxValue = 100, maxRoot = 10):
+    radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
+    degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
+    problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
+    first = math.pow(radicand1, 1/degree1)
+    second = math.pow(radicand2, 1/degree2)
+    solution = "="
+    if first > second:
+        solution = ">"
+    elif first < second:
+        solution = "<"
+    return problem, solution
+    
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +783,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+surdsComparisonGen = Generator("Comparing surds", 50, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparison)
