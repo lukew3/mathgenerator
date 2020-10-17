@@ -714,6 +714,17 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+
+def hcfFunc(maxVal=20):
+    a = random.randint(1, maxVal)
+    b = random.randint(1, maxVal)
+    x, y = a, b
+    while(y):
+       x, y = y, x % y
+    problem = f"HCF of {a} and {b} = "
+    solution = str(x)
+    return problem, solution
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +780,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+hcf = Generator("HCF (Highest Common Factor)", 50, "HCF of a and b = ", "c", hcfFunc)
