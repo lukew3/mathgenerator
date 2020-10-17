@@ -714,6 +714,24 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def arithmeticProgressionFunc (maxd = 100, maxa = 100, maxn = 100):
+    sumOrTerm = random.randint (0,1)
+    d = random.randint (-1 * maxd, maxd)
+    a1 = random.randint (-1 * maxa, maxa)
+    a2 = a1 + d
+    a3 = a2 + d
+    n = random.randint (4, maxn)
+    apString = str(a1) +'\t' + str(a2) +'\t' + str(a3) + '\t...'
+    if (sumOrTerm == 0) : #sum
+        problem = 'Find the sum of first ' + str(n) + ' terms of the AP series: ' + apString
+        solution = n * ((2*a1) + ((n-1)*d))/2
+    else : #term
+        problem = 'Find the term number ' + str(n) + ' of the AP series: ' + apString
+        solution = a1  + ((n-1)*d)
+    return problem, solution
+
+
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +787,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+arithmeticProgression = Generator ("Arithmetic Progression", 50, "n-Sum or n-Term of an Arithmetic Progression", "Sum or term", arithmeticProgressionFunc)
