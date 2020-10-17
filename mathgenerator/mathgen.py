@@ -713,6 +713,22 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
+def createFibList(n):
+    l=[]
+    for i in range(n):
+        if i<2:
+            l.append(i)
+        else:
+            val = l[i-1]+l[i-2]
+            l.append(val)
+    return l
+        
+def fibonacciSeriesFunc(minNo=1):
+    n = random.randint(minNo,20)
+    fibList=createFibList(n)
+    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+    solution = fibList
+    return problem,solution
 
 # || Class Instances
 
@@ -769,3 +785,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+fibonacciSeries = Generator("Fibonacci Series",50,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
