@@ -798,21 +798,21 @@ def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
         solution = "<"
     return problem, solution
     
-# def fibonacciSeriesFunc(minNo=1):
-#     n = random.randint(minNo,20)
-#     def createFibList(n):
-#         l=[]
-#     for i in range(n):
-#         if i<2:
-#             l.append(i)
-#         else:
-#             val = l[i-1]+l[i-2]
-#             l.append(val)
-#     return l
-#     fibList=createFibList(n)
-#     problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
-#     solution = fibList
-#     return problem,solution
+def fibonacciSeriesFunc(minNo=1):
+    n = random.randint(minNo,20)
+    def createFibList(n):
+        l=[]
+    for i in range(n):
+        if i<2:
+            l.append(i)
+        else:
+            val = l[i-1]+l[i-2]
+            l.append(val)
+    return l
+    fibList=createFibList(n)
+    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+    solution = fibList
+    return problem,solution
 
 def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
     angle=random.choice(angles)
@@ -910,6 +910,6 @@ diceSumProbability=Generator("Probability of a certain sum appearing on faces of
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-# fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
 basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
 data_summary=Generator("Mean,Standard Deviation,Variance",58,"a,b,c","Mean:a+b+c/3,Std,Var",data_desc)
