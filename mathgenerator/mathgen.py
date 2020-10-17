@@ -224,7 +224,7 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 	c = random.randint(1, maxC)
 	s = (a+b+c)/2
 	area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = " 
+	problem = "Area of triangle with side lengths: "+ str(a) +" "+ str(b) +" "+ str(c) + " = "
 	solution = area
 	return problem, solution
 
@@ -234,7 +234,7 @@ def isTriangleValidFunc(maxSideLength = 50):
     sideC = random.randint(1, maxSideLength)
     sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
     sides = [sideC, sideA, sideB]
-    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2]) 
+    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2])
     problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
     if exists:
         solution = "Yes"
@@ -267,7 +267,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
 
   if (b == "+1"):
       b = "+"
-      
+
   if (b == ""):
     problem = f"x^2{c}"
   else:
@@ -277,7 +277,7 @@ def factoringFunc(range_x1 = 10, range_x2 = 10):
   x2 = intParser(x2)
   solution = f"(x{x1})(x{x2})"
   return problem, solution
-  
+
 def thirdAngleOfTriangleFunc(maxAngle=89):
 	angle1 = random.randint(1, maxAngle)
 	angle2 = random.randint(1, maxAngle)
@@ -362,13 +362,13 @@ def linearEquationsFunc(n = 2, varRange = 20, coeffRange = 20):
     for _ in range(n):
         coeff = [ random.randint(-coeffRange, coeffRange) for i in range(n) ]
         res = sum([ coeff[i] * soln[i] for i in range(n)])
-        
+
         prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
         while "" in prob:
             prob.remove("")
         prob = " + ".join(prob) + " = " + str(res)
         problem.append(prob)
-    
+
     problem = "\n".join(problem)
     return problem, solution
 
@@ -417,8 +417,8 @@ def regularPolygonAngleFunc(minVal = 3,maxVal = 20):
     problem = f"Find the angle of a regular polygon with {sideNum} sides"
     exteriorAngle = round((360/sideNum),2)
     solution = 180 - exteriorAngle
-    return problem, solution 
-  
+    return problem, solution
+
 def combinationsFunc(maxlength=20):
 
     def factorial(a):
@@ -434,9 +434,9 @@ def combinationsFunc(maxlength=20):
 
     solution= int(factorial(a)/(factorial(b)*factorial(a-b)))
     problem= "Number of combinations from {} objects picked {} at a time ".format(a,b)
-    
+
     return problem, solution
-  
+
 def factorialFunc(maxInput = 6):
     a = random.randint(0, maxInput)
     n = a
@@ -470,7 +470,7 @@ def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
-    
+
     problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
     ans = 2 * (a*b + b*c + c*a)
     solution = f"{ans} {unit}^2"
@@ -567,7 +567,7 @@ def intersectionOfTwoLinesFunc(
         else:
             x = f"{x.numerator}/{x.denominator}"
         return x
-        
+
     m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
     m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
     b1 = random.randint(minB, maxB)
@@ -625,7 +625,7 @@ def compareFractionsFunc(maxVal=10):
         solution="<"
     else:
         solution="="
-    
+
     problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem,solution
 
@@ -648,7 +648,7 @@ def matrixMultiplicationFunc(maxVal=100):
         a.append([])
         for c in range(n):
             a[r].append(random.randint(-maxVal,maxVal))
-    
+
     b=[]
     for r in range(n):
         b.append([])
@@ -666,8 +666,8 @@ def matrixMultiplicationFunc(maxVal=100):
             for t in range(n):
                 temp+=a[r][t]*b[t][c]
             res[r].append(temp)
-    problem= f"Multiply \n{a_string}\n and \n\n{b_string}" #consider using a, b instead of a_string, b_string if the problem doesn't look right
-    solution= matrixMultiplicationFuncHelper(res)
+    problem= f"Multiply {a} and {b}" #consider using a, b instead of a_string, b_string if the problem doesn't look right
+    solution= res#matrixMultiplicationFuncHelper(res)
     return problem, solution
 
 def matrixMultiplicationFuncHelper(inp):
@@ -703,7 +703,7 @@ def powerRuleIntegrationFunc(maxCoef = 10, maxExp = 10, maxTerms = 5):
     solution = solution + " + c"
     return problem, solution
 
-  
+
 def fourthAngleOfQuadriFunc(maxAngle = 180):
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, 240-angle1)
@@ -741,8 +741,7 @@ doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with s
 midPointOfTwoPoint=Generator("Midpoint of the two point", 20,"((X1,Y1),(X2,Y2))=","((X1+X2)/2,(Y1+Y2)/2)",MidPointOfTwoPointFunc)
 factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
-systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
-                              systemOfEquationsFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3", systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)","sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc) #This has multiple variables whereas #23 has only x and y
@@ -754,7 +753,7 @@ factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
 surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is","b units^2", surfaceAreaCube)
 surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is","d units^2", surfaceAreaCuboid)
 surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is","c units^2", surfaceAreaCylinder)
-volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube) 
+volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is","b units^3", volumeCube)
 volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is","d units^3", volumeCuboid)
 volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is","c units^3", volumeCylinder)
 surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is","c units^2", surfaceAreaCone)
@@ -769,3 +768,29 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+
+wList = getGenList()
+#print(wList)
+allRows = []
+f=open('mathgen.py')
+lines=f.readlines()
+line = 720
+for item in wList:
+    myGen = item[2]
+    prob, sol = myGen()
+    prob = str(prob).rstrip("\n")
+    sol = str(sol).rstrip("\n")
+    instName = lines[line]
+    def_name = instName[:instName.find('=')].strip()
+    print(def_name)
+    row = [myGen.id, myGen.title, prob, sol, def_name]
+    print(row)
+    line+=1
+    allRows.append(row)
+
+g=open('../README.md', "a")
+for row in allRows:
+    tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
+    g.write(tableLine)
+    #print(tableLine)
+g.close()
