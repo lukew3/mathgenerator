@@ -476,6 +476,14 @@ def surfaceAreaCuboid(maxSide = 20, unit = 'm'):
     solution = f"{ans} {unit}^2"
     return problem, solution
 
+def surfaceAreaSphere(maxSide = 20, unit = 'm'):
+    r = random.randint(1, maxSide)
+
+    problem = f"Surface area of Sphere with radius = {r}{unit} is"
+    ans = 4 * math.pi * r * r
+    solution = f"{ans} {unit}^2"
+    return problem, solution
+
 def volumeCuboid(maxSide = 20, unit = 'm'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
@@ -896,3 +904,4 @@ surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _
 fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
 basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
+surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
