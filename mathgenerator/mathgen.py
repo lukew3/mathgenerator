@@ -723,7 +723,7 @@ def quadraticEquation(maxVal=100):
 
 	D = math.sqrt(b*b-4*a*c)
 	
-	solution = str([(-b+D)/(2*a),(-b-D)/(2*a)])
+	solution = str([round((-b+D)/(2*a), 2),round((-b-D)/(2*a), 2)])
 	return problem,solution
 
 # || Class Instances
