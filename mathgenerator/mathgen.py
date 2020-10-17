@@ -70,7 +70,7 @@ def binaryComplement1sFunc(maxDigits = 10):
         question += temp
         answer += "0" if temp == "1" else "1"
 
-    problem = question
+    problem = question+"="
     solution = answer
     return problem, solution
 
