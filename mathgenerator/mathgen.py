@@ -713,6 +713,27 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
+def confidenceIntervalFunc():
+    n=random.randint(20,40)
+    j=random.randint(1,4)
+    lst=random.sample(range(200,300),n)
+    lst_per=[80 ,90, 95, 99]
+    lst_t = [1.282, 1.645, 1.960, 2.576]
+    mean=0
+    sd=0
+    for i in lst:
+        count= i + mean
+        mean=count
+    mean = mean/n
+    for i in lst:
+        x=(i-mean)**2+sd
+        sd=x
+    sd=sd/n
+    standard_error = lst_t[j]*math.sqrt(sd/n)
+    problem= 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
+    solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
+    return problem, solution
+
 
 # || Class Instances
 
@@ -769,3 +790,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+ConfidenceInterval = Generator("Confidence interval For sample S", 51, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
