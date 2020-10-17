@@ -813,6 +813,38 @@ def fibonacciSeriesFunc(minNo=1):
     problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
     solution = fibList
     return problem,solution
+def magicSquareGen():
+    dim =  random.randint(1,10)
+    l=[]
+    for i in range(dim):
+        h=[]
+        for j in range(dim): 
+            val = random.randint(0,20)
+            h.append(val)
+        l.append(h)
+    problem = l
+    falg=1
+    sumMainDig=0
+    sumSecDig=0
+    prv=sum(l[0])
+    sumColumn = 0
+    sumRow = 0
+    for i in range(len(l)):
+        sumColumn=0
+        sumRow=0
+        for j in range(len(l)):
+            if i==j:
+                sumMainDig = sumMainDig + l[i][j]
+            if i+j==len(l)-1:
+                sumSecDig = sumSecDig + l[i][j]
+            sumColumn = sumColumn + l[i][j]
+            sumRow = sumRow + l[j][i]
+        if sumRow!=prv or sumColumn!=prv:
+            flag=0
+    if sumMainDig!=prv or sumSecDig!=prv:
+        flag=0
+
+    return problem , flag
 
 # || Class Instances
 
@@ -876,3 +908,4 @@ exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 50, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
 fibonacciSeries = Generator("Fibonacci Series",51,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+magicSquare = Generator('Magic Square',52,"is the shown matrix a magic square ","prints 1 if it is a magic square and 0 if its is not a magic square",magicSquareGen)
