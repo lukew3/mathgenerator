@@ -920,6 +920,16 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+    
+def BinaryToHexFunc(max_dig=10):
+    problem = ''
+    for i in range(random.randint(1, max_dig)):
+        temp = str(random.randint(0, 1))
+        problem += temp
+
+    solution = hex(int(problem, 2))
+    return problem, solution
+    
 # || Class Instances
 
 # Format is:
@@ -986,3 +996,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+binaryToHex = Generator("Binary to Hexidecimal", 61, "Hexidecimal of a=", "b", BinaryToHexFunc)
