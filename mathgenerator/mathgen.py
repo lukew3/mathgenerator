@@ -795,24 +795,24 @@ def hcfFunc(maxVal=20):
 
 
 def DiceSumProbFunc(maxDice=3):
-    a = random.randint(1,maxDice)
-    b = random.randint(a,6*a)
-    count=0
-    for i in [1,2,3,4,5,6]:
-        if a==1:
-            if i==b:
-                count=count+1
-        elif a==2:
-            for j in [1,2,3,4,5,6]:
-                if i+j==b:
-                    count=count+1
-        elif a==3:
-            for j in [1,2,3,4,5,6]:
-                for k in [1,2,3,4,5,6]:
-                    if i+j+k==b:
-                        count=count+1
-    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a,b)
-    solution="{}/{}".format(count, 6**a)
+    a = random.randint(1, maxDice)
+    b = random.randint(a, 6*a)
+    count = 0
+    for i in [1, 2, 3, 4, 5, 6]:
+        if a == 1:
+            if i == b:
+                count = count + 1
+        elif a == 2:
+            for j in [1, 2, 3, 4, 5, 6]:
+                if i + j == b:
+                    count = count + 1
+        elif a == 3:
+            for j in [1, 2, 3, 4, 5, 6]:
+                for k in [1, 2, 3, 4, 5, 6]:
+                    if i + j + k == b:
+                        count = count + 1
+    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a, b)
+    solution = "{}/{}".format(count, 6**a)
     return problem, solution
 
 
@@ -825,33 +825,33 @@ def exponentiationFunc(maxBase = 20,maxExpo = 10):
 
 
 def confidenceIntervalFunc():
-    n=random.randint(20,40)
-    j=random.randint(0,3)
-    lst=random.sample(range(200,300),n)
-    lst_per=[80,90, 95, 99]
+    n = random.randint(20, 40)
+    j = random.randint(0, 3)
+    lst = random.sample(range(200, 300), n)
+    lst_per = [80, 90, 95, 99]
     lst_t = [1.282, 1.645, 1.960, 2.576]
-    mean=0
-    sd=0
+    mean = 0
+    sd = 0
     for i in lst:
-        count= i + mean
-        mean=count
-    mean = mean/n
+        count = i + mean
+        mean = count
+    mean = mean / n
     for i in lst:
-        x=(i-mean)**2+sd
-        sd=x
-    sd=sd/n
-    standard_error = lst_t[j]*math.sqrt(sd/n)
-    problem= 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
-    solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
+        x = (i - mean) ** 2 + sd
+        sd = x
+    sd = sd / n
+    standard_error = lst_t[j] * math.sqrt(sd / n)
+    problem = 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
+    solution = '({}, {})'.format(mean + standard_error, mean - standard_error)
     return problem, solution
 
 
-def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
-    radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
+def surdsComparisonFunc(maxValue=100, maxRoot=10):
+    radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))
     degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
     problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
-    first = math.pow(radicand1, 1/degree1)
-    second = math.pow(radicand2, 1/degree2)
+    first = math.pow(radicand1, 1 / degree1)
+    second = math.pow(radicand2, 1 / degree2)
     solution = "="
     if first > second:
         solution = ">"
@@ -861,36 +861,36 @@ def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
 
 
 def fibonacciSeriesFunc(minNo=1):
-    n = random.randint(minNo,20)
+    n = random.randint(minNo, 20)
     def createFibList(n):
-        l=[]
+        l = []
         for i in range(n):
-            if i<2:
+            if i < 2:
                 l.append(i)
             else:
-                val = l[i-1]+l[i-2]
+                val = l[i - 1] + l[i - 2]
                 l.append(val)
         return l
-    fibList=createFibList(n)
-    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+    fibList = createFibList(n)
+    problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
-    return problem,solution
+    return problem, solution
 
 
-def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
-    angle=random.choice(angles)
-    function=random.choice(functions)
+def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],functions=["sin", "cos", "tan"]): #Handles degrees in quadrant one
+    angle = random.choice(angles)
+    function = random.choice(functions)
 
-    problem=f"What is {function}({angle})?"
-    expression='math.'+function+'(math.radians(angle))'
-    result_fraction_map={0.0:"0",0.5:"1/2",0.71:"1/√2",0.87:"√3/2",1.0:"1",0.58:"1/√3",1.73:"√3"}
+    problem = f"What is {function}({angle})?"
+    expression = 'math.' + function + '(math.radians(angle))'
+    result_fraction_map = {0.0:"0", 0.5:"1/2", 0.71:"1/√2", 0.87:"√3/2", 1.0:"1", 0.58:"1/√3", 1.73:"√3"}
 
-    solution=result_fraction_map[round(eval(expression),2)] if round(eval(expression),2)<=99999 else "∞"  #for handling the ∞ condition
+    solution = result_fraction_map[round(eval(expression), 2)] if round(eval(expression), 2) <= 99999 else "∞"  #for handling the ∞ condition
 
-    return problem,solution
+    return problem, solution
 
 
-def sumOfAnglesOfPolygonFunc(maxSides = 12):
+def sumOfAnglesOfPolygonFunc(maxSides=12):
     side = random.randint(3, maxSides)
     sum = (side - 2) * 180
     problem = f"Sum of angles of polygon with {side} sides = "
@@ -898,26 +898,26 @@ def sumOfAnglesOfPolygonFunc(maxSides = 12):
     return problem, solution
 
 
-def dataSummaryFunc(number_values=15,minval=5,maxval=50):
-    random_list=[]
+def dataSummaryFunc(number_values=15, minval=5, maxval=50):
+    random_list = []
     for i in range(number_values):
-        n=random.randint(minval,maxval)
+        n = random.randint(minval, maxval)
         random_list.append(n)
-    a=sum(random_list)
-    mean=a/number_values
-    var=0
+    a = sum(random_list)
+    mean = a / number_values
+    var = 0
     for i in range(number_values):
-        var+=(random_list[i]-mean)**2
+        var += (random_list[i] - mean) ** 2
     print(random_list)
     print(mean)
-    print(var/number_values)
-    print((var/number_values)**0.5)
-    problem="Find the mean,standard deviation and variance for the data"+str(random_list)
-    solution="The Mean is {}, Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
-    return problem,solution
+    print(var / number_values)
+    print((var / number_values) ** 0.5)
+    problem = "Find the mean,standard deviation and variance for the data" + str(random_list)
+    solution = "The Mean is {}, Standard Deviation is {}, Variance is {}".format(mean, var / number_values, (var / number_values) ** 0.5)
+    return problem, solution
 
 
-def surfaceAreaSphere(maxSide = 20, unit = 'm'):
+def surfaceAreaSphere(maxSide=20, unit='m'):
     r = random.randint(1, maxSide)
 
     problem = f"Surface area of Sphere with radius = {r}{unit} is"
@@ -926,12 +926,12 @@ def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     return problem, solution
 
 
-def volumeSphereFunc(maxRadius = 100):
+def volumeSphereFunc(maxRadius=100):
     r = random.randint(1, maxRadius)
     problem = f"Volume of sphere with radius {r} m = "
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
-    return problem,solution
+    return problem, solution
 
 
 def mulmatrix(matrix1, matrix2):
@@ -946,6 +946,8 @@ def mulmatrix(matrix1, matrix2):
 
 # Format is:
 # <title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+
+
 addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
@@ -996,7 +998,7 @@ matrixMultiplication = Generator("Multiplication of two matrices", 46, "Multiply
 CubeRoot = Generator("Cube Root", 47, "Cuberoot of a upto 2 decimal places is", "b", cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
-quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
+quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1, x2} of the quadratic equation ax^2+bx+c=0", "x1, x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53, "a^b = ", "c", exponentiationFunc)
@@ -1006,6 +1008,6 @@ fibonacciSeries = Generator("Fibonacci Series", 56, "fibonacci series of first a
 basicTrigonometry=Generator("Trigonometric Values", 57, "What is sin(X)?", "ans", basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
-surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
+surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere", 60, "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 multiplymatrix = Generator("Multiply Matrix of any Dimensions", 61, "matrix1*matrix2", "solution[][]", mulmatrix)
