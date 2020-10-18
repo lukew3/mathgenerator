@@ -758,17 +758,22 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
     solution = solution + " + c"
     return problem, solution
 
-
-def fourthAngleOfQuadriFunc(maxAngle=180):
-    angle1 = random.randint(1, maxAngle)
-    angle2 = random.randint(1, 240 - angle1)
-    angle3 = random.randint(1, 340 - (angle1 + angle2))
-    sum_ = angle1 + angle2 + angle3
-    angle4 = 360 - sum_
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
-    solution = angle4
+def fourthAngleOfQuadriFunc(total=360):
+    def rand_anglesquad():
+        a=180
+        b=0
+        c=0
+        d=0
+        while(c==0 or d==0):
+            a=random.randint(1, total-20)
+            b=random.randint(1, total-a-10)
+            c=random.randint(1, total-a-b)
+            d=total-a-b-c
+        return a, b, c, d
+    a, b, c, d=rand_anglesquad()
+    problem="Fourth angle of a quadrilateral with three angles {}, {}, {} (in degrees)".format(a, b, c)
+    solution=d
     return problem, solution
-
 
 def quadraticEquation(maxVal=100):
     a = random.randint(1, maxVal)
@@ -909,11 +914,11 @@ def dataSummaryFunc(number_values=15,minval=5,maxval=50):
 
 def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     r = random.randint(1, maxSide)
-
     problem = f"Surface area of Sphere with radius = {r}{unit} is"
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
+
 def volumeSphereFunc(maxRadius = 100):
     r=random.randint(1,maxRadius)
     problem=f"Volume of sphere with radius {r} m = "
@@ -973,7 +978,7 @@ simpleInterest = Generator("Simple Interest", 45, "Simple interest for a princip
 matrixMultiplication = Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
 CubeRoot = Generator("Cube Root", 47, "Cuberoot of a upto 2 decimal places is", "b", cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
-fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth angle of a quadrilateral", 49, "Fourth angle of a uadrilateral with angles 100, 50, 80 (in degrees)=", "130", fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
