@@ -954,6 +954,46 @@ def volumeSphereFunc(maxRadius=100):
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
     return problem, solution
+
+
+def quicksortHelper(array, begin, end):
+    p = array[begin]
+    low = begin+1
+    high = end
+    while True:
+        while low <= high and array[high] >= p:
+            high = high - 1
+        while low <= high and array[low] <= p:
+            low = low + 1
+        if low <= high:
+            array[low], array[high] = array[high], array[low]
+        else:
+            break
+    array[begin], array[high] = array[high], array[begin]
+    return high
+
+
+def quickSortFunc(begin=0, end=0, flag=True,solution=[], cache=None):
+    if flag:
+        solution = []
+        q = 8
+        for x in range(q):
+            a = random.randint(0,300)
+            solution.append(a)
+        begin = 0
+        end = len(solution) - 1
+        cached_solution = solution.copy()
+    if begin >= end:
+        return
+    if cache is not None:
+        cached_solution = cache
+    part = quicksortHelper(solution,begin,end)
+    quickSortFunc(begin, part-1, False, solution,cached_solution)
+    quickSortFunc(part+1, end, False, solution,cached_solution)
+    if(solution == sorted(solution)):
+        problem = f"Sorting List of {cached_solution} using Quick Sort = "
+        return problem, solution
+
 # || Class Instances
 
 
@@ -1075,3 +1115,5 @@ surfaceAreaSphereGen = Generator(
     "Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
 volumeSphere = Generator("Volume of Sphere", 60,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
+quickSort = Generator("Quick Sort", 61,
+                      "Sorting list of [103,117,46,243,190] using Quick Sort","[46,103,117,190,243]",quickSortFunc)
