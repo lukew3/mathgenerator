@@ -899,8 +899,8 @@ def magicSquareGen():
             flag=0
     if sumMainDig!=prv or sumSecDig!=prv:
         flag=0
-
-    return problem , flag
+    solution = flag
+    return problem,solution
 
 def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
     angle=random.choice(angles)
@@ -919,7 +919,7 @@ def sumOfAnglesOfPolygonFunc(maxSides = 12):
     sum = (side - 2) * 180
     problem = f"Sum of angles of polygon with {side} sides = "
     solution = sum
-    return problem, solution
+    return problem,solution
 
 def dataSummaryFunc(number_values=15,minval=5,maxval=50):
     random_list=[]
@@ -1012,10 +1012,10 @@ diceSumProbability=Generator("Probability of a certain sum appearing on faces of
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 61, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-magicSquare = Generator('Magic Square',62,"is the shown matrix a magic square ","prints 1 if it is a magic square and 0 if its is not a magic square",magicSquareGen)
+magicSquare = Generator('Magic Square', 62,"is the shown matrix a magic square ","prints 1 if it is a magic square and 0 if its is not a magic square",magicSquareGen)
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
-basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
+fibonacciSeries = Generator("Fibonacci Series", 56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
+basicTrigonometry=Generator("Trigonometric Values", 57,"What is sin(X)?","ans",basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
