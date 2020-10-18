@@ -402,8 +402,7 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
         coeff = [random.randint(-coeffRange, coeffRange) for i in range(n)]
         res = sum([coeff[i] * soln[i] for i in range(n)])
 
-        prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i]
-                != 0 else "" for i in range(n)]
+        prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
         while "" in prob:
             prob.remove("")
         prob = " + ".join(prob) + " = " + str(res)
@@ -982,7 +981,7 @@ def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
                 else:
                     Mat[i + 1] = [j + (k * randomlist[i])
                                 for j, k in zip(Mat[i + 1], Mat[i])]
-
+            
             for i in range(1, SquareMatrixDimension - 1):
                 Mat[i] = [sum(i)
                           for i in zip(Mat[SquareMatrixDimension - 1], Mat[i])]
@@ -1016,7 +1015,7 @@ def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
         for i in range(0, SquareMatrixDimension):
             z = list()
             z.append(plist[i])
-            for j in range(0, SquareMatrixDimension-1):
+            for j in range(0, SquareMatrixDimension - 1):
                 z.append(n_list[(i * SquareMatrixDimension) + j - i])
             random.shuffle(z)
             Mat.append(z)
