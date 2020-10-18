@@ -920,6 +920,15 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+
+def mulmatrix(matrix1, matrix2):
+    solution=[]
+    for i in range(len(matrix1)): 
+        for j in range(len(matrix2[0])): 
+            for k in range(len(matrix2)): 
+                solution[i][j] += matrix1[i][k] * matrix2[k][j] 
+    return problem,solution
+
 # || Class Instances
 
 # Format is:
@@ -986,3 +995,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+multiplymatrix = Generator("Multiply Matrix of any Dimensions", 61, "matrix1*matrix2", "solution[][]", mulmatrix)
