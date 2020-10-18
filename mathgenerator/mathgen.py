@@ -3,7 +3,7 @@ import math
 import fractions
 
 genList = []
-
+GOLDEN_RATIO = (1 + math.sqrt(5))/2
 
 # || Generator class
 class Generator:
@@ -920,6 +920,16 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+
+def nthFibonacciNumber(maxN = 100):
+    n = random.randint(1,maxN)
+    problem = f"What is the {n}th Fibonacci number?"
+    ans = round((math.pow(GOLDEN_RATIO,n) - math.pow(-GOLDEN_RATIO,-n))/(math.sqrt(5)))
+    solution = f"{ans}"
+    return problem, solution
+
+
+
 # || Class Instances
 
 # Format is:
@@ -986,3 +996,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumber)
