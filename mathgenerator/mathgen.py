@@ -892,13 +892,13 @@ def magicSquareGen():
         for j in range(len(l)):
             if i==j:
                 sumMainDig = sumMainDig + l[i][j]
-            if i+j==len(l)-1:
+            if i + j==len(l) - 1:
                 sumSecDig = sumSecDig + l[i][j]
             sumColumn = sumColumn + l[i][j]
             sumRow = sumRow + l[j][i]
         if sumRow!=prv or sumColumn!=prv:
             flag=0
-    if sumMainDig!=prv or sumSecDig!=prv:
+    if sumMainDig != prv or sumSecDig !=prv:
         flag=0
     solution = flag
     return problem,solution
