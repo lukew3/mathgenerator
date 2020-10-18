@@ -1011,14 +1011,14 @@ hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcf
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
-surdsComparison = Generator("Comparing surds", 61, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-magicSquare = Generator('Magic Square', 62,"is the shown matrix a magic square ","prints 1 if it is a magic square and 0 if its is not a magic square",magicSquareGen)
+
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
 fibonacciSeries = Generator("Fibonacci Series", 56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
 basicTrigonometry=Generator("Trigonometric Values", 57,"What is sin(X)?","ans",basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
-surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
-volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+surfaceAreaSphereGen = Generator("Surface Area of Sphere", 60, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
+volumeSphere=Generator("Volume of Sphere",61,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
 
-
+surdsComparison = Generator("Comparing surds", 62, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
+magicSquare = Generator('Magic Square', 63,"is the shown matrix a magic square ","prints 1 if it is a magic square and 0 if its is not a magic square",magicSquareGen)
