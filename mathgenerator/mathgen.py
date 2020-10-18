@@ -922,11 +922,11 @@ def volumeSphereFunc(maxRadius = 100):
     return problem,solution
 
 def mulmatrix(matrix1, matrix2):
-    solution=[]
-    for i in range(len(matrix1)): 
-        for j in range(len(matrix2[0])): 
-            for k in range(len(matrix2)): 
-                solution[i][j] += matrix1[i][k] * matrix2[k][j] 
+    solution = []
+    for i in range(len(matrix1)):
+        for j in range(len(matrix2[0])):
+            for k in range(len(matrix2)):
+                solution[i][j] += matrix1[i][k] * matrix2[k][j]
     return problem,solution
 
 # || Class Instances
