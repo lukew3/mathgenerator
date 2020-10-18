@@ -863,7 +863,6 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10):
 def fibonacciSeriesFunc(minNo=1):
     n = random.randint(minNo, 20)
 
-    
     def createFibList(n):
         l1 = []
         for i in range(n):
@@ -879,7 +878,7 @@ def fibonacciSeriesFunc(minNo=1):
     return problem, solution
 
 
-def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]): # Handles degrees in quadrant one
+def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]): #  Handles degrees in quadrant one
     angle = random.choice(angles)
     function = random.choice(functions)
 
