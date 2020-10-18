@@ -954,38 +954,38 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
-def magicSquare():
-    dim = random.randint(1,10)
-    l=[]
-    for i in range(dim):
-        h=[]
-        for j in range(dim):
-            val =  random.randint(0,20)
-            h.append(val)
-        l.append(h)
-    problem = l
-    flag = 1
-    sumMainDig = 0
-    sumSecDig = 0
-    prv = sum( l[0] )
-    sumColumn = 0
-    sumRow = 0
-    for i in range( len(l) ):
-        sumColumn = 0
-        sumRow = 0
-        for j in range( len(l) ):
-            if i == j :
-                sumMainDig = sumMainDig + l[i][j]
-            if i + j == len(l) - 1:
-                sumSecDig = sumSecDig + l[i][j]
-            sumColumn = sumColumn + l[i][j]
-            sumRow = sumRow + l[j][i]
-        if sumRow != prv or sumColumn != prv :
-            flag = 0
-    if sumMainDig != prv or sumSecDig != prv:
-        flag = 0
-    solution = flag
-    return problem , solution
+# def magicSquare():
+#     dim = random.randint(1,10)
+#     l=[]
+#     for i in range(dim):
+#         h=[]
+#         for j in range(dim):
+#             val =  random.randint(0,20)
+#             h.append(val)
+#         l.append(h)
+#     problem = l
+#     flag = 1
+#     sumMainDig = 0
+#     sumSecDig = 0
+#     prv = sum( l[0] )
+#     sumColumn = 0
+#     sumRow = 0
+#     for i in range( len(l) ):
+#         sumColumn = 0
+#         sumRow = 0
+#         for j in range( len(l) ):
+#             if i == j :
+#                 sumMainDig = sumMainDig + l[i][j]
+#             if i + j == len(l) - 1:
+#                 sumSecDig = sumSecDig + l[i][j]
+#             sumColumn = sumColumn + l[i][j]
+#             sumRow = sumRow + l[j][i]
+#         if sumRow != prv or sumColumn != prv :
+#             flag = 0
+#     if sumMainDig != prv or sumSecDig != prv:
+#         flag = 0
+#     solution = flag
+#     return problem , solution
 # || Class Instances
 
 # Format is:
@@ -1053,4 +1053,4 @@ dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a, b, c", "Mean
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 60, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere", 61, "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 surdsComparison = Generator("Comparing surds", 62, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-magicSquare = Generator('Magic Square', 63, "is the shown matrix a magic square ", "prints 1 if it is a magic square and 0 if its is not a magic square", magicSquareGen)
+# magicSquare = Generator('Magic Square', 63, "is the shown matrix a magic square ", "prints 1 if it is a magic square and 0 if its is not a magic square", magicSquareGen)
