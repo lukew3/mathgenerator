@@ -816,4 +816,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
-evaluateTrigonometricFunction = Generator("Trigonometric Function of standard angles",51,"Evaluate trigonometric function(angle) =","value",evaluateTrigFunc)
+evaluateTrigonometricFunction = Generator("Trigonometric Function of standard angles",61,"Evaluate trigonometric function(angle) =","value",evaluateTrigFunc)
