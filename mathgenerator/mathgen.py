@@ -78,7 +78,7 @@ def binaryComplement1sFunc(maxDigits=10):
         question += temp
         answer += "0" if temp == "1" else "1"
 
-    problem = question+"="
+    problem = question + "="
     solution = answer
     return problem, solution
 
@@ -782,6 +782,7 @@ def quadraticEquation(maxVal=100):
     solution = str([round((-b + D) / (2 * a), 2), round((-b - D) / (2 * a), 2)])
     return problem, solution
 
+
 def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -791,6 +792,7 @@ def hcfFunc(maxVal=20):
     problem = f"HCF of {a} and {b} = "
     solution = str(x)
     return problem, solution
+
 
 def DiceSumProbFunc(maxDice=3):
     a = random.randint(1,maxDice)
@@ -813,12 +815,14 @@ def DiceSumProbFunc(maxDice=3):
     solution="{}/{}".format(count, 6**a)
     return problem, solution
 
+
 def exponentiationFunc(maxBase = 20,maxExpo = 10):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
     problem = f"{base}^{expo} ="
     solution = str(base ** expo)
     return problem, solution
+
 
 def confidenceIntervalFunc():
     n=random.randint(20,40)
@@ -841,6 +845,7 @@ def confidenceIntervalFunc():
     solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
     return problem, solution
 
+
 def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
     radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
     degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
@@ -853,6 +858,7 @@ def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
     elif first < second:
         solution = "<"
     return problem, solution
+
 
 def fibonacciSeriesFunc(minNo=1):
     n = random.randint(minNo,20)
@@ -870,6 +876,7 @@ def fibonacciSeriesFunc(minNo=1):
     solution = fibList
     return problem,solution
 
+
 def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
     angle=random.choice(angles)
     function=random.choice(functions)
@@ -882,12 +889,14 @@ def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]):
 
     return problem,solution
 
+
 def sumOfAnglesOfPolygonFunc(maxSides = 12):
     side = random.randint(3, maxSides)
     sum = (side - 2) * 180
     problem = f"Sum of angles of polygon with {side} sides = "
     solution = sum
     return problem, solution
+
 
 def dataSummaryFunc(number_values=15,minval=5,maxval=50):
     random_list=[]
@@ -907,6 +916,7 @@ def dataSummaryFunc(number_values=15,minval=5,maxval=50):
     solution="The Mean is {}, Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
     return problem,solution
 
+
 def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     r = random.randint(1, maxSide)
 
@@ -914,12 +924,15 @@ def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+
 def volumeSphereFunc(maxRadius = 100):
     r = random.randint(1, maxRadius)
     problem = f"Volume of sphere with radius {r} m = "
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
     return problem,solution
+
 
 def mulmatrix(matrix1, matrix2):
     solution = []
