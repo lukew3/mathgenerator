@@ -973,10 +973,10 @@ def quicksortHelper(array, begin, end):
     return high
 
 
-def quickSortFunc(begin=0, end=0, flag=True, solution=[], cache=None):
+def quickSortFunc(begin=0, end=0, flag=True, solution=[], cache=None, size=8):
     if flag:
         solution = []
-        q = 8
+        q = size
         for x in range(q):
             a = random.randint(0, 300)
             solution.append(a)
