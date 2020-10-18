@@ -1,3 +1,7 @@
+import random
+import math
+import fractions
+
 from .additionFunc import *
 from .subtractionFunc import *
 from .multiplicationFunc import *
