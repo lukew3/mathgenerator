@@ -981,7 +981,7 @@ def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
                 else:
                     Mat[i + 1] = [j + (k * randomlist[i])
                                 for j, k in zip(Mat[i + 1], Mat[i])]
-            
+
             for i in range(1, SquareMatrixDimension - 1):
                 Mat[i] = [sum(i)
                           for i in zip(Mat[SquareMatrixDimension - 1], Mat[i])]
