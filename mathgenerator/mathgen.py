@@ -959,10 +959,10 @@ def volumeSphereFunc(maxRadius=100):
 
 
 def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerElementsInInvertedMatrix=False):
-    if OnlyIntegerElementsInInvertedMatrix == True:
+    if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()
-        while (isItOk == False):
+        while (isItOk is False):
             Mat = list()
             for i in range(0, SquareMatrixDimension):
                 z = list()
@@ -993,7 +993,7 @@ def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
                     if j > MaxMatrixElement:
                         isItOk = False
                         break
-                if isItOk == False:
+                if isItOk is False:
                     break
 
         random.shuffle(Mat)
