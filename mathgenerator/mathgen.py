@@ -920,6 +920,20 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+
+def bubbleSort(length=20, maxNum=1000):
+    l = []
+    for i in range(length):
+        l.append(random.randint(0, maxNum))
+    problem = f"Bubble sort of {str(l)} ="
+    n = len(l)
+    for i in range(n):
+        for j in range(n - 1 - i):
+            if l[j] > l[j + 1]:
+                l[j], l[j+1] = l[j+1], l[j]
+    solution = str(l)
+    return problem, solution
+
 # || Class Instances
 
 # Format is:
@@ -986,3 +1000,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+bubbleSort = Generator("Bubble sort", 61, "Bubble sort of [10, 5, 7] = ", "[5, 10, 7]", bubbleSort)

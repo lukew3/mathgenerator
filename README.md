@@ -78,6 +78,7 @@ problem, solution = mathgen.genById(0)
 | 44 | Compare Fractions | Which symbol represents the comparison between 8/6 and 3/1? | < | compareFractions |
 | 45 | Simple Interest | Simple interest for a principle amount of 9862 dollars, 4% rate of interest and for a time period of 1 years is =  | 394.48 | simpleInterest |
 | 46 | Multiplication of two matrices | Multiply 
+| 61 | Bubble sort | Bubble sort of [10, 5, 7]= | [5, 7, 10] | bubbleSort 
    -50      36       7     -26      -2      63  
     88     -37      60     -19      61     -56  
     48      -5      69     -87     -64     -92  
