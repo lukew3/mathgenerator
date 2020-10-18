@@ -954,6 +954,38 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+def magicSquare():
+    dim = random.randint(1,10)
+    l=[]
+    for i in range(dim):
+        h=[]
+        for j in range(dim):
+            val =  random.randint(0,20)
+            h.append(val)
+        l.append(h)
+    problem = l
+    flag = 1
+    sumMainDig = 0
+    sumSecDig = 0
+    prv = sum( l[0] )
+    sumColumn = 0
+    sumRow = 0
+    for i in range( len(l) ):
+        sumColumn = 0
+        sumRow = 0
+        for j in range( len(l) ):
+            if i == j :
+                sumMainDig = sumMainDig + l[i][j]
+            if i + j == len(l) - 1:
+                sumSecDig = sumSecDig + l[i][j]
+            sumColumn = sumColumn + l[i][j]
+            sumRow = sumRow + l[j][i]
+        if sumRow != prv or sumColumn != prv :
+            flag = 0
+    if sumMainDig != prv or sumSecDig != prv:
+        flag = 0
+    solution = flag
+    return problem , solution
 # || Class Instances
 
 # Format is:
