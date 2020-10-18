@@ -914,12 +914,27 @@ def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
+
 def volumeSphereFunc(maxRadius = 100):
     r=random.randint(1,maxRadius)
     problem=f"Volume of sphere with radius {r} m = "
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+
+def profitLossPercentFunc(maxCP = 1000, maxSP = 1000):
+    cP = random.randint(1, maxCP)
+    sP = random.randint(1, maxSP)
+    diff = abs(sP-cP)
+    if (sP-cP >= 0):
+        profitOrLoss = "Profit"
+    else:
+        profitOrLoss = "Loss"
+    percent = diff/cP * 100
+    problem = f"{profitOrLoss} percent when CP = {cP} and SP = {sP} is: "
+    solution = percent
+    return problem, solution
+
 # || Class Instances
 
 # Format is:
@@ -986,3 +1001,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+profitLossPercent = Generator("Profit or Loss Percent", 61, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
