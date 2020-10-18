@@ -765,7 +765,7 @@ def fourthAngleOfQuadriFunc(maxAngle=180):
     angle3 = random.randint(1, 340 - (angle1 + angle2))
     sum_ = angle1 + angle2 + angle3
     angle4 = 360 - sum_
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
+    problem = f"Fourth angle of quadrilateral with angles {angle1}, {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
 
@@ -824,7 +824,7 @@ def confidenceIntervalFunc():
     n=random.randint(20,40)
     j=random.randint(0,3)
     lst=random.sample(range(200,300),n)
-    lst_per=[80 ,90, 95, 99]
+    lst_per=[80,90, 95, 99]
     lst_t = [1.282, 1.645, 1.960, 2.576]
     mean=0
     sd=0
@@ -904,7 +904,7 @@ def dataSummaryFunc(number_values=15,minval=5,maxval=50):
     print(var/number_values)
     print((var/number_values)**0.5)
     problem="Find the mean,standard deviation and variance for the data"+str(random_list)
-    solution="The Mean is {} , Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
+    solution="The Mean is {}, Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
     return problem,solution
 
 def surfaceAreaSphere(maxSide = 20, unit = 'm'):
@@ -915,9 +915,9 @@ def surfaceAreaSphere(maxSide = 20, unit = 'm'):
     solution = f"{ans} {unit}^2"
     return problem, solution
 def volumeSphereFunc(maxRadius = 100):
-    r=random.randint(1,maxRadius)
-    problem=f"Volume of sphere with radius {r} m = "
-    ans=(4*math.pi/3)*r*r*r
+    r = random.randint(1, maxRadius)
+    problem = f"Volume of sphere with radius {r} m = "
+    ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
     return problem,solution
 
@@ -985,7 +985,7 @@ powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
-diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z" , DiceSumProbFunc)
+diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53, "a^b = ", "c", exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
