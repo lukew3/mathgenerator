@@ -30,93 +30,84 @@ problem, solution = mathgen.genById(0)
 
 | Id   | Skill                             | Example problem    | Example Solution      | Function Name            |
 |------|-----------------------------------|--------------------|-----------------------|--------------------------|
-| 0 | Addition | 37+40= | 77 | addition |
-| 1 | Subtraction | 69-59= | 10 | subtraction |
-| 2 | Multiplication | 18*0= | 0 | multiplication |
-| 3 | Division | 66/25= | 2.64 | division |
-| 4 | Binary Complement 1s | 00 | 11 | binaryComplement1s |
-| 5 | Modulo Division | 37%68= | 37 | moduloDivision |
-| 6 | Square Root | sqrt(4)= | 2 | squareRoot |
-| 7 | Power Rule Differentiation | 6x^3 + 7x^5 + 6x^4 | 18x^2 + 35x^4 + 24x^3 | powerRuleDifferentiation |
-| 8 | Square | 19^2= | 361 | square |
-| 9 | LCM (Least Common Multiple) | LCM of 8 and 4 =  | 8 | lcm |
-| 10 | GCD (Greatest Common Denominator) | GCD of 20 and 1 =  | 1 | gcd |
-| 11 | Basic Algebra | 9x + 7 = 10 | 1/3 | basicAlgebra |
-| 12 | Logarithm | log3(9) | 2 | log |
-| 13 | Easy Division | 48/24 =  | 2 | intDivision |
-| 14 | Decimal to Binary | Binary of 69= | 1000101 | decimalToBinary |
-| 15 | Binary to Decimal | 0010101100 | 172 | binaryToDecimal |
-| 16 | Fraction Division | (8/2)/(7/5) | 20/7 | fractionDivision |
-| 17 | Integer Multiplication with 2x2 Matrix | 10 * [[0, 3], [10, 5]] =  | [[0,30],[100,50]] | intMatrix22Multiplication |
-| 18 | Area of Triangle | Area of triangle with side lengths: 16 1 19 =  | (1.5148044320877339e-15+24.73863375370596j) | areaOfTriangle |
-| 19 | Triangle exists check | Does triangle with sides 24, 25 and 24 exist? | Yes | doesTriangleExist |
-| 20 | Midpoint of the two point | (-15,2),(12,-5)= | (-1.5,-1.5) | midPointOfTwoPoint |
-| 21 | Factoring Quadratic | x^2-2x-3 | (x+1)(x-3) | factoring |
-| 22 | Third Angle of Triangle | Third angle of triangle with angles 65 and 78 =  | 37 | thirdAngleOfTriangle |
-| 23 | Solve a System of Equations in R^2 | 2x - 8y = -58, 3x - 4y = -31 | x = -1, y = 7 | systemOfEquations |
-| 24 | Distance between 2 points | Find the distance between (21, 15) and (7, -4) | sqrt(557) | distance2Point |
-| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 20 and 20 =  | 28.28 | pythagoreanTheorem |
-| 26 | Linear Equations | -19x + -4y = 231
-13x + 18y = -387 | x = -9, y = -15 | linearEquations |
-| 27 | Prime Factorisation | Find prime factors of 185 | [5, 37] | primeFactors |
-| 28 | Fraction Multiplication | (4/10)*(4/9) | 8/45 | fractionMultiplication |
-| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 17 sides | 158.82 | angleRegularPolygon |
-| 30 | Combinations of Objects | Number of combinations from 10 objects picked 1 at a time  | 10 | combinations |
-| 31 | Factorial | 3! =  | 6 | factorial |
-| 32 | Surface Area of Cube | Surface area of cube with side = 16m is | 1536 m^2 | surfaceAreaCubeGen |
-| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 6m, 7m, 17m is | 526 m^2 | surfaceAreaCuboidGen |
-| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 19m and radius = 4m is | 578 m^2 | surfaceAreaCylinderGen |
+
+| 0 | Addition | 5+49= | 54 | addition |
+| 1 | Subtraction | 63-53= | 10 | subtraction |
+| 2 | Multiplication | 21*2= | 42 | multiplication |
+| 3 | Division | 87/60= | 1.45 | division |
+| 4 | Binary Complement 1s | 11011111= | 00100000 | binaryComplement1s |
+| 5 | Modulo Division | 10%10= | 0 | moduloDivision |
+| 6 | Square Root | sqrt(16)= | 4 | squareRoot |
+| 7 | Power Rule Differentiation | 9x^6 + 8x^6 + 5x^9 + 1x^6 + 10x^1 | 54x^5 + 48x^5 + 45x^8 + 6x^5 + 10x^0 | powerRuleDifferentiation |
+| 8 | Square | 6^2= | 36 | square |
+| 9 | LCM (Least Common Multiple) | LCM of 9 and 6 = | 18 | lcm |
+| 10 | GCD (Greatest Common Denominator) | GCD of 3 and 15 =  | 3 | gcd |
+| 11 | Basic Algebra | 2x + 2 = 9 | 7/2 | basicAlgebra |
+| 12 | Logarithm | log2(4) | 2 | log |
+| 13 | Easy Division | 180/15 =  | 12 | intDivision |
+| 14 | Decimal to Binary | Binary of 53= | 110101 | decimalToBinary |
+| 15 | Binary to Decimal | 1000110111 | 567 | binaryToDecimal |
+| 16 | Fraction Division | (10/4)/(1/10) | 25 | fractionDivision |
+| 17 | Integer Multiplication with 2x2 Matrix | 1 * [[0, 4], [6, 2]] =  | [[0,4],[6,2]] | intMatrix22Multiplication |
+| 18 | Area of Triangle | Area of triangle with side lengths: 8 3 19 =  | (4.3470649019239876e-15+70.9929573971954j) | areaOfTriangle |
+| 19 | Triangle exists check | Does triangle with sides 8, 12 and 39 exist? | No | doesTriangleExist |
+| 20 | Midpoint of the two point | (-17,-16),(-6,9)= | (-11.5,-3.5) | midPointOfTwoPoint |
+| 21 | Factoring Quadratic | x^2-15x+56 | (x-8)(x-7) | factoring |
+| 22 | Third Angle of Triangle | Third angle of triangle with angles 17 and 81 =  | 82 | thirdAngleOfTriangle |
+| 23 | Solve a System of Equations in R^2 | -7x - 5y = 22, 5x - 4y = 7 | x = -1, y = -3 | systemOfEquations |
+| 24 | Distance between 2 points | Find the distance between (-4, -13) and (15, 10) | sqrt(890) | distance2Point |
+| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 11 and 2 =  | 11.18 | pythagoreanTheorem |
+| 26 | Linear Equations | -9x + 15y = 171
+-9x + 9y = 135 | x = -9, y = 6 | linearEquations |
+| 27 | Prime Factorisation | Find prime factors of 61 | [61] | primeFactors |
+| 28 | Fraction Multiplication | (8/7)*(9/10) | 36/35 | fractionMultiplication |
+| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 20 sides | 162.0 | angleRegularPolygon |
+| 30 | Combinations of Objects | Number of combinations from 13 objects picked 8 at a time  | 1287 | combinations |
+| 31 | Factorial | 6! =  | 720 | factorial |
+| 32 | Surface Area of Cube | Surface area of cube with side = 17m is | 1734 m^2 | surfaceAreaCubeGen |
+| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 3m, 18m, 1m is | 150 m^2 | surfaceAreaCuboidGen |
+| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 20m and radius = 15m is | 3298 m^2 | surfaceAreaCylinderGen |
 | 35 | Volum of Cube | Volume of cube with side = 7m is | 343 m^3 | volumeCubeGen |
-| 36 | Volume of Cuboid | Volume of cuboid with sides = 1m, 17m, 18m is | 306 m^3 | volumeCuboidGen |
-| 37 | Volume of cylinder | Volume of cylinder with height = 16m and radius = 10m is | 5026 m^3 | volumeCylinderGen |
-| 38 | Surface Area of cone | Surface area of cone with height = 36m and radius = 3m is | 368 m^2 | surfaceAreaConeGen |
-| 39 | Volume of cone | Volume of cone with height = 21m and radius = 6m is | 791 m^3 | volumeConeGen |
-| 40 | Common Factors | Common Factors of 31 and 79 =  | [1] | commonFactors |
-| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = 5x and y = -8/3x - 7 | (-21/23, -105/23) | intersectionOfTwoLines |
-| 42 | Permutations | Number of Permutations from 13 objects picked 3 at a time =   | 1716 | permutations |
-| 43 | Cross Product of 2 Vectors | [10, 11, -18] X [-2, 13, -2] =  | [212, 56, 152] | vectorCross |
-| 44 | Compare Fractions | Which symbol represents the comparison between 4/2 and 4/1? | < | compareFractions |
-| 45 | Simple Interest | Simple interest for a principle amount of 5369 dollars, 1% rate of interest and for a time period of 9 years is =  | 483.21 | simpleInterest |
+| 36 | Volume of Cuboid | Volume of cuboid with sides = 16m, 5m, 11m is | 880 m^3 | volumeCuboidGen |
+| 37 | Volume of cylinder | Volume of cylinder with height = 28m and radius = 12m is | 12666 m^3 | volumeCylinderGen |
+| 38 | Surface Area of cone | Surface area of cone with height = 29m and radius = 1m is | 94 m^2 | surfaceAreaConeGen |
+| 39 | Volume of cone | Volume of cone with height = 2m and radius = 15m is | 471 m^3 | volumeConeGen |
+| 40 | Common Factors | Common Factors of 52 and 53 =  | [1] | commonFactors |
+| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = -8/4x + 3 and y = -6x - 4 | (-7/4, 13/2) | intersectionOfTwoLines |
+| 42 | Permutations | Number of Permutations from 13 objects picked 1 at a time =   | 13 | permutations |
+| 43 | Cross Product of 2 Vectors | [-6, -20, -15] X [-17, 14, 18] =  | [-150, 363, -424] | vectorCross |
+| 44 | Compare Fractions | Which symbol represents the comparison between 7/4 and 5/6? | > | compareFractions |
+| 45 | Simple Interest | Simple interest for a principle amount of 4813 dollars, 2% rate of interest and for a time period of 4 years is =  | 385.04 | simpleInterest |
 | 46 | Multiplication of two matrices | Multiply 
-   -16      87     100      -5     -69      97     -75      19  
-    90     -83     -16      81     -30      64      -3     -96  
-   -74     -66      48      99      35       6     -14      70  
-   -24      67      -4     -95       4      51      31     -17  
-    61      46     -72      66     -31      15      61     -31  
-    84      63      78     -51     -11     -38     -68     -50  
-    82      83      16    -100      17       2       8     -83  
-    28      71     -68     -66      37     -84      79      32  
+   -11     -69      54      67  
+    54     -24      52      35  
+     9     -76      82      65  
+    37     -40      87     -85  
+    42      45      74      75  
 
  and 
 
-    50     -78      66      -8     -33     -61     -75     -18     -50  
-   -98      10     -66     -53     -24     -36      62     -39     -35  
-    86     -52     -49      47      62       0     -12      96      55  
-    61      41     -77     -89      46     -44      50       4     -81  
-   -12     -88     -88       9      83      62      60     -22      15  
-    26      -3      44     -60      83     100     -35      97      26  
-   -17     -93      -5      79      55      78      32       0     -45  
-   -17     -54     -92     -48     -88      46      82     -22      12   |   3271    8443   -2346  -12616     937   -1490   -3233   16984    8750  
- 19906    4214   20268   -4021   12861   -6176  -19662    9385   -8839  
- 11719    1099  -19689   -6976    8029    7432   13014    7182    2782  
--12865   -3615    4806    5149    2332   10216    -695    2288    6117  
- -3372     836    5371   -7056     210   -5371    -534   -6721  -17158  
-  2773   -1963    5727    3403   -5201  -17234  -11486     971    3323  
- -7635   -8262   13038    9246    1015   -5530  -11796   -1931     926  
--19947  -12723   -4715    8769  -12252     168   10130  -19731   -7079   | matrixMultiplication |
-| 47 | Cube Root | cuberoot of 136 upto 2 decimal places is: | 5.14 | CubeRoot |
-| 48 | Power Rule Integration | 9x^4 + 8x^6 + 2x^5 + 3x^10 + 2x^9 | (9/4)x^5 + (8/6)x^7 + (2/5)x^6 + (3/10)x^11 + (2/9)x^10 + c | powerRuleIntegration |
-| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 69 , 87, 120 = | 84 | fourthAngleOfQuadrilateral |
-| 50 | Quadratic Equation | Zeros of the Quadratic Equation 71x^2+188x+17=0 | [-0.09, -2.55] | quadraticEquationSolve |
-| 51 | HCF (Highest Common Factor) | HCF of 3 and 16 =  | 1 | hcf |
-| 52 | Probability of a certain sum appearing on faces of dice | If 3 dice are rolled at the same time, the probability of getting a sum of 8 = | 21/216 | diceSumProbability |
-| 53 | Exponentiation | 9^3 = | 729 | exponentiation |
-| 54 | Confidence interval For sample S | The confidence interval for sample [203, 266, 261, 263, 262, 251, 267, 248, 208, 228, 215, 221, 282, 242, 272, 281, 289, 290, 285, 217, 213, 200, 292, 256, 232, 273, 295, 271, 211, 250, 231, 246, 277, 259, 283, 233] with 90% confidence is | (259.72847423786504, 244.32708131769053) | confidenceInterval |
-| 55 | Comparing surds | Fill in the blanks 50^(1/7) _ 86^(1/5) | < | surdsComparison |
-| 56 | Fibonacci Series | The Fibonacci Series of the first 3 numbers is ? | [0, 1, 1] | fibonacciSeries |
-| 57 | Trigonometric Values | What is tan(45)? | 1 | basicTrigonometry |
-| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 5 sides =  | 540 | sumOfAnglesOfPolygon |
-| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[10, 25, 12, 26, 15, 13, 41, 25, 50, 13, 20, 22, 42, 36, 22] | The Mean is 24.8 , Standard Deviation is 141.09333333333333, Variance is 11.87827147918978 | dataSummary |
-| 59 | Surface Area of Sphere | Surface area of Sphere with radius = 5m is | 314.1592653589793 m^2 | surfaceAreaSphereGen |
-| 60 | Volume of Sphere | Volume of sphere with radius 70 m =  | 1436755.0402417318 m^3 | volumeSphere |
-| 61 | Geometric Mean of N Numbers | Geometric mean of 2 numbers 9 and 5 =  | (9*5)^(1/2) = 6.708203932499369 | geometricMean |
+    62     -96     -68      97     -88      71      69  
+   -38      48     -31       8      53      18     100  
+    57     -41      54      81     -74     -80      47  
+   -63     -10      86      -6      77      31     -12   |    797   -5140   11565    2353   -1526   -4266   -5925  
+  5019   -8818    2890    9048   -7177     327    3350  
+  4025   -8524   11762    6517   -5883   -5274   -3905  
+ 14128   -8189   -3888   10826  -18359   -7688    3662  
+   387   -5656    6195    9978   -1012     197    9976   | matrixMultiplication |
+| 47 | Cube Root | cuberoot of 566 upto 2 decimal places is: | 8.27 | CubeRoot |
+| 48 | Power Rule Integration | 6x^3 + 6x^4 + 5x^2 + 10x^9 | (6/3)x^4 + (6/4)x^5 + (5/2)x^3 + (10/9)x^10 + c | powerRuleIntegration |
+| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 6 , 199, 42 = | 113 | fourthAngleOfQuadrilateral |
+| 50 | Quadratic Equation | Zeros of the Quadratic Equation 63x^2+118x+19=0 | [-0.18, -1.7] | quadraticEquationSolve |
+| 51 | HCF (Highest Common Factor) | HCF of 20 and 14 =  | 2 | hcf |
+| 52 | Probability of a certain sum appearing on faces of dice | If 3 dice are rolled at the same time, the probability of getting a sum of 5 = | 6/216 | diceSumProbability |
+| 53 | Exponentiation | 1^3 = | 1 | exponentiation |
+| 54 | Confidence interval For sample S | The confidence interval for sample [289, 284, 269, 211, 272, 298, 290, 220, 206, 224, 230, 222, 227, 209, 262, 255, 282, 253, 274, 265, 258, 248, 277, 279, 223, 221, 219, 286, 259, 297, 234, 201, 232, 203, 294, 252, 207, 278, 202] with 80% confidence is | (255.4031906501125, 242.64809140116955) | confidenceInterval |
+| 55 | Comparing surds | Fill in the blanks 50^(1/9) _ 61^(1/7) | < | surdsComparison |
+| 56 | Fibonacci Series | The Fibonacci Series of the first 1 numbers is ? | [0] | fibonacciSeries |
+| 57 | Trigonometric Values | What is sin(30)? | 1/2 | basicTrigonometry |
+| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 8 sides =  | 1080 | sumOfAnglesOfPolygon |
+| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[11, 17, 17, 20, 25, 38, 45, 19, 38, 31, 23, 16, 42, 28, 16] | The Mean is 25.733333333333334 , Standard Deviation is 107.66222222222224, Variance is 10.376040777783318 | dataSummary |
+| 59 | Surface Area of Sphere | Surface area of Sphere with radius = 13m is | 2123.7166338267 m^2 | surfaceAreaSphereGen |
+| 60 | Volume of Sphere | Volume of sphere with radius 100 m =  | 4188790.2047863905 m^3 | volumeSphere |
+| 61 | Harmonic Mean of N Numbers | Harmonic mean of 2 numbers 6 and 66 =  |  2/((1/6) + (1/66)) = 11.0 | harmonicMean |

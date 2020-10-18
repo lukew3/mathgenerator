@@ -920,7 +920,7 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution  
-def geometricMeanFunc(maxValue=100, maxNum=4):
+def harmonicMeanFunc(maxValue=100, maxNum=4):
     
         a=random.randint(1,maxValue)
         b=random.randint(1,maxValue)
@@ -928,22 +928,22 @@ def geometricMeanFunc(maxValue=100, maxNum=4):
         d=random.randint(1,maxValue)
         num=random.randint(2,4)
         if num==2:
-            product=a*b
+            sum=(1/a)+(1/b)
         elif num==3:
-            product=a*b*c
+            sum=(1/a)+(1/b)+(1/c)
         elif num==4:
-            product=a*b*c*d        
+            sum=(1/a)+(1/b)+(1/c)+(1/d)        
         
-        ans=product**(1/num)
+        ans=num/sum
         if num==2:
-            problem=f"Geometric mean of {num} numbers {a} and {b} = "
-            solution = f"({a}*{b})^(1/{num}) = {ans}"
+            problem=f"Harmonic mean of {num} numbers {a} and {b} = "
+            solution = f" {num}/((1/{a}) + (1/{b})) = {ans}"
         elif num==3:
-            problem=f"Geometric mean of {num} numbers {a} , {b} and {c} = "
-            solution = f"({a}*{b}*{c})^(1/{num}) = {ans}"
+            problem=f"Harmonic mean of {num} numbers {a} , {b} and {c} = "
+            solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c})) = {ans}"
         elif num==4:
-            problem=f"Geometric mean of {num} numbers {a} , {b} , {c} , {d} = "
-            solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
+            problem=f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
+            solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
         return problem,solution
           
 # || Class Instances
@@ -1012,4 +1012,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
-geometricMean=Generator("Geometric Mean of N Numbers",61,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
+harmonicMean=Generator("Harmonic Mean of N Numbers",61,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
