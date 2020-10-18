@@ -77,7 +77,7 @@ problem, solution = mathgen.genById(0)
 | 43 | Cross Product of 2 Vectors | [-19, -3, 2] X [-15, -12, 7] =  | [3, 103, 183] | vectorCross |
 | 44 | Compare Fractions | Which symbol represents the comparison between 8/6 and 3/1? | < | compareFractions |
 | 45 | Simple Interest | Simple interest for a principle amount of 9862 dollars, 4% rate of interest and for a time period of 1 years is =  | 394.48 | simpleInterest |
-| 46 | Multiplication of two matrices | Multiply 
+| 46 | Multiplication of two matrices | Multiply
    -50      36       7     -26      -2      63  
     88     -37      60     -19      61     -56  
     48      -5      69     -87     -64     -92  
@@ -87,7 +87,7 @@ problem, solution = mathgen.genById(0)
      2     -11      79     -77      98     -77  
    -87      70      72     -32      64     -99  
 
- and 
+ and
 
     34      32      -6     -32      46     -23      78     -81     -18  
    -17      24      49     -62     -50      77      38     -98     -64  
@@ -117,3 +117,4 @@ problem, solution = mathgen.genById(0)
 | 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[38, 29, 43, 25, 7, 10, 13, 14, 43, 44, 30, 42, 48, 48, 42] | The Mean is 31.733333333333334 , Standard Deviation is 199.26222222222222, Variance is 14.116027140177303 | dataSummary |
 | 59 | Surface Area of Sphere | Surface area of Sphere with radius = 13m is | 2123.7166338267 m^2 | surfaceAreaSphereGen |
 | 60 | Volume of Sphere | Volume of sphere with radius 84 m =  | 2482712.7095377133 m^3 | volumeSphere |
+| 61 | Quick Sort | Sorting list of [103,117,46,243,190] using Quick Sort = | [46,103,117,190,243] | quickSort
