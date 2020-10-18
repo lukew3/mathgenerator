@@ -120,6 +120,7 @@ def gcdFunc(maxVal=20):
     solution = str(x)
     return problem, solution
 
+
 def lcmFunc(maxVal=20):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -131,6 +132,7 @@ def lcmFunc(maxVal=20):
     problem = f"LCM of {a} and {b} = "
     solution = str(d)
     return problem, solution
+
 
 def basicAlgebraFunc(maxVariable = 10):
     a = random.randint(1, maxVariable)
