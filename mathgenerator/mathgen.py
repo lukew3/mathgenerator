@@ -878,7 +878,7 @@ def fibonacciSeriesFunc(minNo=1):
     return problem, solution
 
 
-def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]): #  Handles degrees in quadrant one
+def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]):
     angle = random.choice(angles)
     function = random.choice(functions)
 
