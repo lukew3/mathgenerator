@@ -56,8 +56,7 @@ problem, solution = mathgen.genById(0)
 | 23 | Solve a System of Equations in R^2 | 5x - 7y = -84, 4x + 5y = 7 | x = -7, y = 7 | systemOfEquations |
 | 24 | Distance between 2 points | Find the distance between (5, -18) and (1, 19) | sqrt(1385) | distance2Point |
 | 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 15 and 5 =  | 15.81 | pythagoreanTheorem |
-| 26 | Linear Equations | -6x + -17y = -220
--13x + -19y = -120 | x = -20, y = 20 | linearEquations |
+| 26 | Linear Equations | -6x + -17y = -220,    -13x + -19y = -120 | x = -20, y = 20 | linearEquations |
 | 27 | Prime Factorisation | Find prime factors of 62 | [2, 31] | primeFactors |
 | 28 | Fraction Multiplication | (8/4)*(1/2) | 1 | fractionMultiplication |
 | 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 19 sides | 161.05 | angleRegularPolygon |
@@ -77,31 +76,7 @@ problem, solution = mathgen.genById(0)
 | 43 | Cross Product of 2 Vectors | [-19, -3, 2] X [-15, -12, 7] =  | [3, 103, 183] | vectorCross |
 | 44 | Compare Fractions | Which symbol represents the comparison between 8/6 and 3/1? | < | compareFractions |
 | 45 | Simple Interest | Simple interest for a principle amount of 9862 dollars, 4% rate of interest and for a time period of 1 years is =  | 394.48 | simpleInterest |
-| 46 | Multiplication of two matrices | Multiply 
-   -50      36       7     -26      -2      63  
-    88     -37      60     -19      61     -56  
-    48      -5      69     -87     -64     -92  
-   -84     -50     -79     -19      86     -13  
-     0      28      12     -14      73     -49  
-    94     -90       2      26     -38      19  
-     2     -11      79     -77      98     -77  
-   -87      70      72     -32      64     -99  
-
- and 
-
-    34      32      -6     -32      46     -23      78     -81     -18  
-   -17      24      49     -62     -50      77      38     -98     -64  
-   -23     -78      43       5     -83      -5       4     -92     -16  
-    46     -47     -92      52     -25     -37      44      51      -7  
-    20      26      70      37      96     -73      49      84      42  
-   -72     -15     -80     -24      58     -47     -41      45     -69   |  -8245   -1057    -423   -3535    -569    2034   -6329    1219   -5765  
-  6619     567   10737    2391    4001   -6291   10147   -7387    6383  
-  1472    -161   13318   -5565  -12574   10381     638  -23699    2621  
-  1593    5598    3465    7899   13170   -6487   -4857   24642   10618  
-  3592    3027   12206    1473    2120    -412    6082    -635    4561  
-  3748   -1803  -11460    2072    5462   -8183    2423      11     947  
-  2400     960   22950    2483     952   -1974    4625   -5512    9372  
-  1132   -2067   22392    1884  -12276    8196    1949   -7148    5677   | matrixMultiplication |
+| 46 | Multiplication of two matrices | Multiply A = [[1,2],[3,4]], B = [[5,6],[7,8]] | [[19,22],[43,50]]| matrixMultiplication |
 | 47 | Cube Root | cuberoot of 771 upto 2 decimal places is: | 9.17 | CubeRoot |
 | 48 | Power Rule Integration | 1x^3 + 8x^8 + 10x^10 | (1/3)x^4 + (8/8)x^9 + (10/10)x^11 + c | powerRuleIntegration |
 | 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 52 , 84, 154 = | 70 | fourthAngleOfQuadrilateral |
