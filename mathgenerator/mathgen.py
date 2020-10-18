@@ -927,7 +927,7 @@ def mulmatrix(matrix1, matrix2):
         for j in range(len(matrix2[0])):
             for k in range(len(matrix2)):
                 solution[i][j] += matrix1[i][k] * matrix2[k][j]
-    return problem,solution
+    return solution
 
 # || Class Instances
 
@@ -956,7 +956,7 @@ doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with s
 midPointOfTwoPoint = Generator("Midpoint of the two point", 20, "((X1,Y1),(X2,Y2))=", "((X1+X2)/2,(Y1+Y2)/2)", MidPointOfTwoPointFunc)
 factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
 thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
-systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",systemOfEquationsFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3", systemOfEquationsFunc)
 distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)", "sqrt(distanceSquared)", distanceTwoPointsFunc)
 pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
 linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc)  # This has multiple variables whereas #23 has only x and y
@@ -985,14 +985,14 @@ powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
-diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
-exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
+diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z" , DiceSumProbFunc)
+exponentiation = Generator("Exponentiation", 53, "a^b = ", "c", exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
-basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
+fibonacciSeries = Generator("Fibonacci Series", 56, "fibonacci series of first a numbers", "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc)
+basicTrigonometry=Generator("Trigonometric Values", 57, "What is sin(X)?", "ans", basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
-volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+volumeSphere=Generator("Volume of Sphere", 60, "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 multiplymatrix = Generator("Multiply Matrix of any Dimensions", 61, "matrix1*matrix2", "solution[][]", mulmatrix)
