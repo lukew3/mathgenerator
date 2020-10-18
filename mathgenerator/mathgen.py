@@ -714,6 +714,53 @@ def fourthAngleOfQuadriFunc(maxAngle = 180):
     solution = angle4
     return problem, solution
 
+def evaluateTrigFunc():
+    pi = math.pi
+    angles = {
+        "0": 0,
+        "pi/6": pi / 6,
+        "pi/4": pi / 4,
+        "pi/3": pi / 3,
+        "pi/2": pi / 2,
+        "2pi/3": 2*pi / 3,
+        "3pi/4": 3*pi/ 4,
+        "5pi/6": 5*pi/6,
+        "pi": pi,
+        "7pi/6": 7*pi/6,
+        "5pi/4" : 5*pi/4,
+        "4pi/3" : 4*pi/3,
+        "5pi/3" : 5*pi/3,
+        "7pi/4": 7*pi/4,
+        "11pi/6": 11*pi/6,
+        "2pi": 2*pi
+    }
+    # We choose randomly from standard values between 0 to 2pi
+    trig_angle = random.choice(list(angles))
+
+    # We choose a sign
+    sign = random.choice([1,-1])
+
+    angle = angles[trig_angle]*sign
+
+    if sign == -1:
+        trig_angle = "-"+trig_angle
+
+    # We choose a trigonometric function
+    trig_type = random.randint(0, 3)
+    if trig_type == 0:
+        function_name = "sin"
+        value = math.sin(angle)
+    elif trig_type == 1:
+        function_name = "cos"
+        value = math.cos(angle)
+    else:
+        function_name = "tan"
+        value = math.tan(angle)
+    problem = f"Evaluate trigonometric function {function_name}({trig_angle})"
+    solution = round(value,4)
+    return problem, solution
+
+
 # || Class Instances
 
 #Format is:
@@ -769,3 +816,4 @@ matrixMultiplication =  Generator("Multiplication of two matrices", 46, "Multipl
 CubeRoot = Generator("Cube Root",47,"Cuberoot of a upto 2 decimal places is","b",cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral",49,"Fourth angle of Quadrilateral with angles a,b,c =","angle4",fourthAngleOfQuadriFunc)
+evaluateTrigonometricFunction = Generator("Trigonometric Function of standard angles",51,"Evaluate trigonometric function(angle) =","value",evaluateTrigFunc)
