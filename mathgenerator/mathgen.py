@@ -1,3 +1,4 @@
+# for lint
 import random
 import math
 import fractions
@@ -918,7 +919,7 @@ def volumeSphereFunc(maxRadius = 100):
     return problem,solution
 
 
-def GeomProgrFunc(number_values=6,min_value=2,max_value=12,n_term=7,sum_term=5):
+def GeomProgrFunc(number_values=6, min_value=2, max_value=12, n_term=7, sum_term=5):
     r=random.randint(min_value,max_value)
     a=random.randint(min_value,max_value)
     n_term=random.randint(number_values,number_values+5)
