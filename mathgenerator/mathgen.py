@@ -919,7 +919,33 @@ def volumeSphereFunc(maxRadius = 100):
     problem=f"Volume of sphere with radius {r} m = "
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
-    return problem,solution
+    return problem,solution  
+def geometricMeanFunc(maxValue=100, maxNum=4):
+    
+        a=random.randint(1,maxValue)
+        b=random.randint(1,maxValue)
+        c=random.randint(1,maxValue)
+        d=random.randint(1,maxValue)
+        num=random.randint(2,4)
+        if num==2:
+            product=a*b
+        elif num==3:
+            product=a*b*c
+        elif num==4:
+            product=a*b*c*d        
+        
+        ans=product**(1/num)
+        if num==2:
+            problem=f"Geometric mean of {num} numbers {a} and {b} = "
+            solution = f"({a}*{b})^(1/{num}) = {ans}"
+        elif num==3:
+            problem=f"Geometric mean of {num} numbers {a} , {b} and {c} = "
+            solution = f"({a}*{b}*{c})^(1/{num}) = {ans}"
+        elif num==4:
+            problem=f"Geometric mean of {num} numbers {a} , {b} , {c} , {d} = "
+            solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
+        return problem,solution
+          
 # || Class Instances
 
 # Format is:
@@ -986,3 +1012,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+geometricMean=Generator("Geometric Mean of N Numbers",61,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
