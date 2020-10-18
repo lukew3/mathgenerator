@@ -1,4 +1,4 @@
-from math import sqrt
+from math impor0t sqrt
 from mathgenerator.mathgen import *
 
 from hypothesis import strategies as st, given, assume
