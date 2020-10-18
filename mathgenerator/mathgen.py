@@ -978,7 +978,7 @@ simpleInterest = Generator("Simple Interest", 45, "Simple interest for a princip
 matrixMultiplication = Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
 CubeRoot = Generator("Cube Root", 47, "Cuberoot of a upto 2 decimal places is", "b", cubeRootFunc)
 powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
-fourthAngleOfQuadrilateral = Generator("Fourth angle of a quadrilateral", 49, "Fourth angle of a uadrilateral with angles 100, 50, 80 (in degrees)=", "130", fourthAngleOfQuadriFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth angle of a quadrilateral", 49, "Fourth angle of a quadrilateral with angles 100, 50, 80 (in degrees)=", "130", fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
 diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
