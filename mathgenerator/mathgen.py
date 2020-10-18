@@ -1,4 +1,3 @@
- # for lint
 import random
 import math
 import fractions
@@ -79,7 +78,7 @@ def binaryComplement1sFunc(maxDigits=10):
         question += temp
         answer += "0" if temp == "1" else "1"
 
-    problem = question+"="
+    problem = question + "="
     solution = answer
     return problem, solution
 
@@ -783,6 +782,7 @@ def quadraticEquation(maxVal=100):
     solution = str([round((-b + D) / (2 * a), 2), round((-b - D) / (2 * a), 2)])
     return problem, solution
 
+
 def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
@@ -793,25 +793,26 @@ def hcfFunc(maxVal=20):
     solution = str(x)
     return problem, solution
 
+
 def DiceSumProbFunc(maxDice=3):
-    a = random.randint(1,maxDice)
-    b = random.randint(a,6*a)
-    count=0
-    for i in [1,2,3,4,5,6]:
-        if a==1:
-            if i==b:
-                count=count+1
-        elif a==2:
-            for j in [1,2,3,4,5,6]:
-                if i+j==b:
-                    count=count+1
-        elif a==3:
-            for j in [1,2,3,4,5,6]:
-                for k in [1,2,3,4,5,6]:
-                    if i+j+k==b:
-                        count=count+1
-    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a,b)
-    solution="{}/{}".format(count, 6**a)
+    a = random.randint(1, maxDice)
+    b = random.randint(a, 6 * a)
+    count = 0
+    for i in [1, 2, 3, 4, 5, 6]:
+        if a == 1:
+            if i == b:
+                count = count + 1
+        elif a == 2 :
+            for j in [1, 2, 3, 4, 5, 6]:
+                if i + j == b:
+                    count= count + 1
+        elif a == 3:
+            for j in [1, 2, 3, 4, 5, 6]:
+                for k in [1, 2, 3, 4, 5, 6]:
+                    if i + j + k == b:
+                        count= count + 1
+    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a, b)
+    solution="{}/{}".format(count, 6 ** a)
     return problem, solution
 
 def exponentiationFunc(maxBase = 20,maxExpo = 10):
