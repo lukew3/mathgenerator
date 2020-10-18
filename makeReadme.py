@@ -5,7 +5,7 @@ wList = getGenList()
 allRows = []
 f = open('mathgen.py')
 lines = f.readlines()
-line = 720 
+line = 720
 # This has to be changed depending on which line the first generator appears on
 for item in wList:
     myGen = item[2]
