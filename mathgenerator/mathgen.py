@@ -796,7 +796,7 @@ def hcfFunc(maxVal=20):
 
 def DiceSumProbFunc(maxDice=3):
     a = random.randint(1, maxDice)
-    b = random.randint(a, 6*a)
+    b = random.randint(a, 6 * a)
     count = 0
     for i in [1, 2, 3, 4, 5, 6]:
         if a == 1:
@@ -816,7 +816,7 @@ def DiceSumProbFunc(maxDice=3):
     return problem, solution
 
 
-def exponentiationFunc(maxBase = 20,maxExpo = 10):
+def exponentiationFunc(maxBase=20, maxExpo=10):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
     problem = f"{base}^{expo} ="
@@ -848,7 +848,7 @@ def confidenceIntervalFunc():
 
 def surdsComparisonFunc(maxValue=100, maxRoot=10):
     radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))
-    degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
+    degree1, degree2 = tuple(random.sample(range(1, maxRoot), 2))
     problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
     first = math.pow(radicand1, 1 / degree1)
     second = math.pow(radicand2, 1 / degree2)
@@ -863,29 +863,29 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10):
 def fibonacciSeriesFunc(minNo=1):
     n = random.randint(minNo, 20)
     def createFibList(n):
-        l = []
+        l1 = []
         for i in range(n):
             if i < 2:
-                l.append(i)
+                l1.append(i)
             else:
-                val = l[i - 1] + l[i - 2]
-                l.append(val)
-        return l
+                val = l1[i - 1] + l1[i - 2]
+                l1.append(val)
+        return l1
     fibList = createFibList(n)
     problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
     return problem, solution
 
 
-def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],functions=["sin", "cos", "tan"]): #Handles degrees in quadrant one
+def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]): #Handles degrees in quadrant one
     angle = random.choice(angles)
     function = random.choice(functions)
 
     problem = f"What is {function}({angle})?"
     expression = 'math.' + function + '(math.radians(angle))'
-    result_fraction_map = {0.0:"0", 0.5:"1/2", 0.71:"1/√2", 0.87:"√3/2", 1.0:"1", 0.58:"1/√3", 1.73:"√3"}
+    result_fraction_map = {0.0 : "0", 0.5 : "1/2", 0.71 : "1/√2", 0.87 : "√3/2", 1.0 : "1", 0.58 : "1/√3", 1.73 : "√3"}
 
-    solution = result_fraction_map[round(eval(expression), 2)] if round(eval(expression), 2) <= 99999 else "∞"  #for handling the ∞ condition
+    solution = result_fraction_map[round(eval(expression), 2)] if round(eval(expression), 2) <= 99999 else "∞"  # for handling the ∞ condition
 
     return problem, solution
 
@@ -1000,14 +1000,14 @@ powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^
 fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
 quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1, x2} of the quadratic equation ax^2+bx+c=0", "x1, x2", quadraticEquation)
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
-diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z", DiceSumProbFunc)
+diceSumProbability = Generator("Probability of a certain sum appearing on faces of dice", 52, "If n dices are rolled then probabilty of getting sum of x is =", "z", DiceSumProbFunc)
 exponentiation = Generator("Exponentiation", 53, "a^b = ", "c", exponentiationFunc)
 confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
 surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
 fibonacciSeries = Generator("Fibonacci Series", 56, "fibonacci series of first a numbers", "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc)
-basicTrigonometry=Generator("Trigonometric Values", 57, "What is sin(X)?", "ans", basicTrigonometryFunc)
+basicTrigonometry = Generator("Trigonometric Values", 57, "What is sin(X)?", "ans", basicTrigonometryFunc)
 sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
-volumeSphere=Generator("Volume of Sphere", 60, "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
+volumeSphere = Generator("Volume of Sphere", 60, "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 multiplymatrix = Generator("Multiply Matrix of any Dimensions", 61, "matrix1*matrix2", "solution[][]", mulmatrix)
