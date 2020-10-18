@@ -971,7 +971,7 @@ def MatrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
                 z[i] = 1
                 Mat.append(z)
             MaxAllowedMatrixElement = math.ceil(
-                pow(MaxMatrixElement, 1/ (SquareMatrixDimension)))
+                pow(MaxMatrixElement, 1 / (SquareMatrixDimension)))
             randomlist = random.sample(
                 range(0, MaxAllowedMatrixElement+ 1), SquareMatrixDimension)
 
