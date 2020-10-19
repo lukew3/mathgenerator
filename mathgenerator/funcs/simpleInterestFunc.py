@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):

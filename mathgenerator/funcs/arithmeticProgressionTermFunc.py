@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def arithmeticProgressionTermFunc(maxd=100, maxa=100, maxn=100):

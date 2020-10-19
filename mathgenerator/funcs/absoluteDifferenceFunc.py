@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def absoluteDifferenceFunc(maxA=100, maxB=100):

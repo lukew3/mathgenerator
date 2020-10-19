@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):

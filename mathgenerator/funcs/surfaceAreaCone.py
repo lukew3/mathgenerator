@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m'):

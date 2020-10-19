@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def volumeCuboid(maxSide=20, unit='m'):

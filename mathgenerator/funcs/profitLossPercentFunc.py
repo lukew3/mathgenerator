@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def profitLossPercentFunc(maxCP=1000, maxSP=1000):

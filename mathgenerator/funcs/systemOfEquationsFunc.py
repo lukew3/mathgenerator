@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):

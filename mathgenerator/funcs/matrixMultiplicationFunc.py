@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def matrixMultiplicationFunc(maxVal=100, max_dim=10):

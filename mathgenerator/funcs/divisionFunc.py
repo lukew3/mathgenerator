@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def divisionFunc(maxRes=99, maxDivid=99):

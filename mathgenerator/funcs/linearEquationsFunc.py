@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def linearEquationsFunc(n=2, varRange=20, coeffRange=20):

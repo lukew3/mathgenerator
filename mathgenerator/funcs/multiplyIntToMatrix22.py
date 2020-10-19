@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100):

@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):

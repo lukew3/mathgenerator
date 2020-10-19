@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def exponentiationFunc(maxBase=20, maxExpo=10):

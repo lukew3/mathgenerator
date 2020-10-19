@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def volumeCube(maxSide=20, unit='m'):

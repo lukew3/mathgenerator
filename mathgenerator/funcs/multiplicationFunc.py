@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def multiplicationFunc(maxRes=99, maxMulti=99):

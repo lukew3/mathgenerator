@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def dataSummaryFunc(number_values=15, minval=5, maxval=50):

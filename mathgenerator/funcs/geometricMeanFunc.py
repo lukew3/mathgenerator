@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def geometricMeanFunc(maxValue=100, maxNum=4):

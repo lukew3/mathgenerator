@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def powerRuleDifferentiationFunc(maxCoef=10, maxExp=10, maxTerms=5):

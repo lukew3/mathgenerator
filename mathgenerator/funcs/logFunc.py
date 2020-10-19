@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def logFunc(maxBase=3, maxVal=8):

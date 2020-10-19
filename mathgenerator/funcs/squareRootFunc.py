@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def squareRootFunc(minNo=1, maxNo=12):

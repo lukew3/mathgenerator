@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def factoringFunc(range_x1=10, range_x2=10):

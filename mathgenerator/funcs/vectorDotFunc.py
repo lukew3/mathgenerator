@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def vectorDotFunc(minVal=-20, maxVal=20):

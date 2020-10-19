@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def divisionToIntFunc(maxA=25, maxB=25):
