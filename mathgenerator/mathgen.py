@@ -4,7 +4,6 @@ import fractions
 
 genList = []
 
-
 # || Generator class
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
@@ -36,7 +35,8 @@ def getGenList():
 
 def additionFunc(maxSum=99, maxAddend=50):
     a = random.randint(0, maxAddend)
-    b = random.randint(0, min((maxSum - a), maxAddend))  # The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
+    # The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
+    b = random.randint(0, min((maxSum - a), maxAddend))
     c = a + b
     problem = str(a) + "+" + str(b) + "="
     solution = str(c)
@@ -78,7 +78,7 @@ def binaryComplement1sFunc(maxDigits=10):
         question += temp
         answer += "0" if temp == "1" else "1"
 
-    problem = question+"="
+    problem = question + "="
     solution = answer
     return problem, solution
 
@@ -248,7 +248,8 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
     c = random.randint(1, maxC)
     s = (a + b + c) / 2
     area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
-    problem = "Area of triangle with side lengths: " + str(a) + " " + str(b) + " " + str(c) + " = "
+    problem = "Area of triangle with side lengths: " + \
+        str(a) + " " + str(b) + " " + str(c) + " = "
     solution = area
     return problem, solution
 
@@ -259,7 +260,8 @@ def isTriangleValidFunc(maxSideLength=50):
     sideC = random.randint(1, maxSideLength)
     sideSums = [sideA + sideB, sideB + sideC, sideC + sideA]
     sides = [sideC, sideA, sideB]
-    exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (sides[2] < sideSums[2])
+    exists = True & (sides[0] < sideSums[0]) & (
+        sides[1] < sideSums[1]) & (sides[2] < sideSums[2])
     problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
     if exists:
         solution = "Yes"
@@ -352,7 +354,8 @@ def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
         # No redundant 1s
         y_coeff = abs(coeffs[1]) if abs(coeffs[1]) != 1 else ''
         # Don't include if 0, unless x is also 0 (probably never happens)
-        y_str = f'{y_coeff}y' if coeffs[1] != 0 else ('' if x_str != '' else '0')
+        y_str = f'{y_coeff}y' if coeffs[1] != 0 else (
+            '' if x_str != '' else '0')
         return f'{x_str}{op}{y_str} = {coeffs[2]}'
 
     problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
@@ -372,7 +375,6 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
 
-
 def pythagoreanTheoremFunc(maxLength=20):
     a = random.randint(1, maxLength)
     b = random.randint(1, maxLength)
@@ -391,7 +393,8 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
     soln = [random.randint(-varRange, varRange) for i in range(n)]
 
     problem = list()
-    solution = ", ".join(["{} = {}".format(vars[i], soln[i]) for i in range(n)])
+    solution = ", ".join(["{} = {}".format(vars[i], soln[i])
+                          for i in range(n)])
     for _ in range(n):
         coeff = [random.randint(-coeffRange, coeffRange) for i in range(n)]
         res = sum([coeff[i] * soln[i] for i in range(n)])
@@ -469,7 +472,8 @@ def combinationsFunc(maxlength=20):
     b = random.randint(0, 9)
 
     solution = int(factorial(a) / (factorial(b) * factorial(a - b)))
-    problem = "Number of combinations from {} objects picked {} at a time ".format(a, b)
+    problem = "Number of combinations from {} objects picked {} at a time ".format(
+        a, b)
 
     return problem, solution
 
@@ -615,8 +619,10 @@ def intersectionOfTwoLinesFunc(
             x = f"{x.numerator}/{x.denominator}"
         return x
 
-    m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
-    m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    m1 = (random.randint(minM, maxM), random.randint(
+        minDenominator, maxDenominator))
+    m2 = (random.randint(minM, maxM), random.randint(
+        minDenominator, maxDenominator))
     b1 = random.randint(minB, maxB)
     b2 = random.randint(minB, maxB)
     equation1 = generateEquationString(m1, b1)
@@ -642,7 +648,8 @@ def permutationFunc(maxlength=20):
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
     solution = int(math.factorial(a) / (math.factorial(a - b)))
-    problem = "Number of Permutations from {} objects picked {} at a time =  ".format(a, b)
+    problem = "Number of Permutations from {} objects picked {} at a time =  ".format(
+        a, b)
     return problem, solution
 
 
@@ -685,7 +692,8 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
     b = random.randint(1, maxRate)
     c = random.randint(1, maxTime)
     d = (a * b * c) / 100
-    problem = "Simple interest for a principle amount of " + str(a) + " dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+    problem = "Simple interest for a principle amount of " + str(a) + " dollars, " + str(
+        b) + "% rate of interest and for a time period of " + str(c) + " years is = "
     solution = round(d, 2)
     return problem, solution
 
@@ -718,7 +726,8 @@ def matrixMultiplicationFunc(maxVal=100):
             for t in range(n):
                 temp += a[r][t] * b[t][c]
             res[r].append(temp)
-    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"  # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
     solution = matrixMultiplicationFuncHelper(res)
     return problem, solution
 
@@ -754,33 +763,42 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
         coefficient = random.randint(1, maxCoef)
         exponent = random.randint(1, maxExp)
         problem += str(coefficient) + "x^" + str(exponent)
-        solution += "(" + str(coefficient) + "/" + str(exponent) + ")x^" + str(exponent + 1)
+        solution += "(" + str(coefficient) + "/" + \
+            str(exponent) + ")x^" + str(exponent + 1)
     solution = solution + " + c"
     return problem, solution
 
-
-def fourthAngleOfQuadriFunc(maxAngle=180):
-    angle1 = random.randint(1, maxAngle)
-    angle2 = random.randint(1, 240 - angle1)
-    angle3 = random.randint(1, 340 - (angle1 + angle2))
-    sum_ = angle1 + angle2 + angle3
-    angle4 = 360 - sum_
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
-    solution = angle4
+def fourthAngleOfQuadriFunc(total=360):
+    def rand_anglesquad():
+        a=180
+        b=0
+        c=0
+        d=0
+        while(c==0 or d==0):
+            a=random.randint(1, total-20)
+            b=random.randint(1, total-a-10)
+            c=random.randint(1, total-a-b)
+            d=total-a-b-c
+        return a, b, c, d
+    a, b, c, d=rand_anglesquad()
+    problem="Fourth angle of a quadrilateral with three angles {}, {}, {} (in degrees)".format(a, b, c)
+    solution=d
     return problem, solution
-
 
 def quadraticEquation(maxVal=100):
     a = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
-    b = random.randint(round(math.sqrt(4 * a * c)) + 1, round(math.sqrt(4 * maxVal * maxVal)))
+    b = random.randint(round(math.sqrt(4 * a * c)) + 1,
+                       round(math.sqrt(4 * maxVal * maxVal)))
 
     problem = "Zeros of the Quadratic Equation {}x^2+{}x+{}=0".format(a, b, c)
 
     D = math.sqrt(b * b - 4 * a * c)
 
-    solution = str([round((-b + D) / (2 * a), 2), round((-b - D) / (2 * a), 2)])
+    solution = str([round((-b + D) / (2 * a), 2),
+                    round((-b - D) / (2 * a), 2)])
     return problem, solution
+
 
 def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
@@ -792,61 +810,67 @@ def hcfFunc(maxVal=20):
     solution = str(x)
     return problem, solution
 
+
 def DiceSumProbFunc(maxDice=3):
-    a = random.randint(1,maxDice)
-    b = random.randint(a,6*a)
-    count=0
-    for i in [1,2,3,4,5,6]:
-        if a==1:
-            if i==b:
-                count=count+1
-        elif a==2:
-            for j in [1,2,3,4,5,6]:
-                if i+j==b:
-                    count=count+1
-        elif a==3:
-            for j in [1,2,3,4,5,6]:
-                for k in [1,2,3,4,5,6]:
-                    if i+j+k==b:
-                        count=count+1
-    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(a,b)
-    solution="{}/{}".format(count, 6**a)
+    a = random.randint(1, maxDice)
+    b = random.randint(a, 6 * a)
+    count = 0
+    for i in [1, 2, 3, 4, 5, 6]:
+        if a == 1:
+            if i == b:
+                count = count + 1
+        elif a == 2:
+            for j in [1, 2, 3, 4, 5, 6]:
+                if i + j == b:
+                    count = count + 1
+        elif a == 3:
+            for j in [1, 2, 3, 4, 5, 6]:
+                for k in [1, 2, 3, 4, 5, 6]:
+                    if i + j + k == b:
+                        count = count + 1
+    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(
+        a, b)
+    solution = "{}/{}".format(count, 6**a)
     return problem, solution
 
-def exponentiationFunc(maxBase = 20,maxExpo = 10):
+  
+def exponentiationFunc(maxBase=20, maxExpo=10):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
     problem = f"{base}^{expo} ="
     solution = str(base ** expo)
     return problem, solution
 
+
 def confidenceIntervalFunc():
-    n=random.randint(20,40)
-    j=random.randint(0,3)
-    lst=random.sample(range(200,300),n)
-    lst_per=[80 ,90, 95, 99]
+    n = random.randint(20, 40)
+    j = random.randint(0, 3)
+    lst = random.sample(range(200, 300), n)
+    lst_per = [80, 90, 95, 99]
     lst_t = [1.282, 1.645, 1.960, 2.576]
-    mean=0
-    sd=0
+    mean = 0
+    sd = 0
     for i in lst:
-        count= i + mean
-        mean=count
-    mean = mean/n
+        count = i + mean
+        mean = count
+    mean = mean / n
     for i in lst:
-        x=(i-mean)**2+sd
-        sd=x
-    sd=sd/n
-    standard_error = lst_t[j]*math.sqrt(sd/n)
-    problem= 'The confidence interval for sample {} with {}% confidence is'.format([x for x in lst], lst_per[j])
-    solution= '({}, {})'.format(mean+standard_error, mean-standard_error)
+        x = (i - mean)**2 + sd
+        sd = x
+    sd = sd / n
+    standard_error = lst_t[j] * math.sqrt(sd / n)
+    problem = 'The confidence interval for sample {} with {}% confidence is'.format(
+        [x for x in lst], lst_per[j])
+    solution = '({}, {})'.format(mean + standard_error, mean - standard_error)
     return problem, solution
 
-def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
-    radicand1,radicand2 = tuple(random.sample(range(1,maxValue),2))
-    degree1, degree2 = tuple(random.sample(range(1,maxRoot),2))
+
+def surdsComparisonFunc(maxValue=100, maxRoot=10):
+    radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))
+    degree1, degree2 = tuple(random.sample(range(1, maxRoot), 2))
     problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
-    first = math.pow(radicand1, 1/degree1)
-    second = math.pow(radicand2, 1/degree2)
+    first = math.pow(radicand1, 1 / degree1)
+    second = math.pow(radicand2, 1 / degree2)
     solution = "="
     if first > second:
         solution = ">"
@@ -854,72 +878,162 @@ def surdsComparisonFunc(maxValue = 100, maxRoot = 10):
         solution = "<"
     return problem, solution
 
+
 def fibonacciSeriesFunc(minNo=1):
-    n = random.randint(minNo,20)
+    n = random.randint(minNo, 20)
+
     def createFibList(n):
-        l=[]
+        fibList = []
         for i in range(n):
-            if i<2:
-                l.append(i)
+            if i < 2:
+                fibList.append(i)
             else:
-                val = l[i-1]+l[i-2]
-                l.append(val)
-        return l
-    fibList=createFibList(n)
-    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+                val = fibList[i - 1] + fibList[i - 2]
+                fibList.append(val)
+        return fibList
+    fibList = createFibList(n)
+    problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
-    return problem,solution
+    return problem, solution
 
-def basicTrigonometryFunc(angles=[0,30,45,60,90],functions=["sin","cos","tan"]): #Handles degrees in quadrant one
-    angle=random.choice(angles)
-    function=random.choice(functions)
 
-    problem=f"What is {function}({angle})?"
-    expression='math.'+function+'(math.radians(angle))'
-    result_fraction_map={0.0:"0",0.5:"1/2",0.71:"1/√2",0.87:"√3/2",1.0:"1",0.58:"1/√3",1.73:"√3"}
+# Handles degrees in quadrant one
+def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90], functions=["sin", "cos", "tan"]):
+    angle = random.choice(angles)
+    function = random.choice(functions)
 
-    solution=result_fraction_map[round(eval(expression),2)] if round(eval(expression),2)<=99999 else "∞"  #for handling the ∞ condition
+    problem = f"What is {function}({angle})?"
+    expression = 'math.' + function + '(math.radians(angle))'
+    result_fraction_map = {0.0: "0", 0.5: "1/2", 0.71: "1/√2",
+                           0.87: "√3/2", 1.0: "1", 0.58: "1/√3", 1.73: "√3"}
 
-    return problem,solution
+    solution = result_fraction_map[round(eval(expression), 2)] if round(
+        eval(expression), 2) <= 99999 else "∞"  # for handling the ∞ condition
 
-def sumOfAnglesOfPolygonFunc(maxSides = 12):
+    return problem, solution
+
+
+def sumOfAnglesOfPolygonFunc(maxSides=12):
     side = random.randint(3, maxSides)
     sum = (side - 2) * 180
     problem = f"Sum of angles of polygon with {side} sides = "
     solution = sum
     return problem, solution
 
-def dataSummaryFunc(number_values=15,minval=5,maxval=50):
-    random_list=[]
+
+def dataSummaryFunc(number_values=15, minval=5, maxval=50):
+    random_list = []
     for i in range(number_values):
-        n=random.randint(minval,maxval)
+        n = random.randint(minval, maxval)
         random_list.append(n)
-    a=sum(random_list)
-    mean=a/number_values
-    var=0
+    a = sum(random_list)
+    mean = a / number_values
+    var = 0
     for i in range(number_values):
         var+=(random_list[i]-mean)**2
-    print(random_list)
-    print(mean)
-    print(var/number_values)
-    print((var/number_values)**0.5)
     problem="Find the mean,standard deviation and variance for the data"+str(random_list)
     solution="The Mean is {} , Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
     return problem,solution
 
-def surfaceAreaSphere(maxSide = 20, unit = 'm'):
-    r = random.randint(1, maxSide)
 
+def surfaceAreaSphere(maxSide=20, unit='m'):
+    r = random.randint(1, maxSide)
     problem = f"Surface area of Sphere with radius = {r}{unit} is"
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
+
 def volumeSphereFunc(maxRadius = 100):
     r=random.randint(1,maxRadius)
     problem=f"Volume of sphere with radius {r} m = "
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution  
+          
+
+def volumeSphereFunc(maxRadius=100):
+    r = random.randint(1, maxRadius)
+    problem = f"Volume of sphere with radius {r} m = "
+    ans = (4 * math.pi / 3) * r * r * r
+    solution = f"{ans} m^3"
+    return problem,solution
+
+def nthFibonacciNumber(maxN = 100):
+    golden_ratio = (1 + math.sqrt(5))/2
+    n = random.randint(1,maxN)
+    problem = f"What is the {n}th Fibonacci number?"
+    ans = round((math.pow(golden_ratio,n) - math.pow(-golden_ratio,-n))/(math.sqrt(5)))
+    solution = f"{ans}"
+    return problem, solution
+
+def profitLossPercentFunc(maxCP = 1000, maxSP = 1000):
+    cP = random.randint(1, maxCP)
+    sP = random.randint(1, maxSP)
+    diff = abs(sP-cP)
+    if (sP-cP >= 0):
+        profitOrLoss = "Profit"
+    else:
+        profitOrLoss = "Loss"
+    percent = diff/cP * 100
+    problem = f"{profitOrLoss} percent when CP = {cP} and SP = {sP} is: "
+    solution = percent
+
+def BinaryToHexFunc(max_dig=10):
+    problem = ''
+    for i in range(random.randint(1, max_dig)):
+        temp = str(random.randint(0, 1))
+        problem += temp
+
+    solution = hex(int(problem, 2))
+    return problem, solution
+    
+def multiplyComplexNumbersFunc(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
+    num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    problem = f"{num1} * {num2} = "
+    solution = num1 * num2
+    return problem, solution
+  
+def GeomProgrFunc(number_values=6, min_value=2, max_value=12, n_term=7, sum_term=5):
+    r=random.randint(min_value,max_value)
+    a=random.randint(min_value,max_value)
+    n_term=random.randint(number_values,number_values+5)
+    sum_term=random.randint(number_values,number_values+5)
+    GP=[]
+    for i in range(number_values):
+        GP.append(a*(r**i))
+    problem="For the given GP "+str(GP)+" ,Find the value of a,common ratio,"+str(n_term)+"th term value, sum upto "+str(sum_term)+"th term"
+    value_nth_term=a*(r**(n_term-1))
+    sum_till_nth_term=a*((r**sum_term-1)/(r-1))
+    solution="The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(a,r,n_term,value_nth_term,sum_term,sum_till_nth_term)
+    return problem,solution
+  
+
+def geometricMeanFunc(maxValue=100, maxNum=4):
+    a=random.randint(1,maxValue)
+    b=random.randint(1,maxValue)
+    c=random.randint(1,maxValue)
+    d=random.randint(1,maxValue)
+    num=random.randint(2,4)
+    if num==2:
+      product=a*b
+    elif num==3:
+      product=a*b*c
+    elif num==4:
+      product=a*b*c*d        
+        
+    ans=product**(1/num)
+    if num==2:
+      problem=f"Geometric mean of {num} numbers {a} and {b} = "
+      solution = f"({a}*{b})^(1/{num}) = {ans}"
+    elif num==3:
+      problem=f"Geometric mean of {num} numbers {a} , {b} and {c} = "
+      solution = f"({a}*{b}*{c})^(1/{num}) = {ans}"
+    elif num==4:
+      problem=f"Geometric mean of {num} numbers {a} , {b} , {c} , {d} = "
+      solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
+    return problem,solution
+  
 def harmonicMeanFunc(maxValue=100, maxNum=4):
     
         a=random.randint(1,maxValue)
@@ -945,71 +1059,133 @@ def harmonicMeanFunc(maxValue=100, maxNum=4):
             problem=f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
             solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
         return problem,solution
-          
+
 # || Class Instances
+
 
 # Format is:
 # <title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
-multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
+multiplication = Generator(
+    "Multiplication", 2, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 3, "a/b=", "c", divisionFunc)
-binaryComplement1s = Generator("Binary Complement 1s", 4, "1010=", "0101", binaryComplement1sFunc)
+binaryComplement1s = Generator(
+    "Binary Complement 1s", 4, "1010=", "0101", binaryComplement1sFunc)
 moduloDivision = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc)
 squareRoot = Generator("Square Root", 6, "sqrt(a)=", "b", squareRootFunc)
-powerRuleDifferentiation = Generator("Power Rule Differentiation", 7, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
+powerRuleDifferentiation = Generator(
+    "Power Rule Differentiation", 7, "nx^m=", "(n*m)x^(m-1)", powerRuleDifferentiationFunc)
 square = Generator("Square", 8, "a^2", "b", squareFunc)
-lcm = Generator("LCM (Least Common Multiple)", 9, "LCM of a and b = ", "c", lcmFunc)
-gcd = Generator("GCD (Greatest Common Denominator)", 10, "GCD of a and b = ", "c", gcdFunc)
-basicAlgebra = Generator("Basic Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
+lcm = Generator("LCM (Least Common Multiple)", 9,
+                "LCM of a and b = ", "c", lcmFunc)
+gcd = Generator("GCD (Greatest Common Denominator)",
+                10, "GCD of a and b = ", "c", gcdFunc)
+basicAlgebra = Generator(
+    "Basic Algebra", 11, "ax + b = c", "d", basicAlgebraFunc)
 log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)
 intDivision = Generator("Easy Division", 13, "a/b=", "c", divisionToIntFunc)
-decimalToBinary = Generator("Decimal to Binary", 14, "Binary of a=", "b", DecimalToBinaryFunc)
-binaryToDecimal = Generator("Binary to Decimal", 15, "Decimal of a=", "b", BinaryToDecimalFunc)
-fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
-intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix", 17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
-areaOfTriangle = Generator("Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
-doesTriangleExist = Generator("Triangle exists check", 19, "Does triangle with sides a, b and c exist?", "Yes/No", isTriangleValidFunc)
-midPointOfTwoPoint = Generator("Midpoint of the two point", 20, "((X1,Y1),(X2,Y2))=", "((X1+X2)/2,(Y1+Y2)/2)", MidPointOfTwoPointFunc)
-factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
-thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22, "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
-systemOfEquations = Generator("Solve a System of Equations in R^2", 23, "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",systemOfEquationsFunc)
-distance2Point = Generator("Distance between 2 points", 24, "Find the distance between (x1,y1) and (x2,y2)", "sqrt(distanceSquared)", distanceTwoPointsFunc)
-pythagoreanTheorem = Generator("Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
-linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc)  # This has multiple variables whereas #23 has only x and y
-primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
-fractionMultiplication = Generator("Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
-angleRegularPolygon = Generator("Angle of a Regular Polygon", 29, "Find the angle of a regular polygon with 6 sides", "120", regularPolygonAngleFunc)
-combinations = Generator("Combinations of Objects", 30, "Combinations available for picking 4 objects at a time from 6 distinct objects =", " 15", combinationsFunc)
+decimalToBinary = Generator("Decimal to Binary", 14,
+                            "Binary of a=", "b", DecimalToBinaryFunc)
+binaryToDecimal = Generator("Binary to Decimal", 15,
+                            "Decimal of a=", "b", BinaryToDecimalFunc)
+fractionDivision = Generator(
+    "Fraction Division", 16, "(a/b)/(c/d)=", "x/y", divideFractionsFunc)
+intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix",
+                                      17, "k * [[a,b],[c,d]]=", "[[k*a,k*b],[k*c,k*d]]", multiplyIntToMatrix22)
+areaOfTriangle = Generator(
+    "Area of Triangle", 18, "Area of Triangle with side lengths a, b, c = ", "area", areaOfTriangleFunc)
+doesTriangleExist = Generator("Triangle exists check", 19,
+                              "Does triangle with sides a, b and c exist?", "Yes/No", isTriangleValidFunc)
+midPointOfTwoPoint = Generator("Midpoint of the two point", 20,
+                               "((X1,Y1),(X2,Y2))=", "((X1+X2)/2,(Y1+Y2)/2)", MidPointOfTwoPointFunc)
+factoring = Generator("Factoring Quadratic", 21,
+                      "x^2+(x1+x2)+x1*x2", "(x-x1)(x-x2)", factoringFunc)
+thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22,
+                                 "Third Angle of the triangle = ", "angle3", thirdAngleOfTriangleFunc)
+systemOfEquations = Generator("Solve a System of Equations in R^2", 23,
+                              "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3", systemOfEquationsFunc)
+distance2Point = Generator("Distance between 2 points", 24,
+                           "Find the distance between (x1,y1) and (x2,y2)", "sqrt(distanceSquared)", distanceTwoPointsFunc)
+pythagoreanTheorem = Generator(
+    "Pythagorean Theorem", 25, "The hypotenuse of a right triangle given the other two lengths a and b = ", "hypotenuse", pythagoreanTheoremFunc)
+# This has multiple variables whereas #23 has only x and y
+linearEquations = Generator(
+    "Linear Equations", 26, "2x+5y=20 & 3x+6y=12", "x=-20 & y=12", linearEquationsFunc)
+primeFactors = Generator("Prime Factorisation", 27,
+                         "Prime Factors of a =", "[b, c, d, ...]", primeFactorsFunc)
+fractionMultiplication = Generator(
+    "Fraction Multiplication", 28, "(a/b)*(c/d)=", "x/y", multiplyFractionsFunc)
+angleRegularPolygon = Generator("Angle of a Regular Polygon", 29,
+                                "Find the angle of a regular polygon with 6 sides", "120", regularPolygonAngleFunc)
+combinations = Generator("Combinations of Objects", 30,
+                         "Combinations available for picking 4 objects at a time from 6 distinct objects =", " 15", combinationsFunc)
 factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
-surfaceAreaCubeGen = Generator("Surface Area of Cube", 32, "Surface area of cube with side a units is", "b units^2", surfaceAreaCube)
-surfaceAreaCuboidGen = Generator("Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is", "d units^2", surfaceAreaCuboid)
-surfaceAreaCylinderGen = Generator("Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is", "c units^2", surfaceAreaCylinder)
-volumeCubeGen = Generator("Volum of Cube", 35, "Volume of cube with side a units is", "b units^3", volumeCube)
-volumeCuboidGen = Generator("Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is", "d units^3", volumeCuboid)
-volumeCylinderGen = Generator("Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is", "c units^3", volumeCylinder)
-surfaceAreaConeGen = Generator("Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is", "c units^2", surfaceAreaCone)
-volumeConeGen = Generator("Volume of cone", 39, "Volume of cone with height = a units and radius = b units is", "c units^3", volumeCone)
-commonFactors = Generator("Common Factors", 40, "Common Factors of {a} and {b} = ", "[c, d, ...]", commonFactorsFunc)
-intersectionOfTwoLines = Generator("Intersection of Two Lines", 41, "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
-permutations = Generator("Permutations", 42, "Total permutations of 4 objects at a time from 10 objects is", "5040", permutationFunc)
-vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c", vectorCrossFunc)
-compareFractions = Generator("Compare Fractions", 44, "Which symbol represents the comparison between a/b and c/d?", ">/</=", compareFractionsFunc)
-simpleInterest = Generator("Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
-matrixMultiplication = Generator("Multiplication of two matrices", 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
-CubeRoot = Generator("Cube Root", 47, "Cuberoot of a upto 2 decimal places is", "b", cubeRootFunc)
-powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
-fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49, "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
-quadraticEquationSolve = Generator("Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
-hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c", hcfFunc)
-diceSumProbability=Generator("Probability of a certain sum appearing on faces of dice", 52,"If n dices are rolled then probabilty of getting sum of x is =","z", DiceSumProbFunc)
-exponentiation = Generator("Exponentiation", 53,"a^b = ","c",exponentiationFunc)
-confidenceInterval = Generator("Confidence interval For sample S", 54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
-surdsComparison = Generator("Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
-fibonacciSeries = Generator("Fibonacci Series",56,"fibonacci series of first a numbers","prints the fibonacci series starting from 0 to a",fibonacciSeriesFunc)
-basicTrigonometry=Generator("Trigonometric Values",57,"What is sin(X)?","ans",basicTrigonometryFunc)
-sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
-dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
-surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
-volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
-harmonicMean=Generator("Harmonic Mean of N Numbers",61,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
+surfaceAreaCubeGen = Generator(
+    "Surface Area of Cube", 32, "Surface area of cube with side a units is", "b units^2", surfaceAreaCube)
+surfaceAreaCuboidGen = Generator(
+    "Surface Area of Cuboid", 33, "Surface area of cuboid with sides = a units, b units, c units is", "d units^2", surfaceAreaCuboid)
+surfaceAreaCylinderGen = Generator(
+    "Surface Area of Cylinder", 34, "Surface area of cylinder with height = a units and radius = b units is", "c units^2", surfaceAreaCylinder)
+volumeCubeGen = Generator(
+    "Volum of Cube", 35, "Volume of cube with side a units is", "b units^3", volumeCube)
+volumeCuboidGen = Generator(
+    "Volume of Cuboid", 36, "Volume of cuboid with sides = a units, b units, c units is", "d units^3", volumeCuboid)
+volumeCylinderGen = Generator(
+    "Volume of cylinder", 37, "Volume of cylinder with height = a units and radius = b units is", "c units^3", volumeCylinder)
+surfaceAreaConeGen = Generator(
+    "Surface Area of cone", 38, "Surface area of cone with height = a units and radius = b units is", "c units^2", surfaceAreaCone)
+volumeConeGen = Generator(
+    "Volume of cone", 39, "Volume of cone with height = a units and radius = b units is", "c units^3", volumeCone)
+commonFactors = Generator(
+    "Common Factors", 40, "Common Factors of {a} and {b} = ", "[c, d, ...]", commonFactorsFunc)
+intersectionOfTwoLines = Generator("Intersection of Two Lines", 41,
+                                   "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2", "(x, y)", intersectionOfTwoLinesFunc)
+permutations = Generator(
+    "Permutations", 42, "Total permutations of 4 objects at a time from 10 objects is", "5040", permutationFunc)
+vectorCross = Generator("Cross Product of 2 Vectors",
+                        43, "a X b = ", "c", vectorCrossFunc)
+compareFractions = Generator(
+    "Compare Fractions", 44, "Which symbol represents the comparison between a/b and c/d?", ">/</=", compareFractionsFunc)
+simpleInterest = Generator(
+    "Simple Interest", 45, "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", simpleInterestFunc)
+matrixMultiplication = Generator("Multiplication of two matrices",
+                                 46, "Multiply two matrices A and B", "C", matrixMultiplicationFunc)
+CubeRoot = Generator(
+    "Cube Root", 47, "Cuberoot of a upto 2 decimal places is", "b", cubeRootFunc)
+powerRuleIntegration = Generator(
+    "Power Rule Integration", 48, "nx^m=", "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+fourthAngleOfQuadrilateral = Generator("Fourth Angle of Quadrilateral", 49,
+                                       "Fourth angle of Quadrilateral with angles a,b,c =", "angle4", fourthAngleOfQuadriFunc)
+quadraticEquationSolve = Generator(
+    "Quadratic Equation", 50, "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2", quadraticEquation)
+hcf = Generator("HCF (Highest Common Factor)", 51,
+                "HCF of a and b = ", "c", hcfFunc)
+diceSumProbability = Generator("Probability of a certain sum appearing on faces of dice",
+                               52, "If n dices are rolled then probabilty of getting sum of x is =", "z", DiceSumProbFunc)
+exponentiation = Generator(
+    "Exponentiation", 53, "a^b = ", "c", exponentiationFunc)
+confidenceInterval = Generator("Confidence interval For sample S",
+                               54, "With X% confidence", "is (A,B)", confidenceIntervalFunc)
+surdsComparison = Generator(
+    "Comparing surds", 55, "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=", surdsComparisonFunc)
+fibonacciSeries = Generator("Fibonacci Series", 56, "fibonacci series of first a numbers",
+                            "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc)
+basicTrigonometry = Generator(
+    "Trigonometric Values", 57, "What is sin(X)?", "ans", basicTrigonometryFunc)
+sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58,
+                                 "Sum of angles of polygon with n sides = ", "sum", sumOfAnglesOfPolygonFunc)
+dataSummary = Generator("Mean,Standard Deviation,Variance",
+                        59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
+surfaceAreaSphereGen = Generator(
+    "Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
+volumeSphere = Generator("Volume of Sphere", 60,
+                         "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
+nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumber)
+
+profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
+binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
+ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
+geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
+geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
+harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
