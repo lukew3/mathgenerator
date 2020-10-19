@@ -20,7 +20,7 @@ def divideFractionsFunc(maxVal=10):
 
     tmp_n = a * d
     tmp_d = b * c
-    
+
     gcd = calculate_gcd(tmp_n, tmp_d)
     x = f"{tmp_n//gcd}/{tmp_d//gcd}"
 

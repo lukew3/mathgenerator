@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def commonFactorsFunc(maxVal=100):
@@ -18,7 +18,7 @@ def commonFactorsFunc(maxVal=100):
             if (y % i == 0):
                 count = count + 1
                 arr.append(i)
-                
+    
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
