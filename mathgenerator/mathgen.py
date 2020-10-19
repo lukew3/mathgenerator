@@ -1059,6 +1059,17 @@ def harmonicMeanFunc(maxValue=100, maxNum=4):
             problem=f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
             solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
         return problem,solution
+    
+   def determinantToMatrix22(maxMatrixVal = 100):
+    a = random.randint(0, maxMatrixVal)
+    b = random.randint(0, maxMatrixVal)
+    c = random.randint(0, maxMatrixVal)
+    d = random.randint(0, maxMatrixVal)
+    
+    determinant = a*d - b*c
+    problem = f"Det([[{a}, {b}], [{c}, {d}]]) = "
+    solution = f" {determinant}"
+    return problem, solution
 
 # || Class Instances
 
@@ -1189,3 +1200,4 @@ ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + 
 geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
 geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
 harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
+intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 20, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22) 
