@@ -4,7 +4,8 @@ from  .__init__ import *
 alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def fromBaseTenTo(n,toBase):
-    assert toBase<=36, "{} should be at most 36"
+    assert type(toBase)==int and toBase>=2 and toBase<=36, "toBase({}) must be >=2 and <=36"
+    # trivial cases
     if toBase==2:
         return bin(n)[2:]
     elif toBase==8:
@@ -22,12 +23,11 @@ def fromBaseTenTo(n,toBase):
 
 # Useful to check answers, but not needed here
 # def toBaseTen(n,fromBase):
-#     assert fromBase<=36, "{} should be at most 36"
 #     return int(n,fromBase)
 
 def baseConversion(maxNum = 60000, maxBase = 16):
-    assert type(maxNum)==int and maxNum>=100 and maxNum<=65536, "maxNum({}) should be an int between 100 and 65536".format(maxNum)
-    assert type(maxBase)==int and maxBase>=2 and maxBase<=36, "maxBase({}) sholud be an int between 2 and 36 (inclusive)".format(maxBase)
+    assert type(maxNum)==int and maxNum>=100 and maxNum<=65536, "maxNum({}) must be >=100 and <=65536".format(maxNum)
+    assert type(maxBase)==int and maxBase>=2 and maxBase<=36, "maxBase({}) must be >= 2 and <=36".format(maxBase)
     
     n = random.randint(40,maxNum)
     dist = [10]*10+[2]*5+[16]*5+[i for i in range(2,maxBase+1)]
