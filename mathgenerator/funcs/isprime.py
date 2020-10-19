@@ -1,4 +1,4 @@
-__init__ import *
+.__init__ import *
 def isprime(max_a =100):
     a =random.randint(2,max_a)
     problem =a
@@ -15,4 +15,4 @@ def isprime(max_a =100):
     solution = True
     return problem, solution
 
-is_prime = Generator("isprime", 61, "a any positive integer", "True/False", isprime())
+is_prime = Generator("isprime", 74, "a any positive integer", "True/False", isprime())
