@@ -5,7 +5,6 @@ from .funcs import *
 
 genList = []
 
-
 # || Generator class
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
