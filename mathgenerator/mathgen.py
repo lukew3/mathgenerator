@@ -269,10 +269,10 @@ percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
 celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
 
-arithmeticProgressionTerm = Generator ("AP Term Calculation", 82, 
-                                    "Find the term number n of the AP series: a1, a2, a3 ..." ,  
-                                    "a-n", arithmeticProgressionTermFunc)
+arithmeticProgressionTerm = Generator("AP Term Calculation", 82,
+                                      "Find the term number n of the AP series: a1, a2, a3 ...",
+                                      "a-n", arithmeticProgressionTermFunc)
 
-arithmeticProgressionSum = Generator ("AP Sum Calculation", 83,
-                                      "Find the sum of first n terms of the AP series: a1, a2, a3 ...",
-                                      "Sum", arithmeticProgressionSumFunc)
+arithmeticProgressionSum = Generator("AP Sum Calculation", 83,
+                                     "Find the sum of first n terms of the AP series: a1, a2, a3 ...",
+                                     "Sum", arithmeticProgressionSumFunc)
