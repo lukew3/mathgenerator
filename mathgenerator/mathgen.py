@@ -23,8 +23,8 @@ class Generator:
             self.id
         ) + " " + self.title + " " + self.generalProb + " " + self.generalSol
 
-    def __call__(self, **kwargs):
-        return self.func(**kwargs)
+    def __call__(self, *args, **kwargs):
+        return self.func(*args, **kwargs)
 
 
 # || Non-generator Functions
