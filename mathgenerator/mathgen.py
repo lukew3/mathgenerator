@@ -268,3 +268,4 @@ decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
 percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
 celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
+curvedSurfaceAreaCylinder = Generator("Curved surface area of a cylinder",82,"What is CSA of a cylinder of radius, r and height, h?","csa of cylinder",curvedSurfaceAreaCylinderFunc)
