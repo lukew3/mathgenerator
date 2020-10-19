@@ -7,5 +7,5 @@ def DecimalToBinaryFunc(max_dec=99):
 
     problem = "Binary of " + str(a) + "="
     solution = str(b)
-    
+
     return problem, solution

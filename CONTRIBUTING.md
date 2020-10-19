@@ -35,6 +35,7 @@ We currently just underwent a large reconstruction of the repository. Here is ho
 * Place `.__init__ import *` at the top of your file and then write your function in the lines beneath it
 * Add `from .<yourfunc> import *` at the bottom of the `__init__.py` file inside the funcs directory
 
+If you have issues with checks you can try using yapf to fix linter errors or just go through them line by line.
 ### Provide Ideas
 If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue. If you have a lot of ideas, I would suggest adding them to the table in README.md so that they are easier for our team to manage.
 

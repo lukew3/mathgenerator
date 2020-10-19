@@ -7,7 +7,7 @@ def divisionToIntFunc(maxA=25, maxB=25):
 
     divisor = a * b
     dividend = random.choice([a, b])
-    
+
     problem = f"{divisor}/{dividend} = "
     solution = int(divisor / dividend)
     return problem, solution
