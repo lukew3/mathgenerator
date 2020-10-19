@@ -956,7 +956,7 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
-    
+   
 def volumeSphereFunc(maxRadius=100):
     r = random.randint(1, maxRadius)
     problem = f"Volume of sphere with radius {r} m = "
@@ -983,6 +983,15 @@ def profitLossPercentFunc(maxCP = 1000, maxSP = 1000):
     percent = diff/cP * 100
     problem = f"{profitOrLoss} percent when CP = {cP} and SP = {sP} is: "
     solution = percent
+
+def BinaryToHexFunc(max_dig=10):
+    problem = ''
+    for i in range(random.randint(1, max_dig)):
+        temp = str(random.randint(0, 1))
+        problem += temp
+
+    solution = hex(int(problem, 2))
+    return problem, solution
     
 # || Class Instances
 
@@ -1107,4 +1116,5 @@ volumeSphere = Generator("Volume of Sphere", 60,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumber)
 
-profitLossPercent = Generator("Profit or Loss Percent", 61, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
+profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
+binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
