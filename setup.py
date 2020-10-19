@@ -10,6 +10,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     install_requires=[
+        
     ],
     entry_points={
     }
