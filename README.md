@@ -117,4 +117,3 @@ problem, solution = mathgen.genById(0)
 | 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[38, 29, 43, 25, 7, 10, 13, 14, 43, 44, 30, 42, 48, 48, 42] | The Mean is 31.733333333333334 , Standard Deviation is 199.26222222222222, Variance is 14.116027140177303 | dataSummary |
 | 59 | Surface Area of Sphere | Surface area of Sphere with radius = 13m is | 2123.7166338267 m^2 | surfaceAreaSphereGen |
 | 60 | Volume of Sphere | Volume of sphere with radius 84 m =  | 2482712.7095377133 m^3 | volumeSphere |
-| 61 | Geometric Progression | Given [2,4,8] find a,r,4th term, sum to 3rd term| 2,2,16,14 | GeomProgrFunc |
