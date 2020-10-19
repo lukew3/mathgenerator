@@ -156,3 +156,4 @@ complexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + 
 geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)
 geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
 harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
+binary2sComplement = Generator("Binary 2's Complement", 68, "2's complement of 11010110 = ", "101010", binary2sComplementFunc)
