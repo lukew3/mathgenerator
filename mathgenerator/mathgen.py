@@ -115,3 +115,4 @@ intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],
 compoundInterest = Generator("Compound Interest", 78, "Compound interest for a principle amount of p dollars, r% rate of interest and for a time period of t years with n times compounded annually is = ", "A dollars", compoundInterestFunc)
 decimalToHexadeci = Generator("Decimal to Hexadecimal", 79,"Binary of a=", "b", deciToHexaFunc)
 degreeToRad = Generator("Degrees to Radians", 85, "Angle a in radians is = ", "b", degreeToRadFunc)
+radianToDeg = Generator("Radians to Degrees", 100, "Angle a in degrees is = ", "b", radianToDegFunc)
