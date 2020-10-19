@@ -1,4 +1,4 @@
-.__init__ import *
+from .__init__ import *
 
 def sectorAreaFunc(maxRadius = 49,maxAngle = 359):
     Radius = random.randint(1, maxRadius)

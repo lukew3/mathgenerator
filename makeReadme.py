@@ -22,6 +22,8 @@ for item in wList:
         prob = prob.replace(", ", "</td><td>")
         prob = prob.replace("]]\n", "</td></tr></table>")
         prob = prob.replace("]\n", "</td></tr>")
+        prob = prob.replace(" ", "")
+        prob = prob.replace("\n", "")
 
     instName = lines[line]
     func_name = instName[:instName.find('=')].strip() # NOTE: renamed 'def_name' to 'func_name' because it suits it more
