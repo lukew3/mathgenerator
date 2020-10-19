@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def matrixMultiplicationFunc(maxVal=100):
-    m = random.randint(2, 10)
-    n = random.randint(2, 10)
-    k = random.randint(2, 10)
+def matrixMultiplicationFunc(maxVal=100, max_dim=10):
+    m = random.randint(2, max_dim)
+    n = random.randint(2, max_dim)
+    k = random.randint(2, max_dim)
 
     # generate matrices a and b
     a = []

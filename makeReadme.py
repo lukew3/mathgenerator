@@ -2,6 +2,17 @@
 # NOTE: not anymore. but still leaving this comment in.
 from mathgenerator.mathgen import *
 
+def array2markdown_table(string):
+    string = string.replace("[[", "<table><tr><td>")
+    string = string.replace("[", "<tr><td>")
+    string = string.replace(", ", "</td><td>")
+    string = string.replace("]]", "</td></tr></table>")
+    string = string.replace("]", "</td></tr>")
+    string = string.replace(" ", "")
+    string = string.replace("\n", "")
+    return string
+
+
 wList = getGenList()
 lines = []
 with open('mathgenerator/mathgen.py', 'r') as f:
@@ -17,13 +28,11 @@ for item in wList:
     solu = str(solu).rstrip("\n")
     # edge case for matrixMultiplication
     if item[0] == 46:
-        prob = prob.replace("[[", "<table><tr><td>")
-        prob = prob.replace("[", "<tr><td>")
-        prob = prob.replace(", ", "</td><td>")
-        prob = prob.replace("]]\n", "</td></tr></table>")
-        prob = prob.replace("]\n", "</td></tr>")
-        prob = prob.replace(" ", "")
-        prob = prob.replace("\n", "")
+        prob, solu = myGen(10, 4)
+        prob = str(prob).rstrip("\n")
+        solu = str(solu).rstrip("\n")
+        prob = array2markdown_table(prob)
+        solu = array2markdown_table(solu)
 
     instName = lines[line]
     func_name = instName[:instName.find('=')].strip() # NOTE: renamed 'def_name' to 'func_name' because it suits it more
