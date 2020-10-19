@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def basicAlgebraFunc(maxVariable=10):
@@ -19,7 +19,7 @@ def basicAlgebraFunc(maxVariable=10):
         x = "0"
     elif a == 1 or a == i:
         x = f"{c - b}"
-        
+
     problem = f"{a}x + {b} = {c}"
     solution = x
     return problem, solution

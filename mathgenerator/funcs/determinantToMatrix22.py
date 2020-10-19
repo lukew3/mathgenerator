@@ -1,6 +1,7 @@
-from .__init__ import *  
+from .__init__ import *
 
-def determinantToMatrix22(maxMatrixVal = 100):
+
+def determinantToMatrix22(maxMatrixVal=100):
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)

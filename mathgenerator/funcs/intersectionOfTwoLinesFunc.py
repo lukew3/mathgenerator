@@ -33,8 +33,10 @@ def intersectionOfTwoLinesFunc(
             x = f"{x.numerator}/{x.denominator}"
         return x
 
-    m1 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
-    m2 = (random.randint(minM, maxM), random.randint(minDenominator, maxDenominator))
+    m1 = (random.randint(minM, maxM), random.randint(
+        minDenominator, maxDenominator))
+    m2 = (random.randint(minM, maxM), random.randint(
+        minDenominator, maxDenominator))
 
     b1 = random.randint(minB, maxB)
     b2 = random.randint(minB, maxB)
@@ -58,5 +60,5 @@ def intersectionOfTwoLinesFunc(
         intersection_x = (b1 - b2) / (m2 - m1)
         intersection_y = ((m2 * b1) - (m1 * b2)) / (m2 - m1)
         solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
-        
+
     return problem, solution

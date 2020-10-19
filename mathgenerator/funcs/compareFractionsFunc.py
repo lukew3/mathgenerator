@@ -21,6 +21,6 @@ def compareFractionsFunc(maxVal=10):
         solution = "<"
     else:
         solution = "="
-        
+
     problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem, solution

@@ -1,6 +1,7 @@
 from .__init__ import *
 import sympy
 
+
 def matrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerElementsInInvertedMatrix=False):
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False

@@ -32,9 +32,11 @@ def matrixMultiplicationFunc(maxVal=100):
                 temp += a[r][t] * b[t][c]
             res[r].append(temp)
 
-    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"  # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
     solution = matrixMultiplicationFuncHelper(res)
     return problem, solution
+
 
 def matrixMultiplicationFuncHelper(inp):
     m = len(inp)
@@ -47,5 +49,5 @@ def matrixMultiplicationFuncHelper(inp):
             string += ", "if j < n-1 else ""
         string += "]\n [" if i < m-1 else ""
     string += "]]"
-        
+
     return string

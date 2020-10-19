@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def binaryToHexFunc(max_dig=10):

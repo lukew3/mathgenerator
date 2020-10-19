@@ -1,6 +1,7 @@
 from .__init__ import *
 
-def percentageFunc(maxValue = 99, maxpercentage=99):
+
+def percentageFunc(maxValue=99, maxpercentage=99):
     a = random.randint(1, maxpercentage)
     b = random.randint(1, maxValue)
     problem = f"What is {a}% of {b}?"

@@ -1,8 +1,10 @@
-from  .__init__ import *
+from .__init__ import *
+
 
 def binary2sComplementFunc(maxDigits=10):
     digits = random.randint(1, maxDigits)
-    question = ''.join([str(random.randint(0, 1)) for i in range(digits)]).lstrip('0')
+    question = ''.join([str(random.randint(0, 1))
+                        for i in range(digits)]).lstrip('0')
 
     answer = []
     for i in question:

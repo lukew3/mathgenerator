@@ -1,6 +1,7 @@
 
 genList = []
 
+
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
         self.title = title
@@ -15,6 +16,7 @@ class Generator:
 
     def __call__(self, **kwargs):
         return self.func(**kwargs)
+
 
 def getGenList():
     return genList

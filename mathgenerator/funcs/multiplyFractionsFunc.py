@@ -20,7 +20,7 @@ def multiplyFractionsFunc(maxVal=10):
 
     tmp_n = a * c
     tmp_d = b * d
-    
+
     gcd = calculate_gcd(tmp_n, tmp_d)
     x = f"{tmp_n//gcd}/{tmp_d//gcd}"
 

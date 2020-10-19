@@ -1,4 +1,5 @@
-from  .__init__ import *
+from .__init__ import *
+
 
 def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
