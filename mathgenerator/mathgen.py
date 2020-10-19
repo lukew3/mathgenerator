@@ -948,8 +948,8 @@ def volumeSphereFunc(maxRadius = 100):
     problem=f"Volume of sphere with radius {r} m = "
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
-    return problem,solution
-
+    return problem,solution  
+          
 
 def volumeSphereFunc(maxRadius=100):
     r = random.randint(1, maxRadius)
@@ -1006,6 +1006,32 @@ def GeomProgrFunc(number_values=6, min_value=2, max_value=12, n_term=7, sum_term
     value_nth_term=a*(r**(n_term-1))
     sum_till_nth_term=a*((r**sum_term-1)/(r-1))
     solution="The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(a,r,n_term,value_nth_term,sum_term,sum_till_nth_term)
+    return problem,solution
+  
+
+def geometricMeanFunc(maxValue=100, maxNum=4):
+    a=random.randint(1,maxValue)
+    b=random.randint(1,maxValue)
+    c=random.randint(1,maxValue)
+    d=random.randint(1,maxValue)
+    num=random.randint(2,4)
+    if num==2:
+      product=a*b
+    elif num==3:
+      product=a*b*c
+    elif num==4:
+      product=a*b*c*d        
+        
+    ans=product**(1/num)
+    if num==2:
+      problem=f"Geometric mean of {num} numbers {a} and {b} = "
+      solution = f"({a}*{b})^(1/{num}) = {ans}"
+    elif num==3:
+      problem=f"Geometric mean of {num} numbers {a} , {b} and {c} = "
+      solution = f"({a}*{b}*{c})^(1/{num}) = {ans}"
+    elif num==4:
+      problem=f"Geometric mean of {num} numbers {a} , {b} , {c} , {d} = "
+      solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
     return problem,solution
   
 # || Class Instances
@@ -1135,3 +1161,4 @@ profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percen
 binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
 ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
 geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
+geometricMean=Generator("Geometric Mean of N Numbers",61,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
