@@ -71,4 +71,7 @@ from .multiplyComplexNumbersFunc import *
 from .geomProgrFunc import *
 from .geometricMeanFunc import *
 from .harmonicMeanFunc import *
+from .euclidianNormFunc import *
+from .angleBtwVectorsFunc import *
+from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
