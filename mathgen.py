@@ -29,4 +29,4 @@ def isprime(max_a =100):
     solution = True
     return problem, solution
 
-is_prime = Generator("isprime", 61, "a any positive integer", "True/False", isprime)
+is_prime = Generator("isprime", 61, "a any positive integer", "True/False", isprime())
