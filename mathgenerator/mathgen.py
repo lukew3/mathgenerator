@@ -920,6 +920,18 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
+
+# diiferentiation function
+def factorialFunc(maxinput = 100):
+    a=random.randint(1,maxinput)
+    if a < 0:
+       print("non_valid")
+    elif a == 0:
+       print("1")
+    else:
+       for i in range(1,a + 1):
+           f = f*i
+       return f
 # || Class Instances
 
 # Format is:
@@ -986,3 +998,4 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58, "Sum of angles 
 dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator("Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is","d units^2", surfaceAreaSphere)
 volumeSphere=Generator("Volume of Sphere",60,"Volume of sphere with radius r m = ","(4*pi/3)*r*r*r",volumeSphereFunc)
+factorial = Generator("factorial", 61,"factorial of a random number a =","n(n-1)...(n-r) where r=n-1",factorialFunc)
