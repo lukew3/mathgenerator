@@ -1,6 +1,7 @@
 import random
 import math
 import fractions
+import sympy
 from .funcs import *
 from .__init__ import getGenList
 
@@ -268,3 +269,4 @@ decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
 percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
 celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
+differentiation = Generator("Differentiation", 82, "differentiate w.r.t x : d(f(x))/dx", "g(x)", differentiationFunc)

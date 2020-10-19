@@ -84,3 +84,4 @@ from .compoundInterestFunc import *
 from .deciToHexaFunc import *
 from .percentageFunc import *
 from .celsiustofahrenheit import *
+from .differentiationFunc import *
