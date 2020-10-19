@@ -109,3 +109,4 @@ absoluteDifference=Generator("Absolute difference between two numbers", 71, "Abs
 vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c", vectorDotFunc)
 binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
 invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", "A^(-1)", matrixInversion)
+decimalToHexadeci = Generator("Decimal to Hexadecimal", 78,"Binary of a=", "b", deciToHexaFunc)
