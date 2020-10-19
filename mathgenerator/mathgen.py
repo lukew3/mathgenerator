@@ -3,7 +3,6 @@ import math
 import fractions
 
 genList = []
-GOLDEN_RATIO = (1 + math.sqrt(5))/2
 
 # || Generator class
 class Generator:
@@ -922,9 +921,10 @@ def volumeSphereFunc(maxRadius = 100):
     return problem,solution
 
 def nthFibonacciNumber(maxN = 100):
+    golden_ratio = (1 + math.sqrt(5))/2
     n = random.randint(1,maxN)
     problem = f"What is the {n}th Fibonacci number?"
-    ans = round((math.pow(GOLDEN_RATIO,n) - math.pow(-GOLDEN_RATIO,-n))/(math.sqrt(5)))
+    ans = round((math.pow(golden_ratio,n) - math.pow(-golden_ratio,-n))/(math.sqrt(5)))
     solution = f"{ans}"
     return problem, solution
 
