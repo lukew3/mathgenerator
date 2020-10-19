@@ -1161,4 +1161,4 @@ profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percen
 binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
 ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
 geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
-geometricMean=Generator("Geometric Mean of N Numbers",61,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
+geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
