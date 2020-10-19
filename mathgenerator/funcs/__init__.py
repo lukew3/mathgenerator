@@ -77,4 +77,4 @@ from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
 from .binary2sComplement import *
 from .matrixInversion import *
-from .binaryToHexaFunction import *
+from .deciToHexaFunc import *
