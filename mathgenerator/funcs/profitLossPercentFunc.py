@@ -12,3 +12,5 @@ def profitLossPercentFunc(maxCP = 1000, maxSP = 1000):
     percent = diff/cP * 100
     problem = f"{profitOrLoss} percent when CP = {cP} and SP = {sP} is: "
     solution = percent
+    
+    return problem, solution

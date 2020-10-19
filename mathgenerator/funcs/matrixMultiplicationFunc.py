@@ -40,11 +40,12 @@ def matrixMultiplicationFuncHelper(inp):
     m = len(inp)
     n = len(inp[0])
 
-    string = ""
+    string = "[["
     for i in range(m):
         for j in range(n):
             string += f"{inp[i][j]: 6d}"
-            string += "  "
-        string += "\n"
+            string += ", "if j < n-1 else ""
+        string += "]\n [" if i < m-1 else ""
+    string += "]]"
         
     return string
