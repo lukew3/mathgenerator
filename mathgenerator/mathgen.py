@@ -4,7 +4,6 @@ import fractions
 
 genList = []
 
-
 # || Generator class
 class Generator:
     def __init__(self, title, id, generalProb, generalSol, func):
@@ -953,7 +952,16 @@ def volumeSphereFunc(maxRadius=100):
     problem = f"Volume of sphere with radius {r} m = "
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
+    return problem,solution
+
+def nthFibonacciNumber(maxN = 100):
+    golden_ratio = (1 + math.sqrt(5))/2
+    n = random.randint(1,maxN)
+    problem = f"What is the {n}th Fibonacci number?"
+    ans = round((math.pow(golden_ratio,n) - math.pow(-golden_ratio,-n))/(math.sqrt(5)))
+    solution = f"{ans}"
     return problem, solution
+
 # || Class Instances
 
 
@@ -1075,3 +1083,4 @@ surfaceAreaSphereGen = Generator(
     "Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
 volumeSphere = Generator("Volume of Sphere", 60,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
+nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumber)
