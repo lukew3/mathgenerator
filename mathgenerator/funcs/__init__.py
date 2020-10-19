@@ -77,3 +77,5 @@ from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
 from .binary2sComplement import *
 from .matrixInversion import *
+from .sectorAreaFunc import*
+from .meanMedianFunc import*
