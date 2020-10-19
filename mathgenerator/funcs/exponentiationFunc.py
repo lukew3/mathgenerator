@@ -6,5 +6,5 @@ def exponentiationFunc(maxBase=20, maxExpo=10):
     expo = random.randint(1, maxExpo)
 
     problem = f"{base}^{expo} ="
-    solution = str(base ** expo)
+    solution = str(base**expo)
     return problem, solution

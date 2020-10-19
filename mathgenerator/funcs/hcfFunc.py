@@ -5,7 +5,7 @@ def hcfFunc(maxVal=20):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
-    while(y):
+    while (y):
         x, y = y, x % y
     problem = f"HCF of {a} and {b} = "
     solution = str(x)

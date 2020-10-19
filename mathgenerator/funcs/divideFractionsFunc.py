@@ -14,7 +14,7 @@ def divideFractionsFunc(maxVal=10):
         d = random.randint(1, maxVal)
 
     def calculate_gcd(x, y):
-        while(y):
+        while (y):
             x, y = y, x % y
         return x
 

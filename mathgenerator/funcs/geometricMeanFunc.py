@@ -8,13 +8,13 @@ def geometricMeanFunc(maxValue=100, maxNum=4):
     d = random.randint(1, maxValue)
     num = random.randint(2, 4)
     if num == 2:
-        product = a*b
+        product = a * b
     elif num == 3:
-        product = a*b*c
+        product = a * b * c
     elif num == 4:
-        product = a*b*c*d
+        product = a * b * c * d
 
-    ans = product**(1/num)
+    ans = product**(1 / num)
     if num == 2:
         problem = f"Geometric mean of {num} numbers {a} and {b} = "
         solution = f"({a}*{b})^(1/{num}) = {ans}"

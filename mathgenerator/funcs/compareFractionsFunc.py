@@ -15,9 +15,9 @@ def compareFractionsFunc(maxVal=10):
     first = a / b
     second = c / d
 
-    if(first > second):
+    if (first > second):
         solution = ">"
-    elif(first < second):
+    elif (first < second):
         solution = "<"
     else:
         solution = "="

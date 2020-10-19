@@ -9,13 +9,13 @@ def harmonicMeanFunc(maxValue=100, maxNum=4):
     d = random.randint(1, maxValue)
     num = random.randint(2, 4)
     if num == 2:
-        sum = (1/a)+(1/b)
+        sum = (1 / a) + (1 / b)
     elif num == 3:
-        sum = (1/a)+(1/b)+(1/c)
+        sum = (1 / a) + (1 / b) + (1 / c)
     elif num == 4:
-        sum = (1/a)+(1/b)+(1/c)+(1/d)
+        sum = (1 / a) + (1 / b) + (1 / c) + (1 / d)
 
-    ans = num/sum
+    ans = num / sum
     if num == 2:
         problem = f"Harmonic mean of {num} numbers {a} and {b} = "
         solution = f" {num}/((1/{a}) + (1/{b})) = {ans}"

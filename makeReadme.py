@@ -9,7 +9,7 @@ with open('mathgenerator/mathgen.py', 'r') as f:
 
 allRows = []
 # get the first line of the functions in mathgen.py
-line = lines.index('# Funcs_start - DO NOT REMOVE!\n')+1
+line = lines.index('# Funcs_start - DO NOT REMOVE!\n') + 1
 for item in wList:
     myGen = item[2]
     # NOTE: renamed 'sol' to 'solu' to make it look nicer
@@ -41,7 +41,7 @@ with open('README.md', "r") as g:
     lines = g.readlines()
 
     line = lines.index('[//]: # list start\n')
-    lines = lines[:line+1]
+    lines = lines[:line + 1]
 
     for row in allRows:
         tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(

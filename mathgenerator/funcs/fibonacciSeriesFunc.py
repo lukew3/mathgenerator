@@ -10,12 +10,12 @@ def fibonacciSeriesFunc(minNo=1):
             if i < 2:
                 l.append(i)
             else:
-                val = l[i-1]+l[i-2]
+                val = l[i - 1] + l[i - 2]
                 l.append(val)
         return l
 
     fibList = createFibList(n)
 
-    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+    problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
     return problem, solution

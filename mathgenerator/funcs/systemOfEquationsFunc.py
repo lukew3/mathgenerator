@@ -10,8 +10,9 @@ def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
     c2 = [0, 1, y]
 
     def randNonZero():
-        return random.choice([i for i in range(-coeff_mult_range, coeff_mult_range)
-                              if i != 0])
+        return random.choice(
+            [i for i in range(-coeff_mult_range, coeff_mult_range) if i != 0])
+
     # Add random (non-zero) multiple of equations (rows) to each other
     c1_mult = randNonZero()
     c2_mult = randNonZero()

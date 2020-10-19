@@ -2,7 +2,6 @@ from .__init__ import *
 
 
 def combinationsFunc(maxlength=20):
-
     def factorial(a):
         d = 1
         for i in range(a):

@@ -16,16 +16,16 @@ def confidenceIntervalFunc():
         count = i + mean
         mean = count
 
-    mean = mean/n
+    mean = mean / n
 
     for i in lst:
-        x = (i-mean)**2+sd
+        x = (i - mean)**2 + sd
         sd = x
 
-    sd = sd/n
-    standard_error = lst_t[j]*math.sqrt(sd/n)
+    sd = sd / n
+    standard_error = lst_t[j] * math.sqrt(sd / n)
 
     problem = 'The confidence interval for sample {} with {}% confidence is'.format(
         [x for x in lst], lst_per[j])
-    solution = '({}, {})'.format(mean+standard_error, mean-standard_error)
+    solution = '({}, {})'.format(mean + standard_error, mean - standard_error)
     return problem, solution

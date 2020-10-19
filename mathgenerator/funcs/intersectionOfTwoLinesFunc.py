@@ -1,10 +1,12 @@
 from .__init__ import *
 
 
-def intersectionOfTwoLinesFunc(
-    minM=-10, maxM=10, minB=-10, maxB=10, minDenominator=1, maxDenominator=6
-):
-
+def intersectionOfTwoLinesFunc(minM=-10,
+                               maxM=10,
+                               minB=-10,
+                               maxB=10,
+                               minDenominator=1,
+                               maxDenominator=6):
     def generateEquationString(m, b):
         """
         Generates an equation given the slope and intercept.
@@ -33,10 +35,10 @@ def intersectionOfTwoLinesFunc(
             x = f"{x.numerator}/{x.denominator}"
         return x
 
-    m1 = (random.randint(minM, maxM), random.randint(
-        minDenominator, maxDenominator))
-    m2 = (random.randint(minM, maxM), random.randint(
-        minDenominator, maxDenominator))
+    m1 = (random.randint(minM,
+                         maxM), random.randint(minDenominator, maxDenominator))
+    m2 = (random.randint(minM,
+                         maxM), random.randint(minDenominator, maxDenominator))
 
     b1 = random.randint(minB, maxB)
     b2 = random.randint(minB, maxB)

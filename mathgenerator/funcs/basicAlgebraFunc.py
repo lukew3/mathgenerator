@@ -8,7 +8,7 @@ def basicAlgebraFunc(maxVariable=10):
 
     # calculate gcd
     def calculate_gcd(x, y):
-        while(y):
+        while (y):
             x, y = y, x % y
         return x
 

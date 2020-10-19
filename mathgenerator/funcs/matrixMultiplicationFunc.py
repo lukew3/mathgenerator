@@ -46,7 +46,7 @@ def matrixMultiplicationFuncHelper(inp):
     for i in range(m):
         for j in range(n):
             string += f"{inp[i][j]: 6d}"
-            string += ", "if j < n - 1 else ""
+            string += ", " if j < n - 1 else ""
         string += "]\n [" if i < m - 1 else ""
     string += "]]"
 
