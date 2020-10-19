@@ -160,3 +160,4 @@ eucldianNorm=Generator("Euclidian norm or L2 norm of a vector", 69, "Euclidian N
 angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]", "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", angleBtwVectorsFunc)
 absoluteDifference=Generator("Absolute difference between two numbers", 71, "Absolute difference betweeen two numbers a and b =", "|a-b|", absoluteDifferenceFunc)
 vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c", vectorDotFunc)
+binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
