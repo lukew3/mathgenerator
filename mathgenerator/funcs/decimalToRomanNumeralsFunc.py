@@ -1,7 +1,6 @@
 from .__init__ import *
 
 
-
 def decimalToRomanNumeralsFunc(maxDecimal=4000):
     x = random.randint(0, maxDecimal)
     problem = "The number " + str(x) + " in Roman Numerals is: "
