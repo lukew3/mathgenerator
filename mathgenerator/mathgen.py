@@ -1,6 +1,7 @@
 import random
 import math
 import fractions
+import sympy
 from .funcs import *
 
 genList = []
@@ -161,3 +162,4 @@ angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vector
 absoluteDifference=Generator("Absolute difference between two numbers", 71, "Absolute difference betweeen two numbers a and b =", "|a-b|", absoluteDifferenceFunc)
 vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c", vectorDotFunc)
 binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
+invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", "A^(-1)", matrixInversion)
