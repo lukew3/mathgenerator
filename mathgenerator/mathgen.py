@@ -1,7 +1,6 @@
 import random
 import math
 import fractions
-import sympy
 from .funcs import *
 
 genList = []
