@@ -1,5 +1,6 @@
 from .__init__ import *
 
+
 def arithmeticProgressionTermFunc (maxd = 100, maxa = 100, maxn = 100):
     d = random.randint (-1 * maxd, maxd)
     a1 = random.randint (-1 * maxa, maxa)
@@ -9,4 +10,4 @@ def arithmeticProgressionTermFunc (maxd = 100, maxa = 100, maxn = 100):
     apString = str(a1) +', ' + str(a2) +', ' + str(a3) + ' ... '
     problem = 'Find the term number ' + str(n) + ' of the AP series: ' + apString
     solution = a1  + ((n-1)*d)
-    return problen, solution
+    return problem, solution

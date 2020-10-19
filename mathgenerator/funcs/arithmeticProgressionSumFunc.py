@@ -1,5 +1,6 @@
 from .__init__ import *
 
+
 def arithmeticProgressionSumFunc (maxd = 100, maxa = 100, maxn = 100):
     d = random.randint (-1 * maxd, maxd)
     a1 = random.randint (-1 * maxa, maxa)
