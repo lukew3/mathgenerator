@@ -156,5 +156,5 @@ complexNumMultiply = Generator("Multiplication of 2 complex numbers", 65, "(x + 
 geometricprogression=Generator("Geometric Progression", 66, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)
 geometricMean=Generator("Geometric Mean of N Numbers",67,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
 harmonicMean=Generator("Harmonic Mean of N Numbers",68,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
-eucldianNorm=Generator("Euclidian norm or L2 norm of a vector", 69, "Euclidian Norm of a vector V:[v1, v2, ......., vn]", "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNorm)
-angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]", "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", AngleBtwVectors)
+eucldianNorm=Generator("Euclidian norm or L2 norm of a vector", 69, "Euclidian Norm of a vector V:[v1, v2, ......., vn]", "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNormFunc)
+angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]", "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", angleBtwVectorsFunc)
