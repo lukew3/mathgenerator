@@ -1,2 +1,5 @@
 pytest
 hypothesis
+flake8
+autopep8
+sympy

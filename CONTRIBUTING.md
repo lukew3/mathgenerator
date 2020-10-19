@@ -28,7 +28,14 @@ def additionFunc(maxSum, maxAddend):
 
 Before coding, please check README.md to see if someone has already created the generator you plan to make.
 Skillid is determined by the next available id as can be determined in the table.
+#### Restructure Notes
+We currently just underwent a large reconstruction of the repository. Here is how you commit to the repo.
+* Place your generator instance at the bottom of mathgen.py
+* Create a new file in the funcs directory with the same name as your function
+* Place `.__init__ import *` at the top of your file and then write your function in the lines beneath it
+* Add `from .<yourfunc> import *` at the bottom of the `__init__.py` file inside the funcs directory
 
+If you have issues with checks you can try using yapf to fix linter errors or just go through them line by line.
 ### Provide Ideas
 If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue. If you have a lot of ideas, I would suggest adding them to the table in README.md so that they are easier for our team to manage.
 
