@@ -833,7 +833,7 @@ def DiceSumProbFunc(maxDice=3):
     solution = "{}/{}".format(count, 6**a)
     return problem, solution
 
-
+  
 def exponentiationFunc(maxBase=20, maxExpo=10):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
@@ -930,16 +930,10 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
     mean = a / number_values
     var = 0
     for i in range(number_values):
-        var += (random_list[i] - mean)**2
-    print(random_list)
-    print(mean)
-    print(var / number_values)
-    print((var / number_values)**0.5)
-    problem = "Find the mean,standard deviation and variance for the data" + \
-        str(random_list)
-    solution = "The Mean is {} , Standard Deviation is {}, Variance is {}".format(
-        mean, var / number_values, (var / number_values)**0.5)
-    return problem, solution
+        var+=(random_list[i]-mean)**2
+    problem="Find the mean,standard deviation and variance for the data"+str(random_list)
+    solution="The Mean is {} , Standard Deviation is {}, Variance is {}".format(mean,var/number_values,(var/number_values)**0.5)
+    return problem,solution
 
 
 def surfaceAreaSphere(maxSide=20, unit='m'):
@@ -955,7 +949,8 @@ def volumeSphereFunc(maxRadius = 100):
     ans=(4*math.pi/3)*r*r*r
     solution = f"{ans} m^3"
     return problem,solution
-   
+
+
 def volumeSphereFunc(maxRadius=100):
     r = random.randint(1, maxRadius)
     problem = f"Volume of sphere with radius {r} m = "
@@ -998,6 +993,20 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum = -20, maxRealImaginaryNum = 
     problem = f"{num1} * {num2} = "
     solution = num1 * num2
     return problem, solution
+  
+def GeomProgrFunc(number_values=6, min_value=2, max_value=12, n_term=7, sum_term=5):
+    r=random.randint(min_value,max_value)
+    a=random.randint(min_value,max_value)
+    n_term=random.randint(number_values,number_values+5)
+    sum_term=random.randint(number_values,number_values+5)
+    GP=[]
+    for i in range(number_values):
+        GP.append(a*(r**i))
+    problem="For the given GP "+str(GP)+" ,Find the value of a,common ratio,"+str(n_term)+"th term value, sum upto "+str(sum_term)+"th term"
+    value_nth_term=a*(r**(n_term-1))
+    sum_till_nth_term=a*((r**sum_term-1)/(r-1))
+    solution="The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(a,r,n_term,value_nth_term,sum_term,sum_till_nth_term)
+    return problem,solution
   
 # || Class Instances
 
@@ -1125,3 +1134,4 @@ nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth F
 profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
 binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
 ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
+geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
