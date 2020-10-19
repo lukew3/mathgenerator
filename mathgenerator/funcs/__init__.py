@@ -53,6 +53,7 @@ from .cubeRootFunc import *
 from .powerRuleIntegrationFunc import *
 from .fourthAngleOfQuadriFunc import *
 from .quadraticEquation import *
+from .hcfFunc import *
 from .DiceSumProbFunc import *
 from .exponentiationFunc import *
 from .confidenceIntervalFunc import *
@@ -63,3 +64,10 @@ from .sumOfAnglesOfPolygonFunc import *
 from .dataSummaryFunc import *
 from .surfaceAreaSphere import *
 from .volumeSphereFunc import *
+from .nthFibonacciNumberFunc import *
+from .profitLossPercentFunc import *
+from .binaryToHexFunc import *
+from .multiplyComplexNumbersFunc import *
+from .geomProgrFunc import *
+from .geometricMeanFunc import *
+from .harmonicMeanFunc import *
