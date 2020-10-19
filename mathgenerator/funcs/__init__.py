@@ -80,3 +80,4 @@ from .matrixInversion import *
 from .sectorAreaFunc import*
 from .meanMedianFunc import*
 from .determinantToMatrix22 import *
+from .deciToHexaFunc import *
