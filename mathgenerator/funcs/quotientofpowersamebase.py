@@ -17,5 +17,5 @@ def quotientofpowersamebaseFunc(maxBase=50, maxPower=10):
     return problem, solution
 
 
-quotientofpowersamebase = Generator("Quotient of Powers with Same Base", 82,
+quotientOfPowerSameBase = Generator("Quotient of Powers with Same Base", 82,
                                 "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientofpowersamebaseFunc)

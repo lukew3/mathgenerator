@@ -17,5 +17,5 @@ def quotientofpowersamepowerFunc(maxBase=50, maxPower=10):
     return problem, solution
 
 
-quotientofpowersamepower = Generator("Quotient of Powers with Same Power", 83,
+quotientOfPowerSamePower = Generator("Quotient of Powers with Same Power", 83,
                                 "6^4 / 3^4 = (6/3)^4 = 2^4", "16", quotientofpowersamepowerFunc)

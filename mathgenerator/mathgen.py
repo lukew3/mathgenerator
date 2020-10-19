@@ -267,8 +267,8 @@ decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
                               "b", deciToHexaFunc)
 percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
-celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
-quotientofpowersamebase = Generator("Quotient of Powers with Same Base", 82,
+celsiusToFahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
+quotientOfPowerSameBase = Generator("Quotient of Powers with Same Base", 82,
                                 "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientofpowersamebaseFunc)
-quotientofpowersamepower = Generator("Quotient of Powers with Same Power", 83,
+quotientOfPowerSamePower = Generator("Quotient of Powers with Same Power", 83,
                                 "6^4 / 3^4 = (6/3)^4 = 2^4", "16", quotientofpowersamepowerFunc)
