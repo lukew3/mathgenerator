@@ -159,3 +159,5 @@ harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbe
 decimalToHexadecimal = Generator("Decimal to Hexadecimal", 68,
                             "Hexadecimal of a=", "b", DecimalToHexFunc)
 degreeToRadian = Generator("Degree To Radian", 69, "Radian of angle=", "radian", DegreeToRadian)
+decimalToOctal = Generator("Decimal to Octal", 70,
+                            "Octal of a=", "b", DecimalToOctalFunc)
