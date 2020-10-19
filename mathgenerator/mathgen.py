@@ -375,7 +375,6 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
 
-
 def pythagoreanTheoremFunc(maxLength=20):
     a = random.randint(1, maxLength)
     b = random.randint(1, maxLength)
@@ -993,6 +992,13 @@ def BinaryToHexFunc(max_dig=10):
     solution = hex(int(problem, 2))
     return problem, solution
     
+def multiplyComplexNumbersFunc(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
+    num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    problem = f"{num1} * {num2} = "
+    solution = num1 * num2
+    return problem, solution
+  
 # || Class Instances
 
 
@@ -1118,3 +1124,4 @@ nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth F
 
 profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
 binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", BinaryToHexFunc)
+ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
