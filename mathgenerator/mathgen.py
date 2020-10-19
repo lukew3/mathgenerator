@@ -268,3 +268,5 @@ decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
 percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
 celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
+decimalToOctal = Generator("Converts decimal to octal", 82, "What's the octal representation of 98?", "0o142", decimalToOctalFunc)
+decimalToRomanNumerals = Generator("Converts decimal to Roman Numerals", 83, "Convert 20 into Roman Numerals", "XX", decimalToRomanNumeralsFunc)
