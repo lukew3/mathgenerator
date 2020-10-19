@@ -2,7 +2,7 @@ import random
 import math
 import fractions
 
-from .additionFunc import *
+from .addition import *
 from .subtractionFunc import *
 from .multiplicationFunc import *
 from .divisionFunc import *

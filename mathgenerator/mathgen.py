@@ -2,8 +2,9 @@ import random
 import math
 import fractions
 from .funcs import *
+from .__init__ import getGenList
 
-genList = []
+genList = getGenList()
 
 # || Generator class
 class Generator:
@@ -28,13 +29,13 @@ def genById(id):
     return(generator())
 
 #
-def getGenList():
-    return(genList)
+#def getGenList():
+#    return(genList)
 
 # Format is:
 # <title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
 # Funcs_start - DO NOT REMOVE!
-addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
+#addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
 multiplication = Generator("Multiplication", 2, "a*b=", "c", multiplicationFunc)
 division = Generator("Division", 3, "a/b=", "c", divisionFunc)
@@ -111,4 +112,4 @@ binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 1
 invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", "A^(-1)", matrixInversion)
 sectorArea=Generator("Area of a Sector", 75,"Area of a sector with radius, r and angle, a ","Area",sectorAreaFunc)
 meanMedian=Generator("Mean and Median", 76,"Mean and median of given set of numbers","Mean, Median",meanMedianFunc)
-intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22) 
+intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22)

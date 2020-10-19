@@ -3,4 +3,4 @@ from mathgenerator import mathgen
 #test your generators here
 
 print(mathgen.addition())
-print(mathgen.genById(74))
+print(mathgen.genById(10))

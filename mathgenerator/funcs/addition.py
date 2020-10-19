@@ -1,5 +1,5 @@
 from  .__init__ import *
-
+from ..__init__ import Generator
 
 def additionFunc(maxSum=99, maxAddend=50):
     a = random.randint(0, maxAddend)
@@ -8,3 +8,5 @@ def additionFunc(maxSum=99, maxAddend=50):
     problem = str(a) + "+" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
