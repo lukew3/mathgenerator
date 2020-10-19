@@ -1,7 +1,7 @@
 import random
 import math
 import fractions
-from funcs import *
+from .funcs import *
 
 genList = []
 
