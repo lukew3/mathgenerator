@@ -5,14 +5,14 @@ def fibonacciSeriesFunc(minNo=1):
     n = random.randint(minNo, 20)
 
     def createFibList(n):
-        l = []
+        list = []
         for i in range(n):
             if i < 2:
-                l.append(i)
+                list.append(i)
             else:
-                val = l[i - 1] + l[i - 2]
-                l.append(val)
-        return l
+                val = list[i - 1] + list[i - 2]
+                list.append(val)
+        return list
 
     fibList = createFibList(n)
 

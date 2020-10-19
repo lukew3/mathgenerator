@@ -20,7 +20,7 @@ def binary2sComplementFunc(maxDigits=10):
         answer[j] = '0'
         j -= 1
 
-    if j == 0 and carry == True:
+    if j == 0 and carry is True:
         answer.insert(0, '1')
 
     problem = "2's complement of " + question + " ="
