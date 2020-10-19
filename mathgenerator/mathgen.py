@@ -769,17 +769,22 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
     solution = solution + " + c"
     return problem, solution
 
-
-def fourthAngleOfQuadriFunc(maxAngle=180):
-    angle1 = random.randint(1, maxAngle)
-    angle2 = random.randint(1, 240 - angle1)
-    angle3 = random.randint(1, 340 - (angle1 + angle2))
-    sum_ = angle1 + angle2 + angle3
-    angle4 = 360 - sum_
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
-    solution = angle4
+def fourthAngleOfQuadriFunc(total=360):
+    def rand_anglesquad():
+        a=180
+        b=0
+        c=0
+        d=0
+        while(c==0 or d==0):
+            a=random.randint(1, total-20)
+            b=random.randint(1, total-a-10)
+            c=random.randint(1, total-a-b)
+            d=total-a-b-c
+        return a, b, c, d
+    a, b, c, d=rand_anglesquad()
+    problem="Fourth angle of a quadrilateral with three angles {}, {}, {} (in degrees)".format(a, b, c)
+    solution=d
     return problem, solution
-
 
 def quadraticEquation(maxVal=100):
     a = random.randint(1, maxVal)
@@ -940,7 +945,6 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
 
 def surfaceAreaSphere(maxSide=20, unit='m'):
     r = random.randint(1, maxSide)
-
     problem = f"Surface area of Sphere with radius = {r}{unit} is"
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
