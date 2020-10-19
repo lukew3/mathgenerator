@@ -158,3 +158,4 @@ geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n nu
 harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
 decimalToHexadecimal = Generator("Decimal to Hexadecimal", 68,
                             "Hexadecimal of a=", "b", DecimalToHexFunc)
+degreeToRadian = Generator("Degree To Radian", 69, "Radian of angle=", "radian", DegreeToRadian)
