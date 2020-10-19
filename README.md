@@ -91,5 +91,11 @@ problem, solution = mathgen.genById(0)
 | 57 | Trigonometric Values | What is cos(60)? | 1/2 | basicTrigonometry |
 | 58 | Sum of Angles of Polygon | Sum of angles of polygon with 5 sides =  | 540 | sumOfAnglesOfPolygon |
 | 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[38, 29, 43, 25, 7, 10, 13, 14, 43, 44, 30, 42, 48, 48, 42] | The Mean is 31.733333333333334 , Standard Deviation is 199.26222222222222, Variance is 14.116027140177303 | dataSummary |
-| 59 | Surface Area of Sphere | Surface area of Sphere with radius = 13m is | 2123.7166338267 m^2 | surfaceAreaSphereGen |
-| 60 | Volume of Sphere | Volume of sphere with radius 84 m =  | 2482712.7095377133 m^3 | volumeSphere |
+| 60 | Surface Area of Sphere | Surface area of Sphere with radius = 12m is | 1809.5573684677208 m^2 | surfaceAreaSphereGen |
+| 61 | Volume of Sphere | Volume of sphere with radius 14 m =  | 11494.040321933857 m^3 | volumeSphere |
+| 62 | nth Fibonacci number | What is the 17th Fibonacci number? | 1597 | nthFibonacciNumberGen |
+| 64 | Binary to Hexidecimal | 00 | 0x0 | binaryToHex |
+| 65 | Multiplication of 2 complex numbers | (13-8j) * (-7-5j) =  | (-131-9j) | complexNumMultiply |
+| 66 | Geometric Progression | For the given GP [12, 48, 192, 768, 3072, 12288] ,Find the value of a,common ratio,9th term value, sum upto 11th term | The value of a is 12, common ratio is 4 , 9th term is 786432 , sum upto 11th term is 16777212.0 | geometricprogression |
+| 67 | Geometric Mean of N Numbers | Geometric mean of 2 numbers 42 and 40 =  | (42*40)^(1/2) = 40.98780306383839 | geometricMean |
+| 68 | Harmonic Mean of N Numbers | Harmonic mean of 4 numbers 53 , 62 , 72 , 35 =  |  4/((1/53) + (1/62) + (1/72) + (1/35)) = 51.64137311701554 | harmonicMean |

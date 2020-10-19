@@ -146,14 +146,18 @@ sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58,
 dataSummary = Generator("Mean,Standard Deviation,Variance",
                         59, "a,b,c", "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
 surfaceAreaSphereGen = Generator(
-    "Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
-volumeSphere = Generator("Volume of Sphere", 60,
+    "Surface Area of Sphere", 60, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
+volumeSphere = Generator("Volume of Sphere", 61,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
-nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumberFunc)
-profitLossPercent = Generator("Profit or Loss Percent", 62, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
-binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", binaryToHexFunc)
-complexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
-geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)
-geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
-harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
-binary2sComplement = Generator("Binary 2's Complement", 68, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
+nthFibonacciNumberGen = Generator("nth Fibonacci number", 62, "What is the nth Fibonacci number", "Fn", nthFibonacciNumberFunc)
+profitLossPercent = Generator("Profit or Loss Percent", 63, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
+binaryToHex = Generator("Binary to Hexidecimal", 64, "Hexidecimal of a=", "b", binaryToHexFunc)
+complexNumMultiply = Generator("Multiplication of 2 complex numbers", 65, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
+geometricprogression=Generator("Geometric Progression", 66, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)
+geometricMean=Generator("Geometric Mean of N Numbers",67,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
+harmonicMean=Generator("Harmonic Mean of N Numbers",68,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
+eucldianNorm=Generator("Euclidian norm or L2 norm of a vector", 69, "Euclidian Norm of a vector V:[v1, v2, ......., vn]", "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNormFunc)
+angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]", "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", angleBtwVectorsFunc)
+absoluteDifference=Generator("Absolute difference between two numbers", 71, "Absolute difference betweeen two numbers a and b =", "|a-b|", absoluteDifferenceFunc)
+vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c", vectorDotFunc)
+binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
