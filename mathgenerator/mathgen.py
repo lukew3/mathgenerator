@@ -115,3 +115,4 @@ meanMedian=Generator("Mean and Median", 76,"Mean and median of given set of numb
 intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22)
 compoundInterest = Generator("Compound Interest", 78, "Compound interest for a principle amount of p dollars, r% rate of interest and for a time period of t years with n times compounded annually is = ", "A dollars", compoundInterestFunc)
 decimalToHexadeci = Generator("Decimal to Hexadecimal", 79,"Binary of a=", "b", deciToHexaFunc)
+percentage = Generator("Percentage of a number",80,"What is a% of b?","percentage",percentageFunc)
