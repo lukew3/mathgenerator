@@ -1,6 +1,6 @@
 from .__init__ import *
 
-def compoundInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10, maxPeriod = ):
+def compoundInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10, maxPeriod = 10):
     p = random.randint(100, maxPrinciple)
     r = random.randint(1, maxRate)
     t = random.randint(1, maxTime)
