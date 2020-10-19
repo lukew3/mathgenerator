@@ -111,3 +111,4 @@ binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 1
 invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", "A^(-1)", matrixInversion)
 sectorArea=Generator("Area of a Sector", 75,"Area of a sector with radius, r and angle, a ","Area",sectorAreaFunc)
 meanMedian=Generator("Mean and Median", 76,"Mean and median of given set of numbers","Mean, Median",meanMedianFunc)
+intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22) 
