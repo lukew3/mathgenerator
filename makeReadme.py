@@ -17,19 +17,16 @@ for item in wList:
     solu = str(solu).rstrip("\n")
     # edge case for matrixMultiplication
     if item[0] == 46:
-        print(prob)
-
         prob = prob.replace("[[", "<table><tr><td>")
         prob = prob.replace("[", "<tr><td>")
         prob = prob.replace(", ", "</td><td>")
         prob = prob.replace("]]\n", "</td></tr></table>")
         prob = prob.replace("]\n", "</td></tr>")
-        print(prob)
 
     instName = lines[line]
     func_name = instName[:instName.find('=')].strip() # NOTE: renamed 'def_name' to 'func_name' because it suits it more
     row = [myGen.id, myGen.title, prob, solu, func_name]
-    # print(item[1], func_name)
+    print('added', item[1],'-', func_name, 'to the README.md')
     line += 1
     if line > len(lines):
         break
