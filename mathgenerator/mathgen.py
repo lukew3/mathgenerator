@@ -158,3 +158,4 @@ geometricMean=Generator("Geometric Mean of N Numbers",67,"Geometric mean of n nu
 harmonicMean=Generator("Harmonic Mean of N Numbers",68,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
 eucldianNorm=Generator("Euclidian norm or L2 norm of a vector", 69, "Euclidian Norm of a vector V:[v1, v2, ......., vn]", "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNormFunc)
 angleBtwVectors=Generator("Angle between 2 vectors", 70, "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]", "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", angleBtwVectorsFunc)
+absoluteDifference=Generator("Absolute difference between two numbers", 71, "Absolute difference betweeen two numbers a and b =", "|a-b|", absoluteDifferenceFunc)
