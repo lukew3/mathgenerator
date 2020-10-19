@@ -77,31 +77,7 @@ problem, solution = mathgen.genById(0)
 | 43 | Cross Product of 2 Vectors | [-19, -3, 2] X [-15, -12, 7] =  | [3, 103, 183] | vectorCross |
 | 44 | Compare Fractions | Which symbol represents the comparison between 8/6 and 3/1? | < | compareFractions |
 | 45 | Simple Interest | Simple interest for a principle amount of 9862 dollars, 4% rate of interest and for a time period of 1 years is =  | 394.48 | simpleInterest |
-| 46 | Multiplication of two matrices | Multiply 
-   -50      36       7     -26      -2      63  
-    88     -37      60     -19      61     -56  
-    48      -5      69     -87     -64     -92  
-   -84     -50     -79     -19      86     -13  
-     0      28      12     -14      73     -49  
-    94     -90       2      26     -38      19  
-     2     -11      79     -77      98     -77  
-   -87      70      72     -32      64     -99  
-
- and 
-
-    34      32      -6     -32      46     -23      78     -81     -18  
-   -17      24      49     -62     -50      77      38     -98     -64  
-   -23     -78      43       5     -83      -5       4     -92     -16  
-    46     -47     -92      52     -25     -37      44      51      -7  
-    20      26      70      37      96     -73      49      84      42  
-   -72     -15     -80     -24      58     -47     -41      45     -69   |  -8245   -1057    -423   -3535    -569    2034   -6329    1219   -5765  
-  6619     567   10737    2391    4001   -6291   10147   -7387    6383  
-  1472    -161   13318   -5565  -12574   10381     638  -23699    2621  
-  1593    5598    3465    7899   13170   -6487   -4857   24642   10618  
-  3592    3027   12206    1473    2120    -412    6082    -635    4561  
-  3748   -1803  -11460    2072    5462   -8183    2423      11     947  
-  2400     960   22950    2483     952   -1974    4625   -5512    9372  
-  1132   -2067   22392    1884  -12276    8196    1949   -7148    5677   | matrixMultiplication |
+| 46 | Multiplication of two matrices | Multiply <table><tr><td>-50</td><td>36</td><td>7</td><td>-26</td><td>-2</td><td>63</td></tr><tr><td>88</td><td>-37</td><td>60</td><td>-19</td><td>61</td><td>-56</td></tr><tr><td>48</td><td>-5</td><td>69</td><td>-87</td><td>-64</td><td>-92</td></tr><tr><td>-84</td><td>-50</td><td>-79</td><td>-19</td><td>86</td><td>-13</td></tr><tr><td>0</td><td>28</td><td>12</td><td>-14</td><td>73</td><td>-49</td></tr><tr><td>94</td><td>-90</td><td>2</td><td>26</td><td>-38</td><td>19</td></tr><tr><td>2</td><td>-11</td><td>79</td><td>-77</td><td>98</td><td>-77</td></tr><tr><td>-87</td><td>70</td><td>72</td><td>-32</td><td>64</td><td>-99</td></tr></table> and <table><tr><td>34</td><td>32</td><td>-6</td><td>-32</td><td>46</td><td>-23</td><td>78</td><td>-81</td><td>-18</td></tr><tr><td>-17</td><td>24</td><td>49</td><td>-62</td><td>-50</td><td>77</td><td>38</td><td>-98</td><td>-64</td></tr><tr><td>-23</td><td>-78</td><td>43</td><td> 5</td><td>-83</td><td>-5</td><td> 4</td><td>-92</td><td>-16</td></tr><tr><td> 46</td><td>-47</td><td>-92</td><td>52</td><td>-25</td><td>-37</td><td>44</td><td>51</td><td>-7</td></tr><tr><td> 20</td><td>26</td><td>70</td><td>37</td><td>96</td><td>-73</td><td>49</td><td>84</td><td>42</td></tr><tr><td>-72</td><td>-15</td><td>-80</td><td>-24</td><td>58</td><td>-47</td><td>-41</td><td>45</td><td>-69</td></tr></table>|  <table><tr><td>-8245</td><td>-1057</td><td>-423</td><td>-3535</td><td>-569</td><td>2034</td><td>-6329</td><td>1219</td><td>-5765</td></tr><tr><td>6619</td><td> 567</td><td>10737</td><td>2391</td><td>4001</td><td>-6291</td><td>10147</td><td>-7387</td><td>6383</td></tr><tr><td>1472</td><td>-161</td><td>13318</td><td>-5565<td>-12574</td><td>10381</td><td> 638<td>-23699</td><td>2621</td></tr><tr><td>1593</td><td>5598</td><td>3465</td><td>7899</td><td>13170</td><td>-6487</td><td>-4857</td><td>24642</td><td>10618</td></tr><tr><td>3592</td><td>3027</td><td>12206</td><td>1473</td><td>2120</td><td>-412</td><td>6082</td><td>-635</td><td>4561</td></tr><tr><td>3748</td><td>-1803<td>-11460</td><td>2072</td><td>5462</td><td>-8183</td><td>2423</td><td>11</td><td> 947</td></tr><tr><td>2400</td><td> 960</td><td>22950</td><td>2483</td><td> 952</td><td>-1974</td><td>4625</td><td>-5512</td><td>9372</td></tr><tr><td>1132</td><td>-2067</td><td>22392</td><td>1884<td>-12276</td><td>8196</td><td>1949</td><td>-7148</td><td>5677</td></tr></table>   | matrixMultiplication |
 | 47 | Cube Root | cuberoot of 771 upto 2 decimal places is: | 9.17 | CubeRoot |
 | 48 | Power Rule Integration | 1x^3 + 8x^8 + 10x^10 | (1/3)x^4 + (8/8)x^9 + (10/10)x^11 + c | powerRuleIntegration |
 | 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 52 , 84, 154 = | 70 | fourthAngleOfQuadrilateral |
