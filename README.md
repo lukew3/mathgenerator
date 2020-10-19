@@ -104,3 +104,4 @@ problem, solution = mathgen.genById(0)
 | 65 | Geometric Progression | For the given GP [4, 16, 64, 256, 1024, 4096] ,Find the value of a,common ratio,8th term value, sum upto 7th term | The value of a is 4, common ratio is 4 , 8th term is 65536 , sum upto 7th term is 21844.0 | geometricprogression |
 | 66 | Geometric Mean of N Numbers | Geometric mean of 3 numbers 81 , 35 and 99 =  | (81*35*99)^(1/3) = 65.47307713912309 | geometricMean |
 | 67 | Harmonic Mean of N Numbers | Harmonic mean of 2 numbers 99 and 25 =  |  2/((1/99) + (1/25)) = 39.91935483870967 | harmonicMean |
+| 80 | Set Operations | Given sets A,B | A^B,A-B,B-A,A U B, | set_operation|
