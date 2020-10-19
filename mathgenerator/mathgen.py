@@ -1034,6 +1034,32 @@ def geometricMeanFunc(maxValue=100, maxNum=4):
       solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
     return problem,solution
   
+def harmonicMeanFunc(maxValue=100, maxNum=4):
+    
+        a=random.randint(1,maxValue)
+        b=random.randint(1,maxValue)
+        c=random.randint(1,maxValue)
+        d=random.randint(1,maxValue)
+        num=random.randint(2,4)
+        if num==2:
+            sum=(1/a)+(1/b)
+        elif num==3:
+            sum=(1/a)+(1/b)+(1/c)
+        elif num==4:
+            sum=(1/a)+(1/b)+(1/c)+(1/d)        
+        
+        ans=num/sum
+        if num==2:
+            problem=f"Harmonic mean of {num} numbers {a} and {b} = "
+            solution = f" {num}/((1/{a}) + (1/{b})) = {ans}"
+        elif num==3:
+            problem=f"Harmonic mean of {num} numbers {a} , {b} and {c} = "
+            solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c})) = {ans}"
+        elif num==4:
+            problem=f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
+            solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
+        return problem,solution
+
 # || Class Instances
 
 
@@ -1162,3 +1188,4 @@ binaryToHex = Generator("Binary to Hexidecimal", 63, "Hexidecimal of a=", "b", B
 ComplexNumMultiply = Generator("Multiplication of 2 complex numbers", 64, "(x + j) (y + j) = ", "xy + xj + yj -1", multiplyComplexNumbersFunc)
 geometricprogression=Generator("Geometric Progression", 65, "Initial value,Common Ratio,nth Term,Sum till nth term =", "a,r,ar^n-1,sum(ar^n-1", GeomProgrFunc)
 geometricMean=Generator("Geometric Mean of N Numbers",66,"Geometric mean of n numbers A1 , A2 , ... , An = ","(A1*A2*...An)^(1/n) = ans",geometricMeanFunc)
+harmonicMean=Generator("Harmonic Mean of N Numbers",67,"Harmonic mean of n numbers A1 , A2 , ... , An = "," n/((1/A1) + (1/A2) + ... + (1/An)) = ans",harmonicMeanFunc)
