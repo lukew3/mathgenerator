@@ -84,4 +84,5 @@ from .compoundInterestFunc import *
 from .deciToHexaFunc import *
 from .percentageFunc import *
 from .celsiustofahrenheit import *
-from .decimaltoOctalFunc import *
+from .decimalToOctalFunc import *
+from .decimalToRomanNumeralsFunc import *
