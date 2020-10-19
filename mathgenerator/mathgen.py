@@ -109,3 +109,4 @@ absoluteDifference=Generator("Absolute difference between two numbers", 71, "Abs
 vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c", vectorDotFunc)
 binary2sComplement = Generator("Binary 2's Complement", 73, "2's complement of 11010110 =", "101010", binary2sComplementFunc)
 invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", "A^(-1)", matrixInversion)
+compoundInterest = Generator("Compound Interest", 75, "Compound interest for a principle amount of p dollars, r% rate of interest and for a time period of t years with n times compounded annually is = ", "A dollars", compoundInterestFunc)
