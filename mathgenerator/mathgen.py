@@ -946,7 +946,13 @@ def surfaceAreaSphere(maxSide=20, unit='m'):
     solution = f"{ans} {unit}^2"
     return problem, solution
 
-
+def volumeSphereFunc(maxRadius = 100):
+    r=random.randint(1,maxRadius)
+    problem=f"Volume of sphere with radius {r} m = "
+    ans=(4*math.pi/3)*r*r*r
+    solution = f"{ans} m^3"
+    return problem,solution
+    
 def volumeSphereFunc(maxRadius=100):
     r = random.randint(1, maxRadius)
     problem = f"Volume of sphere with radius {r} m = "
@@ -962,6 +968,18 @@ def nthFibonacciNumber(maxN = 100):
     solution = f"{ans}"
     return problem, solution
 
+def profitLossPercentFunc(maxCP = 1000, maxSP = 1000):
+    cP = random.randint(1, maxCP)
+    sP = random.randint(1, maxSP)
+    diff = abs(sP-cP)
+    if (sP-cP >= 0):
+        profitOrLoss = "Profit"
+    else:
+        profitOrLoss = "Loss"
+    percent = diff/cP * 100
+    problem = f"{profitOrLoss} percent when CP = {cP} and SP = {sP} is: "
+    solution = percent
+    
 # || Class Instances
 
 
@@ -1084,3 +1102,5 @@ surfaceAreaSphereGen = Generator(
 volumeSphere = Generator("Volume of Sphere", 60,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
 nthFibonacciNumberGen = Generator("nth Fibonacci number", 61, "What is the nth Fibonacci number", "Fn", nthFibonacciNumber)
+
+profitLossPercent = Generator("Profit or Loss Percent", 61, "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent", profitLossPercentFunc)
