@@ -14,13 +14,13 @@ def multiplyFractionsFunc(maxVal=10):
         d = random.randint(1, maxVal)
 
     def calculate_gcd(x, y):
-        while(y):
+        while (y):
             x, y = y, x % y
         return x
 
     tmp_n = a * c
     tmp_d = b * d
-    
+
     gcd = calculate_gcd(tmp_n, tmp_d)
     x = f"{tmp_n//gcd}/{tmp_d//gcd}"
 

@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def binaryComplement1sFunc(maxDigits=10):
@@ -9,7 +9,7 @@ def binaryComplement1sFunc(maxDigits=10):
         temp = str(random.randint(0, 1))
         question += temp
         answer += "0" if temp == "1" else "1"
-        
-    problem = question+"="
+
+    problem = question + "="
     solution = answer
     return problem, solution
