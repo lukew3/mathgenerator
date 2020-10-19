@@ -113,3 +113,5 @@ invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is", 
 sectorArea=Generator("Area of a Sector", 75,"Area of a sector with radius, r and angle, a ","Area",sectorAreaFunc)
 meanMedian=Generator("Mean and Median", 76,"Mean and median of given set of numbers","Mean, Median",meanMedianFunc)
 intMatrix22determinant = Generator("Determinant to 2x2 Matrix", 77, "Det([[a,b],[c,d]]) =", " a * d - b * c", determinantToMatrix22)
+compoundInterest = Generator("Compound Interest", 78, "Compound interest for a principle amount of p dollars, r% rate of interest and for a time period of t years with n times compounded annually is = ", "A dollars", compoundInterestFunc)
+decimalToHexadeci = Generator("Decimal to Hexadecimal", 79,"Binary of a=", "b", deciToHexaFunc)
