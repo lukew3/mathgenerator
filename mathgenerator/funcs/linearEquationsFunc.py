@@ -15,7 +15,7 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
         coeff = [random.randint(-coeffRange, coeffRange) for i in range(n)]
         res = sum([coeff[i] * soln[i] for i in range(n)])
         prob = ["{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else "" for i in range(n)]
-        
+
         while "" in prob:
             prob.remove("")
         prob = " + ".join(prob) + " = " + str(res)

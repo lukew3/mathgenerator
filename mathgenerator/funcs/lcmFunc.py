@@ -2,6 +2,7 @@ from .__init__ import *
 
 
 def lcmFunc(maxVal=20):
+
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = a * b
@@ -13,5 +14,5 @@ def lcmFunc(maxVal=20):
 
     problem = f"LCM of {a} and {b} ="
     solution = str(d)
-    
+
     return problem, solution

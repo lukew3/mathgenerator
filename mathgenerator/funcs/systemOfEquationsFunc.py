@@ -38,7 +38,7 @@ def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
         # Don't include if 0, unless x is also 0 (probably never happens)
         y_str = f'{y_coeff}y' if coeffs[1] != 0 else ('' if x_str != '' else '0')
         return f'{x_str}{op}{y_str} = {coeffs[2]}'
-       
+
     problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
     solution = f"x = {x}, y = {y}"
     return problem, solution
