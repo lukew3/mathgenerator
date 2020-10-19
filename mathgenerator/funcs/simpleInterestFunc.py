@@ -6,7 +6,10 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
     b = random.randint(1, maxRate)
     c = random.randint(1, maxTime)
     d = (a * b * c) / 100
-    
-    problem = "Simple interest for a principle amount of " + str(a) + " dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+
+    problem = "Simple interest for a principle amount of " + str(
+        a) + " dollars, " + str(
+            b) + "% rate of interest and for a time period of " + str(
+                c) + " years is = "
     solution = round(d, 2)
     return problem, solution

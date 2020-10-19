@@ -1,8 +1,10 @@
-from  .__init__ import *
+from .__init__ import *
+
 
 def binary2sComplementFunc(maxDigits=10):
     digits = random.randint(1, maxDigits)
-    question = ''.join([str(random.randint(0, 1)) for i in range(digits)]).lstrip('0')
+    question = ''.join([str(random.randint(0, 1))
+                        for i in range(digits)]).lstrip('0')
 
     answer = []
     for i in question:
@@ -18,7 +20,7 @@ def binary2sComplementFunc(maxDigits=10):
         answer[j] = '0'
         j -= 1
 
-    if j == 0 and carry == True:
+    if j == 0 and carry is True:
         answer.insert(0, '1')
 
     problem = "2's complement of " + question + " ="

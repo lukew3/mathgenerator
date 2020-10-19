@@ -77,8 +77,8 @@ from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
 from .binary2sComplement import *
 from .matrixInversion import *
-from .sectorAreaFunc import*
-from .meanMedianFunc import*
+from .sectorAreaFunc import *
+from .meanMedianFunc import *
 from .determinantToMatrix22 import *
 from .compoundInterestFunc import *
 from .deciToHexaFunc import *
