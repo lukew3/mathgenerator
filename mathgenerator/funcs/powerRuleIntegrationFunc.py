@@ -14,7 +14,8 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
         exponent = random.randint(1, maxExp)
 
         problem += str(coefficient) + "x^" + str(exponent)
-        solution += "(" + str(coefficient) + "/" + str(exponent) + ")x^" + str(exponent + 1)
+        solution += "(" + str(coefficient) + "/" + \
+            str(exponent) + ")x^" + str(exponent + 1)
 
     solution += " + c"
     return problem, solution
