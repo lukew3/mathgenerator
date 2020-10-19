@@ -9,6 +9,5 @@ def arithmeticProgressionSumFunc(maxd=100, maxa=100, maxn=100):
     n = random.randint(4, maxn)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
     problem = 'Find the sum of first ' + str(n) + ' terms of the AP series: ' + apString
-    solution = n * ((2 * a1) + ((n-1) * d)) / 2
+    solution = n * ((2 * a1) + ((n - 1) * d)) / 2
     return problem, solution
-    

@@ -9,5 +9,5 @@ def arithmeticProgressionTermFunc(maxd=100, maxa=100, maxn=100):
     n = random.randint(4, maxn)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
     problem = 'Find the term number ' + str(n) + ' of the AP series: ' + apString
-    solution = a1 + ((n-1) * d)
+    solution = a1 + ((n - 1) * d)
     return problem, solution
