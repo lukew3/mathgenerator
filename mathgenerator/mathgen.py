@@ -267,3 +267,4 @@ decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
                               "b", deciToHexaFunc)
 percentage = Generator("Percentage of a number", 80, "What is a% of b?",
                        "percentage", percentageFunc)
+celsiustofahrenheit = Generator("Celsius To Fahrenheit", 81, "(C +(9/5))+32=", "F", celsiustofahrenheitFunc)
