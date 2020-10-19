@@ -64,9 +64,13 @@ def multiplicationFunc(maxRes=99, maxMulti=99):
 def divisionFunc(maxRes=99, maxDivid=99):
     a = random.randint(0, maxDivid)
     b = random.randint(0, min(maxRes, maxDivid))
-    c = a / b
-    problem = str(a) + "/" + str(b) + "="
-    solution = str(c)
+    try :
+        c = a / b
+        problem = str(a) + "/" + str(b) + "="
+        solution = str(c)
+    except:
+        problem = str(a) + "/" + str(b) + "="
+        solution = "error"
     return problem, solution
 
 
