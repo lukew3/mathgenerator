@@ -1,4 +1,4 @@
-.__init__ import *
+__init__ import *
 
 
 def isprime(max_a=100):
