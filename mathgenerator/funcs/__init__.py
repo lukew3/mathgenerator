@@ -73,3 +73,4 @@ from .geometricMeanFunc import *
 from .harmonicMeanFunc import *
 from .DegreeToRadian import *
 from .DecimalToOctal import *
+from .complexToPolarFunc import *

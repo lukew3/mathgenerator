@@ -161,3 +161,4 @@ decimalToHexadecimal = Generator("Decimal to Hexadecimal", 68,
 degreeToRadian = Generator("Degree To Radian", 69, "Radian of angle=", "radian", DegreeToRadian)
 decimalToOctal = Generator("Decimal to Octal", 70,
                             "Octal of a=", "b", DecimalToOctalFunc)
+complexToPolar = Generator("Complex To Polar Form", 71, "rexp(itheta) = ", "plr", complexToPolarFunc)
