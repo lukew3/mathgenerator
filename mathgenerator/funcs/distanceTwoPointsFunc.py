@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):
@@ -12,3 +13,8 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):
     solution = f"sqrt({distanceSq})"
     problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
     return problem, solution
+
+
+distance2Point = Generator("Distance between 2 points", 24,
+                           "Find the distance between (x1,y1) and (x2,y2)",
+                           "sqrt(distanceSquared)", distanceTwoPointsFunc)

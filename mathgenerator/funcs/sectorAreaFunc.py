@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def sectorAreaFunc(maxRadius=49, maxAngle=359):
@@ -9,3 +10,8 @@ def sectorAreaFunc(maxRadius=49, maxAngle=359):
     formatted_float = "{:.5f}".format(secArea)
     solution = f"Area of sector = {formatted_float}"
     return problem, solution
+
+
+sectorArea = Generator("Area of a Sector", 75,
+                       "Area of a sector with radius, r and angle, a ", "Area",
+                       sectorAreaFunc)

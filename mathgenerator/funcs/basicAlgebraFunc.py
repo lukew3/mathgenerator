@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def basicAlgebraFunc(maxVariable=10):
@@ -23,3 +24,7 @@ def basicAlgebraFunc(maxVariable=10):
     problem = f"{a}x + {b} = {c}"
     solution = x
     return problem, solution
+
+
+basicAlgebra = Generator("Basic Algebra", 11, "ax + b = c", "d",
+                         basicAlgebraFunc)

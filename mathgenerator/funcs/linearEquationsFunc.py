@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
@@ -27,3 +28,7 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
 
     problem = "\n".join(problem)
     return problem, solution
+
+
+linearEquations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12",
+                            "x=-20 & y=12", linearEquationsFunc)

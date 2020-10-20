@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def thirdAngleOfTriangleFunc(maxAngle=89):
@@ -9,3 +10,8 @@ def thirdAngleOfTriangleFunc(maxAngle=89):
     problem = f"Third angle of triangle with angles {angle1} and {angle2} = "
     solution = angle3
     return problem, solution
+
+
+thirdAngleOfTriangle = Generator("Third Angle of Triangle", 22,
+                                 "Third Angle of the triangle = ", "angle3",
+                                 thirdAngleOfTriangleFunc)

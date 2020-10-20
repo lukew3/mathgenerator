@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def fourthAngleOfQuadriFunc(maxAngle=180):
@@ -12,3 +13,9 @@ def fourthAngleOfQuadriFunc(maxAngle=180):
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution
+
+
+fourthAngleOfQuadrilateral = Generator(
+    "Fourth Angle of Quadrilateral", 49,
+    "Fourth angle of Quadrilateral with angles a,b,c =", "angle4",
+    fourthAngleOfQuadriFunc)

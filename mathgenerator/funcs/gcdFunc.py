@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def gcdFunc(maxVal=20):
@@ -10,3 +11,7 @@ def gcdFunc(maxVal=20):
     problem = f"GCD of {a} and {b} = "
     solution = str(x)
     return problem, solution
+
+
+gcd = Generator("GCD (Greatest Common Denominator)", 10, "GCD of a and b = ",
+                "c", gcdFunc)
