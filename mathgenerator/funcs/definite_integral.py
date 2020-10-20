@@ -1,4 +1,5 @@
 from .__init__ import *
+import scipy
 from scipy.integrate import quad
 
 
