@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Cache Primes
+    - name: Cache Dependencies
       id: myCacheStep
       uses: actions/cache@v2
       env:
