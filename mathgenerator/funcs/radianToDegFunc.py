@@ -3,7 +3,7 @@ from numpy import pi
 
 
 def radianToDegFunc(max_rad=pi):
-    a = random.randint(0, max_rad)
+    a = random.randint(0, int(max_rad))
     b = (180 * a) / pi
     b = round(b, 2)
 
