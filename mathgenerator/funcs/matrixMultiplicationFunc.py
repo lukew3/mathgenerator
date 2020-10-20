@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def matrixMultiplicationFunc(maxVal=100):
-    m = random.randint(2, 10)
-    n = random.randint(2, 10)
-    k = random.randint(2, 10)
+def matrixMultiplicationFunc(maxVal=100, max_dim=10):
+    m = random.randint(2, max_dim)
+    n = random.randint(2, max_dim)
+    k = random.randint(2, max_dim)
 
     # generate matrices a and b
     a = []
@@ -32,9 +32,11 @@ def matrixMultiplicationFunc(maxVal=100):
                 temp += a[r][t] * b[t][c]
             res[r].append(temp)
 
-    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"  # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    # consider using a, b instead of a_string, b_string if the problem doesn't look right
+    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
     solution = matrixMultiplicationFuncHelper(res)
     return problem, solution
+
 
 def matrixMultiplicationFuncHelper(inp):
     m = len(inp)
@@ -44,8 +46,8 @@ def matrixMultiplicationFuncHelper(inp):
     for i in range(m):
         for j in range(n):
             string += f"{inp[i][j]: 6d}"
-            string += ", "if j < n-1 else ""
-        string += "]\n [" if i < m-1 else ""
+            string += ", " if j < n - 1 else ""
+        string += "]\n [" if i < m - 1 else ""
     string += "]]"
-        
+
     return string

@@ -1,7 +1,10 @@
 from .__init__ import *
 import sympy
 
-def matrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerElementsInInvertedMatrix=False):
+
+def matrixInversion(SquareMatrixDimension=3,
+                    MaxMatrixElement=99,
+                    OnlyIntegerElementsInInvertedMatrix=False):
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()
@@ -15,20 +18,25 @@ def matrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
                 Mat.append(z)
             MaxAllowedMatrixElement = math.ceil(
                 pow(MaxMatrixElement, 1 / (SquareMatrixDimension)))
-            randomlist = random.sample(
-                range(0, MaxAllowedMatrixElement + 1), SquareMatrixDimension)
+            randomlist = random.sample(range(0, MaxAllowedMatrixElement + 1),
+                                       SquareMatrixDimension)
 
             for i in range(0, SquareMatrixDimension):
                 if i == SquareMatrixDimension - 1:
-                    Mat[0] = [j + (k * randomlist[i])
-                              for j, k in zip(Mat[0], Mat[i])]
+                    Mat[0] = [
+                        j + (k * randomlist[i])
+                        for j, k in zip(Mat[0], Mat[i])
+                    ]
                 else:
-                    Mat[i + 1] = [j + (k * randomlist[i])
-                                  for j, k in zip(Mat[i + 1], Mat[i])]
+                    Mat[i + 1] = [
+                        j + (k * randomlist[i])
+                        for j, k in zip(Mat[i + 1], Mat[i])
+                    ]
 
             for i in range(1, SquareMatrixDimension - 1):
-                Mat[i] = [sum(i)
-                          for i in zip(Mat[SquareMatrixDimension - 1], Mat[i])]
+                Mat[i] = [
+                    sum(i) for i in zip(Mat[SquareMatrixDimension - 1], Mat[i])
+                ]
 
             isItOk = True
             for i in Mat:
@@ -51,7 +59,8 @@ def matrixInversion(SquareMatrixDimension=3, MaxMatrixElement=99, OnlyIntegerEle
         randomlist = list(sympy.primerange(0, MaxMatrixElement + 1))
         plist = random.sample(randomlist, SquareMatrixDimension)
         randomlist = random.sample(
-            range(0, MaxMatrixElement + 1), SquareMatrixDimension * SquareMatrixDimension)
+            range(0, MaxMatrixElement + 1),
+            SquareMatrixDimension * SquareMatrixDimension)
         randomlist = list(set(randomlist) - set(plist))
         n_list = random.sample(
             randomlist, SquareMatrixDimension * (SquareMatrixDimension - 1))

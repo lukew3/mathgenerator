@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def basicAlgebraFunc(maxVariable=10):
@@ -8,7 +8,7 @@ def basicAlgebraFunc(maxVariable=10):
 
     # calculate gcd
     def calculate_gcd(x, y):
-        while(y):
+        while (y):
             x, y = y, x % y
         return x
 
@@ -19,7 +19,7 @@ def basicAlgebraFunc(maxVariable=10):
         x = "0"
     elif a == 1 or a == i:
         x = f"{c - b}"
-        
+
     problem = f"{a}x + {b} = {c}"
     solution = x
     return problem, solution
