@@ -2,7 +2,7 @@ from .__init__ import *
 from numpy import pi
 
 
-def degreeToRadFunc(max_rad=pi):
+def radianToDegFunc(max_rad=pi):
     a = random.randint(0, max_rad)
     b = (180 * a) / pi
     b = round(b, 2)
