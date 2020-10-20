@@ -16,17 +16,9 @@ def array2markdown_table(string):
 wList = getGenList()
 
 
-print(wList)
-# print(genList)
-# print(addition())
-
-
 allRows = []
-# get the first line of the functions in mathgen.py
-# line = lines.index('# Funcs_start - DO NOT REMOVE!\n') + 1
 for item in wList:
     myGen = item[2]
-    # NOTE: renamed 'sol' to 'solu' to make it look nicer
     prob, solu = myGen()
     prob = str(prob).rstrip("\n")
     solu = str(solu).rstrip("\n")
@@ -38,11 +30,10 @@ for item in wList:
         prob = array2markdown_table(prob)
         solu = array2markdown_table(solu)
 
-    # instName = lines[line]
-    # NOTE: renamed 'def_name' to 'func_name' because it suits it more
-    func_name = 'func_name'#[ k for k,v in wList.items() if v == myGen][0]#instName[:instName.find('=')].strip()
+    # NOTE: this needs to be modified after fixing #286
+    func_name = [ k for k,v in wList.items() if v == myGen][0]#instName[:instName.find('=')].strip() 
     row = [myGen.id, myGen.title, prob, solu, func_name]
-    print('added', item[1],'-', func_name, 'to the README.md')
+    print('added', item[1], '-', func_name, 'to the README.md')
     allRows.append(row)
 
 lines = []
