@@ -3,6 +3,7 @@ import math
 import fractions
 from .funcs import *
 from .__init__ import getGenList
+import scipy
 
 genList = getGenList()
 
