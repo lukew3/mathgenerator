@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def volumeCuboid(maxSide=20, unit='m'):
@@ -10,3 +11,9 @@ def volumeCuboid(maxSide=20, unit='m'):
     ans = a * b * c
     solution = f"{ans} {unit}^3"
     return problem, solution
+
+
+volumeCuboidGen = Generator(
+    "Volume of Cuboid", 36,
+    "Volume of cuboid with sides = a units, b units, c units is", "d units^3",
+    volumeCuboid)

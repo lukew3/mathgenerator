@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def subtractionFunc(maxMinuend=99, maxDiff=99):
@@ -9,3 +10,6 @@ def subtractionFunc(maxMinuend=99, maxDiff=99):
     problem = str(a) + "-" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+
+subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)

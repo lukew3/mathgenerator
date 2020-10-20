@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def factorialFunc(maxInput=6):
@@ -13,3 +14,6 @@ def factorialFunc(maxInput=6):
         n -= 1
     solution = str(b)
     return problem, solution
+
+
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)

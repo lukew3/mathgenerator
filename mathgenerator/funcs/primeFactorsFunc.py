@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def primeFactorsFunc(minVal=1, maxVal=200):
@@ -20,3 +21,7 @@ def primeFactorsFunc(minVal=1, maxVal=200):
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
     return problem, solution
+
+
+primeFactors = Generator("Prime Factorisation", 27, "Prime Factors of a =",
+                         "[b, c, d, ...]", primeFactorsFunc)

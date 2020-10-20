@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def volumeSphereFunc(maxRadius=100):
@@ -8,3 +9,8 @@ def volumeSphereFunc(maxRadius=100):
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
     return problem, solution
+
+
+volumeSphere = Generator("Volume of Sphere", 61,
+                         "Volume of sphere with radius r m = ",
+                         "(4*pi/3)*r*r*r", volumeSphereFunc)

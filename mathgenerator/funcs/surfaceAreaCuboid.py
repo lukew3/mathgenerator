@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def surfaceAreaCuboid(maxSide=20, unit='m'):
@@ -10,3 +11,9 @@ def surfaceAreaCuboid(maxSide=20, unit='m'):
     ans = 2 * (a * b + b * c + c * a)
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+
+surfaceAreaCuboidGen = Generator(
+    "Surface Area of Cuboid", 33,
+    "Surface area of cuboid with sides = a units, b units, c units is",
+    "d units^2", surfaceAreaCuboid)

@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def compareFractionsFunc(maxVal=10):
@@ -24,3 +25,9 @@ def compareFractionsFunc(maxVal=10):
 
     problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem, solution
+
+
+compareFractions = Generator(
+    "Compare Fractions", 44,
+    "Which symbol represents the comparison between a/b and c/d?", ">/</=",
+    compareFractionsFunc)
