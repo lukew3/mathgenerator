@@ -88,3 +88,5 @@ from .arithmeticProgressionTermFunc import *
 from .arithmeticProgressionSumFunc import *
 from .decimalToOctalFunc import *
 from .decimalToRomanNumeralsFunc import *
+from .degreeToRadFunc import *
+from .radianToDegFunc import *
