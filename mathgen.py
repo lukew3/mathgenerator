@@ -40,3 +40,4 @@ def isprime(max_a=100):
 
 is_prime = Generator('isprime', 74, 'a any positive integer',
                      'True/False', isprime)
+print(is_prime.func)
