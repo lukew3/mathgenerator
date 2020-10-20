@@ -90,3 +90,4 @@ from .decimalToOctalFunc import *
 from .decimalToRomanNumeralsFunc import *
 from .degreeToRadFunc import *
 from .radianToDegFunc import *
+from .definiteIntegralFunc import *
