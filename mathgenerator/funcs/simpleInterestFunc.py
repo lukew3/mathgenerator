@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
@@ -13,3 +14,9 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
                 c) + " years is = "
     solution = round(d, 2)
     return problem, solution
+
+
+simpleInterest = Generator(
+    "Simple Interest", 45,
+    "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ",
+    "d dollars", simpleInterestFunc)

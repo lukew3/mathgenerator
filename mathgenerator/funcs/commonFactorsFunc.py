@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def commonFactorsFunc(maxVal=100):
@@ -22,3 +23,8 @@ def commonFactorsFunc(maxVal=100):
     problem = f"Common Factors of {a} and {b} = "
     solution = arr
     return problem, solution
+
+
+commonFactors = Generator("Common Factors", 40,
+                          "Common Factors of {a} and {b} = ", "[c, d, ...]",
+                          commonFactorsFunc)

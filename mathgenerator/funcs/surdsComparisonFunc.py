@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def surdsComparisonFunc(maxValue=100, maxRoot=10):
@@ -15,3 +16,8 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10):
     elif first < second:
         solution = "<"
     return problem, solution
+
+
+surdsComparison = Generator("Comparing surds", 55,
+                            "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=",
+                            surdsComparisonFunc)
