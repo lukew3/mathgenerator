@@ -33,14 +33,15 @@ def test_division(maxRes, maxDivid):
 
 
 @given(maxRes=st.integers(min_value=1), maxModulo=st.integers(min_value=1))
-def test_moduloDivision(maxRes, maxModulo):
+def test_modulo_division(maxRes, maxModulo):
     assume(maxRes > maxModulo)
-    problem, solution = moduloDivision.func(maxRes, maxModulo)
+    problem, solution = modulo_division.func(maxRes, maxModulo)
     assert eval(problem[:-1]) == int(solution)
 
 
-@given(minNo=st.integers(min_value=1), maxNo=st.integers(min_value=1, max_value=2 ** 50))
-def test_squareRoot(minNo, maxNo):
+@given(minNo=st.integers(min_value=1),
+       maxNo=st.integers(min_value=1, max_value=2**50))
+def test_square_root(minNo, maxNo):
     assume(maxNo > minNo)
-    problem, solution = squareRoot.func(minNo, maxNo)
+    problem, solution = square_root.func(minNo, maxNo)
     assert eval(problem[:-1]) == float(solution)
