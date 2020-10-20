@@ -1,5 +1,6 @@
 from .__init__ import *
 from ..__init__ import Generator
+import math
 
 
 def angleBtwVectorsFunc(maxEltAmt=20):
@@ -15,7 +16,7 @@ def angleBtwVectorsFunc(maxEltAmt=20):
     solution = ''
     try:
         solution = str(math.acos(s / mags))
-    except MathDomainError:
+    except ValueError:
         print('angleBtwVectorsFunc has some issues with math module, line 16')
         solution = 'NaN'
     # would return the answer in radians
