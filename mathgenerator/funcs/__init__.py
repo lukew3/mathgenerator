@@ -86,3 +86,5 @@ from .percentageFunc import *
 from .celsiustofahrenheit import *
 from .arithmeticProgressionTermFunc import *
 from .arithmeticProgressionSumFunc import *
+from .decimalToOctalFunc import *
+from .decimalToRomanNumeralsFunc import *
