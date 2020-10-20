@@ -16,3 +16,7 @@ def isprime(max_a=100):
             return (problem, solution)
     solution = True
     return (problem, solution)
+
+
+is_prime = Generator('isprime', 90, 'a any positive integer',
+                     'True/False', isprime)
