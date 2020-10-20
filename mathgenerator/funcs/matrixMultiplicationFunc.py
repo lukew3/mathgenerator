@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def matrixMultiplicationFunc(maxVal=100, max_dim=10):
@@ -51,3 +52,8 @@ def matrixMultiplicationFuncHelper(inp):
     string += "]]"
 
     return string
+
+
+matrixMultiplication = Generator("Multiplication of two matrices", 46,
+                                 "Multiply two matrices A and B", "C",
+                                 matrixMultiplicationFunc)

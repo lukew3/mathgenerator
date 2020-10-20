@@ -33,12 +33,9 @@ def genById(id):
     return (generator())
 
 
-#
-# def getGenList():
-#    return(genList)
-
 # Format is:
 # <title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
+
 # Funcs_start - DO NOT REMOVE!
 # addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
 subtraction = Generator("Subtraction", 1, "a-b=", "c", subtractionFunc)
