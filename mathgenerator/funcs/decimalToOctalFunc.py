@@ -8,4 +8,5 @@ def decimalToOctalFunc(maxDecimal=4096):
     return problem, solution
 
 
-decimalToOctal = Generator("Converts decimal to octal", 82, "What's the octal representation of 98?", "0o142", decimalToOctalFunc)
+decimalToOctal = Generator("Converts decimal to octal", 84,
+                           "What's the octal representation of 98?", "0o142", decimalToOctalFunc)
