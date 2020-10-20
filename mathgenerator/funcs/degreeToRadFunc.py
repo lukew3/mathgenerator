@@ -10,3 +10,6 @@ def degreeToRadFunc(max_deg=360):
     solution = str(b)
 
     return problem, solution
+
+
+degreeToRad = Generator("Degrees to Radians", 86, "Angle a in radians is = ", "b", degreeToRadFunc)
