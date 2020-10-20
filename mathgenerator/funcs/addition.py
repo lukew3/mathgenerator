@@ -1,5 +1,4 @@
 from .__init__ import *
-from ..__init__ import Generator
 
 
 def additionFunc(maxSum=99, maxAddend=50):

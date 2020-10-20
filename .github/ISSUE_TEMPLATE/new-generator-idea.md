@@ -11,6 +11,6 @@ assignees: ''
 
 **Example Solution:**
 
-**Further explanation:**
+**Further explanation (optional):**
 
 **Would you like to be assigned to this:**
