@@ -2,7 +2,7 @@ from .__init__ import *
 from ..__init__ import Generator
 
 
-def perimeter_of_polygons(maxSides=12, maxLength=120)->"cm":
+def perimeterOfPolygons(maxSides=12, maxLength=120):
     size_of_sides = random.randint(3, maxSides)
     sides = []
     for x in range(size_of_sides):
