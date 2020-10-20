@@ -9,15 +9,33 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
+    - name: Cache Primes
+      id: myCacheStep
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-pip-modules
+      with:
+        path: ~/.pip
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
     - name: Install dependencies
+      if: steps.myCacheStep.outputs.cache-hit != 'true'
       run: |
         python -m pip install -U pip
         python -m pip install -r dev-requirements.txt
+
     - name: Linter
       run: make lint
+
     - name: Test
       run: make test
