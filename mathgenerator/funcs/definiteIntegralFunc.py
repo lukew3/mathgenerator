@@ -20,3 +20,6 @@ def definiteIntegralFunc(max_coeff=100):
     solution = str(I)
 
     return problem, solution
+
+
+definiteIntegral = Generator("Definite Integral of Quadratic Equation", 110, "The definite integral within limits 0 to 1 of quadratic equation ax^2+bx+c is = ", "I", definiteIntegralFunc)
