@@ -1,5 +1,6 @@
 from .__init__ import *
 from ..__init__ import Generator
+import math
 
 
 def angleBtwVectorsFunc(maxEltAmt=20):

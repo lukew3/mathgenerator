@@ -2,6 +2,7 @@
 # NOTE: not anymore. but still leaving this comment in.
 from mathgenerator import *
 
+
 def array2markdown_table(string):
     string = string.replace("[[", "<table><tr><td>")
     string = string.replace("[", "<tr><td>")
@@ -17,23 +18,32 @@ wList = getGenList()
 
 
 allRows = []
+# get the first line of the functions in mathgen.py
+# line = lines.index('# Funcs_start - DO NOT REMOVE!\n') + 1
 for item in wList:
     myGen = item[2]
+    # NOTE: renamed 'sol' to 'solu' to make it look nicer
+    # print(item[3])
     prob, solu = myGen()
     prob = str(prob).rstrip("\n")
     solu = str(solu).rstrip("\n")
     # edge case for matrixMultiplication
     if item[0] == 46:
-        prob, solu = myGen(10, 4)
+        prob, solu = myGen(maxVal=10, max_dim=4)
         prob = str(prob).rstrip("\n")
         solu = str(solu).rstrip("\n")
         prob = array2markdown_table(prob)
         solu = array2markdown_table(solu)
 
-    # NOTE: this needs to be modified after fixing #286
-    func_name = [ k for k,v in wList.items() if v == myGen][0]#instName[:instName.find('=')].strip() 
+    # instName = lines[line]
+    # NOTE: renamed 'def_name' to 'func_name' because it suits it more
+    #func_name = instName[:instName.find('=')].strip()
+    func_name = item[3]
     row = [myGen.id, myGen.title, prob, solu, func_name]
     print('added', item[1], '-', func_name, 'to the README.md')
+    # line += 1
+    # if line > len(lines):
+    #    break
     allRows.append(row)
 
 lines = []
