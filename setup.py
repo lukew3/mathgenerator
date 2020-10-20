@@ -9,8 +9,8 @@ setup(name='mathgenerator',
       license='MIT',
       packages=find_packages(),
       install_requires=[
-          sympy,
-          numpy,
-          scipy
+          'sympy',
+          'numpy',
+          'scipy'
       ],
       entry_points={})
