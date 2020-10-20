@@ -954,6 +954,21 @@ def volumeSphereFunc(maxRadius=100):
     ans = (4 * math.pi / 3) * r * r * r
     solution = f"{ans} m^3"
     return problem, solution
+
+
+def standard_deviation(maxterm=100):
+    a = random.randint(1, maxterm)
+    b = random.randint(1, maxterm)
+    c = random.randint(1, maxterm)
+    d = random.randint(1, maxterm)
+    e = random.randint(1, maxterm)
+    f = random.randint(1, maxterm)
+    g = random.randint(1, maxterm)
+    mean = (a + b + c + d + e + f + g) / 7
+    problem = f"Standard deviation of {a}, {b}, {c}, {d}, {e}, {f}, {g}"
+    solution = math.sqrt(((a-mean)**2+(b-mean)**2+(c-mean)**2+(d-mean)**2+(e-mean)**2+(f-mean)**2+(g-mean)**2)/7)
+    return problem, solution
+
 # || Class Instances
 
 
@@ -1075,3 +1090,5 @@ surfaceAreaSphereGen = Generator(
     "Surface Area of Sphere", 59, "Surface area of sphere with radius = a units is", "d units^2", surfaceAreaSphere)
 volumeSphere = Generator("Volume of Sphere", 60,
                          "Volume of sphere with radius r m = ", "(4*pi/3)*r*r*r", volumeSphereFunc)
+
+standardDeviation = Generator("Standard Deviation of 7 random numbers", <id>, "Standard deviation of a 7 number sample",  "Stddev", standard_deviation())
