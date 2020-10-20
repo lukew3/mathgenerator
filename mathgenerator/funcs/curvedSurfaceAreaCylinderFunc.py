@@ -8,3 +8,6 @@ def curvedSurfaceAreaCylinderFunc(maxRadius = 49, maxHeight=99):
     formatted_float = "{:.5f}".format(csa)
     solution = f"CSA of cylinder = {formatted_float}%"
     return problem, solution
+
+
+curvedSurfaceAreaCylinder = Generator("Curved surface area of a cylinder",91,"What is CSA of a cylinder of radius, r and height, h?","csa of cylinder",curvedSurfaceAreaCylinderFunc)
