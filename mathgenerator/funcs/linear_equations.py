@@ -26,7 +26,7 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
         problem.append(prob)
 
     # problem = "\n".join(problem)
-    problem = "".join(problem)
+    problem = ", ".join(problem)
     return problem, solution
 
 
