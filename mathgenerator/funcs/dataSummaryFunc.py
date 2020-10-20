@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def dataSummaryFunc(number_values=15, minval=5, maxval=50):
@@ -15,14 +16,15 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
     for i in range(number_values):
         var += (random_list[i] - mean)**2
 
-    # we're printing stuff here?
-    print(random_list)
-    print(mean)
-    print(var / number_values)
-    print((var / number_values)**0.5)
+    standardDeviation = var / number_values
+    variance = (var / number_values) ** 0.5
 
     problem = "Find the mean,standard deviation and variance for the data" + \
         str(random_list)
     solution = "The Mean is {} , Standard Deviation is {}, Variance is {}".format(
-        mean, var / number_values, (var / number_values)**0.5)
+        mean, standardDeviation, variance)
     return problem, solution
+
+
+dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c",
+                        "Mean:a+b+c/3,Std,Var", dataSummaryFunc)

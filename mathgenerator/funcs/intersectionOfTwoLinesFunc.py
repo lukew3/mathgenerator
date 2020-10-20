@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def intersectionOfTwoLinesFunc(minM=-10,
@@ -64,3 +65,9 @@ def intersectionOfTwoLinesFunc(minM=-10,
         solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
 
     return problem, solution
+
+
+intersectionOfTwoLines = Generator(
+    "Intersection of Two Lines", 41,
+    "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2",
+    "(x, y)", intersectionOfTwoLinesFunc)

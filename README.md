@@ -31,76 +31,92 @@ problem, solution = mathgen.genById(0)
 | Id   | Skill                             | Example problem    | Example Solution      | Function Name            |
 |------|-----------------------------------|--------------------|-----------------------|--------------------------|
 [//]: # list start
-| 0 | Addition | 33+23= | 56 | addition |
-| 1 | Subtraction | 14-1= | 13 | subtraction |
-| 2 | Multiplication | 52*1= | 52 | multiplication |
-| 3 | Division | 14/26= | 0.5384615384615384 | division |
-| 4 | Binary Complement 1s | 0110111= | 1001000 | binaryComplement1s |
-| 5 | Modulo Division | 23%70= | 23 | moduloDivision |
-| 6 | Square Root | sqrt(121)= | 11 | squareRoot |
-| 7 | Power Rule Differentiation | 3x^2 + 3x^5 + 1x^2 + 6x^4 + 6x^3 | 6x^1 + 15x^4 + 2x^1 + 24x^3 + 18x^2 | powerRuleDifferentiation |
-| 8 | Square | 18^2= | 324 | square |
-| 9 | LCM (Least Common Multiple) | LCM of 17 and 11 = | 187 | lcm |
-| 10 | GCD (Greatest Common Denominator) | GCD of 15 and 12 =  | 3 | gcd |
-| 11 | Basic Algebra | 2x + 3 = 10 | 7/2 | basicAlgebra |
-| 12 | Logarithm | log2(32) | 5 | log |
-| 13 | Easy Division | 196/14 =  | 14 | intDivision |
-| 14 | Decimal to Binary | Binary of 61= | 111101 | decimalToBinary |
-| 15 | Binary to Decimal | 1 | 1 | binaryToDecimal |
-| 16 | Fraction Division | (2/1)/(10/5) | 1 | fractionDivision |
-| 17 | Integer Multiplication with 2x2 Matrix | 16 * [[4, 1], [1, 2]] =  | [[64,16],[16,32]] | intMatrix22Multiplication |
-| 18 | Area of Triangle | Area of triangle with side lengths: 15 13 11 =  | 69.62892717829278 | areaOfTriangle |
-| 19 | Triangle exists check | Does triangle with sides 35, 14 and 37 exist? | Yes | doesTriangleExist |
-| 20 | Midpoint of the two point | (15,5),(9,10)= | (12.0,7.5) | midPointOfTwoPoint |
-| 21 | Factoring Quadratic | x^2-12x+35 | (x-7)(x-5) | factoring |
-| 22 | Third Angle of Triangle | Third angle of triangle with angles 37 and 54 =  | 89 | thirdAngleOfTriangle |
-| 23 | Solve a System of Equations in R^2 | -4x - 8y = 60, -9x + 10y = 51 | x = -9, y = -3 | systemOfEquations |
-| 24 | Distance between 2 points | Find the distance between (16, 7) and (19, 14) | sqrt(58) | distance2Point |
-| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 18 and 8 =  | 19.70 | pythagoreanTheorem |
-| 26 | Linear Equations | -8x + 15y = -109
-6x + -14y = 90 | x = 8, y = -3 | linearEquations |
-| 27 | Prime Factorisation | Find prime factors of 130 | [2, 5, 13] | primeFactors |
-| 28 | Fraction Multiplication | (8/9)*(3/2) | 4/3 | fractionMultiplication |
-| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 8 sides | 135.0 | angleRegularPolygon |
-| 30 | Combinations of Objects | Number of combinations from 11 objects picked 9 at a time  | 55 | combinations |
-| 31 | Factorial | 2! =  | 2 | factorial |
-| 32 | Surface Area of Cube | Surface area of cube with side = 17m is | 1734 m^2 | surfaceAreaCubeGen |
-| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 8m, 4m, 17m is | 472 m^2 | surfaceAreaCuboidGen |
-| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 32m and radius = 18m is | 5654 m^2 | surfaceAreaCylinderGen |
-| 35 | Volum of Cube | Volume of cube with side = 11m is | 1331 m^3 | volumeCubeGen |
-| 36 | Volume of Cuboid | Volume of cuboid with sides = 14m, 19m, 1m is | 266 m^3 | volumeCuboidGen |
-| 37 | Volume of cylinder | Volume of cylinder with height = 16m and radius = 18m is | 16286 m^3 | volumeCylinderGen |
-| 38 | Surface Area of cone | Surface area of cone with height = 48m and radius = 20m is | 4523 m^2 | surfaceAreaConeGen |
-| 39 | Volume of cone | Volume of cone with height = 29m and radius = 6m is | 1093 m^3 | volumeConeGen |
-| 40 | Common Factors | Common Factors of 59 and 57 =  | [1] | commonFactors |
-| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = -1/4x - 2 and y = 4/5x + 3 | (-100/21, -17/21) | intersectionOfTwoLines |
-| 42 | Permutations | Number of Permutations from 13 objects picked 8 at a time =   | 51891840 | permutations |
-| 43 | Cross Product of 2 Vectors | [4, -11, 9] X [-8, -19, -5] =  | [226, -52, -164] | vectorCross |
-| 44 | Compare Fractions | Which symbol represents the comparison between 3/7 and 2/4? | < | compareFractions |
-| 45 | Simple Interest | Simple interest for a principle amount of 2398 dollars, 9% rate of interest and for a time period of 5 years is =  | 1079.1 | simpleInterest |
-| 46 | Multiplication of two matrices | Multiply <table><tr><td>-50</td><td>36</td><td>7</td><td>-26</td><td>-2</td><td>63</td></tr><tr><td>88</td><td>-37</td><td>60</td><td>-19</td><td>61</td><td>-56</td></tr><tr><td>48</td><td>-5</td><td>69</td><td>-87</td><td>-64</td><td>-92</td></tr><tr><td>-84</td><td>-50</td><td>-79</td><td>-19</td><td>86</td><td>-13</td></tr><tr><td>0</td><td>28</td><td>12</td><td>-14</td><td>73</td><td>-49</td></tr><tr><td>94</td><td>-90</td><td>2</td><td>26</td><td>-38</td><td>19</td></tr><tr><td>2</td><td>-11</td><td>79</td><td>-77</td><td>98</td><td>-77</td></tr><tr><td>-87</td><td>70</td><td>72</td><td>-32</td><td>64</td><td>-99</td></tr></table> and <table><tr><td>34</td><td>32</td><td>-6</td><td>-32</td><td>46</td><td>-23</td><td>78</td><td>-81</td><td>-18</td></tr><tr><td>-17</td><td>24</td><td>49</td><td>-62</td><td>-50</td><td>77</td><td>38</td><td>-98</td><td>-64</td></tr><tr><td>-23</td><td>-78</td><td>43</td><td> 5</td><td>-83</td><td>-5</td><td> 4</td><td>-92</td><td>-16</td></tr><tr><td> 46</td><td>-47</td><td>-92</td><td>52</td><td>-25</td><td>-37</td><td>44</td><td>51</td><td>-7</td></tr><tr><td> 20</td><td>26</td><td>70</td><td>37</td><td>96</td><td>-73</td><td>49</td><td>84</td><td>42</td></tr><tr><td>-72</td><td>-15</td><td>-80</td><td>-24</td><td>58</td><td>-47</td><td>-41</td><td>45</td><td>-69</td></tr></table>|  <table><tr><td>-8245</td><td>-1057</td><td>-423</td><td>-3535</td><td>-569</td><td>2034</td><td>-6329</td><td>1219</td><td>-5765</td></tr><tr><td>6619</td><td> 567</td><td>10737</td><td>2391</td><td>4001</td><td>-6291</td><td>10147</td><td>-7387</td><td>6383</td></tr><tr><td>1472</td><td>-161</td><td>13318</td><td>-5565<td>-12574</td><td>10381</td><td> 638<td>-23699</td><td>2621</td></tr><tr><td>1593</td><td>5598</td><td>3465</td><td>7899</td><td>13170</td><td>-6487</td><td>-4857</td><td>24642</td><td>10618</td></tr><tr><td>3592</td><td>3027</td><td>12206</td><td>1473</td><td>2120</td><td>-412</td><td>6082</td><td>-635</td><td>4561</td></tr><tr><td>3748</td><td>-1803<td>-11460</td><td>2072</td><td>5462</td><td>-8183</td><td>2423</td><td>11</td><td> 947</td></tr><tr><td>2400</td><td> 960</td><td>22950</td><td>2483</td><td> 952</td><td>-1974</td><td>4625</td><td>-5512</td><td>9372</td></tr><tr><td>1132</td><td>-2067</td><td>22392</td><td>1884<td>-12276</td><td>8196</td><td>1949</td><td>-7148</td><td>5677</td></tr></table>   | matrixMultiplication |
- [ 10584,  13902,  11916,  -7446,   4430,    554]
- [ -1800,   6587,  14343,   6224,   4525,   4853]
- [-12452, -10675,  -8693,    427,   2955,  17691]] | matrixMultiplication |
-| 47 | Cube Root | cuberoot of 221 upto 2 decimal places is: | 6.05 | CubeRoot |
-| 48 | Power Rule Integration | 4x^5 + 2x^5 + 9x^8 + 9x^5 | (4/5)x^6 + (2/5)x^6 + (9/8)x^9 + (9/5)x^6 + c | powerRuleIntegration |
-| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 27 , 155, 116 = | 62 | fourthAngleOfQuadrilateral |
-| 50 | Quadratic Equation | Zeros of the Quadratic Equation 53x^2+200x+78=0 | [-0.44, -3.33] | quadraticEquationSolve |
-| 51 | HCF (Highest Common Factor) | HCF of 7 and 4 =  | 1 | hcf |
-| 52 | Probability of a certain sum appearing on faces of dice | If 2 dice are rolled at the same time, the probability of getting a sum of 11 = | 2/36 | diceSumProbability |
-| 53 | Exponentiation | 9^10 = | 3486784401 | exponentiation |
-| 54 | Confidence interval For sample S | The confidence interval for sample [266, 201, 278, 209, 229, 275, 216, 234, 219, 276, 282, 281, 208, 247, 265, 273, 286, 202, 231, 207, 251, 203, 259, 288, 291, 260, 210, 263, 222] with 99% confidence is | (260.5668079141175, 231.29526105139982) | confidenceInterval |
-| 55 | Comparing surds | Fill in the blanks 15^(1/9) _ 55^(1/1) | < | surdsComparison |
-| 56 | Fibonacci Series | The Fibonacci Series of the first 10 numbers is ? | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] | fibonacciSeries |
-| 57 | Trigonometric Values | What is tan(30)? | 1/√3 | basicTrigonometry |
-| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 3 sides =  | 180 | sumOfAnglesOfPolygon |
-| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[36, 13, 31, 23, 38, 34, 24, 20, 41, 14, 19, 31, 11, 49, 49] | The Mean is 28.866666666666667 , Standard Deviation is 143.5822222222222, Variance is 11.982579948501167 | dataSummary |
-| 59 | Surface Area of Sphere | Surface area of Sphere with radius = 11m is | 1520.5308443374597 m^2 | surfaceAreaSphereGen |
-| 60 | Volume of Sphere | Volume of sphere with radius 73 m =  | 1629510.5990953872 m^3 | volumeSphere |
-| 61 | nth Fibonacci number | What is the 68th Fibonacci number? | 72723460248141 | nthFibonacciNumberGen |
-| 62 | Profit or Loss Percent | Profit percent when CP = 825 and SP = 972 is:  | 17.81818181818182 | profitLossPercent |
-| 63 | Binary to Hexidecimal | 100000 | 0x20 | binaryToHex |
-| 64 | Multiplication of 2 complex numbers | (3+14j) * (-3+16j) =  | (-233+6j) | complexNumMultiply |
-| 65 | Geometric Progression | For the given GP [4, 16, 64, 256, 1024, 4096] ,Find the value of a,common ratio,8th term value, sum upto 7th term | The value of a is 4, common ratio is 4 , 8th term is 65536 , sum upto 7th term is 21844.0 | geometricprogression |
-| 66 | Geometric Mean of N Numbers | Geometric mean of 3 numbers 81 , 35 and 99 =  | (81*35*99)^(1/3) = 65.47307713912309 | geometricMean |
-| 67 | Harmonic Mean of N Numbers | Harmonic mean of 2 numbers 99 and 25 =  |  2/((1/99) + (1/25)) = 39.91935483870967 | harmonicMean |
+| 0 | Addition | 39+14= | 53 | addition |
+| 1 | Subtraction | 28-20= | 8 | subtractionFunc |
+| 2 | Multiplication | 23*2= | 46 | multiplicationFunc |
+| 3 | Division | 34/27= | 1.2592592592592593 | divisionFunc |
+| 4 | Binary Complement 1s | 01101= | 10010 | binaryComplement1sFunc |
+| 5 | Modulo Division | 27%67= | 27 | moduloFunc |
+| 6 | Square Root | sqrt(81)= | 9 | squareRootFunc |
+| 7 | Power Rule Differentiation | 7x^2 + 1x^4 + 4x^8 + 5x^10 | 14x^1 + 4x^3 + 32x^7 + 50x^9 | powerRuleDifferentiationFunc |
+| 8 | Square | 2^2= | 4 | squareFunc |
+| 9 | LCM (Least Common Multiple) | LCM of 7 and 10 = | 70 | lcmFunc |
+| 10 | GCD (Greatest Common Denominator) | GCD of 15 and 3 =  | 3 | gcdFunc |
+| 11 | Basic Algebra | 9x + 8 = 9 | 1/9 | basicAlgebraFunc |
+| 12 | Logarithm | log2(32) | 5 | logFunc |
+| 13 | Easy Division | 176/11 =  | 16 | divisionToIntFunc |
+| 14 | Decimal to Binary | Binary of 49= | 110001 | DecimalToBinaryFunc |
+| 15 | Binary to Decimal | 01100 | 12 | BinaryToDecimalFunc |
+| 16 | Fraction Division | (9/5)/(10/2) | 9/25 | divideFractionsFunc |
+| 17 | Integer Multiplication with 2x2 Matrix | 8 * [[8, 9], [0, 3]] =  | [[64,72],[0,24]] | multiplyIntToMatrix22 |
+| 18 | Area of Triangle | Area of triangle with side lengths: 19 2 15 =  | (1.7998558638262156e-15+29.393876913398138j) | areaOfTriangleFunc |
+| 19 | Triangle exists check | Does triangle with sides 9, 12 and 5 exist? | Yes | isTriangleValidFunc |
+| 20 | Midpoint of the two point | (-3,-3),(-7,-4)= | (-5.0,-3.5) | MidPointOfTwoPointFunc |
+| 21 | Factoring Quadratic | x^2+4x-12 | (x+6)(x-2) | factoringFunc |
+| 22 | Third Angle of Triangle | Third angle of triangle with angles 4 and 27 =  | 149 | thirdAngleOfTriangleFunc |
+| 23 | Solve a System of Equations in R^2 | -6x - 10y = 22, 4x - 3y = 53 | x = 8, y = -7 | systemOfEquationsFunc |
+| 24 | Distance between 2 points | Find the distance between (6, 2) and (-2, -2) | sqrt(80) | distanceTwoPointsFunc |
+| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 10 and 13 =  | 16.40 | pythagoreanTheoremFunc |
+| 26 | Linear Equations | 8x + -8y = -40
+20x + -16y = -108 | x = -7, y = -2 | linearEquationsFunc |
+| 27 | Prime Factorisation | Find prime factors of 29 | [29] | primeFactorsFunc |
+| 28 | Fraction Multiplication | (4/7)*(3/9) | 4/21 | multiplyFractionsFunc |
+| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 3 sides | 60.0 | regularPolygonAngleFunc |
+| 30 | Combinations of Objects | Number of combinations from 20 objects picked 5 at a time  | 15504 | combinationsFunc |
+| 31 | Factorial | 3! =  | 6 | factorialFunc |
+| 32 | Surface Area of Cube | Surface area of cube with side = 3m is | 54 m^2 | surfaceAreaCube |
+| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 4m, 15m, 5m is | 310 m^2 | surfaceAreaCuboid |
+| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 14m and radius = 11m is | 1727 m^2 | surfaceAreaCylinder |
+| 35 | Volum of Cube | Volume of cube with side = 6m is | 216 m^3 | volumeCube |
+| 36 | Volume of Cuboid | Volume of cuboid with sides = 9m, 6m, 15m is | 810 m^3 | volumeCuboid |
+| 37 | Volume of cylinder | Volume of cylinder with height = 21m and radius = 4m is | 1055 m^3 | volumeCylinder |
+| 38 | Surface Area of cone | Surface area of cone with height = 7m and radius = 7m is | 371 m^2 | surfaceAreaCone |
+| 39 | Volume of cone | Volume of cone with height = 46m and radius = 15m is | 10838 m^3 | volumeCone |
+| 40 | Common Factors | Common Factors of 12 and 76 =  | [1, 2, 4] | commonFactorsFunc |
+| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = 6x + 8 and y = 3/2x + 4 | (-8/9, 8/3) | intersectionOfTwoLinesFunc |
+| 42 | Permutations | Number of Permutations from 15 objects picked 5 at a time =   | 360360 | permutationFunc |
+| 43 | Cross Product of 2 Vectors | [-13, -2, 0] X [-4, 14, -4] =  | [8, -52, -190] | vectorCrossFunc |
+| 44 | Compare Fractions | Which symbol represents the comparison between 3/8 and 3/9? | > | compareFractionsFunc |
+| 45 | Simple Interest | Simple interest for a principle amount of 6266 dollars, 8% rate of interest and for a time period of 3 years is =  | 1503.84 | simpleInterestFunc |
+| 46 | Multiplication of two matrices | Multiply<table><tr><td>3</td><td>0</td></tr><tr><td>-1</td><td>-6</td></tr></table>and<table><tr><td>4</td><td>-7</td><td>5</td><td>-9</td></tr><tr><td>0</td><td>8</td><td>-10</td><td>-2</td></tr></table> | <table><tr><td>12</td><td>-21</td><td>15</td><td>-27</td></tr><tr><td>-4</td><td>-41</td><td>55</td><td>21</td></tr></table> | matrixMultiplicationFunc |
+| 47 | Cube Root | cuberoot of 362 upto 2 decimal places is: | 7.13 | cubeRootFunc |
+| 48 | Power Rule Integration | 2x^6 + 1x^5 + 7x^9 + 1x^10 | (2/6)x^7 + (1/5)x^6 + (7/9)x^10 + (1/10)x^11 + c | powerRuleIntegrationFunc |
+| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 60 , 18, 7 = | 275 | fourthAngleOfQuadriFunc |
+| 50 | Quadratic Equation | Zeros of the Quadratic Equation 40x^2+121x+89=0 | [-1.26, -1.76] | quadraticEquation |
+| 51 | HCF (Highest Common Factor) | HCF of 4 and 12 =  | 4 | hcfFunc |
+| 52 | Probability of a certain sum appearing on faces of dice | If 3 dice are rolled at the same time, the probability of getting a sum of 13 = | 21/216 | DiceSumProbFunc |
+| 53 | Exponentiation | 11^8 = | 214358881 | exponentiationFunc |
+| 54 | Confidence interval For sample S | The confidence interval for sample [239, 265, 215, 283, 231, 296, 270, 260, 289, 271, 245, 251, 206, 255, 257, 247, 292, 232, 276, 297, 263, 254, 279, 253, 211, 236, 274, 209, 275, 278, 212, 214, 226, 230, 256, 249, 293] with 95% confidence is | (262.3172302973649, 245.19628321614857) | confidenceIntervalFunc |
+| 55 | Comparing surds | Fill in the blanks 86^(1/4) _ 39^(1/1) | < | surdsComparisonFunc |
+| 56 | Fibonacci Series | The Fibonacci Series of the first 10 numbers is ? | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] | fibonacciSeriesFunc |
+| 57 | Trigonometric Values | What is sin(90)? | 1 | basicTrigonometryFunc |
+| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 5 sides =  | 540 | sumOfAnglesOfPolygonFunc |
+| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[19, 23, 36, 18, 44, 47, 18, 40, 27, 25, 14, 16, 6, 29, 50] | The Mean is 27.466666666666665 , Standard Deviation is 163.0488888888889, Variance is 12.769059827915637 | dataSummaryFunc |
+| 60 | Surface Area of Sphere | Surface area of Sphere with radius = 5m is | 314.1592653589793 m^2 | surfaceAreaSphere |
+| 61 | Volume of Sphere | Volume of sphere with radius 63 m =  | 1047394.4243362226 m^3 | volumeSphereFunc |
+| 62 | nth Fibonacci number | What is the 60th Fibonacci number? | 1548008755920 | nthFibonacciNumberFunc |
+| 63 | Profit or Loss Percent | Profit percent when CP = 121 and SP = 615 is:  | 408.26446280991735 | profitLossPercentFunc |
+| 64 | Binary to Hexidecimal | 10110 | 0x16 | binaryToHexFunc |
+| 65 | Multiplication of 2 complex numbers | (20-1j) * (-7+14j) =  | (-126+287j) | multiplyComplexNumbersFunc |
+| 66 | Geometric Progression | For the given GP [2, 24, 288, 3456, 41472, 497664] ,Find the value of a,common ratio,9th term value, sum upto 10th term | The value of a is 2, common ratio is 12 , 9th term is 859963392 , sum upto 10th term is 11257702586.0 | geomProgrFunc |
+| 67 | Geometric Mean of N Numbers | Geometric mean of 4 numbers 18 , 24 , 99 , 12 =  | (18*24*99*12)^(1/4) = 26.765480655440626 | geometricMeanFunc |
+| 68 | Harmonic Mean of N Numbers | Harmonic mean of 2 numbers 41 and 82 =  |  2/((1/41) + (1/82)) = 54.66666666666666 | harmonicMeanFunc |
+| 69 | Euclidian norm or L2 norm of a vector | Euclidian norm or L2 norm of the vector[690.1926568125737, 148.904898302192, 222.19798825467595, 667.3276829127157, 366.9178192723557, 875.6869024243441, 336.14075266140685, 949.1256775112896, 626.0180041672427, 290.7427227038134, 207.55193301803965, 64.93900706542944, 736.3114771837603, 785.1756497858677] is: | 2142.639328828992 | euclidianNormFunc |
+| 70 | Angle between 2 vectors | angle between the vectors [293.12905111302047, 909.0452944804068, 423.60965609823086, 870.8703924858319, 958.9076883380749, 837.4625321599826] and [938.5559146533071, 63.15299226225102, 418.14038421596024, 865.5267136591071, 513.9066820998474, 680.6577264839382] is: | NaN | angleBtwVectorsFunc |
+| 71 | Absolute difference between two numbers | Absolute difference between numbers 76 and -20 =  | 96 | absoluteDifferenceFunc |
+| 72 | Dot Product of 2 Vectors | [19, 10, -5] . [0, -18, 15] =  | -255 | vectorDotFunc |
+| 73 | Binary 2's Complement | 2's complement of 110 = | 10 | binary2sComplement |
+| 74 | Inverse of a Matrix | Inverse of Matrix Matrix([[61, 68, 75], [31, 77, 66], [33, 59, 58]]) is: | Matrix([[11/141, 37/564, -33/188], [95/1833, 1063/7332, -567/2444], [-178/1833, -1355/7332, 863/2444]]) | matrixInversion |
+| 75 | Area of a Sector | Given radius, 20 and angle, 235. Find the area of the sector. | Area of sector = 820.30475 | sectorAreaFunc |
+| 76 | Mean and Median | Given the series of numbers [7, 89, 72, 14, 97, 48, 35, 12, 11, 27]. find the arithmatic mean and mdian of the series | Arithmetic mean of the series is 41.2 and Arithmetic median of this series is 31.0 | meanMedianFunc |
+| 77 | Determinant to 2x2 Matrix | Det([[26, 78], [39, 24]]) =  |  -2418 | determinantToMatrix22 |
+| 78 | Compound Interest | Compound Interest for a principle amount of 6842 dollars, 8% rate of interest and for a time period of 5 compounded monthly is =  | 6842.0 | compoundInterestFunc |
+| 79 | Decimal to Hexadecimal | Binary of 860= | 0x35c | deciToHexaFunc |
+| 80 | Percentage of a number | What is 75% of 28? | Required percentage = 21.00% | percentageFunc |
+| 81 | Celsius To Fahrenheit | Convert 30 degrees Celsius to degrees Fahrenheit = | 86.0 | celsiustofahrenheit |
+| 82 | AP Term Calculation | Find the term number 47 of the AP series: -56, 37, 130 ...  | 4222 | arithmeticProgressionTermFunc |
+| 83 | AP Sum Calculation | Find the sum of first 79 terms of the AP series: 34, 24, 14 ...  | -28124.0 | arithmeticProgressionSumFunc |
+| 84 | Converts decimal to octal | The decimal number 2245 in Octal is:  | 0o4305 | decimalToOctalFunc |
+| 85 | Converts decimal to Roman Numerals | The number 1658 in Roman Numerals is:  | MDCLVIII | decimalToRomanNumeralsFunc |
+| 86 | Degrees to Radians | Angle 12 in radians is =  | 0.21 | degreeToRadFunc |
+| 87 | Radians to Degrees | Angle 3 in degrees is =  | 171.89 | radianToDegFunc |

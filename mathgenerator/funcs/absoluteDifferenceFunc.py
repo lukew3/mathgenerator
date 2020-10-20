@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def absoluteDifferenceFunc(maxA=100, maxB=100):
@@ -10,3 +11,9 @@ def absoluteDifferenceFunc(maxA=100, maxB=100):
         str(a) + " and " + str(b) + " = "
     solution = absDiff
     return problem, solution
+
+
+absoluteDifference = Generator(
+    "Absolute difference between two numbers", 71,
+    "Absolute difference betweeen two numbers a and b =", "|a-b|",
+    absoluteDifferenceFunc)

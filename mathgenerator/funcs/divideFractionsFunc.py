@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def divideFractionsFunc(maxVal=10):
@@ -30,3 +31,7 @@ def divideFractionsFunc(maxVal=10):
     problem = f"({a}/{b})/({c}/{d})"
     solution = x
     return problem, solution
+
+
+fractionDivision = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y",
+                             divideFractionsFunc)

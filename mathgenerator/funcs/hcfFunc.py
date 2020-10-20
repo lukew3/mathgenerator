@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def hcfFunc(maxVal=20):
@@ -10,3 +11,7 @@ def hcfFunc(maxVal=20):
     problem = f"HCF of {a} and {b} = "
     solution = str(x)
     return problem, solution
+
+
+hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c",
+                hcfFunc)

@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def quadraticEquation(maxVal=100):
@@ -13,3 +14,9 @@ def quadraticEquation(maxVal=100):
         [round((-b + D) / (2 * a), 2),
          round((-b - D) / (2 * a), 2)])
     return problem, solution
+
+
+quadraticEquationSolve = Generator(
+    "Quadratic Equation", 50,
+    "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2",
+    quadraticEquation)

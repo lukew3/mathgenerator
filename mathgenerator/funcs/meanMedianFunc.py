@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def meanMedianFunc(maxlen=10):
@@ -12,3 +13,8 @@ def meanMedianFunc(maxlen=10):
     median = (randomlist[4] + randomlist[5]) / 2
     solution = f"Arithmetic mean of the series is {mean} and Arithmetic median of this series is {median}"
     return problem, solution
+
+
+meanMedian = Generator("Mean and Median", 76,
+                       "Mean and median of given set of numbers",
+                       "Mean, Median", meanMedianFunc)

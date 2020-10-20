@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def vectorDotFunc(minVal=-20, maxVal=20):
@@ -9,3 +10,7 @@ def vectorDotFunc(minVal=-20, maxVal=20):
     problem = str(a) + " . " + str(b) + " = "
     solution = str(c)
     return problem, solution
+
+
+vectorDot = Generator("Dot Product of 2 Vectors", 72, "a . b = ", "c",
+                      vectorDotFunc)
