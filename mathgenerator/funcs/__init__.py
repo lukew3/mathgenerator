@@ -92,4 +92,4 @@ from .decimal_to_octal import *
 from .decimal_to_roman_numerals import *
 from .degree_to_rad import *
 from .radian_to_deg import *
-from .differentiationFunc import *
+from .differentiation import *

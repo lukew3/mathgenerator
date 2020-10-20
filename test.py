@@ -3,7 +3,7 @@ from mathgenerator import mathgen
 # test your generators here
 
 print(mathgen.addition())
-print(mathgen.genById(40))
+print(mathgen.genById(88))
 
 # prints each generator in genList
 """
