@@ -10,3 +10,7 @@ def binaryToHexFunc(max_dig=10):
 
     solution = hex(int(problem, 2))
     return problem, solution
+
+
+binaryToHex = Generator("Binary to Hexidecimal", 64, "Hexidecimal of a=", "b",
+                        binaryToHexFunc)

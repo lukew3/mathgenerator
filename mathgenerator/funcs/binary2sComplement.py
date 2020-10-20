@@ -27,3 +27,8 @@ def binary2sComplementFunc(maxDigits=10):
     problem = "2's complement of " + question + " ="
     solution = ''.join(answer).lstrip('0')
     return problem, solution
+
+
+binary2sComplement = Generator("Binary 2's Complement", 73,
+                               "2's complement of 11010110 =", "101010",
+                               binary2sComplementFunc)

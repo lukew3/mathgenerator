@@ -27,3 +27,9 @@ def harmonicMeanFunc(maxValue=100, maxNum=4):
         problem = f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
         solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
     return problem, solution
+
+
+harmonicMean = Generator("Harmonic Mean of N Numbers", 68,
+                         "Harmonic mean of n numbers A1 , A2 , ... , An = ",
+                         " n/((1/A1) + (1/A2) + ... + (1/An)) = ans",
+                         harmonicMeanFunc)

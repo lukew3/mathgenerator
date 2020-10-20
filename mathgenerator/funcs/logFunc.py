@@ -11,3 +11,6 @@ def logFunc(maxBase=3, maxVal=8):
     solution = str(a)
 
     return problem, solution
+
+
+log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)

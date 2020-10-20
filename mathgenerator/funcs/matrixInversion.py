@@ -77,3 +77,7 @@ def matrixInversion(SquareMatrixDimension=3,
     problem = 'Inverse of Matrix ' + str(Mat) + ' is:'
     solution = str(sympy.Matrix.inv(Mat))
     return problem, solution
+
+
+invertmatrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is",
+                         "A^(-1)", matrixInversion)

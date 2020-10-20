@@ -20,3 +20,9 @@ def angleBtwVectorsFunc(maxEltAmt=20):
         solution = 'NaN'
     # would return the answer in radians
     return problem, solution
+
+
+angleBtwVectors = Generator(
+    "Angle between 2 vectors", 70,
+    "Angle Between 2 vectors V1=[v11, v12, ..., v1n] and V2=[v21, v22, ....., v2n]",
+    "V1.V2 / (euclidNorm(V1)*euclidNorm(V2))", angleBtwVectorsFunc)

@@ -15,3 +15,9 @@ def profitLossPercentFunc(maxCP=1000, maxSP=1000):
     solution = percent
 
     return problem, solution
+
+
+profitLossPercent = Generator(
+    "Profit or Loss Percent", 63,
+    "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent",
+    profitLossPercentFunc)

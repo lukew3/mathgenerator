@@ -12,3 +12,6 @@ def divisionToIntFunc(maxA=25, maxB=25):
     problem = f"{divisor}/{dividend} = "
     solution = int(divisor / dividend)
     return problem, solution
+
+
+intDivision = Generator("Easy Division", 13, "a/b=", "c", divisionToIntFunc)

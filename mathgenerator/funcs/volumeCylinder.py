@@ -10,3 +10,9 @@ def volumeCylinder(maxRadius=20, maxHeight=50, unit='m'):
     ans = int(math.pi * b * b * a)
     solution = f"{ans} {unit}^3"
     return problem, solution
+
+
+volumeCylinderGen = Generator(
+    "Volume of cylinder", 37,
+    "Volume of cylinder with height = a units and radius = b units is",
+    "c units^3", volumeCylinder)

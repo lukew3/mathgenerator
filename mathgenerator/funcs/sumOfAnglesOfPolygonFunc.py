@@ -9,3 +9,8 @@ def sumOfAnglesOfPolygonFunc(maxSides=12):
     problem = f"Sum of angles of polygon with {side} sides = "
     solution = sum
     return problem, solution
+
+
+sumOfAnglesOfPolygon = Generator("Sum of Angles of Polygon", 58,
+                                 "Sum of angles of polygon with n sides = ",
+                                 "sum", sumOfAnglesOfPolygonFunc)

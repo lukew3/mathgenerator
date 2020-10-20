@@ -18,3 +18,9 @@ def combinationsFunc(maxlength=20):
         a, b)
 
     return problem, solution
+
+
+combinations = Generator(
+    "Combinations of Objects", 30,
+    "Combinations available for picking 4 objects at a time from 6 distinct objects =",
+    " 15", combinationsFunc)

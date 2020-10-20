@@ -10,3 +10,9 @@ def surfaceAreaCylinder(maxRadius=20, maxHeight=50, unit='m'):
     ans = int(2 * math.pi * a * b + 2 * math.pi * b * b)
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+
+surfaceAreaCylinderGen = Generator(
+    "Surface Area of Cylinder", 34,
+    "Surface area of cylinder with height = a units and radius = b units is",
+    "c units^2", surfaceAreaCylinder)

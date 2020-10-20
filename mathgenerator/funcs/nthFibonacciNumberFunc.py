@@ -9,3 +9,8 @@ def nthFibonacciNumberFunc(maxN=100):
     ans = round((math.pow(golden_ratio, n) - math.pow(-golden_ratio, -n)) / (math.sqrt(5)))
     solution = f"{ans}"
     return problem, solution
+
+
+nthFibonacciNumberGen = Generator("nth Fibonacci number", 62,
+                                  "What is the nth Fibonacci number", "Fn",
+                                  nthFibonacciNumberFunc)

@@ -20,3 +20,7 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
 
     solution += " + c"
     return problem, solution
+
+
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=",
+                                 "(n/m)x^(m+1)", powerRuleIntegrationFunc)

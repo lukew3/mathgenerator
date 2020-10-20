@@ -10,3 +10,7 @@ def multiplicationFunc(maxRes=99, maxMulti=99):
     problem = str(a) + "*" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+
+multiplication = Generator("Multiplication", 2, "a*b=", "c",
+                           multiplicationFunc)

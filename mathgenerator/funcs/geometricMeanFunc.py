@@ -26,3 +26,8 @@ def geometricMeanFunc(maxValue=100, maxNum=4):
         problem = f"Geometric mean of {num} numbers {a} , {b} , {c} , {d} = "
         solution = f"({a}*{b}*{c}*{d})^(1/{num}) = {ans}"
     return problem, solution
+
+
+geometricMean = Generator("Geometric Mean of N Numbers", 67,
+                          "Geometric mean of n numbers A1 , A2 , ... , An = ",
+                          "(A1*A2*...An)^(1/n) = ans", geometricMeanFunc)

@@ -12,3 +12,9 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100):
     problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
     solution = f"[[{a*constant},{b*constant}],[{c*constant},{d*constant}]]"
     return problem, solution
+
+
+intMatrix22Multiplication = Generator("Integer Multiplication with 2x2 Matrix",
+                                      17, "k * [[a,b],[c,d]]=",
+                                      "[[k*a,k*b],[k*c,k*d]]",
+                                      multiplyIntToMatrix22)

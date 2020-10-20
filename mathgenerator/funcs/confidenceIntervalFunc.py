@@ -30,3 +30,8 @@ def confidenceIntervalFunc():
         [x for x in lst], lst_per[j])
     solution = '({}, {})'.format(mean + standard_error, mean - standard_error)
     return problem, solution
+
+
+confidenceInterval = Generator("Confidence interval For sample S", 54,
+                               "With X% confidence", "is (A,B)",
+                               confidenceIntervalFunc)

@@ -22,3 +22,9 @@ def geomProgrFunc(number_values=6,
     solution = "The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(
         a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
     return problem, solution
+
+
+geometricprogression = Generator(
+    "Geometric Progression", 66,
+    "Initial value,Common Ratio,nth Term,Sum till nth term =",
+    "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)

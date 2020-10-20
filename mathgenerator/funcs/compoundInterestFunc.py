@@ -17,3 +17,9 @@ def compoundInterestFunc(maxPrinciple=10000,
                 t) + " compounded monthly is = "
     solution = round(A, 2)
     return problem, solution
+
+
+compoundInterest = Generator(
+    "Compound Interest", 78,
+    "Compound interest for a principle amount of p dollars, r% rate of interest and for a time period of t years with n times compounded annually is = ",
+    "A dollars", compoundInterestFunc)

@@ -11,3 +11,8 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
     problem = f"{num1} * {num2} = "
     solution = num1 * num2
     return problem, solution
+
+
+complexNumMultiply = Generator("Multiplication of 2 complex numbers", 65,
+                               "(x + j) (y + j) = ", "xy + xj + yj -1",
+                               multiplyComplexNumbersFunc)

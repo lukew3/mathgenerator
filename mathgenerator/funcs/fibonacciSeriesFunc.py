@@ -20,3 +20,8 @@ def fibonacciSeriesFunc(minNo=1):
     problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
     return problem, solution
+
+
+fibonacciSeries = Generator(
+    "Fibonacci Series", 56, "fibonacci series of first a numbers",
+    "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc)

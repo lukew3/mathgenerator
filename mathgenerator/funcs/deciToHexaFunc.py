@@ -9,3 +9,7 @@ def deciToHexaFunc(max_dec=1000):
     solution = str(b)
 
     return problem, solution
+
+
+decimalToHexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
+                              "b", deciToHexaFunc)

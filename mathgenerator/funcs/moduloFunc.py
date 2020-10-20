@@ -10,3 +10,6 @@ def moduloFunc(maxRes=99, maxModulo=99):
     problem = str(a) + "%" + str(b) + "="
     solution = str(c)
     return problem, solution
+
+
+moduloDivision = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc)

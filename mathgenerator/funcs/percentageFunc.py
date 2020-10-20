@@ -10,3 +10,7 @@ def percentageFunc(maxValue=99, maxpercentage=99):
     formatted_float = "{:.2f}".format(percentage)
     solution = f"Required percentage = {formatted_float}%"
     return problem, solution
+
+
+percentage = Generator("Percentage of a number", 80, "What is a% of b?",
+                       "percentage", percentageFunc)

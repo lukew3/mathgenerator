@@ -12,3 +12,8 @@ def arithmeticProgressionSumFunc(maxd=100, maxa=100, maxn=100):
     problem = 'Find the sum of first ' + str(n) + ' terms of the AP series: ' + apString
     solution = n * ((2 * a1) + ((n - 1) * d)) / 2
     return problem, solution
+
+
+arithmeticProgressionSum = Generator("AP Sum Calculation", 83,
+                                     "Find the sum of first n terms of the AP series: a1, a2, a3 ...",
+                                     "Sum", arithmeticProgressionSumFunc)

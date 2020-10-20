@@ -9,3 +9,6 @@ def squareFunc(maxSquareNum=20):
     problem = str(a) + "^2" + "="
     solution = str(b)
     return problem, solution
+
+
+square = Generator("Square", 8, "a^2", "b", squareFunc)

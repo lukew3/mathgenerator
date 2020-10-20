@@ -27,3 +27,7 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
     solution = "The Mean is {} , Standard Deviation is {}, Variance is {}".format(
         mean, var / number_values, (var / number_values)**0.5)
     return problem, solution
+
+
+dataSummary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c",
+                        "Mean:a+b+c/3,Std,Var", dataSummaryFunc)

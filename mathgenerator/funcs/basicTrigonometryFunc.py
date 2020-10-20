@@ -24,3 +24,7 @@ def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
     solution = result_fraction_map[round(eval(expression), 2)] if round(
         eval(expression), 2) <= 99999 else "∞"  # for handling the ∞ condition
     return problem, solution
+
+
+basicTrigonometry = Generator("Trigonometric Values", 57, "What is sin(X)?",
+                              "ans", basicTrigonometryFunc)

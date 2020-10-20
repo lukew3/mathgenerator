@@ -25,3 +25,9 @@ def DiceSumProbFunc(maxDice=3):
         a, b)
     solution = "{}/{}".format(count, 6**a)
     return problem, solution
+
+
+diceSumProbability = Generator(
+    "Probability of a certain sum appearing on faces of dice", 52,
+    "If n dices are rolled then probabilty of getting sum of x is =", "z",
+    DiceSumProbFunc)

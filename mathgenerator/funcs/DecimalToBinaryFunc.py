@@ -10,3 +10,7 @@ def DecimalToBinaryFunc(max_dec=99):
     solution = str(b)
 
     return problem, solution
+
+
+decimalToBinary = Generator("Decimal to Binary", 14, "Binary of a=", "b",
+                            DecimalToBinaryFunc)

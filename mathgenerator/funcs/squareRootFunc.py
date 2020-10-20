@@ -9,3 +9,6 @@ def squareRootFunc(minNo=1, maxNo=12):
     problem = "sqrt(" + str(a) + ")="
     solution = str(b)
     return problem, solution
+
+
+squareRoot = Generator("Square Root", 6, "sqrt(a)=", "b", squareRootFunc)

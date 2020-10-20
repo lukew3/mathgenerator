@@ -10,3 +10,9 @@ def volumeCone(maxRadius=20, maxHeight=50, unit='m'):
     ans = int(math.pi * b * b * a * (1 / 3))
     solution = f"{ans} {unit}^3"
     return problem, solution
+
+
+volumeConeGen = Generator(
+    "Volume of cone", 39,
+    "Volume of cone with height = a units and radius = b units is",
+    "c units^3", volumeCone)

@@ -9,3 +9,8 @@ def volumeCube(maxSide=20, unit='m'):
     ans = a * a * a
     solution = f"{ans} {unit}^3"
     return problem, solution
+
+
+volumeCubeGen = Generator("Volum of Cube", 35,
+                          "Volume of cube with side a units is", "b units^3",
+                          volumeCube)

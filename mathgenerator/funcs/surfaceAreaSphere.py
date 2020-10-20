@@ -9,3 +9,9 @@ def surfaceAreaSphere(maxSide=20, unit='m'):
     ans = 4 * math.pi * r * r
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+
+surfaceAreaSphereGen = Generator(
+    "Surface Area of Sphere", 60,
+    "Surface area of sphere with radius = a units is", "d units^2",
+    surfaceAreaSphere)

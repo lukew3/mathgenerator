@@ -31,3 +31,8 @@ def multiplyFractionsFunc(maxVal=10):
     problem = f"({a}/{b})*({c}/{d})"
     solution = x
     return problem, solution
+
+
+fractionMultiplication = Generator("Fraction Multiplication", 28,
+                                   "(a/b)*(c/d)=", "x/y",
+                                   multiplyFractionsFunc)
