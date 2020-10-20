@@ -6,18 +6,18 @@ from scipy.integrate import quad
 def definiteIntegralFunc(max_coeff=100):
 
     def integrand(x, a, b, c):
-        return a*x**2 + b*x + c
+        return a * x ** 2 + b * x + c
 
     a = random.randint(0, max_coeff)
     b = random.randint(0, max_coeff)
     c = random.randint(0, max_coeff)
 
     I = quad(integrand, 0, 1, args=(a, b, c))[0]
-    I = round(I, 4)
+    S = round(I, 4)
 
-    problem = "The definite integral within limits 0 to 1 of the equation "+ str(a) +"x^2 + "+ str(b) +"x + "+ str(c) +" is = "
+    problem = "The definite integral within limits 0 to 1 of the equation " + str(a) + "x^2 + "+ str(b) +"x + " + str(c) + " is = "
 
-    solution = str(I)
+    solution = str(S)
 
     return problem, solution
 
