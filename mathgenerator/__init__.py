@@ -14,7 +14,7 @@ class Generator:
         (filename, line_number, function_name, text) = traceback.extract_stack()[-2]
         funcname = filename[filename.rfind('/'):].strip()
         funcname = funcname[1:-3]
-        print(funcname)
+        # print(funcname)
         genList.append([id, title, self, funcname])
 
     def __str__(self):
