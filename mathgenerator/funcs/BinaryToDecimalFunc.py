@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def BinaryToDecimalFunc(max_dig=10):
@@ -10,3 +11,7 @@ def BinaryToDecimalFunc(max_dig=10):
 
     solution = int(problem, 2)
     return problem, solution
+
+
+binaryToDecimal = Generator("Binary to Decimal", 15, "Decimal of a=", "b",
+                            BinaryToDecimalFunc)

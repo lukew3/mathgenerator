@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m'):
@@ -11,3 +12,9 @@ def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m'):
 
     solution = f"{ans} {unit}^2"
     return problem, solution
+
+
+surfaceAreaConeGen = Generator(
+    "Surface Area of cone", 38,
+    "Surface area of cone with height = a units and radius = b units is",
+    "c units^2", surfaceAreaCone)

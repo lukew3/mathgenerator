@@ -20,4 +20,5 @@ class Generator:
 
 
 def getGenList():
-    return genList
+    correctedList = genList[-1:] + genList[:-1]
+    return correctedList

@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def vectorCrossFunc(minVal=-20, maxVal=20):
@@ -12,3 +13,7 @@ def vectorCrossFunc(minVal=-20, maxVal=20):
     problem = str(a) + " X " + str(b) + " = "
     solution = str(c)
     return problem, solution
+
+
+vectorCross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c",
+                        vectorCrossFunc)
