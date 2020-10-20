@@ -2,20 +2,20 @@ from .__init__ import *
 
 
 def fibonacciSeriesFunc(minNo=1):
-    n = random.randint(minNo,20)
+    n = random.randint(minNo, 20)
 
     def createFibList(n):
-        l=[]
+        list = []
         for i in range(n):
-            if i<2:
-                l.append(i)
+            if i < 2:
+                list.append(i)
             else:
-                val = l[i-1]+l[i-2]
-                l.append(val)
-        return l
+                val = list[i - 1] + list[i - 2]
+                list.append(val)
+        return list
 
-    fibList=createFibList(n)
-    
-    problem = "The Fibonacci Series of the first "+str(n)+" numbers is ?"
+    fibList = createFibList(n)
+
+    problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
     solution = fibList
-    return problem,solution
+    return problem, solution

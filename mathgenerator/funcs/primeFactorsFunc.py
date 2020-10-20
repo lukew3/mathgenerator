@@ -16,7 +16,7 @@ def primeFactorsFunc(minVal=1, maxVal=200):
 
     if n > 1:
         factors.append(n)
-        
+
     problem = f"Find prime factors of {a}"
     solution = f"{factors}"
     return problem, solution

@@ -8,7 +8,7 @@ def fourthAngleOfQuadriFunc(maxAngle=180):
 
     sum_ = angle1 + angle2 + angle3
     angle4 = 360 - sum_
-    
+
     problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
     solution = angle4
     return problem, solution

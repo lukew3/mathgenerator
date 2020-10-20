@@ -13,5 +13,5 @@ def lcmFunc(maxVal=20):
 
     problem = f"LCM of {a} and {b} ="
     solution = str(d)
-    
+
     return problem, solution

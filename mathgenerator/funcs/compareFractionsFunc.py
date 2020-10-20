@@ -15,12 +15,12 @@ def compareFractionsFunc(maxVal=10):
     first = a / b
     second = c / d
 
-    if(first > second):
+    if (first > second):
         solution = ">"
-    elif(first < second):
+    elif (first < second):
         solution = "<"
     else:
         solution = "="
-        
+
     problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem, solution

@@ -1,16 +1,21 @@
-from .euclidianNormFunc import euclidianNormFunc
-import math
 from .__init__ import *
 
 
-def angleBtwVectorsFunc(v1: list, v2: list):
-    sum = 0
+def angleBtwVectorsFunc(maxEltAmt=20):
+    s = 0
+    v1 = [random.uniform(0, 1000) for i in range(random.randint(2, maxEltAmt))]
+    v2 = [random.uniform(0, 1000) for i in v1]
     for i in v1:
         for j in v2:
-            sum += i * j
+            s += i * j
 
-    mags = euclidianNormFunc(v1) * euclidianNormFunc(v2)
+    mags = math.sqrt(sum([i**2 for i in v1])) * math.sqrt(sum([i**2 for i in v2]))
     problem = f"angle between the vectors {v1} and {v2} is:"
-    solution = math.acos(sum / mags)
+    solution = ''
+    try:
+        solution = str(math.acos(s / mags))
+    except MathDomainError:
+        print('angleBtwVectorsFunc has some issues with math module, line 16')
+        solution = 'NaN'
     # would return the answer in radians
     return problem, solution

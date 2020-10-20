@@ -2,7 +2,7 @@ import random
 import math
 import fractions
 
-from .additionFunc import *
+from .addition import *
 from .subtractionFunc import *
 from .multiplicationFunc import *
 from .divisionFunc import *
@@ -77,7 +77,12 @@ from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
 from .binary2sComplement import *
 from .matrixInversion import *
-from .sectorAreaFunc import*
-from .meanMedianFunc import*
+from .sectorAreaFunc import *
+from .meanMedianFunc import *
 from .determinantToMatrix22 import *
+from .compoundInterestFunc import *
 from .deciToHexaFunc import *
+from .percentageFunc import *
+from .celsiustofahrenheit import *
+from .arithmeticProgressionSumFunc import *
+from .arithmeticProgressionTermFunc import *
