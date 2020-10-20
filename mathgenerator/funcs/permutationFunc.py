@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def permutationFunc(maxlength=20):
@@ -6,5 +7,12 @@ def permutationFunc(maxlength=20):
     b = random.randint(0, 9)
 
     solution = int(math.factorial(a) / (math.factorial(a - b)))
-    problem = "Number of Permutations from {} objects picked {} at a time =  ".format(a, b)
+    problem = "Number of Permutations from {} objects picked {} at a time =  ".format(
+        a, b)
     return problem, solution
+
+
+permutations = Generator(
+    "Permutations", 42,
+    "Total permutations of 4 objects at a time from 10 objects is", "5040",
+    permutationFunc)

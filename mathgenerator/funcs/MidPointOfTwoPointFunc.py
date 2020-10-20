@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def MidPointOfTwoPointFunc(maxValue=20):
@@ -6,7 +7,12 @@ def MidPointOfTwoPointFunc(maxValue=20):
     y1 = random.randint(-20, maxValue)
     x2 = random.randint(-20, maxValue)
     y2 = random.randint(-20, maxValue)
-    
+
     problem = f"({x1},{y1}),({x2},{y2})="
     solution = f"({(x1+x2)/2},{(y1+y2)/2})"
     return problem, solution
+
+
+midPointOfTwoPoint = Generator("Midpoint of the two point", 20,
+                               "((X1,Y1),(X2,Y2))=", "((X1+X2)/2,(Y1+Y2)/2)",
+                               MidPointOfTwoPointFunc)

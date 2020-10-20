@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def logFunc(maxBase=3, maxVal=8):
@@ -8,5 +9,8 @@ def logFunc(maxBase=3, maxVal=8):
 
     problem = "log" + str(b) + "(" + str(c) + ")"
     solution = str(a)
-    
+
     return problem, solution
+
+
+log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)

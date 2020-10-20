@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
@@ -14,7 +15,12 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
         exponent = random.randint(1, maxExp)
 
         problem += str(coefficient) + "x^" + str(exponent)
-        solution += "(" + str(coefficient) + "/" + str(exponent) + ")x^" + str(exponent + 1)
+        solution += "(" + str(coefficient) + "/" + \
+            str(exponent) + ")x^" + str(exponent + 1)
 
     solution += " + c"
     return problem, solution
+
+
+powerRuleIntegration = Generator("Power Rule Integration", 48, "nx^m=",
+                                 "(n/m)x^(m+1)", powerRuleIntegrationFunc)

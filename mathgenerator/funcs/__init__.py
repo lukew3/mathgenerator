@@ -2,7 +2,7 @@ import random
 import math
 import fractions
 
-from .additionFunc import *
+from .addition import *
 from .subtractionFunc import *
 from .multiplicationFunc import *
 from .divisionFunc import *
@@ -11,8 +11,8 @@ from .moduloFunc import *
 from .squareRootFunc import *
 from .powerRuleDifferentiationFunc import *
 from .squareFunc import *
-from .gcdFunc import *
 from .lcmFunc import *
+from .gcdFunc import *
 from .basicAlgebraFunc import *
 from .logFunc import *
 from .divisionToIntFunc import *
@@ -35,10 +35,10 @@ from .regularPolygonAngleFunc import *
 from .combinationsFunc import *
 from .factorialFunc import *
 from .surfaceAreaCube import *
-from .volumeCube import *
 from .surfaceAreaCuboid import *
-from .volumeCuboid import *
 from .surfaceAreaCylinder import *
+from .volumeCube import *
+from .volumeCuboid import *
 from .volumeCylinder import *
 from .surfaceAreaCone import *
 from .volumeCone import *
@@ -77,11 +77,16 @@ from .absoluteDifferenceFunc import *
 from .vectorDotFunc import *
 from .binary2sComplement import *
 from .matrixInversion import *
-from .sectorAreaFunc import*
-from .meanMedianFunc import*
+from .sectorAreaFunc import *
+from .meanMedianFunc import *
 from .determinantToMatrix22 import *
+from .compoundInterestFunc import *
 from .deciToHexaFunc import *
 from .percentageFunc import *
 from .celsiustofahrenheit import *
+from .arithmeticProgressionTermFunc import *
+from .arithmeticProgressionSumFunc import *
+from .decimalToOctalFunc import *
+from .decimalToRomanNumeralsFunc import *
 from .degreeToRadFunc import *
 from .radianToDegFunc import *

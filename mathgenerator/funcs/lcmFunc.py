@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def lcmFunc(maxVal=20):
@@ -13,5 +14,9 @@ def lcmFunc(maxVal=20):
 
     problem = f"LCM of {a} and {b} ="
     solution = str(d)
-    
+
     return problem, solution
+
+
+lcm = Generator("LCM (Least Common Multiple)", 9, "LCM of a and b = ", "c",
+                lcmFunc)

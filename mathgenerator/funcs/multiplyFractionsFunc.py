@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def multiplyFractionsFunc(maxVal=10):
@@ -14,13 +15,13 @@ def multiplyFractionsFunc(maxVal=10):
         d = random.randint(1, maxVal)
 
     def calculate_gcd(x, y):
-        while(y):
+        while (y):
             x, y = y, x % y
         return x
 
     tmp_n = a * c
     tmp_d = b * d
-    
+
     gcd = calculate_gcd(tmp_n, tmp_d)
     x = f"{tmp_n//gcd}/{tmp_d//gcd}"
 
@@ -30,3 +31,8 @@ def multiplyFractionsFunc(maxVal=10):
     problem = f"({a}/{b})*({c}/{d})"
     solution = x
     return problem, solution
+
+
+fractionMultiplication = Generator("Fraction Multiplication", 28,
+                                   "(a/b)*(c/d)=", "x/y",
+                                   multiplyFractionsFunc)

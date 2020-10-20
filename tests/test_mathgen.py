@@ -39,7 +39,8 @@ def test_moduloDivision(maxRes, maxModulo):
     assert eval(problem[:-1]) == int(solution)
 
 
-@given(minNo=st.integers(min_value=1), maxNo=st.integers(min_value=1, max_value=2 ** 50))
+@given(minNo=st.integers(min_value=1),
+       maxNo=st.integers(min_value=1, max_value=2**50))
 def test_squareRoot(minNo, maxNo):
     assume(maxNo > minNo)
     problem, solution = squareRoot.func(minNo, maxNo)

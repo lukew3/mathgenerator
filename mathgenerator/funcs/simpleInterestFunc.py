@@ -1,4 +1,5 @@
 from .__init__ import *
+from ..__init__ import Generator
 
 
 def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
@@ -6,7 +7,16 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
     b = random.randint(1, maxRate)
     c = random.randint(1, maxTime)
     d = (a * b * c) / 100
-    
-    problem = "Simple interest for a principle amount of " + str(a) + " dollars, " + str(b) + "% rate of interest and for a time period of " + str(c) + " years is = "
+
+    problem = "Simple interest for a principle amount of " + str(
+        a) + " dollars, " + str(
+            b) + "% rate of interest and for a time period of " + str(
+                c) + " years is = "
     solution = round(d, 2)
     return problem, solution
+
+
+simpleInterest = Generator(
+    "Simple Interest", 45,
+    "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ",
+    "d dollars", simpleInterestFunc)
