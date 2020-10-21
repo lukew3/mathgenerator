@@ -10,4 +10,4 @@ for item in list:
     print(item[2])
 
 # print(mathgen.getGenList())
-print(mathgen.genById(91))
+print(mathgen.genById(92))

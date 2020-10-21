@@ -2,7 +2,6 @@ import random
 import math
 import fractions
 
-
 from ..__init__ import *
 
 from .addition import *
