@@ -17,3 +17,5 @@ def BCDtoDecimalFunc(maxNumber=10000):
     problem = "Integer of Binary Coded Decimal " + str(n) + " is = "
     solution = int(binstring, 2)
     return problem, solution
+
+bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91, "Integer of Binary Coded Decimal b is ", "n", BCDtoDecimalFunc)
