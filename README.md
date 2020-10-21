@@ -114,8 +114,3 @@ problem, solution = mathgen.genById(0)
 | 78 | Compound Interest | Compound Interest for a principle amount of 4156 dollars, 8% rate of interest and for a time period of 7 compounded monthly is =  | 4156.0 | surfaceAreaCylinderGen |
 | 79 | Decimal to Hexadecimal | Binary of 143= | 0x8f | "Surface Area of Cylinder", 34, |
 | 80 | Percentage of a number | What is 49% of 13? | Required percentage = 6.37% | "Surface area of cylinder with height |
-| 81 | Celsius To Fahrenheit | Convert 39 degrees Celsius to degrees Fahrenheit = | 102.2 | "c units^2" | surfaceAreaCylinder) |
-| 82 | AP Term Calculation  | Find the term number n of the AP series: a1, a2, a3 ... | a-n | arithmeticProgressionTermFunc|
-| 83 |"AP Sum Calculation"|"Find the sum of first n terms of the AP series: a1, a2, a3 ..."|"Sum"| arithmeticProgressionSumFunc|
-| 84 | Set Operations | Given sets A,B | A^B,A-B,B-A,A U B, | set_operation|
-
