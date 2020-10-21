@@ -31,7 +31,6 @@ problem, solution = mathgen.genById(0)
 | Id   | Skill                             | Example problem    | Example Solution      | Function Name            |
 |------|-----------------------------------|--------------------|-----------------------|--------------------------|
 [//]: # list start
-
 | 0 | Addition | 16+3= | 19 | subtraction |
 | 1 | Subtraction | 96-17= | 79 | multiplication |
 | 2 | Multiplication | 48*1= | 48 | multiplicationFunc) |
