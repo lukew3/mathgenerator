@@ -95,3 +95,4 @@ from .radian_to_deg import *
 from .differentiation import *
 from .definite_integral import *
 from .is_prime import *
+from .bcd_to_decimal import *
