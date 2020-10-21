@@ -99,4 +99,4 @@ from .bcd_to_decimal import *
 from .complex_to_polar import *
 from .set_operation import *
 from .base_conversion import *
-from .curvedSurfaceAreaCylinderFunc import *
+from .curved_surface_area_cylinder import *
