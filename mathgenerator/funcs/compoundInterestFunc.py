@@ -2,15 +2,12 @@ from .__init__ import *
 from ..__init__ import Generator
 
 
-<<<<<<< HEAD
-def compoundInterestFunc(maxPrinciple = 10000, maxRate = 10, maxTime = 10, maxPeriod = 10):
-=======
+
 
 def compoundInterestFunc(maxPrinciple=10000,
                          maxRate=10,
                          maxTime=10,
                          maxPeriod=10):
->>>>>>> cb0cfb4b81966d8bccb88d30dfce099e05c8b4f4
     p = random.randint(100, maxPrinciple)
     r = random.randint(1, maxRate)
     t = random.randint(1, maxTime)
