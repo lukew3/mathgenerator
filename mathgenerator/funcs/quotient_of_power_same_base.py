@@ -2,7 +2,7 @@ from .__init__ import *
 from ..__init__ import Generator
 
 
-def quotientofpowersamebaseFunc(maxBase=50, maxPower=10):
+def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10):
     base = random.randint(1, maxBase)
     power1 = random.randint(1, maxPower)
     power2 = random.randint(1, maxPower)
@@ -17,5 +17,5 @@ def quotientofpowersamebaseFunc(maxBase=50, maxPower=10):
     return problem, solution
 
 
-quotientOfPowerSameBase = Generator("Quotient of Powers with Same Base", 82,
-                                    "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientofpowersamebaseFunc)
+quotient_of_power_same_base = Generator("Quotient of Powers with Same Base", 82,
+                                    "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientOfPowerSameBaseFunc())
