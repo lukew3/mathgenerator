@@ -2,8 +2,6 @@ from .__init__ import *
 from ..__init__ import Generator
 
 
-
-
 def compoundInterestFunc(maxPrinciple=10000,
                          maxRate=10,
                          maxTime=10,
