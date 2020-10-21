@@ -10,5 +10,6 @@ def cubeRootFunc(minNo=1, maxNo=1000):
     return problem, solution
 
 
-cube_root = Generator("Cube Root", 47, "Cuberoot of a upto 2 decimal places is",
-                      "b", cubeRootFunc)
+cube_root = Generator("Cube Root", 47,
+                      "Cuberoot of a upto 2 decimal places is", "b",
+                      cubeRootFunc)

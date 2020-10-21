@@ -4,9 +4,8 @@ from scipy.integrate import quad
 
 
 def definiteIntegralFunc(max_coeff=100):
-
     def integrand(x, a, b, c):
-        return a * x ** 2 + b * x + c
+        return a * x**2 + b * x + c
 
     a = random.randint(0, max_coeff)
     b = random.randint(0, max_coeff)
@@ -23,5 +22,7 @@ def definiteIntegralFunc(max_coeff=100):
     return problem, solution
 
 
-definite_integral = Generator("Definite Integral of Quadratic Equation", 89,
-                              "The definite integral within limits 0 to 1 of quadratic equation ax^2+bx+c is = ", "S", definiteIntegralFunc)
+definite_integral = Generator(
+    "Definite Integral of Quadratic Equation", 89,
+    "The definite integral within limits 0 to 1 of quadratic equation ax^2+bx+c is = ",
+    "S", definiteIntegralFunc)

@@ -10,7 +10,8 @@ def angleBtwVectorsFunc(maxEltAmt=20):
         for j in v2:
             s += i * j
 
-    mags = math.sqrt(sum([i**2 for i in v1])) * math.sqrt(sum([i**2 for i in v2]))
+    mags = math.sqrt(sum([i**2
+                          for i in v1])) * math.sqrt(sum([i**2 for i in v2]))
     problem = f"angle between the vectors {v1} and {v2} is:"
     solution = ''
     try:
