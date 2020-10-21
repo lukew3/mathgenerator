@@ -9,7 +9,7 @@ def complexToPolarFunc(minRealImaginaryNum=-20, maxRealImaginaryNum=20):
     r = round(math.hypot(a, b), 2)
     theta = round(math.atan2(b, a), 2)
     plr = str(r) + "exp(i" + str(theta) + ")"
-    problem = f"rexp(itheta) = "
+    problem = "rexp(itheta) = "
     solution = plr
     return problem, solution
 
