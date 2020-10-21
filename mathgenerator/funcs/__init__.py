@@ -100,3 +100,4 @@ from .complex_to_polar import *
 from .set_operation import *
 from .base_conversion import *
 from .curved_surface_area_cylinder import *
+from .minutesToHours import *
