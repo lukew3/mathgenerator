@@ -1,6 +1,6 @@
 from  .__init__ import *
 
-def polar(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
+def complexToPolarFunc(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
     num = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum), random.randint(minRealImaginaryNum, maxRealImaginaryNum))
     a= num.real
     b= num.imag
@@ -10,4 +10,6 @@ def polar(minRealImaginaryNum = -20, maxRealImaginaryNum = 20):
     problem = f"rexp(itheta) = "
     solution = plr
     return problem, solution
+   
     
+complex_to_polar = Generator("Complex To Polar Form", 92, "rexp(itheta) = ", "plr", complexToPolarFunc)
