@@ -13,9 +13,9 @@ def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10):
                                                                   power1=power1,
                                                                   power2=power2,
                                                                   step=step)
-    solution = str(base**step)
+    solution = str(base ** step)
     return problem, solution
 
 
 quotient_of_power_same_base = Generator("Quotient of Powers with Same Base", 82,
-                                    "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientOfPowerSameBaseFunc())
+                                        "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientOfPowerSameBaseFunc())
