@@ -8,11 +8,13 @@ def arithmeticProgressionTermFunc(maxd=100, maxa=100, maxn=100):
     a3 = a2 + d
     n = random.randint(4, maxn)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
-    problem = 'Find the term number ' + str(n) + ' of the AP series: ' + apString
+    problem = 'Find the term number ' + str(
+        n) + ' of the AP series: ' + apString
     solution = a1 + ((n - 1) * d)
     return problem, solution
 
 
-arithmetic_progression_term = Generator("AP Term Calculation", 82,
-                                        "Find the term number n of the AP series: a1, a2, a3 ...",
-                                        "a-n", arithmeticProgressionTermFunc)
+arithmetic_progression_term = Generator(
+    "AP Term Calculation", 82,
+    "Find the term number n of the AP series: a1, a2, a3 ...", "a-n",
+    arithmeticProgressionTermFunc)

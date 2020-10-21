@@ -8,11 +8,13 @@ def arithmeticProgressionSumFunc(maxd=100, maxa=100, maxn=100):
     a3 = a2 + d
     n = random.randint(4, maxn)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
-    problem = 'Find the sum of first ' + str(n) + ' terms of the AP series: ' + apString
+    problem = 'Find the sum of first ' + str(
+        n) + ' terms of the AP series: ' + apString
     solution = n * ((2 * a1) + ((n - 1) * d)) / 2
     return problem, solution
 
 
-arithmetic_progression_sum = Generator("AP Sum Calculation", 83,
-                                       "Find the sum of first n terms of the AP series: a1, a2, a3 ...",
-                                       "Sum", arithmeticProgressionSumFunc)
+arithmetic_progression_sum = Generator(
+    "AP Sum Calculation", 83,
+    "Find the sum of first n terms of the AP series: a1, a2, a3 ...", "Sum",
+    arithmeticProgressionSumFunc)

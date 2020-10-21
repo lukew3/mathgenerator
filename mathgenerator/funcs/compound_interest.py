@@ -14,4 +14,6 @@ def compoundInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
 
 
 compound_interest = Generator(
-    "Compound Interest", 78, "Compound interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ", "d dollars", compoundInterestFunc)
+    "Compound Interest", 78,
+    "Compound interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ",
+    "d dollars", compoundInterestFunc)

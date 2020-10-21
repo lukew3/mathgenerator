@@ -14,5 +14,5 @@ def radianToDegFunc(max_rad=3):
     return problem, solution
 
 
-radian_to_deg = Generator("Radians to Degrees", 87,
-                          "Angle a in degrees is = ", "b", radianToDegFunc)
+radian_to_deg = Generator("Radians to Degrees", 87, "Angle a in degrees is = ",
+                          "b", radianToDegFunc)
