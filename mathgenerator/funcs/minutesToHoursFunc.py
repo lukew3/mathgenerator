@@ -9,4 +9,5 @@ def minutesToHoursFunc(maxMinutes=999):
 	solution = f"minutes_to_hours(230) = {hours1}h:{hours2}m"
 	return problem, solution
   
-  minutesToHours = Generator("Minute to Hour conversion", 96 , "Convert minutes to Hours & Minutes", "hours:minutes", minutesToHoursFunc)
+	
+minutesToHours = Generator("Minute to Hour conversion", 96 , "Convert minutes to Hours & Minutes", "hours:minutes", minutesToHoursFunc)
