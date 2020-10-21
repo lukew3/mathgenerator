@@ -10,4 +10,4 @@ def curvedSurfaceAreaCylinderFunc(maxRadius = 49, maxHeight=99):
     return problem, solution
 
 
-curvedSurfaceAreaCylinder = Generator("Curved surface area of a cylinder",91,"What is CSA of a cylinder of radius, r and height, h?","csa of cylinder",curvedSurfaceAreaCylinderFunc)
+curvedSurfaceAreaCylinder = Generator("Curved surface area of a cylinder", 95,"What is CSA of a cylinder of radius, r and height, h?","csa of cylinder",curvedSurfaceAreaCylinderFunc)
