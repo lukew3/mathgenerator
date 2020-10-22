@@ -95,9 +95,9 @@ from .radian_to_deg import *
 from .differentiation import *
 from .definite_integral import *
 from .is_prime import *
-from .perimeter_of_polygons import *
 from .bcd_to_decimal import *
 from .complex_to_polar import *
 from .set_operation import *
 from .base_conversion import *
 from .curved_surface_area_cylinder import *
+from .perimeter_of_polygons import *
