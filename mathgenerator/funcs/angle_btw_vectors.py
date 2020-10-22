@@ -4,18 +4,17 @@ import math
 
 def angleBtwVectorsFunc(maxEltAmt=20):
     s = 0
-    v1 = [random.uniform(0, 1000) for i in range(random.randint(2, maxEltAmt))]
-    v2 = [random.uniform(0, 1000) for i in v1]
-    for i in v1:
-        for j in v2:
-            s += i * j
+    v1 = [round(random.uniform(0, 1000), 2) for i in range(random.randint(2, maxEltAmt))]
+    v2 = [round(random.uniform(0, 1000), 2) for i in v1]
+    for i in range(len(v1)):
+        s += v1[i] * v2[i]
 
     mags = math.sqrt(sum([i**2
                           for i in v1])) * math.sqrt(sum([i**2 for i in v2]))
     problem = f"angle between the vectors {v1} and {v2} is:"
     solution = ''
     try:
-        solution = str(math.acos(s / mags))
+        solution = str(round(math.acos(s / mags), 2)) + " radians"
     except ValueError:
         print('angleBtwVectorsFunc has some issues with math module, line 16')
         solution = 'NaN'
