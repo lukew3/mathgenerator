@@ -12,9 +12,10 @@ def quotientOfPowerSamePowerFunc(maxBase=50, maxPower=10):
                                                                   base2=base2,
                                                                   power=power,
                                                                   step=step)
-    solution = str(step ** power)
+    solution = str(step**power)
     return problem, solution
 
 
-quotient_of_power_same_power = Generator("Quotient of Powers with Same Power", 99,
-                                         "6^4 / 3^4 = (6/3)^4 = 2^4", "16", quotientOfPowerSamePowerFunc)
+quotient_of_power_same_power = Generator("Quotient of Powers with Same Power",
+                                         99, "6^4 / 3^4 = (6/3)^4 = 2^4", "16",
+                                         quotientOfPowerSamePowerFunc)

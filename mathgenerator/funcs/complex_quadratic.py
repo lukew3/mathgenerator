@@ -14,7 +14,7 @@ def complexQuadraticFunc(prob_type=0, max_range=10):
             b = random.randrange(1, max_range)
             c = random.randrange(1, max_range)
 
-            d = (b**2 - 4*a*c)
+            d = (b**2 - 4 * a * c)
     else:
         d = 0
         while d >= 0:
@@ -22,7 +22,7 @@ def complexQuadraticFunc(prob_type=0, max_range=10):
             b = random.randrange(1, max_range)
             c = random.randrange(1, max_range)
 
-            d = (b**2 - 4*a*c)
+            d = (b**2 - 4 * a * c)
 
     eq = ''
 
@@ -53,8 +53,8 @@ def complexQuadraticFunc(prob_type=0, max_range=10):
         return problem, solution
 
     else:
-        s_root1 = round((-b + (d)**0.5)/(2*a), 3)
-        s_root2 = round((-b - (d)**0.5)/(2*a), 3)
+        s_root1 = round((-b + (d)**0.5) / (2 * a), 3)
+        s_root2 = round((-b - (d)**0.5) / (2 * a), 3)
 
         sqrt_d = (d)**0.5
 
@@ -69,5 +69,8 @@ def complexQuadraticFunc(prob_type=0, max_range=10):
         return problem, solution
 
 
-complex_quadratic = Generator("complex Quadratic Equation", 100, "Find the roots of given Quadratic Equation ",
-                              "simplified solution : (x1, x2), generalized solution : ((-b + sqrt(d))/2a, (-b - sqrt(d))/2a) or ((-b + sqrt(d)i)/2a, (-b - sqrt(d)i)/2a)", complexQuadraticFunc)
+complex_quadratic = Generator(
+    "complex Quadratic Equation", 100,
+    "Find the roots of given Quadratic Equation ",
+    "simplified solution : (x1, x2), generalized solution : ((-b + sqrt(d))/2a, (-b - sqrt(d))/2a) or ((-b + sqrt(d)i)/2a, (-b - sqrt(d)i)/2a)",
+    complexQuadraticFunc)

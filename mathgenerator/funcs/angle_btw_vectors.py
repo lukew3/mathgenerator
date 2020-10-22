@@ -4,7 +4,10 @@ import math
 
 def angleBtwVectorsFunc(maxEltAmt=20):
     s = 0
-    v1 = [round(random.uniform(0, 1000), 2) for i in range(random.randint(2, maxEltAmt))]
+    v1 = [
+        round(random.uniform(0, 1000), 2)
+        for i in range(random.randint(2, maxEltAmt))
+    ]
     v2 = [round(random.uniform(0, 1000), 2) for i in v1]
     for i in range(len(v1)):
         s += v1[i] * v2[i]
