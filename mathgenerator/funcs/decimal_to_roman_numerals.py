@@ -25,8 +25,7 @@ def decimalToRomanNumeralsFunc(maxDecimal=4000):
         elif last_value == 4:
             solution += (roman_dict[divisor] + roman_dict[divisor * 5])
         elif 5 <= last_value <= 8:
-            solution += (roman_dict[divisor * 5] + (roman_dict[divisor] *
-                                                    (last_value - 5)))
+            solution += (roman_dict[divisor * 5] + (roman_dict[divisor] * (last_value - 5)))
         elif last_value == 9:
             solution += (roman_dict[divisor] + roman_dict[divisor * 10])
         x = math.floor(x % divisor)

@@ -38,10 +38,9 @@ def complexQuadraticFunc(prob_type=0, max_range=10):
 
     eq += str(c) + ' = 0'
 
-    problem = f'Find the roots of given Quadratic Equation ' + eq
+    problem = 'Find the roots of given Quadratic Equation ' + eq
 
     if d < 0:
-        roots = ''
         sqrt_d = (-d)**0.5
 
         if sqrt_d - int(sqrt_d) == 0:
