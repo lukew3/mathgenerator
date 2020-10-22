@@ -1,5 +1,4 @@
 from .__init__ import *
-from ..__init__ import Generator
 
 
 def powerOfPowersFunc(maxBase=50, maxPower=10):
@@ -17,5 +16,5 @@ def powerOfPowersFunc(maxBase=50, maxPower=10):
     return problem, solution
 
 
-power_of_powers = Generator("Power of Powers", 82,
+power_of_powers = Generator("Power of Powers", 97,
                             "6^4^2 = 6^(4*2) = 6^6", "46656", powerOfPowersFunc)
