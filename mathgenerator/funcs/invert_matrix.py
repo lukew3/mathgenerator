@@ -78,5 +78,6 @@ def matrixInversion(SquareMatrixDimension=3,
     return problem, solution
 
 
-invert_matrix = Generator("Inverse of a Matrix", 74, "Inverse of a matrix A is",
-                          "A^(-1)", matrixInversion)
+invert_matrix = Generator("Inverse of a Matrix", 74,
+                          "Inverse of a matrix A is", "A^(-1)",
+                          matrixInversion)

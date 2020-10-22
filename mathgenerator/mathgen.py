@@ -1,7 +1,6 @@
 from .funcs import *
 from .__init__ import getGenList
 
-
 genList = getGenList()
 
 

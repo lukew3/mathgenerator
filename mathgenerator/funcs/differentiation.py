@@ -49,5 +49,6 @@ def differentiationFunc(diff_lvl=2):
     return problem, solution
 
 
-differentiation = Generator(
-    "Differentiation", 88, "differentiate w.r.t x : d(f(x))/dx", "g(x)", differentiationFunc)
+differentiation = Generator("Differentiation", 88,
+                            "differentiate w.r.t x : d(f(x))/dx", "g(x)",
+                            differentiationFunc)

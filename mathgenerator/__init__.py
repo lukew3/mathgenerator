@@ -11,7 +11,8 @@ class Generator:
         self.generalSol = generalSol
         self.func = func
 
-        (filename, line_number, function_name, text) = traceback.extract_stack()[-2]
+        (filename, line_number, function_name,
+         text) = traceback.extract_stack()[-2]
         funcname = filename[filename.rfind('/'):].strip()
         funcname = funcname[1:-3]
         # print(funcname)
