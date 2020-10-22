@@ -1,5 +1,4 @@
 from .__init__ import *
-from ..__init__ import Generator
 
 
 def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10):
@@ -17,5 +16,5 @@ def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10):
     return problem, solution
 
 
-quotient_of_power_same_base = Generator("Quotient of Powers with Same Base", 82,
-                                        "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientOfPowerSameBaseFunc())
+quotient_of_power_same_base = Generator("Quotient of Powers with Same Base", 98,
+                                        "6^4 / 6^2 = 6^(4-2) = 6^2", "36", quotientOfPowerSameBaseFunc)
