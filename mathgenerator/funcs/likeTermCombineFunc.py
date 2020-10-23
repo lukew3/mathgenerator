@@ -22,7 +22,7 @@ def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10):
 def combineTerms(string):
     each_terms = string.split("+")
     dict_power_wise_terms = {}
-    for i in range(11): 
+    for i in range(11):
         dict_power_wise_terms[i] = []
     for term in each_terms:
         term = term.split("^")
@@ -36,7 +36,7 @@ def combineTerms(string):
     for i in range(11):
         if len(dict_power_wise_terms[i]) != 0:
             total = sum(dict_power_wise_terms[i])
-            final_string += str(total)+"x^" + str(i) + " + "
+            final_string += str(total) + "x^" + str(i) + " + "
     final_string = '+'.join(final_string.split("+")[:-1])
     return final_string
 
