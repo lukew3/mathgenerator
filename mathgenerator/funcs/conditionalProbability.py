@@ -15,8 +15,8 @@ def conditionalProbFunc():
         return P_disease_plus
 
     problem = "Someone tested positive for a nasty disease which only {0:.2f}% of population have. " \
-    "Test sensitivity (true positive) is equal to SN= {1:.2f}% whereas test specificity (true negative) SP= {2:.2f}%. " \
-    "What is the probability that this guy really has that disease?".format(P_disease, true_positive, true_negative)
+              "Test sensitivity (true positive) is equal to SN= {1:.2f}% whereas test specificity (true negative) SP= {2:.2f}%. " \
+              "What is the probability that this guy really has that disease?".format(P_disease, true_positive, true_negative)
     answer = str(round(BayesFormula(P_disease, true_positive, true_negative), 2)) + "%"
 
     return problem, answer
