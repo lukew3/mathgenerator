@@ -10,4 +10,6 @@ from mathgenerator import mathgen
 #     print(item[2])
 
 # print(mathgen.getGenList())
-print(mathgen.circumference())
+# print(mathgen.circumference())
+
+print(mathgen.binomialDistFunc())

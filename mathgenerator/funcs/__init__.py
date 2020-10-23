@@ -111,3 +111,4 @@ from .decimal_to_bcd import *
 from .circumference import *
 from .combine_like_terms import *
 from .conditional_probability import *
+from .binomial_distribution import *
