@@ -100,4 +100,10 @@ from .complex_to_polar import *
 from .set_operation import *
 from .base_conversion import *
 from .curved_surface_area_cylinder import *
+from .perimeter_of_polygons import *
+from .power_of_powers import *
+from .quotient_of_power_same_base import *
+from .quotient_of_power_same_power import *
+from .complex_quadratic import *
+from .is_leap_year import *
 from .minutesToHours import *
