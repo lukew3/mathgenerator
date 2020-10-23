@@ -10,4 +10,5 @@ for item in list:
     print(item[2])
 
 # print(mathgen.getGenList())
-print(mathgen.genById(100))
+print(mathgen.decimal_to_roman_numerals())
+print(mathgen.genById(101))

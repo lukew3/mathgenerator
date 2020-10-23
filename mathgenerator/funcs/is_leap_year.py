@@ -1,4 +1,4 @@
-from  .__init__ import *
+from .__init__ import *
 
 
 def IsLeapYear(minNumber=1900, maxNumber=2099):
@@ -15,10 +15,11 @@ def IsLeapYear(minNumber=1900, maxNumber=2099):
             solution = "is a leap year"
     else:
         solution = "is not a leap year"
-    
+
     return problem, solution
 
-is_leap_year = Generator("Leap Year or Not", 102,
+
+is_leap_year = Generator("Leap Year or Not", 101,
                          "Year y ", "is/not a leap year",
-                        IsLeapYear)
-##for readme ## | 102 | Leap Year or Not | Year 1964 | is a leap year | is_leap_year |
+                         IsLeapYear)
+# for readme ## | 102 | Leap Year or Not | Year 1964 | is a leap year | is_leap_year |
