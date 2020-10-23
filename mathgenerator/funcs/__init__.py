@@ -106,3 +106,4 @@ from .quotient_of_power_same_base import *
 from .quotient_of_power_same_power import *
 from .complex_quadratic import *
 from .is_leap_year import *
+from .minutesToHours import *
