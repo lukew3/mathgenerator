@@ -4,7 +4,7 @@ from .__init__ import *
 def DecimalToBCDFunc(maxNumber=10000):
     n = random.randint(1000, maxNumber)
     x = n
-    binstring = ''
+    # binstring = ''
     bcdstring = ''
     while x > 0:
         nibble = x % 16
