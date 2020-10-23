@@ -107,3 +107,4 @@ from .quotient_of_power_same_power import *
 from .complex_quadratic import *
 from .is_leap_year import *
 from .minutes_to_hours import *
+from .decimal_to_bcd import *
