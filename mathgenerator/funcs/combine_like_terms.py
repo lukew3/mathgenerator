@@ -41,5 +41,5 @@ def combineTerms(string):
     return final_string
 
 
-combineLikeTerm = Generator("Combine Like terms", 102, "nx^m+lx^k+bx^m",
-                            "(n+b)x^m+lx^k", likeTermCombineFunc)
+combine_like_terms = Generator("Combine Like terms", 105, "nx^m+lx^k+bx^m",
+                               "(n+b)x^m+lx^k", likeTermCombineFunc)
