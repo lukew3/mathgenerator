@@ -10,4 +10,4 @@ from mathgenerator import mathgen
 #     print(item[2])
 
 # print(mathgen.getGenList())
-print(mathgen.genById(105))
+print(mathgen.circumference())
