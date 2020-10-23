@@ -19,5 +19,3 @@ def DecimalToBCDFunc(maxNumber=10000):
 decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
                            "Binary Coded Decimal of Decimal n is ", "b",
                            DecimalToBCDFunc)
-
-# for readme ## | 101 | Decimal to Binary Coded Decimal | Binary Coded Decimal of Decimal 34 is =  | 22 | decimal_to_bcd |
