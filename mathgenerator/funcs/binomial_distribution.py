@@ -30,8 +30,8 @@ def binomialDistFunc():
         "rejected pistons?".format(rejected_fraction, batch, rejections)
 
     for i in range(0, rejections+1):
-        answer += newton_symbol(batch, i)*((rejected_fraction/100.)**i) * \
-                                ((1 - (rejected_fraction/100.))**(batch-i))
+        answer += newton_symbol(float(batch), float(i))*((rejected_fraction/100.)**float(i)) * \
+                                ((1 - (rejected_fraction/100.))**(float(batch)-float(i)))
 
     answer = round(100*answer, 2)
 
