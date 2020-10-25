@@ -6,11 +6,11 @@ def factorial(n):
     if n == 1 or n == 0:
         return 1
     else:
-        return n * factorial(n-1)
+        return n * factorial(n - 1)
 
 
 def newton_symbol(n, k):
-    return factorial(n) / (factorial(k) * factorial(n-k))
+    return factorial(n) / (factorial(k) * factorial(n - k))
 
 
 def binomialDistFunc():
@@ -31,12 +31,12 @@ def binomialDistFunc():
 
     for i in range(0, rejections + 1):
         answer += newton_symbol(float(batch), float(i)) * ((rejected_fraction / 100.) ** float(i)) * \
-                                ((1 - (rejected_fraction/100.)) ** (float(batch)-float(i)))
+                            ((1 - (rejected_fraction / 100.)) ** (float(batch) - float(i)))
 
     answer = round(100 * answer, 2)
 
     return problem, answer
 
 
-binomial_distribution = Generator("Binomial distribution", 107, 
+binomial_distribution = Generator("Binomial distribution", 107,
                                   "P(X<x)=", "c", binomialDistFunc)
