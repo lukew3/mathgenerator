@@ -29,11 +29,11 @@ def binomialDistFunc():
         "batch of {1:} pistons will contain no more than {2:} " \
         "rejected pistons?".format(rejected_fraction, batch, rejections)
 
-    for i in range(0, rejections+1):
-        answer += newton_symbol(float(batch), float(i))*((rejected_fraction/100.)**float(i)) * \
-                                ((1 - (rejected_fraction/100.))**(float(batch)-float(i)))
+    for i in range(0, rejections + 1):
+        answer += newton_symbol(float(batch), float(i)) * ((rejected_fraction / 100.) ** float(i)) * \
+                                ((1 - (rejected_fraction/100.)) ** (float(batch)-float(i)))
 
-    answer = round(100*answer, 2)
+    answer = round(100 * answer, 2)
 
     return problem, answer
 
