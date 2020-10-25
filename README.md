@@ -138,3 +138,4 @@ problem, solution = mathgen.genById(0)
 | 104 | Circumference | Circumference of circle with radius 60 | 376.99111843077515 | circumference |
 | 105 | Combine Like terms | 4x^4 + 6x^4 + 9x^1 + 3x^1 + 5x^4 + 10x^3 | 12x^1 + 10x^3 + 15x^4  | combine_like_terms |
 | 105 | Conditional Probability | Someone tested positive for a nasty disease which only 1.34% of population have. Test sensitivity (true positive) is equal to SN= 98.05% whereas test specificity (true negative) SP= 92.32%. What is the probability that this guy really has that disease? | 14.78% | conditional_probability |
+| 106 | Stationary Points | f(x)=x^3-3x | (-1,2),(1,-2) | stationary_points |
