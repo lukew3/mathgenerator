@@ -38,5 +38,5 @@ def binomialDistFunc():
     return problem, answer
 
 
-binomial_distribution = Generator("Binomial distribution", 107,
+binomial_distribution = Generator("Binomial distribution", 109,
                                   "P(X<x)=", "c", binomialDistFunc)
