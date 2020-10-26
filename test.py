@@ -10,5 +10,4 @@ for item in list:
     print(item[2])
 
 # print(mathgen.getGenList())
-print(mathgen.circumference())
-print(mathgen.genById(106))
+print(mathgen.genById(108))
