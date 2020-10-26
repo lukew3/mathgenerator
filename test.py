@@ -5,11 +5,10 @@ from mathgenerator import mathgen
 # print(mathgen.addition())
 
 # prints each generator in genList
-# list = mathgen.getGenList()
-# for item in list:
-#     print(item[2])
+list = mathgen.getGenList()
+for item in list:
+    print(item[2])
 
 # print(mathgen.getGenList())
-# print(mathgen.circumference())
-
-print(mathgen.binomialDistFunc())
+print(mathgen.circumference())
+print(mathgen.genById(106))
