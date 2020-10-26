@@ -110,5 +110,6 @@ from .minutes_to_hours import *
 from .decimal_to_bcd import *
 from .circumference import *
 from .combine_like_terms import *
+from .signum_function import *
 from .conditional_probability import *
 from .arc_length import *
