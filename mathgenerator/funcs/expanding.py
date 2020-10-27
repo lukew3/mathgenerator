@@ -16,7 +16,7 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
             return "-" + str(abs(z))
 
     c1 = intParser(a * b)
-    c2 = intParser((a*x2)+(b*x1))
+    c2 = intParser((a * x2)+(b * x1))
     c3 = intParser(x1 * x2)
 
     p1 = intParser(a)
