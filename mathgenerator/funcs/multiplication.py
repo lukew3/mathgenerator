@@ -1,15 +1,12 @@
 from .__init__ import *
 
 
-def multiplicationFunc(maxRes=99, maxMulti=99):
+def multiplicationFunc(maxMulti=99):
     a = random.randint(0, maxMulti)
-    if a == 0:
-        b = random.randint(0, maxRes)
-    else:
-        b = random.randint(0, min(int(maxMulti / a), maxRes))
+    b =	random.randint(0, maxMulti)
     c = a * b
 
-    problem = str(a) + "*" + str(b) + "="
+    problem = str(a) + " * " + str(b) + " ="
     solution = str(c)
     return problem, solution
 
