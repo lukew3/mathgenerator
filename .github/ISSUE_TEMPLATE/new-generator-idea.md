@@ -2,7 +2,7 @@
 name: New Generator Idea
 about: Use this template if you have an idea for a new generator.
 title: ''
-labels: New generator, hacktoberfest
+labels: New generator
 assignees: ''
 
 ---
