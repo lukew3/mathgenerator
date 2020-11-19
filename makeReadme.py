@@ -41,7 +41,7 @@ for item in wList:
 with open('README.md', "r") as g:
     lines = g.readlines()
 
-    line = lines.index('[//]: # list start\n')
+    line = lines.index('|------|-------|-----------------|------------------|---------------|\n')
     lines = lines[:line + 1]
 
     for row in allRows:
