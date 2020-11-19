@@ -30,7 +30,7 @@ problem, solution = mathgen.genById(0)
 
 | Id   | Skill                             | Example problem    | Example Solution      | Function Name            |
 |------|-----------------------------------|--------------------|-----------------------|--------------------------|
-[//]: # list start
+<!--list start-->
 | 0 | Addition | 39+50= | 89 | addition |
 | 1 | Subtraction | 91-37= | 54 | subtraction |
 | 2 | Multiplication | 39*1= | 39 | multiplication |
