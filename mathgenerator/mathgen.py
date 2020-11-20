@@ -10,6 +10,7 @@ def genById(id):
     generator = genList[id][2]
     return (generator())
 
+
 def makePdf(id, count):
     generator = genList[id][2]
     title = genList[id][1]
