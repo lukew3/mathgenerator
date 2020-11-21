@@ -6,7 +6,7 @@ def complexDivisionFunc(maxRes=99, maxDivid=99):
     b = random.randint(0, min(maxRes, maxDivid))
     c = a / b
     c = round(c, 2)
-    
+
     problem = str(a) + "/" + str(b) + "="
     solution = str(c)
     return problem, solution
