@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import fractions
+
 
 def intersectionOfTwoLinesFunc(minM=-10,
                                maxM=10,

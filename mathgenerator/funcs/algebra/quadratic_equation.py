@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def quadraticEquation(maxVal=100):
     a = random.randint(1, maxVal)

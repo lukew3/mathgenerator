@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def confidenceIntervalFunc():
     n = random.randint(20, 40)
