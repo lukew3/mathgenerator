@@ -1,4 +1,5 @@
 from .__init__ import *
+import random
 
 
 def meanMedianFunc(maxlen=10):
