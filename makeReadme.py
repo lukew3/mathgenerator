@@ -1,6 +1,7 @@
 from mathgenerator.mathgen import *
 
 write_list = []
+subjects = ['algebra', 'basic_math', 'calculus', 'computer_science', 'geometry', 'misc', 'statistics']
 
 def array2markdown_table(string):
     string = string.replace("[[", "<table><tr><td>")
@@ -12,6 +13,36 @@ def array2markdown_table(string):
     string = string.replace("\n", "")
     return string
 
+def write_table_of_contents():
+    lines = []
+
+    tc_lines = [
+        '* [Usage](Usage)\n',
+        '* [Basic Documentation](basic-documentation)\n',
+        '* [List of Generators](list-of-generators)\n',
+    ]
+    for subject in subjects:
+        line = '  * [' + subject + '](#' + subject + ')\n'
+        tc_lines.append(line)
+
+    with open('README.md', "r") as g:
+        lines = g.readlines()
+
+        upper_bound = lines.index('## Table of Contents\n')
+        upper_lines = lines[:upper_bound + 1]
+        lower_bound = lines.index('## Installation\n')
+        lower_lines = lines[lower_bound - 1:]
+        lines = []
+
+        for upper_line in upper_lines:
+            lines.append(upper_line)
+        for tc_line in tc_lines:
+            lines.append(tc_line)
+        for lower_line in lower_lines:
+            lines.append(lower_line)
+
+    with open('README.md', "w") as g:
+        g.writelines(lines)
 
 def write_row(item):
     myGen = item[2]
@@ -62,10 +93,9 @@ def write_subject_table(subject_name, full_gen_list):
 
 wList = getGenList()
 lines = []
-with open('mathgenerator/mathgen.py', 'r') as f:
-    lines = f.readlines()
 
-subjects = ['algebra', 'basic_math', 'calculus', 'computer_science', 'geometry', 'misc', 'statistics']
+write_table_of_contents()
+
 for subject in subjects:
     write_subject_table(subject, wList)
 
