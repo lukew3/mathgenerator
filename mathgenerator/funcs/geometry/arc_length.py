@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def arclengthFunc(maxRadius=49, maxAngle=359):
     Radius = random.randint(1, maxRadius)

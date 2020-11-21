@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def complexToPolarFunc(minRealImaginaryNum=-20, maxRealImaginaryNum=20):
     num = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),

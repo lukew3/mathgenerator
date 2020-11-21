@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 # Handles degrees in quadrant one
 def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],

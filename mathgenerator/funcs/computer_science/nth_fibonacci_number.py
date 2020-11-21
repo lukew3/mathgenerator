@@ -1,5 +1,6 @@
 from .__init__ import *
 
+import math
 
 def nthFibonacciNumberFunc(maxN=100):
     golden_ratio = (1 + math.sqrt(5)) / 2

@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def permutationFunc(maxlength=20):
     a = random.randint(10, maxlength)

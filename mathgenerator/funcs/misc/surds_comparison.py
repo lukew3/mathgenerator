@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def surdsComparisonFunc(maxValue=100, maxRoot=10):
     radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))

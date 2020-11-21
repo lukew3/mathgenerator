@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def euclidianNormFunc(maxEltAmt=20):
     vec = [

@@ -1,5 +1,7 @@
 from .__init__ import *
 
+import math
+
 
 def decimalToRomanNumeralsFunc(maxDecimal=4000):
     x = random.randint(0, maxDecimal)
