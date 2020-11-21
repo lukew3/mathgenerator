@@ -21,8 +21,10 @@ class Generator:
          text) = traceback.extract_stack()[-2]
         funcname = filename[filename.rfind('/'):].strip()
         funcname = funcname[1:-3]
-        # print(funcname)
-        genList.append([id, title, self, funcname])
+        groupname = filename[:filename.rfind('/')].strip()
+        groupname = groupname[groupname.rfind('/'):].strip()
+        groupname = groupname[1:]
+        genList.append([id, title, self, funcname, groupname])
 
     def __str__(self):
         return str(
