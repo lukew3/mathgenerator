@@ -1,5 +1,11 @@
 import sys
 import traceback
+
+import random
+import sympy
+import numpy
+import scipy
+
 genList = []
 
 
@@ -29,4 +35,6 @@ class Generator:
 
 def getGenList():
     correctedList = genList[-1:] + genList[:-1]
+    #Orders list by id
+    correctedList.sort()
     return correctedList
