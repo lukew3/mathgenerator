@@ -19,7 +19,7 @@ def write_table_of_contents():
     tc_lines = [
         '* [Installation](#installation)\n',
         '* [Basic Usage](#basic-usage)\n',
-        '  * [More Complicated Usage](#more-complicated-usage)'
+        '  * [More Complicated Usage](#more-complicated-usage)\n'
         '* [Documentation](#documentation)\n',
         '* [List of Generators](#list-of-generators)\n',
     ]

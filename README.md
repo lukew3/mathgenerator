@@ -9,7 +9,8 @@ If you have an idea for a generator, please add it as an issue and tag it with t
 ## Table of Contents
 * [Installation](#installation)
 * [Basic Usage](#basic-usage)
-  * [More Complicated Usage](#more-complicated-usage)* [Documentation](#documentation)
+  * [More Complicated Usage](#more-complicated-usage)
+* [Documentation](#documentation)
 * [List of Generators](#list-of-generators)
   * [algebra](#algebra)
   * [basic_math](#basic_math)
