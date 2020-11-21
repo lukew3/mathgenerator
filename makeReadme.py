@@ -72,7 +72,7 @@ for subject in subjects:
 with open('README.md', "r") as g:
     lines = g.readlines()
 
-    line = lines.index('|------|-------|-----------------|------------------|---------------|\n')
+    line = lines.index('## List of Generators\n')
     lines = lines[:line + 1]
 
     for write_line in write_list:
