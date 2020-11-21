@@ -29,7 +29,7 @@ def test_multiplication(maxRes, maxMulti):
 def test_division(maxA, maxB):
     assume(maxA > maxB)
     problem, solution = division.func(maxA, maxB)
-    assert eval(problem[:-1]) == float(solution)
+    assert eval(problem[:-1]) == int(solution)
 
 
 @given(maxRes=st.integers(min_value=1), maxModulo=st.integers(min_value=1))
