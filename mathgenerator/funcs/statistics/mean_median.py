@@ -1,6 +1,7 @@
 from .__init__ import *
 import random
 
+
 def meanMedianFunc(maxlen=10):
     randomlist = random.sample(range(1, 99), maxlen)
     total = 0

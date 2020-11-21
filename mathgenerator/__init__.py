@@ -35,6 +35,6 @@ class Generator:
 
 def getGenList():
     correctedList = genList[-1:] + genList[:-1]
-    #Orders list by id
+    # Orders list by id
     correctedList.sort()
     return correctedList
