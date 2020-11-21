@@ -17,8 +17,9 @@ def write_table_of_contents():
     lines = []
 
     tc_lines = [
-        '* [Usage](#Usage)\n',
-        '* [Basic Documentation](#basic-documentation)\n',
+        '* [Installation](#installation)\n',
+        '* [Basic Usage](#basic-usage)\n',
+        '* [Documentation](#documentation)\n',
         '* [List of Generators](#list-of-generators)\n',
     ]
     for subject in subjects:
