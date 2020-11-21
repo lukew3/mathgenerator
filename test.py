@@ -13,4 +13,4 @@ for item in list:
 print(mathgen.genById(111))
 
 #Make a pdf with 10 problems of generator id 1
-mathgen.makePdf(0, 10)
+# mathgen.makePdf(0, 10)
