@@ -25,11 +25,11 @@ def test_multiplication(maxRes, maxMulti):
     assert eval(problem[:-1]) == int(solution)
 
 
-@given(maxRes=st.integers(min_value=1), maxDivid=st.integers(min_value=1))
-def test_division(maxRes, maxDivid):
-    assume(maxRes > maxDivid)
-    problem, solution = division.func(maxRes, maxDivid)
-    assert eval(problem[:-1]) == float(solution)
+@given(maxA=st.integers(min_value=1), maxB=st.integers(min_value=1))
+def test_division(maxA, maxB):
+    assume(maxA > maxB)
+    problem, solution = division.func(maxA, maxB)
+    assert eval(problem[:-1]) == int(solution)
 
 
 @given(maxRes=st.integers(min_value=1), maxModulo=st.integers(min_value=1))

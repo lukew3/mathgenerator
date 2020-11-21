@@ -17,7 +17,7 @@ from .lcm import *
 from .gcd import *
 from .basic_algebra import *
 from .log import *
-from .int_division import *
+from .complex_division import *
 from .decimal_to_binary import *
 from .binary_to_decimal import *
 from .divide_fractions import *
