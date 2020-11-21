@@ -63,134 +63,134 @@ mathgen.write_pdf(worksheet)
 ## algebra
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 11 | Basic Algebra | 3x + 8 = 10 | 2/3 | basic_algebra |
-| 12 | Logarithm | log3(3) | 1 | log |
-| 17 | Integer Multiplication with 2x2 Matrix | 2 * [[6, 4], [10, 9]] =  | [[12,8],[20,18]] | multiply_int_to_22_matrix |
-| 20 | Midpoint of the two point | (3,-15),(8,11)= | (5.5,-2.0) | midpoint_of_two_points |
-| 21 | Factoring Quadratic | x^2-17x+70 | (x-7)(x-10) | factoring |
-| 23 | Solve a System of Equations in R^2 | -2x + 6y = 2, -2x - y = 23 | x = -10, y = -3 | system_of_equations |
-| 24 | Distance between 2 points | Find the distance between (-6, -8) and (-13, 16) | sqrt(625) | distance_two_points |
-| 26 | Linear Equations | 8x + -13y = -111, 11x + -7y = 54 | x = 17, y = 19 | linear_equations |
-| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = -9/4x + 9 and y = 0/6x - 8 | (68/9, -8) | intersection_of_two_lines |
-| 43 | Cross Product of 2 Vectors | [9, -10, 20] X [-9, 8, 15] =  | [-310, -315, -18] | vector_cross |
-| 45 | Simple Interest | Simple interest for a principle amount of 4798 dollars, 8% rate of interest and for a time period of 4 years is =  | 1535.36 | simple_interest |
-| 46 | Multiplication of two matrices | Multiply<table><tr><td>6</td><td>-10</td><td>0</td></tr><tr><td>6</td><td>-4</td><td>1</td></tr><tr><td>-9</td><td>7</td><td>-10</td></tr></table>and<table><tr><td>-3</td><td>0</td><td>-9</td><td>-10</td></tr><tr><td>7</td><td>9</td><td>-2</td><td>-2</td></tr><tr><td>4</td><td>-10</td><td>-8</td><td>2</td></tr></table> | <table><tr><td>-88</td><td>-90</td><td>-34</td><td>-40</td></tr><tr><td>-42</td><td>-46</td><td>-54</td><td>-50</td></tr><tr><td>36</td><td>163</td><td>147</td><td>56</td></tr></table> | matrix_multiplication |
-| 50 | Quadratic Equation | Zeros of the Quadratic Equation 100x^2+147x+38=0 | [-0.33, -1.14] | quadratic_equation |
-| 65 | Multiplication of 2 complex numbers | (-1+16j) * (7-13j) =  | (201+125j) | multiply_complex_numbers |
-| 72 | Dot Product of 2 Vectors | [-19, 13, -18] . [-12, -6, -7] =  | 276 | vector_dot |
-| 74 | Inverse of a Matrix | Inverse of Matrix Matrix([[6, 24, 41], [7, 69, 75], [58, 3, 86]]) is: | Matrix([[-1903/13005, 647/13005, 343/13005], [-3748/39015, 1862/39015, 163/39015], [1327/13005, -458/13005, -82/13005]]) | invert_matrix |
-| 77 | Determinant to 2x2 Matrix | Det([[95, 84], [5, 32]]) =  |  2620 | int_matrix_22_determinant |
-| 78 | Compound Interest | Compound interest for a principle amount of 9340 dollars, 8% rate of interest and for a time period of 6 year is =  | 14821.41 | compound_interest |
-| 100 | complex Quadratic Equation | Find the roots of given Quadratic Equation 2x^2 + 7x + 5 = 0 | simplified solution : ((-1.0, -2.5)), generalized solution : ((-7 + 3)/2*2, (-7 - 3)/2*2) | complex_quadratic |
-| 105 | Combine Like terms | 8x^2 + 7x^2 + 1x^2 | 16x^2  | combine_like_terms |
-| 111 | Expanding Factored Binomial | (-7x-9)(-10x-1) | 70*x^2+97*x+9 | expanding |
+| 11 | Basic Algebra | 10x + 4 = 8 | 2/5 | basic_algebra |
+| 12 | Logarithm | log2(16) | 4 | log |
+| 17 | Integer Multiplication with 2x2 Matrix | 5 * [[9, 7], [8, 7]] =  | [[45,35],[40,35]] | multiply_int_to_22_matrix |
+| 20 | Midpoint of the two point | (-2,-6),(8,-10)= | (3.0,-8.0) | midpoint_of_two_points |
+| 21 | Factoring Quadratic | x^2-7x-8 | (x+1)(x-8) | factoring |
+| 23 | Solve a System of Equations in R^2 | 4x + 8y = 40, -2x - 4y = -20 | x = 8, y = 1 | system_of_equations |
+| 24 | Distance between 2 points | Find the distance between (14, -2) and (17, 4) | sqrt(45) | distance_two_points |
+| 26 | Linear Equations | 7x + 4y = -144, -19x + 15y = 365 | x = -20, y = -1 | linear_equations |
+| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = 4x - 9 and y = -2x + 1 | (5/3, -7/3) | intersection_of_two_lines |
+| 43 | Cross Product of 2 Vectors | [-14, 15, -1] X [-7, 1, 6] =  | [91, 91, 91] | vector_cross |
+| 45 | Simple Interest | Simple interest for a principle amount of 2349 dollars, 4% rate of interest and for a time period of 9 years is =  | 845.64 | simple_interest |
+| 46 | Multiplication of two matrices | Multiply<table><tr><td>8</td><td>6</td></tr><tr><td>-8</td><td>9</td></tr><tr><td>2</td><td>3</td></tr><tr><td>10</td><td>-1</td></tr></table>and<table><tr><td>-8</td><td>-10</td><td>-1</td></tr><tr><td>-4</td><td>-1</td><td>-1</td></tr></table> | <table><tr><td>-88</td><td>-86</td><td>-14</td></tr><tr><td>28</td><td>71</td><td>-1</td></tr><tr><td>-28</td><td>-23</td><td>-5</td></tr><tr><td>-76</td><td>-99</td><td>-9</td></tr></table> | matrix_multiplication |
+| 50 | Quadratic Equation | Zeros of the Quadratic Equation 4x^2+120x+5=0 | [-0.04, -29.96] | quadratic_equation |
+| 65 | Multiplication of 2 complex numbers | (-7-9j) * (19+8j) =  | (-61-227j) | multiply_complex_numbers |
+| 72 | Dot Product of 2 Vectors | [11, -4, 2] . [-1, 1, 19] =  | 23 | vector_dot |
+| 74 | Inverse of a Matrix | Inverse of Matrix Matrix([[43, 67, 81], [23, 71, 79], [70, 96, 7]]) is: | Matrix([[7087/168740, -7307/168740, 229/84370], [-7/220, 7/220, 1/110], [1381/84370, -281/84370, -378/42185]]) | invert_matrix |
+| 77 | Determinant to 2x2 Matrix | Det([[31, 16], [92, 93]]) =  |  1411 | int_matrix_22_determinant |
+| 78 | Compound Interest | Compound interest for a principle amount of 6310 dollars, 1% rate of interest and for a time period of 2 year is =  | 6436.83 | compound_interest |
+| 100 | complex Quadratic Equation | Find the roots of given Quadratic Equation 2x^2 + 6x + 4 = 0 | simplified solution : ((-1.0, -2.0)), generalized solution : ((-6 + 2)/2*2, (-6 - 2)/2*2) | complex_quadratic |
+| 105 | Combine Like terms | 3x^2 + 3x^1 + 1x^2 | 3x^1 + 4x^2  | combine_like_terms |
+| 111 | Expanding Factored Binomial | (-7x)(-4x-1) | 28*x^2+7*x | expanding |
 ## basic_math
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 0 | Addition | 13+25= | 38 | addition |
-| 1 | Subtraction | 24-15= | 9 | subtraction |
-| 2 | Multiplication | 2*28= | 56 | multiplication |
-| 3 | Division | 396/22= | 18 | division |
-| 6 | Square Root | sqrt(64)= | 8 | square_root |
+| 0 | Addition | 21+24= | 45 | addition |
+| 1 | Subtraction | 17-4= | 13 | subtraction |
+| 2 | Multiplication | 87*0= | 0 | multiplication |
+| 3 | Division | 136/17= | 8 | division |
+| 6 | Square Root | sqrt(16)= | 4 | square_root |
 | 8 | Square | 14^2= | 196 | square |
-| 13 | Complex Division | 19/29= | 0.66 | complex_division |
-| 16 | Fraction Division | (5/3)/(9/2) | 10/27 | divide_fractions |
-| 28 | Fraction Multiplication | (8/3)*(4/1) | 32/3 | fraction_multiplication |
+| 13 | Complex Division | 76/53= | 1.43 | complex_division |
+| 16 | Fraction Division | (9/10)/(2/7) | 63/20 | divide_fractions |
+| 28 | Fraction Multiplication | (3/9)*(1/3) | 1/9 | fraction_multiplication |
 | 31 | Factorial | 1! =  | 1 | factorial |
-| 44 | Compare Fractions | Which symbol represents the comparison between 6/9 and 1/8? | > | compare_fractions |
-| 47 | Cube Root | cuberoot of 5 upto 2 decimal places is: | 1.71 | cube_root |
-| 53 | Exponentiation | 13^4 = | 28561 | exponentiation |
-| 71 | Absolute difference between two numbers | Absolute difference between numbers -51 and -94 =  | 43 | absolute_difference |
-| 80 | Percentage of a number | What is 71% of 88? | Required percentage = 62.48% | percentage |
-| 90 | isprime | 13 | True | is_prime |
-| 97 | Power of Powers | The 10^5^10 = 10^(5*10) = 10^50 | 100000000000000000000000000000000000000000000000000 | power_of_powers |
+| 44 | Compare Fractions | Which symbol represents the comparison between 3/5 and 4/10? | > | compare_fractions |
+| 47 | Cube Root | cuberoot of 127 upto 2 decimal places is: | 5.03 | cube_root |
+| 53 | Exponentiation | 8^4 = | 4096 | exponentiation |
+| 71 | Absolute difference between two numbers | Absolute difference between numbers -67 and 11 =  | 78 | absolute_difference |
+| 80 | Percentage of a number | What is 51% of 89? | Required percentage = 45.39% | percentage |
+| 90 | isprime | 32 | False | is_prime |
+| 97 | Power of Powers | The 23^7^4 = 23^(7*4) = 23^28 | 134393854047545109686936775588697536481 | power_of_powers |
 ## calculus
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 7 | Power Rule Differentiation | 6x^2 + 4x^10 + 6x^1 + 3x^7 | 12x^1 + 40x^9 + 6x^0 + 21x^6 | power_rule_differentiation |
-| 48 | Power Rule Integration | 6x^1 + 6x^1 + 4x^8 + 9x^6 | (6/1)x^2 + (6/1)x^2 + (4/8)x^9 + (9/6)x^7 + c | power_rule_integration |
-| 88 | Differentiation | differentiate w.r.t x : d(exp(x)+4*x^3)/dx | 12*x^2 + exp(x) | differentiation |
-| 89 | Definite Integral of Quadratic Equation | The definite integral within limits 0 to 1 of the equation 14x^2 + 94x + 74 is =  | 125.6667 | definite_integral |
-| 110 | Stationary Points | f(x)=2*x^2 + 10*x + 5 | (-5/2,-15/2) | stationary_points |
+| 7 | Power Rule Differentiation | 4x^10 + 1x^7 + 9x^8 + 2x^9 | 40x^9 + 7x^6 + 72x^7 + 18x^8 | power_rule_differentiation |
+| 48 | Power Rule Integration | 9x^1 + 3x^2 + 1x^7 | (9/1)x^2 + (3/2)x^3 + (1/7)x^8 + c | power_rule_integration |
+| 88 | Differentiation | differentiate w.r.t x : d(cot(x)+3*x^(-2))/dx | -cot(x)^2 - 1 - 6/x^3 | differentiation |
+| 89 | Definite Integral of Quadratic Equation | The definite integral within limits 0 to 1 of the equation 72x^2 + 6x + 55 is =  | 82.0 | definite_integral |
+| 110 | Stationary Points | f(x)=x^3 + 9*x^2 + 3*x + 3 | (-3 - 2*sqrt(2),(-3 - 2*sqrt(2))**3 - 6*sqrt(2) - 6 + 9*(-3 - 2*sqrt(2))**2),(-3 + 2*sqrt(2),-6 + (-3 + 2*sqrt(2))**3 + 9*(-3 + 2*sqrt(2))**2 + 6*sqrt(2)) | stationary_points |
 ## computer_science
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 4 | Binary Complement 1s | 11001011= | 00110100 | binary_complement_1s |
-| 5 | Modulo Division | 94%91= | 3 | modulo_division |
-| 14 | Decimal to Binary | Binary of 51= | 110011 | decimal_to_binary |
-| 15 | Binary to Decimal | 111111 | 63 | binary_to_decimal |
-| 56 | Fibonacci Series | The Fibonacci Series of the first 12 numbers is ? | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] | fibonacci_series |
-| 62 | nth Fibonacci number | What is the 99th Fibonacci number? | 218922995834555891712 | nth_fibonacci_number |
-| 64 | Binary to Hexidecimal | 0001111 | 0xf | binary_to_hex |
-| 73 | Binary 2's Complement | 2's complement of 110010011 = | 1101101 | binary_2s_complement |
-| 79 | Decimal to Hexadecimal | Binary of 916= | 0x394 | decimal_to_hexadeci |
-| 84 | Converts decimal to octal | The decimal number 3202 in Octal is:  | 0o6202 | decimal_to_octal |
-| 91 | Binary Coded Decimal to Integer | Integer of Binary Coded Decimal 1 is =  | 4151 | bcd_to_decimal |
-| 103 | Decimal to Binary Coded Decimal | BCD of Decimal Number 8449 is =  | 2101 | decimal_to_bcd |
+| 4 | Binary Complement 1s | 011= | 100 | binary_complement_1s |
+| 5 | Modulo Division | 79%59= | 20 | modulo_division |
+| 14 | Decimal to Binary | Binary of 3= | 11 | decimal_to_binary |
+| 15 | Binary to Decimal | 111100 | 60 | binary_to_decimal |
+| 56 | Fibonacci Series | The Fibonacci Series of the first 15 numbers is ? | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377] | fibonacci_series |
+| 62 | nth Fibonacci number | What is the 80th Fibonacci number? | 23416728348467744 | nth_fibonacci_number |
+| 64 | Binary to Hexidecimal | 11 | 0x3 | binary_to_hex |
+| 73 | Binary 2's Complement | 2's complement of  = |  | binary_2s_complement |
+| 79 | Decimal to Hexadecimal | Binary of 308= | 0x134 | decimal_to_hexadeci |
+| 84 | Converts decimal to octal | The decimal number 4031 in Octal is:  | 0o7677 | decimal_to_octal |
+| 91 | Binary Coded Decimal to Integer | Integer of Binary Coded Decimal 1 is =  | 5416 | bcd_to_decimal |
+| 103 | Decimal to Binary Coded Decimal | BCD of Decimal Number 4889 is =  | 1319 | decimal_to_bcd |
 ## geometry
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 18 | Area of Triangle | Area of triangle with side lengths: 1 15 20 =  | (2.623718239906474e-15+42.8485705712571j) | area_of_triangle |
-| 19 | Triangle exists check | Does triangle with sides 40, 33 and 15 exist? | Yes | valid_triangle |
-| 22 | Third Angle of Triangle | Third angle of triangle with angles 35 and 10 =  | 135 | third_angle_of_triangle |
-| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 20 and 9 =  | 21.93 | pythagorean_theorem |
-| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 20 sides | 162.0 | angle_regular_polygon |
-| 32 | Surface Area of Cube | Surface area of cube with side = 8m is | 384 m^2 | surface_area_cube |
-| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 16m, 9m, 9m is | 738 m^2 | surface_area_cuboid |
-| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 8m and radius = 7m is | 659 m^2 | surface_area_cylinder |
-| 35 | Volum of Cube | Volume of cube with side = 3m is | 27 m^3 | volume_cube |
-| 36 | Volume of Cuboid | Volume of cuboid with sides = 15m, 13m, 8m is | 1560 m^3 | volume_cuboid |
-| 37 | Volume of cylinder | Volume of cylinder with height = 24m and radius = 12m is | 10857 m^3 | volume_cylinder |
-| 38 | Surface Area of cone | Surface area of cone with height = 4m and radius = 8m is | 425 m^2 | surface_area_cone |
-| 39 | Volume of cone | Volume of cone with height = 21m and radius = 14m is | 4310 m^3 | volume_cone |
-| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 100 , 102, 61 = | 97 | fourth_angle_of_quadrilateral |
-| 57 | Trigonometric Values | What is tan(0)? | 0 | basic_trigonometry |
-| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 12 sides =  | 1800 | sum_of_polygon_angles |
-| 60 | Surface Area of Sphere | Surface area of Sphere with radius = 2m is | 50.26548245743669 m^2 | surface_area_sphere |
-| 61 | Volume of Sphere | Volume of sphere with radius 87 m =  | 2758330.916222452 m^3 | volume_sphere |
-| 70 | Angle between 2 vectors | angle between the vectors [395.2, 94.94, 487.59, 915.24, 212.71, 151.62, 941.03, 166.04, 137.63, 142.14] and [959.66, 406.65, 510.24, 773.64, 637.71, 431.66, 300.24, 482.26, 290.31, 299.93] is: | 0.69 radians | angle_btw_vectors |
-| 75 | Area of a Sector | Given radius, 5 and angle, 124. Find the area of the sector. | Area of sector = 27.05260 | sector_area |
-| 86 | Degrees to Radians | Angle 267 in radians is =  | 4.66 | degree_to_rad |
-| 87 | Radians to Degrees | Angle 1 in degrees is =  | 57.3 | radian_to_deg |
-| 95 | Curved surface area of a cylinder | What is the curved surface area of a cylinder of radius, 34 and height, 64? | CSA of cylinder = 13672.21 | curved_surface_area_cylinder |
-| 96 | Perimeter of Polygons | The perimeter of a 5 sided polygon with lengths of [17, 118, 88, 80, 100]cm is:  | 403 | perimeter_of_polygons |
-| 104 | Circumference | Circumference of circle with radius 92 | 578.0530482605219 | circumference |
-| 108 | Arc length of Angle | Given radius, 45 and angle, 198. Find the arc length of the angle. | Arc length of the angle = 155.50884 | arc_length |
-| 112 | Area of Circle | Area of circle with radius 66 | 13690.285714285714 | area_of_circle |
+| 18 | Area of Triangle | Area of triangle with side lengths: 6 8 19 =  | (3.715326154880634e-15+60.675880710542636j) | area_of_triangle |
+| 19 | Triangle exists check | Does triangle with sides 8, 30 and 7 exist? | No | valid_triangle |
+| 22 | Third Angle of Triangle | Third angle of triangle with angles 30 and 54 =  | 96 | third_angle_of_triangle |
+| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 20 and 4 =  | 20.40 | pythagorean_theorem |
+| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 14 sides | 154.29 | angle_regular_polygon |
+| 32 | Surface Area of Cube | Surface area of cube with side = 7m is | 294 m^2 | surface_area_cube |
+| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 3m, 1m, 15m is | 126 m^2 | surface_area_cuboid |
+| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 27m and radius = 9m is | 2035 m^2 | surface_area_cylinder |
+| 35 | Volum of Cube | Volume of cube with side = 7m is | 343 m^3 | volume_cube |
+| 36 | Volume of Cuboid | Volume of cuboid with sides = 11m, 6m, 3m is | 198 m^3 | volume_cuboid |
+| 37 | Volume of cylinder | Volume of cylinder with height = 34m and radius = 20m is | 42725 m^3 | volume_cylinder |
+| 38 | Surface Area of cone | Surface area of cone with height = 31m and radius = 14m is | 2111 m^2 | surface_area_cone |
+| 39 | Volume of cone | Volume of cone with height = 23m and radius = 1m is | 24 m^3 | volume_cone |
+| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 117 , 34, 65 = | 144 | fourth_angle_of_quadrilateral |
+| 57 | Trigonometric Values | What is sin(60)? | √3/2 | basic_trigonometry |
+| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 4 sides =  | 360 | sum_of_polygon_angles |
+| 60 | Surface Area of Sphere | Surface area of Sphere with radius = 13m is | 2123.7166338267 m^2 | surface_area_sphere |
+| 61 | Volume of Sphere | Volume of sphere with radius 9 m =  | 3053.628059289279 m^3 | volume_sphere |
+| 70 | Angle between 2 vectors | angle between the vectors [125.74, 310.83] and [290.27, 233.14] is: | 0.51 radians | angle_btw_vectors |
+| 75 | Area of a Sector | Given radius, 41 and angle, 1. Find the area of the sector. | Area of sector = 14.66949 | sector_area |
+| 86 | Degrees to Radians | Angle 244 in radians is =  | 4.26 | degree_to_rad |
+| 87 | Radians to Degrees | Angle 3 in degrees is =  | 171.89 | radian_to_deg |
+| 95 | Curved surface area of a cylinder | What is the curved surface area of a cylinder of radius, 16 and height, 41? | CSA of cylinder = 4121.77 | curved_surface_area_cylinder |
+| 96 | Perimeter of Polygons | The perimeter of a 3 sided polygon with lengths of [117, 20, 100]cm is:  | 237 | perimeter_of_polygons |
+| 104 | Circumference | Circumference of circle with radius 22 | 138.23007675795088 | circumference |
+| 108 | Arc length of Angle | Given radius, 15 and angle, 88. Find the arc length of the angle. | Arc length of the angle = 23.03835 | arc_length |
+| 112 | Area of Circle | Area of circle with radius 9 | 254.57142857142856 | area_of_circle |
 ## misc
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 9 | LCM (Least Common Multiple) | LCM of 3 and 12 = | 12 | lcm |
-| 10 | GCD (Greatest Common Denominator) | GCD of 3 and 9 =  | 3 | gcd |
-| 27 | Prime Factorisation | Find prime factors of 190 | [2, 5, 19] | prime_factors |
-| 40 | Common Factors | Common Factors of 43 and 94 =  | [1] | common_factors |
-| 51 | HCF (Highest Common Factor) | HCF of 18 and 11 =  | 1 | hcf |
-| 55 | Comparing surds | Fill in the blanks 64^(1/8) _ 38^(1/7) | > | surds_comparison |
-| 63 | Profit or Loss Percent | Profit percent when CP = 193 and SP = 876 is:  | 353.8860103626943 | profit_loss_percent |
-| 66 | Geometric Progression | For the given GP [6, 42, 294, 2058, 14406, 100842] ,Find the value of a,common ratio,6th term value, sum upto 8th term | The value of a is 6, common ratio is 7 , 6th term is 100842 , sum upto 8th term is 5764800.0 | geometric_progression |
-| 67 | Geometric Mean of N Numbers | Geometric mean of 3 numbers 38 , 65 and 39 =  | (38*65*39)^(1/3) = 45.840975768757424 | geometric_mean |
-| 68 | Harmonic Mean of N Numbers | Harmonic mean of 3 numbers 14 , 20 and 53 =  |  3/((1/14) + (1/20) + (1/53)) = 21.38328530259366 | harmonic_mean |
-| 69 | Euclidian norm or L2 norm of a vector | Euclidian norm or L2 norm of the vector[317.9880634312611, 628.8368810535857, 407.8183503281746, 822.4501014932654, 319.1817378122325, 161.7987092039548, 908.7922300469593, 4.453912375814051, 796.3181726847199, 696.9354536922802, 651.7673559381681, 511.34562947699845, 824.5863614061724, 76.39867279289648, 489.9631394752603, 607.379368438552, 787.6619389442924, 846.7945116397568, 135.6457464412647] is: | 2598.078695453033 | euclidian_norm |
-| 81 | Celsius To Fahrenheit | Convert 19 degrees Celsius to degrees Fahrenheit = | 66.2 | celsius_to_fahrenheit |
-| 82 | AP Term Calculation | Find the term number 30 of the AP series: -8, -106, -204 ...  | -2850 | arithmetic_progression_term |
-| 83 | AP Sum Calculation | Find the sum of first 72 terms of the AP series: 88, 44, 0 ...  | -106128.0 | arithmetic_progression_sum |
-| 85 | Converts decimal to Roman Numerals | The number 3688 in Roman Numerals is:  | MMMDCLXXXVIII | decimal_to_roman_numerals |
-| 92 | Complex To Polar Form | rexp(itheta) =  | 17.89exp(i0.46) | complex_to_polar |
-| 93 | Union,Intersection,Difference of Two Sets | Given the two sets a={2, 3, 5, 7} ,b={1, 5, 8, 9, 10}.Find the Union,intersection,a-b,b-a and symmetric difference | Union is {1, 2, 3, 5, 7, 8, 9, 10},Intersection is {5}, a-b is {2, 3, 7},b-a is {8, 1, 10, 9}, Symmetric difference is {1, 2, 3, 7, 8, 9, 10} | set_operation |
-| 94 | Base Conversion | Convert AA69 from base 13 to base 2. | 101110011000011 | base_conversion |
-| 98 | Quotient of Powers with Same Base | The Quotient of 34^9 and 34^6 = 34^(9-6) = 34^3 | 39304 | quotient_of_power_same_base |
-| 99 | Quotient of Powers with Same Power | The Quotient of 26^2 and 36^2 = (26/36)^2 = 0.7222222222222222^2 | 0.5216049382716049 | quotient_of_power_same_power |
-| 101 | Leap Year or Not | Year 2061  | is not a leap year | is_leap_year |
-| 102 | Minute to Hour conversion | Convert 409 minutes to Hours & Minutes | 6 hours and 49 minutes | minutes_to_hours |
-| 106 | signum function | signum of -824 is = | -1 | signum_function |
-| 109 | Binomial distribution | A manufacturer of metal pistons finds that, on average, 31.21% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 14 pistons will contain no more than 1 rejected pistons? | 3.91 | binomial_distribution |
+| 9 | LCM (Least Common Multiple) | LCM of 6 and 13 = | 78 | lcm |
+| 10 | GCD (Greatest Common Denominator) | GCD of 6 and 19 =  | 1 | gcd |
+| 27 | Prime Factorisation | Find prime factors of 88 | [2, 2, 2, 11] | prime_factors |
+| 40 | Common Factors | Common Factors of 5 and 1 =  | [1] | common_factors |
+| 51 | HCF (Highest Common Factor) | HCF of 12 and 16 =  | 4 | hcf |
+| 55 | Comparing surds | Fill in the blanks 38^(1/3) _ 72^(1/7) | > | surds_comparison |
+| 63 | Profit or Loss Percent | Loss percent when CP = 890 and SP = 392 is:  | 55.955056179775276 | profit_loss_percent |
+| 66 | Geometric Progression | For the given GP [3, 27, 243, 2187, 19683, 177147] ,Find the value of a,common ratio,8th term value, sum upto 8th term | The value of a is 3, common ratio is 9 , 8th term is 14348907 , sum upto 8th term is 16142520.0 | geometric_progression |
+| 67 | Geometric Mean of N Numbers | Geometric mean of 4 numbers 68 , 99 , 69 , 94 =  | (68*99*69*94)^(1/4) = 81.28871585461766 | geometric_mean |
+| 68 | Harmonic Mean of N Numbers | Harmonic mean of 2 numbers 36 and 89 =  |  2/((1/36) + (1/89)) = 51.264 | harmonic_mean |
+| 69 | Euclidian norm or L2 norm of a vector | Euclidian norm or L2 norm of the vector[500.9951948616654, 42.203693843008814, 503.055665827151, 997.8018016538981, 720.8110612915443, 219.71485715574812, 445.67377783903027] is: | 1505.9611867978413 | euclidian_norm |
+| 81 | Celsius To Fahrenheit | Convert -40 degrees Celsius to degrees Fahrenheit = | -40.0 | celsius_to_fahrenheit |
+| 82 | AP Term Calculation | Find the term number 82 of the AP series: -86, -93, -100 ...  | -653 | arithmetic_progression_term |
+| 83 | AP Sum Calculation | Find the sum of first 71 terms of the AP series: -62, -8, 46 ...  | 129788.0 | arithmetic_progression_sum |
+| 85 | Converts decimal to Roman Numerals | The number 1282 in Roman Numerals is:  | MCCLXXXII | decimal_to_roman_numerals |
+| 92 | Complex To Polar Form | rexp(itheta) =  | 16.12exp(i-1.05) | complex_to_polar |
+| 93 | Union,Intersection,Difference of Two Sets | Given the two sets a={10, 2, 5, 7} ,b={2, 3, 6, 8, 10}.Find the Union,intersection,a-b,b-a and symmetric difference | Union is {2, 3, 5, 6, 7, 8, 10},Intersection is {10, 2}, a-b is {5, 7},b-a is {8, 3, 6}, Symmetric difference is {3, 5, 6, 7, 8} | set_operation |
+| 94 | Base Conversion | Convert E079 from base 16 to base 2. | 1110000001111001 | base_conversion |
+| 98 | Quotient of Powers with Same Base | The Quotient of 48^6 and 48^7 = 48^(6-7) = 48^-1 | 0.020833333333333332 | quotient_of_power_same_base |
+| 99 | Quotient of Powers with Same Power | The Quotient of 2^3 and 17^3 = (2/17)^3 = 0.11764705882352941^3 | 0.001628332994097293 | quotient_of_power_same_power |
+| 101 | Leap Year or Not | Year 2016  | is a leap year | is_leap_year |
+| 102 | Minute to Hour conversion | Convert 509 minutes to Hours & Minutes | 8 hours and 29 minutes | minutes_to_hours |
+| 106 | signum function | signum of 750 is = | 1 | signum_function |
+| 109 | Binomial distribution | A manufacturer of metal pistons finds that, on average, 39.24% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 15 pistons will contain no more than 7 rejected pistons? | 80.44 | binomial_distribution |
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name |
 |------|-------|-----------------|------------------|---------------|
-| 30 | Combinations of Objects | Number of combinations from 19 objects picked 3 at a time  | 969 | combinations |
-| 42 | Permutations | Number of Permutations from 14 objects picked 4 at a time =   | 24024 | permutation |
-| 52 | Probability of a certain sum appearing on faces of dice | If 3 dice are rolled at the same time, the probability of getting a sum of 5 = | 6/216 | dice_sum_probability |
-| 54 | Confidence interval For sample S | The confidence interval for sample [228, 226, 239, 289, 229, 209, 230, 213, 236, 235, 206, 243, 272, 293, 264, 201, 214, 207, 257, 240, 299, 283, 262, 284, 260, 222, 237, 273, 220, 247, 276, 271, 245, 259, 277, 290, 238] with 80% confidence is | (253.74831626949535, 242.14357562239653) | confidence_interval |
-| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[47, 10, 22, 19, 42, 37, 17, 15, 31, 48, 40, 16, 18, 28, 19] | The Mean is 27.266666666666666 , Standard Deviation is 149.2622222222222, Variance is 12.21729193488566 | data_summary |
-| 76 | Mean and Median | Given the series of numbers [43, 64, 56, 77, 71, 20, 76, 72, 92, 10]. find the arithmatic mean and mdian of the series | Arithmetic mean of the series is 58.1 and Arithmetic median of this series is 67.5 | mean_median |
-| 107 | Conditional Probability | Someone tested positive for a nasty disease which only 1.24% of population have. Test sensitivity (true positive) is equal to SN= 90.15% whereas test specificity (true negative) SP= 93.47%. What is the probability that this guy really has that disease? | 14.77% | conditional_probability |
+| 30 | Combinations of Objects | Number of combinations from 12 objects picked 3 at a time  | 220 | combinations |
+| 42 | Permutations | Number of Permutations from 13 objects picked 1 at a time =   | 13 | permutation |
+| 52 | Probability of a certain sum appearing on faces of dice | If 2 dice are rolled at the same time, the probability of getting a sum of 6 = | 5/36 | dice_sum_probability |
+| 54 | Confidence interval For sample S | The confidence interval for sample [270, 279, 280, 228, 245, 203, 254, 207, 218, 243, 205, 258, 244, 288, 278, 269, 216, 297, 215, 277, 296, 282, 257, 242, 246, 274, 224, 299, 239, 230, 225, 295, 284] with 99% confidence is | (266.76150517633465, 240.3294039145744) | confidence_interval |
+| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[44, 7, 14, 15, 20, 43, 46, 29, 13, 15, 22, 45, 6, 24, 25] | The Mean is 24.533333333333335 , Standard Deviation is 181.58222222222224, Variance is 13.475244792664148 | data_summary |
+| 76 | Mean and Median | Given the series of numbers [76, 34, 10, 78, 55, 74, 54, 91, 19, 39]. find the arithmatic mean and mdian of the series | Arithmetic mean of the series is 53.0 and Arithmetic median of this series is 54.5 | mean_median |
+| 107 | Conditional Probability | Someone tested positive for a nasty disease which only 0.47% of population have. Test sensitivity (true positive) is equal to SN= 93.50% whereas test specificity (true negative) SP= 98.52%. What is the probability that this guy really has that disease? | 22.98% | conditional_probability |

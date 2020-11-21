@@ -2,6 +2,7 @@ from mathgenerator.mathgen import *
 
 write_list = []
 subjects = ['algebra', 'basic_math', 'calculus', 'computer_science', 'geometry', 'misc', 'statistics']
+wList = getGenList()
 
 def array2markdown_table(string):
     string = string.replace("[[", "<table><tr><td>")
@@ -46,7 +47,7 @@ def write_table_of_contents():
     with open('README.md', "w") as g:
         g.writelines(lines)
 
-def write_row(item):
+def gen_to_row_string(item):
     myGen = item[2]
     # NOTE: renamed 'sol' to 'solu' to make it look nicer
     prob, solu = myGen()
@@ -90,27 +91,27 @@ def write_subject_table(subject_name, full_gen_list):
 
     # Add each item to write_list
     for item in subject_list:
-        write_list.append(write_row(item))
+        write_list.append(gen_to_row_string(item))
 
 
-wList = getGenList()
-lines = []
+def main():
+    write_table_of_contents()
+    for subject in subjects:
+        write_subject_table(subject, wList)
+        
+    with open('README.md', "r") as g:
+        lines = g.readlines()
 
-write_table_of_contents()
+        line = lines.index('## List of Generators\n')
+        lines = lines[:line + 1]
 
-for subject in subjects:
-    write_subject_table(subject, wList)
+        for write_line in write_list:
+            lines.append(write_line)
 
-with open('README.md', "r") as g:
-    lines = g.readlines()
+    with open('README.md', "w") as g:
+        g.writelines(lines)
 
-    line = lines.index('## List of Generators\n')
-    lines = lines[:line + 1]
+    print("New README.md table generated")
 
-    for write_line in write_list:
-        lines.append(write_line)
-
-with open('README.md', "w") as g:
-    g.writelines(lines)
-
-print("New README.md table generated")
+if __name__ == "__main__":
+    main()
