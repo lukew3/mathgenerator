@@ -2,6 +2,9 @@ from .__init__ import *
 
 
 def additionFunc(maxSum=99, maxAddend=50):
+    print(maxSum)
+    if maxAddend > maxSum:
+        maxAddend = maxSum
     a = random.randint(0, maxAddend)
     # The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
     b = random.randint(0, min((maxSum - a), maxAddend))

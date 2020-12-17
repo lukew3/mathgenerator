@@ -6,9 +6,9 @@ genList = getGenList()
 
 
 # || Non-generator Functions
-def genById(id):
+def genById(id, *args, **kwargs):
     generator = genList[id][2]
-    return (generator())
+    return (generator(*args, **kwargs))
 
 
 def make_worksheet(title):
