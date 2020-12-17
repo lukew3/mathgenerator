@@ -10,9 +10,6 @@ from mathgenerator import mathgen
 #    print(item[2])
 
 # print(mathgen.getGenList())
-#print(mathgen.genById(10))
 
-#Make a pdf with 10 problems of generator id 1
-# mathgen.makePdf(0, 10)
-
-print(mathgen.genById(0, maxSum=20))
+print(mathgen.genById(0, maxSum=20, style='latex')[0])
+print(mathgen.genById(1, style='latex'))
