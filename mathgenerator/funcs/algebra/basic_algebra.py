@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def basicAlgebraFunc(maxVariable=10):
+def basicAlgebraFunc(maxVariable=10, style='raw'):
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
@@ -20,8 +20,12 @@ def basicAlgebraFunc(maxVariable=10):
     elif a == 1 or a == i:
         x = f"{c - b}"
 
-    problem = f"{a}x + {b} = {c}"
-    solution = x
+    if style == 'latex':
+        problem = f"\\({a}x + {b} = {c}\\)"
+        solution = "\\(" + x + "\\)"
+    else:
+        problem = f"{a}x + {b} = {c}"
+        solution = x
     return problem, solution
 
 
