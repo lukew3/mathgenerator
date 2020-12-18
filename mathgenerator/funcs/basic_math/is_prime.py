@@ -3,18 +3,18 @@ from .__init__ import *
 
 def isprime(max_a=100):
     a = random.randint(2, max_a)
-    problem = a
+    problem = f"Is {a} prime?"
     if a == 2:
-        solution = True
+        solution = "Yes" 
         return (problem, solution)
     if a % 2 == 0:
-        solution = False
+        solution = "No"
         return (problem, solution)
     for i in range(3, a // 2 + 1, 2):
         if a % i == 0:
-            solution = False
+            solution = "No"
             return (problem, solution)
-    solution = True
+    solution = "Yes"
     return (problem, solution)
 
 

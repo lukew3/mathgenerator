@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def compareFractionsFunc(maxVal=10):
+def compareFractionsFunc(maxVal=10, style='raw'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -21,8 +21,11 @@ def compareFractionsFunc(maxVal=10):
         solution = "<"
     else:
         solution = "="
-
-    problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
+    
+    if style == 'latex':
+        problem = f"Which symbol represents the comparison between \\(\\frac{{{a}}}{{{b}}}\\) and \\(\\frac{{{c}}}{{{d}}}\\)?"
+    else:
+        problem = f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?"
     return problem, solution
 
 

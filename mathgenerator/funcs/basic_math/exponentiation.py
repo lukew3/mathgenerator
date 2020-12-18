@@ -1,12 +1,16 @@
 from .__init__ import *
 
 
-def exponentiationFunc(maxBase=20, maxExpo=10):
+def exponentiationFunc(maxBase=20, maxExpo=10, style='raw'):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
 
-    problem = f"{base}^{expo} ="
-    solution = str(base**expo)
+    if style == 'latex':
+        problem = f"\\({base}^{{{expo}}}\\)"
+        solution = "\\(" + str(base**expo) + "\\)" 
+    else:
+        problem = f"{base}^{expo} ="
+        solution = str(base**expo)
     return problem, solution
 
 

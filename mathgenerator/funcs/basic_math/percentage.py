@@ -7,7 +7,7 @@ def percentageFunc(maxValue=99, maxpercentage=99):
     problem = f"What is {a}% of {b}?"
     percentage = a / 100 * b
     formatted_float = "{:.2f}".format(percentage)
-    solution = f"Required percentage = {formatted_float}%"
+    solution = f"{formatted_float}"
     return problem, solution
 
 
