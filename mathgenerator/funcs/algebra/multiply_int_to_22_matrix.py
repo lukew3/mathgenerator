@@ -15,8 +15,8 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, style='raw'):
     d1 = d * constant
 
     if style == 'latex':
-        problem = "\\(" + str(constant) + "\\cdot\\begin{bmatrix}" + str(a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(d) + "\end{bmatrix}=\\)"
-        solution = "\\(\\begin{bmatrix}" + str(a1) + "&" + str(b1) + "\\\\" + str(c1) + "&" + str(d1) + "\end{bmatrix}\\)"
+        problem = "\\(" + str(constant) + "\\cdot\\begin{bmatrix}" + str(a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(d) + "\\end{bmatrix}=\\)"
+        solution = "\\(\\begin{bmatrix}" + str(a1) + "&" + str(b1) + "\\\\" + str(c1) + "&" + str(d1) + "\\end{bmatrix}\\)"
     else:
         problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
         solution = f"[[{a1},{b1}],[{c1},{d1}]]"

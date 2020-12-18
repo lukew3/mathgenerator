@@ -10,14 +10,13 @@ def additionFunc(maxSum=99, maxAddend=50, style='raw'):
     c = a + b
 
     if style == 'latex':
-        problem = "\(" + str(a) + '+' + str(b) + "\)"
+        problem = "\\(" + str(a) + '+' + str(b) + "\\)"
         solution = str(c)
         return problem, solution
     else:
         problem = str(a) + "+" + str(b) + "="
         solution = str(c)
         return problem, solution
-
 
 
 addition = Generator("Addition", 0, "a+b=", "c", additionFunc)
