@@ -24,7 +24,6 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
     p3 = intParser(b)
     p4 = intParser(x2)
 
-    
     if p1 == "+1":
         p1 = ""
     elif len(p1) > 0 and p1[0] == "+":
@@ -39,7 +38,6 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
         c1 = ""
     elif len(c1) > 0 and c1[0] == "+":
         c1 = c1[1:]  # Cuts off the plus for readability
-    
     if c2 == "+1":
         c2 = ""
     solution = f"{c1}*x^2{c2}*x{c3}"
