@@ -7,7 +7,7 @@ def divisionToIntFunc(maxA=25, maxB=25, style='raw'):
 
     divisor = a * b
     dividend = random.choice([a, b])
-    quotient = divisor / dividend
+    quotient = divisor // dividend
 
     if style == 'latex':
         problem = "\\(" + str(divisor) + "\\div" + str(dividend) + "=\\)"
