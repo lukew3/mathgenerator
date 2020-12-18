@@ -10,7 +10,7 @@ def multiplicationFunc(maxRes=99, maxMulti=99, style='raw'):
     c = a * b
 
     if style == 'latex':
-        problem = "\\(" + str(a) + "\cdot" + str(b) + "=\\)"
+        problem = "\\(" + str(a) + "\\cdot" + str(b) + "=\\)"
         solution = "\\(" + str(c) + "\\)"
     else:
         problem = str(a) + "*" + str(b) + "="

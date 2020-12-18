@@ -6,7 +6,7 @@ def complexDivisionFunc(maxRes=99, maxDivid=99, style='raw'):
     b = random.randint(1, min(maxRes, maxDivid))
     c = a / b
     c = round(c, 2)
-    
+
     if style == 'latex':
         problem = "\\(" + str(a) + "\\div" + str(b) + "=\\)"
         solution = "\\(" + str(c) + "\\)"

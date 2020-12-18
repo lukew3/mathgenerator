@@ -14,7 +14,7 @@ def divisionToIntFunc(maxA=25, maxB=25, style='raw'):
         solution = "\\(" + str(quotient) + "\\)"
     else:
         problem = f"{divisor}/{dividend}="
-        solution = str(quotient) 
+        solution = str(quotient)
     return problem, solution
 
 

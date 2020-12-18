@@ -22,8 +22,8 @@ def divideFractionsFunc(maxVal=10, style='raw'):
     tmp_d = b * c
 
     gcd = calculate_gcd(tmp_n, tmp_d)
-    sol_numerator = tmp_n//gcd
-    sol_denominator = tmp_d//gcd
+    sol_numerator = tmp_n // gcd
+    sol_denominator = tmp_d // gcd
     x = f"{sol_numerator}/{sol_denominator}"
 
     if (tmp_d == 1 or tmp_d == gcd):
