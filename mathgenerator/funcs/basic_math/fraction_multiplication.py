@@ -26,7 +26,7 @@ def multiplyFractionsFunc(maxVal=10, style='raw'):
 
     if (tmp_d == 1 or tmp_d == gcd):
         x = f"{tmp_n//gcd}"
-    
+
     if style == 'latex':
         problem = f"\\(\\frac{{{a}}}{{{b}}}\\cdot\\frac{{{c}}}{{{d}}}=\\)"
         if (tmp_d == 1 or tmp_d == gcd):
