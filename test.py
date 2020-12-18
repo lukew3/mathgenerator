@@ -1,3 +1,3 @@
 from mathgenerator import mathgen
 
-print(mathgen.genById(17, style='latex'))
+print(mathgen.genById(17, style='latex')[0])
