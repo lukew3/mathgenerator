@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplicationFunc(maxRes=99, maxMulti=99):
+def multiplicationFunc(maxRes=99, maxMulti=99, style='raw'):
     a = random.randint(0, maxMulti)
     if a == 0:
         b = random.randint(0, maxRes)
@@ -9,8 +9,12 @@ def multiplicationFunc(maxRes=99, maxMulti=99):
         b = random.randint(0, min(int(maxMulti / a), maxRes))
     c = a * b
 
-    problem = str(a) + "*" + str(b) + "="
-    solution = str(c)
+    if style == 'latex':
+        problem = "\\(" + str(a) + "\cdot" + str(b) + "=\\)"
+        solution = "\\(" + str(c) + "\\)"
+    else:
+        problem = str(a) + "*" + str(b) + "="
+        solution = str(c)
     return problem, solution
 
 

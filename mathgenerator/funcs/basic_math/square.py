@@ -1,12 +1,16 @@
 from .__init__ import *
 
 
-def squareFunc(maxSquareNum=20):
+def squareFunc(maxSquareNum=20, style='raw'):
     a = random.randint(1, maxSquareNum)
     b = a * a
-
-    problem = str(a) + "^2" + "="
-    solution = str(b)
+    
+    if style == 'latex':
+        problem = "\\(" + str(a) + "^{2}=\\)"
+        solution = "\\(" + str(b) + "\\)"
+    else:
+        problem = str(a) + "^2" + "="
+        solution = str(b)
     return problem, solution
 
 
