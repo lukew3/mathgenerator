@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplyFractionsFunc(maxVal=10):
+def multiplyFractionsFunc(maxVal=10, style='raw'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -26,9 +26,16 @@ def multiplyFractionsFunc(maxVal=10):
 
     if (tmp_d == 1 or tmp_d == gcd):
         x = f"{tmp_n//gcd}"
-
-    problem = f"({a}/{b})*({c}/{d})"
-    solution = x
+    
+    if style == 'latex':
+        problem = f"\\(\\frac{{{a}}}{{{b}}}\\cdot\\frac{{{c}}}{{{d}}}=\\)"
+        if (tmp_d == 1 or tmp_d == gcd):
+            solution = f"\\(\\frac{{{tmp_n}}}{{{gcd}}}\\)"
+        else:
+            solution = f"\\(\\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}\\)"
+    else:
+        problem = f"({a}/{b})*({c}/{d})"
+        solution = x
     return problem, solution
 
 

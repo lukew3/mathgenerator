@@ -1,4 +1,4 @@
 from mathgenerator import mathgen
 
-for _ in range(1000):
-    print(mathgen.genById(111))
+for _ in range(100):
+    print(mathgen.genById(28, style='latex'))
