@@ -7,7 +7,7 @@ def exponentiationFunc(maxBase=20, maxExpo=10, style='raw'):
 
     if style == 'latex':
         problem = f"\\({base}^{{{expo}}}\\)"
-        solution = "\\(" + str(base**expo) + "\\)" 
+        solution = "\\(" + str(base**expo) + "\\)"
     else:
         problem = f"{base}^{expo} ="
         solution = str(base**expo)

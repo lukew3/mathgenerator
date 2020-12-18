@@ -5,7 +5,7 @@ def isprime(max_a=100):
     a = random.randint(2, max_a)
     problem = f"Is {a} prime?"
     if a == 2:
-        solution = "Yes" 
+        solution = "Yes"
         return (problem, solution)
     if a % 2 == 0:
         solution = "No"

@@ -21,7 +21,7 @@ def compareFractionsFunc(maxVal=10, style='raw'):
         solution = "<"
     else:
         solution = "="
-    
+
     if style == 'latex':
         problem = f"Which symbol represents the comparison between \\(\\frac{{{a}}}{{{b}}}\\) and \\(\\frac{{{c}}}{{{d}}}\\)?"
     else:
