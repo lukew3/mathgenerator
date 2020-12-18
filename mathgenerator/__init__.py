@@ -40,6 +40,7 @@ class Generator:
             del kwargs['style']
             return self.func(*args, **kwargs)
 
+
 def getGenList():
     correctedList = genList[-1:] + genList[:-1]
     # Orders list by id
