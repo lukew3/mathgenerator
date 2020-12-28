@@ -53,7 +53,7 @@ mathgen.write_pdf(worksheet)
 ```
 
 ## Documentation
-`getGenList()` returns a list of all generators in the repository in the format `[id, title, self, funcname]`
+`getGenList()` returns a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
 
 `genById(id)` generates a problem, solution set with generator id `id` in the form of a list in the format `[problem, solution]`
 
