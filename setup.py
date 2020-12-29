@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='mathgenerator',
-      version='1.1.9',
+      version='1.1.10',
       description='An open source solution for generating math problems',
       url='https://github.com/lukew3/mathgenerator',
       author='Luke Weiler',
