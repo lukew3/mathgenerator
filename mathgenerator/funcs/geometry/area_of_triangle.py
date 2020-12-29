@@ -11,7 +11,7 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20):
 
     problem = "Area of triangle with side lengths: " + \
         str(a) + " " + str(b) + " " + str(c) + " = "
-    solution = area
+    solution = str(area)
     return problem, solution
 
 
