@@ -21,6 +21,7 @@ Here's what needs to be included in a new generator:
   * Must have the following arguments (title, id, example problem, example solution, function, list of kwargs)
     * Most of these are ways of keeping track of generators and providing documentation.
     * skillid should be the number of the lowest unassigned id.
+      * Use this id: <!--Start next id-->113<!--End next id-->. (This is updated automatically after a new generator is added)
     * function should be the name of the function defined above without quotes
     * List of kwargs should be a list of the kwargs that the function takes as strings. Used in documentation.
 

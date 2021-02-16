@@ -107,6 +107,24 @@ def write_subject_table(subject_name, full_gen_list):
         write_list.append(gen_to_row_string(item))
 
 
+def update_next_id():
+    next_id = len(getGenList())
+    new_lines = ""
+    file = open('CONTRIBUTING.md', 'r')
+    for line in file:
+        new_line = ""
+        if "<!--Start next id-->" in line:
+            new_line = f"      * Use this id: <!--Start next id-->{next_id}<!--End next id-->. (This is updated automatically after a new generator is added)\n"
+        else:
+            new_line = line
+        new_lines += new_line
+    file.close()
+    write_file = open("CONTRIBUTING.md", "w")
+    write_file.write(new_lines)
+    write_file.close()
+    print("CONTRIBUTING.md updated")
+
+
 def main():
     write_table_of_contents()
     for subject in subjects:
@@ -125,6 +143,8 @@ def main():
         g.writelines(lines)
 
     print("New README.md table generated")
+
+    update_next_id()
 
 
 if __name__ == "__main__":
