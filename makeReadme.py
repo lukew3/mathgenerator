@@ -71,7 +71,8 @@ def gen_to_row_string(item):
     kwargs_list = myGen.kwargs
     for kwarg in kwargs_list:
         kwargs += '`' + kwarg + '` '
-    row = [myGen.id, myGen.title, prob, solu, func_name, kwargs]
+    title = '[' + myGen.title + '](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/' + item[4] + '/' + func_name + '.py)'
+    row = [myGen.id, title, prob, solu, func_name, kwargs]
     # tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
     #    row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
     tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(

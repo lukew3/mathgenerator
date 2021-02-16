@@ -64,134 +64,134 @@ mathgen.write_pdf(worksheet)
 ## algebra
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 11 | Basic Algebra | 7x + 9 = 9 | 0 | basic_algebra | `maxVariable=10`  |
-| 12 | Logarithm | log2(32) | 5 | log | `maxBase=3` `maxVal=8`  |
-| 17 | Integer Multiplication with 2x2 Matrix | 1 * [[9, 0], [1, 4]] =  | [[9,0],[1,4]] | multiply_int_to_22_matrix | `maxMatrixVal=10` `maxRes=100`  |
-| 20 | Midpoint of the two point | (0,9),(10,-1)= | (5.0,4.0) | midpoint_of_two_points | `maxValue=20`  |
-| 21 | Factoring Quadratic | x^2+x-20 | (x-4)(x+5) | factoring | `range_x1=10` `range_x2=10`  |
-| 23 | Solve a System of Equations in R^2 | -x + 9y = -80, -10x - 7y = -24 | x = 8, y = -8 | system_of_equations | `range_x=10` `range_y=10` `coeff_mult_range=10`  |
-| 24 | Distance between 2 points | Find the distance between (-2, 1) and (-1, 1) | sqrt(1) | distance_two_points | `maxValXY=20` `minValXY=-20`  |
-| 26 | Linear Equations | 6x + 15y = 300, 1x + 15y = 275 | x = 5, y = 18 | linear_equations | `n=2` `varRange=20` `coeffRange=20`  |
-| 41 | Intersection of Two Lines | Find the point of intersection of the two lines: y = -6/6x + 1 and y = 7/4x - 4 | (20/11, -9/11) | intersection_of_two_lines | `minM=-10` `maxM=10` `minB=-10` `maxB=10` `minDenominator=1` `maxDenominator=6`  |
-| 43 | Cross Product of 2 Vectors | [-7, 3, -16] X [9, -4, 5] =  | [-49, -109, 1] | vector_cross | `minVal=-20` `maxVal=20`  |
-| 45 | Simple Interest | Simple interest for a principle amount of 4672 dollars, 4% rate of interest and for a time period of 1 years is =  | 186.88 | simple_interest | `maxPrinciple=10000` `maxRate=10` `maxTime=10`  |
-| 46 | Multiplication of two matrices | Multiply<table><tr><td>6</td><td>1</td><td>4</td><td>0</td></tr><tr><td>-4</td><td>-5</td><td>-5</td><td>-9</td></tr></table>and<table><tr><td>-5</td><td>1</td><td>-10</td><td>-7</td></tr><tr><td>-1</td><td>0</td><td>8</td><td>-4</td></tr><tr><td>0</td><td>-8</td><td>-7</td><td>-5</td></tr><tr><td>3</td><td>-6</td><td>10</td><td>1</td></tr></table> | <table><tr><td>-31</td><td>-26</td><td>-80</td><td>-66</td></tr><tr><td>-2</td><td>90</td><td>-55</td><td>64</td></tr></table> | matrix_multiplication | `maxVal=100` `max_dim=10`  |
-| 50 | Quadratic Equation | Zeros of the Quadratic Equation 16x^2+181x+77=0 | [-0.44, -10.87] | quadratic_equation | `maxVal=100`  |
-| 65 | Multiplication of 2 complex numbers | (-5-14j) * (-13-7j) =  | (-33+217j) | multiply_complex_numbers | `minRealImaginaryNum=-20` `maxRealImaginaryNum=20`  |
-| 72 | Dot Product of 2 Vectors | [10, 14, 7] . [-3, -10, 14] =  | -72 | vector_dot | `minVal=-20` `maxVal=20`  |
-| 74 | Inverse of a Matrix | Inverse of Matrix Matrix([[49, 4, 29], [43, 15, 10], [11, 77, 74]]) is: | Matrix([[170/47803, 1937/95606, -395/95606], [-1536/47803, 3307/95606, 757/95606], [1573/47803, -3729/95606, 563/95606]]) | invert_matrix | `SquareMatrixDimension=3` `MaxMatrixElement=99` `OnlyIntegerElementsInInvertedMatrix=False`  |
-| 77 | Determinant to 2x2 Matrix | Det([[67, 21], [69, 23]]) =  |  92 | int_matrix_22_determinant | `maxMatrixVal=100`  |
-| 78 | Compound Interest | Compound interest for a principle amount of 8340 dollars, 8% rate of interest and for a time period of 9 year is =  | 16671.7 | compound_interest | `maxPrinciple=10000` `maxRate=10` `maxTime=10`  |
-| 100 | complex Quadratic Equation | Find the roots of given Quadratic Equation 3x^2 + 9x + 3 = 0 | simplified solution : ((-0.382, -2.618)), generalized solution : ((-9 + sqrt(45))/2*3, (-9 - sqrt(45))/2*3) | complex_quadratic | `prob_type=0` `max_range=10`  |
-| 105 | Combine Like terms | 2x^1 + 3x^2 + 1x^1 | 3x^1 + 3x^2  | combine_like_terms | `maxCoef=10` `maxExp=20` `maxTerms=10`  |
-| 111 | Expanding Factored Binomial | (-5x-6)(-5x-3) | 25*x^2+45*x+18 | expanding | `range_x1=10` `range_x2=10` `range_a=10` `range_b=10`  |
+| 11 | [Basic Algebra](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/basic_algebra.py) | 7x + 7 = 8 | 1/7 | basic_algebra | `maxVariable=10`  |
+| 12 | [Logarithm](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/log.py) | log2(2) | 1 | log | `maxBase=3` `maxVal=8`  |
+| 17 | [Integer Multiplication with 2x2 Matrix](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/multiply_int_to_22_matrix.py) | 4 * [[2, 8], [2, 1]] =  | [[8,32],[8,4]] | multiply_int_to_22_matrix | `maxMatrixVal=10` `maxRes=100`  |
+| 20 | [Midpoint of the two point](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/midpoint_of_two_points.py) | (-11,18),(-9,12)= | (-10.0,15.0) | midpoint_of_two_points | `maxValue=20`  |
+| 21 | [Factoring Quadratic](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/factoring.py) | x^2-9x+20 | (x-4)(x-5) | factoring | `range_x1=10` `range_x2=10`  |
+| 23 | [Solve a System of Equations in R^2](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/system_of_equations.py) | -7x - y = -36, 9x +  = 45 | x = 5, y = 1 | system_of_equations | `range_x=10` `range_y=10` `coeff_mult_range=10`  |
+| 24 | [Distance between 2 points](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/distance_two_points.py) | Find the distance between (-6, 11) and (-10, -6) | sqrt(305) | distance_two_points | `maxValXY=20` `minValXY=-20`  |
+| 26 | [Linear Equations](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/linear_equations.py) | -14x + 15y = -27, -5x + 7y = -31 | x = -12, y = -13 | linear_equations | `n=2` `varRange=20` `coeffRange=20`  |
+| 41 | [Intersection of Two Lines](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/intersection_of_two_lines.py) | Find the point of intersection of the two lines: y = -2/6x - 3 and y = -9/5x + 1 | (30/11, -43/11) | intersection_of_two_lines | `minM=-10` `maxM=10` `minB=-10` `maxB=10` `minDenominator=1` `maxDenominator=6`  |
+| 43 | [Cross Product of 2 Vectors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/vector_cross.py) | [-19, 0, 17] X [-14, 6, 12] =  | [-102, -10, -114] | vector_cross | `minVal=-20` `maxVal=20`  |
+| 45 | [Simple Interest](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/simple_interest.py) | Simple interest for a principle amount of 6110 dollars, 1% rate of interest and for a time period of 8 years is =  | 488.8 | simple_interest | `maxPrinciple=10000` `maxRate=10` `maxTime=10`  |
+| 46 | [Multiplication of two matrices](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/matrix_multiplication.py) | Multiply<table><tr><td>7</td><td>-3</td></tr><tr><td>-9</td><td>-2</td></tr><tr><td>-5</td><td>0</td></tr></table>and<table><tr><td>1</td><td>1</td></tr><tr><td>-3</td><td>4</td></tr></table> | <table><tr><td>16</td><td>-5</td></tr><tr><td>-3</td><td>-17</td></tr><tr><td>-5</td><td>-5</td></tr></table> | matrix_multiplication | `maxVal=100` `max_dim=10`  |
+| 50 | [Quadratic Equation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/quadratic_equation.py) | Zeros of the Quadratic Equation 85x^2+103x+6=0 | [-0.06, -1.15] | quadratic_equation | `maxVal=100`  |
+| 65 | [Multiplication of 2 complex numbers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/multiply_complex_numbers.py) | (-19-19j) * (-13+6j) =  | (361+133j) | multiply_complex_numbers | `minRealImaginaryNum=-20` `maxRealImaginaryNum=20`  |
+| 72 | [Dot Product of 2 Vectors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/vector_dot.py) | [14, 16, 18] . [-18, -10, 8] =  | -268 | vector_dot | `minVal=-20` `maxVal=20`  |
+| 74 | [Inverse of a Matrix](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/invert_matrix.py) | Inverse of Matrix Matrix([[89, 64, 55], [20, 41, 38], [33, 40, 2]]) is: | Matrix([[1438/80701, -2072/80701, -177/80701], [-1214/80701, 1637/80701, 2282/80701], [553/80701, 1448/80701, -2369/80701]]) | invert_matrix | `SquareMatrixDimension=3` `MaxMatrixElement=99` `OnlyIntegerElementsInInvertedMatrix=False`  |
+| 77 | [Determinant to 2x2 Matrix](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/int_matrix_22_determinant.py) | Det([[46, 64], [43, 43]]) =  |  -774 | int_matrix_22_determinant | `maxMatrixVal=100`  |
+| 78 | [Compound Interest](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/compound_interest.py) | Compound interest for a principle amount of 1345 dollars, 6% rate of interest and for a time period of 5 year is =  | 1799.91 | compound_interest | `maxPrinciple=10000` `maxRate=10` `maxTime=10`  |
+| 100 | [complex Quadratic Equation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/complex_quadratic.py) | Find the roots of given Quadratic Equation 5x^2 + 9x + 3 = 0 | simplified solution : ((-0.442, -1.358)), generalized solution : ((-9 + sqrt(21))/2*5, (-9 - sqrt(21))/2*5) | complex_quadratic | `prob_type=0` `max_range=10`  |
+| 105 | [Combine Like terms](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/combine_like_terms.py) | 8x^3 + 4x^4 + 2x^4 + 2x^2 + 4x^4 + 2x^2 | 4x^2 + 8x^3 + 10x^4  | combine_like_terms | `maxCoef=10` `maxExp=20` `maxTerms=10`  |
+| 111 | [Expanding Factored Binomial](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/expanding.py) | (-6x)(+9x-2) | -54*x^2+12*x | expanding | `range_x1=10` `range_x2=10` `range_a=10` `range_b=10`  |
 ## basic_math
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 0 | Addition | 47+14= | 61 | addition | `maxSum=99` `maxAddend=50`  |
-| 1 | Subtraction | 57-36= | 21 | subtraction | `maxMinuend=99` `maxDiff=99`  |
-| 2 | Multiplication | 1*7= | 7 | multiplication | `maxMulti=12`  |
-| 3 | Division | 45/15= | 3 | division | `maxA=25` `maxB=25`  |
-| 6 | Square Root | sqrt(25)= | 5 | square_root | `minNo=1` `maxNo=12`  |
-| 8 | Square | 7^2= | 49 | square | `maxSquareNum=20`  |
-| 13 | Complex Division | 67/23= | 2.91 | complex_division | `maxRes=99` `maxDivid=99`  |
-| 16 | Fraction Division | (7/4)/(7/6) | 3/2 | divide_fractions | `maxVal=10`  |
-| 28 | Fraction Multiplication | (6/10)*(7/5) | 21/25 | fraction_multiplication | `maxVal=10`  |
-| 31 | Factorial | 3! =  | 6 | factorial | `maxInput=6`  |
-| 44 | Compare Fractions | Which symbol represents the comparison between 3/7 and 6/5? | < | compare_fractions | `maxVal=10`  |
-| 47 | Cube Root | What is the cube root of 466 up to 2 decimal places? | 7.75 | cube_root | `minNo=1` `maxNo=1000`  |
-| 53 | Exponentiation | 8^4 = | 4096 | exponentiation | `maxBase=20` `maxExpo=10`  |
-| 71 | Absolute difference between two numbers | |33--24|= | 57 | absolute_difference | `maxA=100` `maxB=100`  |
-| 80 | Percentage of a number | What is 95% of 67? | 63.65 | percentage | `maxValue=99` `maxpercentage=99`  |
-| 90 | isprime | Is 78 prime? | No | is_prime | `max_num=100`  |
-| 97 | Power of Powers | Simplify 49^1^1= | 49^1 | power_of_powers | `maxBase=50` `maxPower=10`  |
+| 0 | [Addition](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/addition.py) | 24+4= | 28 | addition | `maxSum=99` `maxAddend=50`  |
+| 1 | [Subtraction](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/subtraction.py) | 78-30= | 48 | subtraction | `maxMinuend=99` `maxDiff=99`  |
+| 2 | [Multiplication](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/multiplication.py) | 8*2= | 16 | multiplication | `maxMulti=12`  |
+| 3 | [Division](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/division.py) | 78/6= | 13 | division | `maxA=25` `maxB=25`  |
+| 6 | [Square Root](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/square_root.py) | sqrt(36)= | 6 | square_root | `minNo=1` `maxNo=12`  |
+| 8 | [Square](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/square.py) | 11^2= | 121 | square | `maxSquareNum=20`  |
+| 13 | [Complex Division](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/complex_division.py) | 93/67= | 1.39 | complex_division | `maxRes=99` `maxDivid=99`  |
+| 16 | [Fraction Division](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/divide_fractions.py) | (6/9)/(3/8) | 16/9 | divide_fractions | `maxVal=10`  |
+| 28 | [Fraction Multiplication](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/fraction_multiplication.py) | (9/4)*(3/5) | 27/20 | fraction_multiplication | `maxVal=10`  |
+| 31 | [Factorial](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/factorial.py) | 6! =  | 720 | factorial | `maxInput=6`  |
+| 44 | [Compare Fractions](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/compare_fractions.py) | Which symbol represents the comparison between 4/5 and 7/2? | < | compare_fractions | `maxVal=10`  |
+| 47 | [Cube Root](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/cube_root.py) | What is the cube root of 25 up to 2 decimal places? | 2.92 | cube_root | `minNo=1` `maxNo=1000`  |
+| 53 | [Exponentiation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/exponentiation.py) | 13^8 = | 815730721 | exponentiation | `maxBase=20` `maxExpo=10`  |
+| 71 | [Absolute difference between two numbers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/absolute_difference.py) | |63--99|= | 162 | absolute_difference | `maxA=100` `maxB=100`  |
+| 80 | [Percentage of a number](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage.py) | What is 38% of 45? | 17.10 | percentage | `maxValue=99` `maxpercentage=99`  |
+| 90 | [isprime](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/is_prime.py) | Is 77 prime? | No | is_prime | `max_num=100`  |
+| 97 | [Power of Powers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/power_of_powers.py) | Simplify 29^1^5= | 29^5 | power_of_powers | `maxBase=50` `maxPower=10`  |
 ## calculus
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 7 | Power Rule Differentiation | 4x^9 + 8x^10 + 1x^7 | 36x^8 + 80x^9 + 7x^6 | power_rule_differentiation | `maxCoef=10` `maxExp=10` `maxTerms=5`  |
-| 48 | Power Rule Integration | 7x^3 + 3x^1 + 7x^3 + 3x^3 | (7/3)x^4 + (3/1)x^2 + (7/3)x^4 + (3/3)x^4 + c | power_rule_integration | `maxCoef=10` `maxExp=10` `maxTerms=5`  |
-| 88 | Differentiation | differentiate w.r.t x : d(sin(x)+6*x^4)/dx | 24*x^3 + cos(x) | differentiation | `diff_lvl=2`  |
-| 89 | Definite Integral of Quadratic Equation | The definite integral within limits 0 to 1 of the equation 5x^2 + 6x + 46 is =  | 50.6667 | definite_integral | `max_coeff=100`  |
-| 110 | Stationary Points | f(x)=3*x^3 + 8*x^2 + 7*x + 4 | (-1,2),(-7/9,482/243) | stationary_points | `maxExp=3` `maxCoef=10`  |
+| 7 | [Power Rule Differentiation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/power_rule_differentiation.py) | 10x^8 + 8x^3 + 8x^7 + 8x^1 | 80x^7 + 24x^2 + 56x^6 + 8x^0 | power_rule_differentiation | `maxCoef=10` `maxExp=10` `maxTerms=5`  |
+| 48 | [Power Rule Integration](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/power_rule_integration.py) | 10x^9 + 2x^4 + 4x^6 + 9x^5 + 2x^3 | (10/9)x^10 + (2/4)x^5 + (4/6)x^7 + (9/5)x^6 + (2/3)x^4 + c | power_rule_integration | `maxCoef=10` `maxExp=10` `maxTerms=5`  |
+| 88 | [Differentiation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/differentiation.py) | differentiate w.r.t x : d(tan(x)+5*x^2)/dx | 10*x + tan(x)^2 + 1 | differentiation | `diff_lvl=2`  |
+| 89 | [Definite Integral of Quadratic Equation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/definite_integral.py) | The definite integral within limits 0 to 1 of the equation 30x^2 + 51x + 45 is =  | 80.5 | definite_integral | `max_coeff=100`  |
+| 110 | [Stationary Points](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/stationary_points.py) | f(x)=5*x^3 + 9*x^2 + 5*x + 2 | (-3/5 - sqrt(6)/15,5*(-3/5 - sqrt(6)/15)**3 - 1 - sqrt(6)/3 + 9*(-3/5 - sqrt(6)/15)**2),(-3/5 + sqrt(6)/15,-1 + 5*(-3/5 + sqrt(6)/15)**3 + sqrt(6)/3 + 9*(-3/5 + sqrt(6)/15)**2) | stationary_points | `maxExp=3` `maxCoef=10`  |
 ## computer_science
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 4 | Binary Complement 1s | 1100= | 0011 | binary_complement_1s | `maxDigits=10`  |
-| 5 | Modulo Division | 84%82= | 2 | modulo_division | `maxRes=99` `maxModulo=99`  |
-| 14 | Decimal to Binary | Binary of 20= | 10100 | decimal_to_binary | `max_dec=99`  |
-| 15 | Binary to Decimal | 1100111 | 103 | binary_to_decimal | `max_dig=10`  |
-| 56 | Fibonacci Series | The Fibonacci Series of the first 12 numbers is ? | [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] | fibonacci_series | `minNo=1`  |
-| 62 | nth Fibonacci number | What is the 12th Fibonacci number? | 144 | nth_fibonacci_number | `maxN=100`  |
-| 64 | Binary to Hexidecimal | 00111 | 0x7 | binary_to_hex | `max_dig=10`  |
-| 73 | Binary 2's Complement | 2's complement of 1010 = | 110 | binary_2s_complement | `maxDigits=10`  |
-| 79 | Decimal to Hexadecimal | Binary of 864= | 0x360 | decimal_to_hexadeci | `max_dec=1000`  |
-| 84 | Converts decimal to octal | The decimal number 1800 in Octal is:  | 0o3410 | decimal_to_octal | `maxDecimal=4096`  |
-| 91 | Binary Coded Decimal to Integer | Integer of Binary Coded Decimal 1 is =  | 5432 | bcd_to_decimal | `maxNumber=10000`  |
-| 103 | Decimal to Binary Coded Decimal | BCD of Decimal Number 4344 is =  | 10158 | decimal_to_bcd | `maxNumber=10000`  |
+| 4 | [Binary Complement 1s](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_complement_1s.py) | 000010= | 111101 | binary_complement_1s | `maxDigits=10`  |
+| 5 | [Modulo Division](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/modulo_division.py) | 22%64= | 22 | modulo_division | `maxRes=99` `maxModulo=99`  |
+| 14 | [Decimal to Binary](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_binary.py) | Binary of 26= | 11010 | decimal_to_binary | `max_dec=99`  |
+| 15 | [Binary to Decimal](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_to_decimal.py) | 0 | 0 | binary_to_decimal | `max_dig=10`  |
+| 56 | [Fibonacci Series](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/fibonacci_series.py) | The Fibonacci Series of the first 6 numbers is ? | [0, 1, 1, 2, 3, 5] | fibonacci_series | `minNo=1`  |
+| 62 | [nth Fibonacci number](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/nth_fibonacci_number.py) | What is the 88th Fibonacci number? | 1100087778366105088 | nth_fibonacci_number | `maxN=100`  |
+| 64 | [Binary to Hexidecimal](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_to_hex.py) | 000111 | 0x7 | binary_to_hex | `max_dig=10`  |
+| 73 | [Binary 2's Complement](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_2s_complement.py) | 2's complement of 1111 = | 1 | binary_2s_complement | `maxDigits=10`  |
+| 79 | [Decimal to Hexadecimal](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_hexadeci.py) | Binary of 266= | 0x10a | decimal_to_hexadeci | `max_dec=1000`  |
+| 84 | [Converts decimal to octal](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_octal.py) | The decimal number 1630 in Octal is:  | 0o3136 | decimal_to_octal | `maxDecimal=4096`  |
+| 91 | [Binary Coded Decimal to Integer](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/bcd_to_decimal.py) | Integer of Binary Coded Decimal 2 is =  | 10340 | bcd_to_decimal | `maxNumber=10000`  |
+| 103 | [Decimal to Binary Coded Decimal](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_bcd.py) | BCD of Decimal Number 5665 is =  | 1621 | decimal_to_bcd | `maxNumber=10000`  |
 ## geometry
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 18 | Area of Triangle | Area of triangle with side lengths: 6 19 7 =  | (4.024600061217022e-15+65.72670690061993j) | area_of_triangle | `maxA=20` `maxB=20` `maxC=20`  |
-| 19 | Triangle exists check | Does triangle with sides 31, 29 and 48 exist? | Yes | valid_triangle | `maxSideLength=50`  |
-| 22 | Third Angle of Triangle | Third angle of triangle with angles 41 and 10 =  | 129 | third_angle_of_triangle | `maxAngle=89`  |
-| 25 | Pythagorean Theorem | The hypotenuse of a right triangle given the other two lengths 18 and 16 =  | 24.08 | pythagorean_theorem | `maxLength=20`  |
-| 29 | Angle of a Regular Polygon | Find the angle of a regular polygon with 8 sides | 135.0 | angle_regular_polygon | `minVal=3` `maxVal=20`  |
-| 32 | Surface Area of Cube | Surface area of cube with side = 18m is | 1944 m^2 | surface_area_cube | `maxSide=20` `unit='m'`  |
-| 33 | Surface Area of Cuboid | Surface area of cuboid with sides = 2m, 1m, 6m is | 40 m^2 | surface_area_cuboid | `maxSide=20` `unit='m'`  |
-| 34 | Surface Area of Cylinder | Surface area of cylinder with height = 28m and radius = 4m is | 804 m^2 | surface_area_cylinder | `maxRadius=20` `maxHeight=50` `unit='m'`  |
-| 35 | Volum of Cube | Volume of cube with side = 16m is | 4096 m^3 | volume_cube | `maxSide=20` `unit='m'`  |
-| 36 | Volume of Cuboid | Volume of cuboid with sides = 16m, 5m, 3m is | 240 m^3 | volume_cuboid | `maxSide=20` `unit='m'`  |
-| 37 | Volume of cylinder | Volume of cylinder with height = 18m and radius = 19m is | 20414 m^3 | volume_cylinder | `maxRadius=20` `maxHeight=50` `unit='m'`  |
-| 38 | Surface Area of cone | Surface area of cone with height = 5m and radius = 17m is | 1854 m^2 | surface_area_cone | `maxRadius=20` `maxHeight=50` `unit='m'`  |
-| 39 | Volume of cone | Volume of cone with height = 36m and radius = 19m is | 13609 m^3 | volume_cone | `maxRadius=20` `maxHeight=50` `unit='m'`  |
-| 49 | Fourth Angle of Quadrilateral | Fourth angle of quadrilateral with angles 165 , 14, 158 = | 23 | fourth_angle_of_quadrilateral | `maxAngle=180`  |
-| 57 | Trigonometric Values | What is tan(0)? | 0 | basic_trigonometry | `angles=[0, 30, 45, 60, 90]` `functions=['sin', 'cos', 'tan']`  |
-| 58 | Sum of Angles of Polygon | Sum of angles of polygon with 11 sides =  | 1620 | sum_of_polygon_angles | `maxSides=12`  |
-| 60 | Surface Area of Sphere | Surface area of Sphere with radius = 11m is | 1520.5308443374597 m^2 | surface_area_sphere | `maxSide=20` `unit='m'`  |
-| 61 | Volume of Sphere | Volume of sphere with radius 77 m =  | 1912320.9585617452 m^3 | volume_sphere | `maxRadius=100`  |
-| 70 | Angle between 2 vectors | angle between the vectors [930.31, 981.85, 804.37, 752.12, 365.53, 999.04, 145.81, 535.45, 830.04, 892.98] and [343.3, 858.49, 633.38, 397.4, 225.25, 612.5, 410.13, 294.0, 129.72, 344.08] is: | 0.44 radians | angle_btw_vectors | `maxEltAmt=20`  |
-| 75 | Area of a Sector | Given radius, 31 and angle, 181. Find the area of the sector. | Area of sector = 1517.92158 | sector_area | `maxRadius=49` `maxAngle=359`  |
-| 86 | Degrees to Radians | Angle 106 in radians is =  | 1.85 | degree_to_rad | `max_deg=360`  |
-| 87 | Radians to Degrees | Angle 1 in degrees is =  | 57.3 | radian_to_deg | `max_rad=3`  |
-| 95 | Curved surface area of a cylinder | What is the curved surface area of a cylinder of radius, 34 and height, 95? | CSA of cylinder = 20294.69 | curved_surface_area_cylinder | `maxRadius=49` `maxHeight=99`  |
-| 96 | Perimeter of Polygons | The perimeter of a 5 sided polygon with lengths of [86, 48, 39, 31, 82]cm is:  | 286 | perimeter_of_polygons | `maxSides=12` `maxLength=120`  |
-| 104 | Circumference | Circumference of circle with radius 69 | 433.53978619539146 | circumference | `maxRadius=100`  |
-| 108 | Arc length of Angle | Given radius, 10 and angle, 237. Find the arc length of the angle. | Arc length of the angle = 41.36430 | arc_length | `maxRadius=49` `maxAngle=359`  |
-| 112 | Area of Circle | Area of circle with radius 100 | 31428.571428571428 | area_of_circle | `maxRadius=100`  |
+| 18 | [Area of Triangle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_triangle.py) | Area of triangle with side lengths: 14 4 17 =  | 20.33316256758894 | area_of_triangle | `maxA=20` `maxB=20` `maxC=20`  |
+| 19 | [Triangle exists check](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/valid_triangle.py) | Does triangle with sides 42, 40 and 36 exist? | Yes | valid_triangle | `maxSideLength=50`  |
+| 22 | [Third Angle of Triangle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/third_angle_of_triangle.py) | Third angle of triangle with angles 62 and 37 =  | 81 | third_angle_of_triangle | `maxAngle=89`  |
+| 25 | [Pythagorean Theorem](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/pythagorean_theorem.py) | The hypotenuse of a right triangle given the other two lengths 2 and 6 =  | 6.32 | pythagorean_theorem | `maxLength=20`  |
+| 29 | [Angle of a Regular Polygon](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/angle_regular_polygon.py) | Find the angle of a regular polygon with 14 sides | 154.29 | angle_regular_polygon | `minVal=3` `maxVal=20`  |
+| 32 | [Surface Area of Cube](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cube.py) | Surface area of cube with side = 11m is | 726 m^2 | surface_area_cube | `maxSide=20` `unit='m'`  |
+| 33 | [Surface Area of Cuboid](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cuboid.py) | Surface area of cuboid with sides = 16m, 1m, 15m is | 542 m^2 | surface_area_cuboid | `maxSide=20` `unit='m'`  |
+| 34 | [Surface Area of Cylinder](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cylinder.py) | Surface area of cylinder with height = 12m and radius = 1m is | 81 m^2 | surface_area_cylinder | `maxRadius=20` `maxHeight=50` `unit='m'`  |
+| 35 | [Volum of Cube](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cube.py) | Volume of cube with side = 14m is | 2744 m^3 | volume_cube | `maxSide=20` `unit='m'`  |
+| 36 | [Volume of Cuboid](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cuboid.py) | Volume of cuboid with sides = 8m, 15m, 7m is | 840 m^3 | volume_cuboid | `maxSide=20` `unit='m'`  |
+| 37 | [Volume of cylinder](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cylinder.py) | Volume of cylinder with height = 50m and radius = 14m is | 30787 m^3 | volume_cylinder | `maxRadius=20` `maxHeight=50` `unit='m'`  |
+| 38 | [Surface Area of cone](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cone.py) | Surface area of cone with height = 5m and radius = 12m is | 942 m^2 | surface_area_cone | `maxRadius=20` `maxHeight=50` `unit='m'`  |
+| 39 | [Volume of cone](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cone.py) | Volume of cone with height = 50m and radius = 20m is | 20943 m^3 | volume_cone | `maxRadius=20` `maxHeight=50` `unit='m'`  |
+| 49 | [Fourth Angle of Quadrilateral](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/fourth_angle_of_quadrilateral.py) | Fourth angle of quadrilateral with angles 42 , 52, 238 = | 28 | fourth_angle_of_quadrilateral | `maxAngle=180`  |
+| 57 | [Trigonometric Values](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/basic_trigonometry.py) | What is tan(30)? | 1/√3 | basic_trigonometry | `angles=[0, 30, 45, 60, 90]` `functions=['sin', 'cos', 'tan']`  |
+| 58 | [Sum of Angles of Polygon](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/sum_of_polygon_angles.py) | Sum of angles of polygon with 9 sides =  | 1260 | sum_of_polygon_angles | `maxSides=12`  |
+| 60 | [Surface Area of Sphere](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_sphere.py) | Surface area of Sphere with radius = 15m is | 2827.4333882308138 m^2 | surface_area_sphere | `maxSide=20` `unit='m'`  |
+| 61 | [Volume of Sphere](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_sphere.py) | Volume of sphere with radius 69 m =  | 1376055.2813841724 m^3 | volume_sphere | `maxRadius=100`  |
+| 70 | [Angle between 2 vectors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/angle_btw_vectors.py) | angle between the vectors [10.33, 884.3] and [26.07, 699.58] is: | 0.03 radians | angle_btw_vectors | `maxEltAmt=20`  |
+| 75 | [Area of a Sector](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/sector_area.py) | Given radius, 2 and angle, 38. Find the area of the sector. | Area of sector = 1.32645 | sector_area | `maxRadius=49` `maxAngle=359`  |
+| 86 | [Degrees to Radians](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/degree_to_rad.py) | Angle 252 in radians is =  | 4.4 | degree_to_rad | `max_deg=360`  |
+| 87 | [Radians to Degrees](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/radian_to_deg.py) | Angle 2 in degrees is =  | 114.59 | radian_to_deg | `max_rad=3`  |
+| 95 | [Curved surface area of a cylinder](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/curved_surface_area_cylinder.py) | What is the curved surface area of a cylinder of radius, 25 and height, 26? | CSA of cylinder = 4084.07 | curved_surface_area_cylinder | `maxRadius=49` `maxHeight=99`  |
+| 96 | [Perimeter of Polygons](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/perimeter_of_polygons.py) | The perimeter of a 7 sided polygon with lengths of [106, 2, 68, 76, 5, 33, 105]cm is:  | 395 | perimeter_of_polygons | `maxSides=12` `maxLength=120`  |
+| 104 | [Circumference](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/circumference.py) | Circumference of circle with radius 12 | 75.39822368615503 | circumference | `maxRadius=100`  |
+| 108 | [Arc length of Angle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/arc_length.py) | Given radius, 26 and angle, 168. Find the arc length of the angle. | Arc length of the angle = 76.23598 | arc_length | `maxRadius=49` `maxAngle=359`  |
+| 112 | [Area of Circle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle.py) | Area of circle with radius 48 | 7241.142857142857 | area_of_circle | `maxRadius=100`  |
 ## misc
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 9 | LCM (Least Common Multiple) | LCM of 5 and 18 = | 90 | lcm | `maxVal=20`  |
-| 10 | GCD (Greatest Common Denominator) | GCD of 6 and 16 =  | 2 | gcd | `maxVal=20`  |
-| 27 | Prime Factorisation | Find prime factors of 108 | [2, 2, 3, 3, 3] | prime_factors | `minVal=1` `maxVal=200`  |
-| 40 | Common Factors | Common Factors of 94 and 48 =  | [1, 2] | common_factors | `maxVal=100`  |
-| 51 | HCF (Highest Common Factor) | HCF of 18 and 4 =  | 2 | hcf | `maxVal=20`  |
-| 55 | Comparing surds | Fill in the blanks 37^(1/8) _ 14^(1/2) | < | surds_comparison | `maxValue=100` `maxRoot=10`  |
-| 63 | Profit or Loss Percent | Loss percent when CP = 683 and SP = 14 is:  | 97.9502196193265 | profit_loss_percent | `maxCP=1000` `maxSP=1000`  |
-| 66 | Geometric Progression | For the given GP [6, 18, 54, 162, 486, 1458] ,Find the value of a,common ratio,7th term value, sum upto 6th term | The value of a is 6, common ratio is 3 , 7th term is 4374 , sum upto 6th term is 2184.0 | geometric_progression | `number_values=6` `min_value=2` `max_value=12` `n_term=7` `sum_term=5`  |
-| 67 | Geometric Mean of N Numbers | Geometric mean of 2 numbers 41 and 75 =  | (41*75)^(1/2) = 55.452682532047085 | geometric_mean | `maxValue=100` `maxNum=4`  |
-| 68 | Harmonic Mean of N Numbers | Harmonic mean of 3 numbers 60 , 5 and 46 =  |  3/((1/60) + (1/5) + (1/46)) = 12.583586626139818 | harmonic_mean | `maxValue=100` `maxNum=4`  |
-| 69 | Euclidian norm or L2 norm of a vector | Euclidian norm or L2 norm of the vector[787.3844948140925, 238.00418481556463, 957.8185591527733] is: | 1262.5516729705996 | euclidian_norm | `maxEltAmt=20`  |
-| 81 | Celsius To Fahrenheit | Convert 70 degrees Celsius to degrees Fahrenheit = | 158.0 | celsius_to_fahrenheit | `maxTemp=100`  |
-| 82 | AP Term Calculation | Find the term number 47 of the AP series: 31, 69, 107 ...  | 1779 | arithmetic_progression_term | `maxd=100` `maxa=100` `maxn=100`  |
-| 83 | AP Sum Calculation | Find the sum of first 78 terms of the AP series: -75, -163, -251 ...  | -270114.0 | arithmetic_progression_sum | `maxd=100` `maxa=100` `maxn=100`  |
-| 85 | Converts decimal to Roman Numerals | The number 2239 in Roman Numerals is:  | MMCCXXXIX | decimal_to_roman_numerals | `maxDecimal=4000`  |
-| 92 | Complex To Polar Form | rexp(itheta) =  | 11.4exp(i1.84) | complex_to_polar | `minRealImaginaryNum=-20, maxRealImaginaryNum=20`  |
-| 93 | Union,Intersection,Difference of Two Sets | Given the two sets a={1, 3, 5, 7, 8} ,b={2, 4, 5, 6, 10}.Find the Union,intersection,a-b,b-a and symmetric difference | Union is {1, 2, 3, 4, 5, 6, 7, 8, 10},Intersection is {5}, a-b is {8, 1, 3, 7},b-a is {2, 10, 4, 6}, Symmetric difference is {1, 2, 3, 4, 6, 7, 8, 10} | set_operation | `minval=3` `maxval=7` `n_a=4` `n_b=5`  |
-| 94 | Base Conversion | Convert 1A504 from base 12 to base 16. | 9754 | base_conversion | `maxNum=60000` `maxBase=16`  |
-| 98 | Quotient of Powers with Same Base | The Quotient of 16^3 and 16^5 = 16^(3-5) = 16^-2 | 0.00390625 | quotient_of_power_same_base | `maxBase=50` `maxPower=10`  |
-| 99 | Quotient of Powers with Same Power | The Quotient of 25^9 and 10^9 = (25/10)^9 = 2.5^9 | 3814.697265625 | quotient_of_power_same_power | `maxBase=50` `maxPower=10`  |
-| 101 | Leap Year or Not | Year 1959  | is not a leap year | is_leap_year | `minNumber=1900` `maxNumber=2099`  |
-| 102 | Minute to Hour conversion | Convert 251 minutes to Hours & Minutes | 4 hours and 11 minutes | minutes_to_hours | `maxMinutes=999`  |
-| 106 | signum function | signum of 362 is = | 1 | signum_function | `min=-999` `max=999`  |
-| 109 | Binomial distribution | A manufacturer of metal pistons finds that, on average, 32.59% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 15 pistons will contain no more than 4 rejected pistons? | 42.82 | binomial_distribution | ``  |
+| 9 | [LCM (Least Common Multiple)](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/lcm.py) | LCM of 17 and 13 = | 221 | lcm | `maxVal=20`  |
+| 10 | [GCD (Greatest Common Denominator)](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/gcd.py) | GCD of 14 and 17 =  | 1 | gcd | `maxVal=20`  |
+| 27 | [Prime Factorisation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/prime_factors.py) | Find prime factors of 75 | [3, 5, 5] | prime_factors | `minVal=1` `maxVal=200`  |
+| 40 | [Common Factors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/common_factors.py) | Common Factors of 71 and 41 =  | [1] | common_factors | `maxVal=100`  |
+| 51 | [HCF (Highest Common Factor)](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/hcf.py) | HCF of 11 and 15 =  | 1 | hcf | `maxVal=20`  |
+| 55 | [Comparing surds](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/surds_comparison.py) | Fill in the blanks 33^(1/1) _ 82^(1/9) | > | surds_comparison | `maxValue=100` `maxRoot=10`  |
+| 63 | [Profit or Loss Percent](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/profit_loss_percent.py) | Loss percent when CP = 293 and SP = 37 is:  | 87.37201365187714 | profit_loss_percent | `maxCP=1000` `maxSP=1000`  |
+| 66 | [Geometric Progression](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/geometric_progression.py) | For the given GP [8, 48, 288, 1728, 10368, 62208] ,Find the value of a,common ratio,11th term value, sum upto 9th term | The value of a is 8, common ratio is 6 , 11th term is 483729408 , sum upto 9th term is 16124312.0 | geometric_progression | `number_values=6` `min_value=2` `max_value=12` `n_term=7` `sum_term=5`  |
+| 67 | [Geometric Mean of N Numbers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/geometric_mean.py) | Geometric mean of 3 numbers 35 , 57 and 21 =  | (35*57*21)^(1/3) = 34.73127538750071 | geometric_mean | `maxValue=100` `maxNum=4`  |
+| 68 | [Harmonic Mean of N Numbers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/harmonic_mean.py) | Harmonic mean of 3 numbers 28 , 49 and 54 =  |  3/((1/28) + (1/49) + (1/54)) = 40.19240506329114 | harmonic_mean | `maxValue=100` `maxNum=4`  |
+| 69 | [Euclidian norm or L2 norm of a vector](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/euclidian_norm.py) | Euclidian norm or L2 norm of the vector[40.30298267905974, 805.6944561248209, 276.21066847439425, 806.6064748556993, 957.8280112710016, 862.9140054943484, 480.03380665406024, 186.74042925660362, 197.7737844258112, 77.12282777074032, 137.67424706299215, 234.7784931085548] is: | 1850.45164451948 | euclidian_norm | `maxEltAmt=20`  |
+| 81 | [Celsius To Fahrenheit](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/celsius_to_fahrenheit.py) | Convert 68 degrees Celsius to degrees Fahrenheit = | 154.4 | celsius_to_fahrenheit | `maxTemp=100`  |
+| 82 | [AP Term Calculation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/arithmetic_progression_term.py) | Find the term number 99 of the AP series: 27, 42, 57 ...  | 1497 | arithmetic_progression_term | `maxd=100` `maxa=100` `maxn=100`  |
+| 83 | [AP Sum Calculation](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/arithmetic_progression_sum.py) | Find the sum of first 90 terms of the AP series: -20, -73, -126 ...  | -214065.0 | arithmetic_progression_sum | `maxd=100` `maxa=100` `maxn=100`  |
+| 85 | [Converts decimal to Roman Numerals](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/decimal_to_roman_numerals.py) | The number 3760 in Roman Numerals is:  | MMMDCCLX | decimal_to_roman_numerals | `maxDecimal=4000`  |
+| 92 | [Complex To Polar Form](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/complex_to_polar.py) | rexp(itheta) =  | 18.44exp(i-0.86) | complex_to_polar | `minRealImaginaryNum=-20, maxRealImaginaryNum=20`  |
+| 93 | [Union,Intersection,Difference of Two Sets](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/set_operation.py) | Given the two sets a={5, 6, 8, 9, 10} ,b={8, 9, 2}.Find the Union,intersection,a-b,b-a and symmetric difference | Union is {2, 5, 6, 8, 9, 10},Intersection is {8, 9}, a-b is {10, 5, 6},b-a is {2}, Symmetric difference is {2, 5, 6, 10} | set_operation | `minval=3` `maxval=7` `n_a=4` `n_b=5`  |
+| 94 | [Base Conversion](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/base_conversion.py) | Convert 49237 from base 10 to base 2. | 1100000001010101 | base_conversion | `maxNum=60000` `maxBase=16`  |
+| 98 | [Quotient of Powers with Same Base](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/quotient_of_power_same_base.py) | The Quotient of 14^1 and 14^7 = 14^(1-7) = 14^-6 | 1.328103086299076e-07 | quotient_of_power_same_base | `maxBase=50` `maxPower=10`  |
+| 99 | [Quotient of Powers with Same Power](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/quotient_of_power_same_power.py) | The Quotient of 1^1 and 18^1 = (1/18)^1 = 0.05555555555555555^1 | 0.05555555555555555 | quotient_of_power_same_power | `maxBase=50` `maxPower=10`  |
+| 101 | [Leap Year or Not](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/is_leap_year.py) | Year 2068  | is a leap year | is_leap_year | `minNumber=1900` `maxNumber=2099`  |
+| 102 | [Minute to Hour conversion](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/minutes_to_hours.py) | Convert 429 minutes to Hours & Minutes | 7 hours and 9 minutes | minutes_to_hours | `maxMinutes=999`  |
+| 106 | [signum function](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py) | signum of -301 is = | -1 | signum_function | `min=-999` `max=999`  |
+| 109 | [Binomial distribution](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py) | A manufacturer of metal pistons finds that, on average, 34.3% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 10 pistons will contain no more than 2 rejected pistons? | 27.7 | binomial_distribution | ``  |
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 30 | Combinations of Objects | Number of combinations from 12 objects picked 8 at a time  | 495 | combinations | `maxlength=20`  |
-| 42 | Permutations | Number of Permutations from 14 objects picked 5 at a time =   | 240240 | permutation | `maxlength=20`  |
-| 52 | Probability of a certain sum appearing on faces of dice | If 2 dice are rolled at the same time, the probability of getting a sum of 9 = | 4/36 | dice_sum_probability | `maxDice=3`  |
-| 54 | Confidence interval For sample S | The confidence interval for sample [293, 222, 205, 214, 255, 298, 209, 296, 287, 219, 211, 277, 269, 284, 270, 206, 273, 248, 223, 227, 282, 260, 275, 291, 246, 242, 251, 249, 263, 250, 207] with 90% confidence is | (260.5165684278054, 242.83827028187204) | confidence_interval | ``  |
-| 59 | Mean,Standard Deviation,Variance | Find the mean,standard deviation and variance for the data[40, 6, 7, 46, 50, 30, 18, 29, 27, 38, 12, 15, 22, 44, 21] | The Mean is 27.0 , Standard Deviation is 188.93333333333334, Variance is 13.745302227791623 | data_summary | `number_values=15` `minval=5` `maxval=50`  |
-| 76 | Mean and Median | Given the series of numbers [5, 98, 52, 58, 6, 50, 38, 55, 48, 16]. find the arithmatic mean and mdian of the series | Arithmetic mean of the series is 42.6 and Arithmetic median of this series is 49.0 | mean_median | `maxlen=10`  |
-| 107 | Conditional Probability | Someone tested positive for a nasty disease which only 1.66% of population have. Test sensitivity (true positive) is equal to SN= 91.53% whereas test specificity (true negative) SP= 98.48%. What is the probability that this guy really has that disease? | 50.41% | conditional_probability | ``  |
+| 30 | [Combinations of Objects](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/combinations.py) | Number of combinations from 20 objects picked 3 at a time  | 1140 | combinations | `maxlength=20`  |
+| 42 | [Permutations](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/permutation.py) | Number of Permutations from 12 objects picked 1 at a time =   | 12 | permutation | `maxlength=20`  |
+| 52 | [Probability of a certain sum appearing on faces of dice](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/dice_sum_probability.py) | If 1 dice are rolled at the same time, the probability of getting a sum of 6 = | 1/6 | dice_sum_probability | `maxDice=3`  |
+| 54 | [Confidence interval For sample S](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/confidence_interval.py) | The confidence interval for sample [296, 281, 217, 204, 215, 219, 218, 245, 208, 274, 262, 213, 264, 225, 206, 248, 231, 259, 240, 226, 216, 255, 257, 249, 279, 251, 241, 287, 239, 200, 267, 288, 290, 246, 275] with 95% confidence is | (254.598134838323, 236.3161508759627) | confidence_interval | ``  |
+| 59 | [Mean,Standard Deviation,Variance](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/data_summary.py) | Find the mean,standard deviation and variance for the data[41, 36, 45, 15, 41, 26, 6, 39, 9, 22, 25, 40, 42, 5, 28] | The Mean is 28.0 , Standard Deviation is 182.93333333333334, Variance is 13.525284963110142 | data_summary | `number_values=15` `minval=5` `maxval=50`  |
+| 76 | [Mean and Median](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/mean_median.py) | Given the series of numbers [77, 79, 53, 12, 98, 65, 40, 44, 9, 19]. find the arithmatic mean and mdian of the series | Arithmetic mean of the series is 49.6 and Arithmetic median of this series is 48.5 | mean_median | `maxlen=10`  |
+| 107 | [Conditional Probability](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/conditional_probability.py) | Someone tested positive for a nasty disease which only 0.06% of population have. Test sensitivity (true positive) is equal to SN= 94.78% whereas test specificity (true negative) SP= 90.54%. What is the probability that this guy really has that disease? | 0.6% | conditional_probability | ``  |
