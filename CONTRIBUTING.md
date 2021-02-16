@@ -1,43 +1,36 @@
 # Contributing
 
-This project was created with contributions at it's core. We need your help to expand the reach of this project and open-source the generation of math problems.
+This project wouldn't be possible without the generosity of contributors like you. Thank you!
 
 ## How You Can Help
 
 ### Coding Generators
-As of right now, all of our generators are being coded in python. Your generator will be an object of the Generator class and will have a function created seperately.
-Your object instantiation should follow this format:
-```
-#<title> = Generator("<Title>", <id>, <generalized problem>, <generalized solution>, <function name>)
-
-```
-and look something like this:
-```
-addition = Generator("Addition", 2, "a+b=", "c", additionFunc)
-```
-Your function should look something like the following:
-```
-def additionFunc(maxSum, maxAddend):
-    a = random.randint(0, maxAddend)
-    b = random.randint(0, min((maxSum-a), maxAddend)) #The highest value of b will be no higher than the maxsum minus the first number and no higher than the maxAddend as well
-    c = a+b
-    problem = str(a) + "+" + str(b) + "="
-    solution = str(c)
-    return problem, solution
-```
-
 Before coding, please check README.md to see if someone has already created the generator you plan to make.
-Skillid is determined by the next available id as can be determined in the table.
-#### Restructure Notes
-We currently just underwent a large reconstruction of the repository. Here is how you commit to the repo.
-* Place your generator instance at the bottom of mathgen.py
-* Create a new file in the funcs directory with the same name as your function
-* Place `.__init__ import *` at the top of your file and then write your function in the lines beneath it
-* Add `from .<yourfunc> import *` at the bottom of the `__init__.py` file inside the funcs directory
+You can find a simple example of a generator in the [addition file](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/addition.py)
+To start, create a new file with the name of your generator in the subject folder of best fit, which is inside the `funcs` folder of `mathgenerator`. The name of the file must be all lowercase with underscores seperating words.
 
-If you have issues with checks you can try using yapf to fix linter errors or just go through them line by line.
+Here's what needs to be included in a new generator:
+* `from .__init__ import *`
+  * Imports `Generator` class from `__init__.py` in the mathgenerator directory.
+* Generator function with kwargs
+  * This function is where the output is generated.
+  * Should have at least one kwarg.
+  * Returns a pair of string values, `problem` and `solution`
+* Generator object instantiation
+  * Object should have the same name as file name
+  * Must have the following arguments (title, id, example problem, example solution, function, list of kwargs)
+    * Most of these are ways of keeping track of generators and providing documentation.
+    * skillid should be the number of the lowest unassigned id.
+    * function should be the name of the function defined above without quotes
+    * List of kwargs should be a list of the kwargs that the function takes as strings. Used in documentation.
+
+You also need to import the module in the `__init__.py` file of the subject folder.
+* To do this, add `from .<your_generator_file> import *` to the end of the `__init__` file of the subject that your generator is stored in.
+
+
+Finally, make sure that your generator passes the github actions tests. If it doesn't, make the changes requested in a new commit.
 ### Provide Ideas
-If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue. If you have a lot of ideas, I would suggest adding them to the table in README.md so that they are easier for our team to manage.
+If you have an idea for a generator but don't have the time or know-how to create it, you can add it as an issue.
 
 ## First Time Contributors
 If you have never contributed to open source before here is a quick explanation of how to contribute.
