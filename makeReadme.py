@@ -1,8 +1,10 @@
 from mathgenerator.mathgen import *
 
 write_list = []
-subjects = ['algebra', 'basic_math', 'calculus', 'computer_science', 'geometry', 'misc', 'statistics']
+subjects = ['algebra', 'basic_math', 'calculus',
+            'computer_science', 'geometry', 'misc', 'statistics']
 wList = getGenList()
+
 
 def array2markdown_table(string):
     string = string.replace("[[", "<table><tr><td>")
@@ -13,6 +15,7 @@ def array2markdown_table(string):
     string = string.replace(" ", "")
     string = string.replace("\n", "")
     return string
+
 
 def write_table_of_contents():
     lines = []
@@ -47,6 +50,7 @@ def write_table_of_contents():
     with open('README.md', "w") as g:
         g.writelines(lines)
 
+
 def gen_to_row_string(item):
     myGen = item[2]
     # NOTE: renamed 'sol' to 'solu' to make it look nicer
@@ -68,12 +72,13 @@ def gen_to_row_string(item):
     for kwarg in kwargs_list:
         kwargs += '`' + kwarg + '` '
     row = [myGen.id, myGen.title, prob, solu, func_name, kwargs]
-    #tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
+    # tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
     #    row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
     tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
         row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " | " + str(row[5]) + " |\n"
     print('added', item[1], '-', func_name, 'to the README.md')
     return tableLine
+
 
 def make_table_header(name):
     lines = [
@@ -83,6 +88,7 @@ def make_table_header(name):
     ]
     for line in lines:
         write_list.append(line)
+
 
 def write_subject_table(subject_name, full_gen_list):
     subject_list = []
@@ -118,6 +124,7 @@ def main():
         g.writelines(lines)
 
     print("New README.md table generated")
+
 
 if __name__ == "__main__":
     main()

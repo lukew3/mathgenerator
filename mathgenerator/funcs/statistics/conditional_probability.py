@@ -9,7 +9,8 @@ def conditionalProbFunc():
     def BayesFormula(P_disease, true_positive, true_negative):
         P_notDisease = 100. - P_disease
         false_positive = 100. - true_negative
-        P_plus = (P_disease) * (true_positive) + (P_notDisease) * (false_positive)
+        P_plus = (P_disease) * (true_positive) + \
+            (P_notDisease) * (false_positive)
         P_disease_plus = ((true_positive) * (100 * P_disease)) / P_plus
 
         return P_disease_plus
@@ -18,7 +19,8 @@ def conditionalProbFunc():
               "Test sensitivity (true positive) is equal to SN= {1:.2f}% whereas test specificity (true negative) SP= {2:.2f}%. " \
               "What is the probability that this guy really has that disease?".format(
                   P_disease, true_positive, true_negative)
-    answer = str(round(BayesFormula(P_disease, true_positive, true_negative), 2)) + "%"
+    answer = str(
+        round(BayesFormula(P_disease, true_positive, true_negative), 2)) + "%"
 
     return problem, answer
 

@@ -15,4 +15,4 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
 multiply_complex_numbers = Generator("Multiplication of 2 complex numbers", 65,
                                      "(x + j) (y + j) = ", "xy + xj + yj -1",
                                      multiplyComplexNumbersFunc,
-                                     ["minRealImaginaryNum=-20","maxRealImaginaryNum=20"])
+                                     ["minRealImaginaryNum=-20", "maxRealImaginaryNum=20"])

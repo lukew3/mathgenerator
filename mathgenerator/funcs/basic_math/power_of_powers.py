@@ -8,7 +8,8 @@ def powerOfPowersFunc(maxBase=50, maxPower=10, style='raw'):
     step = power1 * power2
 
     if style == 'latex':
-        problem = "Simplify \\(" + str(base) + "^{" + str(power1) + "^{" + str(power2) + "}}\\)"
+        problem = "Simplify \\(" + str(base) + \
+            "^{" + str(power1) + "^{" + str(power2) + "}}\\)"
         solution = f"\\({base}^{{{step}}}\\)"
     else:
         problem = f"Simplify {base}^{power1}^{power2}="

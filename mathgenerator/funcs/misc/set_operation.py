@@ -13,7 +13,8 @@ def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
     a = set(a)
     b = set(b)
     problem = "Given the two sets a=" + \
-        str(a) + " ,b=" + str(b) + ".Find the Union,intersection,a-b,b-a and symmetric difference"
+        str(a) + " ,b=" + str(b) + \
+        ".Find the Union,intersection,a-b,b-a and symmetric difference"
     solution = "Union is " + str(a.union(b)) + ",Intersection is " + str(
         a.intersection(b)) + ", a-b is " + str(
             a.difference(b)) + ",b-a is " + str(

@@ -1,5 +1,6 @@
 import os
 
+
 def get_filepaths(directory):
     """
     This function will generate the file names in a directory
@@ -19,9 +20,10 @@ def get_filepaths(directory):
 
     return file_paths  # Self-explanatory.
 
+
 # Run the above function and store its results in a variable.
 full_file_paths = get_filepaths("mathgenerator/funcs/statistics")
 full_file_paths.sort()
-#print(full_file_paths)
+# print(full_file_paths)
 for item in full_file_paths:
     print("from ." + item + " import *")

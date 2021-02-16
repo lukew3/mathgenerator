@@ -81,4 +81,4 @@ def matrixInversion(SquareMatrixDimension=3,
 invert_matrix = Generator("Inverse of a Matrix", 74,
                           "Inverse of a matrix A is", "A^(-1)",
                           matrixInversion,
-                          ["SquareMatrixDimension=3","MaxMatrixElement=99","OnlyIntegerElementsInInvertedMatrix=False"])
+                          ["SquareMatrixDimension=3", "MaxMatrixElement=99", "OnlyIntegerElementsInInvertedMatrix=False"])

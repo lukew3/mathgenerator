@@ -30,11 +30,13 @@ def divideFractionsFunc(maxVal=10, style='raw'):
         x = f"{sol_numerator}"
 
     if style == 'latex':
-        problem = "\\(\\frac{" + str(a) + "}{" + str(b) + "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)"
+        problem = "\\(\\frac{" + str(a) + "}{" + str(b) + \
+            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)"
         if tmp_d == 1 or tmp_d == gcd:
             solution = "\\(" + str(sol_numerator) + "\\)"
         else:
-            solution = "\\(\\frac{" + str(sol_numerator) + "}{" + str(sol_denominator) + "}\\)"
+            solution = "\\(\\frac{" + str(sol_numerator) + \
+                "}{" + str(sol_denominator) + "}\\)"
     else:
         problem = f"({a}/{b})/({c}/{d})"
         solution = x

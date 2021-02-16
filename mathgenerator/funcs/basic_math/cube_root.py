@@ -9,7 +9,8 @@ def cubeRootFunc(minNo=1, maxNo=1000, style='raw'):
         problem = f"\\(\\sqrt[3]{{{b}}}=\\)"
         solution = "\\(" + str(round(a, 2)) + "\\)"
     else:
-        problem = "What is the cube root of " + str(b) + " up to 2 decimal places?"
+        problem = "What is the cube root of " + \
+            str(b) + " up to 2 decimal places?"
         solution = str(round(a, 2))
     return problem, solution
 

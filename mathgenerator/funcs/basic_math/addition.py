@@ -20,4 +20,4 @@ def addition_func(maxSum=99, maxAddend=50, style='raw'):
 
 
 addition = Generator("Addition", 0, "a+b=", "c", addition_func,
-                    ["maxSum=99", "maxAddend=50"])
+                     ["maxSum=99", "maxAddend=50"])
