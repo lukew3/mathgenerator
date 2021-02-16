@@ -63,7 +63,11 @@ def gen_to_row_string(item):
 
     # NOTE: renamed 'def_name' to 'func_name' because it suits it more
     func_name = item[3]
-    row = [myGen.id, myGen.title, prob, solu, func_name, myGen.kwargs]
+    kwargs = ""
+    kwargs_list = myGen.kwargs
+    for kwarg in kwargs_list:
+        kwargs += '`' + kwarg + '` '
+    row = [myGen.id, myGen.title, prob, solu, func_name, kwargs]
     #tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
     #    row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
     tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
