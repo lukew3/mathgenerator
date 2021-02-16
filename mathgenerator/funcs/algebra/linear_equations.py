@@ -31,4 +31,5 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
 
 
 linear_equations = Generator("Linear Equations", 26, "2x+5y=20 & 3x+6y=12",
-                             "x=-20 & y=12", linearEquationsFunc)
+                             "x=-20 & y=12", linearEquationsFunc,
+                             ["n=2", "varRange=20", "coeffRange=20"])

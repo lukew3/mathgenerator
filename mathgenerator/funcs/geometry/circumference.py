@@ -10,4 +10,5 @@ def circumferenceCircle(maxRadius=100):
     return problem, solution
 
 
-circumference = Generator("Circumference", 104, "2*pi*r=", "circumference", circumferenceCircle)
+circumference = Generator("Circumference", 104, "2*pi*r=", "circumference", circumferenceCircle,
+                            ["maxRadius=100"])

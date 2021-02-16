@@ -13,4 +13,5 @@ def thirdAngleOfTriangleFunc(maxAngle=89):
 
 third_angle_of_triangle = Generator("Third Angle of Triangle", 22,
                                     "Third Angle of the triangle = ", "angle3",
-                                    thirdAngleOfTriangleFunc)
+                                    thirdAngleOfTriangleFunc,
+                                    ["maxAngle=89"])

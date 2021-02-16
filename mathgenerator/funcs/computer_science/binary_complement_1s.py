@@ -16,4 +16,5 @@ def binaryComplement1sFunc(maxDigits=10):
 
 
 binary_complement_1s = Generator("Binary Complement 1s", 4, "1010=", "0101",
-                                 binaryComplement1sFunc)
+                                 binaryComplement1sFunc,
+                                 ["maxDigits=10"])

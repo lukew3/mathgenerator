@@ -14,4 +14,5 @@ def pythagoreanTheoremFunc(maxLength=20):
 pythagorean_theorem = Generator(
     "Pythagorean Theorem", 25,
     "The hypotenuse of a right triangle given the other two lengths a and b = ",
-    "hypotenuse", pythagoreanTheoremFunc)
+    "hypotenuse", pythagoreanTheoremFunc,
+    ["maxLength=20"])

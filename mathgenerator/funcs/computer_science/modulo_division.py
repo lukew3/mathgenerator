@@ -11,4 +11,5 @@ def moduloFunc(maxRes=99, maxModulo=99):
     return problem, solution
 
 
-modulo_division = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc)
+modulo_division = Generator("Modulo Division", 5, "a%b=", "c", moduloFunc,
+                            ["maxRes=99", "maxModulo=99"])

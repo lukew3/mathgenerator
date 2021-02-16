@@ -16,4 +16,5 @@ def multiplicationFunc(maxMulti=12, style='raw'):
 
 
 multiplication = Generator("Multiplication", 2, "a*b=", "c",
-                           multiplicationFunc)
+                           multiplicationFunc,
+                           ["maxMulti=12"])

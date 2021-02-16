@@ -30,4 +30,4 @@ def basicAlgebraFunc(maxVariable=10, style='raw'):
 
 
 basic_algebra = Generator("Basic Algebra", 11, "ax + b = c", "d",
-                          basicAlgebraFunc)
+                          basicAlgebraFunc, ["maxVariable=10"])

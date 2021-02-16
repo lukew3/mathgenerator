@@ -12,4 +12,5 @@ def binaryToHexFunc(max_dig=10):
 
 
 binary_to_hex = Generator("Binary to Hexidecimal", 64, "Hexidecimal of a=",
-                          "b", binaryToHexFunc)
+                          "b", binaryToHexFunc,
+                          ["max_dig=10"])

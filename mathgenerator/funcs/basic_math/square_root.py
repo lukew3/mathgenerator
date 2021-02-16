@@ -14,4 +14,4 @@ def squareRootFunc(minNo=1, maxNo=12, style='raw'):
     return problem, solution
 
 
-square_root = Generator("Square Root", 6, "sqrt(a)=", "b", squareRootFunc)
+square_root = Generator("Square Root", 6, "sqrt(a)=", "b", squareRootFunc, ["minNo=1", "maxNo=12"])

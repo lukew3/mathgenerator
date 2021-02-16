@@ -19,4 +19,5 @@ def addition_func(maxSum=99, maxAddend=50, style='raw'):
         return problem, solution
 
 
-addition = Generator("Addition", 0, "a+b=", "c", addition_func)
+addition = Generator("Addition", 0, "a+b=", "c", addition_func,
+                    ["maxSum=99", "maxAddend=50"])

@@ -26,4 +26,5 @@ def commonFactorsFunc(maxVal=100):
 
 common_factors = Generator("Common Factors", 40,
                            "Common Factors of {a} and {b} = ", "[c, d, ...]",
-                           commonFactorsFunc)
+                           commonFactorsFunc,
+                           ["maxVal=100"])

@@ -14,4 +14,4 @@ def squareFunc(maxSquareNum=20, style='raw'):
     return problem, solution
 
 
-square = Generator("Square", 8, "a^2", "b", squareFunc)
+square = Generator("Square", 8, "a^2", "b", squareFunc, ["maxSquareNum=20"])

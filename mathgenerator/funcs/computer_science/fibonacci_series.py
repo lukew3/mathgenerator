@@ -23,4 +23,5 @@ def fibonacciSeriesFunc(minNo=1):
 
 fibonacci_series = Generator(
     "Fibonacci Series", 56, "fibonacci series of first a numbers",
-    "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc)
+    "prints the fibonacci series starting from 0 to a", fibonacciSeriesFunc,
+    ["minNo=1"])

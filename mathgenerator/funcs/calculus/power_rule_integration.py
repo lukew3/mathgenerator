@@ -22,4 +22,5 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
 
 
 power_rule_integration = Generator("Power Rule Integration", 48, "nx^m=",
-                                   "(n/m)x^(m+1)", powerRuleIntegrationFunc)
+                                   "(n/m)x^(m+1)", powerRuleIntegrationFunc,
+                                   ["maxCoef=10", "maxExp=10", "maxTerms=5"])

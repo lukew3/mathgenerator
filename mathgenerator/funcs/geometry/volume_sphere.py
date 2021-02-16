@@ -12,4 +12,5 @@ def volumeSphereFunc(maxRadius=100):
 
 volume_sphere = Generator("Volume of Sphere", 61,
                           "Volume of sphere with radius r m = ",
-                          "(4*pi/3)*r*r*r", volumeSphereFunc)
+                          "(4*pi/3)*r*r*r", volumeSphereFunc,
+                          ["maxRadius=100"])

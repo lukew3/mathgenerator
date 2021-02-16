@@ -30,4 +30,5 @@ def geometricMeanFunc(maxValue=100, maxNum=4):
 geometric_mean = Generator(
     "Geometric Mean of N Numbers", 67,
     "Geometric mean of n numbers A1 , A2 , ... , An = ",
-    "(A1*A2*...An)^(1/n) = ans", geometricMeanFunc)
+    "(A1*A2*...An)^(1/n) = ans", geometricMeanFunc,
+    ["maxValue=100", "maxNum=4"])

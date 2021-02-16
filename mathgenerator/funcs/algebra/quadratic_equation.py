@@ -20,4 +20,5 @@ def quadraticEquation(maxVal=100):
 quadratic_equation = Generator(
     "Quadratic Equation", 50,
     "Find the zeros {x1,x2} of the quadratic equation ax^2+bx+c=0", "x1,x2",
-    quadraticEquation)
+    quadraticEquation,
+    ["maxVal=100"])

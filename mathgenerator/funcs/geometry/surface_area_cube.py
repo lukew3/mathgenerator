@@ -11,4 +11,5 @@ def surfaceAreaCube(maxSide=20, unit='m'):
 
 surface_area_cube = Generator("Surface Area of Cube", 32,
                               "Surface area of cube with side a units is",
-                              "b units^2", surfaceAreaCube)
+                              "b units^2", surfaceAreaCube,
+                              ["maxSide=20", "unit='m'"])

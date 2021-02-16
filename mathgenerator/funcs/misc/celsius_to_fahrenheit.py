@@ -12,4 +12,5 @@ def celsiustofahrenheitFunc(maxTemp=100):
 
 celsius_to_fahrenheit = Generator("Celsius To Fahrenheit", 81,
                                   "(C +(9/5))+32=", "F",
-                                  celsiustofahrenheitFunc)
+                                  celsiustofahrenheitFunc,
+                                  ["maxTemp=100"])

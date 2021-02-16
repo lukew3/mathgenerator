@@ -17,4 +17,5 @@ def meanMedianFunc(maxlen=10):
 
 mean_median = Generator("Mean and Median", 76,
                         "Mean and median of given set of numbers",
-                        "Mean, Median", meanMedianFunc)
+                        "Mean, Median", meanMedianFunc,
+                        ["maxlen=10"])

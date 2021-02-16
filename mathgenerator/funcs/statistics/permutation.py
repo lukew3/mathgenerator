@@ -16,4 +16,5 @@ def permutationFunc(maxlength=20):
 permutation = Generator(
     "Permutations", 42,
     "Total permutations of 4 objects at a time from 10 objects is", "5040",
-    permutationFunc)
+    permutationFunc,
+    ["maxlength=20"])

@@ -13,4 +13,5 @@ def regularPolygonAngleFunc(minVal=3, maxVal=20):
 angle_regular_polygon = Generator(
     "Angle of a Regular Polygon", 29,
     "Find the angle of a regular polygon with 6 sides", "120",
-    regularPolygonAngleFunc)
+    regularPolygonAngleFunc,
+    ["minVal=3", "maxVal=20"])

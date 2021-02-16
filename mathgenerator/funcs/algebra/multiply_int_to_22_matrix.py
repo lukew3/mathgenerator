@@ -26,4 +26,5 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, style='raw'):
 multiply_int_to_22_matrix = Generator("Integer Multiplication with 2x2 Matrix",
                                       17, "k * [[a,b],[c,d]]=",
                                       "[[k*a,k*b],[k*c,k*d]]",
-                                      multiplyIntToMatrix22)
+                                      multiplyIntToMatrix22,
+                                      ["maxMatrixVal=10", "maxRes=100"])

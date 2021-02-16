@@ -16,4 +16,5 @@ def complexDivisionFunc(maxRes=99, maxDivid=99, style='raw'):
     return problem, solution
 
 
-complex_division = Generator("Complex Division", 13, "a/b=", "c", complexDivisionFunc)
+complex_division = Generator("Complex Division", 13, "a/b=", "c", complexDivisionFunc,
+                            ["maxRes=99", "maxDivid=99"])

@@ -25,4 +25,5 @@ def definiteIntegralFunc(max_coeff=100):
 definite_integral = Generator(
     "Definite Integral of Quadratic Equation", 89,
     "The definite integral within limits 0 to 1 of quadratic equation ax^2+bx+c is = ",
-    "S", definiteIntegralFunc)
+    "S", definiteIntegralFunc,
+    ["max_coeff=100"])

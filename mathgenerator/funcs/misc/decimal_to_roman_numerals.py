@@ -37,4 +37,5 @@ def decimalToRomanNumeralsFunc(maxDecimal=4000):
 
 decimal_to_roman_numerals = Generator("Converts decimal to Roman Numerals", 85,
                                       "Convert 20 into Roman Numerals", "XX",
-                                      decimalToRomanNumeralsFunc)
+                                      decimalToRomanNumeralsFunc,
+                                      ["maxDecimal=4000"])

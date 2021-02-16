@@ -17,4 +17,5 @@ def arithmeticProgressionTermFunc(maxd=100, maxa=100, maxn=100):
 arithmetic_progression_term = Generator(
     "AP Term Calculation", 82,
     "Find the term number n of the AP series: a1, a2, a3 ...", "a-n",
-    arithmeticProgressionTermFunc)
+    arithmeticProgressionTermFunc,
+    ["maxd=100", "maxa=100", "maxn=100"])

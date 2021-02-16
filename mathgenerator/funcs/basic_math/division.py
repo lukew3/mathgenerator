@@ -18,4 +18,4 @@ def divisionToIntFunc(maxA=25, maxB=25, style='raw'):
     return problem, solution
 
 
-division = Generator("Division", 3, "a/b=", "c", divisionToIntFunc)
+division = Generator("Division", 3, "a/b=", "c", divisionToIntFunc, ["maxA=25", "maxB=25"])

@@ -24,4 +24,5 @@ def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
 
 set_operation = Generator("Union,Intersection,Difference of Two Sets", 93,
                           "Union,intersection,difference", "aUb,a^b,a-b,b-a,",
-                          set_operation)
+                          set_operation,
+                          ["minval=3", "maxval=7", "n_a=4", "n_b=5"])

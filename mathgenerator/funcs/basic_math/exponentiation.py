@@ -15,4 +15,5 @@ def exponentiationFunc(maxBase=20, maxExpo=10, style='raw'):
 
 
 exponentiation = Generator("Exponentiation", 53, "a^b = ", "c",
-                           exponentiationFunc)
+                           exponentiationFunc,
+                           ["maxBase=20", "maxExpo=10"])

@@ -13,4 +13,5 @@ def sectorAreaFunc(maxRadius=49, maxAngle=359):
 
 sector_area = Generator("Area of a Sector", 75,
                         "Area of a sector with radius, r and angle, a ",
-                        "Area", sectorAreaFunc)
+                        "Area", sectorAreaFunc,
+                        ["maxRadius=49", "maxAngle=359"])

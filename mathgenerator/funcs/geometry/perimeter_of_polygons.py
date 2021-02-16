@@ -17,4 +17,5 @@ def perimeterOfPolygons(maxSides=12, maxLength=120):
 perimeter_of_polygons = Generator(
     "Perimeter of Polygons", 96,
     "The perimeter of a x sided polygon with lengths of y cm is: ", "z",
-    perimeterOfPolygons)
+    perimeterOfPolygons,
+    ["maxSides=12", "maxLength=120"])

@@ -63,17 +63,19 @@ def gen_to_row_string(item):
 
     # NOTE: renamed 'def_name' to 'func_name' because it suits it more
     func_name = item[3]
-    row = [myGen.id, myGen.title, prob, solu, func_name]
+    row = [myGen.id, myGen.title, prob, solu, func_name, myGen.kwargs]
+    #tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
+    #    row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
     tableLine = "| " + str(row[0]) + " | " + str(row[1]) + " | " + str(
-        row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " |\n"
+        row[2]) + " | " + str(row[3]) + " | " + str(row[4]) + " | " + str(row[5]) + " |\n"
     print('added', item[1], '-', func_name, 'to the README.md')
     return tableLine
 
 def make_table_header(name):
     lines = [
         '## ' + name + '\n',
-        '| Id   | Skill | Example problem | Example Solution | Function Name |\n',
-        '|------|-------|-----------------|------------------|---------------|\n'
+        '| Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |\n',
+        '|------|-------|-----------------|------------------|---------------|--------|\n'
     ]
     for line in lines:
         write_list.append(line)
@@ -98,7 +100,7 @@ def main():
     write_table_of_contents()
     for subject in subjects:
         write_subject_table(subject, wList)
-        
+
     with open('README.md', "r") as g:
         lines = g.readlines()
 

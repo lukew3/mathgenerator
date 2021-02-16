@@ -32,4 +32,5 @@ def compareFractionsFunc(maxVal=10, style='raw'):
 compare_fractions = Generator(
     "Compare Fractions", 44,
     "Which symbol represents the comparison between a/b and c/d?", ">/</=",
-    compareFractionsFunc)
+    compareFractionsFunc,
+    ["maxVal=10"])

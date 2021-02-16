@@ -14,4 +14,5 @@ def degreeToRadFunc(max_deg=360):
 
 
 degree_to_rad = Generator("Degrees to Radians", 86, "Angle a in radians is = ",
-                          "b", degreeToRadFunc)
+                          "b", degreeToRadFunc,
+                          ["max_deg=360"])

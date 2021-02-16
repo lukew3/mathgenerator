@@ -12,4 +12,5 @@ def DecimalToBinaryFunc(max_dec=99):
 
 
 decimal_to_binary = Generator("Decimal to Binary", 14, "Binary of a=", "b",
-                              DecimalToBinaryFunc)
+                              DecimalToBinaryFunc,
+                              ["max_dec=99"])

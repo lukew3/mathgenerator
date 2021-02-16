@@ -49,4 +49,5 @@ def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
 
 system_of_equations = Generator("Solve a System of Equations in R^2", 23,
                                 "2x + 5y = 13, -3x - 3y = -6", "x = -1, y = 3",
-                                systemOfEquationsFunc)
+                                systemOfEquationsFunc,
+                                ["range_x=10", "range_y=10", "coeff_mult_range=10"])

@@ -10,4 +10,5 @@ def areaCircle(maxRadius=100):
     return problem, solution
 
 
-area_of_circle = Generator("Area of Circle", 112, "pi*r*r=", "area", areaCircle)
+area_of_circle = Generator("Area of Circle", 112, "pi*r*r=", "area", areaCircle,
+                            ["maxRadius=100"])

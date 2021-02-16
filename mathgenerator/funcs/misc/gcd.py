@@ -13,4 +13,5 @@ def gcdFunc(maxVal=20):
 
 
 gcd = Generator("GCD (Greatest Common Denominator)", 10, "GCD of a and b = ",
-                "c", gcdFunc)
+                "c", gcdFunc,
+                ["maxVal=20"])

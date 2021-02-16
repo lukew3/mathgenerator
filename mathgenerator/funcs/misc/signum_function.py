@@ -16,4 +16,5 @@ def signumFunc(min=-999, max=999):
 
 signum_function = Generator("signum function", 106,
                             "signum function of a is", "b",
-                            signumFunc)
+                            signumFunc,
+                            ["min=-999", "max=999"])

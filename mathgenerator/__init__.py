@@ -10,12 +10,13 @@ genList = []
 
 
 class Generator:
-    def __init__(self, title, id, generalProb, generalSol, func):
+    def __init__(self, title, id, generalProb, generalSol, func, kwargs):
         self.title = title
         self.id = id
         self.generalProb = generalProb
         self.generalSol = generalSol
         self.func = func
+        self.kwargs = kwargs
 
         (filename, line_number, function_name,
          text) = traceback.extract_stack()[-2]
@@ -24,7 +25,7 @@ class Generator:
         subjectname = filename[:filename.rfind('/')].strip()
         subjectname = subjectname[subjectname.rfind('/'):].strip()
         subjectname = subjectname[1:]
-        genList.append([id, title, self, funcname, subjectname])
+        genList.append([id, title, self, funcname, subjectname, kwargs])
 
     def __str__(self):
         return str(

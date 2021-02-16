@@ -15,4 +15,5 @@ def determinantToMatrix22(maxMatrixVal=100):
 
 int_matrix_22_determinant = Generator("Determinant to 2x2 Matrix", 77,
                                       "Det([[a,b],[c,d]]) =", " a * d - b * c",
-                                      determinantToMatrix22)
+                                      determinantToMatrix22,
+                                      ["maxMatrixVal=100"])

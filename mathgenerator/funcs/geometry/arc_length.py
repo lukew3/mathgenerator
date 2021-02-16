@@ -14,4 +14,5 @@ def arclengthFunc(maxRadius=49, maxAngle=359):
 
 
 arc_length = Generator("Arc length of Angle", 108,
-                       " Given the radius, r and angle, ang. Calculate the arc length of the given angle", "(ang/360) * 2 * pi * r", arclengthFunc)
+                       " Given the radius, r and angle, ang. Calculate the arc length of the given angle", "(ang/360) * 2 * pi * r", arclengthFunc,
+                       ["maxRadius=49", "maxAngle=359"])

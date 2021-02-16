@@ -15,4 +15,4 @@ def factorialFunc(maxInput=6):
     return problem, solution
 
 
-factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc)
+factorial = Generator("Factorial", 31, "a! = ", "b", factorialFunc, ["maxInput=6"])

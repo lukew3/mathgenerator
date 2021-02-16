@@ -26,4 +26,5 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
 
 
 data_summary = Generator("Mean,Standard Deviation,Variance", 59, "a,b,c",
-                         "Mean:a+b+c/3,Std,Var", dataSummaryFunc)
+                         "Mean:a+b+c/3,Std,Var", dataSummaryFunc,
+                         ["number_values=15", "minval=5", "maxval=50"])

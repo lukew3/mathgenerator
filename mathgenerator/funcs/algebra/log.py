@@ -17,4 +17,5 @@ def logFunc(maxBase=3, maxVal=8, style='raw'):
     return problem, solution
 
 
-log = Generator("Logarithm", 12, "log2(8)", "3", logFunc)
+log = Generator("Logarithm", 12, "log2(8)", "3", logFunc,
+                ["maxBase=3", "maxVal=8"])

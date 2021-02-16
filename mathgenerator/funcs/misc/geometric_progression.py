@@ -26,4 +26,5 @@ def geomProgrFunc(number_values=6,
 geometric_progression = Generator(
     "Geometric Progression", 66,
     "Initial value,Common Ratio,nth Term,Sum till nth term =",
-    "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc)
+    "a,r,ar^n-1,sum(ar^n-1", geomProgrFunc,
+    ["number_values=6", "min_value=2", "max_value=12", "n_term=7", "sum_term=5"])

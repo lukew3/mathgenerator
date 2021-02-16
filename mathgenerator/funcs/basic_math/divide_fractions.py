@@ -42,4 +42,5 @@ def divideFractionsFunc(maxVal=10, style='raw'):
 
 
 divide_fractions = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y",
-                             divideFractionsFunc)
+                             divideFractionsFunc,
+                             ["maxVal=10"])

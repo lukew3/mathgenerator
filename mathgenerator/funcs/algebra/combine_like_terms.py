@@ -42,4 +42,4 @@ def combineTerms(string):
 
 
 combine_like_terms = Generator("Combine Like terms", 105, "nx^m+lx^k+bx^m",
-                               "(n+b)x^m+lx^k", likeTermCombineFunc)
+                               "(n+b)x^m+lx^k", likeTermCombineFunc, ["maxCoef=10", "maxExp=20", "maxTerms=10"])

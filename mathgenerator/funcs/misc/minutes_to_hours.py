@@ -11,4 +11,5 @@ def minutesToHoursFunc(maxMinutes=999):
 
 
 minutes_to_hours = Generator("Minute to Hour conversion", 102,
-                             "Convert minutes to Hours & Minutes", "hours:minutes", minutesToHoursFunc)
+                             "Convert minutes to Hours & Minutes", "hours:minutes", minutesToHoursFunc,
+                             ["maxMinutes=999"])

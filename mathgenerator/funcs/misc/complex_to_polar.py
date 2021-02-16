@@ -17,4 +17,5 @@ def complexToPolarFunc(minRealImaginaryNum=-20, maxRealImaginaryNum=20):
 
 
 complex_to_polar = Generator("Complex To Polar Form", 92, "rexp(itheta) = ",
-                             "plr", complexToPolarFunc)
+                             "plr", complexToPolarFunc,
+                             ["minRealImaginaryNum=-20, maxRealImaginaryNum=20"])

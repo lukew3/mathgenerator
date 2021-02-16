@@ -28,4 +28,5 @@ def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
 
 
 basic_trigonometry = Generator("Trigonometric Values", 57, "What is sin(X)?",
-                               "ans", basicTrigonometryFunc)
+                               "ans", basicTrigonometryFunc,
+                               ["angles=[0, 30, 45, 60, 90]","functions=['sin', 'cos', 'tan']"])

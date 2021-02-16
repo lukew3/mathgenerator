@@ -13,4 +13,5 @@ def hcfFunc(maxVal=20):
 
 
 hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c",
-                hcfFunc)
+                hcfFunc,
+                ["maxVal=20"])

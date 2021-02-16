@@ -15,4 +15,5 @@ def euclidianNormFunc(maxEltAmt=20):
 eucldian_norm = Generator(
     "Euclidian norm or L2 norm of a vector", 69,
     "Euclidian Norm of a vector V:[v1, v2, ......., vn]",
-    "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNormFunc)
+    "sqrt(v1^2 + v2^2 ........ +vn^2)", euclidianNormFunc,
+    ["maxEltAmt=20"])

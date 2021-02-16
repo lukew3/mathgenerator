@@ -17,4 +17,5 @@ def arithmeticProgressionSumFunc(maxd=100, maxa=100, maxn=100):
 arithmetic_progression_sum = Generator(
     "AP Sum Calculation", 83,
     "Find the sum of first n terms of the AP series: a1, a2, a3 ...", "Sum",
-    arithmeticProgressionSumFunc)
+    arithmeticProgressionSumFunc,
+    ["maxd=100", "maxa=100", "maxn=100"])

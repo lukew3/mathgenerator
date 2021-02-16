@@ -31,4 +31,5 @@ def harmonicMeanFunc(maxValue=100, maxNum=4):
 harmonic_mean = Generator("Harmonic Mean of N Numbers", 68,
                           "Harmonic mean of n numbers A1 , A2 , ... , An = ",
                           " n/((1/A1) + (1/A2) + ... + (1/An)) = ans",
-                          harmonicMeanFunc)
+                          harmonicMeanFunc,
+                          ["maxValue=100", "maxNum=4"])
