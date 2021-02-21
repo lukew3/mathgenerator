@@ -10,7 +10,7 @@ If you have an idea for a generator, please add it as an issue and tag it with t
 ## Table of Contents
 * [Installation](#installation)
 * [Basic Usage](#basic-usage)
-  * [More Complicated Usage](#more-complicated-usage)
+  * [Creating a worksheet](#more-complicated-usage)
 * [Documentation](#documentation)
 * [List of Generators](#list-of-generators)
   * [algebra](#algebra)
@@ -41,17 +41,20 @@ problem, solution = mathgen.addition()
 #another way to generate an addition problem using genById()
 problem, solution = mathgen.genById(0)
 ```
-### More Complicated Usage
-
+### Creating a worksheet
+If you wish to create a worksheet, you can use the `worksheetgen` package. Install this with `pip install worksheetgen`. Here is an example of how a worksheet would be generated.
 ```
-import sys
 from mathgenerator import mathgen
+from worksheetgen.wg import Worksheet
 
-worksheet = mathgen.make_worksheet("2020-11-29")
-mathgen.add_section_with_task_to_worksheet(worksheet, 105, 5)
-mathgen.add_section_with_task_to_worksheet(worksheet, 2, 5)
-mathgen.write_pdf(worksheet)
+worksheet = Worksheet("Worksheet title")
+worksheet.add_instruction("Instructions")
+# Writes 10 problems generated with id 1, [0] at the end specifies to take problem, and not solution.
+for _ in range(10):
+	worksheet.add_problem(mathgen.genById(1)[0])
+worksheet.write_pdf()
 ```
+This creates the pdf `ws.pdf` in your current directory
 
 ## Documentation
 * `getGenList()` returns a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
