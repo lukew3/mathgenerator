@@ -10,7 +10,7 @@ If you have an idea for a generator, please add it as an issue and tag it with t
 ## Table of Contents
 * [Installation](#installation)
 * [Basic Usage](#basic-usage)
-  * [Creating a worksheet](#more-complicated-usage)
+  * [Creating a worksheet](#creating-a-worksheet)
 * [Documentation](#documentation)
 * [List of Generators](#list-of-generators)
   * [algebra](#algebra)
