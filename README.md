@@ -1,5 +1,4 @@
 # mathgenerator
-![PyPI download month](https://img.shields.io/pypi/dm/mathgenerator?color=sgreen&label=pip%20downloads)
 
 A math problem generator, created for the purpose of giving self-studying students and teaching organizations the means to easily get access to random math problems to suit their needs.
 
