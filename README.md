@@ -41,7 +41,7 @@ problem, solution = mathgen.addition()
 problem, solution = mathgen.genById(0)
 ```
 ### Creating a worksheet
-If you wish to create a worksheet, you can use the `worksheetgen` package. Install this with `pip install worksheetgen`. Here is an example of how a worksheet would be generated.
+If you wish to create a worksheet, you can use the [worksheetgen](https://github.com/lukew3/worksheetgen) package. Install this with `pip install worksheetgen`. Here is an example of how a worksheet would be generated.
 ```
 from mathgenerator import mathgen
 from worksheetgen.wg import Worksheet
