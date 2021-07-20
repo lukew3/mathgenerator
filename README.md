@@ -2,7 +2,7 @@
 
 A math problem generator, created for the purpose of giving self-studying students and teaching organizations the means to easily get access to random math problems to suit their needs.
 
-To try out generators, go to <https://todarith.ml/generate/>
+To try out generators, go to <https://lukew3.com/mathgenerator>
 
 If you have an idea for a generator, please add it as an issue and tag it with the "New Generator" label.
 
