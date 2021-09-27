@@ -1,6 +1,5 @@
 from .funcs import *
 from .__init__ import getGenList
-from worksheetgen.wg import Worksheet
 
 genList = getGenList()
 
