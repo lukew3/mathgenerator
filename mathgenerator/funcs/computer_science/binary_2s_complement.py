@@ -29,6 +29,5 @@ def binary2sComplementFunc(maxDigits=10):
 
 
 binary_2s_complement = Generator("Binary 2's Complement", 73,
-                                 "2's complement of 11010110 =", "101010",
                                  binary2sComplementFunc,
                                  ["maxDigits=10"])

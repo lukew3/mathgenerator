@@ -11,6 +11,5 @@ def volumeCube(maxSide=20, unit='m'):
 
 
 volume_cube = Generator("Volum of Cube", 35,
-                        "Volume of cube with side a units is", "b units^3",
                         volumeCube,
                         ["maxSide=20", "unit='m'"])

@@ -26,5 +26,5 @@ def conditionalProbFunc():
 
 
 conditional_probability = Generator("Conditional Probability",
-                                    107, "P(A|+)=", "c", conditionalProbFunc,
+                                    107, conditionalProbFunc,
                                     [""])

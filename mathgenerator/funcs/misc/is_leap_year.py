@@ -20,6 +20,5 @@ def IsLeapYear(minNumber=1900, maxNumber=2099):
 
 
 is_leap_year = Generator("Leap Year or Not", 101,
-                         "Year y ", "is/not a leap year",
                          IsLeapYear,
                          ["minNumber=1900", "maxNumber=2099"])

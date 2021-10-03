@@ -29,6 +29,5 @@ def factoringFunc(range_x1=10, range_x2=10):
     return problem, solution
 
 
-factoring = Generator("Factoring Quadratic", 21, "x^2+(x1+x2)+x1*x2",
-                      "(x-x1)(x-x2)", factoringFunc,
+factoring = Generator("Factoring Quadratic", 21, factoringFunc,
                       ["range_x1=10", "range_x2=10"])

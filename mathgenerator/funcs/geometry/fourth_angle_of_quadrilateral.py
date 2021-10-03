@@ -16,6 +16,5 @@ def fourthAngleOfQuadriFunc(maxAngle=180):
 
 fourth_angle_of_quadrilateral = Generator(
     "Fourth Angle of Quadrilateral", 49,
-    "Fourth angle of Quadrilateral with angles a,b,c =", "angle4",
     fourthAngleOfQuadriFunc,
     ["maxAngle=180"])

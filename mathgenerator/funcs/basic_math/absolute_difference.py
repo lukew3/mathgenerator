@@ -17,6 +17,5 @@ def absoluteDifferenceFunc(maxA=100, maxB=100, style='raw'):
 
 absolute_difference = Generator(
     "Absolute difference between two numbers", 71,
-    "Absolute difference betweeen two numbers a and b =", "|a-b|",
     absoluteDifferenceFunc,
     ["maxA=100", "maxB=100"])

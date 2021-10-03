@@ -16,6 +16,5 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20):
 
 distance_two_points = Generator(
     "Distance between 2 points", 24,
-    "Find the distance between (x1,y1) and (x2,y2)", "sqrt(distanceSquared)",
     distanceTwoPointsFunc,
     ["maxValXY=20", "minValXY=-20"])

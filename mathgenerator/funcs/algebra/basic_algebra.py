@@ -29,5 +29,5 @@ def basicAlgebraFunc(maxVariable=10, style='raw'):
     return problem, solution
 
 
-basic_algebra = Generator("Basic Algebra", 11, "ax + b = c", "d",
+basic_algebra = Generator("Basic Algebra", 11,
                           basicAlgebraFunc, ["maxVariable=10"])

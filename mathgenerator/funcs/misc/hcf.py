@@ -12,6 +12,5 @@ def hcfFunc(maxVal=20):
     return problem, solution
 
 
-hcf = Generator("HCF (Highest Common Factor)", 51, "HCF of a and b = ", "c",
-                hcfFunc,
+hcf = Generator("HCF (Highest Common Factor)", 51, hcfFunc,
                 ["maxVal=20"])

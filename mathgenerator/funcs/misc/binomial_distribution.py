@@ -39,4 +39,4 @@ def binomialDistFunc():
 
 
 binomial_distribution = Generator("Binomial distribution", 109,
-                                  "P(X<x)=", "c", binomialDistFunc, [""])
+                                  binomialDistFunc, [""])

@@ -22,6 +22,5 @@ def primeFactorsFunc(minVal=1, maxVal=200):
     return problem, solution
 
 
-prime_factors = Generator("Prime Factorisation", 27, "Prime Factors of a =",
-                          "[b, c, d, ...]", primeFactorsFunc,
+prime_factors = Generator("Prime Factorisation", 27,primeFactorsFunc,
                           ["minVal=1", "maxVal=200"])

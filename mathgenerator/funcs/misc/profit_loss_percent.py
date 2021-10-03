@@ -18,6 +18,5 @@ def profitLossPercentFunc(maxCP=1000, maxSP=1000):
 
 profit_loss_percent = Generator(
     "Profit or Loss Percent", 63,
-    "Profit/ Loss percent when CP = cp and SP = sp is: ", "percent",
     profitLossPercentFunc,
     ["maxCP=1000", "maxSP=1000"])

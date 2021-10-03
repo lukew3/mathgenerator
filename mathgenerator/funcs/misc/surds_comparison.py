@@ -19,7 +19,5 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10):
     return problem, solution
 
 
-surds_comparison = Generator("Comparing surds", 55,
-                             "Fill in the blanks a^(1/b) _ c^(1/d)", "</>/=",
-                             surdsComparisonFunc,
+surds_comparison = Generator("Comparing surds", 55, surdsComparisonFunc,
                              ["maxValue=100", "maxRoot=10"])

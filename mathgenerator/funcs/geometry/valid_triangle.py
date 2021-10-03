@@ -21,6 +21,5 @@ def isTriangleValidFunc(maxSideLength=50):
 
 
 valid_triangle = Generator("Triangle exists check", 19,
-                           "Does triangle with sides a, b and c exist?",
-                           "Yes/No", isTriangleValidFunc,
+                           isTriangleValidFunc,
                            ["maxSideLength=50"])

@@ -11,6 +11,5 @@ def binaryToHexFunc(max_dig=10):
     return problem, solution
 
 
-binary_to_hex = Generator("Binary to Hexidecimal", 64, "Hexidecimal of a=",
-                          "b", binaryToHexFunc,
+binary_to_hex = Generator("Binary to Hexidecimal", 64, binaryToHexFunc,
                           ["max_dig=10"])

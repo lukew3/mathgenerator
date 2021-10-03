@@ -14,6 +14,5 @@ def volumeCuboid(maxSide=20, unit='m'):
 
 volume_cuboid = Generator(
     "Volume of Cuboid", 36,
-    "Volume of cuboid with sides = a units, b units, c units is", "d units^3",
     volumeCuboid,
     ["maxSide=20", "unit='m'"])

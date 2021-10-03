@@ -40,6 +40,5 @@ def multiplyFractionsFunc(maxVal=10, style='raw'):
 
 
 fraction_multiplication = Generator("Fraction Multiplication", 28,
-                                    "(a/b)*(c/d)=", "x/y",
                                     multiplyFractionsFunc,
                                     ["maxVal=10"])

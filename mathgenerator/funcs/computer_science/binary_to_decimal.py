@@ -12,6 +12,6 @@ def binaryToDecimalFunc(max_dig=10):
     return problem, solution
 
 
-binary_to_decimal = Generator("Binary to Decimal", 15, "Decimal of a=", "b",
+binary_to_decimal = Generator("Binary to Decimal", 15,
                               binaryToDecimalFunc,
                               ["max_dig=10"])

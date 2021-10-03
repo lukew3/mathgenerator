@@ -17,6 +17,5 @@ def DecimalToBCDFunc(maxNumber=10000):
 
 
 decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
-                           "Binary Coded Decimal of Decimal n is ", "b",
                            DecimalToBCDFunc,
                            ["maxNumber=10000"])

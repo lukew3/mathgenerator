@@ -69,7 +69,5 @@ def intersectionOfTwoLinesFunc(minM=-10,
 
 
 intersection_of_two_lines = Generator(
-    "Intersection of Two Lines", 41,
-    "Find the point of intersection of the two lines: y = m1*x + b1 and y = m2*x + b2",
-    "(x, y)", intersectionOfTwoLinesFunc,
+    "Intersection of Two Lines", 41, intersectionOfTwoLinesFunc,
     ["minM=-10", "maxM=10", "minB=-10", "maxB=10", "minDenominator=1", "maxDenominator=6"])

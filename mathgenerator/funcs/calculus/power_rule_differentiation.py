@@ -19,6 +19,5 @@ def powerRuleDifferentiationFunc(maxCoef=10, maxExp=10, maxTerms=5):
 
 
 power_rule_differentiation = Generator("Power Rule Differentiation", 7,
-                                       "nx^m=", "(n*m)x^(m-1)",
                                        powerRuleDifferentiationFunc,
                                        ["maxCoef=10", "maxExp=10", "maxTerms=5"])

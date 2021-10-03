@@ -14,6 +14,6 @@ def vectorCrossFunc(minVal=-20, maxVal=20):
     return problem, solution
 
 
-vector_cross = Generator("Cross Product of 2 Vectors", 43, "a X b = ", "c",
+vector_cross = Generator("Cross Product of 2 Vectors", 43,
                          vectorCrossFunc,
                          ["minVal=-20", "maxVal=20"])

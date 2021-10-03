@@ -13,6 +13,5 @@ def nthFibonacciNumberFunc(maxN=100):
 
 
 nth_fibonacci_number = Generator("nth Fibonacci number", 62,
-                                 "What is the nth Fibonacci number", "Fn",
                                  nthFibonacciNumberFunc,
                                  ["maxN=100"])

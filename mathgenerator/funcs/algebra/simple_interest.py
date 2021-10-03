@@ -16,7 +16,5 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10):
 
 
 simple_interest = Generator(
-    "Simple Interest", 45,
-    "Simple interest for a principle amount of a dollars, b% rate of interest and for a time period of c years is = ",
-    "d dollars", simpleInterestFunc,
+    "Simple Interest", 45, simpleInterestFunc,
     ["maxPrinciple=10000", "maxRate=10", "maxTime=10"])

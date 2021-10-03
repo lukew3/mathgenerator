@@ -12,6 +12,5 @@ def surfaceAreaSphere(maxSide=20, unit='m'):
 
 surface_area_sphere = Generator(
     "Surface Area of Sphere", 60,
-    "Surface area of sphere with radius = a units is", "d units^2",
     surfaceAreaSphere,
     ["maxSide=20", "unit='m'"])

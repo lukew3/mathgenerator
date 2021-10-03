@@ -14,6 +14,5 @@ def surfaceAreaCuboid(maxSide=20, unit='m'):
 
 surface_area_cuboid = Generator(
     "Surface Area of Cuboid", 33,
-    "Surface area of cuboid with sides = a units, b units, c units is",
-    "d units^2", surfaceAreaCuboid,
+    surfaceAreaCuboid,
     ["maxSide=20", "unit='m'"])

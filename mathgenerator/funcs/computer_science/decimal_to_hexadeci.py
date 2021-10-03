@@ -10,6 +10,5 @@ def deciToHexaFunc(max_dec=1000):
     return problem, solution
 
 
-decimal_to_hexadeci = Generator("Decimal to Hexadecimal", 79, "Binary of a=",
-                                "b", deciToHexaFunc,
+decimal_to_hexadeci = Generator("Decimal to Hexadecimal", 79, deciToHexaFunc,
                                 ["max_dec=1000"])

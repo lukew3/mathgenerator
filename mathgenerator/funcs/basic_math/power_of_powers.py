@@ -17,6 +17,5 @@ def powerOfPowersFunc(maxBase=50, maxPower=10, style='raw'):
     return problem, solution
 
 
-power_of_powers = Generator("Power of Powers", 97, "6^4^2",
-                            "6^8", powerOfPowersFunc,
+power_of_powers = Generator("Power of Powers", 97, powerOfPowersFunc,
                             ["maxBase=50", "maxPower=10"])

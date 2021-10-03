@@ -13,6 +13,5 @@ def surfaceAreaCylinder(maxRadius=20, maxHeight=50, unit='m'):
 
 surface_area_cylinder = Generator(
     "Surface Area of Cylinder", 34,
-    "Surface area of cylinder with height = a units and radius = b units is",
-    "c units^2", surfaceAreaCylinder,
+    surfaceAreaCylinder,
     ["maxRadius=20", "maxHeight=50", "unit='m'"])

@@ -11,6 +11,5 @@ def percentageFunc(maxValue=99, maxpercentage=99):
     return problem, solution
 
 
-percentage = Generator("Percentage of a number", 80, "What is a% of b?",
-                       "percentage", percentageFunc,
+percentage = Generator("Percentage of a number", 80, percentageFunc,
                        ["maxValue=99", "maxpercentage=99"])

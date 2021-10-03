@@ -54,6 +54,5 @@ def baseConversionFunc(maxNum=60000, maxBase=16):
 
 
 base_conversion = Generator("Base Conversion", 94,
-                            "Convert 152346 from base 8 to base 10.", "54502",
                             baseConversionFunc,
                             ["maxNum=60000", "maxBase=16"])

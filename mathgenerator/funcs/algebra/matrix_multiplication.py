@@ -54,6 +54,5 @@ def matrixMultiplicationFuncHelper(inp):
 
 
 matrix_multiplication = Generator("Multiplication of two matrices", 46,
-                                  "Multiply two matrices A and B", "C",
                                   matrixMultiplicationFunc,
                                   ["maxVal=100", "max_dim=10"])

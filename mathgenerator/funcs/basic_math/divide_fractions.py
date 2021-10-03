@@ -43,6 +43,6 @@ def divideFractionsFunc(maxVal=10, style='raw'):
     return problem, solution
 
 
-divide_fractions = Generator("Fraction Division", 16, "(a/b)/(c/d)=", "x/y",
+divide_fractions = Generator("Fraction Division", 16,
                              divideFractionsFunc,
                              ["maxVal=10"])

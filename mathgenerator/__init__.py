@@ -10,11 +10,9 @@ genList = []
 
 
 class Generator:
-    def __init__(self, title, id, generalProb, generalSol, func, kwargs):
+    def __init__(self, title, id, func, kwargs):
         self.title = title
         self.id = id
-        self.generalProb = generalProb
-        self.generalSol = generalSol
         self.func = func
         self.kwargs = kwargs
 
@@ -30,7 +28,7 @@ class Generator:
     def __str__(self):
         return str(
             self.id
-        ) + " " + self.title + " " + self.generalProb + " " + self.generalSol
+        ) + " " + self.title
 
     def __call__(self, *args, **kwargs):
         try:

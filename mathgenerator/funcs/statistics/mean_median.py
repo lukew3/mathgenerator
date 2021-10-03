@@ -15,7 +15,5 @@ def meanMedianFunc(maxlen=10):
     return problem, solution
 
 
-mean_median = Generator("Mean and Median", 76,
-                        "Mean and median of given set of numbers",
-                        "Mean, Median", meanMedianFunc,
+mean_median = Generator("Mean and Median", 76, meanMedianFunc,
                         ["maxlen=10"])

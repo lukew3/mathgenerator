@@ -20,6 +20,5 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10):
             return problem, solution
 
 
-stationary_points = Generator("Stationary Points", 110, "f(x)=x^3-3x",
-                              "(-1,2),(1,-2)", stationaryPointsFunc,
+stationary_points = Generator("Stationary Points", 110, stationaryPointsFunc,
                               ["maxExp=3", "maxCoef=10"])

@@ -17,6 +17,6 @@ def lcmFunc(maxVal=20):
     return problem, solution
 
 
-lcm = Generator("LCM (Least Common Multiple)", 9, "LCM of a and b = ", "c",
+lcm = Generator("LCM (Least Common Multiple)", 9,
                 lcmFunc,
                 ["maxVal=20"])

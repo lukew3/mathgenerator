@@ -44,6 +44,5 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
     return problem, solution
 
 
-expanding = Generator("Expanding Factored Binomial", 111, "(a*x-x1)(b*x-x2)",
-                      "a*b*x^2+(b*x1+a*x2)*x+x1*x2", expandingFunc,
+expanding = Generator("Expanding Factored Binomial", 111, expandingFunc,
                       ["range_x1=10", "range_x2=10", "range_a=10", "range_b=10"])

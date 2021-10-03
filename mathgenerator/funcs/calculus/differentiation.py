@@ -50,6 +50,5 @@ def differentiationFunc(diff_lvl=2):
 
 
 differentiation = Generator("Differentiation", 88,
-                            "differentiate w.r.t x : d(f(x))/dx", "g(x)",
                             differentiationFunc,
                             ["diff_lvl=2"])

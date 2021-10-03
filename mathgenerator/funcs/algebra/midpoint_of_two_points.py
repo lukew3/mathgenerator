@@ -13,7 +13,5 @@ def MidPointOfTwoPointFunc(maxValue=20):
 
 
 midPoint_of_two_points = Generator("Midpoint of the two point", 20,
-                                   "((X1,Y1),(X2,Y2))=",
-                                   "((X1+X2)/2,(Y1+Y2)/2)",
                                    MidPointOfTwoPointFunc,
                                    ["maxValue=20"])

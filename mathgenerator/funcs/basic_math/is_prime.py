@@ -18,6 +18,6 @@ def isprime(max_num=100):
     return (problem, solution)
 
 
-is_prime = Generator('isprime', 90, 'a any positive integer', 'True/False',
+is_prime = Generator('isprime', 90,
                      isprime,
                      ["max_num=100"])

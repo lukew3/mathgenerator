@@ -15,6 +15,5 @@ def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m'):
 
 surface_area_cone = Generator(
     "Surface Area of cone", 38,
-    "Surface area of cone with height = a units and radius = b units is",
-    "c units^2", surfaceAreaCone,
+    surfaceAreaCone,
     ["maxRadius=20", "maxHeight=50", "unit='m'"])
