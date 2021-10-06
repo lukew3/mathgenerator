@@ -9,6 +9,8 @@ def thirdAngleOfTriangleFunc(maxAngle=89, format='string'):
     if format == 'string':
         problem = f"Third angle of triangle with angles {angle1} and {angle2} = "
         return problem, angle3
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return angle1, angle2, angle3
 

@@ -10,6 +10,8 @@ def celsiustofahrenheitFunc(maxTemp=100, format='string'):
             celsius) + " degrees Celsius to degrees Fahrenheit ="
         solution = str(fahrenheit)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return celsius, fahrenheit
 

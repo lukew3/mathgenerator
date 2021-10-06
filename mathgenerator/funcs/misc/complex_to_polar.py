@@ -16,6 +16,8 @@ def complexToPolarFunc(minRealImaginaryNum=-20,
     if format == 'string':
         problem = f'{r}({a}theta + i{b}theta)'
         return problem, theta
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, a, b, theta
 

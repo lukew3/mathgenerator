@@ -11,6 +11,8 @@ def sectorAreaFunc(maxRadius=49, maxAngle=359, format='string'):
         problem = f"Given radius, {r} and angle, {a}. Find the area of the sector."
         solution = f"Area of sector = {formatted_float}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, a, formatted_float
 

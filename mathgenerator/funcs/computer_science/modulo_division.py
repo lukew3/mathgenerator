@@ -10,6 +10,8 @@ def moduloFunc(maxRes=99, maxModulo=99, format='string'):
         problem = str(a) + "%" + str(b) + "="
         solution = str(c)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c
 

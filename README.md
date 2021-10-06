@@ -60,7 +60,7 @@ This creates the pdf `ws.pdf` in your current directory
 
 * `genById(id)` generates a problem, solution set with generator id `id` in the format `[problem, solution]`
 
-* Pass the kwarg `format=latex` to return problem and solution set as latex. If latex is not available for that generator, the problem will be returned as raw data.
+* Pass the kwarg `format=latex` to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"
 
 * Pass the kwarg `format=raw` to return just the raw data for each generator. An array of each variable necessary to the generator is returned.
 

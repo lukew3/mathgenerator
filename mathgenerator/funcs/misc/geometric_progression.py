@@ -25,6 +25,8 @@ def geomProgrFunc(number_values=6,
         solution = "The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(
             a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return GP, n_term, sum_term, a, r, n_term, value_nth_term, sum_term, sum_till_nth_term
 

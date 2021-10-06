@@ -13,6 +13,8 @@ def determinantToMatrix22(maxMatrixVal=100, format='string'):
         problem = f"Det([[{a}, {b}], [{c}, {d}]]) = "
         solution = f" {determinant}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, d, determinant
 

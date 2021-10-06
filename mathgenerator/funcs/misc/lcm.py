@@ -15,6 +15,8 @@ def lcmFunc(maxVal=20, format='string'):
         problem = f"LCM of {a} and {b} ="
         solution = str(d)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, d
 

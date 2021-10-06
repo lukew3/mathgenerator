@@ -18,6 +18,8 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10, format='string'):
     if format == 'string':
         problem = f"Fill in the blanks {radicand1}^(1/{degree1}) _ {radicand2}^(1/{degree2})"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return radicand1, degree1, radicand2, degree2, solution
 

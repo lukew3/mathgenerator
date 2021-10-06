@@ -18,7 +18,7 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, format='string'):
         problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
         solution = f"[[{a1},{b1}],[{c1},{d1}]]"
         return problem, solution
-    elif style == 'latex':
+    elif format == 'latex':
         problem = "\\(" + str(constant) + "\\cdot\\begin{bmatrix}" + str(
             a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(
                 d) + "\\end{bmatrix}=\\)"

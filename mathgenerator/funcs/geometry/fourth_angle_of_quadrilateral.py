@@ -13,6 +13,8 @@ def fourthAngleOfQuadriFunc(maxAngle=180, format='string'):
         problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
         solution = angle4
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return angle1, angle2, angle3, angle4
 

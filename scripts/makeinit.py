@@ -22,8 +22,9 @@ def get_filepaths(directory):
 
 
 # Run the above function and store its results in a variable.
-full_file_paths = get_filepaths("mathgenerator/funcs/statistics")
+full_file_paths = get_filepaths("../mathgenerator/funcs/algebra")
 full_file_paths.sort()
 # print(full_file_paths)
 for item in full_file_paths:
-    print("from ." + item + " import *")
+    if item[:2] != '__':
+        print("from ." + item + " import *")

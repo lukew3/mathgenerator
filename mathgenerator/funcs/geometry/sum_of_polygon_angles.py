@@ -8,6 +8,8 @@ def sumOfAnglesOfPolygonFunc(maxSides=12, format='string'):
     if format == 'string':
         problem = f"Sum of angles of polygon with {side_count} sides = "
         return problem, sum
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return side_count, sum
 

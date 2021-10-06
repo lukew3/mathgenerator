@@ -13,6 +13,8 @@ def arclengthFunc(maxRadius=49, maxAngle=359, format='string'):
     if format == 'string':
         solution = f"Arc length of the angle = {formatted_float}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return radius, angle, formatted_float
 

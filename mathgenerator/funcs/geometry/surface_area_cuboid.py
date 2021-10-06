@@ -11,6 +11,8 @@ def surfaceAreaCuboid(maxSide=20, unit='m', format='string'):
         problem = f"Surface area of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
         solution = f"{ans} {unit}^2"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, ans, unit
 

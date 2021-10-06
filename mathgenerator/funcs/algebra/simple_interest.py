@@ -17,6 +17,8 @@ def simpleInterestFunc(maxPrinciple=10000,
                     c) + " years is = "
         solution = str(d)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, d
 

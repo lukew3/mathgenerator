@@ -52,6 +52,8 @@ def baseConversionFunc(maxNum=60000, maxBase=16, format='string'):
             fromBaseTenTo(n, bases[0]), bases[0], bases[1])
         ans = fromBaseTenTo(n, bases[1])
         return problem, ans
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return fromBaseTenTo(n, bases[0]), bases[0], bases[1], fromBaseTenTo(
             n, bases[1])

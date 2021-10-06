@@ -14,6 +14,8 @@ def signumFunc(min=-999, max=999, format='string'):
         problem = "signum of " + str(a) + " is " + "="
         solution = str(b)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b
 

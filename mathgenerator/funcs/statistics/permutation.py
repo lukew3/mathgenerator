@@ -12,6 +12,8 @@ def permutationFunc(maxlength=20, format='string'):
         problem = f"Number of Permutations from {a} objects picked {b} at a time =  "
         solution = str(answer)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, answer
 

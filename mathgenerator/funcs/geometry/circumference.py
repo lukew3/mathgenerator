@@ -9,6 +9,8 @@ def circumferenceCircle(maxRadius=100, format='string'):
     if format == 'string':
         problem = f"Circumference of circle with radius {r}"
         return problem, circumference
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, circumference
 

@@ -18,6 +18,8 @@ def arithmeticProgressionSumFunc(maxd=100,
         problem = 'Find the sum of first ' + \
             str(n) + ' terms of the AP series: ' + apString
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return n, apString, solution
 

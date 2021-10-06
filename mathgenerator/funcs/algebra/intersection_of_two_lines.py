@@ -68,6 +68,8 @@ def intersectionOfTwoLinesFunc(minM=-10,
 
     if format == 'string':
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return equation1, equation2, solution
 

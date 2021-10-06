@@ -35,6 +35,8 @@ def decimalToRomanNumeralsFunc(maxDecimal=4000, format='string'):
     if format == 'string':
         problem = "The number " + str(x) + " in Roman Numerals is: "
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return x, solution
 

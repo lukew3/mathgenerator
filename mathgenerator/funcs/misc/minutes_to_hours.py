@@ -10,6 +10,8 @@ def minutesToHoursFunc(maxMinutes=999, format='string'):
         problem = f"Convert {minutes} minutes to Hours & Minutes"
         solution = f"{ansHours} hours and {ansMinutes} minutes"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return minutes, ansHours, ansMinutes
 

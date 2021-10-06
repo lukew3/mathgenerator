@@ -33,6 +33,8 @@ def binomialDistFunc(format='string'):
             "batch of {1:} pistons will contain no more than {2:} " \
             "rejected pistons?".format(rejected_fraction, batch, rejections)
         return problem, answer
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return rejected_fraction, batch, rejections, answer
 

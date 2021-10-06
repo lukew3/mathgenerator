@@ -11,6 +11,8 @@ def curvedSurfaceAreaCylinderFunc(maxRadius=49, maxHeight=99, format='string'):
         problem = f"What is the curved surface area of a cylinder of radius, {r} and height, {h}?"
         solution = f"CSA of cylinder = {formatted_float}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, h, formatted_float
 

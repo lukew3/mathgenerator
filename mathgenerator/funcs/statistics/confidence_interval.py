@@ -34,6 +34,8 @@ def confidenceIntervalFunc(format='string'):
             [x for x in lst], lst_per[j])
         solution = f'({upper}, {lower})'
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return [x for x in lst], lst_per[j], upper, lower
 

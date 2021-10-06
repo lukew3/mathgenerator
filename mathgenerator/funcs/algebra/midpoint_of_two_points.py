@@ -13,6 +13,8 @@ def MidPointOfTwoPointFunc(maxValue=20, format='string'):
         problem = f"({x1},{y1}),({x2},{y2})="
         solution = f"({xm},{ym})"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return x1, y1, x2, y2, xm, ym
 

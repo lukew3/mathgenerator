@@ -11,6 +11,8 @@ def binaryToDecimalFunc(max_dig=10, format='string'):
     if format == 'string':
         solution = int(problem, 2)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return problem, solution
 

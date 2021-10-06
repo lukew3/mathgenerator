@@ -17,6 +17,8 @@ def combinationsFunc(maxlength=20, format='string'):
     if format == 'string':
         problem = f"Number of combinations from {a} objects picked {b} at a time "
         return problem, str(solution)
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, solution
 

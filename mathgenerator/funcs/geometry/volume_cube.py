@@ -9,6 +9,8 @@ def volumeCube(maxSide=20, unit='m', format='string'):
         problem = f"Volume of cube with side = {a}{unit} is"
         solution = f"{ans} {unit}^3"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, ans, unit
 

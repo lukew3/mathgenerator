@@ -12,7 +12,6 @@ def logFunc(maxBase=3, maxVal=8, format='string'):
         return problem, solution
     elif format == 'latex':
         problem = "\\(\\log_{" + str(b) + "}" + str(c) + "\\)"
-        print(problem)
         solution = "\\(" + str(a) + "\\)"
         return problem, solution
     else:

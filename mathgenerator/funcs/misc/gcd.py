@@ -12,6 +12,8 @@ def gcdFunc(maxVal=20, format='string'):
         problem = f"GCD of {a} and {b} = "
         solution = str(x)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, x
 

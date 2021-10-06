@@ -23,6 +23,8 @@ def commonFactorsFunc(maxVal=100, format='string'):
         problem = f"Common Factors of {a} and {b} = "
         solution = arr
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, arr
 

@@ -24,6 +24,8 @@ def conditionalProbFunc(format='string'):
                 P_disease, true_positive, true_negative)
         solution = str(answer) + "%"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return P_disease, true_positive, true_negative, answer
 

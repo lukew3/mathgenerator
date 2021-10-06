@@ -48,6 +48,8 @@ def expandingFunc(range_x1=10,
         problem = f"({p1}x{p2})({p3}x{p4})"
         solution = f"{c1}*x^2{c2}*x{c3}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return p1, p2, p3, p4, c1, c2, c3
 

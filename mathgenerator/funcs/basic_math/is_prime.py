@@ -18,6 +18,8 @@ def isprime(max_num=100, format='string'):
 
     if format == 'string':
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, solution
 

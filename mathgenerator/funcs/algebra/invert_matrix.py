@@ -79,6 +79,8 @@ def matrixInversion(SquareMatrixDimension=3,
         problem = 'Inverse of Matrix ' + str(Mat) + ' is:'
         solution = str(sympy.Matrix.inv(Mat))
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return Mat, sympy.Matrix.inv(Mat)
 

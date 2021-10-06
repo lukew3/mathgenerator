@@ -18,6 +18,8 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
         problem = 'f(x)=' + str(problem).replace('**', '^')
         if format == 'string':
             return problem, solution
+        elif format == 'latex':
+            return "Latex unavailable"
         else:
             return problem, solution
 

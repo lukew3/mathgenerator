@@ -19,6 +19,8 @@ def definiteIntegralFunc(max_coeff=100, format='string'):
             str(a) + "x^2 + " + str(b) + "x + " + str(c) + " is = "
         solution = str(S)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, S
 

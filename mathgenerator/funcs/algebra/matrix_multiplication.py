@@ -37,6 +37,8 @@ def matrixMultiplicationFunc(maxVal=100, max_dim=10, format='string'):
         problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
         solution = matrixMultiplicationFuncHelper(res)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a_string, b_string, res
 

@@ -13,6 +13,8 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20, format='string'):
         solution = f"sqrt({distanceSq})"
         problem = f"Find the distance between ({point1X}, {point1Y}) and ({point2X}, {point2Y})"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return point1X, point1Y, point2X, point2Y, distanceSq
 

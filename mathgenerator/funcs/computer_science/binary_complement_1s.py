@@ -13,6 +13,8 @@ def binaryComplement1sFunc(maxDigits=10, format='string'):
     if format == 'string':
         problem = question + "="
         return problem, answer
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return problem, answer
 

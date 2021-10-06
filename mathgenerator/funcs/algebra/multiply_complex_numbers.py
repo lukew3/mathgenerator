@@ -9,10 +9,13 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
     num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
                    random.randint(minRealImaginaryNum, maxRealImaginaryNum))
     product = num1 * num2
+
     if format == 'string':
         problem = f"{num1} * {num2} = "
         solution = str(product)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return num1, num2, product
 

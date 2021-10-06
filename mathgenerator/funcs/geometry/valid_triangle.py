@@ -19,6 +19,8 @@ def isTriangleValidFunc(maxSideLength=50, format='string'):
         else:
             solution = "No"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return sideA, sideB, sideC, exists
 

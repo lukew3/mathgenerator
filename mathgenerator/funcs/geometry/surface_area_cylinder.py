@@ -10,6 +10,8 @@ def surfaceAreaCylinder(maxRadius=20, maxHeight=50, unit='m', format='string'):
         problem = f"Surface area of cylinder with height = {a}{unit} and radius = {b}{unit} is"
         solution = f"{ans} {unit}^2"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, ans, unit
 

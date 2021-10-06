@@ -11,6 +11,8 @@ def degreeToRadFunc(max_deg=360, format='string'):
         problem = "Angle " + str(a) + " in radians is = "
         solution = str(b)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b
 

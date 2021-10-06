@@ -15,6 +15,8 @@ def compoundInterestFunc(maxPrinciple=10000,
             str(p) + " dollars, " + str(r) + \
             "% rate of interest and for a time period of " + str(n) + " year is = "
         return problem, str(a)
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return p, r, n, a
 

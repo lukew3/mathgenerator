@@ -11,6 +11,8 @@ def volumeCuboid(maxSide=20, unit='m', format='string'):
         problem = f"Volume of cuboid with sides = {a}{unit}, {b}{unit}, {c}{unit} is"
         solution = f"{ans} {unit}^3"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, ans, unit
 

@@ -10,8 +10,9 @@ def nthFibonacciNumberFunc(maxN=100, format='string'):
     ans = int((math.pow(golden_ratio, n) - math.pow(-golden_ratio, -n)) / (math.sqrt(5)))
 
     if format == 'string':
-        solution = f"{ans}"
-        return problem, solution
+        return problem, str(ans)
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return n, ans
 

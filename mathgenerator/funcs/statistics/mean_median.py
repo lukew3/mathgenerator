@@ -15,6 +15,8 @@ def meanMedianFunc(maxlen=10, format='string'):
         problem = f"Given the series of numbers {randomlist}. find the arithmatic mean and mdian of the series"
         solution = f"Arithmetic mean of the series is {mean} and Arithmetic median of this series is {median}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return randomlist, mean, median
 

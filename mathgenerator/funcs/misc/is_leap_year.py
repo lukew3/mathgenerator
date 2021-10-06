@@ -21,6 +21,8 @@ def IsLeapYear(minNumber=1900, maxNumber=2099, format='string'):
         else:
             solution = "is not a leap year"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return year, ans
 

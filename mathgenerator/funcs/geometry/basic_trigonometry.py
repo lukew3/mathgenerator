@@ -28,6 +28,8 @@ def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
 
     if format == 'string':
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return function, angle, solution
 

@@ -24,6 +24,8 @@ def DiceSumProbFunc(maxDice=3, format='string'):
         problem = f"If {a} dice are rolled at the same time, the probability of getting a sum of {b} ="
         solution = f"{count}/{6**a}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, count, 6**a
 

@@ -48,6 +48,8 @@ def systemOfEquationsFunc(range_x=10,
         problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
         solution = f"x = {x}, y = {y}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return new_c1, new_c2, x, y
     # Add random (non-zero) multiple of equations to each other

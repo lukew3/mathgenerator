@@ -11,6 +11,8 @@ def factorialFunc(maxInput=6, format='string'):
 
     if format == 'string':
         return str(a) + "! = ", str(b)
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b
 

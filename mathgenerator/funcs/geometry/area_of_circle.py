@@ -9,6 +9,8 @@ def areaCircle(maxRadius=100, format='string'):
     if format == 'string':
         problem = f"Area of circle with radius {r}"
         return problem, str(area)
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, area
 

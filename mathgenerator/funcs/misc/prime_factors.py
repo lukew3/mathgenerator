@@ -21,6 +21,8 @@ def primeFactorsFunc(minVal=1, maxVal=200, format='string'):
         problem = f"Find prime factors of {a}"
         solution = f"{factors}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, factors
 

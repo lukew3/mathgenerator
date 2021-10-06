@@ -23,6 +23,8 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50, format='string'):
             str(random_list)
         solution = f"The Mean is {mean} , Standard Deviation is {standardDeviation}, Variance is {variance}"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return random_list, mean, standardDeviation, variance
 

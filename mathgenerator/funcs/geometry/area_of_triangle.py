@@ -14,6 +14,8 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20, format='string'):
             str(a) + " " + str(b) + " " + str(c) + " = "
         solution = str(area)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, area
 

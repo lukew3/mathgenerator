@@ -20,6 +20,8 @@ def fibonacciSeriesFunc(minNo=1, format='string'):
         problem = "The Fibonacci Series of the first " + str(
             n) + " numbers is ?"
         return problem, fibList
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return n, fibList
 

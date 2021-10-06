@@ -28,6 +28,8 @@ def factoringFunc(range_x1=10, range_x2=10, format='string'):
         x2 = intParser(x2)
         solution = f"(x{x1})(x{x2})"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return b, c, x1, x2
 

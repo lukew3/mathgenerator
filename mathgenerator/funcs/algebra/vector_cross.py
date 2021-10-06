@@ -13,6 +13,8 @@ def vectorCrossFunc(minVal=-20, maxVal=20, format='string'):
         problem = str(a) + " X " + str(b) + " = "
         solution = str(c)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c
 

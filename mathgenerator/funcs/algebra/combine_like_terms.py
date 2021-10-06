@@ -18,6 +18,8 @@ def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10, format='string'):
     solution = combineTerms(problem)
     if format == 'string':
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return problem, solution
 

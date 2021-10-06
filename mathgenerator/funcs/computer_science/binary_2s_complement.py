@@ -27,6 +27,8 @@ def binary2sComplementFunc(maxDigits=10, format='string'):
         problem = "2's complement of " + question + " ="
         solution = ''.join(answer).lstrip('0')
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return question, answer
 

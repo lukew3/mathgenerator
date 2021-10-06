@@ -16,6 +16,8 @@ def quadraticEquation(maxVal=100, format='string'):
             a, b, c)
         solution = str(res)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return a, b, c, res
 

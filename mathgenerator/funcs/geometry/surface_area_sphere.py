@@ -9,6 +9,8 @@ def surfaceAreaSphere(maxSide=20, unit='m', format='string'):
         problem = f"Surface area of Sphere with radius = {r}{unit} is"
         solution = f"{ans} {unit}^2"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return r, ans, unit
 

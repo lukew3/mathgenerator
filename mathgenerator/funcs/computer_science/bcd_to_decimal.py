@@ -19,6 +19,8 @@ def BCDtoDecimalFunc(maxNumber=10000, format='string'):
         problem = "Integer of Binary Coded Decimal " + str(n) + " is = "
         solution = int(binstring, 2)
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return n, int(binstring, 2)
 

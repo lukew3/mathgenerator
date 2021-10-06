@@ -12,6 +12,8 @@ def euclidianNormFunc(maxEltAmt=20, format='string'):
     if format == 'string':
         problem = f"Euclidian norm or L2 norm of the vector{vec} is:"
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return vec, solution
 

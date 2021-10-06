@@ -17,6 +17,8 @@ def arithmeticProgressionTermFunc(maxd=100,
         problem = 'Find the term number ' + str(
             n) + ' of the AP series: ' + apString
         return problem, solution
+    elif format == 'latex':
+        return "Latex unavailable"
     else:
         return n, apString, solution
 
