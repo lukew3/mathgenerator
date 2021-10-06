@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def combinationsFunc(maxlength=20):
+def combinationsFunc(maxlength=20, format='string'):
     def factorial(a):
         d = 1
         for i in range(a):
@@ -13,10 +13,12 @@ def combinationsFunc(maxlength=20):
     b = random.randint(0, 9)
 
     solution = int(factorial(a) / (factorial(b) * factorial(a - b)))
-    problem = "Number of combinations from {} objects picked {} at a time ".format(
-        a, b)
 
-    return problem, solution
+    if format == 'string':
+        problem = f"Number of combinations from {a} objects picked {b} at a time "
+        return problem, str(solution)
+    else:
+        return a, b, solution
 
 
 combinations = Generator(

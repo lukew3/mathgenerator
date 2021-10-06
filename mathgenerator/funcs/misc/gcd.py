@@ -1,15 +1,19 @@
 from .__init__ import *
 
 
-def gcdFunc(maxVal=20):
+def gcdFunc(maxVal=20, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
     while y:
         x, y = y, x % y
-    problem = f"GCD of {a} and {b} = "
-    solution = str(x)
-    return problem, solution
+
+    if format == 'string':
+        problem = f"GCD of {a} and {b} = "
+        solution = str(x)
+        return problem, solution
+    else:
+        return a, b, x
 
 
 gcd = Generator("GCD (Greatest Common Denominator)", 10, gcdFunc,

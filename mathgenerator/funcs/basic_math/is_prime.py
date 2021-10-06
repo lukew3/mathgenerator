@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def isprime(max_num=100):
+def isprime(max_num=100, format='string'):
     a = random.randint(2, max_num)
     problem = f"Is {a} prime?"
     if a == 2:
@@ -15,7 +15,11 @@ def isprime(max_num=100):
             solution = "No"
             return (problem, solution)
     solution = "Yes"
-    return (problem, solution)
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return a, solution
 
 
 is_prime = Generator('isprime', 90,

@@ -3,7 +3,7 @@ import scipy
 from scipy.integrate import quad
 
 
-def definiteIntegralFunc(max_coeff=100):
+def definiteIntegralFunc(max_coeff=100, format='string'):
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
@@ -14,12 +14,13 @@ def definiteIntegralFunc(max_coeff=100):
     result = quad(integrand, 0, 1, args=(a, b, c))[0]
     S = round(result, 4)
 
-    problem = "The definite integral within limits 0 to 1 of the equation " + \
-        str(a) + "x^2 + " + str(b) + "x + " + str(c) + " is = "
-
-    solution = str(S)
-
-    return problem, solution
+    if format == 'string':
+        problem = "The definite integral within limits 0 to 1 of the equation " + \
+            str(a) + "x^2 + " + str(b) + "x + " + str(c) + " is = "
+        solution = str(S)
+        return problem, solution
+    else:
+        return a, b, c, S
 
 
 definite_integral = Generator(

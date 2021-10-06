@@ -1,18 +1,20 @@
 from .__init__ import *
 
 
-def multiplicationFunc(maxMulti=12, style='raw'):
+def multiplicationFunc(maxMulti=12, format='string'):
     a = random.randint(0, maxMulti)
     b = random.randint(0, maxMulti)
     c = a * b
 
-    if style == 'latex':
+    if format == 'string':
+        problem = str(a) + "*" + str(b) + "="
+        solution = str(c)
+        return problem, solution
+    elif format == 'latex':
         problem = "\\(" + str(a) + "\\cdot" + str(b) + "=\\)"
         solution = "\\(" + str(c) + "\\)"
     else:
-        problem = str(a) + "*" + str(b) + "="
-        solution = str(c)
-    return problem, solution
+        return a, b, c
 
 
 multiplication = Generator("Multiplication", 2,

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def powerRuleDifferentiationFunc(maxCoef=10, maxExp=10, maxTerms=5):
+def powerRuleDifferentiationFunc(maxCoef=10, maxExp=10, maxTerms=5, format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -15,7 +15,11 @@ def powerRuleDifferentiationFunc(maxCoef=10, maxExp=10, maxTerms=5):
 
         problem += str(coefficient) + "x^" + str(exponent)
         solution += str(coefficient * exponent) + "x^" + str(exponent - 1)
-    return problem, solution
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return problem, solution
 
 
 power_rule_differentiation = Generator("Power Rule Differentiation", 7,

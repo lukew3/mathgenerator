@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
+def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5, format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -18,7 +18,11 @@ def powerRuleIntegrationFunc(maxCoef=10, maxExp=10, maxTerms=5):
             str(exponent) + ")x^" + str(exponent + 1)
 
     solution += " + c"
-    return problem, solution
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return problem, solution
 
 
 power_rule_integration = Generator("Power Rule Integration", 48,

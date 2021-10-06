@@ -1,12 +1,16 @@
 from .__init__ import *
 
 
-def surfaceAreaCube(maxSide=20, unit='m'):
+def surfaceAreaCube(maxSide=20, unit='m', format='string'):
     a = random.randint(1, maxSide)
-    problem = f"Surface area of cube with side = {a}{unit} is"
     ans = 6 * a * a
-    solution = f"{ans} {unit}^2"
-    return problem, solution
+
+    if format == 'string':
+        problem = f"Surface area of cube with side = {a}{unit} is"
+        solution = f"{ans} {unit}^2"
+        return problem, solution
+    else:
+        return a, ans, unit
 
 
 surface_area_cube = Generator("Surface Area of Cube", 32,

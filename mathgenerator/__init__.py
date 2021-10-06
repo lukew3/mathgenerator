@@ -31,12 +31,6 @@ class Generator:
         ) + " " + self.title
 
     def __call__(self, *args, **kwargs):
-        try:
-            return self.func(*args, **kwargs)
-        except TypeError:
-            # If an error is thrown from kwargs, remove the style element
-            # This happens if someone trys to get style='latex' for an
-            del kwargs['style']
             return self.func(*args, **kwargs)
 
 

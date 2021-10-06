@@ -2,12 +2,15 @@ from .__init__ import *
 import math
 
 
-def circumferenceCircle(maxRadius=100):
+def circumferenceCircle(maxRadius=100, format='string'):
     r = random.randint(0, maxRadius)
     circumference = 2 * math.pi * r
-    problem = f"Circumference of circle with radius {r}"
-    solution = circumference
-    return problem, solution
+
+    if format == 'string':
+        problem = f"Circumference of circle with radius {r}"
+        return problem, circumference
+    else:
+        return r, circumference
 
 
 circumference = Generator("Circumference", 104, circumferenceCircle,

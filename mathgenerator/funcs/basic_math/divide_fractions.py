@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def divideFractionsFunc(maxVal=10, style='raw'):
+def divideFractionsFunc(maxVal=10, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
 
@@ -29,18 +29,19 @@ def divideFractionsFunc(maxVal=10, style='raw'):
     if (tmp_d == 1 or tmp_d == gcd):
         x = f"{sol_numerator}"
 
-    if style == 'latex':
-        problem = "\\(\\frac{" + str(a) + "}{" + str(b) + \
-            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)"
+    if format == 'string':
+        return f"({a}/{b})/({c}/{d})", x
+    elif format == 'latex':
         if tmp_d == 1 or tmp_d == gcd:
             solution = "\\(" + str(sol_numerator) + "\\)"
         else:
             solution = "\\(\\frac{" + str(sol_numerator) + \
                 "}{" + str(sol_denominator) + "}\\)"
+        return ("\\(\\frac{" + str(a) + "}{" + str(b) + \
+            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)",
+            solution)
     else:
-        problem = f"({a}/{b})/({c}/{d})"
-        solution = x
-    return problem, solution
+        return a, b, c, d, x
 
 
 divide_fractions = Generator("Fraction Division", 16,

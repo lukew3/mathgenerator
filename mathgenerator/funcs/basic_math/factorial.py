@@ -1,18 +1,18 @@
 from .__init__ import *
 
 
-def factorialFunc(maxInput=6):
+def factorialFunc(maxInput=6, format='string'):
     a = random.randint(0, maxInput)
     n = a
-
-    problem = str(a) + "! = "
     b = 1
-
     while a != 1 and n > 0:
         b *= n
         n -= 1
-    solution = str(b)
-    return problem, solution
+
+    if format == 'string':
+        return str(a) + "! = ", str(b)
+    else:
+        return a, b
 
 
 factorial = Generator("Factorial", 31,

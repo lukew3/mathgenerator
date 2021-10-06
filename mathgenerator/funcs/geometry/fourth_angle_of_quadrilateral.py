@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def fourthAngleOfQuadriFunc(maxAngle=180):
+def fourthAngleOfQuadriFunc(maxAngle=180, format='string'):
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, 240 - angle1)
     angle3 = random.randint(1, 340 - (angle1 + angle2))
@@ -9,9 +9,12 @@ def fourthAngleOfQuadriFunc(maxAngle=180):
     sum_ = angle1 + angle2 + angle3
     angle4 = 360 - sum_
 
-    problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
-    solution = angle4
-    return problem, solution
+    if format == 'string':
+        problem = f"Fourth angle of quadrilateral with angles {angle1} , {angle2}, {angle3} ="
+        solution = angle4
+        return problem, solution
+    else:
+        return angle1, angle2, angle3, angle4
 
 
 fourth_angle_of_quadrilateral = Generator(

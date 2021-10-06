@@ -5,7 +5,7 @@ import math
 
 # Handles degrees in quadrant one
 def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
-                          functions=["sin", "cos", "tan"]):
+                          functions=["sin", "cos", "tan"], format='string'):
     angle = random.choice(angles)
     function = random.choice(functions)
 
@@ -24,7 +24,11 @@ def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
 
     solution = result_fraction_map[round(eval(expression), 2)] if round(
         eval(expression), 2) <= 99999 else "∞"  # for handling the ∞ condition
-    return problem, solution
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return function, angle, solution
 
 
 basic_trigonometry = Generator("Trigonometric Values", 57, basicTrigonometryFunc,

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
+def set_operation(minval=3, maxval=7, n_a=4, n_b=5, format='string'):
     number_variables_a = random.randint(minval, maxval)
     number_variables_b = random.randint(minval, maxval)
     a = []

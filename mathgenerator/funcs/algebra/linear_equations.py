@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
+def linearEquationsFunc(n=2, varRange=20, coeffRange=20, format='string'):
     if n > 10:
         print("[!] n cannot be greater than 10")
         return None, None
@@ -27,7 +27,11 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20):
 
     # problem = "\n".join(problem)
     problem = ", ".join(problem)
-    return problem, solution
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return problem, solution
 
 
 linear_equations = Generator("Linear Equations", 26, linearEquationsFunc,

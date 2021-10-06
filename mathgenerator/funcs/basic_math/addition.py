@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def main(maxSum=99, maxAddend=50, style='raw'):
+def main(maxSum=99, maxAddend=50, format='string'):
     if maxAddend > maxSum:
         maxAddend = maxSum
     a = random.randint(0, maxAddend)
@@ -9,14 +9,16 @@ def main(maxSum=99, maxAddend=50, style='raw'):
     b = random.randint(0, min((maxSum - a), maxAddend))
     c = a + b
 
-    if style == 'latex':
+    if format == "string":
+        problem = str(a) + "+" + str(b) + "="
+        solution = str(c)
+        return problem, solution
+    elif format == 'latex':
         problem = "\\(" + str(a) + '+' + str(b) + "\\)"
         solution = str(c)
         return problem, solution
     else:
-        problem = str(a) + "+" + str(b) + "="
-        solution = str(c)
-        return problem, solution
+        return a, b, c
 
 
 addition = Generator("Addition", 0, main, ["maxSum=99", "maxAddend=50"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def DecimalToBinaryFunc(max_dec=99):
+def DecimalToBinaryFunc(max_dec=99, format='string'):
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")
 

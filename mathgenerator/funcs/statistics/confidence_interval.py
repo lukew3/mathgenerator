@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def confidenceIntervalFunc():
+def confidenceIntervalFunc(format='string'):
     n = random.randint(20, 40)
     j = random.randint(0, 3)
 
@@ -26,11 +26,16 @@ def confidenceIntervalFunc():
 
     sd = sd / n
     standard_error = lst_t[j] * math.sqrt(sd / n)
+    upper = mean + standard_error
+    lower = mean - standard_error
 
-    problem = 'The confidence interval for sample {} with {}% confidence is'.format(
-        [x for x in lst], lst_per[j])
-    solution = '({}, {})'.format(mean + standard_error, mean - standard_error)
-    return problem, solution
+    if format == 'string':
+        problem = 'The confidence interval for sample {} with {}% confidence is'.format(
+            [x for x in lst], lst_per[j])
+        solution = f'({upper}, {lower})'
+        return problem, solution
+    else:
+        return [x for x in lst], lst_per[j], upper, lower
 
 
 confidence_interval = Generator("Confidence interval For sample S", 54,

@@ -31,11 +31,10 @@ def genDifferentiationProblem(diff_lvl=2):
         operator = random.choice(('/', '*'))
         problem = '(' + genDifferentiationProblem(2) + ')' + \
             operator + '(' + genDifferentiationProblem(3) + ')'
-
     return problem
 
 
-def differentiationFunc(diff_lvl=2):
+def differentiationFunc(diff_lvl=2, format='string'):
     if diff_lvl < 1 or diff_lvl > 4:
         print("diff_lvl not supported")
         return None
@@ -46,7 +45,10 @@ def differentiationFunc(diff_lvl=2):
     solution = solution.replace('**', '^')
     problem = f"differentiate w.r.t x : d({problem})/dx"
 
-    return problem, solution
+    if format == 'string':
+        return problem, solution
+    else:
+        return problem, solution
 
 
 differentiation = Generator("Differentiation", 88,

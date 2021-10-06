@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, style='raw'):
+def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, format='string'):
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -14,15 +14,18 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, style='raw'):
     c1 = c * constant
     d1 = d * constant
 
-    if style == 'latex':
+    if format == 'string':
+        problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
+        solution = f"[[{a1},{b1}],[{c1},{d1}]]"
+        return problem, solution
+    elif style == 'latex':
         problem = "\\(" + str(constant) + "\\cdot\\begin{bmatrix}" + str(
             a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(d) + "\\end{bmatrix}=\\)"
         solution = "\\(\\begin{bmatrix}" + str(a1) + "&" + str(b1) + \
             "\\\\" + str(c1) + "&" + str(d1) + "\\end{bmatrix}\\)"
+        return problem, solution
     else:
-        problem = f"{constant} * [[{a}, {b}], [{c}, {d}]] = "
-        solution = f"[[{a1},{b1}],[{c1},{d1}]]"
-    return problem, solution
+        return constant, a, b, c, d, a1, b1, c1, d1
 
 
 multiply_int_to_22_matrix = Generator("Integer Multiplication with 2x2 Matrix",

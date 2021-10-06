@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def matrixMultiplicationFunc(maxVal=100, max_dim=10):
+def matrixMultiplicationFunc(maxVal=100, max_dim=10, format='string'):
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
@@ -33,9 +33,12 @@ def matrixMultiplicationFunc(maxVal=100, max_dim=10):
             res[r].append(temp)
 
     # consider using a, b instead of a_string, b_string if the problem doesn't look right
-    problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
-    solution = matrixMultiplicationFuncHelper(res)
-    return problem, solution
+    if format == 'string':
+        problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
+        solution = matrixMultiplicationFuncHelper(res)
+        return problem, solution
+    else:
+        return a_string, b_string, res
 
 
 def matrixMultiplicationFuncHelper(inp):

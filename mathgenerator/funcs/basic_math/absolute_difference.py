@@ -1,21 +1,21 @@
 from .__init__ import *
 
 
-def absoluteDifferenceFunc(maxA=100, maxB=100, style='raw'):
+def main(maxA=100, maxB=100, format='string'):
     a = random.randint(-1 * maxA, maxA)
     b = random.randint(-1 * maxB, maxB)
     absDiff = abs(a - b)
 
-    if style == 'latex':
-        problem = "\\(|" + str(a) + "-" + str(b) + "|=\\)"
-        solution = f"\\({absDiff}\\)"
+    if format == "string":
+        return "|" + str(a) + "-" + str(b) + "|=", absDiff
+    elif format == 'latex':
+        return ("\\(|" + str(a) + "-" + str(b) + "|=\\)",
+            f"\\({absDiff}\\)")
     else:
-        problem = "|" + str(a) + "-" + str(b) + "|="
-        solution = absDiff
-    return problem, solution
+        return a, b, absDiff
 
 
 absolute_difference = Generator(
     "Absolute difference between two numbers", 71,
-    absoluteDifferenceFunc,
+    main,
     ["maxA=100", "maxB=100"])

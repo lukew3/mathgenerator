@@ -1,13 +1,16 @@
 from .__init__ import *
 
 
-def volumeSphereFunc(maxRadius=100):
+def volumeSphereFunc(maxRadius=100, format='string'):
     r = random.randint(1, maxRadius)
+    ans = (4 * math.pi / 3) * r ** 3
 
-    problem = f"Volume of sphere with radius {r} m = "
-    ans = (4 * math.pi / 3) * r * r * r
-    solution = f"{ans} m^3"
-    return problem, solution
+    if format == 'string':
+        problem = f"Volume of sphere with radius {r} m = "
+        solution = f"{ans} m^3"
+        return problem, solution
+    else:
+        return r, ans
 
 
 volume_sphere = Generator("Volume of Sphere", 61,

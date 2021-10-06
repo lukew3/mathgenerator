@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def dataSummaryFunc(number_values=15, minval=5, maxval=50):
+def dataSummaryFunc(number_values=15, minval=5, maxval=50, format='string'):
     random_list = []
 
     for i in range(number_values):
@@ -18,11 +18,13 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50):
     standardDeviation = var / number_values
     variance = (var / number_values)**0.5
 
-    problem = "Find the mean,standard deviation and variance for the data" + \
-        str(random_list)
-    solution = "The Mean is {} , Standard Deviation is {}, Variance is {}".format(
-        mean, standardDeviation, variance)
-    return problem, solution
+    if format == 'string':
+        problem = "Find the mean,standard deviation and variance for the data" + \
+            str(random_list)
+        solution = f"The Mean is {mean} , Standard Deviation is {standardDeviation}, Variance is {variance}"
+        return problem, solution
+    else:
+        return random_list, mean, standardDeviation, variance
 
 
 data_summary = Generator("Mean,Standard Deviation,Variance", 59, dataSummaryFunc,

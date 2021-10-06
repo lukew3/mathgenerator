@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def divisionToIntFunc(maxA=25, maxB=25, style='raw'):
+def divisionToIntFunc(maxA=25, maxB=25, format='string'):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
 
@@ -9,13 +9,13 @@ def divisionToIntFunc(maxA=25, maxB=25, style='raw'):
     dividend = random.choice([a, b])
     quotient = int(divisor / dividend)
 
-    if style == 'latex':
-        problem = "\\(" + str(divisor) + "\\div" + str(dividend) + "=\\)"
-        solution = "\\(" + str(quotient) + "\\)"
+    if format == 'string':
+        return f"{divisor}/{dividend}=", str(quotient)
+    elif format == 'latex':
+        return ("\\(" + str(divisor) + "\\div" + str(dividend) + "=\\)",
+            "\\(" + str(quotient) + "\\)")
     else:
-        problem = f"{divisor}/{dividend}="
-        solution = str(quotient)
-    return problem, solution
+        return divisor, dividend, quotient
 
 
 division = Generator("Division", 3,

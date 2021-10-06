@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
+def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10, format='string'):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
     y = random.randint(-range_y, range_y)
@@ -41,9 +41,12 @@ def systemOfEquationsFunc(range_x=10, range_y=10, coeff_mult_range=10):
             '' if x_str != '' else '0')
         return f'{x_str}{op}{y_str} = {coeffs[2]}'
 
-    problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
-    solution = f"x = {x}, y = {y}"
-    return problem, solution
+    if format == 'string':
+        problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
+        solution = f"x = {x}, y = {y}"
+        return problem, solution
+    else:
+        return new_c1, new_c2, x, y
     # Add random (non-zero) multiple of equations to each other
 
 

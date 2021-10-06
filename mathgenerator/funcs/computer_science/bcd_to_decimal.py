@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def BCDtoDecimalFunc(maxNumber=10000):
+def BCDtoDecimalFunc(maxNumber=10000, format='string'):
     n = random.randint(1000, maxNumber)
     binstring = ''
     while True:
@@ -15,9 +15,12 @@ def BCDtoDecimalFunc(maxNumber=10000):
         else:
             n = q
 
-    problem = "Integer of Binary Coded Decimal " + str(n) + " is = "
-    solution = int(binstring, 2)
-    return problem, solution
+    if format == 'string':
+        problem = "Integer of Binary Coded Decimal " + str(n) + " is = "
+        solution = int(binstring, 2)
+        return problem, solution
+    else:
+        return n, int(binstring, 2)
 
 
 bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91,

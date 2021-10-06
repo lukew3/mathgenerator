@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def commonFactorsFunc(maxVal=100):
+def commonFactorsFunc(maxVal=100, format='string'):
     a = x = random.randint(1, maxVal)
     b = y = random.randint(1, maxVal)
 
@@ -19,9 +19,12 @@ def commonFactorsFunc(maxVal=100):
                 count = count + 1
                 arr.append(i)
 
-    problem = f"Common Factors of {a} and {b} = "
-    solution = arr
-    return problem, solution
+    if format == 'string':
+        problem = f"Common Factors of {a} and {b} = "
+        solution = arr
+        return problem, solution
+    else:
+        return a, b, arr
 
 
 common_factors = Generator("Common Factors", 40,

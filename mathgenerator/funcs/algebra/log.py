@@ -1,20 +1,22 @@
 from .__init__ import *
 
 
-def logFunc(maxBase=3, maxVal=8, style='raw'):
+def logFunc(maxBase=3, maxVal=8, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(2, maxBase)
     c = pow(b, a)
 
-    if style == 'latex':
+    if format == 'string':
+        problem = "log" + str(b) + "(" + str(c) + ")"
+        solution = str(a)
+        return problem, solution
+    elif format == 'latex':
         problem = "\\(\\log_{" + str(b) + "}" + str(c) + "\\)"
         print(problem)
         solution = "\\(" + str(a) + "\\)"
+        return problem, solution
     else:
-        problem = "log" + str(b) + "(" + str(c) + ")"
-        solution = str(a)
-
-    return problem, solution
+        return b, c, a
 
 
 log = Generator("Logarithm", 12, logFunc,

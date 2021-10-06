@@ -1,14 +1,17 @@
 from .__init__ import *
 
 
-def volumeCone(maxRadius=20, maxHeight=50, unit='m'):
+def volumeCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
-
-    problem = f"Volume of cone with height = {a}{unit} and radius = {b}{unit} is"
     ans = int(math.pi * b * b * a * (1 / 3))
-    solution = f"{ans} {unit}^3"
-    return problem, solution
+
+    if format == 'string':
+        problem = f"Volume of cone with height = {a}{unit} and radius = {b}{unit} is"
+        solution = f"{ans} {unit}^3"
+        return problem, solution
+    else:
+        return a, b, ans, unit
 
 
 volume_cone = Generator(

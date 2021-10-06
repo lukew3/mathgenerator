@@ -1,17 +1,20 @@
 from .__init__ import *
 
 
-def squareFunc(maxSquareNum=20, style='raw'):
+def squareFunc(maxSquareNum=20, format='string'):
     a = random.randint(1, maxSquareNum)
     b = a * a
 
-    if style == 'latex':
-        problem = "\\(" + str(a) + "^{2}=\\)"
-        solution = "\\(" + str(b) + "\\)"
-    else:
+    if format == 'string':
         problem = str(a) + "^2" + "="
         solution = str(b)
-    return problem, solution
+        return problem, solution
+    if format == 'latex':
+        problem = "\\(" + str(a) + "^{2}=\\)"
+        solution = "\\(" + str(b) + "\\)"
+        return problem, solution
+    else:
+        return a, b
 
 
 square = Generator("Square", 8, squareFunc, ["maxSquareNum=20"])

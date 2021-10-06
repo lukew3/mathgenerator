@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def DecimalToBCDFunc(maxNumber=10000):
+def DecimalToBCDFunc(maxNumber=10000, format='string'):
     n = random.randint(1000, maxNumber)
     x = n
     # binstring = ''

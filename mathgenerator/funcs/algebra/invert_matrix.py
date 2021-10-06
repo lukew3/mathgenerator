@@ -4,7 +4,8 @@ import sympy
 
 def matrixInversion(SquareMatrixDimension=3,
                     MaxMatrixElement=99,
-                    OnlyIntegerElementsInInvertedMatrix=False):
+                    OnlyIntegerElementsInInvertedMatrix=False,
+                    format='string'):
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()
@@ -73,9 +74,13 @@ def matrixInversion(SquareMatrixDimension=3,
             random.shuffle(z)
             Mat.append(z)
         Mat = sympy.Matrix(Mat)
-    problem = 'Inverse of Matrix ' + str(Mat) + ' is:'
-    solution = str(sympy.Matrix.inv(Mat))
-    return problem, solution
+
+    if format == 'string':
+        problem = 'Inverse of Matrix ' + str(Mat) + ' is:'
+        solution = str(sympy.Matrix.inv(Mat))
+        return problem, solution
+    else:
+        return Mat, sympy.Matrix.inv(Mat)
 
 
 invert_matrix = Generator("Inverse of a Matrix", 74,

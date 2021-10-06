@@ -1,13 +1,17 @@
 from .__init__ import *
 
 
-def minutesToHoursFunc(maxMinutes=999):
+def minutesToHoursFunc(maxMinutes=999, format='string'):
     minutes = random.randint(1, maxMinutes)
-    hours1 = int(minutes / 60)
-    hours2 = minutes % 60
-    problem = f"Convert {minutes} minutes to Hours & Minutes"
-    solution = f"{hours1} hours and {hours2} minutes"
-    return problem, solution
+    ansHours = int(minutes / 60)
+    ansMinutes = minutes % 60
+
+    if format == 'string':
+        problem = f"Convert {minutes} minutes to Hours & Minutes"
+        solution = f"{ansHours} hours and {ansMinutes} minutes"
+        return problem, solution
+    else:
+        return minutes, ansHours, ansMinutes
 
 
 minutes_to_hours = Generator("Minute to Hour conversion", 102,

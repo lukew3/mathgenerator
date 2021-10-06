@@ -1,13 +1,16 @@
 from .__init__ import *
 
 
-def surfaceAreaSphere(maxSide=20, unit='m'):
+def surfaceAreaSphere(maxSide=20, unit='m', format='string'):
     r = random.randint(1, maxSide)
-
-    problem = f"Surface area of Sphere with radius = {r}{unit} is"
     ans = 4 * math.pi * r * r
-    solution = f"{ans} {unit}^2"
-    return problem, solution
+
+    if format == 'string':
+        problem = f"Surface area of Sphere with radius = {r}{unit} is"
+        solution = f"{ans} {unit}^2"
+        return problem, solution
+    else:
+        return r, ans, unit
 
 
 surface_area_sphere = Generator(

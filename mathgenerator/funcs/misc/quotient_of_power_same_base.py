@@ -1,19 +1,19 @@
 from .__init__ import *
 
 
-def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10):
+def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10, format='string'):
     base = random.randint(1, maxBase)
     power1 = random.randint(1, maxPower)
     power2 = random.randint(1, maxPower)
     step = power1 - power2
+    solution = base**step
 
-    problem = "The Quotient of {base}^{power1} and {base}^{power2} = " \
-              "{base}^({power1}-{power2}) = {base}^{step}".format(base=base,
-                                                                  power1=power1,
-                                                                  power2=power2,
-                                                                  step=step)
-    solution = str(base**step)
-    return problem, solution
+    if format == 'string':
+        problem = f"The Quotient of {base}^{power1} and {base}^{power2} = " \
+              f"{base}^({power1}-{power2}) = {base}^{step}"
+        return problem, str(solution)
+    else:
+        return base, power1, power2, step, solution
 
 
 quotient_of_power_same_base = Generator("Quotient of Powers with Same Base",

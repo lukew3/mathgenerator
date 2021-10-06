@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def primeFactorsFunc(minVal=1, maxVal=200):
+def primeFactorsFunc(minVal=1, maxVal=200, format='string'):
     a = random.randint(minVal, maxVal)
     n = a
     i = 2
@@ -17,9 +17,12 @@ def primeFactorsFunc(minVal=1, maxVal=200):
     if n > 1:
         factors.append(n)
 
-    problem = f"Find prime factors of {a}"
-    solution = f"{factors}"
-    return problem, solution
+    if format == 'string':
+        problem = f"Find prime factors of {a}"
+        solution = f"{factors}"
+        return problem, solution
+    else:
+        return a, factors
 
 
 prime_factors = Generator("Prime Factorisation", 27,primeFactorsFunc,

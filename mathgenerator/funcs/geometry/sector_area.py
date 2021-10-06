@@ -1,14 +1,18 @@
 from .__init__ import *
 
 
-def sectorAreaFunc(maxRadius=49, maxAngle=359):
-    Radius = random.randint(1, maxRadius)
-    Angle = random.randint(1, maxAngle)
-    problem = f"Given radius, {Radius} and angle, {Angle}. Find the area of the sector."
-    secArea = float((Angle / 360) * math.pi * Radius * Radius)
+def sectorAreaFunc(maxRadius=49, maxAngle=359, format='string'):
+    r = random.randint(1, maxRadius)
+    a = random.randint(1, maxAngle)
+    secArea = float((a / 360) * math.pi * r * r)
     formatted_float = "{:.5f}".format(secArea)
-    solution = f"Area of sector = {formatted_float}"
-    return problem, solution
+
+    if format == 'string':
+        problem = f"Given radius, {r} and angle, {a}. Find the area of the sector."
+        solution = f"Area of sector = {formatted_float}"
+        return problem, solution
+    else:
+        return r, a, formatted_float
 
 
 sector_area = Generator("Area of a Sector", 75, sectorAreaFunc,

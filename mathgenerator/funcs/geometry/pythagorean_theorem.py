@@ -1,14 +1,17 @@
 from .__init__ import *
 
 
-def pythagoreanTheoremFunc(maxLength=20):
+def pythagoreanTheoremFunc(maxLength=20, format='string'):
     a = random.randint(1, maxLength)
     b = random.randint(1, maxLength)
     c = (a**2 + b**2)**0.5
 
-    problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
-    solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
-    return problem, solution
+    if format == 'string':
+        problem = f"The hypotenuse of a right triangle given the other two lengths {a} and {b} = "
+        solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
+        return problem, solution
+    else:
+        return a, b, round(c,2)
 
 
 pythagorean_theorem = Generator(

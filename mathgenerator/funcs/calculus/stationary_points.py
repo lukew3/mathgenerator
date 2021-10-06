@@ -2,7 +2,7 @@ from .__init__ import *
 import sympy
 
 
-def stationaryPointsFunc(maxExp=3, maxCoef=10):
+def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
     while True:
         x = sympy.symbols('x')
         problem = 0
@@ -11,12 +11,15 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10):
             problem += coefficient * pow(x, exp)
         solution = sympy.stationary_points(problem, x)
 
-        if len(solution) != 0:
-            solution = ','.join('({},{})'.format(
-                str(p),
-                sympy.sympify(problem.replace(x, p))
-            ) for p in solution)
-            problem = 'f(x)=' + str(problem).replace('**', '^')
+        #if len(solution) != 0:
+        solution = ','.join('({},{})'.format(
+            str(p),
+            sympy.sympify(problem.replace(x, p))
+        ) for p in solution)
+        problem = 'f(x)=' + str(problem).replace('**', '^')
+        if format == 'string':
+            return problem, solution
+        else:
             return problem, solution
 
 

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10):
+def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10, format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -16,7 +16,10 @@ def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10):
         problem += str(coefficient) + "x^" + str(exponent)
 
     solution = combineTerms(problem)
-    return problem, solution
+    if format == 'string':
+        return problem, solution
+    else:
+        return problem, solution
 
 
 def combineTerms(string):

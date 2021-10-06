@@ -1,11 +1,15 @@
 from .__init__ import *
 
 
-def decimalToOctalFunc(maxDecimal=4096):
+def decimalToOctalFunc(maxDecimal=4096, format='string'):
     x = random.randint(0, maxDecimal)
     problem = "The decimal number " + str(x) + " in Octal is: "
     solution = oct(x)
-    return problem, solution
+
+    if format == 'string':
+        return problem, solution
+    else:
+        return x, oct(x)
 
 
 decimal_to_octal = Generator("Converts decimal to octal", 84,

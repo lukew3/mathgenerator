@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
+def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10, format='string'):
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
     a = random.randint(-range_a, range_a)
@@ -32,7 +32,6 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
         p3 = ""
     elif p3 == "+":
         p3 = p3[1:]
-    problem = f"({p1}x{p2})({p3}x{p4})"
 
     if c1 == "+1":
         c1 = ""
@@ -40,8 +39,13 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10):
         c1 = c1[1:]  # Cuts off the plus for readability
     if c2 == "+1":
         c2 = ""
-    solution = f"{c1}*x^2{c2}*x{c3}"
-    return problem, solution
+
+    if format == 'string':
+        problem = f"({p1}x{p2})({p3}x{p4})"
+        solution = f"{c1}*x^2{c2}*x{c3}"
+        return problem, solution
+    else:
+        return p1, p2, p3, p4, c1, c2, c3
 
 
 expanding = Generator("Expanding Factored Binomial", 111, expandingFunc,

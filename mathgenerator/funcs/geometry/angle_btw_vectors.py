@@ -2,7 +2,7 @@ from .__init__ import *
 import math
 
 
-def angleBtwVectorsFunc(maxEltAmt=20):
+def angleBtwVectorsFunc(maxEltAmt=20, format='string'):
     s = 0
     v1 = [
         round(random.uniform(0, 1000), 2)

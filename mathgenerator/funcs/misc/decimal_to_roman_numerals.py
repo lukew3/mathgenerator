@@ -3,9 +3,8 @@ from .__init__ import *
 import math
 
 
-def decimalToRomanNumeralsFunc(maxDecimal=4000):
+def decimalToRomanNumeralsFunc(maxDecimal=4000, format='string'):
     x = random.randint(0, maxDecimal)
-    problem = "The number " + str(x) + " in Roman Numerals is: "
     roman_dict = {
         1: "I",
         5: "V",
@@ -32,7 +31,12 @@ def decimalToRomanNumeralsFunc(maxDecimal=4000):
             solution += (roman_dict[divisor] + roman_dict[divisor * 10])
         x = math.floor(x % divisor)
         divisor /= 10
-    return problem, solution
+
+    if format == 'string':
+        problem = "The number " + str(x) + " in Roman Numerals is: "
+        return problem, solution
+    else:
+        return x, solution
 
 
 decimal_to_roman_numerals = Generator("Converts decimal to Roman Numerals", 85,

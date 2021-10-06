@@ -30,7 +30,7 @@ def fromBaseTenTo(n, toBase):
 #     return int(n,fromBase)
 
 
-def baseConversionFunc(maxNum=60000, maxBase=16):
+def baseConversionFunc(maxNum=60000, maxBase=16, format='string'):
     assert type(
         maxNum
     ) == int and maxNum >= 100 and maxNum <= 65536, "maxNum({}) must be >=100 and <=65536".format(
@@ -47,10 +47,13 @@ def baseConversionFunc(maxNum=60000, maxBase=16):
     while bases[0] == bases[1]:
         bases = random.choices(dist, k=2)
 
-    problem = "Convert {} from base {} to base {}.".format(
-        fromBaseTenTo(n, bases[0]), bases[0], bases[1])
-    ans = fromBaseTenTo(n, bases[1])
-    return problem, ans
+    if format == 'string':
+        problem = "Convert {} from base {} to base {}.".format(
+            fromBaseTenTo(n, bases[0]), bases[0], bases[1])
+        ans = fromBaseTenTo(n, bases[1])
+        return problem, ans
+    else:
+        return fromBaseTenTo(n, bases[0]), bases[0], bases[1], fromBaseTenTo(n, bases[1])
 
 
 base_conversion = Generator("Base Conversion", 94,

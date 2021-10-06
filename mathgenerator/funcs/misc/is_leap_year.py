@@ -1,22 +1,28 @@
 from .__init__ import *
 
 
-def IsLeapYear(minNumber=1900, maxNumber=2099):
+def IsLeapYear(minNumber=1900, maxNumber=2099, format='string'):
     year = random.randint(minNumber, maxNumber)
     problem = "Year " + str(year) + " "
-    solution = ""
     if (year % 4) == 0:
         if (year % 100) == 0:
             if (year % 400) == 0:
-                solution = "is a leap year"
+                ans = True
             else:
-                solution = "is not a leap year"
+                ans = False
         else:
-            solution = "is a leap year"
+            ans = True
     else:
-        solution = "is not a leap year"
+        ans = False
 
-    return problem, solution
+    if format == 'string':
+        if ans:
+            solution = "is a leap year"
+        else:
+            solution = "is not a leap year"
+        return problem, solution
+    else:
+        return year, ans
 
 
 is_leap_year = Generator("Leap Year or Not", 101,

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def isTriangleValidFunc(maxSideLength=50):
+def isTriangleValidFunc(maxSideLength=50, format='string'):
     sideA = random.randint(1, maxSideLength)
     sideB = random.randint(1, maxSideLength)
     sideC = random.randint(1, maxSideLength)
@@ -11,13 +11,16 @@ def isTriangleValidFunc(maxSideLength=50):
 
     exists = True & (sides[0] < sideSums[0]) & (sides[1] < sideSums[1]) & (
         sides[2] < sideSums[2])
-    problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
 
-    if exists:
-        solution = "Yes"
+    if format == 'string':
+        problem = f"Does triangle with sides {sideA}, {sideB} and {sideC} exist?"
+        if exists:
+            solution = "Yes"
+        else:
+            solution = "No"
         return problem, solution
-    solution = "No"
-    return problem, solution
+    else:
+        return sideA, sideB, sideC, exists
 
 
 valid_triangle = Generator("Triangle exists check", 19,

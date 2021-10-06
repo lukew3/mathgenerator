@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def DiceSumProbFunc(maxDice=3):
+def DiceSumProbFunc(maxDice=3, format='string'):
     a = random.randint(1, maxDice)
     b = random.randint(a, 6 * a)
 
@@ -20,10 +20,12 @@ def DiceSumProbFunc(maxDice=3):
                     if i + j + k == b:
                         count = count + 1
 
-    problem = "If {} dice are rolled at the same time, the probability of getting a sum of {} =".format(
-        a, b)
-    solution = "{}/{}".format(count, 6**a)
-    return problem, solution
+    if format == 'string':
+        problem = f"If {a} dice are rolled at the same time, the probability of getting a sum of {b} ="
+        solution = f"{count}/{6**a}"
+        return problem, solution
+    else:
+        return a, b, count, 6**a
 
 
 dice_sum_probability = Generator(

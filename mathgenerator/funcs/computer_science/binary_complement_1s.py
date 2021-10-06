@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def binaryComplement1sFunc(maxDigits=10):
+def binaryComplement1sFunc(maxDigits=10, format='string'):
     question = ''
     answer = ''
 
@@ -10,9 +10,11 @@ def binaryComplement1sFunc(maxDigits=10):
         question += temp
         answer += "0" if temp == "1" else "1"
 
-    problem = question + "="
-    solution = answer
-    return problem, solution
+    if format == 'string':
+        problem = question + "="
+        return problem, answer
+    else:
+        return problem, answer
 
 
 binary_complement_1s = Generator("Binary Complement 1s", 4,
