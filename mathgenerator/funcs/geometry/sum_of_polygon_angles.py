@@ -13,5 +13,4 @@ def sumOfAnglesOfPolygonFunc(maxSides=12, format='string'):
 
 
 sum_of_polygon_angles = Generator("Sum of Angles of Polygon", 58,
-                                  sumOfAnglesOfPolygonFunc,
-                                  ["maxSides=12"])
+                                  sumOfAnglesOfPolygonFunc, ["maxSides=12"])

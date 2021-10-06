@@ -14,7 +14,6 @@ def regularPolygonAngleFunc(minVal=3, maxVal=20, format='string'):
         return sideNum, solution
 
 
-angle_regular_polygon = Generator(
-    "Angle of a Regular Polygon", 29,
-    regularPolygonAngleFunc,
-    ["minVal=3", "maxVal=20"])
+angle_regular_polygon = Generator("Angle of a Regular Polygon", 29,
+                                  regularPolygonAngleFunc,
+                                  ["minVal=3", "maxVal=20"])

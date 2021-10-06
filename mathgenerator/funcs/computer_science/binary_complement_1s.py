@@ -18,5 +18,4 @@ def binaryComplement1sFunc(maxDigits=10, format='string'):
 
 
 binary_complement_1s = Generator("Binary Complement 1s", 4,
-                                 binaryComplement1sFunc,
-                                 ["maxDigits=10"])
+                                 binaryComplement1sFunc, ["maxDigits=10"])

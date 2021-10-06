@@ -16,7 +16,7 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20, format='string'):
     else:
         return point1X, point1Y, point2X, point2Y, distanceSq
 
-distance_two_points = Generator(
-    "Distance between 2 points", 24,
-    distanceTwoPointsFunc,
-    ["maxValXY=20", "minValXY=-20"])
+
+distance_two_points = Generator("Distance between 2 points", 24,
+                                distanceTwoPointsFunc,
+                                ["maxValXY=20", "minValXY=-20"])

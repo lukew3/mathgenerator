@@ -19,6 +19,4 @@ def lcmFunc(maxVal=20, format='string'):
         return a, b, d
 
 
-lcm = Generator("LCM (Least Common Multiple)", 9,
-                lcmFunc,
-                ["maxVal=20"])
+lcm = Generator("LCM (Least Common Multiple)", 9, lcmFunc, ["maxVal=20"])

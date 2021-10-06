@@ -14,7 +14,5 @@ def volumeCylinder(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-volume_cylinder = Generator(
-    "Volume of cylinder", 37,
-    volumeCylinder,
-    ["maxRadius=20", "maxHeight=50", "unit='m'"])
+volume_cylinder = Generator("Volume of cylinder", 37, volumeCylinder,
+                            ["maxRadius=20", "maxHeight=50", "unit='m'"])

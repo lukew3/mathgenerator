@@ -68,7 +68,6 @@ def complexQuadraticFunc(prob_type=0, max_range=10, format='string'):
         return problem, solution
 
 
-complex_quadratic = Generator(
-    "complex Quadratic Equation", 100,
-    complexQuadraticFunc,
-    ["prob_type=0", "max_range=10"])
+complex_quadratic = Generator("complex Quadratic Equation", 100,
+                              complexQuadraticFunc,
+                              ["prob_type=0", "max_range=10"])

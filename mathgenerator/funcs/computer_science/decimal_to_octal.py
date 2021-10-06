@@ -13,5 +13,4 @@ def decimalToOctalFunc(maxDecimal=4096, format='string'):
 
 
 decimal_to_octal = Generator("Converts decimal to octal", 84,
-                             decimalToOctalFunc,
-                             ["maxDecimal=4096"])
+                             decimalToOctalFunc, ["maxDecimal=4096"])

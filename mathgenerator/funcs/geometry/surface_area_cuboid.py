@@ -15,7 +15,5 @@ def surfaceAreaCuboid(maxSide=20, unit='m', format='string'):
         return a, b, c, ans, unit
 
 
-surface_area_cuboid = Generator(
-    "Surface Area of Cuboid", 33,
-    surfaceAreaCuboid,
-    ["maxSide=20", "unit='m'"])
+surface_area_cuboid = Generator("Surface Area of Cuboid", 33,
+                                surfaceAreaCuboid, ["maxSide=20", "unit='m'"])

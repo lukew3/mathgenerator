@@ -51,6 +51,5 @@ def differentiationFunc(diff_lvl=2, format='string'):
         return problem, solution
 
 
-differentiation = Generator("Differentiation", 88,
-                            differentiationFunc,
+differentiation = Generator("Differentiation", 88, differentiationFunc,
                             ["diff_lvl=2"])

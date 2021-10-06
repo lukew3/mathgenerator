@@ -83,6 +83,7 @@ def matrixInversion(SquareMatrixDimension=3,
         return Mat, sympy.Matrix.inv(Mat)
 
 
-invert_matrix = Generator("Inverse of a Matrix", 74,
-                          matrixInversion,
-                          ["SquareMatrixDimension=3", "MaxMatrixElement=99", "OnlyIntegerElementsInInvertedMatrix=False"])
+invert_matrix = Generator("Inverse of a Matrix", 74, matrixInversion, [
+    "SquareMatrixDimension=3", "MaxMatrixElement=99",
+    "OnlyIntegerElementsInInvertedMatrix=False"
+])

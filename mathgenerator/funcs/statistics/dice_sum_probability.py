@@ -30,5 +30,4 @@ def DiceSumProbFunc(maxDice=3, format='string'):
 
 dice_sum_probability = Generator(
     "Probability of a certain sum appearing on faces of dice", 52,
-    DiceSumProbFunc,
-    ["maxDice=3"])
+    DiceSumProbFunc, ["maxDice=3"])

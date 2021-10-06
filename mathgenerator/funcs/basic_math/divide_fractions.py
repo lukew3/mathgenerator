@@ -44,6 +44,5 @@ def divideFractionsFunc(maxVal=10, format='string'):
         return a, b, c, d, x
 
 
-divide_fractions = Generator("Fraction Division", 16,
-                             divideFractionsFunc,
+divide_fractions = Generator("Fraction Division", 16, divideFractionsFunc,
                              ["maxVal=10"])

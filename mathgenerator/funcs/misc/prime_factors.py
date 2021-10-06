@@ -25,5 +25,5 @@ def primeFactorsFunc(minVal=1, maxVal=200, format='string'):
         return a, factors
 
 
-prime_factors = Generator("Prime Factorisation", 27,primeFactorsFunc,
+prime_factors = Generator("Prime Factorisation", 27, primeFactorsFunc,
                           ["minVal=1", "maxVal=200"])

@@ -1,7 +1,10 @@
 from .__init__ import *
 
 
-def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10, format='string'):
+def simpleInterestFunc(maxPrinciple=10000,
+                       maxRate=10,
+                       maxTime=10,
+                       format='string'):
     a = random.randint(1000, maxPrinciple)
     b = random.randint(1, maxRate)
     c = random.randint(1, maxTime)
@@ -18,6 +21,5 @@ def simpleInterestFunc(maxPrinciple=10000, maxRate=10, maxTime=10, format='strin
         return a, b, c, d
 
 
-simple_interest = Generator(
-    "Simple Interest", 45, simpleInterestFunc,
-    ["maxPrinciple=10000", "maxRate=10", "maxTime=10"])
+simple_interest = Generator("Simple Interest", 45, simpleInterestFunc,
+                            ["maxPrinciple=10000", "maxRate=10", "maxTime=10"])

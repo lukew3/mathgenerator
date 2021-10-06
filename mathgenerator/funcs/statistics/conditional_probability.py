@@ -28,6 +28,5 @@ def conditionalProbFunc(format='string'):
         return P_disease, true_positive, true_negative, answer
 
 
-conditional_probability = Generator("Conditional Probability",
-                                    107, conditionalProbFunc,
-                                    [""])
+conditional_probability = Generator("Conditional Probability", 107,
+                                    conditionalProbFunc, [""])

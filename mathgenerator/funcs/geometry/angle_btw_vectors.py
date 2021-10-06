@@ -25,6 +25,5 @@ def angleBtwVectorsFunc(maxEltAmt=20, format='string'):
     return problem, solution
 
 
-angle_btw_vectors = Generator(
-    "Angle between 2 vectors", 70, angleBtwVectorsFunc,
-    ["maxEltAmt=20"])
+angle_btw_vectors = Generator("Angle between 2 vectors", 70,
+                              angleBtwVectorsFunc, ["maxEltAmt=20"])

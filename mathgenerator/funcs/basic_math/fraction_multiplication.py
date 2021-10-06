@@ -41,5 +41,4 @@ def multiplyFractionsFunc(maxVal=10, format='string'):
 
 
 fraction_multiplication = Generator("Fraction Multiplication", 28,
-                                    multiplyFractionsFunc,
-                                    ["maxVal=10"])
+                                    multiplyFractionsFunc, ["maxVal=10"])

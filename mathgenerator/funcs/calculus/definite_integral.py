@@ -23,7 +23,5 @@ def definiteIntegralFunc(max_coeff=100, format='string'):
         return a, b, c, S
 
 
-definite_integral = Generator(
-    "Definite Integral of Quadratic Equation", 89,
-    definiteIntegralFunc,
-    ["max_coeff=100"])
+definite_integral = Generator("Definite Integral of Quadratic Equation", 89,
+                              definiteIntegralFunc, ["max_coeff=100"])

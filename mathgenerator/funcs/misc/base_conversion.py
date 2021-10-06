@@ -53,9 +53,9 @@ def baseConversionFunc(maxNum=60000, maxBase=16, format='string'):
         ans = fromBaseTenTo(n, bases[1])
         return problem, ans
     else:
-        return fromBaseTenTo(n, bases[0]), bases[0], bases[1], fromBaseTenTo(n, bases[1])
+        return fromBaseTenTo(n, bases[0]), bases[0], bases[1], fromBaseTenTo(
+            n, bases[1])
 
 
-base_conversion = Generator("Base Conversion", 94,
-                            baseConversionFunc,
+base_conversion = Generator("Base Conversion", 94, baseConversionFunc,
                             ["maxNum=60000", "maxBase=16"])

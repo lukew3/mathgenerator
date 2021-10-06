@@ -18,7 +18,6 @@ def perimeterOfPolygons(maxSides=12, maxLength=120, format='string'):
         return size_of_sides, sides, solution
 
 
-perimeter_of_polygons = Generator(
-    "Perimeter of Polygons", 96,
-    perimeterOfPolygons,
-    ["maxSides=12", "maxLength=120"])
+perimeter_of_polygons = Generator("Perimeter of Polygons", 96,
+                                  perimeterOfPolygons,
+                                  ["maxSides=12", "maxLength=120"])

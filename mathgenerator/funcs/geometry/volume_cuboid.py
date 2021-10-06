@@ -15,7 +15,5 @@ def volumeCuboid(maxSide=20, unit='m', format='string'):
         return a, b, c, ans, unit
 
 
-volume_cuboid = Generator(
-    "Volume of Cuboid", 36,
-    volumeCuboid,
-    ["maxSide=20", "unit='m'"])
+volume_cuboid = Generator("Volume of Cuboid", 36, volumeCuboid,
+                          ["maxSide=20", "unit='m'"])

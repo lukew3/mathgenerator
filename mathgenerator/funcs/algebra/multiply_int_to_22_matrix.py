@@ -20,7 +20,8 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, format='string'):
         return problem, solution
     elif style == 'latex':
         problem = "\\(" + str(constant) + "\\cdot\\begin{bmatrix}" + str(
-            a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(d) + "\\end{bmatrix}=\\)"
+            a) + "&" + str(b) + "\\\\" + str(c) + "&" + str(
+                d) + "\\end{bmatrix}=\\)"
         solution = "\\(\\begin{bmatrix}" + str(a1) + "&" + str(b1) + \
             "\\\\" + str(c1) + "&" + str(d1) + "\\end{bmatrix}\\)"
         return problem, solution

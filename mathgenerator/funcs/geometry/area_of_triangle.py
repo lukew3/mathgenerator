@@ -18,6 +18,5 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20, format='string'):
         return a, b, c, area
 
 
-area_of_triangle = Generator("Area of Triangle", 18,
-                             areaOfTriangleFunc,
+area_of_triangle = Generator("Area of Triangle", 18, areaOfTriangleFunc,
                              ["maxA=20", "maxB=20", "maxC=20"])

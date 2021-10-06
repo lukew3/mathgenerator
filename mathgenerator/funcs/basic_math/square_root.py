@@ -18,4 +18,4 @@ def squareRootFunc(minNo=1, maxNo=12, format='string'):
 
 
 square_root = Generator("Square Root", 6, squareRootFunc,
-    ["minNo=1", "maxNo=12"])
+                        ["minNo=1", "maxNo=12"])

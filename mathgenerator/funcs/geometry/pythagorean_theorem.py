@@ -11,9 +11,8 @@ def pythagoreanTheoremFunc(maxLength=20, format='string'):
         solution = f"{c:.0f}" if c.is_integer() else f"{c:.2f}"
         return problem, solution
     else:
-        return a, b, round(c,2)
+        return a, b, round(c, 2)
 
 
-pythagorean_theorem = Generator(
-    "Pythagorean Theorem", 25, pythagoreanTheoremFunc,
-    ["maxLength=20"])
+pythagorean_theorem = Generator("Pythagorean Theorem", 25,
+                                pythagoreanTheoremFunc, ["maxLength=20"])

@@ -23,16 +23,16 @@ def compareFractionsFunc(maxVal=10, format='string'):
         solution = "="
 
     if format == "string":
-        return (f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?",
+        return (
+            f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?",
             solution)
     elif format == 'latex':
-        return (f"Which symbol represents the comparison between \\(\\frac{{{a}}}{{{b}}}\\) and \\(\\frac{{{c}}}{{{d}}}\\)?",
+        return (
+            f"Which symbol represents the comparison between \\(\\frac{{{a}}}{{{b}}}\\) and \\(\\frac{{{c}}}{{{d}}}\\)?",
             solution)
     else:
         return a, b, c, d, solution
 
 
-compare_fractions = Generator(
-    "Compare Fractions", 44,
-    compareFractionsFunc,
-    ["maxVal=10"])
+compare_fractions = Generator("Compare Fractions", 44, compareFractionsFunc,
+                              ["maxVal=10"])

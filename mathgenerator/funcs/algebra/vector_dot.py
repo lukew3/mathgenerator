@@ -14,6 +14,5 @@ def vectorDotFunc(minVal=-20, maxVal=20, format='string'):
         return a, b, c
 
 
-vector_dot = Generator("Dot Product of 2 Vectors", 72,
-                       vectorDotFunc,
+vector_dot = Generator("Dot Product of 2 Vectors", 72, vectorDotFunc,
                        ["minVal=-20", "maxVal=20"])

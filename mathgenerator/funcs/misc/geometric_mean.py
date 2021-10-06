@@ -27,6 +27,5 @@ def geometricMeanFunc(maxValue=100, maxNum=4, format='string'):
     return problem, solution
 
 
-geometric_mean = Generator(
-    "Geometric Mean of N Numbers", 67, geometricMeanFunc,
-    ["maxValue=100", "maxNum=4"])
+geometric_mean = Generator("Geometric Mean of N Numbers", 67,
+                           geometricMeanFunc, ["maxValue=100", "maxNum=4"])

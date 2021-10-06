@@ -18,5 +18,4 @@ def MidPointOfTwoPointFunc(maxValue=20, format='string'):
 
 
 midPoint_of_two_points = Generator("Midpoint of the two point", 20,
-                                   MidPointOfTwoPointFunc,
-                                   ["maxValue=20"])
+                                   MidPointOfTwoPointFunc, ["maxValue=20"])

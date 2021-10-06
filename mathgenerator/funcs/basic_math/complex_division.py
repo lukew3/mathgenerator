@@ -8,11 +8,10 @@ def complexDivisionFunc(maxRes=99, maxDivid=99, format='string'):
     c = round(c, 2)
 
     if format == "string":
-        return (str(a) + "/" + str(b) + "=",
-            str(c))
+        return (str(a) + "/" + str(b) + "=", str(c))
     elif format == 'latex':
         return ("\\(" + str(a) + "\\div" + str(b) + "=\\)",
-            "\\(" + str(c) + "\\)")
+                "\\(" + str(c) + "\\)")
     else:
         return a, b, c
 

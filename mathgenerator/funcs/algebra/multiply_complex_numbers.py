@@ -17,6 +17,6 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
         return num1, num2, product
 
 
-multiply_complex_numbers = Generator("Multiplication of 2 complex numbers", 65,
-                                     multiplyComplexNumbersFunc,
-                                     ["minRealImaginaryNum=-20", "maxRealImaginaryNum=20"])
+multiply_complex_numbers = Generator(
+    "Multiplication of 2 complex numbers", 65, multiplyComplexNumbersFunc,
+    ["minRealImaginaryNum=-20", "maxRealImaginaryNum=20"])

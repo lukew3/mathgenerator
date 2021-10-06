@@ -39,5 +39,4 @@ def confidenceIntervalFunc(format='string'):
 
 
 confidence_interval = Generator("Confidence interval For sample S", 54,
-                                confidenceIntervalFunc,
-                                [""])
+                                confidenceIntervalFunc, [""])

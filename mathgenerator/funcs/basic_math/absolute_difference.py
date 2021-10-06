@@ -9,13 +9,10 @@ def main(maxA=100, maxB=100, format='string'):
     if format == "string":
         return "|" + str(a) + "-" + str(b) + "|=", absDiff
     elif format == 'latex':
-        return ("\\(|" + str(a) + "-" + str(b) + "|=\\)",
-            f"\\({absDiff}\\)")
+        return ("\\(|" + str(a) + "-" + str(b) + "|=\\)", f"\\({absDiff}\\)")
     else:
         return a, b, absDiff
 
 
-absolute_difference = Generator(
-    "Absolute difference between two numbers", 71,
-    main,
-    ["maxA=100", "maxB=100"])
+absolute_difference = Generator("Absolute difference between two numbers", 71,
+                                main, ["maxA=100", "maxB=100"])

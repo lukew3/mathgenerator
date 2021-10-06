@@ -28,6 +28,5 @@ def harmonicMeanFunc(maxValue=100, maxNum=4, format='string'):
     return problem, solution
 
 
-harmonic_mean = Generator("Harmonic Mean of N Numbers", 68,
-                          harmonicMeanFunc,
+harmonic_mean = Generator("Harmonic Mean of N Numbers", 68, harmonicMeanFunc,
                           ["maxValue=100", "maxNum=4"])

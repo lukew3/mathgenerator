@@ -26,12 +26,10 @@ class Generator:
         genList.append([id, title, self, funcname, subjectname, kwargs])
 
     def __str__(self):
-        return str(
-            self.id
-        ) + " " + self.title
+        return str(self.id) + " " + self.title
 
     def __call__(self, *args, **kwargs):
-            return self.func(*args, **kwargs)
+        return self.func(*args, **kwargs)
 
 
 def getGenList():

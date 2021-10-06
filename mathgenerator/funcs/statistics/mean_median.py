@@ -19,5 +19,4 @@ def meanMedianFunc(maxlen=10, format='string'):
         return randomlist, mean, median
 
 
-mean_median = Generator("Mean and Median", 76, meanMedianFunc,
-                        ["maxlen=10"])
+mean_median = Generator("Mean and Median", 76, meanMedianFunc, ["maxlen=10"])

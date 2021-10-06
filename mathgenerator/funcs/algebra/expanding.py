@@ -1,7 +1,11 @@
 from .__init__ import *
 
 
-def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10, format='string'):
+def expandingFunc(range_x1=10,
+                  range_x2=10,
+                  range_a=10,
+                  range_b=10,
+                  format='string'):
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
     a = random.randint(-range_a, range_a)
@@ -48,5 +52,6 @@ def expandingFunc(range_x1=10, range_x2=10, range_a=10, range_b=10, format='stri
         return p1, p2, p3, p4, c1, c2, c3
 
 
-expanding = Generator("Expanding Factored Binomial", 111, expandingFunc,
-                      ["range_x1=10", "range_x2=10", "range_a=10", "range_b=10"])
+expanding = Generator(
+    "Expanding Factored Binomial", 111, expandingFunc,
+    ["range_x1=10", "range_x2=10", "range_a=10", "range_b=10"])

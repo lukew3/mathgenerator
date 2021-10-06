@@ -16,7 +16,5 @@ def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-surface_area_cone = Generator(
-    "Surface Area of cone", 38,
-    surfaceAreaCone,
-    ["maxRadius=20", "maxHeight=50", "unit='m'"])
+surface_area_cone = Generator("Surface Area of cone", 38, surfaceAreaCone,
+                              ["maxRadius=20", "maxHeight=50", "unit='m'"])

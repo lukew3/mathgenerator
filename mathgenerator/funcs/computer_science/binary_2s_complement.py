@@ -32,5 +32,4 @@ def binary2sComplementFunc(maxDigits=10, format='string'):
 
 
 binary_2s_complement = Generator("Binary 2's Complement", 73,
-                                 binary2sComplementFunc,
-                                 ["maxDigits=10"])
+                                 binary2sComplementFunc, ["maxDigits=10"])

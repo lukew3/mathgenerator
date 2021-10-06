@@ -13,10 +13,9 @@ def divisionToIntFunc(maxA=25, maxB=25, format='string'):
         return f"{divisor}/{dividend}=", str(quotient)
     elif format == 'latex':
         return ("\\(" + str(divisor) + "\\div" + str(dividend) + "=\\)",
-            "\\(" + str(quotient) + "\\)")
+                "\\(" + str(quotient) + "\\)")
     else:
         return divisor, dividend, quotient
 
 
-division = Generator("Division", 3,
-                     divisionToIntFunc, ["maxA=25", "maxB=25"])
+division = Generator("Division", 3, divisionToIntFunc, ["maxA=25", "maxB=25"])

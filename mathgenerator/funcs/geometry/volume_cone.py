@@ -14,7 +14,5 @@ def volumeCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-volume_cone = Generator(
-    "Volume of cone", 39,
-    volumeCone,
-    ["maxRadius=20", "maxHeight=50", "unit='m'"])
+volume_cone = Generator("Volume of cone", 39, volumeCone,
+                        ["maxRadius=20", "maxHeight=50", "unit='m'"])

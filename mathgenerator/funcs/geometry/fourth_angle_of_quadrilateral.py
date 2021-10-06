@@ -17,7 +17,6 @@ def fourthAngleOfQuadriFunc(maxAngle=180, format='string'):
         return angle1, angle2, angle3, angle4
 
 
-fourth_angle_of_quadrilateral = Generator(
-    "Fourth Angle of Quadrilateral", 49,
-    fourthAngleOfQuadriFunc,
-    ["maxAngle=180"])
+fourth_angle_of_quadrilateral = Generator("Fourth Angle of Quadrilateral", 49,
+                                          fourthAngleOfQuadriFunc,
+                                          ["maxAngle=180"])

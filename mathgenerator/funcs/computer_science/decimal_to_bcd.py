@@ -17,5 +17,4 @@ def DecimalToBCDFunc(maxNumber=10000, format='string'):
 
 
 decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
-                           DecimalToBCDFunc,
-                           ["maxNumber=10000"])
+                           DecimalToBCDFunc, ["maxNumber=10000"])

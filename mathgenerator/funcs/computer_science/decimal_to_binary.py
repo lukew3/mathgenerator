@@ -11,6 +11,5 @@ def DecimalToBinaryFunc(max_dec=99, format='string'):
     return problem, solution
 
 
-decimal_to_binary = Generator("Decimal to Binary", 14,
-                              DecimalToBinaryFunc,
+decimal_to_binary = Generator("Decimal to Binary", 14, DecimalToBinaryFunc,
                               ["max_dec=99"])

@@ -15,7 +15,6 @@ def curvedSurfaceAreaCylinderFunc(maxRadius=49, maxHeight=99, format='string'):
         return r, h, formatted_float
 
 
-curved_surface_area_cylinder = Generator(
-    "Curved surface area of a cylinder", 95,
-    curvedSurfaceAreaCylinderFunc,
-    ["maxRadius=49", "maxHeight=99"])
+curved_surface_area_cylinder = Generator("Curved surface area of a cylinder",
+                                         95, curvedSurfaceAreaCylinderFunc,
+                                         ["maxRadius=49", "maxHeight=99"])

@@ -16,6 +16,4 @@ def permutationFunc(maxlength=20, format='string'):
         return a, b, answer
 
 
-permutation = Generator(
-    "Permutations", 42, permutationFunc,
-    ["maxlength=20"])
+permutation = Generator("Permutations", 42, permutationFunc, ["maxlength=20"])

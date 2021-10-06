@@ -17,6 +17,5 @@ def vectorCrossFunc(minVal=-20, maxVal=20, format='string'):
         return a, b, c
 
 
-vector_cross = Generator("Cross Product of 2 Vectors", 43,
-                         vectorCrossFunc,
+vector_cross = Generator("Cross Product of 2 Vectors", 43, vectorCrossFunc,
                          ["minVal=-20", "maxVal=20"])

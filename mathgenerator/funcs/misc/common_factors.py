@@ -27,6 +27,5 @@ def commonFactorsFunc(maxVal=100, format='string'):
         return a, b, arr
 
 
-common_factors = Generator("Common Factors", 40,
-                           commonFactorsFunc,
+common_factors = Generator("Common Factors", 40, commonFactorsFunc,
                            ["maxVal=100"])

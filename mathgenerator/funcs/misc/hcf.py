@@ -16,5 +16,4 @@ def hcfFunc(maxVal=20, format='string'):
         return a, b, x
 
 
-hcf = Generator("HCF (Highest Common Factor)", 51, hcfFunc,
-                ["maxVal=20"])
+hcf = Generator("HCF (Highest Common Factor)", 51, hcfFunc, ["maxVal=20"])

@@ -15,4 +15,4 @@ def subtractionFunc(maxMinuend=99, maxDiff=99, format='string'):
 
 
 subtraction = Generator("Subtraction", 1, subtractionFunc,
-    ["maxMinuend=99", "maxDiff=99"])
+                        ["maxMinuend=99", "maxDiff=99"])

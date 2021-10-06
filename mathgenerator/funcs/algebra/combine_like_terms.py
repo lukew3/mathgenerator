@@ -44,4 +44,5 @@ def combineTerms(string):
     return final_string
 
 
-combine_like_terms = Generator("Combine Like terms", 105,likeTermCombineFunc, ["maxCoef=10", "maxExp=20", "maxTerms=10"])
+combine_like_terms = Generator("Combine Like terms", 105, likeTermCombineFunc,
+                               ["maxCoef=10", "maxExp=20", "maxTerms=10"])

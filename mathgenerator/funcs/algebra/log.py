@@ -19,5 +19,4 @@ def logFunc(maxBase=3, maxVal=8, format='string'):
         return b, c, a
 
 
-log = Generator("Logarithm", 12, logFunc,
-                ["maxBase=3", "maxVal=8"])
+log = Generator("Logarithm", 12, logFunc, ["maxBase=3", "maxVal=8"])

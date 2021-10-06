@@ -20,7 +20,8 @@ def geomProgrFunc(number_values=6,
     if format == 'string':
         problem = "For the given GP " + str(
             GP) + " ,Find the value of a,common ratio," + str(
-                n_term) + "th term value, sum upto " + str(sum_term) + "th term"
+                n_term) + "th term value, sum upto " + str(
+                    sum_term) + "th term"
         solution = "The value of a is {}, common ratio is {} , {}th term is {} , sum upto {}th term is {}".format(
             a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
         return problem, solution
@@ -28,7 +29,6 @@ def geomProgrFunc(number_values=6,
         return GP, n_term, sum_term, a, r, n_term, value_nth_term, sum_term, sum_till_nth_term
 
 
-
-geometric_progression = Generator(
-    "Geometric Progression", 66, geomProgrFunc,
-    ["number_values=6", "min_value=2", "max_value=12", "n_term=7", "sum_term=5"])
+geometric_progression = Generator("Geometric Progression", 66, geomProgrFunc, [
+    "number_values=6", "min_value=2", "max_value=12", "n_term=7", "sum_term=5"
+])

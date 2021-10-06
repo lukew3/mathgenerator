@@ -21,6 +21,5 @@ def combinationsFunc(maxlength=20, format='string'):
         return a, b, solution
 
 
-combinations = Generator(
-    "Combinations of Objects", 30, combinationsFunc,
-    ["maxlength=20"])
+combinations = Generator("Combinations of Objects", 30, combinationsFunc,
+                         ["maxlength=20"])

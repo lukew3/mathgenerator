@@ -22,6 +22,4 @@ def isprime(max_num=100, format='string'):
         return a, solution
 
 
-is_prime = Generator('isprime', 90,
-                     isprime,
-                     ["max_num=100"])
+is_prime = Generator('isprime', 90, isprime, ["max_num=100"])

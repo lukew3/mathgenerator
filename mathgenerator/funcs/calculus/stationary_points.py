@@ -12,10 +12,9 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
         solution = sympy.stationary_points(problem, x)
 
         #if len(solution) != 0:
-        solution = ','.join('({},{})'.format(
-            str(p),
-            sympy.sympify(problem.replace(x, p))
-        ) for p in solution)
+        solution = ','.join(
+            '({},{})'.format(str(p), sympy.sympify(problem.replace(x, p)))
+            for p in solution)
         problem = 'f(x)=' + str(problem).replace('**', '^')
         if format == 'string':
             return problem, solution

@@ -15,5 +15,4 @@ def factorialFunc(maxInput=6, format='string'):
         return a, b
 
 
-factorial = Generator("Factorial", 31,
-                      factorialFunc, ["maxInput=6"])
+factorial = Generator("Factorial", 31, factorialFunc, ["maxInput=6"])

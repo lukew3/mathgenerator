@@ -24,5 +24,4 @@ def BCDtoDecimalFunc(maxNumber=10000, format='string'):
 
 
 bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91,
-                           BCDtoDecimalFunc,
-                           ["maxNumber=10000"])
+                           BCDtoDecimalFunc, ["maxNumber=10000"])

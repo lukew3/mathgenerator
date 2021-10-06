@@ -17,12 +17,12 @@ def fibonacciSeriesFunc(minNo=1, format='string'):
     fibList = createFibList(n)
 
     if format == 'string':
-        problem = "The Fibonacci Series of the first " + str(n) + " numbers is ?"
+        problem = "The Fibonacci Series of the first " + str(
+            n) + " numbers is ?"
         return problem, fibList
     else:
         return n, fibList
 
 
-fibonacci_series = Generator(
-    "Fibonacci Series", 56, fibonacciSeriesFunc,
-    ["minNo=1"])
+fibonacci_series = Generator("Fibonacci Series", 56, fibonacciSeriesFunc,
+                             ["minNo=1"])
