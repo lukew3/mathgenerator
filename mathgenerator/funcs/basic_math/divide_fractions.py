@@ -32,14 +32,14 @@ def divideFractionsFunc(maxVal=10, format='string'):
     if format == 'string':
         return f"({a}/{b})/({c}/{d})", x
     elif format == 'latex':
+        problem = "\\(\\frac{" + str(a) + "}{" + str(b) + \
+            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)"
         if tmp_d == 1 or tmp_d == gcd:
             solution = "\\(" + str(sol_numerator) + "\\)"
         else:
             solution = "\\(\\frac{" + str(sol_numerator) + \
                 "}{" + str(sol_denominator) + "}\\)"
-        return ("\\(\\frac{" + str(a) + "}{" + str(b) + \
-            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)",
-            solution)
+        return problem, solution
     else:
         return a, b, c, d, x
 

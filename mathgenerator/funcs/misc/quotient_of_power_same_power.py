@@ -10,7 +10,7 @@ def quotientOfPowerSamePowerFunc(maxBase=50, maxPower=10, format='string'):
 
     if format == 'string':
         problem = f"The Quotient of {base1}^{power} and {base2}^{power} = " \
-              f"({base1}/{base2})^{power} = {step}^{power}"
+            f"({base1}/{base2})^{power} = {step}^{power}"
         return problem, str(solution)
     else:
         return base1, base2, power, step, solution

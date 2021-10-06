@@ -11,7 +11,7 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
             problem += coefficient * pow(x, exp)
         solution = sympy.stationary_points(problem, x)
 
-        #if len(solution) != 0:
+        # if len(solution) != 0:
         solution = ','.join(
             '({},{})'.format(str(p), sympy.sympify(problem.replace(x, p)))
             for p in solution)

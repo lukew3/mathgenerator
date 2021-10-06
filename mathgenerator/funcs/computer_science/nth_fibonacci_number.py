@@ -7,8 +7,7 @@ def nthFibonacciNumberFunc(maxN=100, format='string'):
     golden_ratio = (1 + math.sqrt(5)) / 2
     n = random.randint(1, maxN)
     problem = f"What is the {n}th Fibonacci number?"
-    ans = round((math.pow(golden_ratio, n) - math.pow(-golden_ratio, -n)) /
-                (math.sqrt(5)))
+    ans = int((math.pow(golden_ratio, n) - math.pow(-golden_ratio, -n)) / (math.sqrt(5)))
 
     if format == 'string':
         solution = f"{ans}"
