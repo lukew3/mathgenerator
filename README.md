@@ -4,7 +4,7 @@ A math problem generator, created for the purpose of giving self-studying studen
 
 To try out generators, go to <https://lukew3.com/mathgenerator>
 
-If you have an idea for a generator, please add it as an issue and tag it with the "New Generator" label.
+See [CONTRIBUTING.md](https://github.com/lukew3/mathgenerator/blob/main/CONTRIBUTING.md) for information about how to contribute.
 
 ## Table of Contents
 * [Installation](#installation)
