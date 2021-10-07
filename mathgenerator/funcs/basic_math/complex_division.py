@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def complexDivisionFunc(maxRes=99, maxDivid=99, format='string'):
+def gen_func(maxRes=99, maxDivid=99, format='string'):
     a = random.randint(0, maxDivid)
     b = random.randint(1, min(maxRes, maxDivid))
     c = a / b
@@ -16,5 +16,5 @@ def complexDivisionFunc(maxRes=99, maxDivid=99, format='string'):
         return a, b, c
 
 
-complex_division = Generator("Complex Division", 13, complexDivisionFunc,
+complex_division = Generator("Complex Division", 13, gen_func,
                              ["maxRes=99", "maxDivid=99"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def fourthAngleOfQuadriFunc(maxAngle=180, format='string'):
+def gen_func(maxAngle=180, format='string'):
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, 240 - angle1)
     angle3 = random.randint(1, 340 - (angle1 + angle2))
@@ -20,5 +20,5 @@ def fourthAngleOfQuadriFunc(maxAngle=180, format='string'):
 
 
 fourth_angle_of_quadrilateral = Generator("Fourth Angle of Quadrilateral", 49,
-                                          fourthAngleOfQuadriFunc,
+                                          gen_func,
                                           ["maxAngle=180"])

@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def nthFibonacciNumberFunc(maxN=100, format='string'):
+def gen_func(maxN=100, format='string'):
     golden_ratio = (1 + math.sqrt(5)) / 2
     n = random.randint(1, maxN)
     problem = f"What is the {n}th Fibonacci number?"
@@ -18,4 +18,4 @@ def nthFibonacciNumberFunc(maxN=100, format='string'):
 
 
 nth_fibonacci_number = Generator("nth Fibonacci number", 62,
-                                 nthFibonacciNumberFunc, ["maxN=100"])
+                                 gen_func, ["maxN=100"])

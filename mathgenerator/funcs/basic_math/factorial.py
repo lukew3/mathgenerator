@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def factorialFunc(maxInput=6, format='string'):
+def gen_func(maxInput=6, format='string'):
     a = random.randint(0, maxInput)
     n = a
     b = 1
@@ -17,4 +17,4 @@ def factorialFunc(maxInput=6, format='string'):
         return a, b
 
 
-factorial = Generator("Factorial", 31, factorialFunc, ["maxInput=6"])
+factorial = Generator("Factorial", 31, gen_func, ["maxInput=6"])

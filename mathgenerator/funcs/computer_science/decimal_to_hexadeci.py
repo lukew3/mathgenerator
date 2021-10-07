@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def deciToHexaFunc(max_dec=1000, format='string'):
+def gen_func(max_dec=1000, format='string'):
     a = random.randint(0, max_dec)
     b = hex(a)
 
@@ -15,5 +15,5 @@ def deciToHexaFunc(max_dec=1000, format='string'):
         return a, str(b)
 
 
-decimal_to_hexadeci = Generator("Decimal to Hexadecimal", 79, deciToHexaFunc,
+decimal_to_hexadeci = Generator("Decimal to Hexadecimal", 79, gen_func,
                                 ["max_dec=1000"])

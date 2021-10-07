@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def surfaceAreaCube(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m', format='string'):
     a = random.randint(1, maxSide)
     ans = 6 * a * a
 
@@ -15,5 +15,5 @@ def surfaceAreaCube(maxSide=20, unit='m', format='string'):
         return a, ans, unit
 
 
-surface_area_cube = Generator("Surface Area of Cube", 32, surfaceAreaCube,
+surface_area_cube = Generator("Surface Area of Cube", 32, gen_func,
                               ["maxSide=20", "unit='m'"])

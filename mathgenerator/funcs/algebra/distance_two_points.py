@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def distanceTwoPointsFunc(maxValXY=20, minValXY=-20, format='string'):
+def gen_func(maxValXY=20, minValXY=-20, format='string'):
     point1X = random.randint(minValXY, maxValXY + 1)
     point1Y = random.randint(minValXY, maxValXY + 1)
     point2X = random.randint(minValXY, maxValXY + 1)
@@ -20,5 +20,5 @@ def distanceTwoPointsFunc(maxValXY=20, minValXY=-20, format='string'):
 
 
 distance_two_points = Generator("Distance between 2 points", 24,
-                                distanceTwoPointsFunc,
+                                gen_func,
                                 ["maxValXY=20", "minValXY=-20"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def volumeSphereFunc(maxRadius=100, format='string'):
+def gen_func(maxRadius=100, format='string'):
     r = random.randint(1, maxRadius)
     ans = (4 * math.pi / 3) * r**3
 
@@ -15,5 +15,5 @@ def volumeSphereFunc(maxRadius=100, format='string'):
         return r, ans
 
 
-volume_sphere = Generator("Volume of Sphere", 61, volumeSphereFunc,
+volume_sphere = Generator("Volume of Sphere", 61, gen_func,
                           ["maxRadius=100"])

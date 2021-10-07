@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def volumeCuboid(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m', format='string'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
@@ -17,5 +17,5 @@ def volumeCuboid(maxSide=20, unit='m', format='string'):
         return a, b, c, ans, unit
 
 
-volume_cuboid = Generator("Volume of Cuboid", 36, volumeCuboid,
+volume_cuboid = Generator("Volume of Cuboid", 36, gen_func,
                           ["maxSide=20", "unit='m'"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def surfaceAreaCuboid(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m', format='string'):
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
@@ -18,4 +18,4 @@ def surfaceAreaCuboid(maxSide=20, unit='m', format='string'):
 
 
 surface_area_cuboid = Generator("Surface Area of Cuboid", 33,
-                                surfaceAreaCuboid, ["maxSide=20", "unit='m'"])
+                                gen_func, ["maxSide=20", "unit='m'"])

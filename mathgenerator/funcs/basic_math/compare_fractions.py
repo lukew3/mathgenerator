@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def compareFractionsFunc(maxVal=10, format='string'):
+def gen_func(maxVal=10, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -34,5 +34,5 @@ def compareFractionsFunc(maxVal=10, format='string'):
         return a, b, c, d, solution
 
 
-compare_fractions = Generator("Compare Fractions", 44, compareFractionsFunc,
+compare_fractions = Generator("Compare Fractions", 44, gen_func,
                               ["maxVal=10"])

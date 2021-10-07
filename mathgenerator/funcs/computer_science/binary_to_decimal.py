@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def binaryToDecimalFunc(max_dig=10, format='string'):
+def gen_func(max_dig=10, format='string'):
     problem = ''
 
     for i in range(random.randint(1, max_dig)):
@@ -17,5 +17,5 @@ def binaryToDecimalFunc(max_dig=10, format='string'):
         return problem, solution
 
 
-binary_to_decimal = Generator("Binary to Decimal", 15, binaryToDecimalFunc,
+binary_to_decimal = Generator("Binary to Decimal", 15, gen_func,
                               ["max_dig=10"])

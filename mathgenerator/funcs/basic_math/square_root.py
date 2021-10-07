@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def squareRootFunc(minNo=1, maxNo=12, format='string'):
+def gen_func(minNo=1, maxNo=12, format='string'):
     b = random.randint(minNo, maxNo)
     a = b * b
 
@@ -17,5 +17,5 @@ def squareRootFunc(minNo=1, maxNo=12, format='string'):
         return a, b
 
 
-square_root = Generator("Square Root", 6, squareRootFunc,
+square_root = Generator("Square Root", 6, gen_func,
                         ["minNo=1", "maxNo=12"])

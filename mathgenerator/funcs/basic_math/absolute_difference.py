@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def main(maxA=100, maxB=100, format='string'):
+def gen_func(maxA=100, maxB=100, format='string'):
     a = random.randint(-1 * maxA, maxA)
     b = random.randint(-1 * maxB, maxB)
     absDiff = abs(a - b)
@@ -15,4 +15,4 @@ def main(maxA=100, maxB=100, format='string'):
 
 
 absolute_difference = Generator("Absolute difference between two numbers", 71,
-                                main, ["maxA=100", "maxB=100"])
+                                gen_func, ["maxA=100", "maxB=100"])

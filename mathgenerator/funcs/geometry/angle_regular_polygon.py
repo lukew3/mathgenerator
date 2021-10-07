@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def regularPolygonAngleFunc(minVal=3, maxVal=20, format='string'):
+def gen_func(minVal=3, maxVal=20, format='string'):
     sideNum = random.randint(minVal, maxVal)
     problem = f"Find the angle of a regular polygon with {sideNum} sides"
 
@@ -17,5 +17,5 @@ def regularPolygonAngleFunc(minVal=3, maxVal=20, format='string'):
 
 
 angle_regular_polygon = Generator("Angle of a Regular Polygon", 29,
-                                  regularPolygonAngleFunc,
+                                  gen_func,
                                   ["minVal=3", "maxVal=20"])

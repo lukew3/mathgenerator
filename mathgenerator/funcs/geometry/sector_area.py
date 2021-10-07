@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def sectorAreaFunc(maxRadius=49, maxAngle=359, format='string'):
+def gen_func(maxRadius=49, maxAngle=359, format='string'):
     r = random.randint(1, maxRadius)
     a = random.randint(1, maxAngle)
     secArea = float((a / 360) * math.pi * r * r)
@@ -17,5 +17,5 @@ def sectorAreaFunc(maxRadius=49, maxAngle=359, format='string'):
         return r, a, formatted_float
 
 
-sector_area = Generator("Area of a Sector", 75, sectorAreaFunc,
+sector_area = Generator("Area of a Sector", 75, gen_func,
                         ["maxRadius=49", "maxAngle=359"])

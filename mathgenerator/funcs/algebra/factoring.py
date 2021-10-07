@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def factoringFunc(range_x1=10, range_x2=10, format='string'):
+def gen_func(range_x1=10, range_x2=10, format='string'):
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
 
@@ -34,5 +34,5 @@ def factoringFunc(range_x1=10, range_x2=10, format='string'):
         return b, c, x1, x2
 
 
-factoring = Generator("Factoring Quadratic", 21, factoringFunc,
+factoring = Generator("Factoring Quadratic", 21, gen_func,
                       ["range_x1=10", "range_x2=10"])

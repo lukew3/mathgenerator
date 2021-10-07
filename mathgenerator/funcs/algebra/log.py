@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def logFunc(maxBase=3, maxVal=8, format='string'):
+def gen_func(maxBase=3, maxVal=8, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(2, maxBase)
     c = pow(b, a)
@@ -18,4 +18,4 @@ def logFunc(maxBase=3, maxVal=8, format='string'):
         return b, c, a
 
 
-log = Generator("Logarithm", 12, logFunc, ["maxBase=3", "maxVal=8"])
+log = Generator("Logarithm", 12, gen_func, ["maxBase=3", "maxVal=8"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def simpleInterestFunc(maxPrinciple=10000,
+def gen_func(maxPrinciple=10000,
                        maxRate=10,
                        maxTime=10,
                        format='string'):
@@ -23,5 +23,5 @@ def simpleInterestFunc(maxPrinciple=10000,
         return a, b, c, d
 
 
-simple_interest = Generator("Simple Interest", 45, simpleInterestFunc,
+simple_interest = Generator("Simple Interest", 45, gen_func,
                             ["maxPrinciple=10000", "maxRate=10", "maxTime=10"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def isTriangleValidFunc(maxSideLength=50, format='string'):
+def gen_func(maxSideLength=50, format='string'):
     sideA = random.randint(1, maxSideLength)
     sideB = random.randint(1, maxSideLength)
     sideC = random.randint(1, maxSideLength)
@@ -25,5 +25,5 @@ def isTriangleValidFunc(maxSideLength=50, format='string'):
         return sideA, sideB, sideC, exists
 
 
-valid_triangle = Generator("Triangle exists check", 19, isTriangleValidFunc,
+valid_triangle = Generator("Triangle exists check", 19, gen_func,
                            ["maxSideLength=50"])

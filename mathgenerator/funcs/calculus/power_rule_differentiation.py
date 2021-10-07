@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def powerRuleDifferentiationFunc(maxCoef=10,
-                                 maxExp=10,
-                                 maxTerms=5,
-                                 format='string'):
+def gen_func(maxCoef=10,
+             maxExp=10,
+             maxTerms=5,
+             format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -28,5 +28,5 @@ def powerRuleDifferentiationFunc(maxCoef=10,
 
 
 power_rule_differentiation = Generator(
-    "Power Rule Differentiation", 7, powerRuleDifferentiationFunc,
+    "Power Rule Differentiation", 7, gen_func,
     ["maxCoef=10", "maxExp=10", "maxTerms=5"])

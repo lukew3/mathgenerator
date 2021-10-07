@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def pythagoreanTheoremFunc(maxLength=20, format='string'):
+def gen_func(maxLength=20, format='string'):
     a = random.randint(1, maxLength)
     b = random.randint(1, maxLength)
     c = (a**2 + b**2)**0.5
@@ -17,4 +17,4 @@ def pythagoreanTheoremFunc(maxLength=20, format='string'):
 
 
 pythagorean_theorem = Generator("Pythagorean Theorem", 25,
-                                pythagoreanTheoremFunc, ["maxLength=20"])
+                                gen_func, ["maxLength=20"])

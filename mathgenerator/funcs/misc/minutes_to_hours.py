@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def minutesToHoursFunc(maxMinutes=999, format='string'):
+def gen_func(maxMinutes=999, format='string'):
     minutes = random.randint(1, maxMinutes)
     ansHours = int(minutes / 60)
     ansMinutes = minutes % 60
@@ -17,4 +17,4 @@ def minutesToHoursFunc(maxMinutes=999, format='string'):
 
 
 minutes_to_hours = Generator("Minute to Hour conversion", 102,
-                             minutesToHoursFunc, ["maxMinutes=999"])
+                             gen_func, ["maxMinutes=999"])

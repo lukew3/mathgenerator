@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def vectorCrossFunc(minVal=-20, maxVal=20, format='string'):
+def gen_func(minVal=-20, maxVal=20, format='string'):
     a = [random.randint(minVal, maxVal) for i in range(3)]
     b = [random.randint(minVal, maxVal) for i in range(3)]
     c = [
@@ -19,5 +19,5 @@ def vectorCrossFunc(minVal=-20, maxVal=20, format='string'):
         return a, b, c
 
 
-vector_cross = Generator("Cross Product of 2 Vectors", 43, vectorCrossFunc,
+vector_cross = Generator("Cross Product of 2 Vectors", 43, gen_func,
                          ["minVal=-20", "maxVal=20"])

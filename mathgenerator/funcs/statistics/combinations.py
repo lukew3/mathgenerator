@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def combinationsFunc(maxlength=20, format='string'):
+def gen_func(maxlength=20, format='string'):
     def factorial(a):
         d = 1
         for i in range(a):
@@ -23,5 +23,5 @@ def combinationsFunc(maxlength=20, format='string'):
         return a, b, solution
 
 
-combinations = Generator("Combinations of Objects", 30, combinationsFunc,
+combinations = Generator("Combinations of Objects", 30, gen_func,
                          ["maxlength=20"])

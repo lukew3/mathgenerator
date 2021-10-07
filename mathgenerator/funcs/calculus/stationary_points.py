@@ -2,7 +2,7 @@ from .__init__ import *
 import sympy
 
 
-def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
+def gen_func(maxExp=3, maxCoef=10, format='string'):
     while True:
         x = sympy.symbols('x')
         problem = 0
@@ -24,5 +24,5 @@ def stationaryPointsFunc(maxExp=3, maxCoef=10, format='string'):
             return problem, solution
 
 
-stationary_points = Generator("Stationary Points", 110, stationaryPointsFunc,
+stationary_points = Generator("Stationary Points", 110, gen_func,
                               ["maxExp=3", "maxCoef=10"])

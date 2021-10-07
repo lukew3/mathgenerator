@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def sumOfAnglesOfPolygonFunc(maxSides=12, format='string'):
+def gen_func(maxSides=12, format='string'):
     side_count = random.randint(3, maxSides)
     sum = (side_count - 2) * 180
 
@@ -15,4 +15,4 @@ def sumOfAnglesOfPolygonFunc(maxSides=12, format='string'):
 
 
 sum_of_polygon_angles = Generator("Sum of Angles of Polygon", 58,
-                                  sumOfAnglesOfPolygonFunc, ["maxSides=12"])
+                                  gen_func, ["maxSides=12"])

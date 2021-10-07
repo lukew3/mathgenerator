@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def main(maxSum=99, maxAddend=50, format='string'):
+def gen_func(maxSum=99, maxAddend=50, format='string'):
     if maxAddend > maxSum:
         maxAddend = maxSum
     a = random.randint(0, maxAddend)
@@ -21,4 +21,4 @@ def main(maxSum=99, maxAddend=50, format='string'):
         return a, b, c
 
 
-addition = Generator("Addition", 0, main, ["maxSum=99", "maxAddend=50"])
+addition = Generator("Addition", 0, gen_func, ["maxSum=99", "maxAddend=50"])

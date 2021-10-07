@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def BCDtoDecimalFunc(maxNumber=10000, format='string'):
+def gen_func(maxNumber=10000, format='string'):
     n = random.randint(1000, maxNumber)
     binstring = ''
     while True:
@@ -26,4 +26,4 @@ def BCDtoDecimalFunc(maxNumber=10000, format='string'):
 
 
 bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91,
-                           BCDtoDecimalFunc, ["maxNumber=10000"])
+                           gen_func, ["maxNumber=10000"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def exponentiationFunc(maxBase=20, maxExpo=10, format='string'):
+def gen_func(maxBase=20, maxExpo=10, format='string'):
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
 
@@ -13,5 +13,5 @@ def exponentiationFunc(maxBase=20, maxExpo=10, format='string'):
         return base, expo, base**expo
 
 
-exponentiation = Generator("Exponentiation", 53, exponentiationFunc,
+exponentiation = Generator("Exponentiation", 53, gen_func,
                            ["maxBase=20", "maxExpo=10"])

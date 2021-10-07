@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20, format='string'):
+def gen_func(maxA=20, maxB=20, maxC=20, format='string'):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
     c = random.randint(1, maxC)
@@ -20,5 +20,5 @@ def areaOfTriangleFunc(maxA=20, maxB=20, maxC=20, format='string'):
         return a, b, c, area
 
 
-area_of_triangle = Generator("Area of Triangle", 18, areaOfTriangleFunc,
+area_of_triangle = Generator("Area of Triangle", 18, gen_func,
                              ["maxA=20", "maxB=20", "maxC=20"])

@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def quadraticEquation(maxVal=100, format='string'):
+def gen_func(maxVal=100, format='string'):
     a = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
     b = random.randint(
@@ -22,5 +22,5 @@ def quadraticEquation(maxVal=100, format='string'):
         return a, b, c, res
 
 
-quadratic_equation = Generator("Quadratic Equation", 50, quadraticEquation,
+quadratic_equation = Generator("Quadratic Equation", 50, gen_func,
                                ["maxVal=100"])

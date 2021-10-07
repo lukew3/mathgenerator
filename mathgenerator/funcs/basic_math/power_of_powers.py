@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def powerOfPowersFunc(maxBase=50, maxPower=10, format='string'):
+def gen_func(maxBase=50, maxPower=10, format='string'):
     base = random.randint(1, maxBase)
     power1 = random.randint(1, maxPower)
     power2 = random.randint(1, maxPower)
@@ -20,5 +20,5 @@ def powerOfPowersFunc(maxBase=50, maxPower=10, format='string'):
         return base, power1, power2, base, step
 
 
-power_of_powers = Generator("Power of Powers", 97, powerOfPowersFunc,
+power_of_powers = Generator("Power of Powers", 97, gen_func,
                             ["maxBase=50", "maxPower=10"])

@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def euclidianNormFunc(maxEltAmt=20, format='string'):
+def gen_func(maxEltAmt=20, format='string'):
     vec = [
         random.uniform(0, 1000) for i in range(random.randint(2, maxEltAmt))
     ]
@@ -19,4 +19,4 @@ def euclidianNormFunc(maxEltAmt=20, format='string'):
 
 
 eucldian_norm = Generator("Euclidian norm or L2 norm of a vector", 69,
-                          euclidianNormFunc, ["maxEltAmt=20"])
+                          gen_func, ["maxEltAmt=20"])

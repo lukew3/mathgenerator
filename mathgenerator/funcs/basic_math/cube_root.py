@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def cubeRootFunc(minNo=1, maxNo=1000, format='string'):
+def gen_func(minNo=1, maxNo=1000, format='string'):
     b = random.randint(minNo, maxNo)
     a = b**(1 / 3)
 
@@ -13,4 +13,4 @@ def cubeRootFunc(minNo=1, maxNo=1000, format='string'):
         return b, a
 
 
-cube_root = Generator("Cube Root", 47, cubeRootFunc, ["minNo=1", "maxNo=1000"])
+cube_root = Generator("Cube Root", 47, gen_func, ["minNo=1", "maxNo=1000"])

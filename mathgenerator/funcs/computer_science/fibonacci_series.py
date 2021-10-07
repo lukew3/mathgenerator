@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def fibonacciSeriesFunc(minNo=1, format='string'):
+def gen_func(minNo=1, format='string'):
     n = random.randint(minNo, 20)
 
     def createFibList(n):
@@ -26,5 +26,5 @@ def fibonacciSeriesFunc(minNo=1, format='string'):
         return n, fibList
 
 
-fibonacci_series = Generator("Fibonacci Series", 56, fibonacciSeriesFunc,
+fibonacci_series = Generator("Fibonacci Series", 56, gen_func,
                              ["minNo=1"])

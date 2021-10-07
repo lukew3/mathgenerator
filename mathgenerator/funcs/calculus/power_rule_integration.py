@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def powerRuleIntegrationFunc(maxCoef=10,
-                             maxExp=10,
-                             maxTerms=5,
-                             format='string'):
+def gen_func(maxCoef=10,
+             maxExp=10,
+             maxTerms=5,
+             format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -31,5 +31,5 @@ def powerRuleIntegrationFunc(maxCoef=10,
 
 
 power_rule_integration = Generator("Power Rule Integration", 48,
-                                   powerRuleIntegrationFunc,
+                                   gen_func,
                                    ["maxCoef=10", "maxExp=10", "maxTerms=5"])

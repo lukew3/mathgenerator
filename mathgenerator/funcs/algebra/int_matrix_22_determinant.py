@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def determinantToMatrix22(maxMatrixVal=100, format='string'):
+def gen_func(maxMatrixVal=100, format='string'):
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -20,5 +20,5 @@ def determinantToMatrix22(maxMatrixVal=100, format='string'):
 
 
 int_matrix_22_determinant = Generator("Determinant to 2x2 Matrix", 77,
-                                      determinantToMatrix22,
+                                      gen_func,
                                       ["maxMatrixVal=100"])

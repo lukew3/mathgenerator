@@ -3,7 +3,7 @@ import scipy
 from scipy.integrate import quad
 
 
-def definiteIntegralFunc(max_coeff=100, format='string'):
+def gen_func(max_coeff=100, format='string'):
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
@@ -26,4 +26,4 @@ def definiteIntegralFunc(max_coeff=100, format='string'):
 
 
 definite_integral = Generator("Definite Integral of Quadratic Equation", 89,
-                              definiteIntegralFunc, ["max_coeff=100"])
+                              gen_func, ["max_coeff=100"])

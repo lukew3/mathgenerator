@@ -2,7 +2,7 @@ from .__init__ import *
 from numpy import pi
 
 
-def radianToDegFunc(max_rad=3, format='string'):
+def gen_func(max_rad=3, format='string'):
     # max_rad is supposed to be pi but random can't handle non-integer
     a = random.randint(0, max_rad)
     b = (180 * a) / pi
@@ -18,5 +18,5 @@ def radianToDegFunc(max_rad=3, format='string'):
         return a, b
 
 
-radian_to_deg = Generator("Radians to Degrees", 87, radianToDegFunc,
+radian_to_deg = Generator("Radians to Degrees", 87, gen_func,
                           ["max_rad=3"])

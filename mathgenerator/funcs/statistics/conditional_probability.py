@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def conditionalProbFunc(format='string'):
+def gen_func(format='string'):
     P_disease = round(2. * random.random(), 2)
     true_positive = round(random.random() + float(random.randint(90, 99)), 2)
     true_negative = round(random.random() + float(random.randint(90, 99)), 2)
@@ -31,4 +31,4 @@ def conditionalProbFunc(format='string'):
 
 
 conditional_probability = Generator("Conditional Probability", 107,
-                                    conditionalProbFunc, [""])
+                                    gen_func, [""])

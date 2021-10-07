@@ -2,7 +2,7 @@ from .__init__ import *
 import random
 
 
-def signumFunc(min=-999, max=999, format='string'):
+def gen_func(min=-999, max=999, format='string'):
     a = random.randint(min, max)
     b = 0
     if (a > 0):
@@ -20,5 +20,5 @@ def signumFunc(min=-999, max=999, format='string'):
         return a, b
 
 
-signum_function = Generator("signum function", 106, signumFunc,
+signum_function = Generator("signum function", 106, gen_func,
                             ["min=-999", "max=999"])

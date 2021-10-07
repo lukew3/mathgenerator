@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def hcfFunc(maxVal=20, format='string'):
+def gen_func(maxVal=20, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
@@ -18,4 +18,4 @@ def hcfFunc(maxVal=20, format='string'):
         return a, b, x
 
 
-hcf = Generator("HCF (Highest Common Factor)", 51, hcfFunc, ["maxVal=20"])
+hcf = Generator("HCF (Highest Common Factor)", 51, gen_func, ["maxVal=20"])

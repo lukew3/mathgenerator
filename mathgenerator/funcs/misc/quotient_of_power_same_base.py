@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10, format='string'):
+def gen_func(maxBase=50, maxPower=10, format='string'):
     base = random.randint(1, maxBase)
     power1 = random.randint(1, maxPower)
     power2 = random.randint(1, maxPower)
@@ -19,5 +19,5 @@ def quotientOfPowerSameBaseFunc(maxBase=50, maxPower=10, format='string'):
 
 
 quotient_of_power_same_base = Generator("Quotient of Powers with Same Base",
-                                        98, quotientOfPowerSameBaseFunc,
+                                        98, gen_func,
                                         ["maxBase=50", "maxPower=10"])

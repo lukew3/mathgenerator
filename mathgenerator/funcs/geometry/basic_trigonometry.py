@@ -4,7 +4,7 @@ import math
 
 
 # Handles degrees in quadrant one
-def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
+def gen_func(angles=[0, 30, 45, 60, 90],
                           functions=["sin", "cos", "tan"],
                           format='string'):
     angle = random.choice(angles)
@@ -35,5 +35,5 @@ def basicTrigonometryFunc(angles=[0, 30, 45, 60, 90],
 
 
 basic_trigonometry = Generator(
-    "Trigonometric Values", 57, basicTrigonometryFunc,
+    "Trigonometric Values", 57, gen_func,
     ["angles=[0, 30, 45, 60, 90]", "functions=['sin', 'cos', 'tan']"])

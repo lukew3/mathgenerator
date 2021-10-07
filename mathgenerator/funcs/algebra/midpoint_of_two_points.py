@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def MidPointOfTwoPointFunc(maxValue=20, format='string'):
+def gen_func(maxValue=20, format='string'):
     x1 = random.randint(-20, maxValue)
     y1 = random.randint(-20, maxValue)
     x2 = random.randint(-20, maxValue)
@@ -20,4 +20,4 @@ def MidPointOfTwoPointFunc(maxValue=20, format='string'):
 
 
 midPoint_of_two_points = Generator("Midpoint of the two point", 20,
-                                   MidPointOfTwoPointFunc, ["maxValue=20"])
+                                   gen_func, ["maxValue=20"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def compoundInterestFunc(maxPrinciple=10000,
+def gen_func(maxPrinciple=10000,
                          maxRate=10,
                          maxTime=10,
                          format='string'):
@@ -22,5 +22,5 @@ def compoundInterestFunc(maxPrinciple=10000,
 
 
 compound_interest = Generator(
-    "Compound Interest", 78, compoundInterestFunc,
+    "Compound Interest", 78, gen_func,
     ["maxPrinciple=10000", "maxRate=10", "maxTime=10"])

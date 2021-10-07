@@ -2,7 +2,7 @@ from .__init__ import *
 import math
 
 
-def angleBtwVectorsFunc(maxEltAmt=20, format='string'):
+def gen_func(maxEltAmt=20, format='string'):
     s = 0
     v1 = [
         round(random.uniform(0, 1000), 2)
@@ -34,4 +34,4 @@ def angleBtwVectorsFunc(maxEltAmt=20, format='string'):
 
 
 angle_btw_vectors = Generator("Angle between 2 vectors", 70,
-                              angleBtwVectorsFunc, ["maxEltAmt=20"])
+                              gen_func, ["maxEltAmt=20"])

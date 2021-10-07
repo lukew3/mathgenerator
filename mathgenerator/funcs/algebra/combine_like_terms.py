@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def likeTermCombineFunc(maxCoef=10, maxExp=20, maxTerms=10, format='string'):
+def gen_func(maxCoef=10, maxExp=20, maxTerms=10, format='string'):
     numTerms = random.randint(1, maxTerms)
     problem = ""
     solution = ""
@@ -46,5 +46,5 @@ def combineTerms(string):
     return final_string
 
 
-combine_like_terms = Generator("Combine Like terms", 105, likeTermCombineFunc,
+combine_like_terms = Generator("Combine Like terms", 105, gen_func,
                                ["maxCoef=10", "maxExp=20", "maxTerms=10"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def volumeCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
+def gen_func(maxRadius=20, maxHeight=50, unit='m', format='string'):
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
     ans = int(math.pi * b * b * a * (1 / 3))
@@ -16,5 +16,5 @@ def volumeCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-volume_cone = Generator("Volume of cone", 39, volumeCone,
+volume_cone = Generator("Volume of cone", 39, gen_func,
                         ["maxRadius=20", "maxHeight=50", "unit='m'"])

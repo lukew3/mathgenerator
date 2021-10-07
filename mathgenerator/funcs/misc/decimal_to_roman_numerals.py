@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def decimalToRomanNumeralsFunc(maxDecimal=4000, format='string'):
+def gen_func(maxDecimal=4000, format='string'):
     x = random.randint(0, maxDecimal)
     roman_dict = {
         1: "I",
@@ -42,5 +42,5 @@ def decimalToRomanNumeralsFunc(maxDecimal=4000, format='string'):
 
 
 decimal_to_roman_numerals = Generator("Converts decimal to Roman Numerals", 85,
-                                      decimalToRomanNumeralsFunc,
+                                      gen_func,
                                       ["maxDecimal=4000"])

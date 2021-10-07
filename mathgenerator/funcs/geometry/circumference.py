@@ -2,7 +2,7 @@ from .__init__ import *
 import math
 
 
-def circumferenceCircle(maxRadius=100, format='string'):
+def gen_func(maxRadius=100, format='string'):
     r = random.randint(0, maxRadius)
     circumference = 2 * math.pi * r
 
@@ -15,5 +15,5 @@ def circumferenceCircle(maxRadius=100, format='string'):
         return r, circumference
 
 
-circumference = Generator("Circumference", 104, circumferenceCircle,
+circumference = Generator("Circumference", 104, gen_func,
                           ["maxRadius=100"])

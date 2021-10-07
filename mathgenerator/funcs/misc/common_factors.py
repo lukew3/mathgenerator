@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def commonFactorsFunc(maxVal=100, format='string'):
+def gen_func(maxVal=100, format='string'):
     a = x = random.randint(1, maxVal)
     b = y = random.randint(1, maxVal)
 
@@ -29,5 +29,5 @@ def commonFactorsFunc(maxVal=100, format='string'):
         return a, b, arr
 
 
-common_factors = Generator("Common Factors", 40, commonFactorsFunc,
+common_factors = Generator("Common Factors", 40, gen_func,
                            ["maxVal=100"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def areaCircle(maxRadius=100, format='string'):
+def gen_func(maxRadius=100, format='string'):
     r = random.randint(0, maxRadius)
     pi = 22 / 7
     area = pi * r * r
@@ -15,5 +15,5 @@ def areaCircle(maxRadius=100, format='string'):
         return r, area
 
 
-area_of_circle = Generator("Area of Circle", 112, areaCircle,
+area_of_circle = Generator("Area of Circle", 112, gen_func,
                            ["maxRadius=100"])

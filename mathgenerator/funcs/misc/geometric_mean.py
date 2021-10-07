@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def geometricMeanFunc(maxValue=100, maxNum=4, format='string'):
+def gen_func(maxValue=100, maxNum=4, format='string'):
     a = random.randint(1, maxValue)
     b = random.randint(1, maxValue)
     c = random.randint(1, maxValue)
@@ -28,4 +28,4 @@ def geometricMeanFunc(maxValue=100, maxNum=4, format='string'):
 
 
 geometric_mean = Generator("Geometric Mean of N Numbers", 67,
-                           geometricMeanFunc, ["maxValue=100", "maxNum=4"])
+                           gen_func, ["maxValue=100", "maxNum=4"])

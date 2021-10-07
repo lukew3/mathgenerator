@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def DecimalToBCDFunc(maxNumber=10000, format='string'):
+def gen_func(maxNumber=10000, format='string'):
     n = random.randint(1000, maxNumber)
     x = n
     # binstring = ''
@@ -22,4 +22,4 @@ def DecimalToBCDFunc(maxNumber=10000, format='string'):
 
 
 decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
-                           DecimalToBCDFunc, ["maxNumber=10000"])
+                           gen_func, ["maxNumber=10000"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def thirdAngleOfTriangleFunc(maxAngle=89, format='string'):
+def gen_func(maxAngle=89, format='string'):
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, maxAngle)
     angle3 = 180 - (angle1 + angle2)
@@ -16,4 +16,4 @@ def thirdAngleOfTriangleFunc(maxAngle=89, format='string'):
 
 
 third_angle_of_triangle = Generator("Third Angle of Triangle", 22,
-                                    thirdAngleOfTriangleFunc, ["maxAngle=89"])
+                                    gen_func, ["maxAngle=89"])

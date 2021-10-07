@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def systemOfEquationsFunc(range_x=10,
-                          range_y=10,
-                          coeff_mult_range=10,
-                          format='string'):
+def gen_func(range_x=10,
+             range_y=10,
+             coeff_mult_range=10,
+             format='string'):
     # Generate solution point first
     x = random.randint(-range_x, range_x)
     y = random.randint(-range_y, range_y)
@@ -56,5 +56,5 @@ def systemOfEquationsFunc(range_x=10,
 
 
 system_of_equations = Generator(
-    "Solve a System of Equations in R^2", 23, systemOfEquationsFunc,
+    "Solve a System of Equations in R^2", 23, gen_func,
     ["range_x=10", "range_y=10", "coeff_mult_range=10"])

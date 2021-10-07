@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def curvedSurfaceAreaCylinderFunc(maxRadius=49, maxHeight=99, format='string'):
+def gen_func(maxRadius=49, maxHeight=99, format='string'):
     r = random.randint(1, maxRadius)
     h = random.randint(1, maxHeight)
     csa = float(2 * math.pi * r * h)
@@ -18,5 +18,5 @@ def curvedSurfaceAreaCylinderFunc(maxRadius=49, maxHeight=99, format='string'):
 
 
 curved_surface_area_cylinder = Generator("Curved surface area of a cylinder",
-                                         95, curvedSurfaceAreaCylinderFunc,
+                                         95, gen_func,
                                          ["maxRadius=49", "maxHeight=99"])

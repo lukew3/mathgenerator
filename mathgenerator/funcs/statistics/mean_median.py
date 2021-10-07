@@ -2,7 +2,7 @@ from .__init__ import *
 import random
 
 
-def meanMedianFunc(maxlen=10, format='string'):
+def gen_func(maxlen=10, format='string'):
     randomlist = random.sample(range(1, 99), maxlen)
     total = 0
     for n in randomlist:
@@ -21,4 +21,4 @@ def meanMedianFunc(maxlen=10, format='string'):
         return randomlist, mean, median
 
 
-mean_median = Generator("Mean and Median", 76, meanMedianFunc, ["maxlen=10"])
+mean_median = Generator("Mean and Median", 76, gen_func, ["maxlen=10"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def divisionToIntFunc(maxA=25, maxB=25, format='string'):
+def gen_func(maxA=25, maxB=25, format='string'):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
 
@@ -18,4 +18,4 @@ def divisionToIntFunc(maxA=25, maxB=25, format='string'):
         return divisor, dividend, quotient
 
 
-division = Generator("Division", 3, divisionToIntFunc, ["maxA=25", "maxB=25"])
+division = Generator("Division", 3, gen_func, ["maxA=25", "maxB=25"])

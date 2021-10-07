@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def binary2sComplementFunc(maxDigits=10, format='string'):
+def gen_func(maxDigits=10, format='string'):
     digits = random.randint(1, maxDigits)
     question = ''.join([str(random.randint(0, 1))
                         for i in range(digits)]).lstrip('0')
@@ -34,4 +34,4 @@ def binary2sComplementFunc(maxDigits=10, format='string'):
 
 
 binary_2s_complement = Generator("Binary 2's Complement", 73,
-                                 binary2sComplementFunc, ["maxDigits=10"])
+                                 gen_func, ["maxDigits=10"])

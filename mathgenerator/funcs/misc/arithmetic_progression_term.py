@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def arithmeticProgressionTermFunc(maxd=100,
-                                  maxa=100,
-                                  maxn=100,
-                                  format='string'):
+def gen_func(maxd=100,
+             maxa=100,
+             maxn=100,
+             format='string'):
     d = random.randint(-1 * maxd, maxd)
     a1 = random.randint(-1 * maxa, maxa)
     a2 = a1 + d
@@ -24,5 +24,5 @@ def arithmeticProgressionTermFunc(maxd=100,
 
 
 arithmetic_progression_term = Generator("AP Term Calculation", 82,
-                                        arithmeticProgressionTermFunc,
+                                        gen_func,
                                         ["maxd=100", "maxa=100", "maxn=100"])

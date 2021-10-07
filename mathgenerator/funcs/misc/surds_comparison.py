@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def surdsComparisonFunc(maxValue=100, maxRoot=10, format='string'):
+def gen_func(maxValue=100, maxRoot=10, format='string'):
     radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))
     degree1, degree2 = tuple(random.sample(range(1, maxRoot), 2))
     first = math.pow(radicand1, 1 / degree1)
@@ -24,5 +24,5 @@ def surdsComparisonFunc(maxValue=100, maxRoot=10, format='string'):
         return radicand1, degree1, radicand2, degree2, solution
 
 
-surds_comparison = Generator("Comparing surds", 55, surdsComparisonFunc,
+surds_comparison = Generator("Comparing surds", 55, gen_func,
                              ["maxValue=100", "maxRoot=10"])

@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def permutationFunc(maxlength=20, format='string'):
+def gen_func(maxlength=20, format='string'):
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
     answer = int(math.factorial(a) / (math.factorial(a - b)))
@@ -18,4 +18,4 @@ def permutationFunc(maxlength=20, format='string'):
         return a, b, answer
 
 
-permutation = Generator("Permutations", 42, permutationFunc, ["maxlength=20"])
+permutation = Generator("Permutations", 42, gen_func, ["maxlength=20"])

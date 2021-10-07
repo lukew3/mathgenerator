@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def divideFractionsFunc(maxVal=10, format='string'):
+def gen_func(maxVal=10, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
 
@@ -44,5 +44,5 @@ def divideFractionsFunc(maxVal=10, format='string'):
         return a, b, c, d, x
 
 
-divide_fractions = Generator("Fraction Division", 16, divideFractionsFunc,
+divide_fractions = Generator("Fraction Division", 16, gen_func,
                              ["maxVal=10"])

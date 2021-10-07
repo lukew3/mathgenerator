@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def arclengthFunc(maxRadius=49, maxAngle=359, format='string'):
+def gen_func(maxRadius=49, maxAngle=359, format='string'):
     radius = random.randint(1, maxRadius)
     angle = random.randint(1, maxAngle)
     problem = f"Given radius, {radius} and angle, {angle}. Find the arc length of the angle."
@@ -19,5 +19,5 @@ def arclengthFunc(maxRadius=49, maxAngle=359, format='string'):
         return radius, angle, formatted_float
 
 
-arc_length = Generator("Arc length of Angle", 108, arclengthFunc,
+arc_length = Generator("Arc length of Angle", 108, gen_func,
                        ["maxRadius=49", "maxAngle=359"])

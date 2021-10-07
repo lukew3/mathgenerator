@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def dataSummaryFunc(number_values=15, minval=5, maxval=50, format='string'):
+def gen_func(number_values=15, minval=5, maxval=50, format='string'):
     random_list = []
 
     for i in range(number_values):
@@ -30,5 +30,5 @@ def dataSummaryFunc(number_values=15, minval=5, maxval=50, format='string'):
 
 
 data_summary = Generator("Mean,Standard Deviation,Variance", 59,
-                         dataSummaryFunc,
+                         gen_func,
                          ["number_values=15", "minval=5", "maxval=50"])

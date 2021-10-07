@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def matrixMultiplicationFunc(maxVal=100, max_dim=10, format='string'):
+def gen_func(maxVal=100, max_dim=10, format='string'):
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
@@ -59,5 +59,5 @@ def matrixMultiplicationFuncHelper(inp):
 
 
 matrix_multiplication = Generator("Multiplication of two matrices", 46,
-                                  matrixMultiplicationFunc,
+                                  gen_func,
                                   ["maxVal=100", "max_dim=10"])

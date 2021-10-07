@@ -1,10 +1,10 @@
 from .__init__ import *
 
 
-def arithmeticProgressionSumFunc(maxd=100,
-                                 maxa=100,
-                                 maxn=100,
-                                 format='string'):
+def gen_func(maxd=100,
+             maxa=100,
+             maxn=100,
+             format='string'):
     d = random.randint(-1 * maxd, maxd)
     a1 = random.randint(-1 * maxa, maxa)
     a2 = a1 + d
@@ -25,5 +25,5 @@ def arithmeticProgressionSumFunc(maxd=100,
 
 
 arithmetic_progression_sum = Generator("AP Sum Calculation", 83,
-                                       arithmeticProgressionSumFunc,
+                                       gen_func,
                                        ["maxd=100", "maxa=100", "maxn=100"])

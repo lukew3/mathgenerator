@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def complexQuadraticFunc(prob_type=0, max_range=10, format='string'):
+def gen_func(prob_type=0, max_range=10, format='string'):
     if prob_type < 0 or prob_type > 1:
         print("prob_type not supported")
         print("prob_type = 0 for real roots problems ")
@@ -69,5 +69,5 @@ def complexQuadraticFunc(prob_type=0, max_range=10, format='string'):
 
 
 complex_quadratic = Generator("complex Quadratic Equation", 100,
-                              complexQuadraticFunc,
+                              gen_func,
                               ["prob_type=0", "max_range=10"])

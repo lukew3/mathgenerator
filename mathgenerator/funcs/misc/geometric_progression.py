@@ -1,12 +1,12 @@
 from .__init__ import *
 
 
-def geomProgrFunc(number_values=6,
-                  min_value=2,
-                  max_value=12,
-                  n_term=7,
-                  sum_term=5,
-                  format='string'):
+def gen_func(number_values=6,
+             min_value=2,
+             max_value=12,
+             n_term=7,
+             sum_term=5,
+             format='string'):
     r = random.randint(min_value, max_value)
     a = random.randint(min_value, max_value)
     n_term = random.randint(number_values, number_values + 5)
@@ -31,6 +31,6 @@ def geomProgrFunc(number_values=6,
         return GP, n_term, sum_term, a, r, n_term, value_nth_term, sum_term, sum_till_nth_term
 
 
-geometric_progression = Generator("Geometric Progression", 66, geomProgrFunc, [
+geometric_progression = Generator("Geometric Progression", 66, gen_func, [
     "number_values=6", "min_value=2", "max_value=12", "n_term=7", "sum_term=5"
 ])

@@ -34,7 +34,7 @@ def genDifferentiationProblem(diff_lvl=2):
     return problem
 
 
-def differentiationFunc(diff_lvl=2, format='string'):
+def gen_func(diff_lvl=2, format='string'):
     if diff_lvl < 1 or diff_lvl > 4:
         print("diff_lvl not supported")
         return None
@@ -53,5 +53,5 @@ def differentiationFunc(diff_lvl=2, format='string'):
         return problem, solution
 
 
-differentiation = Generator("Differentiation", 88, differentiationFunc,
+differentiation = Generator("Differentiation", 88, gen_func,
                             ["diff_lvl=2"])

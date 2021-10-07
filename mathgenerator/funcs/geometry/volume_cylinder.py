@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def volumeCylinder(maxRadius=20, maxHeight=50, unit='m', format='string'):
+def gen_func(maxRadius=20, maxHeight=50, unit='m', format='string'):
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
     ans = int(math.pi * b * b * a)
@@ -16,5 +16,5 @@ def volumeCylinder(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-volume_cylinder = Generator("Volume of cylinder", 37, volumeCylinder,
+volume_cylinder = Generator("Volume of cylinder", 37, gen_func,
                             ["maxRadius=20", "maxHeight=50", "unit='m'"])

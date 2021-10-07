@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def gcdFunc(maxVal=20, format='string'):
+def gen_func(maxVal=20, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
@@ -18,5 +18,5 @@ def gcdFunc(maxVal=20, format='string'):
         return a, b, x
 
 
-gcd = Generator("GCD (Greatest Common Denominator)", 10, gcdFunc,
+gcd = Generator("GCD (Greatest Common Denominator)", 10, gen_func,
                 ["maxVal=20"])

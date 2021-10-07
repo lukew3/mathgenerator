@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def squareFunc(maxSquareNum=20, format='string'):
+def gen_func(maxSquareNum=20, format='string'):
     a = random.randint(1, maxSquareNum)
     b = a * a
 
@@ -17,4 +17,4 @@ def squareFunc(maxSquareNum=20, format='string'):
         return a, b
 
 
-square = Generator("Square", 8, squareFunc, ["maxSquareNum=20"])
+square = Generator("Square", 8, gen_func, ["maxSquareNum=20"])

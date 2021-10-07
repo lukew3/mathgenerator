@@ -13,7 +13,7 @@ def newton_symbol(n, k):
     return factorial(n) / (factorial(k) * factorial(n - k))
 
 
-def binomialDistFunc(format='string'):
+def gen_func(format='string'):
     rejected_fraction = float(random.randint(30, 40)) + random.random()
     batch = random.randint(10, 20)
     rejections = random.randint(1, 9)
@@ -40,4 +40,4 @@ def binomialDistFunc(format='string'):
 
 
 binomial_distribution = Generator("Binomial distribution", 109,
-                                  binomialDistFunc, [""])
+                                  gen_func, [""])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def expandingFunc(range_x1=10,
+def gen_func(range_x1=10,
                   range_x2=10,
                   range_a=10,
                   range_b=10,
@@ -55,5 +55,5 @@ def expandingFunc(range_x1=10,
 
 
 expanding = Generator(
-    "Expanding Factored Binomial", 111, expandingFunc,
+    "Expanding Factored Binomial", 111, gen_func,
     ["range_x1=10", "range_x2=10", "range_a=10", "range_b=10"])

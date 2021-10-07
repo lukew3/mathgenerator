@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
+def gen_func(maxRadius=20, maxHeight=50, unit='m', format='string'):
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
 
@@ -18,5 +18,5 @@ def surfaceAreaCone(maxRadius=20, maxHeight=50, unit='m', format='string'):
         return a, b, ans, unit
 
 
-surface_area_cone = Generator("Surface Area of cone", 38, surfaceAreaCone,
+surface_area_cone = Generator("Surface Area of cone", 38, gen_func,
                               ["maxRadius=20", "maxHeight=50", "unit='m'"])

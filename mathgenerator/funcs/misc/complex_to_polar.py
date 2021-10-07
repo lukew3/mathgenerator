@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def complexToPolarFunc(minRealImaginaryNum=-20,
+def gen_func(minRealImaginaryNum=-20,
                        maxRealImaginaryNum=20,
                        format='string'):
     num = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
@@ -23,5 +23,5 @@ def complexToPolarFunc(minRealImaginaryNum=-20,
 
 
 complex_to_polar = Generator(
-    "Complex To Polar Form", 92, complexToPolarFunc,
+    "Complex To Polar Form", 92, gen_func,
     ["minRealImaginaryNum=-20, maxRealImaginaryNum=20"])

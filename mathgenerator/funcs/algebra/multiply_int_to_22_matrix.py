@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, format='string'):
+def gen_func(maxMatrixVal=10, maxRes=100, format='string'):
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -30,5 +30,5 @@ def multiplyIntToMatrix22(maxMatrixVal=10, maxRes=100, format='string'):
 
 
 multiply_int_to_22_matrix = Generator("Integer Multiplication with 2x2 Matrix",
-                                      17, multiplyIntToMatrix22,
+                                      17, gen_func,
                                       ["maxMatrixVal=10", "maxRes=100"])

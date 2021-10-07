@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplyFractionsFunc(maxVal=10, format='string'):
+def gen_func(maxVal=10, format='string'):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -41,4 +41,4 @@ def multiplyFractionsFunc(maxVal=10, format='string'):
 
 
 fraction_multiplication = Generator("Fraction Multiplication", 28,
-                                    multiplyFractionsFunc, ["maxVal=10"])
+                                    gen_func, ["maxVal=10"])

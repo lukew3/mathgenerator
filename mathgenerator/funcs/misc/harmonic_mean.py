@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def harmonicMeanFunc(maxValue=100, maxNum=4, format='string'):
+def gen_func(maxValue=100, maxNum=4, format='string'):
 
     a = random.randint(1, maxValue)
     b = random.randint(1, maxValue)
@@ -28,5 +28,5 @@ def harmonicMeanFunc(maxValue=100, maxNum=4, format='string'):
     return problem, solution
 
 
-harmonic_mean = Generator("Harmonic Mean of N Numbers", 68, harmonicMeanFunc,
+harmonic_mean = Generator("Harmonic Mean of N Numbers", 68, gen_func,
                           ["maxValue=100", "maxNum=4"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def primeFactorsFunc(minVal=1, maxVal=200, format='string'):
+def gen_func(minVal=1, maxVal=200, format='string'):
     a = random.randint(minVal, maxVal)
     n = a
     i = 2
@@ -27,5 +27,5 @@ def primeFactorsFunc(minVal=1, maxVal=200, format='string'):
         return a, factors
 
 
-prime_factors = Generator("Prime Factorisation", 27, primeFactorsFunc,
+prime_factors = Generator("Prime Factorisation", 27, gen_func,
                           ["minVal=1", "maxVal=200"])

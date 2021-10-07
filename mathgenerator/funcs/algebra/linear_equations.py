@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def linearEquationsFunc(n=2, varRange=20, coeffRange=20, format='string'):
+def gen_func(n=2, varRange=20, coeffRange=20, format='string'):
     if n > 10:
         print("[!] n cannot be greater than 10")
         return None, None
@@ -36,5 +36,5 @@ def linearEquationsFunc(n=2, varRange=20, coeffRange=20, format='string'):
         return problem, solution
 
 
-linear_equations = Generator("Linear Equations", 26, linearEquationsFunc,
+linear_equations = Generator("Linear Equations", 26, gen_func,
                              ["n=2", "varRange=20", "coeffRange=20"])

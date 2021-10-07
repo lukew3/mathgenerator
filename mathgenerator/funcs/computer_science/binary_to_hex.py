@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def binaryToHexFunc(max_dig=10, format='string'):
+def gen_func(max_dig=10, format='string'):
     problem = ''
     for i in range(random.randint(1, max_dig)):
         temp = str(random.randint(0, 1))
@@ -16,5 +16,5 @@ def binaryToHexFunc(max_dig=10, format='string'):
         return problem, solution
 
 
-binary_to_hex = Generator("Binary to Hexidecimal", 64, binaryToHexFunc,
+binary_to_hex = Generator("Binary to Hexidecimal", 64, gen_func,
                           ["max_dig=10"])

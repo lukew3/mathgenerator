@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def IsLeapYear(minNumber=1900, maxNumber=2099, format='string'):
+def gen_func(minNumber=1900, maxNumber=2099, format='string'):
     year = random.randint(minNumber, maxNumber)
     problem = "Year " + str(year) + " "
     if (year % 4) == 0:
@@ -27,5 +27,5 @@ def IsLeapYear(minNumber=1900, maxNumber=2099, format='string'):
         return year, ans
 
 
-is_leap_year = Generator("Leap Year or Not", 101, IsLeapYear,
+is_leap_year = Generator("Leap Year or Not", 101, gen_func,
                          ["minNumber=1900", "maxNumber=2099"])

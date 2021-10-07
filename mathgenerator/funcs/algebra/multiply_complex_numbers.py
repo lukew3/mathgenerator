@@ -1,9 +1,9 @@
 from .__init__ import *
 
 
-def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
-                               maxRealImaginaryNum=20,
-                               format='string'):
+def gen_func(minRealImaginaryNum=-20,
+             maxRealImaginaryNum=20,
+             format='string'):
     num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
                    random.randint(minRealImaginaryNum, maxRealImaginaryNum))
     num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
@@ -21,5 +21,5 @@ def multiplyComplexNumbersFunc(minRealImaginaryNum=-20,
 
 
 multiply_complex_numbers = Generator(
-    "Multiplication of 2 complex numbers", 65, multiplyComplexNumbersFunc,
+    "Multiplication of 2 complex numbers", 65, gen_func,
     ["minRealImaginaryNum=-20", "maxRealImaginaryNum=20"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def DiceSumProbFunc(maxDice=3, format='string'):
+def gen_func(maxDice=3, format='string'):
     a = random.randint(1, maxDice)
     b = random.randint(a, 6 * a)
 
@@ -32,4 +32,4 @@ def DiceSumProbFunc(maxDice=3, format='string'):
 
 dice_sum_probability = Generator(
     "Probability of a certain sum appearing on faces of dice", 52,
-    DiceSumProbFunc, ["maxDice=3"])
+    gen_func, ["maxDice=3"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def profitLossPercentFunc(maxCP=1000, maxSP=1000, format='string'):
+def gen_func(maxCP=1000, maxSP=1000, format='string'):
     cP = random.randint(1, maxCP)
     sP = random.randint(1, maxSP)
     diff = abs(sP - cP)
@@ -21,5 +21,5 @@ def profitLossPercentFunc(maxCP=1000, maxSP=1000, format='string'):
 
 
 profit_loss_percent = Generator("Profit or Loss Percent", 63,
-                                profitLossPercentFunc,
+                                gen_func,
                                 ["maxCP=1000", "maxSP=1000"])

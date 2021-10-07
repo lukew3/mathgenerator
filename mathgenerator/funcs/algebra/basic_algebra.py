@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def basicAlgebraFunc(maxVariable=10, format='string'):
+def gen_func(maxVariable=10, format='string'):
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
@@ -32,5 +32,5 @@ def basicAlgebraFunc(maxVariable=10, format='string'):
         return a, b, c, x
 
 
-basic_algebra = Generator("Basic Algebra", 11, basicAlgebraFunc,
+basic_algebra = Generator("Basic Algebra", 11, gen_func,
                           ["maxVariable=10"])

@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def multiplicationFunc(maxMulti=12, format='string'):
+def gen_func(maxMulti=12, format='string'):
     a = random.randint(0, maxMulti)
     b = random.randint(0, maxMulti)
     c = a * b
@@ -17,5 +17,5 @@ def multiplicationFunc(maxMulti=12, format='string'):
         return a, b, c
 
 
-multiplication = Generator("Multiplication", 2, multiplicationFunc,
+multiplication = Generator("Multiplication", 2, gen_func,
                            ["maxMulti=12"])

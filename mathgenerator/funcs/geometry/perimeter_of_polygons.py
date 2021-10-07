@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def perimeterOfPolygons(maxSides=12, maxLength=120, format='string'):
+def gen_func(maxSides=12, maxLength=120, format='string'):
     size_of_sides = random.randint(3, maxSides)
     sides = []
     for x in range(size_of_sides):
@@ -21,5 +21,5 @@ def perimeterOfPolygons(maxSides=12, maxLength=120, format='string'):
 
 
 perimeter_of_polygons = Generator("Perimeter of Polygons", 96,
-                                  perimeterOfPolygons,
+                                  gen_func,
                                   ["maxSides=12", "maxLength=120"])

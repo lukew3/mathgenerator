@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def celsiustofahrenheitFunc(maxTemp=100, format='string'):
+def gen_func(maxTemp=100, format='string'):
     celsius = random.randint(-50, maxTemp)
     fahrenheit = (celsius * (9 / 5)) + 32
 
@@ -17,4 +17,4 @@ def celsiustofahrenheitFunc(maxTemp=100, format='string'):
 
 
 celsius_to_fahrenheit = Generator("Celsius To Fahrenheit", 81,
-                                  celsiustofahrenheitFunc, ["maxTemp=100"])
+                                  gen_func, ["maxTemp=100"])

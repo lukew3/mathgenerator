@@ -1,7 +1,7 @@
 from .__init__ import *
 
 
-def volumeCube(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m', format='string'):
     a = random.randint(1, maxSide)
     ans = a**3
 
@@ -15,5 +15,5 @@ def volumeCube(maxSide=20, unit='m', format='string'):
         return a, ans, unit
 
 
-volume_cube = Generator("Volum of Cube", 35, volumeCube,
+volume_cube = Generator("Volum of Cube", 35, gen_func,
                         ["maxSide=20", "unit='m'"])

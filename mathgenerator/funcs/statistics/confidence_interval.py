@@ -3,7 +3,7 @@ from .__init__ import *
 import math
 
 
-def confidenceIntervalFunc(format='string'):
+def gen_func(format='string'):
     n = random.randint(20, 40)
     j = random.randint(0, 3)
 
@@ -41,4 +41,4 @@ def confidenceIntervalFunc(format='string'):
 
 
 confidence_interval = Generator("Confidence interval For sample S", 54,
-                                confidenceIntervalFunc, [""])
+                                gen_func, [""])
