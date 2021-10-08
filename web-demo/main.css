@@ -1,0 +1,110 @@
+* {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+html, body {
+  background-color: #2C2C2C;
+  color: #E3E3E3;
+  width: 95%;
+  max-width: 600px;
+  margin: auto;
+}
+a {
+  color: #E3E3E3;
+}
+a:hover {
+  color: #868686;
+}
+h1 {
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+h2 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+.customBox {
+background-color: #38393A;
+padding: 10px;
+margin: auto;
+    border-radius: 10px;
+}
+#pipBox {
+  width: 300px;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+#generatorBox {
+  margin-bottom: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#generatorBox p {
+  text-align: left;
+  margin: 0;
+}
+#generatorBox .agLabel {
+  margin-right: 5px;
+}
+.agItem {
+display: flex;
+}
+#generatorList {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+}
+#generatorList * {
+text-align: left;
+}
+#generatorList h3 {
+  margin: 0 0 10px 3px;
+}
+#agTitle {
+font-size: 20pt;
+}
+.generatorListItem {
+  display: flex;
+}
+hr {
+  margin-top: 30px;
+}
+p {
+  margin: 3px;
+}
+.itemId {
+  margin-right: 5px;
+}
+#agSample {
+  display: block;
+  margin-top: 20px;
+}
+#agProblem, #agSolution {
+  padding-left: 20px;
+}
+.genListItem {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.genListItem:hover {
+  color: #b5b5b5;
+}
+button {
+  background-color: #AB3737;
+  border: none;
+  color: #F2DEDE;
+  padding: 5px 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: auto;
+  margin-top: 20px;
+}
+button:active {
+  color: #A89C9C;
+  background-color: #8A2323;
+}
