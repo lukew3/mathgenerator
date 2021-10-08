@@ -2,7 +2,7 @@
 
 A math problem generator, created for the purpose of giving self-studying students and teaching organizations the means to easily get access to random math problems to suit their needs.
 
-To try out generators, go to <https://lukew3.com/mathgenerator>
+To try out generators, go to <https://lukew3.github.io/mathgenerator>
 
 See [CONTRIBUTING.md](https://github.com/lukew3/mathgenerator/blob/main/CONTRIBUTING.md) for information about how to contribute.
 
