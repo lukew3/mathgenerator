@@ -26,4 +26,5 @@ from .volume_cone import *
 from .volume_cube import *
 from .volume_cuboid import *
 from .volume_cylinder import *
+from .volume_frustum import *
 from .volume_sphere import *
