@@ -46,5 +46,5 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
 
 
 equation_of_line_from_two_points = Generator(
-            "Equation of line from two points", <id>, gen_func,
+            "Equation of line from two points", 114, gen_func,
             ["maxCoordinate=20", "minCoordinate=-20"])
