@@ -9,6 +9,7 @@ from .basic_trigonometry import *
 from .circumference import *
 from .curved_surface_area_cylinder import *
 from .degree_to_rad import *
+from .equation_of_line_from_two_points import *
 from .fourth_angle_of_quadrilateral import *
 from .perimeter_of_polygons import *
 from .pythagorean_theorem import *
