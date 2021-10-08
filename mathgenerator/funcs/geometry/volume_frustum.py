@@ -17,5 +17,5 @@ def gen_func(maxR1=20, maxR2 = 20, maxHeight=50, unit='m', format='string'):
         return r1, r2, h, ans, unit
 
 
-volume_frustum = Generator("Volume of frustum", 62, gen_func,
+volume_frustum = Generator("Volume of frustum", 113, gen_func,
                             ["maxR1=20","maxR2=20", "maxHeight=50", "unit='m'"])
