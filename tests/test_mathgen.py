@@ -17,13 +17,12 @@ def test_subtraction(maxMinuend, maxDiff):
     problem, solution = subtraction.func(maxMinuend, maxDiff)
     assert eval(problem[:-1]) == int(solution)
 
-"""
-@given(maxRes=st.integers(min_value=1), maxMulti=st.integers(min_value=1))
-def test_multiplication(maxRes, maxMulti):
-    assume(maxRes > maxMulti)
-    problem, solution = multiplication.func(maxRes, maxMulti)
+
+@given(maxMulti=st.integers(min_value=1))
+def test_multiplication(maxMulti):
+    problem, solution = multiplication.func(maxMulti)
     assert eval(problem[:-1]) == int(solution)
-"""
+
 
 @given(maxA=st.integers(min_value=1), maxB=st.integers(min_value=1))
 def test_division(maxA, maxB):
