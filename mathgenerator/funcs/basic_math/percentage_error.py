@@ -24,5 +24,5 @@ def gen_func(maxValue=100, minValue=-100, format='string'):
 
 
 percentage_error = Generator(
-             "Percentage error", <id>, gen_func,
+             "Percentage error", 114, gen_func,
              ["maxValue=100", "minValue=-100"])
