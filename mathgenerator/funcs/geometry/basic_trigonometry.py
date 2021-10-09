@@ -5,8 +5,8 @@ import math
 
 # Handles degrees in quadrant one
 def gen_func(angles=[0, 30, 45, 60, 90],
-                          functions=["sin", "cos", "tan"],
-                          format='string'):
+             functions=["sin", "cos", "tan"],
+             format='string'):
     angle = random.choice(angles)
     function = random.choice(functions)
 

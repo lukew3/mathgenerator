@@ -1,6 +1,7 @@
 import os
 from makeReadme import main
 
+
 def get_filepaths(subject_name):
     """
     This function will generate the file names in a directory
@@ -23,7 +24,9 @@ def get_filepaths(subject_name):
 
     return file_paths
 
-subjects = ['algebra', 'basic_math', 'calculus', 'computer_science', 'geometry', 'misc', 'statistics']
+
+subjects = ['algebra', 'basic_math', 'calculus',
+            'computer_science', 'geometry', 'misc', 'statistics']
 for subject in subjects:
     full_file_paths = get_filepaths(subject)
     full_file_paths.sort()
@@ -34,4 +37,4 @@ for subject in subjects:
     with open(f'../mathgenerator/funcs/{subject}/__init__.py', 'w') as f:
         f.writelines(lines)
 
-main() #makes readme
+main()  # makes readme
