@@ -13,6 +13,7 @@ from .fraction_multiplication import *
 from .is_prime import *
 from .multiplication import *
 from .percentage import *
+from .percentage_error import *
 from .power_of_powers import *
 from .square import *
 from .square_root import *
