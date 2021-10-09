@@ -1,5 +1,6 @@
 from ...__init__ import *
 
+from .Factors import *
 from .arithmetic_progression_sum import *
 from .arithmetic_progression_term import *
 from .base_conversion import *

@@ -4,6 +4,7 @@ from .angle_btw_vectors import *
 from .angle_regular_polygon import *
 from .arc_length import *
 from .area_of_circle import *
+from .area_of_circle_given_center_and_point import *
 from .area_of_triangle import *
 from .basic_trigonometry import *
 from .circumference import *
@@ -28,4 +29,5 @@ from .volume_cube import *
 from .volume_cuboid import *
 from .volume_cylinder import *
 from .volume_frustum import *
+from .volume_hemisphere import *
 from .volume_sphere import *

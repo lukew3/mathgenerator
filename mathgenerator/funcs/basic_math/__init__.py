@@ -10,6 +10,7 @@ from .division import *
 from .exponentiation import *
 from .factorial import *
 from .fraction_multiplication import *
+from .greatest_common_divisor import *
 from .is_prime import *
 from .multiplication import *
 from .percentage import *
