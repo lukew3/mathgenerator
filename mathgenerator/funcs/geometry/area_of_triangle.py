@@ -4,7 +4,7 @@ from .__init__ import *
 def gen_func(maxA=20, maxB=20, format='string'):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
-    c = random.randint(abs(b-a)+1, abs(a+b)-1)
+    c = random.randint(abs(b - a) + 1, abs(a + b) - 1)
 
     s = (a + b + c) / 2
     area = (s * (s - a) * (s - b) * (s - c))**0.5
