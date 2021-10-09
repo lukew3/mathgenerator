@@ -14,23 +14,23 @@ def gen_func(maxDecimal=4000, format='string'):
         500: "D",
         1000: "M"
     }
-    divisor = 1
-    while x >= divisor:
-        divisor *= 10
-    divisor /= 10
+    div = 1
+    while x >= div:
+        div *= 10
+    div /= 10
     solution = ""
     while x:
-        last_value = int(x / divisor)
+        last_value = int(x / div)
         if last_value <= 3:
-            solution += (roman_dict[divisor] * last_value)
+            solution += (roman_dict[div] * last_value)
         elif last_value == 4:
-            solution += (roman_dict[divisor] + roman_dict[divisor * 5])
+            solution += (roman_dict[div] + roman_dict[div * 5])
         elif 5 <= last_value <= 8:
-            solution += (roman_dict[divisor * 5] + (roman_dict[divisor] * (last_value - 5)))
+            solution += (roman_dict[div * 5] + (roman_dict[div] * (last_value - 5)))
         elif last_value == 9:
-            solution += (roman_dict[divisor] + roman_dict[divisor * 10])
-        x = math.floor(x % divisor)
-        divisor /= 10
+            solution += (roman_dict[div] + roman_dict[div * 10])
+        x = math.floor(x % div)
+        div /= 10
 
     if format == 'string':
         problem = "The number " + str(x) + " in Roman Numerals is: "
