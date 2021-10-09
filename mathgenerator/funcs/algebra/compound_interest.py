@@ -2,9 +2,9 @@ from .__init__ import *
 
 
 def gen_func(maxPrinciple=10000,
-                         maxRate=10,
-                         maxTime=10,
-                         format='string'):
+             maxRate=10,
+             maxTime=10,
+             format='string'):
     p = random.randint(1000, maxPrinciple)
     r = random.randint(1, maxRate)
     n = random.randint(1, maxTime)
@@ -13,7 +13,8 @@ def gen_func(maxPrinciple=10000,
     if format == 'string':
         problem = "Compound interest for a principle amount of " + \
             str(p) + " dollars, " + str(r) + \
-            "% rate of interest and for a time period of " + str(n) + " year is = "
+            "% rate of interest and for a time period of " + \
+            str(n) + " year is = "
         return problem, str(a)
     elif format == 'latex':
         return "Latex unavailable"

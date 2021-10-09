@@ -3,9 +3,9 @@ import sympy
 
 
 def gen_func(SquareMatrixDimension=3,
-                    MaxMatrixElement=99,
-                    OnlyIntegerElementsInInvertedMatrix=False,
-                    format='string'):
+             MaxMatrixElement=99,
+             OnlyIntegerElementsInInvertedMatrix=False,
+             format='string'):
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()

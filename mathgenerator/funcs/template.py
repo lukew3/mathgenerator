@@ -3,7 +3,6 @@ from .__init__ import *
 
 def gen_func(format='string'):
 
-
     if format == 'string':
 
         return problem, solution
@@ -16,4 +15,4 @@ def gen_func(format='string'):
 
 
 generator_name = Generator("<Title>", id, gen_func,
-                          ["<kwarg1>"])
+                           ["<kwarg1>"])

@@ -4,8 +4,8 @@ import math
 
 
 def gen_func(minRealImaginaryNum=-20,
-                       maxRealImaginaryNum=20,
-                       format='string'):
+             maxRealImaginaryNum=20,
+             format='string'):
     num = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
                   random.randint(minRealImaginaryNum, maxRealImaginaryNum))
     a = num.real

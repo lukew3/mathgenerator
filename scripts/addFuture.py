@@ -13,4 +13,5 @@ else:
     file = './futureGenerators.md'
 
 with open(file, 'a') as f:
-    f.writelines(f'| {title} | {example_problem} | {example_solution} | {further_explanation} |\n')
+    f.writelines(
+        f'| {title} | {example_problem} | {example_solution} | {further_explanation} |\n')
