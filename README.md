@@ -164,6 +164,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 112 | [Area of Circle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle.py) | Area of circle with radius 3 | 28.285714285714285 | area_of_circle | `maxRadius=100`  |
 | 113 | [Volume of frustum](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_frustum.py) | Volume of frustum with height = 23m and r1 = 19m is and r2 = 19m is  | 15679.0 m^3 | volume_frustum | `maxR1=20` `maxR2=20` `maxHeight=50` `unit='m'`  |
 | 114 | [Equation of line from two points](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/equation_of_line_from_two_points.py) | What is the equation of the line between points (-19,-11) and (-4,20) in slope-intercept form? | 15y = 31x + 424 | equation_of_line_from_two_points | `maxCoordinate=20` `minCoordinate=-20`  |
+| 115 | [Area of circle given center and a point on it](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle_given_center_and_point.py) | Area of circle with center (2,9) and passing through (12.0, 9.0) is? | 314.16 | area_of_circle_given_center_and_point | `maxCoordinate=10` `maxRadius=10` |
 ## misc
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
