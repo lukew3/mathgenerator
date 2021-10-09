@@ -164,6 +164,8 @@ This creates the pdf `ws.pdf` in your current directory
 | 112 | [Area of Circle](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle.py) | Area of circle with radius 3 | 28.285714285714285 | area_of_circle | `maxRadius=100`  |
 | 113 | [Volume of frustum](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_frustum.py) | Volume of frustum with height = 23m and r1 = 19m is and r2 = 19m is  | 15679.0 m^3 | volume_frustum | `maxR1=20` `maxR2=20` `maxHeight=50` `unit='m'`  |
 | 114 | [Equation of line from two points](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/equation_of_line_from_two_points.py) | What is the equation of the line between points (-19,-11) and (-4,20) in slope-intercept form? | 15y = 31x + 424 | equation_of_line_from_two_points | `maxCoordinate=20` `minCoordinate=-20`  |
+| 115 | [Area of circle given center and a point on it](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle_given_center_and_point.py) | Area of circle with center (2,9) and passing through (12.0, 9.0) is? | 314.16 | area_of_circle_given_center_and_point | `maxCoordinate=10` `maxRadius=10` |
+| 117 | [Volume of Hemisphere](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_hemisphere.py) | Volume of hemisphere with radius 6 m =  | 452.389 m^3 | volume_hemisphere | `maxRadius=100`  |
 ## misc
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
@@ -191,6 +193,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 102 | [Minute to Hour conversion](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/minutes_to_hours.py) | Convert 525 minutes to Hours & Minutes | 8 hours and 45 minutes | minutes_to_hours | `maxMinutes=999`  |
 | 106 | [signum function](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py) | signum of 17 is = | 1 | signum_function | `min=-999` `max=999`  |
 | 109 | [Binomial distribution](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py) | A manufacturer of metal pistons finds that, on average, 32.13% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 14 pistons will contain no more than 1 rejected pistons? | 3.36 | binomial_distribution | ``  |
+| 116 | [Factors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/Factors.py) | Factors of 820 = | [1, 2, 4, 5, 10, 20, 41, 82, 164, 205, 410, 820] | Factors | `maxVal=1000` | 
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
