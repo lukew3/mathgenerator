@@ -192,6 +192,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 102 | [Minute to Hour conversion](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/minutes_to_hours.py) | Convert 525 minutes to Hours & Minutes | 8 hours and 45 minutes | minutes_to_hours | `maxMinutes=999`  |
 | 106 | [signum function](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py) | signum of 17 is = | 1 | signum_function | `min=-999` `max=999`  |
 | 109 | [Binomial distribution](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py) | A manufacturer of metal pistons finds that, on average, 32.13% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 14 pistons will contain no more than 1 rejected pistons? | 3.36 | binomial_distribution | ``  |
+| 116 | [Factors](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/Factors.py) | Factors of 820 = | [1, 2, 4, 5, 10, 20, 41, 82, 164, 205, 410, 820] | Factors | `maxVal=1000` | 
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
