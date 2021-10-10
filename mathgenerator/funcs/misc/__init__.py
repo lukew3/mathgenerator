@@ -25,3 +25,4 @@ from .quotient_of_power_same_power import *
 from .set_operation import *
 from .signum_function import *
 from .surds_comparison import *
+from .scientific_notation_multiplication import *
