@@ -191,7 +191,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 102 | [Minute to Hour conversion](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/minutes_to_hours.py) | Convert 233 minutes to Hours & Minutes | 3 hours and 53 minutes | minutes_to_hours | `maxMinutes=999`  |
 | 106 | [signum function](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py) | signum of -103 is = | -1 | signum_function | `min=-999` `max=999`  |
 | 109 | [Binomial distribution](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py) | A manufacturer of metal pistons finds that, on average, 31.73% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 11 pistons will contain no more than 5 rejected pistons? | 90.06 | binomial_distribution | ``  |
-| 115 | [Product of scientific notations](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/product_of_scientific_notations.py) | Product of scientific notations: 5.12x10^93 6.28x10^73 = | 3.22x10^167 | product_of_scientific_notations | `minExpVal=-100` `maxExpVal=100` |
+| 115 | [Product of scientific notations](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/product_of_scientific_notations.py) | Product of scientific notations 5.12x10^93 and 6.28x10^73 = | 3.22x10^167 | product_of_scientific_notations | `minExpVal=-100` `maxExpVal=100` |
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
