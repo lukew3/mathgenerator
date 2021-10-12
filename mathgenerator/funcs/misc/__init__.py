@@ -19,10 +19,10 @@ from .is_leap_year import *
 from .lcm import *
 from .minutes_to_hours import *
 from .prime_factors import *
+from .product_of_scientific_notations import *
 from .profit_loss_percent import *
 from .quotient_of_power_same_base import *
 from .quotient_of_power_same_power import *
 from .set_operation import *
 from .signum_function import *
 from .surds_comparison import *
-from .product_of_scientific_notations import *
