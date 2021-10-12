@@ -20,5 +20,5 @@ def gen_func(maxValue=200, minValue=0, format='string'):
         return value_a, value_b, diff
 
 
-percentage_difference = Generator("Percentage difference", <id>, gen_func,
-                   ["maxValue=200", "minValue=0"])
+percentage_difference = Generator("Percentage difference", 118, gen_func,
+                                  ["maxValue=200", "minValue=0"])
