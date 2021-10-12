@@ -2,9 +2,9 @@ from .__init__ import *
 
 
 def gen_func(minExpVal=-100, maxExpVal=100, format='string'):
-    a = [round(random.uniform(1,10), 2), random.randint(minExpVal, maxExpVal)]
-    b = [round(random.uniform(1,10), 2), random.randint(minExpVal, maxExpVal)]
-    c = [a[0]*b[0], a[1]+b[1]]
+    a = [round(random.uniform(1, 10), 2), random.randint(minExpVal, maxExpVal)]
+    b = [round(random.uniform(1, 10), 2), random.randint(minExpVal, maxExpVal)]
+    c = [a[0] * b[0], a[1] + b[1]]
 
     if c[0] >= 10:
         c[0] /= 10
@@ -12,8 +12,8 @@ def gen_func(minExpVal=-100, maxExpVal=100, format='string'):
 
     if format == 'string':
         problem = "Product of scientific notations " + \
-            str(a[0])+"x10^"+str(a[1]) + " and " + str(b[0])+"x10^"+str(b[1]) + " = "
-        solution = str(round(c[0], 2))+"x10^"+str(c[1])
+            str(a[0]) + "x10^" + str(a[1]) + " and " + str(b[0]) + "x10^" + str(b[1]) + " = "
+        solution = str(round(c[0], 2)) + "x10^" + str(c[1])
         return problem, solution
     elif format == 'latex':
         return "Latex unavailable"
@@ -22,4 +22,4 @@ def gen_func(minExpVal=-100, maxExpVal=100, format='string'):
 
 
 product_of_scientific_notations = Generator("Product of scientific notaions", 115, gen_func,
-                             ["minExpVal=-100", "maxExpVal=100"])
+                                            ["minExpVal=-100", "maxExpVal=100"])
