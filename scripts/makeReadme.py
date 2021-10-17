@@ -56,6 +56,7 @@ def write_table_of_contents():
 def gen_to_row_string(item):
     myGen = item[2]
     # NOTE: renamed 'sol' to 'solu' to make it look nicer
+    print(f"Generating sample for {item[0]}")
     prob, solu = myGen()
     prob = str(prob).rstrip("\n")
     solu = str(solu).rstrip("\n")

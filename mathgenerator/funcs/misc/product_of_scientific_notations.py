@@ -21,5 +21,5 @@ def gen_func(minExpVal=-100, maxExpVal=100, format='string'):
         return a, b, c
 
 
-product_of_scientific_notations = Generator("Product of scientific notaions", 115, gen_func,
+product_of_scientific_notations = Generator("Product of scientific notaions", 121, gen_func,
                                             ["minExpVal=-100", "maxExpVal=100"])

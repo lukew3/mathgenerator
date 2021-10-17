@@ -22,12 +22,12 @@ def gen_func(numbersCount=2, maximalNumberLimit=10**9, format='string'):
             numbers[index], greatestCommonDivisor)
 
     if format == "string":
-        return "GCD(" + ",".join(map(str, numbers)) + ") = " + str(greatestCommonDivisor)
+        return "GCD(" + ",".join(map(str, numbers)) + ")=", str(greatestCommonDivisor)
     elif format == "latex":
-        return ("\\(GCD(" + ",".join(map(str, numbers)) + f") = {greatestCommonDivisor}\\)")
+        return ("\\(GCD(" + ",".join(map(str, numbers)) + ")=", f"\\({greatestCommonDivisor}\\)")
     else:
         return greatestCommonDivisor
 
 
-greatest_common_divisor = Generator("Greatest Common Divisor of N Numbers", 115, gen_func, [
+greatest_common_divisor = Generator("Greatest Common Divisor of N Numbers", 120, gen_func, [
                                     "numbersCount=2", "maximalNumberLimit=10**9"])

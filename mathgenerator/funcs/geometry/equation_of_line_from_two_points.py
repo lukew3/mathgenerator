@@ -21,22 +21,32 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
     gcd = greatest_common_divisor(abs(coeff_x), abs(coeff_y))
 
     if gcd != 1:
-        if coeff_y > 0: coeff_y //= gcd
-        if coeff_x > 0: coeff_x //= gcd
-        if constant > 0: constant //= gcd
-        if coeff_y < 0: coeff_y = -(-coeff_y // gcd)
-        if coeff_x < 0: coeff_x = -(-coeff_x // gcd)
-        if constant < 0: constant = -(-constant // gcd)
+        if coeff_y > 0:
+            coeff_y //= gcd
+        if coeff_x > 0:
+            coeff_x //= gcd
+        if constant > 0:
+            constant //= gcd
+        if coeff_y < 0:
+            coeff_y = -(-coeff_y // gcd)
+        if coeff_x < 0:
+            coeff_x = -(-coeff_x // gcd)
+        if constant < 0:
+            constant = -(-constant // gcd)
     if coeff_y < 0:
         coeff_y = -(coeff_y)
         coeff_x = -(coeff_x)
         constant = -(constant)
     if coeff_x in [1, -1]:
-        if coeff_x == 1: coeff_x = ''
-        else: coeff_x = '-'
+        if coeff_x == 1:
+            coeff_x = ''
+        else:
+            coeff_x = '-'
     if coeff_y in [1, -1]:
-        if coeff_y == 1: coeff_y = ''
-        else: coeff_y = '-'
+        if coeff_y == 1:
+            coeff_y = ''
+        else:
+            coeff_y = '-'
     if format == 'string':
         problem = f"What is the equation of the line between points ({x1},{y1}) and ({x2},{y2}) in slope-intercept form?"
         if coeff_x == 0:
@@ -56,5 +66,5 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
 
 
 equation_of_line_from_two_points = Generator(
-            "Equation of line from two points", 114, gen_func,
-            ["maxCoordinate=20", "minCoordinate=-20"])
+    "Equation of line from two points", 114, gen_func,
+    ["maxCoordinate=20", "minCoordinate=-20"])
