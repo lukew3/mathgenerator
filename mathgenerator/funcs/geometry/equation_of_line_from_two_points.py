@@ -2,11 +2,11 @@ from .__init__ import *
 
 
 def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
-    def greatest_common_divisor(num1,num2):
-        if num2==0:
+    def greatest_common_divisor(num1, num2):
+        if num2 == 0:
             return num1
         else:
-            return greatest_common_divisor(num2 , num1%num2)
+            return greatest_common_divisor(num2, num1 % num2)
 
     x1 = random.randint(minCoordinate, maxCoordinate)
     x2 = random.randint(minCoordinate, maxCoordinate)
@@ -14,27 +14,27 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
     y1 = random.randint(minCoordinate, maxCoordinate)
     y2 = random.randint(minCoordinate, maxCoordinate)
 
-    coeff_y = (x2-x1)
-    coeff_x = (y2-y1)
-    constant = y2*coeff_y - x2*coeff_x
+    coeff_y = (x2 - x1)
+    coeff_x = (y2 - y1)
+    constant = y2 * coeff_y - x2 * coeff_x
 
     gcd = greatest_common_divisor(abs(coeff_x), abs(coeff_y))
 
-    if gcd !=1:
+    if gcd != 1:
         if coeff_y > 0: coeff_y //= gcd
         if coeff_x > 0: coeff_x //= gcd
         if constant > 0: constant //= gcd
-        if coeff_y < 0: coeff_y = -(-coeff_y//gcd)
-        if coeff_x < 0: coeff_x = -(-coeff_x//gcd)
-        if constant < 0: constant = -(-constant//gcd)
-    if coeff_y < 0 :
+        if coeff_y < 0: coeff_y = -(-coeff_y // gcd)
+        if coeff_x < 0: coeff_x = -(-coeff_x // gcd)
+        if constant < 0: constant = -(-constant // gcd)
+    if coeff_y < 0:
         coeff_y = -(coeff_y)
         coeff_x = -(coeff_x)
         constant = -(constant)
-    if coeff_x in [1,-1]:
+    if coeff_x in [1, -1]:
         if coeff_x == 1: coeff_x = ''
         else: coeff_x = '-'
-    if coeff_y in [1,-1]:
+    if coeff_y in [1, -1]:
         if coeff_y == 1: coeff_y = ''
         else: coeff_y = '-'
     if format == 'string':
