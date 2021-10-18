@@ -1,4 +1,5 @@
 from .__init__ import *
+import math
 
 
 def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
@@ -6,7 +7,7 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
         if num2 == 0:
             return num1
         else:
-            return greatest_common_divisor(num2, num1 % num2)
+            return math.gcd(num2, num1 % num2)
 
     x1 = random.randint(minCoordinate, maxCoordinate)
     x2 = random.randint(minCoordinate, maxCoordinate)
@@ -18,7 +19,7 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
     coeff_x = (y2 - y1)
     constant = y2 * coeff_y - x2 * coeff_x
 
-    gcd = greatest_common_divisor(abs(coeff_x), abs(coeff_y))
+    gcd = math.gcd(abs(coeff_x), abs(coeff_y))
 
     if gcd != 1:
         if coeff_y > 0:
