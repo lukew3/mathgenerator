@@ -15,5 +15,5 @@ def gen_func(maxSide=20, unit='m', format='string'):
         return a, ans, unit
 
 
-volume_cube = Generator("Volum of Cube", 35, gen_func,
+volume_cube = Generator("Volume of Cube", 35, gen_func,
                         ["maxSide=20", "unit='m'"])
