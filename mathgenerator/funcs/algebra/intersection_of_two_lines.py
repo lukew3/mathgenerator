@@ -16,17 +16,37 @@ def gen_func(minM=-10,
         It handles cases where m is fractional.
         It also ensures that we don't have weird signs such as y = mx + -b.
         """
-        if m[1] == 1:
+        if m[0] == 0:
+            m = 0
+        elif abs(m[0]) == abs(m[1]): 
+            m = m[0] // m[1]
+        elif m[1] == 1:
             m = m[0]
         else:
             m = f"{m[0]}/{m[1]}"
-        base = f"y = {m}x"
+        base = f"y ="
+        if m != 0:
+            if m == 1:
+                base = f"{base} x"
+            elif m == -1:
+                base = f"{base} -x"
+            else:
+                base = f"{base} {m}x"
         if b > 0:
-            return f"{base} + {b}"
+            if m == 0:
+                return f"{base} {b}"
+            else:
+                return f"{base} + {b}"
         elif b < 0:
-            return f"{base} - {b * -1}"
+            if m == 0:
+                return f"{base} -{b * -1}"
+            else:
+                return f"{base} - {b * -1}"
         else:
-            return base
+            if m == 0:
+                return f"{base} 0"
+            else:
+                return base
 
     def fractionToString(x):
         """
