@@ -1815,7 +1815,7 @@ const data = [
             "maxSide=20",
             "unit='m'"
         ],
-        "name": "Volum of Cube",
+        "name": "Volume of Cube",
         "samples": [
             {
                 "problem": "Volume of cube with side = 7m is",
