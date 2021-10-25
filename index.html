@@ -14,39 +14,47 @@
 	<p>mathgenerator is a python package that enables users to easily generate a variety of math problems, with customizable settings.</p>
 	<hr></hr>
 	<h2>Demo</h2>
-	<div id="generatorBox" class="customBox">
-		<p id="agTitle" >Addition</p>
-		<div class="agItem">
-			<p class="agLabel">function name:</p>
-			<p id="agFunctionName">addition</p>
-		</div>
-		<div class="agItem">
-			<p class="agLabel">subject:</p>
-			<p id="agSubject">basic_math</p>
-		</div>
-		<div class="agItem">
-			<p class="agLabel">kwargs:</p>
-			<p id="agKwargs">maxSum=99, maxAddend=50</p>
-		</div>
-		<div class="agItem">
-			<p class="agLabel">id:</p>
-			<p id="agId">0</p>
-		</div class="agItem">
-		<div id="agSample">
-			<div>
-				<p class="agLabel">Problem:</p>
-				<p id="agProblem">2+2=</p>
+	
+	<div id="mainContent">
+		<div class="col">
+			<div id="generatorBox" class="customBox">
+				<p id="agTitle" >Addition</p>
+				<div class="agItem">
+					<p class="agLabel">function name:</p>
+					<p id="agFunctionName">addition</p>
+				</div>
+				<div class="agItem">
+					<p class="agLabel">subject:</p>
+					<p id="agSubject">basic_math</p>
+				</div>
+				<div class="agItem">
+					<p class="agLabel">kwargs:</p>
+					<p id="agKwargs">maxSum=99, maxAddend=50</p>
+				</div>
+				<div class="agItem">
+					<p class="agLabel">id:</p>
+					<p id="agId">0</p>
+				</div class="agItem">
+				<div id="agSample">
+					<div>
+						<p class="agLabel">Problem:</p>
+						<p id="agProblem">2+2=</p>
+					</div>
+					<div>
+						<p class="agLabel">Solution:</p>
+						<p id="agSolution">4</p>
+					</div>
+				</div>
+				<button id="newProblemButton" onClick="generateSample()">Generate</button>
 			</div>
-			<div>
-				<p class="agLabel">Solution:</p>
-				<p id="agSolution">4</p>
+		</div>
+
+		<div class="col">
+			<div id="generatorList" class="customBox">
+				<h3>Available Generators</h3>
+				<p>Click a generator to show a sample problem and more info</p>
 			</div>
 		</div>
-		<button id="newProblemButton" onClick="generateSample()">Generate</button>
-	</div>
-  	<div id="generatorList" class="customBox">
-		<h3>Available Generators</h3>
-		<p>Click a generator to show a sample problem and more info</p>
 	</div>
 	<script type="text/javascript" src="main.js"></script>
 </body>

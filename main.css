@@ -6,7 +6,6 @@ html, body {
   background-color: #2C2C2C;
   color: #E3E3E3;
   width: 95%;
-  max-width: 600px;
   margin: auto;
 }
 a {
@@ -24,11 +23,21 @@ h2 {
   margin: 0;
   margin-bottom: 15px;
 }
+#mainContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  width: 50%;
+}
+.col > div{
+  margin: 10px;
+}
 .customBox {
 background-color: #38393A;
 padding: 10px;
-margin: auto;
-    border-radius: 10px;
+
+border-radius: 10px;
 }
 #pipBox {
   width: 300px;
@@ -36,12 +45,10 @@ margin: auto;
   border-radius: 5px;
 }
 #generatorBox {
+  position: sticky;
+  top: 20px;
   margin-bottom: 10px;
-  width: 90%;
-  max-width: 500px;
   padding: 30px;
-  margin: auto;
-  margin-bottom: 10px;
 }
 #generatorBox p {
   text-align: left;
@@ -54,9 +61,6 @@ margin: auto;
 display: flex;
 }
 #generatorList {
-  width: 90%;
-  max-width: 500px;
-  margin: auto;
   padding: 30px;
 }
 #generatorList * {
@@ -103,8 +107,19 @@ button {
   font-size: 14px;
   margin: auto;
   margin-top: 20px;
+  cursor: pointer;
 }
 button:active {
   color: #A89C9C;
   background-color: #8A2323;
+}
+
+@media only screen and (max-width: 790px) {
+  #mainContent {
+    display: grid;
+    justify-items: center;
+  }
+  .col {
+    width: 95%;
+  }
 }
