@@ -61,7 +61,10 @@ border-radius: 10px;
 display: flex;
 }
 #generatorList {
+  max-height:252px;
+  position:static;
   padding: 30px;
+  overflow-y:scroll;
 }
 #generatorList * {
 text-align: left;
