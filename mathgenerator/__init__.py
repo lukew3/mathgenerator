@@ -1,3 +1,4 @@
+import os
 import sys
 import traceback
 
@@ -8,7 +9,7 @@ import scipy
 
 genList = []
 
-
+SEP = os.sep
 class Generator:
     def __init__(self, title, id, func, kwargs):
         self.title = title
@@ -18,10 +19,10 @@ class Generator:
 
         (filename, line_number, function_name,
          text) = traceback.extract_stack()[-2]
-        funcname = filename[filename.rfind('/'):].strip()
+        funcname = filename[filename.rfind(SEP):].strip()
         funcname = funcname[1:-3]
-        subjectname = filename[:filename.rfind('/')].strip()
-        subjectname = subjectname[subjectname.rfind('/'):].strip()
+        subjectname = filename[:filename.rfind(SEP)].strip()
+        subjectname = subjectname[subjectname.rfind(SEP):].strip()
         subjectname = subjectname[1:]
         genList.append([id, title, self, funcname, subjectname, kwargs])
 
