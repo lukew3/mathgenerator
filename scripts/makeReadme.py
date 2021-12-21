@@ -144,7 +144,7 @@ def main():
         for write_line in write_list:
             lines.append(write_line)
 
-    with open('../README.md', "w") as g:
+    with open('../README.md', "w", encoding = 'utf-8') as g:
         g.writelines(lines)
 
     print("New README.md table generated")
