@@ -30,4 +30,5 @@ from .volume_cuboid import *
 from .volume_cylinder import *
 from .volume_frustum import *
 from .volume_hemisphere import *
+from .volume_pyramid import *
 from .volume_sphere import *
