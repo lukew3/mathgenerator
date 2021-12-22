@@ -18,5 +18,5 @@ def gen_func(maxLength=20, maxWidth=20, maxHeight=50, unit='m', format='string')
         return l, w, h, ans, unit
 
 
-volume_pyramid = Generator("Volume of pyramid", 112, gen_func,
+volume_pyramid = Generator("Volume of pyramid", 122, gen_func,
                            ["maxLength=20", "maxWidth=20", "maxHeight=50", "unit='m'"])
