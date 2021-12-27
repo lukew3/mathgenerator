@@ -9,7 +9,7 @@ def gen_func(maxLength=20, maxWidth=20, maxHeight=50, unit='m', format='string')
     ans = (l*w*h)/3
 
     if format == 'string':
-        problem = f"Volume of cone with base length = {l} {unit}, base width = {w} {unit} and height = {h} {unit} is"
+        problem = f"Volume of pyramid with base length = {l} {unit}, base width = {w} {unit} and height = {h} {unit} is"
         solution = f"{ans} {unit}^3"
         return problem, solution
     elif format == 'latex':
