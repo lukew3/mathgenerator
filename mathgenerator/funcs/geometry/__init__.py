@@ -21,6 +21,7 @@ from .surface_area_cone import *
 from .surface_area_cube import *
 from .surface_area_cuboid import *
 from .surface_area_cylinder import *
+from .surface_area_pyramid import *
 from .surface_area_sphere import *
 from .third_angle_of_triangle import *
 from .valid_triangle import *
