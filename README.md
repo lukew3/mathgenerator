@@ -46,12 +46,12 @@ If you wish to create a worksheet, you can use the [worksheetgen](https://github
 from mathgenerator import mathgen
 from worksheetgen.wg import Worksheet
 
-worksheet = Worksheet("Worksheet title")
-worksheet.add_instruction("Instructions")
-# Writes 10 problems generated with id 1, [0] at the end specifies to take problem, and not solution.
-for _ in range(10):
-	worksheet.add_problem(mathgen.genById(1)[0])
-worksheet.write_pdf()
+ws = Worksheet("Worksheet title")
+with ws.section('Section 1', description='These are instructions')
+	# Writes 10 problems generated with id 1, [0] at the end specifies to take problem, and not solution.
+	for _ in range(10):
+		ws.add_problem(mathgen.genById(1)[0])
+ws.write_pdf()
 ```
 This creates the pdf `ws.pdf` in your current directory
 
