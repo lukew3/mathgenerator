@@ -112,6 +112,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 118 | [Percentage difference](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage_difference.py) | What is the percentage difference between 53 and 90? | 51.75% | percentage_difference | `maxValue=200` `minValue=0`  |
 | 119 | [Percentage error](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage_error.py) | Find the percentage error when observed value equals 33 and exact value equals 61. | 45.9% | percentage_error | `maxValue=100` `minValue=-100`  |
 | 120 | [Greatest Common Divisor of N Numbers](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/greatest_common_divisor.py) | GCD(21465961,176654083)= | 1 | greatest_common_divisor | `numbersCount=2` `maximalNumberLimit=10**9`  |
+| 124 | [Is Composite](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/is_composite.py) | Is 8 composite? | Yes | is_composite | `maxNum=250`|
 ## calculus
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
