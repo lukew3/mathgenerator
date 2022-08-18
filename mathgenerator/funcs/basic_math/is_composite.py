@@ -3,6 +3,7 @@ from .__init__ import *
 
 def gen_func(maxNum=250, format='string'):
     a = random.randint(2, maxNum)
+
     problem = f"Is {a} composite?"
     if a == 0 or a == 1:
         solution = "No"
@@ -21,4 +22,4 @@ def gen_func(maxNum=250, format='string'):
         return a, solution
 
 
-is_composite = Generator('isComposite', 124, gen_func, ["maxNum=250"])
+is_composite = Generator('Is Composite', 124, gen_func, ["maxNum=250"])
