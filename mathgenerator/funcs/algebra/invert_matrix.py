@@ -1,5 +1,7 @@
-from .__init__ import *
+from .__init__ import Generator
 import sympy
+import math
+import random
 
 
 def gen_func(SquareMatrixDimension=3,
