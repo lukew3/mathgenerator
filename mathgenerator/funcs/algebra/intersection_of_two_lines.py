@@ -18,13 +18,13 @@ def gen_func(minM=-10,
         """
         if m[0] == 0:
             m = 0
-        elif abs(m[0]) == abs(m[1]): 
+        elif abs(m[0]) == abs(m[1]):
             m = m[0] // m[1]
         elif m[1] == 1:
             m = m[0]
         else:
             m = f"{m[0]}/{m[1]}"
-        base = f"y ="
+        base = "y ="
         if m != 0:
             if m == 1:
                 base = f"{base} x"

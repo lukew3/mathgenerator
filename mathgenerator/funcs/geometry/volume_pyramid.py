@@ -6,7 +6,7 @@ def gen_func(maxLength=20, maxWidth=20, maxHeight=50, unit='m', format='string')
     w = random.randint(1, maxWidth)
     h = random.randint(1, maxHeight)
 
-    ans = (l*w*h)/3
+    ans = (l * w * h) / 3
 
     if format == 'string':
         problem = f"Volume of pyramid with base length = {l} {unit}, base width = {w} {unit} and height = {h} {unit} is"

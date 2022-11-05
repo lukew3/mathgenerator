@@ -29,7 +29,7 @@ def gen_func(unit='m', format='string'):
     # Calculate base area
     base = 4 * half_width * half_length
 
-    ans = base + 2*triangle_1 + 2*triangle_2
+    ans = base + 2 * triangle_1 + 2 * triangle_2
 
     if format == 'string':
         problem = f"Surface area of pyramid with base length = {2*half_length}{unit}, base width = {2*half_width}{unit}, and height = {height}{unit}"
@@ -38,7 +38,7 @@ def gen_func(unit='m', format='string'):
     elif format == 'latex':
         return "Latex unavailable"
     else:
-        return 2*half_length, 2*half_width, height, ans, unit
+        return 2 * half_length, 2 * half_width, height, ans, unit
 
 
 surface_area_pyramid = Generator("Surface area of pyramid", 123, gen_func,
