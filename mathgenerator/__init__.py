@@ -10,9 +10,9 @@ import scipy
 genList = []
 
 SEP = os.sep
+
+
 class Generator:
-
-
     def __init__(self, title, id, func, kwargs):
         self.title = title
         self.id = id

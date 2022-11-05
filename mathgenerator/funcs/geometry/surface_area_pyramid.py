@@ -12,6 +12,7 @@ _PYTHAGOREAN = [(3, 4, 5),
 
                 (7, 24, 25)]
 
+
 def gen_func(unit='m', format='string'):
     # Generate first triplet
     height, half_width, triangle_height_1 = random.sample(random.choice(_PYTHAGOREAN), 3)
