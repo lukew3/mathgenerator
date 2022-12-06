@@ -5,11 +5,10 @@ This project wouldn't be possible without the generosity of contributors like yo
 ## How You Can Help
 Currently, there are 5 main types of contributions
 
-1. Add a generator idea to `futureGenerators.md`. You can add a row to the table manually or run the `addFuture.py` file inside the scripts folder to add your generator idea to the file automatically. Just fill out the prompts!
+1. Add a generator idea to github issues.
 2. Fix bugs in existing generators. Check out the issues tab of the Github to see what bugs exist and need to be fixed.
-3. Add latex output formatting to a current generator. To see which generators need latex formatting, run `needsLatex.py` inside of the scripts folder and choose a generator to add latex formatting to.
-4. Write a generator. A template and a template with comments is provided in the `mathgenerator/funcs` directory. Make sure to place your generator function into the correct subject folder of `mathgenerator/funcs/`. After you are finished, run `adoptGenerator.py` inside the `scripts` directory to generate the README and `__init__.py` file
-5. Improve demo/documentation site. The source code for the mathgenerator website is in the `gh-pages` branch. Let me know what changes you propose in the issues tab.
+3. Write a generator. Follow the pattern in [the template](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template.py) and the [template with comments](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template_comments.py). Make sure to place your generator function into the correct subject folder of `mathgenerator/funcs/`. After you are finished, run `adoptGenerator.py` inside the `scripts` directory to update the README and `__init__.py` file.
+4. Improve demo/documentation site. The source code for the mathgenerator website is in the `gh-pages` branch. Let me know what changes you propose in the issues tab.
 
 If you find something else that you'd like to work on, leave an issue or make a pr, and I'll be sure to review it!
 
