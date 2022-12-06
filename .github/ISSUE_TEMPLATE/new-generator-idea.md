@@ -15,3 +15,41 @@ assignees: ''
 
 ### Would you like to be assigned to this:
 
+name: New Generator Idea
+description: Use this template ot suggest a new generator
+title: "[Gen Idea]: "
+labels: ["New Generator"]
+body:
+  - type: input
+    id: example-problem
+    attributes:
+      label: Example Problem
+      description: What would a typical problem look like
+      placeholder: 4 + 2 =
+    validations:
+      required: true 
+  - type: input
+    id: example-solution
+    attributes:
+      label: Example Solution 
+      description: What would a typical solution look like
+      placeholder: 6 
+    validations:
+      required: true 
+  - type: textarea
+    id: further-explanation
+    attributes:
+      label: Optional, Provide Further Explanation
+      description: Any further details?
+    validations:
+      required: false 
+  - type: dropdown
+    id: assign 
+    attributes:
+      label: Assign Yourself?
+      description: Do you want to be assigned to implement this?
+      options:
+        - No (Default)
+        - Yes
+    validations:
+      required: true
