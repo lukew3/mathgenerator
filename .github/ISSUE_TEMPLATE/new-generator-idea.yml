@@ -27,7 +27,8 @@ body:
     validations:
       required: false 
   - type: checkboxes
-    id: assign 
+    id: assign
+    label: Assign Yourself?
     attributes:
       options:
         - label: Assign Yourself?
