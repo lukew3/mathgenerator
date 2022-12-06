@@ -28,9 +28,9 @@ body:
       required: false 
   - type: checkboxes
     id: assign
-    label: Assign Yourself?
     attributes:
+      label: Assign Yourself?
       options:
-        - label: Assign Yourself?
+        - label: I want to be assigned to implement this
     validations:
       required: true
