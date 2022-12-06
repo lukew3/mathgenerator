@@ -26,13 +26,10 @@ body:
       description: Any further details?
     validations:
       required: false 
-  - type: dropdown
+  - type: checkboxes
     id: assign 
     attributes:
-      label: Assign Yourself?
-      description: Do you want to be assigned to implement this?
       options:
-        - 'No'
-        - 'Yes'
+        - label: Assign Yourself?
     validations:
       required: true
