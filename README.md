@@ -30,13 +30,13 @@ pip install mathgenerator
 Here is an example of how you would generate an addition problem:
 
 ```python
-from mathgenerator import mathgen
+import mathgenerator
 
 #generate an addition problem
-problem, solution = mathgen.addition()
+problem, solution = mathgenerator.addition()
 
 #another way to generate an addition problem using genById()
-problem, solution = mathgen.genById(0)
+problem, solution = mathgenerator.genById(0)
 ```
 <!--
 ### Creating a worksheet
@@ -55,8 +55,8 @@ ws.write_pdf()
 This creates the pdf `ws.pdf` in your current directory
 -->
 Problem/solution pairs are generated with either:
-* `mathgen.<generator_name>()` - generates a problem, solution set from the given generator name.
-* `mathgen.genById(id)` - generates a problem, solution set with generator id provided by the `id` parameter
+* `mathgenerator.<generator_name>()` - generates a problem, solution set from the given generator name.
+* `mathgenerator.genById(id)` - generates a problem, solution set with generator id provided by the `id` parameter
 
 <!--
 #### `format` kwarg
