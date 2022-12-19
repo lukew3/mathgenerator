@@ -8,9 +8,7 @@ See [CONTRIBUTING.md](https://github.com/lukew3/mathgenerator/blob/main/CONTRIBU
 
 ## Table of Contents
 * [Installation](#installation)
-* [Basic Usage](#basic-usage)
-  * [More Complicated Usage](#more-complicated-usage)
-* [Documentation](#documentation)
+* [Usage](#usage)
 * [List of Generators](#list-of-generators)
   * [algebra](#algebra)
   * [basic_math](#basic_math)
@@ -56,12 +54,16 @@ ws.write_pdf()
 ```
 This creates the pdf `ws.pdf` in your current directory
 -->
-`genById(id)` generates a problem, solution set with generator id `id` in the format `[problem, solution]`
+Problem/solution pairs are generated with either:
+* `mathgen.<generator_name>()` - generates a problem, solution set from the given generator name.
+* `mathgen.genById(id)` - generates a problem, solution set with generator id `id` in the format `[problem, solution]`
+
+<!--
 #### `format` kwarg
 * Pass `format=latex` to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"
 * Pass `format=raw` to return just the raw data for each generator. An array of each variable necessary to the generator is returned.
 * If you don't pass a value to the format kwarg, the generator will return a problem and answer in asciimath format.
-
+-->
 You can also use `getGenList()` to return a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
 
 
