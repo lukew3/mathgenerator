@@ -4,6 +4,7 @@ import bisect
 
 genList = []
 
+
 class Generator:
     def __init__(self, title, id, func, kwargs):
         self.title = title
@@ -24,6 +25,7 @@ class Generator:
 
     def __call__(self, *args, **kwargs):
         return self.func(*args, **kwargs)
+
 
 def getGenList():
     return genList

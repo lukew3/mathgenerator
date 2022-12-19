@@ -7,7 +7,7 @@ def gen_func(format='string'):
 
     if format == 'string':
         # code that generates problem, solution strings goes here
-        return problem, solution
+        return #problem, solution
     elif format == 'latex':
         # code that generates latex representation of problem, and solution goes here
         # if you can't do this, leave the return 'Latex unavailable'
@@ -16,7 +16,7 @@ def gen_func(format='string'):
     else:
         # Return necessary variables here
         # Any variables that go into the problem and solution string without formatting
-        return a, b
+        return #a, b
 
 
 # generator_name should be the same as the file name

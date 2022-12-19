@@ -6,7 +6,7 @@ def gen_func(format='string'):
 
     if format == 'string':
 
-        return problem, solution
+        return #problem, solution
     elif format == 'latex':
 
         return 'Latex unavailable'
