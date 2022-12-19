@@ -2,6 +2,7 @@ from ..__init__ import Generator
 import random
 import math
 
+
 def gen_func(max_rad=3, format='string'):
     # max_rad is supposed to be pi but random can't handle non-integer
     a = random.randint(0, max_rad)
