@@ -1,4 +1,4 @@
-from ...__init__ import Generator
+from ...generator import Generator
 import random
 
 
