@@ -74,7 +74,7 @@ You can also use `getGenList()` to return a list of all generators included in t
 ## algebra
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
-| 11 | [Basic Algebra](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/basic_algebra.py) | 7x + 1 = 6 | 5/7 | basic_algebra | `maxVariable=10`  |
+| 11 | [Basic Algebra](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/basic_algebra.py) | $1x + 1 = 10$ | $9$ | basic_algebra | `maxVariable=10`  |
 | 12 | [Logarithm](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/log.py) | log2(16) | 4 | log | `maxBase=3` `maxVal=8`  |
 | 17 | [Integer Multiplication with 2x2 Matrix](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/multiply_int_to_22_matrix.py) | 5 * [[0, 4], [3, 0]] =  | [[0,20],[15,0]] | multiply_int_to_22_matrix | `maxMatrixVal=10` `maxRes=100`  |
 | 20 | [Midpoint of the two point](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/midpoint_of_two_points.py) | (3,-13),(-6,5)= | (-1.5,-4.0) | midpoint_of_two_points | `maxValue=20`  |
