@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .basic_algebra import basic_algebra
 from .combine_like_terms import combine_like_terms
 from .complex_quadratic import complex_quadratic

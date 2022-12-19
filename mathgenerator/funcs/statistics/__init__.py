@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .combinations import combinations
 from .conditional_probability import conditional_probability
 from .confidence_interval import confidence_interval
