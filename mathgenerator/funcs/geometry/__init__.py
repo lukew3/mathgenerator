@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .angle_btw_vectors import angle_btw_vectors
 from .angle_regular_polygon import angle_regular_polygon
 from .arc_length import arc_length

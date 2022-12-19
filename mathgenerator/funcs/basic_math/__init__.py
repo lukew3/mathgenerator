@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .absolute_difference import absolute_difference
 from .addition import addition
 from .compare_fractions import compare_fractions

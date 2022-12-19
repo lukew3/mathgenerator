@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .arithmetic_progression_sum import arithmetic_progression_sum
 from .arithmetic_progression_term import arithmetic_progression_term
 from .base_conversion import base_conversion

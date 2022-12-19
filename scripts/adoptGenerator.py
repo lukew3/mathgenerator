@@ -30,7 +30,7 @@ subjects = ['algebra', 'basic_math', 'calculus',
 for subject in subjects:
     full_file_paths = get_filepaths(subject)
     full_file_paths.sort()
-    lines = ["from ...__init__ import *\n", "\n"]
+    lines = []
     for item in full_file_paths:
         if item[:2] != '__':
             lines.append(f"from .{item} import {item}\n")

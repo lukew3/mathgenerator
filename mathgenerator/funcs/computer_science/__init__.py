@@ -1,5 +1,3 @@
-from ...__init__ import *
-
 from .bcd_to_decimal import bcd_to_decimal
 from .binary_2s_complement import binary_2s_complement
 from .binary_complement_1s import binary_complement_1s
