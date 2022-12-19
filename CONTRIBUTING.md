@@ -3,12 +3,10 @@
 This project wouldn't be possible without the generosity of contributors like you. Thank you!
 
 ## How You Can Help
-Currently, there are 5 main types of contributions
-
-1. Add a generator idea to github issues.
-2. Fix bugs in existing generators. Check out the issues tab of the Github to see what bugs exist and need to be fixed.
-3. Write a generator. Follow the pattern in [the template](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template.py) and the [template with comments](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template_comments.py). Make sure to place your generator function into the correct subject folder of `mathgenerator/funcs/`. After you are finished, run `adoptGenerator.py` inside the `scripts` directory to update the README and `__init__.py` file.
-4. Improve demo/documentation site. The source code for the mathgenerator website is in the `gh-pages` branch. Let me know what changes you propose in the issues tab.
+* Add a generator idea to github issues.
+* Fix bugs in existing generators. Check out the issues tab of the Github to see what bugs exist and need to be fixed.
+* Write a generator. Follow the pattern in [the template](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template.py) and the [template with comments](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/template_comments.py). Make sure to place your generator function into the correct subject folder of `mathgenerator/funcs/`. After you are finished, run `adoptGenerator.py` inside the `scripts` directory to update the README and `__init__.py` file.
+* Improve demo/documentation site. The source code for the mathgenerator website is in the `gh-pages` branch. Let me know what changes you propose in the issues tab.
 
 If you find something else that you'd like to work on, leave an issue or make a pr, and I'll be sure to review it!
 
