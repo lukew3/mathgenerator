@@ -33,7 +33,7 @@ for subject in subjects:
     lines = ["from ...__init__ import *\n", "\n"]
     for item in full_file_paths:
         if item[:2] != '__':
-            lines.append("from ." + item + " import *\n")
+            lines.append(f"from .{item} import {item}\n")
     with open(f'../mathgenerator/funcs/{subject}/__init__.py', 'w') as f:
         f.writelines(lines)
 

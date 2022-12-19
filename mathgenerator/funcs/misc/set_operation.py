@@ -1,4 +1,5 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
 
 
 def gen_func(minval=3, maxval=7, n_a=4, n_b=5, format='string'):

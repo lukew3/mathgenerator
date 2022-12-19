@@ -1,5 +1,5 @@
-from .__init__ import *
-
+from ..__init__ import Generator
+import random
 import fractions
 
 

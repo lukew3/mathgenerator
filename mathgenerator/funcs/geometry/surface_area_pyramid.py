@@ -1,4 +1,5 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
 
 # List of Pythagorean triplets
 _PYTHAGOREAN = [(3, 4, 5),
