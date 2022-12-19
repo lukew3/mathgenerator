@@ -56,7 +56,7 @@ This creates the pdf `ws.pdf` in your current directory
 -->
 Problem/solution pairs are generated with either:
 * `mathgen.<generator_name>()` - generates a problem, solution set from the given generator name.
-* `mathgen.genById(id)` - generates a problem, solution set with generator id `id` in the format `[problem, solution]`
+* `mathgen.genById(id)` - generates a problem, solution set with generator id provided by the `id` parameter
 
 <!--
 #### `format` kwarg
@@ -64,7 +64,10 @@ Problem/solution pairs are generated with either:
 * Pass `format=raw` to return just the raw data for each generator. An array of each variable necessary to the generator is returned.
 * If you don't pass a value to the format kwarg, the generator will return a problem and answer in asciimath format.
 -->
-You can also use `getGenList()` to return a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
+You can also use `getGenList()` to return a list of all generators included in the library in the format:
+```
+[id, title, self, funcname, subjectname]
+```
 
 
 ## List of Generators
