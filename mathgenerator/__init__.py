@@ -1,10 +1,8 @@
-import os
+from os import sep as SEP
 import traceback
 
 
 genList = []
-
-SEP = os.sep
 
 
 class Generator:
@@ -14,13 +12,12 @@ class Generator:
         self.func = func
         self.kwargs = kwargs
 
-        (filename, line_number, function_name,
-         text) = traceback.extract_stack()[-2]
-        funcname = filename[filename.rfind(SEP):].strip()
-        funcname = funcname[1:-3]
-        subjectname = filename[:filename.rfind(SEP)].strip()
-        subjectname = subjectname[subjectname.rfind(SEP):].strip()
-        subjectname = subjectname[1:]
+        # Gets the path to the file the generator is in
+        path, _, _, _ = traceback.extract_stack()[-2]
+        # Gets the name of the file without the extension
+        funcname = path.split(SEP)[-1].strip()[:-3]
+        # Gets the name of the subject folder
+        subjectname = path.split(SEP)[-2].strip()
         genList.append([id, title, self, funcname, subjectname, kwargs])
 
     def __str__(self):
