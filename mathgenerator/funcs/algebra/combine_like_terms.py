@@ -17,7 +17,7 @@ def gen_func(maxCoef=10, maxExp=20, maxTerms=10):
             d[exponents[i]] = coefs[i]
     solution = " + ".join([f"{d[k]}x^{{{k}}}" for k in sorted(d)])
 
-    return problem, solution
+    return f'${problem}$', f'${solution}$'
 
 
 combine_like_terms = Generator("Combine Like terms", 105, gen_func,
