@@ -28,7 +28,7 @@ The project can be install via pip
 pip install mathgenerator
 ```
 
-## Basic Usage
+## Usage
 Here is an example of how you would generate an addition problem:
 
 ```python
@@ -56,15 +56,14 @@ ws.write_pdf()
 ```
 This creates the pdf `ws.pdf` in your current directory
 -->
+`genById(id)` generates a problem, solution set with generator id `id` in the format `[problem, solution]`
+#### `format` kwarg
+* Pass `format=latex` to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"
+* Pass `format=raw` to return just the raw data for each generator. An array of each variable necessary to the generator is returned.
+* If you don't pass a value to the format kwarg, the generator will return a problem and answer in asciimath format.
 
-## Documentation
-* `getGenList()` returns a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
+You can also use `getGenList()` to return a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
 
-* `genById(id)` generates a problem, solution set with generator id `id` in the format `[problem, solution]`
-
-* Pass the kwarg `format=latex` to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"
-
-* Pass the kwarg `format=raw` to return just the raw data for each generator. An array of each variable necessary to the generator is returned.
 
 ## List of Generators
 ## algebra
