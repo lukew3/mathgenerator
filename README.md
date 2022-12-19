@@ -40,6 +40,7 @@ problem, solution = mathgen.addition()
 #another way to generate an addition problem using genById()
 problem, solution = mathgen.genById(0)
 ```
+<!--
 ### Creating a worksheet
 If you wish to create a worksheet, you can use the [worksheetgen](https://github.com/lukew3/worksheetgen) package. Install this with `pip install worksheetgen`. Here is an example of how a worksheet would be generated.
 ```
@@ -54,6 +55,7 @@ with ws.section('Section 1', description='These are instructions')
 ws.write_pdf()
 ```
 This creates the pdf `ws.pdf` in your current directory
+-->
 
 ## Documentation
 * `getGenList()` returns a list of all generators in the repository in the format `[id, title, self, funcname, subjectname]`
