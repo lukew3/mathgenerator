@@ -29,4 +29,4 @@ def gen_func(maxVal=1000, format='string'):
 
 
 factors = Generator("Factors of a number", 116, gen_func,
-                           ["maxVal=1000"])
+                    ["maxVal=1000"])

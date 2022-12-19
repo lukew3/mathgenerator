@@ -1,11 +1,11 @@
 from ..__init__ import Generator
 import random
-from numpy import pi
+import math
 
 
 def gen_func(max_deg=360, format='string'):
     a = random.randint(0, max_deg)
-    b = (pi * a) / 180
+    b = (math.pi * a) / 180
     b = round(b, 2)
 
     if format == 'string':

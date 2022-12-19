@@ -25,4 +25,4 @@ def gen_func(maxCoordinate=10, maxRadius=10, format='string'):
 
 
 area_of_circle_given_center_and_point = Generator("Area of Circle given center and a point on circle", 115, gen_func,
-                           ["maxCoordinate = 10", "maxRadius=10"])
+                                                  ["maxCoordinate = 10", "maxRadius=10"])

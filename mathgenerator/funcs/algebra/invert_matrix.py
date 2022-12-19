@@ -1,5 +1,6 @@
 from ..__init__ import Generator
 import random
+import math
 import sympy
 
 

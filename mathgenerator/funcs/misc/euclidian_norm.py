@@ -19,4 +19,4 @@ def gen_func(maxEltAmt=20, format='string'):
 
 
 euclidian_norm = Generator("Euclidian norm or L2 norm of a vector", 69,
-                          gen_func, ["maxEltAmt=20"])
+                           gen_func, ["maxEltAmt=20"])
