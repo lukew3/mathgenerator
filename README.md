@@ -200,7 +200,7 @@ This creates the pdf `ws.pdf` in your current directory
 | 106 | [signum function](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py) | signum of 316 is = | 1 | signum_function | `min=-999` `max=999`  |
 | 109 | [Binomial distribution](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py) | A manufacturer of metal pistons finds that, on average, 32.85% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of 13 pistons will contain no more than 5 rejected pistons? | 77.05 | binomial_distribution | ``  |
 | 116 | [Factors of a number](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/Factors.py) | Factors of 860 =  | [1, 2, 4, 5, 10, 20, 43, 86, 172, 215, 430, 860] | Factors | `maxVal=1000`  |
-| 121 | [Product of scientific notaions](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/product_of_scientific_notations.py) | Product of scientific notations 9.64x10^-53 and 6.53x10^-8 =  | 6.29x10^-60 | product_of_scientific_notations | `minExpVal=-100` `maxExpVal=100`  |
+| 121 | [Product of scientific notations](https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/product_of_scientific_notations.py) | Product of scientific notations 9.64x10^-53 and 6.53x10^-8 =  | 6.29x10^-60 | product_of_scientific_notations | `minExpVal=-100` `maxExpVal=100`  |
 ## statistics
 | Id   | Skill | Example problem | Example Solution | Function Name | Kwargs |
 |------|-------|-----------------|------------------|---------------|--------|
