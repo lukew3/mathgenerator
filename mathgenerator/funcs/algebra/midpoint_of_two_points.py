@@ -1,4 +1,5 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
 
 
 def gen_func(maxValue=20, format='string'):
@@ -19,5 +20,5 @@ def gen_func(maxValue=20, format='string'):
         return x1, y1, x2, y2, xm, ym
 
 
-midPoint_of_two_points = Generator("Midpoint of the two point", 20,
+midpoint_of_two_points = Generator("Midpoint of the two point", 20,
                                    gen_func, ["maxValue=20"])

@@ -1,5 +1,5 @@
-from .__init__ import *
-
+from ..__init__ import Generator
+import random
 import math
 
 
@@ -18,5 +18,5 @@ def gen_func(maxEltAmt=20, format='string'):
         return vec, solution
 
 
-eucldian_norm = Generator("Euclidian norm or L2 norm of a vector", 69,
-                          gen_func, ["maxEltAmt=20"])
+euclidian_norm = Generator("Euclidian norm or L2 norm of a vector", 69,
+                           gen_func, ["maxEltAmt=20"])

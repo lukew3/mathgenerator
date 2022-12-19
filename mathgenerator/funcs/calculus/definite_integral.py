@@ -1,5 +1,5 @@
-from .__init__ import *
-import scipy
+from ..__init__ import Generator
+import random
 from scipy.integrate import quad
 
 

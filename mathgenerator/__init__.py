@@ -1,11 +1,6 @@
 import os
-import sys
 import traceback
 
-import random
-import sympy
-import numpy
-import scipy
 
 genList = []
 

@@ -1,4 +1,6 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
+import sympy
 
 
 def genDifferentiationProblem(diff_lvl=2):

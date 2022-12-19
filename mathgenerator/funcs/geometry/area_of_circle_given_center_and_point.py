@@ -1,4 +1,5 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
 from math import cos, sin, pi
 
 
@@ -23,5 +24,5 @@ def gen_func(maxCoordinate=10, maxRadius=10, format='string'):
         return center_x, center_y, point_x, point_y, area
 
 
-area_of_circle = Generator("Area of Circle given center and a point on circle", 115, gen_func,
-                           ["maxCoordinate = 10", "maxRadius=10"])
+area_of_circle_given_center_and_point = Generator("Area of Circle given center and a point on circle", 115, gen_func,
+                                                  ["maxCoordinate = 10", "maxRadius=10"])

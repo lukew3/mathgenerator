@@ -1,4 +1,6 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
+import math
 
 
 def gen_func(maxRadius=49, maxHeight=99, format='string'):

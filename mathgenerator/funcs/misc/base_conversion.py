@@ -1,4 +1,6 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
+
 
 # base from 2 to 36
 alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"

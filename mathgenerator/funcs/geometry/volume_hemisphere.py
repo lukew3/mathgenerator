@@ -1,4 +1,6 @@
-from .__init__ import *
+from ..__init__ import Generator
+import random
+import math
 
 
 def gen_func(maxRadius=100, format='string'):
@@ -15,5 +17,5 @@ def gen_func(maxRadius=100, format='string'):
         return r, ans
 
 
-volume_sphere = Generator("Volume of Hemisphere", 117, gen_func,
-                          ["maxRadius=100"])
+volume_hemisphere = Generator("Volume of Hemisphere", 117, gen_func,
+                              ["maxRadius=100"])

@@ -1,4 +1,5 @@
-from .__init__ import *
+from .. import Generator
+import random
 
 
 def gen_func(maxVal=1000, format='string'):
@@ -27,5 +28,5 @@ def gen_func(maxVal=1000, format='string'):
         return n, factors
 
 
-common_factors = Generator("Factors of a number", 116, gen_func,
-                           ["maxVal=1000"])
+factors = Generator("Factors of a number", 116, gen_func,
+                    ["maxVal=1000"])
