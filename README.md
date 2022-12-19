@@ -38,6 +38,7 @@ problem, solution = mathgenerator.addition()
 #another way to generate an addition problem using genById()
 problem, solution = mathgenerator.genById(0)
 ```
+You may prefer to use `import mathgenerator as mg` and run functions like `mg.addition()` so that you don't have to type as much.
 <!--
 ### Creating a worksheet
 If you wish to create a worksheet, you can use the [worksheetgen](https://github.com/lukew3/worksheetgen) package. Install this with `pip install worksheetgen`. Here is an example of how a worksheet would be generated.
