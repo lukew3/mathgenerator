@@ -4,7 +4,7 @@ import random
 
 def gen_func(maxSupp=180, maxComp=90, format='string'):
     angleType = random.choice(["supplementary", "complementary"])
-    
+
     if angleType == "supplementary":
         angle = random.randint(1, maxSupp)
         angleAns = 180 - angle
@@ -23,5 +23,4 @@ def gen_func(maxSupp=180, maxComp=90, format='string'):
 
 
 complementary_and_supplementary_angle = Generator("Complementary and Supplementary Angle", 112,
-                                          gen_func,
-                                          ["maxSupp=180", "maxComp=90"])
+                                                  gen_func, ["maxSupp=180", "maxComp=90"])
