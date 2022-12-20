@@ -10,7 +10,7 @@ def gen_func(maxMatrixVal=100):
 
     determinant = a * d - b * c
 
-    problem = f"$\\det \\begin{{bmatrix}} a & b \\\\\n c & d \\end{{bmatrix}} = $"
+    problem = f"$\\det \\begin{{bmatrix}} a & b \\\\ c & d \\end{{bmatrix}} = $"
     solution = f"${determinant}$"
     return problem, solution
 
