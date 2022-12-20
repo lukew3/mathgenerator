@@ -7,16 +7,9 @@ def gen_func(maxBase=3, maxVal=8, format='string'):
     b = random.randint(2, maxBase)
     c = pow(b, a)
 
-    if format == 'string':
-        problem = "log" + str(b) + "(" + str(c) + ")"
-        solution = str(a)
-        return problem, solution
-    elif format == 'latex':
-        problem = "\\(\\log_{" + str(b) + "}" + str(c) + "\\)"
-        solution = "\\(" + str(a) + "\\)"
-        return problem, solution
-    else:
-        return b, c, a
+    problem = f'$log_{{{b}}}({c})=$'
+    solution = f'${a}$'
+    return problem, solution
 
 
 log = Generator("Logarithm", 12, gen_func, ["maxBase=3", "maxVal=8"])
