@@ -22,5 +22,5 @@ def gen_func(maxSupp=180, maxComp=90, format='string'):
         return angleType, angle, angleAns
 
 
-complementary_and_supplementary_angle = Generator("Complementary and Supplementary Angle", 112,
+complementary_and_supplementary_angle = Generator("Complementary and Supplementary Angle", 125,
                                                   gen_func, ["maxSupp=180", "maxComp=90"])
