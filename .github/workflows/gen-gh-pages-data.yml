@@ -25,5 +25,4 @@ jobs:
     - name: Generate data.js
       run: |
         python genData.py
-        git commit -am "update data.js"
-        git push
+    - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
