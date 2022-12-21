@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set Up Python
       uses: actions/setup-python@v2
       with:
@@ -18,9 +18,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install .
+    - name: Checkout gh-pages
+      uses: actions/checkout@v3
+      with:
+        ref: 'gh-pages'
     - name: Generate data.js
       run: |
-        git checkout gh-pages
         python genData.py
         git commit -am "update data.js"
         git push
