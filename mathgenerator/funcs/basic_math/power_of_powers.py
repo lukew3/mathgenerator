@@ -8,7 +8,7 @@ def gen_func(maxBase=50, maxPower=10):
     power2 = random.randint(1, maxPower)
     step = power1 * power2
 
-    problem = f"Simplify ${base}^{{{power1}}}^{{{power2}}}$"
+    problem = f"Simplify ${base}^{{{power1}^{{{power2}}}}}$"
     solution = f"${base}^{{{step}}}$"
     return problem, solution
 
