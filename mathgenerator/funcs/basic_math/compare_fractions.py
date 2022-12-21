@@ -23,16 +23,7 @@ def gen_func(maxVal=10, format='string'):
     else:
         solution = "="
 
-    if format == "string":
-        return (
-            f"Which symbol represents the comparison between {a}/{b} and {c}/{d}?",
-            solution)
-    elif format == 'latex':
-        return (
-            f"Which symbol represents the comparison between \\(\\frac{{{a}}}{{{b}}}\\) and \\(\\frac{{{c}}}{{{d}}}\\)?",
-            solution)
-    else:
-        return a, b, c, d, solution
+    return f"Which symbol represents the comparison between $\\frac{{{a}}}{{{b}}}$ and $\\frac{{{c}}}{{{d}}}$?", solution
 
 
 compare_fractions = Generator("Compare Fractions", 44, gen_func,

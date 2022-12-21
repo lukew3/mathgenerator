@@ -2,16 +2,11 @@ from ...generator import Generator
 import random
 
 
-def gen_func(minNo=1, maxNo=1000, format='string'):
+def gen_func(minNo=1, maxNo=1000):
     b = random.randint(minNo, maxNo)
     a = b**(1 / 3)
 
-    if format == 'string':
-        return "What is the cube root of " + str(b) + " up to 2 decimal places?", str(round(a, 2))
-    elif format == 'latex':
-        return (f"\\(\\sqrt[3]{{{b}}}=\\)", "\\(" + str(round(a, 2)) + "\\)")
-    else:
-        return b, a
+    return (f"What is the cube root of: $\\sqrt[3]{{{b}}}=$ to 2 decimal places?", f"${str(round(a, 2))}$")
 
 
 cube_root = Generator("Cube Root", 47, gen_func, ["minNo=1", "maxNo=1000"])

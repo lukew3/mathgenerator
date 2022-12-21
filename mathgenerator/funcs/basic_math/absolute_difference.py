@@ -2,17 +2,12 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxA=100, maxB=100, format='string'):
+def gen_func(maxA=100, maxB=100):
     a = random.randint(-1 * maxA, maxA)
     b = random.randint(-1 * maxB, maxB)
     absDiff = abs(a - b)
 
-    if format == "string":
-        return "|" + str(a) + "-" + str(b) + "|=", absDiff
-    elif format == 'latex':
-        return ("\\(|" + str(a) + "-" + str(b) + "|=\\)", f"\\({absDiff}\\)")
-    else:
-        return a, b, absDiff
+    return f'$|{a}-{b}|=$', f"${absDiff}$"
 
 
 absolute_difference = Generator("Absolute difference between two numbers", 71,

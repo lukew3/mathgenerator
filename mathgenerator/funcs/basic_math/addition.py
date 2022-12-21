@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSum=99, maxAddend=50, format='string'):
+def gen_func(maxSum=99, maxAddend=50):
     if maxAddend > maxSum:
         maxAddend = maxSum
     a = random.randint(0, maxAddend)
@@ -10,16 +10,9 @@ def gen_func(maxSum=99, maxAddend=50, format='string'):
     b = random.randint(0, min((maxSum - a), maxAddend))
     c = a + b
 
-    if format == "string":
-        problem = str(a) + "+" + str(b) + "="
-        solution = str(c)
-        return problem, solution
-    elif format == 'latex':
-        problem = "\\(" + str(a) + '+' + str(b) + "\\)"
-        solution = str(c)
-        return problem, solution
-    else:
-        return a, b, c
+    problem = f'${a}+{b}='
+    solution = f'${c}$'
+    return problem, solution
 
 
 addition = Generator("Addition", 0, gen_func, ["maxSum=99", "maxAddend=50"])
