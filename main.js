@@ -14,7 +14,7 @@ async function generateSample() {
         d_sol.innerHTML = out.get(1);
 }
 
-async function runGenerator(id) {
+async function setGenerator(id) {
         // Set global curId
         curId = id;
         // Set active generator text
@@ -24,6 +24,8 @@ async function runGenerator(id) {
         d_func_name.innerHTML = g.get(3);
         d_subject.innerHTML = g.get(4);
         d_kwargs.innerHTML = g.get(5).toString();
+        // Move to top of screen if on mobile
+        if (window.innerWidth < 790) window.scrollTo(0, 0);
         // Run generator
         generateSample();
 }
@@ -42,7 +44,7 @@ async function runGenerator(id) {
                 var div = document.createElement("DIV");
                 div.className = "generatorListItem"
                 div.innerHTML = "<p class='genListItem'>" + gen.get(1) + "</p>";
-                div.addEventListener('click', () => {runGenerator(gen.get(0));});
+                div.onclick = () => { setGenerator(gen.get(0)); };
                 document.getElementById("generatorList").appendChild(div);
         }
 })()
