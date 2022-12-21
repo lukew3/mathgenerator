@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<script type="text/javascript" src="data.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./main.css">
+<link rel="stylesheet" type="text/css" href="../main.css">
 <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -15,7 +15,6 @@
 	<p>mathgenerator is a python package that enables users to easily generate a variety of math problems, with customizable settings.</p>
 	<hr></hr>
 	<h2>Demo</h2>
-    <p>Below are some pre-generated samples of generator output. If you would like to generate problems with the actual library, visit <a href='./wasm'>the WebAssembly version of this page. Note that it will take about 30 seconds to load</a></p>
 	
 	<div id="mainContent">
 		<div class="col">
@@ -36,7 +35,7 @@
 				<div class="agItem">
 					<p class="agLabel">id:</p>
 					<p id="agId">0</p>
-				</div class="agItem">
+				</div>
 				<div id="agSample">
 					<div>
 						<p class="agLabel">Problem:</p>
@@ -54,7 +53,7 @@
 		<div class="col">
 			<div id="generatorList" class="customBox">
 				<h3>Available Generators</h3>
-				<p>Click a generator to show a sample problem and more info</p>
+				<p>Please wait for generators to load. Then, click a generator to generate a problem and more info</p>
 			</div>
 		</div>
 	</div>
