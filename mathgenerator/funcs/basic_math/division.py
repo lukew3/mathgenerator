@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxA=25, maxB=25, format='string'):
+def gen_func(maxA=25, maxB=25):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
 
@@ -10,13 +10,7 @@ def gen_func(maxA=25, maxB=25, format='string'):
     dividend = random.choice([a, b])
     quotient = int(divisor / dividend)
 
-    if format == 'string':
-        return f"{divisor}/{dividend}=", str(quotient)
-    elif format == 'latex':
-        return ("\\(" + str(divisor) + "\\div" + str(dividend) + "=\\)",
-                "\\(" + str(quotient) + "\\)")
-    else:
-        return divisor, dividend, quotient
+    return f'${divisor}\\div{dividend}=$', f'${quotient}$'
 
 
 division = Generator("Division", 3, gen_func, ["maxA=25", "maxB=25"])

@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10, format='string'):
+def gen_func(maxVal=10):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -23,22 +23,13 @@ def gen_func(maxVal=10, format='string'):
     tmp_d = b * d
 
     gcd = calculate_gcd(tmp_n, tmp_d)
-    x = f"{tmp_n//gcd}/{tmp_d//gcd}"
 
+    problem = f"$\\frac{{{a}}}{{{b}}}\\cdot\\frac{{{c}}}{{{d}}}=$"
     if (tmp_d == 1 or tmp_d == gcd):
-        x = f"{tmp_n//gcd}"
-
-    if format == 'string':
-        return f"({a}/{b})*({c}/{d})", x
-    elif format == 'latex':
-        problem = f"\\(\\frac{{{a}}}{{{b}}}\\cdot\\frac{{{c}}}{{{d}}}=\\)"
-        if (tmp_d == 1 or tmp_d == gcd):
-            solution = f"\\(\\frac{{{tmp_n}}}{{{gcd}}}\\)"
-        else:
-            solution = f"\\(\\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}\\)"
-        return problem, solution
+        solution = f"$\\frac{{{tmp_n}}}{{{gcd}}}$"
     else:
-        return a, b, c, d, x
+        solution = f"$\\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}$"
+    return problem, solution
 
 
 fraction_multiplication = Generator("Fraction Multiplication", 28,

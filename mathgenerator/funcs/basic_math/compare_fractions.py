@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10, format='string'):
+def gen_func(maxVal=10):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -23,7 +23,8 @@ def gen_func(maxVal=10, format='string'):
     else:
         solution = "="
 
-    return f"Which symbol represents the comparison between $\\frac{{{a}}}{{{b}}}$ and $\\frac{{{c}}}{{{d}}}$?", solution
+    problem = f"Which symbol represents the comparison between $\\frac{{{a}}}{{{b}}}$ and $\\frac{{{c}}}{{{d}}}$?"
+    return problem, solution
 
 
 compare_fractions = Generator("Compare Fractions", 44, gen_func,

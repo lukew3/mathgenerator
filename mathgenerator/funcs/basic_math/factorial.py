@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxInput=6, format='string'):
+def gen_func(maxInput=6):
     a = random.randint(0, maxInput)
     n = a
     b = 1
@@ -10,12 +10,7 @@ def gen_func(maxInput=6, format='string'):
         b *= n
         n -= 1
 
-    if format == 'string':
-        return str(a) + "! = ", str(b)
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b
+    return f'${a}! =$', f'${b}$'
 
 
 factorial = Generator("Factorial", 31, gen_func, ["maxInput=6"])

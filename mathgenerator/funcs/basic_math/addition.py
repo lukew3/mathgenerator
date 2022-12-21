@@ -10,7 +10,7 @@ def gen_func(maxSum=99, maxAddend=50):
     b = random.randint(0, min((maxSum - a), maxAddend))
     c = a + b
 
-    problem = f'${a}+{b}='
+    problem = f'${a}+{b}=$'
     solution = f'${c}$'
     return problem, solution
 
