@@ -1,6 +1,5 @@
 from os import sep as SEP
 import traceback
-import bisect
 
 genList = []
 
@@ -18,7 +17,7 @@ class Generator:
         funcname = path.split(SEP)[-1].strip()[:-3]
         # Gets the name of the subject folder
         subjectname = path.split(SEP)[-2].strip()
-        bisect.insort(genList, [id, title, self, funcname, subjectname, kwargs])
+        genList.append([id, title, self, funcname, subjectname, kwargs])
 
     def __str__(self):
         return str(self.id) + " " + self.title
@@ -28,4 +27,5 @@ class Generator:
 
 
 def getGenList():
+    genList.sort()
     return genList
