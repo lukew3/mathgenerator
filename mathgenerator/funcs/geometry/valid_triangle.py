@@ -17,5 +17,6 @@ def gen_func(maxSideLength=50):
     solution = "Yes" if exists else "No"
     return problem, f'${solution}$'
 
+
 valid_triangle = Generator("Triangle exists check", 19, gen_func,
                            ["maxSideLength=50"])

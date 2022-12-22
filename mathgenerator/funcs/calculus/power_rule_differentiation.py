@@ -8,7 +8,7 @@ def gen_func(maxCoef=10,
     numTerms = random.randint(1, maxTerms)
     problem = "$"
     solution = "$"
-    
+
     for i in range(numTerms):
         if i > 0:
             problem += " + "

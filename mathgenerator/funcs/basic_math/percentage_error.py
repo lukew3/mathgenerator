@@ -13,7 +13,7 @@ def gen_func(maxValue=100, minValue=-100):
     error = round(error, 2)
 
     problem = f"Find the percentage error when observed value equals ${observed_value}$ and exact value equals ${exact_value}$."
-    solution = f'${error}\%$'
+    solution = f'${error}\\%$'
     return problem, solution
 
 

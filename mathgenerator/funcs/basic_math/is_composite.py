@@ -4,7 +4,7 @@ import random
 
 def gen_func(maxNum=250):
     a = random.randint(2, maxNum)
-    
+
     problem = f"Is ${a}$ composite?"
     if a == 0 or a == 1:
         return problem, "No"

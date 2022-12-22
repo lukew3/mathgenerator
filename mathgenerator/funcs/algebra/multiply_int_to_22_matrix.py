@@ -1,10 +1,11 @@
 from ...generator import Generator
 import random
 
-def list_to_tex(l):
+
+def list_to_tex(lst):
     out = '\\begin{bmatrix} '
-    l = [' & '.join(map(str, row)) for row in l]
-    out += ' \\\\ '.join(l)
+    lst = [' & '.join(map(str, row)) for row in lst]
+    out += ' \\\\ '.join(lst)
     out += ' \\end{bmatrix}'
     return out
 
@@ -21,11 +22,11 @@ def gen_func(maxMatrixVal=10, maxRes=100, format='string'):
     b1 = b * constant
     c1 = c * constant
     d1 = d * constant
-    l = [[a, b], [c, d]]
-    l1 = [[a1, b1], [c1, d1]]
+    lst = [[a, b], [c, d]]
+    lst1 = [[a1, b1], [c1, d1]]
 
-    problem = f'${constant} * {list_to_tex(l)} =$'
-    solution = f'${list_to_tex(l1)}$'
+    problem = f'${constant} * {list_to_tex(lst)} =$'
+    solution = f'${list_to_tex(lst1)}$'
     return problem, solution
 
 

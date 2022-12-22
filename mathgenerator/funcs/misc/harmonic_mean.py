@@ -9,7 +9,7 @@ def gen_func(maxValue=100, maxCount=4):
     for num in nums:
         sum += (1 / num)
     ans = num / sum
-    
+
     problem = f"Harmonic mean of ${count}$ numbers ${', '.join(map(str, nums))} = $"
     solution = f"${ans}$"
     return problem, solution

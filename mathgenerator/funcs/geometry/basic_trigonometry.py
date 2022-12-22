@@ -27,6 +27,7 @@ def gen_func(angles=[0, 30, 45, 60, 90],
 
     return problem, f'${solution}$'
 
+
 basic_trigonometry = Generator(
     "Trigonometric Values", 57, gen_func,
     ["angles=[0, 30, 45, 60, 90]", "functions=['sin', 'cos', 'tan']"])

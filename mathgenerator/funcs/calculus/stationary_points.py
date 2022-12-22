@@ -19,5 +19,6 @@ def gen_func(maxExp=3, maxCoef=10):
     problem = 'f(x)=' + str(problem).replace('**', '^')
     return problem, solution
 
+
 stationary_points = Generator("Stationary Points", 110, gen_func,
                               ["maxExp=3", "maxCoef=10"])

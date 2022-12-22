@@ -28,5 +28,6 @@ def gen_func(maxDigits=10):
     solution = ''.join(answer).lstrip('0')
     return problem, f'${solution}$'
 
+
 binary_2s_complement = Generator("Binary 2's Complement", 73,
                                  gen_func, ["maxDigits=10"])
