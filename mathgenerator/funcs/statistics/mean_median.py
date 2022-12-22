@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxlen=10, format='string'):
+def gen_func(maxlen=10):
     randomlist = random.sample(range(1, 99), maxlen)
     total = 0
     for n in randomlist:
@@ -11,14 +11,9 @@ def gen_func(maxlen=10, format='string'):
     randomlist.sort()
     median = (randomlist[4] + randomlist[5]) / 2
 
-    if format == 'string':
-        problem = f"Given the series of numbers {randomlist}. find the arithmatic mean and mdian of the series"
-        solution = f"Arithmetic mean of the series is {mean} and Arithmetic median of this series is {median}"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return randomlist, mean, median
+    problem = f"Given the series of numbers ${randomlist}$. Find the arithmatic mean and mdian of the series"
+    solution = f"Arithmetic mean of the series is ${mean}$ and Arithmetic median of this series is ${median}$"
+    return problem, solution
 
 
 mean_median = Generator("Mean and Median", 76, gen_func, ["maxlen=10"])

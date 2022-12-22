@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(number_values=15, minval=5, maxval=50, format='string'):
+def gen_func(number_values=15, minval=5, maxval=50):
     random_list = []
 
     for i in range(number_values):
@@ -17,17 +17,11 @@ def gen_func(number_values=15, minval=5, maxval=50, format='string'):
         var += (random_list[i] - mean)**2
 
     standardDeviation = var / number_values
-    variance = (var / number_values)**0.5
+    variance = (var / number_values) ** 0.5
 
-    if format == 'string':
-        problem = "Find the mean,standard deviation and variance for the data" + \
-            str(random_list)
-        solution = f"The Mean is {mean} , Standard Deviation is {standardDeviation}, Variance is {variance}"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return random_list, mean, standardDeviation, variance
+    problem = f"Find the mean,standard deviation and variance for the data ${', '.join(map(str, random_list))}$"
+    solution = f"The Mean is ${mean}$, Standard Deviation is ${standardDeviation}$, Variance is ${variance}$"
+    return problem, solution
 
 
 data_summary = Generator("Mean,Standard Deviation,Variance", 59,

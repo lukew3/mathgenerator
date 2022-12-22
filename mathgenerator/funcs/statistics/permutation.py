@@ -3,19 +3,13 @@ import random
 import math
 
 
-def gen_func(maxlength=20, format='string'):
+def gen_func(maxlength=20):
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
-    answer = int(math.factorial(a) / (math.factorial(a - b)))
+    solution = int(math.factorial(a) / (math.factorial(a - b)))
 
-    if format == 'string':
-        problem = f"Number of Permutations from {a} objects picked {b} at a time =  "
-        solution = str(answer)
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b, answer
+    problem = f"Number of Permutations from ${a}$ objects picked ${b}$ at a time is: "
+    return problem, f"${solution}$"
 
 
 permutation = Generator("Permutations", 42, gen_func, ["maxlength=20"])
