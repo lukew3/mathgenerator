@@ -3,11 +3,8 @@ import random
 
 def list_to_tex(l):
     out = '\\begin{bmatrix} '
-    for row in l:
-        for item in row:
-            out += str(item) + ' & '
-        out += '\\\\ '
-    out += '\\end{bmatrix}'
+    l = [' & '.join(map(str, row)) for row in l]
+    out += ' \\\\ '.join(l)
     return out
 
 
