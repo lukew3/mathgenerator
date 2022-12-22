@@ -3,7 +3,7 @@ import random
 import sympy
 
 
-def gen_func(maxExp=3, maxCoef=10, format='string'):
+def gen_func(maxExp=3, maxCoef=10):
     while True:
         x = sympy.symbols('x')
         problem = 0
