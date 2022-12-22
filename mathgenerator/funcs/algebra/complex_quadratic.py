@@ -64,7 +64,7 @@ def gen_func(prob_type=0, max_range=10, format='string'):
         else:
             g_sol = f'(({-b} + sqrt({d}))/2*{a}, ({-b} - sqrt({d}))/2*{a})'
 
-        solution = f'$({s_root1, s_root2})$ = ${g_sol}$'
+        solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
         return problem, solution
 
