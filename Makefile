@@ -10,6 +10,3 @@ format:
 
 lint:
 	$(PYTHON) -m flake8 --ignore=$(IGNORE_ERRORS) $(PKG)
-
-test:
-	$(PYTHON) -m pytest --verbose -s tests
