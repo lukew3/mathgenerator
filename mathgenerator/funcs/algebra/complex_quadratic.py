@@ -46,9 +46,9 @@ def gen_func(prob_type=0, max_range=10, format='string'):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            solution = f'(({-b} + {sqrt_d}i)/2*{a}, ({-b} - {sqrt_d}i)/2*{a})'
+            solution = f'(\\frac{{{-b} + {sqrt_d}i}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}i}}{{2*{a}}})'
         else:
-            solution = f'(({-b} + sqrt({-d})i)/2*{a}, ({-b} - sqrt({-d})i)/2*{a})'
+            solution = f'(\\frac{{{-b} + \\sqrt{{{-d}}}i}}{{2*{a}}}, \\frac{{{-b} - \\sqrt{{{-d}}}i}}{{2*{a}}})'
 
         return problem, solution
 
@@ -60,9 +60,9 @@ def gen_func(prob_type=0, max_range=10, format='string'):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            g_sol = f'(({-b} + {sqrt_d})/2*{a}, ({-b} - {sqrt_d})/2*{a})'
+            g_sol = f'(\\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
         else:
-            g_sol = f'(({-b} + \\sqrt{d})/2*{a}, ({-b} - \\sqrt{d})/2*{a})'
+            g_sol = f'(\\frac{{{-b} + \\sqrt{{{d}}}}}{{2*{a}}}, (\\frac{{{-b} - \\sqrt{{{d}}}}}{{2*{a}}})'
 
         solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
