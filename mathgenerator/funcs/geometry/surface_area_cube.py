@@ -2,18 +2,13 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m'):
     a = random.randint(1, maxSide)
-    ans = 6 * a * a
+    ans = 6 * (a ** 2)
 
-    if format == 'string':
-        problem = f"Surface area of cube with side = {a}{unit} is"
-        solution = f"{ans} {unit}^2"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, ans, unit
+    problem = f"Surface area of cube with side $= {a}{unit}$ is"
+    solution = f"${ans} {unit}^2$"
+    return problem, solution
 
 
 surface_area_cube = Generator("Surface Area of Cube", 32, gen_func,

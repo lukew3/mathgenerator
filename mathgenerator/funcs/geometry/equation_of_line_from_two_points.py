@@ -3,7 +3,7 @@ import random
 import math
 
 
-def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
+def gen_func(maxCoordinate=20, minCoordinate=-20):
     def greatest_common_divisor(num1, num2):
         if num2 == 0:
             return num1
@@ -49,22 +49,18 @@ def gen_func(maxCoordinate=20, minCoordinate=-20, format='string'):
             coeff_y = ''
         else:
             coeff_y = '-'
-    if format == 'string':
-        problem = f"What is the equation of the line between points ({x1},{y1}) and ({x2},{y2}) in slope-intercept form?"
-        if coeff_x == 0:
-            solution = str(coeff_y) + "y = " + str(constant)
-        elif coeff_y == 0:
-            solution = str(coeff_x) + "x = " + str(-constant)
-        else:
-            if constant > 0:
-                solution = str(coeff_y) + "y = " + str(coeff_x) + "x + " + str(constant)
-            else:
-                solution = str(coeff_y) + "y = " + str(coeff_x) + "x " + str(constant)
-        return problem, solution
-    elif format == 'latex':
-        return 'Latex unavailable'
+
+    problem = f"What is the equation of the line between points $({x1},{y1})$ and $({x2},{y2})$ in slope-intercept form?"
+    if coeff_x == 0:
+        solution = str(coeff_y) + "y = " + str(constant)
+    elif coeff_y == 0:
+        solution = str(coeff_x) + "x = " + str(-constant)
     else:
-        return x1, x2, y1, y2, coeff_x, coeff_y, constant
+        if constant > 0:
+            solution = str(coeff_y) + "y = " + str(coeff_x) + "x + " + str(constant)
+        else:
+            solution = str(coeff_y) + "y = " + str(coeff_x) + "x " + str(constant)
+    return problem, f'${solution}$'
 
 
 equation_of_line_from_two_points = Generator(

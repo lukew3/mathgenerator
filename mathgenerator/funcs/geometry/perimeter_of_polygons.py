@@ -2,23 +2,14 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSides=12, maxLength=120, format='string'):
+def gen_func(maxSides=12, maxLength=120):
     size_of_sides = random.randint(3, maxSides)
-    sides = []
-    for x in range(size_of_sides):
-        sides.append(random.randint(1, maxLength))
-    problem = "The perimeter of a " + str(size_of_sides) + \
-        " sided polygon with lengths of " + str(sides) + "cm is: "
-    solution = 0
-    for y in range(len(sides)):
-        solution += sides[y]
+    sides = [random.randint(1, maxLength) for _ in range(size_of_sides)]
+    
+    problem = f"The perimeter of a ${size_of_sides}$ sided polygon with lengths of ${', '.join(map(str, sides))}$cm is: "
+    solution = sum(sides)
 
-    if format == 'string':
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return size_of_sides, sides, solution
+    return problem, f'${solution}$'
 
 
 perimeter_of_polygons = Generator("Perimeter of Polygons", 96,
