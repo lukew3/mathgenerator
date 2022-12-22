@@ -5,7 +5,7 @@ def list_to_tex(l):
     out = '\\begin{bmatrix} '
     l = [' & '.join(map(str, row)) for row in l]
     out += ' \\\\ '.join(l)
-    out += '\\end{bmatrix}'
+    out += ' \\end{bmatrix}'
     return out
 
 
