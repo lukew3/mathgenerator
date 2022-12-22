@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxNumber=10000, format='string'):
+def gen_func(maxNumber=10000):
     n = random.randint(1000, maxNumber)
     x = n
     # binstring = ''
@@ -12,14 +12,8 @@ def gen_func(maxNumber=10000, format='string'):
         bcdstring = str(nibble) + bcdstring
         x >>= 4
 
-    if format == 'string':
-        problem = "BCD of Decimal Number " + str(n) + " is = "
-        solution = bcdstring
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return n, int(bcdstring)
+    problem = f"BCD of Decimal Number ${n} = $"
+    return problem, f'${bcdstring}$'
 
 
 decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
