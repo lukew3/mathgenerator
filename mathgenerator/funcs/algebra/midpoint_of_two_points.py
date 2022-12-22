@@ -14,5 +14,6 @@ def gen_func(maxValue=20):
     solution = f"$({xm},{ym})$"
     return problem, solution
 
+
 midpoint_of_two_points = Generator("Midpoint of the two point", 20,
                                    gen_func, ["maxValue=20"])
