@@ -29,7 +29,7 @@ def gen_func(n=2, varRange=20, coeffRange=20):
     # problem = "\n".join(problem)
     problem = "$ and $".join(problem)
 
-    return f'Given the equations ${problem}$, solve for x and y', f'${solution}$'
+    return f'Given the equations ${problem}$, solve for $x$ and $y$', f'${solution}$'
 
 linear_equations = Generator("Linear Equations", 26, gen_func,
                              ["n=2", "varRange=20", "coeffRange=20"])
