@@ -39,7 +39,7 @@ def gen_func(prob_type=0, max_range=10, format='string'):
 
     eq += str(c) + ' = 0'
 
-    problem = 'Find the roots of given Quadratic Equation ' + eq
+    problem = f'Find the roots of given Quadratic Equation ${eq}$'
 
     if d < 0:
         sqrt_d = (-d)**0.5
@@ -64,7 +64,7 @@ def gen_func(prob_type=0, max_range=10, format='string'):
         else:
             g_sol = f'(({-b} + sqrt({d}))/2*{a}, ({-b} - sqrt({d}))/2*{a})'
 
-        solution = f'simplified solution : ({s_root1, s_root2}), generalized solution : ' + g_sol
+        solution = f'$({s_root1, s_root2})$ = ${g_sol}$'
 
         return problem, solution
 
