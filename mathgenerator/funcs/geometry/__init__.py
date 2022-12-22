@@ -6,6 +6,7 @@ from .area_of_circle_given_center_and_point import area_of_circle_given_center_a
 from .area_of_triangle import area_of_triangle
 from .basic_trigonometry import basic_trigonometry
 from .circumference import circumference
+from .complementary_and_supplementary_angle import complementary_and_supplementary_angle
 from .curved_surface_area_cylinder import curved_surface_area_cylinder
 from .degree_to_rad import degree_to_rad
 from .equation_of_line_from_two_points import equation_of_line_from_two_points
