@@ -3,7 +3,6 @@ import random
 
 
 def factorial(n):
-
     if n == 1 or n == 0:
         return 1
     else:
@@ -14,7 +13,7 @@ def newton_symbol(n, k):
     return factorial(n) / (factorial(k) * factorial(n - k))
 
 
-def gen_func(format='string'):
+def gen_func():
     rejected_fraction = float(random.randint(30, 40)) + random.random()
     batch = random.randint(10, 20)
     rejections = random.randint(1, 9)
@@ -27,17 +26,12 @@ def gen_func(format='string'):
 
     answer = round(100 * answer, 2)
 
-    if format == 'string':
-        problem = "A manufacturer of metal pistons finds that, on average, {0:}% "\
-            "of the pistons they manufacture are rejected because " \
-            "they are incorrectly sized. What is the probability that a "\
-            "batch of {1:} pistons will contain no more than {2:} " \
-            "rejected pistons?".format(rejected_fraction, batch, rejections)
-        return problem, answer
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return rejected_fraction, batch, rejections, answer
+    problem = "A manufacturer of metal pistons finds that, on average, ${0:}\\%$ "\
+        "of the pistons they manufacture are rejected because " \
+        "they are incorrectly sized. What is the probability that a "\
+        "batch of ${1:}$ pistons will contain no more than ${2:}$ " \
+        "rejected pistons?".format(rejected_fraction, batch, rejections)
+    return problem, f'${answer}$'
 
 
 binomial_distribution = Generator("Binomial distribution", 109,

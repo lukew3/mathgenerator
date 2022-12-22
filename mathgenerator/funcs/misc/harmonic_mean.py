@@ -2,30 +2,16 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxValue=100, maxNum=4, format='string'):
-
-    a = random.randint(1, maxValue)
-    b = random.randint(1, maxValue)
-    c = random.randint(1, maxValue)
-    d = random.randint(1, maxValue)
-    num = random.randint(2, 4)
-    if num == 2:
-        sum = (1 / a) + (1 / b)
-    elif num == 3:
-        sum = (1 / a) + (1 / b) + (1 / c)
-    elif num == 4:
-        sum = (1 / a) + (1 / b) + (1 / c) + (1 / d)
-
+def gen_func(maxValue=100, maxCount=4):
+    count = random.randint(2, maxCount)
+    nums = [random.randint(1, maxValue) for _ in range(count)]
+    sum = 0
+    for num in nums:
+        sum += (1 / num)
     ans = num / sum
-    if num == 2:
-        problem = f"Harmonic mean of {num} numbers {a} and {b} = "
-        solution = f" {num}/((1/{a}) + (1/{b})) = {ans}"
-    elif num == 3:
-        problem = f"Harmonic mean of {num} numbers {a} , {b} and {c} = "
-        solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c})) = {ans}"
-    elif num == 4:
-        problem = f"Harmonic mean of {num} numbers {a} , {b} , {c} , {d} = "
-        solution = f" {num}/((1/{a}) + (1/{b}) + (1/{c}) + (1/{d})) = {ans}"
+    
+    problem = f"Harmonic mean of ${count}$ numbers ${', '.join(map(str, nums))} = $"
+    solution = f"${ans}$"
     return problem, solution
 
 

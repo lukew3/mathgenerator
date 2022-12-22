@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=100, format='string'):
+def gen_func(maxVal=100):
     a = x = random.randint(1, maxVal)
     b = y = random.randint(1, maxVal)
 
@@ -20,14 +20,9 @@ def gen_func(maxVal=100, format='string'):
                 count = count + 1
                 arr.append(i)
 
-    if format == 'string':
-        problem = f"Common Factors of {a} and {b} = "
-        solution = arr
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b, arr
+    problem = f"Common Factors of ${a}$ and ${b} = $"
+    solution = f'${arr}$'
+    return problem, solution
 
 
 common_factors = Generator("Common Factors", 40, gen_func,

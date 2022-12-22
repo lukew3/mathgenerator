@@ -2,21 +2,16 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxBase=50, maxPower=10, format='string'):
+def gen_func(maxBase=50, maxPower=10):
     base1 = random.randint(1, maxBase)
     base2 = random.randint(1, maxBase)
     power = random.randint(1, maxPower)
     step = base1 / base2
-    solution = step**power
+    solution = step ** power
 
-    if format == 'string':
-        problem = f"The Quotient of {base1}^{power} and {base2}^{power} = " \
-            f"({base1}/{base2})^{power} = {step}^{power}"
-        return problem, str(solution)
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return base1, base2, power, step, solution
+    problem = f"The Quotient of ${base1}^{{{power}}}$ and ${base2}^{{{power}}} = " \
+        f"({base1}/{base2})^{power} = {step}^{{{power}}}$"
+    return problem, f'${solution}$'
 
 
 quotient_of_power_same_power = Generator("Quotient of Powers with Same Power",

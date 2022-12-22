@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(minVal=1, maxVal=200, format='string'):
+def gen_func(minVal=1, maxVal=200):
     a = random.randint(minVal, maxVal)
     n = a
     i = 2
@@ -18,14 +18,9 @@ def gen_func(minVal=1, maxVal=200, format='string'):
     if n > 1:
         factors.append(n)
 
-    if format == 'string':
-        problem = f"Find prime factors of {a}"
-        solution = f"{factors}"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, factors
+    problem = f"Find prime factors of ${a}$"
+    solution = f"${', '.join(map(str, factors))}$"
+    return problem, solution
 
 
 prime_factors = Generator("Prime Factorisation", 27, gen_func,

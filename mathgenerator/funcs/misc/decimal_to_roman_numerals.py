@@ -3,7 +3,7 @@ import random
 import math
 
 
-def gen_func(maxDecimal=4000, format='string'):
+def gen_func(maxDecimal=4000):
     x = random.randint(0, maxDecimal)
     roman_dict = {
         1: "I",
@@ -32,13 +32,8 @@ def gen_func(maxDecimal=4000, format='string'):
         x = math.floor(x % div)
         div /= 10
 
-    if format == 'string':
-        problem = "The number " + str(x) + " in Roman Numerals is: "
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return x, solution
+    problem = f"The number ${x}$ in Roman Numerals is: "
+    return problem, f'${solution}$'
 
 
 decimal_to_roman_numerals = Generator("Converts decimal to Roman Numerals", 85,

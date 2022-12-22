@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=1000, format='string'):
+def gen_func(maxVal=1000):
     n = random.randint(1, maxVal)
 
     factors = []
@@ -18,14 +18,9 @@ def gen_func(maxVal=1000, format='string'):
 
     factors.sort()
 
-    if format == 'string':
-        problem = f"Factors of {n} = "
-        solution = factors
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return n, factors
+    problem = f"Factors of ${n} = $"
+    solution = factors
+    return problem, f'${solution}$'
 
 
 factors = Generator("Factors of a number", 116, gen_func,

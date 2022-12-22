@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(min=-999, max=999, format='string'):
+def gen_func(min=-999, max=999):
     a = random.randint(min, max)
     b = 0
     if (a > 0):
@@ -10,14 +10,9 @@ def gen_func(min=-999, max=999, format='string'):
     if (a < 0):
         b = -1
 
-    if format == 'string':
-        problem = "signum of " + str(a) + " is " + "="
-        solution = str(b)
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b
+    problem = f"signum of {a} is ="
+    solution = f'${b}$'
+    return problem, solution
 
 
 signum_function = Generator("signum function", 106, gen_func,
