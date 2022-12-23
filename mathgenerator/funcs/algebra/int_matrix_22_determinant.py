@@ -1,4 +1,5 @@
 from ...generator import Generator
+from ...latexBuilder import bmatrix
 import random
 
 
@@ -9,8 +10,9 @@ def gen_func(maxMatrixVal=100):
     d = random.randint(0, maxMatrixVal)
 
     determinant = a * d - b * c
+    lst = [[a, b], [c, d]]
 
-    problem = f"$\\det \\begin{{bmatrix}} {a} & {b} \\\\ {c} & {d} \\end{{bmatrix}} = $"
+    problem = f"$\\det {bmatrix(lst)}= $"
     solution = f"${determinant}$"
     return problem, solution
 

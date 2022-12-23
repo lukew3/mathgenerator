@@ -1,49 +1,31 @@
 from ...generator import Generator
+from ...latexBuilder import bmatrix
 import random
 
 
-def gen_func(maxVal=100, max_dim=10, format='string'):
+def gen_func(maxVal=100, max_dim=10):
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
 
     # generate matrices a and b
-    a = []
-    for r in range(m):
-        a.append([])
-        for c in range(n):
-            a[r].append(random.randint(-maxVal, maxVal))
-    b = []
-    for r in range(n):
-        b.append([])
-        for c in range(k):
-            b[r].append(random.randint(-maxVal, maxVal))
+    a = [[random.randint(-maxVal, maxVal) for _ in range(n)] for _ in range(m)]
+    b = [[random.randint(-maxVal, maxVal) for _ in range(k)] for _ in range(n)]
 
     res = []
-    a_string = matrixMultiplicationFuncHelper(a)
-    b_string = matrixMultiplicationFuncHelper(b)
-
     for r in range(m):
         res.append([])
-
         for c in range(k):
             temp = 0
-
             for t in range(n):
                 temp += a[r][t] * b[t][c]
             res[r].append(temp)
 
-    # consider using a, b instead of a_string, b_string if the problem doesn't look right
-    if format == 'string':
-        problem = f"Multiply \n{a_string}\n and \n\n{b_string}"
-        solution = matrixMultiplicationFuncHelper(res)
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a_string, b_string, res
+    problem = f"Multiply ${bmatrix(a)}$ and ${bmatrix(b)}$"
+    solution = f'${bmatrix(res)}$'
+    return problem, solution
 
-
+"""
 def matrixMultiplicationFuncHelper(inp):
     m = len(inp)
     n = len(inp[0])
@@ -57,7 +39,7 @@ def matrixMultiplicationFuncHelper(inp):
     string += "]]"
 
     return string
-
+"""
 
 matrix_multiplication = Generator("Multiplication of two matrices", 46,
                                   gen_func,
