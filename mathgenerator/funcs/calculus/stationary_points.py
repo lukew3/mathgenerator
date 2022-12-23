@@ -2,7 +2,8 @@ import random
 import sympy
 
 
-def gen_func(maxExp=3, maxCoef=10):
+def stationary_points(maxExp=3, maxCoef=10):
+    """Stationary Points"""
     solution = ''
     while len(solution) == 0:
         x = sympy.symbols('x')
@@ -14,7 +15,3 @@ def gen_func(maxExp=3, maxCoef=10):
 
     problem = 'f(x)=' + str(problem).replace('**', '^')
     return f'${problem}$', f'${sympy.latex(solution)[6:-8]}}}$'
-
-
-stationary_points = Generator("Stationary Points", 110, gen_func,
-                              ["maxExp=3", "maxCoef=10"])

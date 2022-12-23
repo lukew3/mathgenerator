@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func():
+def trig_differentiation():
+    """Trigonometric Differentiation"""
     pairs = {
         '\\sin': '\\cos',
         '\\cos': '-\\sin',
@@ -15,7 +16,3 @@ def gen_func():
     problem = f'$\\frac{{d}}{{dx}}({problem})=$'
 
     return problem, solution
-
-
-trig_differentiation = Generator("Trigonometric Differentiation", 88, gen_func,
-                                 [])

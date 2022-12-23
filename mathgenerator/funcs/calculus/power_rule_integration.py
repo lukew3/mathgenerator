@@ -1,9 +1,10 @@
 import random
 
 
-def gen_func(maxCoef=10,
+def power_rule_integration(maxCoef=10,
              maxExp=10,
              maxTerms=5):
+    """Power Rule Integration"""
     numTerms = random.randint(1, maxTerms)
     problem = "$"
     solution = "$"
@@ -21,8 +22,3 @@ def gen_func(maxCoef=10,
     solution += " + C"
 
     return problem + '$', solution + '$'
-
-
-power_rule_integration = Generator("Power Rule Integration", 48,
-                                   gen_func,
-                                   ["maxCoef=10", "maxExp=10", "maxTerms=5"])

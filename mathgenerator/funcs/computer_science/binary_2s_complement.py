@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxDigits=10):
+def binary_2s_complement(maxDigits=10):
+    """Binary 2's Complement"""
     digits = random.randint(1, maxDigits)
     question = ''.join([str(random.randint(0, 1))
                         for i in range(digits)]).lstrip('0')
@@ -26,7 +27,3 @@ def gen_func(maxDigits=10):
     problem = f"2's complement of ${question} = $"
     solution = ''.join(answer).lstrip('0')
     return problem, f'${solution}$'
-
-
-binary_2s_complement = Generator("Binary 2's Complement", 73,
-                                 gen_func, ["maxDigits=10"])

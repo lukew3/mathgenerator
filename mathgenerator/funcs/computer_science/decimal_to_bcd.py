@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxNumber=10000):
+def decimal_to_bcd(maxNumber=10000):
+    """Decimal to Binary Coded Decimal"""
     n = random.randint(1000, maxNumber)
     x = n
     # binstring = ''
@@ -13,7 +14,3 @@ def gen_func(maxNumber=10000):
 
     problem = f"BCD of Decimal Number ${n} = $"
     return problem, f'${bcdstring}$'
-
-
-decimal_to_bcd = Generator("Decimal to Binary Coded Decimal", 103,
-                           gen_func, ["maxNumber=10000"])

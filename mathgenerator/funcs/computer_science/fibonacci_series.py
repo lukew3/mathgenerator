@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(minNo=1):
+def fibonacci_series(minNo=1):
+    """Fibonacci Series"""
     n = random.randint(minNo, 20)
 
     def createFibList(n):
@@ -19,7 +20,3 @@ def gen_func(minNo=1):
     problem = "The Fibonacci Series of the first ${n}$ numbers is ?"
     solution = ', '.join(map(str, fibList))
     return problem, f'${solution}$'
-
-
-fibonacci_series = Generator("Fibonacci Series", 56, gen_func,
-                             ["minNo=1"])

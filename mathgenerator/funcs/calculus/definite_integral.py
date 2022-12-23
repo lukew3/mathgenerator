@@ -2,7 +2,8 @@ import random
 from scipy.integrate import quad
 
 
-def gen_func(max_coeff=100):
+def definite_integral(max_coeff=100):
+    """Definite Integral of Quadratic Equation"""
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
@@ -16,7 +17,3 @@ def gen_func(max_coeff=100):
     problem = f"The definite integral within limits $0$ to $1$ of the equation ${a}x^2 + {b}x + {c} = $"
     solution = f'${S}$'
     return problem, solution
-
-
-definite_integral = Generator("Definite Integral of Quadratic Equation", 89,
-                              gen_func, ["max_coeff=100"])

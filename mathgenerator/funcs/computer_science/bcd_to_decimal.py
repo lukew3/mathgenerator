@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxNumber=10000):
+def bcd_to_decimal(maxNumber=10000):
+    """Binary Coded Decimal to Integer"""
     n = random.randint(1000, maxNumber)
     binstring = ''
     while True:
@@ -18,7 +19,3 @@ def gen_func(maxNumber=10000):
     problem = f"Integer of Binary Coded Decimal ${n}$ is $=$ "
     solution = f'${int(binstring, 2)}$'
     return problem, solution
-
-
-bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91,
-                           gen_func, ["maxNumber=10000"])

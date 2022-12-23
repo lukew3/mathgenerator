@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxDigits=10):
+def binary_complement_1s(maxDigits=10):
+    """Binary Complement 1s"""
     question = ''
     answer = ''
 
@@ -12,7 +13,3 @@ def gen_func(maxDigits=10):
 
     problem = f'${question} = $'
     return problem, f'${answer}$'
-
-
-binary_complement_1s = Generator("Binary Complement 1s", 4,
-                                 gen_func, ["maxDigits=10"])
