@@ -2,8 +2,8 @@ import random
 
 
 def system_of_equations(range_x=10,
-             range_y=10,
-             coeff_mult_range=10):
+                        range_y=10,
+                        coeff_mult_range=10):
     """Solve a System of Equations in R^2"""
     # Generate solution point first
     x = random.randint(-range_x, range_x)

@@ -4,7 +4,7 @@ import math
 
 # Handles degrees in quadrant one
 def basic_trigonometry(angles=[0, 30, 45, 60, 90],
-             functions=["sin", "cos", "tan"]):
+                       functions=["sin", "cos", "tan"]):
     """Trigonometric Values"""
     angle = random.choice(angles)
     function = random.choice(functions)

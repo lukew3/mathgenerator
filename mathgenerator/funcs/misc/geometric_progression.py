@@ -2,10 +2,10 @@ import random
 
 
 def geometric_progression(number_values=6,
-             min_value=2,
-             max_value=12,
-             n_term=7,
-             sum_term=5):
+                          min_value=2,
+                          max_value=12,
+                          n_term=7,
+                          sum_term=5):
     """Geometric Progression"""
     r = random.randint(min_value, max_value)
     a = random.randint(min_value, max_value)

@@ -5,8 +5,8 @@ import sympy
 
 
 def invert_matrix(SquareMatrixDimension=3,
-             MaxMatrixElement=99,
-             OnlyIntegerElementsInInvertedMatrix=True):
+                  MaxMatrixElement=99,
+                  OnlyIntegerElementsInInvertedMatrix=True):
     """Invert Matrix"""
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False

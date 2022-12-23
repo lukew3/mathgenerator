@@ -2,8 +2,8 @@ import random
 
 
 def power_rule_differentiation(maxCoef=10,
-             maxExp=10,
-             maxTerms=5):
+                               maxExp=10,
+                               maxTerms=5):
     """Power Rule Differentiation"""
     numTerms = random.randint(1, maxTerms)
     problem = "$"

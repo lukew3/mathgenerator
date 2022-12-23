@@ -2,8 +2,8 @@ import random
 
 
 def arithmetic_progression_sum(maxd=100,
-             maxa=100,
-             maxn=100):
+                               maxa=100,
+                               maxn=100):
     """Arithmetic Progression Sum"""
     d = random.randint(-1 * maxd, maxd)
     a1 = random.randint(-1 * maxa, maxa)

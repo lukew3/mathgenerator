@@ -2,9 +2,9 @@ import random
 
 
 def expanding(range_x1=10,
-             range_x2=10,
-             range_a=10,
-             range_b=10):
+              range_x2=10,
+              range_a=10,
+              range_b=10):
     """Expanding Factored Binomial"""
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)

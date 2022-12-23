@@ -3,11 +3,11 @@ import fractions
 
 
 def intersection_of_two_lines(minM=-10,
-             maxM=10,
-             minB=-10,
-             maxB=10,
-             minDenominator=1,
-             maxDenominator=6):
+                              maxM=10,
+                              minB=-10,
+                              maxB=10,
+                              minDenominator=1,
+                              maxDenominator=6):
     """Intersection of two lines"""
     def generateEquationString(m, b):
         """

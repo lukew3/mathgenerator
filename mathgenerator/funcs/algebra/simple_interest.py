@@ -2,8 +2,8 @@ import random
 
 
 def simple_interest(maxPrinciple=10000,
-             maxRate=10,
-             maxTime=10):
+                    maxRate=10,
+                    maxTime=10):
     """Simple Interest"""
     p = random.randint(1000, maxPrinciple)
     r = random.randint(1, maxRate)

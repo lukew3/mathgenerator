@@ -2,8 +2,8 @@ import random
 
 
 def power_rule_integration(maxCoef=10,
-             maxExp=10,
-             maxTerms=5):
+                           maxExp=10,
+                           maxTerms=5):
     """Power Rule Integration"""
     numTerms = random.randint(1, maxTerms)
     problem = "$"

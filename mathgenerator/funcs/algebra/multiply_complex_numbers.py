@@ -2,7 +2,7 @@ import random
 
 
 def multiply_complex_numbers(minRealImaginaryNum=-20,
-             maxRealImaginaryNum=20):
+                             maxRealImaginaryNum=20):
     """Multiplication of 2 complex numbers"""
     num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
                    random.randint(minRealImaginaryNum, maxRealImaginaryNum))
