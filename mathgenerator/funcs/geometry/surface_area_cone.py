@@ -2,7 +2,8 @@ import random
 import math
 
 
-def gen_func(maxRadius=20, maxHeight=50, unit='m'):
+def surface_area_cone(maxRadius=20, maxHeight=50, unit='m'):
+    """Surface area of a cone"""
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
 
@@ -12,7 +13,3 @@ def gen_func(maxRadius=20, maxHeight=50, unit='m'):
     problem = f"Surface area of cone with height $= {a}{unit}$ and radius $= {b}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
-
-
-surface_area_cone = Generator("Surface Area of cone", 38, gen_func,
-                              ["maxRadius=20", "maxHeight=50", "unit='m'"])

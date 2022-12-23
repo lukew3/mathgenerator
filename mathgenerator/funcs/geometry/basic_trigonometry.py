@@ -3,8 +3,9 @@ import math
 
 
 # Handles degrees in quadrant one
-def gen_func(angles=[0, 30, 45, 60, 90],
+def basic_trigonometry(angles=[0, 30, 45, 60, 90],
              functions=["sin", "cos", "tan"]):
+    """Trigonometric Values"""
     angle = random.choice(angles)
     function = random.choice(functions)
 
@@ -25,8 +26,3 @@ def gen_func(angles=[0, 30, 45, 60, 90],
         eval(expression), 2) <= 99999 else "\\infty"  # for handling the ∞ condition
 
     return problem, f'${solution}$'
-
-
-basic_trigonometry = Generator(
-    "Trigonometric Values", 57, gen_func,
-    ["angles=[0, 30, 45, 60, 90]", "functions=['sin', 'cos', 'tan']"])

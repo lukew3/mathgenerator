@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxSide=20, unit='m'):
+def surface_area_cuboid(maxSide=20, unit='m'):
+    """Surface area of a cuboid"""
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
@@ -10,7 +11,3 @@ def gen_func(maxSide=20, unit='m'):
     problem = f"Surface area of cuboid with sides of lengths: ${a}{unit}, {b}{unit}, {c}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
-
-
-surface_area_cuboid = Generator("Surface Area of Cuboid", 33,
-                                gen_func, ["maxSide=20", "unit='m'"])

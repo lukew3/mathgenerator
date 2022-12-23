@@ -2,7 +2,8 @@ import random
 import math
 
 
-def gen_func(maxEltAmt=20):
+def angle_btw_vectors(maxEltAmt=20):
+    """Angle between 2 vectors"""
     s = 0
     v1 = [
         round(random.uniform(0, 1000), 2)
@@ -26,7 +27,3 @@ def gen_func(maxEltAmt=20):
     # would return the answer in radians
     problem = f"angle between the vectors ${v1}$ and ${v2}$ is:"
     return problem, solution
-
-
-angle_btw_vectors = Generator("Angle between 2 vectors", 70,
-                              gen_func, ["maxEltAmt=20"])

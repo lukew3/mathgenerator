@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(minVal=3, maxVal=20, format='string'):
+def angle_regular_polygon(minVal=3, maxVal=20, format='string'):
+    """Angle of a Regular Polygon"""
     sideNum = random.randint(minVal, maxVal)
     problem = f"Find the angle of a regular polygon with ${sideNum}$ sides"
 
@@ -9,8 +10,3 @@ def gen_func(minVal=3, maxVal=20, format='string'):
     solution = f'${180 - exteriorAngle}$'
 
     return problem, solution
-
-
-angle_regular_polygon = Generator("Angle of a Regular Polygon", 29,
-                                  gen_func,
-                                  ["minVal=3", "maxVal=20"])

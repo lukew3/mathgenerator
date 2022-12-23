@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxAngle=180):
+def fourth_angle_of_quadrilateral(maxAngle=180):
+    """Fourth Angle of Quadrilateral"""
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, 240 - angle1)
     angle3 = random.randint(1, 340 - (angle1 + angle2))
@@ -12,8 +13,3 @@ def gen_func(maxAngle=180):
     problem = f"Fourth angle of quadrilateral with angles ${angle1} , {angle2}, {angle3} =$"
     solution = f'${angle4}$'
     return problem, solution
-
-
-fourth_angle_of_quadrilateral = Generator("Fourth Angle of Quadrilateral", 49,
-                                          gen_func,
-                                          ["maxAngle=180"])

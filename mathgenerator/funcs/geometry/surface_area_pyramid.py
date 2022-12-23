@@ -13,7 +13,8 @@ _PYTHAGOREAN = [(3, 4, 5),
                 (7, 24, 25)]
 
 
-def gen_func(unit='m'):
+def surface_area_pyramid(unit='m'):
+    """Surface area of a pyramid"""
     # Generate first triplet
     height, half_width, triangle_height_1 = random.sample(random.choice(_PYTHAGOREAN), 3)
 
@@ -35,7 +36,3 @@ def gen_func(unit='m'):
     problem = f"Surface area of pyramid with base length $= {2*half_length}{unit}$, base width $= {2*half_width}{unit}$, and height $= {height}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
-
-
-surface_area_pyramid = Generator("Surface area of pyramid", 123, gen_func,
-                                 ["unit='m'"])

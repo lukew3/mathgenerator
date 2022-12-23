@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxSides=12, maxLength=120):
+def perimeter_of_polygons(maxSides=12, maxLength=120):
+    """Perimeter of Polygons"""
     size_of_sides = random.randint(3, maxSides)
     sides = [random.randint(1, maxLength) for _ in range(size_of_sides)]
 
@@ -9,8 +10,3 @@ def gen_func(maxSides=12, maxLength=120):
     solution = sum(sides)
 
     return problem, f'${solution}$'
-
-
-perimeter_of_polygons = Generator("Perimeter of Polygons", 96,
-                                  gen_func,
-                                  ["maxSides=12", "maxLength=120"])

@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxSupp=180, maxComp=90, format='string'):
+def complementary_and_supplementary_angle(maxSupp=180, maxComp=90, format='string'):
+    """Complementary and Supplementary Angle"""
     angleType = random.choice(["supplementary", "complementary"])
 
     if angleType == "supplementary":
@@ -19,7 +20,3 @@ def gen_func(maxSupp=180, maxComp=90, format='string'):
         return "Latex unavailable"
     else:
         return angleType, angle, angleAns
-
-
-complementary_and_supplementary_angle = Generator("Complementary and Supplementary Angle", 125,
-                                                  gen_func, ["maxSupp=180", "maxComp=90"])

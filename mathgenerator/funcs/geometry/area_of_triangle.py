@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxA=20, maxB=20):
+def area_of_triangle(maxA=20, maxB=20):
+    """Area of Triangle"""
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
     c = random.randint(abs(b - a) + 1, abs(a + b) - 1)
@@ -12,7 +13,3 @@ def gen_func(maxA=20, maxB=20):
     problem = f"Area of triangle with side lengths: ${a}, {b} {c} = $"
     solution = f'${round(area, 2)}$'
     return problem, solution
-
-
-area_of_triangle = Generator("Area of Triangle", 18, gen_func,
-                             ["maxA=20", "maxB=20"])

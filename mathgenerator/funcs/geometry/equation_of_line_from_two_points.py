@@ -2,7 +2,8 @@ import random
 import math
 
 
-def gen_func(maxCoordinate=20, minCoordinate=-20):
+def equation_of_line_from_two_points(maxCoordinate=20, minCoordinate=-20):
+    """Equation of line from two points"""
     x1 = random.randint(minCoordinate, maxCoordinate)
     x2 = random.randint(minCoordinate, maxCoordinate)
 
@@ -54,8 +55,3 @@ def gen_func(maxCoordinate=20, minCoordinate=-20):
         else:
             solution = str(coeff_y) + "y = " + str(coeff_x) + "x " + str(constant)
     return problem, f'${solution}$'
-
-
-equation_of_line_from_two_points = Generator(
-    "Equation of line from two points", 114, gen_func,
-    ["maxCoordinate=20", "minCoordinate=-20"])

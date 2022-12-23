@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxSideLength=50):
+def valid_triangle(maxSideLength=50):
+    """Valid Triangle"""
     sideA = random.randint(1, maxSideLength)
     sideB = random.randint(1, maxSideLength)
     sideC = random.randint(1, maxSideLength)
@@ -15,7 +16,3 @@ def gen_func(maxSideLength=50):
     problem = f"Does triangle with sides ${sideA}, {sideB}$ and ${sideC}$ exist?"
     solution = "Yes" if exists else "No"
     return problem, f'${solution}$'
-
-
-valid_triangle = Generator("Triangle exists check", 19, gen_func,
-                           ["maxSideLength=50"])
