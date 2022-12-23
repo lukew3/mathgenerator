@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxCP=1000, maxSP=1000):
+def profit_loss_percent(maxCP=1000, maxSP=1000):
+    """Profit or Loss Percent"""
     cP = random.randint(1, maxCP)
     sP = random.randint(1, maxSP)
     diff = abs(sP - cP)
@@ -13,8 +14,3 @@ def gen_func(maxCP=1000, maxSP=1000):
 
     problem = f"{profitOrLoss} percent when $CP = {cP}$ and $SP = {sP}$ is: "
     return problem, f'${percent}$'
-
-
-profit_loss_percent = Generator("Profit or Loss Percent", 63,
-                                gen_func,
-                                ["maxCP=1000", "maxSP=1000"])

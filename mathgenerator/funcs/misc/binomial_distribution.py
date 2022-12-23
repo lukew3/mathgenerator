@@ -12,7 +12,8 @@ def newton_symbol(n, k):
     return factorial(n) / (factorial(k) * factorial(n - k))
 
 
-def gen_func():
+def binomial_distribution():
+    """Binomial distribution"""
     rejected_fraction = float(random.randint(30, 40)) + random.random()
     batch = random.randint(10, 20)
     rejections = random.randint(1, 9)
@@ -31,7 +32,3 @@ def gen_func():
         "batch of ${1:}$ pistons will contain no more than ${2:}$ " \
         "rejected pistons?".format(rejected_fraction, batch, rejections)
     return problem, f'${answer}$'
-
-
-binomial_distribution = Generator("Binomial distribution", 109,
-                                  gen_func, [""])

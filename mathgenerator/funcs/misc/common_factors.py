@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxVal=100):
+def common_factors(maxVal=100):
+    """Common Factors"""
     a = x = random.randint(1, maxVal)
     b = y = random.randint(1, maxVal)
 
@@ -22,7 +23,3 @@ def gen_func(maxVal=100):
     problem = f"Common Factors of ${a}$ and ${b} = $"
     solution = f'${arr}$'
     return problem, solution
-
-
-common_factors = Generator("Common Factors", 40, gen_func,
-                           ["maxVal=100"])

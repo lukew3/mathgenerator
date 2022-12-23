@@ -1,11 +1,12 @@
 import random
 
 
-def gen_func(number_values=6,
+def geometric_progression(number_values=6,
              min_value=2,
              max_value=12,
              n_term=7,
              sum_term=5):
+    """Geometric Progression"""
     r = random.randint(min_value, max_value)
     a = random.randint(min_value, max_value)
     n_term = random.randint(number_values, number_values + 5)
@@ -20,8 +21,3 @@ def gen_func(number_values=6,
     solution = "The value of a is ${}$, common ratio is ${}$ , {}th term is ${}$, sum upto {}th term is ${}$".format(
         a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
     return problem, solution
-
-
-geometric_progression = Generator("Geometric Progression", 66, gen_func, [
-    "number_values=6", "min_value=2", "max_value=12", "n_term=7", "sum_term=5"
-])

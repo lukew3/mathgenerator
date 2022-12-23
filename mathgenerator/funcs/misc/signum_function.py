@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(min=-999, max=999):
+def signum_function(min=-999, max=999):
+    """Signum Function"""
     a = random.randint(min, max)
     b = 0
     if (a > 0):
@@ -12,7 +13,3 @@ def gen_func(min=-999, max=999):
     problem = f"signum of {a} is ="
     solution = f'${b}$'
     return problem, solution
-
-
-signum_function = Generator("signum function", 106, gen_func,
-                            ["min=-999", "max=999"])

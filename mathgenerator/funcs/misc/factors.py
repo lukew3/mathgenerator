@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxVal=1000):
+def factors(maxVal=1000):
+    """Factors of a number"""
     n = random.randint(1, maxVal)
 
     factors = []
@@ -20,7 +21,3 @@ def gen_func(maxVal=1000):
     problem = f"Factors of ${n} = $"
     solution = factors
     return problem, f'${solution}$'
-
-
-factors = Generator("Factors of a number", 116, gen_func,
-                    ["maxVal=1000"])

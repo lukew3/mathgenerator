@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxVal=20):
+def hcf(maxVal=20):
+    """HCF (Highest Common Factor)"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
@@ -11,6 +12,3 @@ def gen_func(maxVal=20):
     problem = f"HCF of ${a}$ and ${b} = $"
     solution = f'${x}$'
     return problem, solution
-
-
-hcf = Generator("HCF (Highest Common Factor)", 51, gen_func, ["maxVal=20"])

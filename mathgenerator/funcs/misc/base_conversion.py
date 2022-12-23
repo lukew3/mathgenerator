@@ -31,7 +31,8 @@ def fromBaseTenTo(n, toBase):
 #     return int(n,fromBase)
 
 
-def gen_func(maxNum=60000, maxBase=16):
+def base_conversion(maxNum=60000, maxBase=16):
+    """Base Conversion"""
     assert type(
         maxNum
     ) == int and maxNum >= 100 and maxNum <= 65536, "maxNum({}) must be >=100 and <=65536".format(
@@ -51,7 +52,3 @@ def gen_func(maxNum=60000, maxBase=16):
     problem = f"Convert ${fromBaseTenTo(n, bases[0])}$ from base ${bases[0]}$ to base ${bases[1]}$."
     ans = fromBaseTenTo(n, bases[1])
     return problem, f'${ans}$'
-
-
-base_conversion = Generator("Base Conversion", 94, gen_func,
-                            ["maxNum=60000", "maxBase=16"])

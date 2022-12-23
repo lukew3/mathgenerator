@@ -1,9 +1,10 @@
 import random
 
 
-def gen_func(maxd=100,
+def arithmetic_progression_term(maxd=100,
              maxa=100,
              maxn=100):
+    """Arithmetic Progression Term"""
     d = random.randint(-1 * maxd, maxd)
     a1 = random.randint(-1 * maxa, maxa)
     a2 = a1 + d
@@ -14,8 +15,3 @@ def gen_func(maxd=100,
 
     problem = f'Find term number ${n}$ of the AP series: ${apString}$'
     return problem, f'${solution}$'
-
-
-arithmetic_progression_term = Generator("AP Term Calculation", 82,
-                                        gen_func,
-                                        ["maxd=100", "maxa=100", "maxn=100"])

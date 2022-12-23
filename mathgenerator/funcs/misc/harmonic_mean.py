@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxValue=100, maxCount=4):
+def harmonic_mean(maxValue=100, maxCount=4):
+    """Harmonic Mean of N Numbers"""
     count = random.randint(2, maxCount)
     nums = [random.randint(1, maxValue) for _ in range(count)]
     sum = 0
@@ -12,7 +13,3 @@ def gen_func(maxValue=100, maxCount=4):
     problem = f"Harmonic mean of ${count}$ numbers ${', '.join(map(str, nums))} = $"
     solution = f"${ans}$"
     return problem, solution
-
-
-harmonic_mean = Generator("Harmonic Mean of N Numbers", 68, gen_func,
-                          ["maxValue=100", "maxNum=4"])

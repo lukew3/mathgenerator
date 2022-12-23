@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxVal=20):
+def gcd(maxVal=20):
+    """GCD (Greatest Common Denominator)"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     x, y = a, b
@@ -11,7 +12,3 @@ def gen_func(maxVal=20):
     problem = f"GCD of ${a}$ and ${b} = $"
     solution = f'${x}$'
     return problem, solution
-
-
-gcd = Generator("GCD (Greatest Common Denominator)", 10, gen_func,
-                ["maxVal=20"])

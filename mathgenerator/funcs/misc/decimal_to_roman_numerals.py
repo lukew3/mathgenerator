@@ -2,7 +2,8 @@ import random
 import math
 
 
-def gen_func(maxDecimal=4000):
+def decimal_to_roman_numerals(maxDecimal=4000):
+    """Decimal to Roman Numerals"""
     x = random.randint(0, maxDecimal)
     roman_dict = {
         1: "I",
@@ -33,8 +34,3 @@ def gen_func(maxDecimal=4000):
 
     problem = f"The number ${x}$ in Roman Numerals is: "
     return problem, f'${solution}$'
-
-
-decimal_to_roman_numerals = Generator("Converts decimal to Roman Numerals", 85,
-                                      gen_func,
-                                      ["maxDecimal=4000"])

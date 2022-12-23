@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxVal=20):
+def lcm(maxVal=20):
+    """LCM (Least Common Multiple)"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = a * b
@@ -14,6 +15,3 @@ def gen_func(maxVal=20):
     problem = f"LCM of ${a}$ and ${b} =$"
     solution = f'${d}$'
     return problem, solution
-
-
-lcm = Generator("LCM (Least Common Multiple)", 9, gen_func, ["maxVal=20"])

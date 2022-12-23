@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(minval=3, maxval=7, n_a=4, n_b=5):
+def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
+    """Union, Intersection, Difference of Two Sets"""
     number_variables_a = random.randint(minval, maxval)
     number_variables_b = random.randint(minval, maxval)
     a = []
@@ -19,8 +20,3 @@ def gen_func(minval=3, maxval=7, n_a=4, n_b=5):
         f", a-b is ${a.difference(b)}$, b-a is ${b.difference(a)}$." + \
         f" Symmetric difference is ${a.symmetric_difference(b)}$."
     return problem, solution
-
-
-set_operation = Generator("Union,Intersection,Difference of Two Sets", 93,
-                          gen_func,
-                          ["minval=3", "maxval=7", "n_a=4", "n_b=5"])
