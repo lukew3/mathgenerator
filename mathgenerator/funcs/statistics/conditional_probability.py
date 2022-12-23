@@ -19,10 +19,10 @@ def gen_func():
     answer = round(BayesFormula(P_disease, true_positive, true_negative), 2)
 
     problem = "Someone tested positive for a nasty disease which only ${0:.2f}\\%$ of the population have. " \
-        "Test sensitivity (true positive) is equal to $SN={1:.2f}\\percent$ whereas test specificity (true negative) $SP={2:.2f}\\%$. " \
+        "Test sensitivity (true positive) is equal to $SN={1:.2f}$% whereas test specificity (true negative) $SP={2:.2f}\\%$. " \
         "What is the probability that this guy really has that disease?".format(
             P_disease, true_positive, true_negative)
-    solution = f'${answer}\\percent$'
+    solution = f'${answer}$%'
     return problem, solution
 
 

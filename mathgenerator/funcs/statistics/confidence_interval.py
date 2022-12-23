@@ -29,7 +29,7 @@ def gen_func():
     upper = mean + standard_error
     lower = mean - standard_error
 
-    problem = 'The confidence interval for sample ${}$ with ${}\\percent$ confidence is'.format(
+    problem = 'The confidence interval for sample ${}$ with ${}$% confidence is'.format(
         [x for x in lst], lst_per[j])
     solution = f'$({upper}, {lower})$'
     return problem, solution

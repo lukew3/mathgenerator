@@ -7,7 +7,7 @@ def gen_func(maxRes=99, maxModulo=99):
     b = random.randint(0, min(maxRes, maxModulo))
     c = a % b if b != 0 else 0
 
-    problem = f'${a} \\percent {b} = $'
+    problem = f'${a}$ % ${b} = $'
     solution = f'${c}$'
     return problem, solution
 
