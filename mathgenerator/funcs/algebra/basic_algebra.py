@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxVariable=10):
+def basic_algebra(maxVariable=10):
+    """Basic Algebra"""
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
@@ -24,7 +24,3 @@ def gen_func(maxVariable=10):
     problem = f"${a}x + {b} = {c}$"
     solution = f"${x}$"
     return problem, solution
-
-
-basic_algebra = Generator("Basic Algebra", 11, gen_func,
-                          ["maxVariable=10"])

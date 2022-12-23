@@ -1,9 +1,9 @@
-from ...generator import Generator
 import random
 import math
 
 
-def gen_func(maxVal=100):
+def quadratic_equation(maxVal=100):
+    """Quadratic Equation"""
     a = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
     b = random.randint(
@@ -14,7 +14,3 @@ def gen_func(maxVal=100):
     problem = f"What are the zeros of the quadratic equation ${a}x^2+{b}x+{c}=0$"
     solution = f'${res}$'
     return problem, solution
-
-
-quadratic_equation = Generator("Quadratic Equation", 50, gen_func,
-                               ["maxVal=100"])

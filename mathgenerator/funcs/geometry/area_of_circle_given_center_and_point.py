@@ -1,4 +1,3 @@
-from ...generator import Generator
 import random
 from math import cos, sin, pi
 

@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxInput=6):
+def factorial(maxInput=6):
+    """Factorial"""
     a = random.randint(0, maxInput)
     n = a
     b = 1
@@ -11,6 +11,3 @@ def gen_func(maxInput=6):
         n -= 1
 
     return f'${a}! =$', f'${b}$'
-
-
-factorial = Generator("Factorial", 31, gen_func, ["maxInput=6"])

@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxA=25, maxB=25):
+def division(maxA=25, maxB=25):
+    """Division"""
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
 
@@ -11,6 +11,3 @@ def gen_func(maxA=25, maxB=25):
     quotient = int(divisor / dividend)
 
     return f'${divisor}\\div{dividend}=$', f'${quotient}$'
-
-
-division = Generator("Division", 3, gen_func, ["maxA=25", "maxB=25"])

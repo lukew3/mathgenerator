@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10):
+def divide_fractions(maxVal=10):
+    """Divide Fractions"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
 
@@ -27,7 +27,3 @@ def gen_func(maxVal=10):
     sol_denominator = tmp_d // gcd
 
     return f'$\\frac{{{a}}}{{{b}}}\\div\\frac{{{c}}}{{{d}}}=$', f'$\\frac{{{sol_numerator}}}{{{sol_denominator}}}$'
-
-
-divide_fractions = Generator("Fraction Division", 16, gen_func,
-                             ["maxVal=10"])

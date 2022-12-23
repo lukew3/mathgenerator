@@ -1,11 +1,10 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(range_x=10,
+def system_of_equations(range_x=10,
              range_y=10,
-             coeff_mult_range=10,
-             format='string'):
+             coeff_mult_range=10):
+    """Solve a System of Equations in R^2"""
     # Generate solution point first
     x = random.randint(-range_x, range_x)
     y = random.randint(-range_y, range_y)
@@ -49,8 +48,3 @@ def gen_func(range_x=10,
     solution = f"$x = {x}$, $y = {y}$"
     return problem, solution
     # Add random (non-zero) multiple of equations to each other
-
-
-system_of_equations = Generator(
-    "Solve a System of Equations in R^2", 23, gen_func,
-    ["range_x=10", "range_y=10", "coeff_mult_range=10"])

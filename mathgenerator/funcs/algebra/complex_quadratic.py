@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(prob_type=0, max_range=10, format='string'):
+def complex_quadratic(prob_type=0, max_range=10, format='string'):
+    """Complex Quadratic Equation"""
     if prob_type < 0 or prob_type > 1:
         print("prob_type not supported")
         print("prob_type = 0 for real roots problems ")
@@ -67,8 +67,3 @@ def gen_func(prob_type=0, max_range=10, format='string'):
         solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
         return problem, solution
-
-
-complex_quadratic = Generator("complex Quadratic Equation", 100,
-                              gen_func,
-                              ["prob_type=0", "max_range=10"])

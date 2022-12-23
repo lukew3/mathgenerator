@@ -1,11 +1,11 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(range_x1=10,
+def expanding(range_x1=10,
              range_x2=10,
              range_a=10,
              range_b=10):
+    """Expanding Factored Binomial"""
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
     a = random.randint(-range_a, range_a)
@@ -47,8 +47,3 @@ def gen_func(range_x1=10,
     problem = f"$({p1}x{p2})({p3}x{p4})$"
     solution = f"${c1}x^2{c2}x{c3}$"
     return problem, solution
-
-
-expanding = Generator(
-    "Expanding Factored Binomial", 111, gen_func,
-    ["range_x1=10", "range_x2=10", "range_a=10", "range_b=10"])

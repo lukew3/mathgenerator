@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxCoef=10, maxExp=20, maxTerms=10):
+def combine_like_terms(maxCoef=10, maxExp=20, maxTerms=10):
+    """Combine Like Terms"""
     numTerms = random.randint(1, maxTerms)
 
     coefs = [random.randint(1, maxCoef) for _ in range(numTerms)]
@@ -18,7 +18,3 @@ def gen_func(maxCoef=10, maxExp=20, maxTerms=10):
     solution = " + ".join([f"{d[k]}x^{{{k}}}" for k in sorted(d)])
 
     return f'${problem}$', f'${solution}$'
-
-
-combine_like_terms = Generator("Combine Like terms", 105, gen_func,
-                               ["maxCoef=10", "maxExp=20", "maxTerms=10"])

@@ -1,13 +1,13 @@
-from ...generator import Generator
 from ...latexBuilder import bmatrix
 import random
 import math
 import sympy
 
 
-def gen_func(SquareMatrixDimension=3,
+def invert_matrix(SquareMatrixDimension=3,
              MaxMatrixElement=99,
              OnlyIntegerElementsInInvertedMatrix=True):
+    """Invert Matrix"""
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()
@@ -80,9 +80,3 @@ def gen_func(SquareMatrixDimension=3,
     problem = 'Inverse of Matrix $' + bmatrix(Mat.tolist()) + '$ is:'
     solution = bmatrix(sympy.Matrix.inv(Mat).tolist())
     return problem, solution
-
-
-invert_matrix = Generator("Inverse of a Matrix", 74, gen_func, [
-    "SquareMatrixDimension=3", "MaxMatrixElement=99",
-    "OnlyIntegerElementsInInvertedMatrix=True"
-])

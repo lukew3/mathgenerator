@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxNum=250):
+def is_composite(maxNum=250):
+    """Is Composite"""
     a = random.randint(2, maxNum)
 
     problem = f"Is ${a}$ composite?"
@@ -14,6 +14,3 @@ def gen_func(maxNum=250):
     solution = "No"
 
     return problem, solution
-
-
-is_composite = Generator('Is Composite', 124, gen_func, ["maxNum=250"])

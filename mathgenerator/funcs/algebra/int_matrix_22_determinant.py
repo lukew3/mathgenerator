@@ -1,9 +1,9 @@
-from ...generator import Generator
 from ...latexBuilder import bmatrix
 import random
 
 
-def gen_func(maxMatrixVal=100):
+def int_matrix_22_determinant(maxMatrixVal=100):
+    """Determinant to 2x2 Matrix"""
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -15,8 +15,3 @@ def gen_func(maxMatrixVal=100):
     problem = f"$\\det {bmatrix(lst)}= $"
     solution = f"${determinant}$"
     return problem, solution
-
-
-int_matrix_22_determinant = Generator("Determinant to 2x2 Matrix", 77,
-                                      gen_func,
-                                      ["maxMatrixVal=100"])

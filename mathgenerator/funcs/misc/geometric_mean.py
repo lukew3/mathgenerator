@@ -1,4 +1,3 @@
-from ...generator import Generator
 import random
 import numpy as np
 

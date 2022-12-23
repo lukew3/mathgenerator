@@ -1,4 +1,3 @@
-from ...generator import Generator
 import random
 
 
@@ -10,7 +9,8 @@ def greatestCommonDivisorOfTwoNumbers(number1, number2):
     return number1
 
 
-def gen_func(numbersCount=2, maximalNumberLimit=10**9):
+def greatest_common_divisor(numbersCount=2, maximalNumberLimit=10**9):
+    """Greatest Common Divisor of N Numbers"""
     numbersCount = max(numbersCount, 2)
     numbers = [random.randint(0, maximalNumberLimit)
                for number in range(numbersCount)]
@@ -23,7 +23,3 @@ def gen_func(numbersCount=2, maximalNumberLimit=10**9):
             numbers[index], greatestCommonDivisor)
 
     return f'$GCD({",".join(map(str, numbers))})=$', f"${greatestCommonDivisor}$"
-
-
-greatest_common_divisor = Generator("Greatest Common Divisor of N Numbers", 120, gen_func, [
-                                    "numbersCount=2", "maximalNumberLimit=10**9"])

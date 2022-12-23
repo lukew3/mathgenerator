@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(max_num=100):
+def is_prime(max_num=100):
+    """Is Prime"""
     a = random.randint(2, max_num)
     problem = f"Is ${a}$ prime?"
     if a == 2:
@@ -15,6 +15,3 @@ def gen_func(max_num=100):
     solution = "Yes"
 
     return problem, solution
-
-
-is_prime = Generator('isprime', 90, gen_func, ["max_num=100"])

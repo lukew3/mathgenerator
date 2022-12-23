@@ -1,9 +1,9 @@
-from ...generator import Generator
 from ...latexBuilder import bmatrix
 import random
 
 
-def gen_func(maxVal=100, max_dim=10):
+def matrix_multiplication(maxVal=100, max_dim=10):
+    """Multiply Two Matrices"""
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
@@ -24,8 +24,3 @@ def gen_func(maxVal=100, max_dim=10):
     problem = f"Multiply ${bmatrix(a)}$ and ${bmatrix(b)}$"
     solution = f'${bmatrix(res)}$'
     return problem, solution
-
-
-matrix_multiplication = Generator("Multiplication of two matrices", 46,
-                                  gen_func,
-                                  ["maxVal=100", "max_dim=10"])

@@ -1,14 +1,14 @@
-from ...generator import Generator
 import random
 import fractions
 
 
-def gen_func(minM=-10,
+def intersection_of_two_lines(minM=-10,
              maxM=10,
              minB=-10,
              maxB=10,
              minDenominator=1,
              maxDenominator=6):
+    """Intersection of two lines"""
     def generateEquationString(m, b):
         """
         Generates an equation given the slope and intercept.
@@ -85,10 +85,3 @@ def gen_func(minM=-10,
         solution = f"$({fractionToString(intersection_x)}, {fractionToString(intersection_y)})$"
 
     return problem, solution
-
-
-intersection_of_two_lines = Generator(
-    "Intersection of Two Lines", 41, gen_func, [
-        "minM=-10", "maxM=10", "minB=-10", "maxB=10", "minDenominator=1",
-        "maxDenominator=6"
-    ])

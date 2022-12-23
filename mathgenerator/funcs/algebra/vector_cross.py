@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(minVal=-20, maxVal=20):
+def vector_cross(minVal=-20, maxVal=20):
+    """Cross product of 2 vectors"""
     a = [random.randint(minVal, maxVal) for _ in range(3)]
     b = [random.randint(minVal, maxVal) for _ in range(3)]
     c = [
@@ -13,7 +13,3 @@ def gen_func(minVal=-20, maxVal=20):
     problem = f"${a} \\times {b} = $"
     solution = f"${c}$"
     return problem, solution
-
-
-vector_cross = Generator("Cross Product of 2 Vectors", 43, gen_func,
-                         ["minVal=-20", "maxVal=20"])

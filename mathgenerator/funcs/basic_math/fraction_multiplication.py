@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10):
+def fraction_multiplication(maxVal=10):
+    """Fraction Multiplication"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -30,7 +30,3 @@ def gen_func(maxVal=10):
     else:
         solution = f"$\\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}$"
     return problem, solution
-
-
-fraction_multiplication = Generator("Fraction Multiplication", 28,
-                                    gen_func, ["maxVal=10"])

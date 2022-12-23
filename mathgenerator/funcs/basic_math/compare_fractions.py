@@ -1,8 +1,8 @@
-from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10):
+def compare_fractions(maxVal=10):
+    """Compare Fractions"""
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -25,7 +25,3 @@ def gen_func(maxVal=10):
 
     problem = f"Which symbol represents the comparison between $\\frac{{{a}}}{{{b}}}$ and $\\frac{{{c}}}{{{d}}}$?"
     return problem, solution
-
-
-compare_fractions = Generator("Compare Fractions", 44, gen_func,
-                              ["maxVal=10"])
