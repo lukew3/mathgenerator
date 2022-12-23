@@ -17,7 +17,7 @@ def gen_func(maxExp=3, maxCoef=10):
         '({},{})'.format(str(p), sympy.sympify(problem.replace(x, p)))
         for p in solution)
     problem = 'f(x)=' + str(problem).replace('**', '^')
-    return problem, solution
+    return f'${problem}$', f'${solution}$'
 
 
 stationary_points = Generator("Stationary Points", 110, gen_func,
