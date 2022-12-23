@@ -1,13 +1,6 @@
 from ...generator import Generator
+from ...latexBuilder import bmatrix
 import random
-
-
-def list_to_tex(lst):
-    out = '\\begin{bmatrix} '
-    lst = [' & '.join(map(str, row)) for row in lst]
-    out += ' \\\\ '.join(lst)
-    out += ' \\end{bmatrix}'
-    return out
 
 
 def gen_func(maxMatrixVal=10, maxRes=100, format='string'):
@@ -25,8 +18,8 @@ def gen_func(maxMatrixVal=10, maxRes=100, format='string'):
     lst = [[a, b], [c, d]]
     lst1 = [[a1, b1], [c1, d1]]
 
-    problem = f'${constant} * {list_to_tex(lst)} =$'
-    solution = f'${list_to_tex(lst1)}$'
+    problem = f'${constant} * {bmatrix(lst)} =$'
+    solution = f'${bmatrix(lst1)}$'
     return problem, solution
 
 
