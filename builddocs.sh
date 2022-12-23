@@ -1,5 +1,4 @@
 sphinx-apidoc mathgenerator -F -o docs
-cd docs
-sphinx build -b html
-cd _build/html
+sphinx-build -b html docs/ docs/build/html
+cd docs/build/html
 python -m http.server 8000

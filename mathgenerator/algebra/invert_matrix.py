@@ -1,4 +1,4 @@
-from ...latexBuilder import bmatrix
+from ..latexBuilder import bmatrix
 import random
 import math
 import sympy
