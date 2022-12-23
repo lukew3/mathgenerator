@@ -10,7 +10,7 @@ def gen_func(minVal=-20, maxVal=20):
         a[0] * b[1] - a[1] * b[0]
     ]
 
-    problem = f"${a} \\multiply {b} = $"
+    problem = f"${a} \\times {b} = $"
     solution = f"${c}$"
     return problem, solution
 
