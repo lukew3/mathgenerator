@@ -2,7 +2,8 @@ import random
 import math
 
 
-def gen_func(maxlength=20):
+def combinations(maxlength=20):
+    """Combinations of Objects"""
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
 
@@ -10,7 +11,3 @@ def gen_func(maxlength=20):
 
     problem = f"Find the number of combinations from ${a}$ objects picked ${b}$ at a time."
     return problem, f'${solution}$'
-
-
-combinations = Generator("Combinations of Objects", 30, gen_func,
-                         ["maxlength=20"])

@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func():
+def conditional_probability():
+    """Conditional Probability"""
     P_disease = round(2. * random.random(), 2)
     true_positive = round(random.random() + float(random.randint(90, 99)), 2)
     true_negative = round(random.random() + float(random.randint(90, 99)), 2)
@@ -23,7 +24,3 @@ def gen_func():
             P_disease, true_positive, true_negative)
     solution = f'${answer}$%'
     return problem, solution
-
-
-conditional_probability = Generator("Conditional Probability", 107,
-                                    gen_func, [""])

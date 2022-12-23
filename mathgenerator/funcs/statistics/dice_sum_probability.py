@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxDice=3):
+def dice_sum_probability(maxDice=3):
+    """Probability of a certain sum appearing on faces of dice"""
     a = random.randint(1, maxDice)
     b = random.randint(a, 6 * a)
 
@@ -23,8 +24,3 @@ def gen_func(maxDice=3):
     problem = f"If ${a}$ dice are rolled at the same time, the probability of getting a sum of ${b} =$"
     solution = f"\\frac{{{count}}}{{{6**a}}}"
     return problem, solution
-
-
-dice_sum_probability = Generator(
-    "Probability of a certain sum appearing on faces of dice", 52,
-    gen_func, ["maxDice=3"])

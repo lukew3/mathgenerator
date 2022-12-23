@@ -1,7 +1,8 @@
 import random
 
 
-def gen_func(maxlen=10):
+def mean_median(maxlen=10):
+    """Mean and Median"""
     randomlist = random.sample(range(1, 99), maxlen)
     total = 0
     for n in randomlist:
@@ -13,6 +14,3 @@ def gen_func(maxlen=10):
     problem = f"Given the series of numbers ${randomlist}$. Find the arithmatic mean and mdian of the series"
     solution = f"Arithmetic mean of the series is ${mean}$ and Arithmetic median of this series is ${median}$"
     return problem, solution
-
-
-mean_median = Generator("Mean and Median", 76, gen_func, ["maxlen=10"])
