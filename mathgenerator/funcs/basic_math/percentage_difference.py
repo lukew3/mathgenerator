@@ -10,7 +10,7 @@ def gen_func(maxValue=200, minValue=0):
     diff = round(diff, 2)
 
     problem = f"What is the percentage difference between ${value_a}$ and ${value_b}$?"
-    solution = f'${diff}\\%$'
+    solution = f'${diff}\\percent$'
     return problem, solution
 
 
