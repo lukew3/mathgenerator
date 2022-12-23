@@ -11,7 +11,7 @@ def gen_func(minExpVal=-100, maxExpVal=100):
         c[0] /= 10
         c[1] += 1
 
-    problem = f"Product of scientific notations ${a[0]}x10^{a[1]} and {b[0]}x10^{b[1]} = $"
+    problem = f"Product of scientific notations ${a[0]} \\times 10^{a[1]} and {b[0]} \\times 10^{b[1]} = $"
     solution = str(round(c[0], 2)) + "x10^" + str(c[1])
     return problem, solution
 
