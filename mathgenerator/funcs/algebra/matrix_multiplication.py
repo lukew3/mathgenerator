@@ -25,21 +25,6 @@ def gen_func(maxVal=100, max_dim=10):
     solution = f'${bmatrix(res)}$'
     return problem, solution
 
-"""
-def matrixMultiplicationFuncHelper(inp):
-    m = len(inp)
-    n = len(inp[0])
-
-    string = "[["
-    for i in range(m):
-        for j in range(n):
-            string += f"{inp[i][j]: 6d}"
-            string += ", " if j < n - 1 else ""
-        string += "]\n [" if i < m - 1 else ""
-    string += "]]"
-
-    return string
-"""
 
 matrix_multiplication = Generator("Multiplication of two matrices", 46,
                                   gen_func,

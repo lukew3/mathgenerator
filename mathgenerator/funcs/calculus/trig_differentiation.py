@@ -1,6 +1,7 @@
 from ...generator import Generator
 import random
 
+
 def gen_func():
     pairs = {
         '\\sin': '\\cos',
