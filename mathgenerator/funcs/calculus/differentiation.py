@@ -36,7 +36,7 @@ def genDifferentiationProblem(diff_lvl=2):
     return problem
 
 
-def gen_func(diff_lvl=2, format='string'):
+def gen_func(diff_lvl=2):
     if diff_lvl < 1 or diff_lvl > 4:
         print("diff_lvl not supported")
         return None
@@ -44,15 +44,10 @@ def gen_func(diff_lvl=2, format='string'):
 
     x = sympy.symbols('x')
     solution = str(sympy.diff(problem.replace('^', '**'), x))
-    solution = solution.replace('**', '^')
-    problem = f"differentiate w.r.t x : d({problem})/dx"
+    solution = f"${solution.replace('**', '^')}$"
+    problem = f"$\\frac{{d}}{{dx}}({problem}) = $"
 
-    if format == 'string':
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return problem, solution
+    return problem, solution
 
 
 differentiation = Generator("Differentiation", 88, gen_func,
