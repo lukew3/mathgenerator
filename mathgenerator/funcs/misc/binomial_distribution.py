@@ -26,7 +26,7 @@ def gen_func():
 
     answer = round(100 * answer, 2)
 
-    problem = "A manufacturer of metal pistons finds that, on average, ${0:}\\percent$ "\
+    problem = "A manufacturer of metal pistons finds that, on average, ${0:}$% "\
         "of the pistons they manufacture are rejected because " \
         "they are incorrectly sized. What is the probability that a "\
         "batch of ${1:}$ pistons will contain no more than ${2:}$ " \
