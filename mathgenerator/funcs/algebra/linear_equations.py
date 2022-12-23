@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(n=2, varRange=20, coeffRange=20, format='string'):
+def gen_func(n=2, varRange=20, coeffRange=20):
     if n > 10:
         print("[!] n cannot be greater than 10")
         return None, None
@@ -10,7 +10,7 @@ def gen_func(n=2, varRange=20, coeffRange=20, format='string'):
     vars = ['x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g'][:n]
     soln = [random.randint(-varRange, varRange) for i in range(n)]
     problem = list()
-    solution = ", ".join(
+    solution = "$, $".join(
         ["{} = {}".format(vars[i], soln[i]) for i in range(n)])
 
     for _ in range(n):
@@ -27,14 +27,9 @@ def gen_func(n=2, varRange=20, coeffRange=20, format='string'):
         problem.append(prob)
 
     # problem = "\n".join(problem)
-    problem = ", ".join(problem)
+    problem = "$ and $".join(problem)
 
-    if format == 'string':
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return problem, solution
+    return f'Given the equations ${problem}$, solve for $x$ and $y$', f'${solution}$'
 
 
 linear_equations = Generator("Linear Equations", 26, gen_func,

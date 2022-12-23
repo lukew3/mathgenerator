@@ -45,14 +45,9 @@ def gen_func(range_x=10,
             '' if x_str != '' else '0')
         return f'{x_str}{op}{y_str} = {coeffs[2]}'
 
-    if format == 'string':
-        problem = f"{coeffToFuncString(new_c1)}, {coeffToFuncString(new_c2)}"
-        solution = f"x = {x}, y = {y}"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return new_c1, new_c2, x, y
+    problem = f"Given ${coeffToFuncString(new_c1)}$ and ${coeffToFuncString(new_c2)}$, solve for $x$ and $y$."
+    solution = f"$x = {x}$, $y = {y}$"
+    return problem, solution
     # Add random (non-zero) multiple of equations to each other
 
 

@@ -2,20 +2,12 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxMulti=12, format='string'):
+def gen_func(maxMulti=12):
     a = random.randint(0, maxMulti)
     b = random.randint(0, maxMulti)
     c = a * b
 
-    if format == 'string':
-        problem = str(a) + "*" + str(b) + "="
-        solution = str(c)
-        return problem, solution
-    elif format == 'latex':
-        problem = "\\(" + str(a) + "\\cdot" + str(b) + "=\\)"
-        solution = "\\(" + str(c) + "\\)"
-    else:
-        return a, b, c
+    return f'${a}\\cdot{b}$', f'${c}$'
 
 
 multiplication = Generator("Multiplication", 2, gen_func,

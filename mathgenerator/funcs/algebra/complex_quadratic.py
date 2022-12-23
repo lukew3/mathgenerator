@@ -39,16 +39,16 @@ def gen_func(prob_type=0, max_range=10, format='string'):
 
     eq += str(c) + ' = 0'
 
-    problem = 'Find the roots of given Quadratic Equation ' + eq
+    problem = f'Find the roots of given Quadratic Equation ${eq}$'
 
     if d < 0:
         sqrt_d = (-d)**0.5
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            solution = f'(({-b} + {sqrt_d}i)/2*{a}, ({-b} - {sqrt_d}i)/2*{a})'
+            solution = f'(\\frac{{{-b} + {sqrt_d}i}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}i}}{{2*{a}}})'
         else:
-            solution = f'(({-b} + sqrt({-d})i)/2*{a}, ({-b} - sqrt({-d})i)/2*{a})'
+            solution = f'(\\frac{{{-b} + \\sqrt{{{-d}}}i}}{{2*{a}}}, \\frac{{{-b} - \\sqrt{{{-d}}}i}}{{2*{a}}})'
 
         return problem, solution
 
@@ -60,11 +60,11 @@ def gen_func(prob_type=0, max_range=10, format='string'):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            g_sol = f'(({-b} + {sqrt_d})/2*{a}, ({-b} - {sqrt_d})/2*{a})'
+            g_sol = f'(\\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
         else:
-            g_sol = f'(({-b} + sqrt({d}))/2*{a}, ({-b} - sqrt({d}))/2*{a})'
+            g_sol = f'(\\frac{{{-b} + \\sqrt{{{d}}}}}{{2*{a}}}, (\\frac{{{-b} - \\sqrt{{{d}}}}}{{2*{a}}})'
 
-        solution = f'simplified solution : ({s_root1, s_root2}), generalized solution : ' + g_sol
+        solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
         return problem, solution
 

@@ -3,7 +3,7 @@ import random
 from scipy.integrate import quad
 
 
-def gen_func(max_coeff=100, format='string'):
+def gen_func(max_coeff=100):
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
@@ -14,15 +14,9 @@ def gen_func(max_coeff=100, format='string'):
     result = quad(integrand, 0, 1, args=(a, b, c))[0]
     S = round(result, 4)
 
-    if format == 'string':
-        problem = "The definite integral within limits 0 to 1 of the equation " + \
-            str(a) + "x^2 + " + str(b) + "x + " + str(c) + " is = "
-        solution = str(S)
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b, c, S
+    problem = f"The definite integral within limits $0$ to $1$ of the equation ${a}x^2 + {b}x + {c} = $"
+    solution = f'${S}$'
+    return problem, solution
 
 
 definite_integral = Generator("Definite Integral of Quadratic Equation", 89,

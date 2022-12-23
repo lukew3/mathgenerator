@@ -2,20 +2,11 @@ from ...generator import Generator
 import random
 
 
-def gen_func(minNo=1, maxNo=12, format='string'):
+def gen_func(minNo=1, maxNo=12):
     b = random.randint(minNo, maxNo)
-    a = b * b
+    a = b ** 2
 
-    if format == 'string':
-        problem = "sqrt(" + str(a) + ")="
-        solution = str(b)
-        return problem, solution
-    elif format == 'latex':
-        problem = "\\(\\sqrt{" + str(a) + "}=\\)"
-        solution = "\\(" + str(b) + "\\)"
-        return problem, solution
-    else:
-        return a, b
+    return f'$\\sqrt{{{a}}}=$', f'${b}$'
 
 
 square_root = Generator("Square Root", 6, gen_func,

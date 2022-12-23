@@ -3,20 +3,15 @@ import random
 import math
 
 
-def gen_func(maxRadius=49, maxAngle=359, format='string'):
+def gen_func(maxRadius=49, maxAngle=359):
     r = random.randint(1, maxRadius)
     a = random.randint(1, maxAngle)
     secArea = float((a / 360) * math.pi * r * r)
-    formatted_float = "{:.5f}".format(secArea)
+    formatted_float = round(secArea, 2)
 
-    if format == 'string':
-        problem = f"Given radius, {r} and angle, {a}. Find the area of the sector."
-        solution = f"Area of sector = {formatted_float}"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return r, a, formatted_float
+    problem = f"What is the area of a sector with radius ${r}$ and angle ${a}$ degrees?"
+    solution = f"${formatted_float}$"
+    return problem, solution
 
 
 sector_area = Generator("Area of a Sector", 75, gen_func,

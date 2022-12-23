@@ -1,27 +1,16 @@
 from ...generator import Generator
 import random
+import math
 
 
-def gen_func(maxlength=20, format='string'):
-    def factorial(a):
-        d = 1
-        for i in range(a):
-            a = (i + 1) * d
-            d = a
-        return d
-
+def gen_func(maxlength=20):
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
 
-    solution = int(factorial(a) / (factorial(b) * factorial(a - b)))
+    solution = int(math.factorial(a) / (math.factorial(b) * math.factorial(a - b)))
 
-    if format == 'string':
-        problem = f"Number of combinations from {a} objects picked {b} at a time "
-        return problem, str(solution)
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b, solution
+    problem = f"Find the number of combinations from ${a}$ objects picked ${b}$ at a time."
+    return problem, f'${solution}$'
 
 
 combinations = Generator("Combinations of Objects", 30, gen_func,

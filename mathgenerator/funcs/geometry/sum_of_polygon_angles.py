@@ -2,17 +2,12 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSides=12, format='string'):
+def gen_func(maxSides=12):
     side_count = random.randint(3, maxSides)
     sum = (side_count - 2) * 180
 
-    if format == 'string':
-        problem = f"Sum of angles of polygon with {side_count} sides = "
-        return problem, sum
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return side_count, sum
+    problem = f"What is the sum of interior angles of a polygon with ${side_count}$ sides?"
+    return problem, f'${sum}$'
 
 
 sum_of_polygon_angles = Generator("Sum of Angles of Polygon", 58,

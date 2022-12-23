@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVariable=10, format='string'):
+def gen_func(maxVariable=10):
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
@@ -21,16 +21,9 @@ def gen_func(maxVariable=10, format='string'):
     elif a == 1 or a == i:
         x = f"{c - b}"
 
-    if format == 'string':
-        problem = f"{a}x + {b} = {c}"
-        solution = x
-        return problem, solution
-    elif format == 'latex':
-        problem = f"\\({a}x + {b} = {c}\\)"
-        solution = "\\(" + x + "\\)"
-        return problem, solution
-    else:
-        return a, b, c, x
+    problem = f"${a}x + {b} = {c}$"
+    solution = f"${x}$"
+    return problem, solution
 
 
 basic_algebra = Generator("Basic Algebra", 11, gen_func,

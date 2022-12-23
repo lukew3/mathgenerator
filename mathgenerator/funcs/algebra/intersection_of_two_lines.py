@@ -8,8 +8,7 @@ def gen_func(minM=-10,
              minB=-10,
              maxB=10,
              minDenominator=1,
-             maxDenominator=6,
-             format='string'):
+             maxDenominator=6):
     def generateEquationString(m, b):
         """
         Generates an equation given the slope and intercept.
@@ -66,11 +65,10 @@ def gen_func(minM=-10,
     b1 = random.randint(minB, maxB)
     b2 = random.randint(minB, maxB)
 
-    equation1 = generateEquationString(m1, b1)
-    equation2 = generateEquationString(m2, b2)
+    eq1 = generateEquationString(m1, b1)
+    eq2 = generateEquationString(m2, b2)
 
-    problem = "Find the point of intersection of the two lines: "
-    problem += f"{equation1} and {equation2}"
+    problem = f"Find the point of intersection of the two lines: ${eq1}$ and ${eq2}$"
 
     m1 = fractions.Fraction(*m1)
     m2 = fractions.Fraction(*m2)
@@ -84,14 +82,9 @@ def gen_func(minM=-10,
     else:
         intersection_x = (b1 - b2) / (m2 - m1)
         intersection_y = ((m2 * b1) - (m1 * b2)) / (m2 - m1)
-        solution = f"({fractionToString(intersection_x)}, {fractionToString(intersection_y)})"
+        solution = f"$({fractionToString(intersection_x)}, {fractionToString(intersection_y)})$"
 
-    if format == 'string':
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return equation1, equation2, solution
+    return problem, solution
 
 
 intersection_of_two_lines = Generator(

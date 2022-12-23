@@ -2,18 +2,13 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSide=20, unit='m', format='string'):
+def gen_func(maxSide=20, unit='m'):
     a = random.randint(1, maxSide)
     ans = a**3
 
-    if format == 'string':
-        problem = f"Volume of cube with side = {a}{unit} is"
-        solution = f"{ans} {unit}^3"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, ans, unit
+    problem = f"Volume of cube with a side length of ${a}{unit}$ is"
+    solution = f"${ans} {unit}^3$"
+    return problem, solution
 
 
 volume_cube = Generator("Volume of Cube", 35, gen_func,

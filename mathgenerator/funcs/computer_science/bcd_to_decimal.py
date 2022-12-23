@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxNumber=10000, format='string'):
+def gen_func(maxNumber=10000):
     n = random.randint(1000, maxNumber)
     binstring = ''
     while True:
@@ -16,14 +16,9 @@ def gen_func(maxNumber=10000, format='string'):
         else:
             n = q
 
-    if format == 'string':
-        problem = "Integer of Binary Coded Decimal " + str(n) + " is = "
-        solution = int(binstring, 2)
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return n, int(binstring, 2)
+    problem = f"Integer of Binary Coded Decimal ${n}$ is $=$ "
+    solution = f'${int(binstring, 2)}$'
+    return problem, solution
 
 
 bcd_to_decimal = Generator("Binary Coded Decimal to Integer", 91,

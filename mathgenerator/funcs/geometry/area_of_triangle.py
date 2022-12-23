@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxA=20, maxB=20, format='string'):
+def gen_func(maxA=20, maxB=20):
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
     c = random.randint(abs(b - a) + 1, abs(a + b) - 1)
@@ -10,15 +10,9 @@ def gen_func(maxA=20, maxB=20, format='string'):
     s = (a + b + c) / 2
     area = (s * (s - a) * (s - b) * (s - c))**0.5
 
-    if format == 'string':
-        problem = "Area of triangle with side lengths: " + \
-            str(a) + " " + str(b) + " " + str(c) + " = "
-        solution = str(round(area, 2))
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, b, c, area
+    problem = f"Area of triangle with side lengths: ${a}, {b} {c} = $"
+    solution = f'${round(area, 2)}$'
+    return problem, solution
 
 
 area_of_triangle = Generator("Area of Triangle", 18, gen_func,

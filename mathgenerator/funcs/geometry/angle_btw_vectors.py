@@ -3,7 +3,7 @@ import random
 import math
 
 
-def gen_func(maxEltAmt=20, format='string'):
+def gen_func(maxEltAmt=20):
     s = 0
     v1 = [
         round(random.uniform(0, 1000), 2)
@@ -19,19 +19,14 @@ def gen_func(maxEltAmt=20, format='string'):
     ans = 0
     try:
         ans = round(math.acos(s / mags), 2)
-        solution = str(ans) + " radians"
+        solution = f"${ans}$ radians"
     except ValueError:
         print('angleBtwVectorsFunc has some issues with math module, line 16')
         solution = 'NaN'
         ans = 'NaN'
     # would return the answer in radians
-    if format == 'string':
-        problem = f"angle between the vectors {v1} and {v2} is:"
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return v1, v2, ans
+    problem = f"angle between the vectors ${v1}$ and ${v2}$ is:"
+    return problem, solution
 
 
 angle_btw_vectors = Generator("Angle between 2 vectors", 70,

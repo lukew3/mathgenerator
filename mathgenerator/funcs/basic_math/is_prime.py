@@ -2,27 +2,19 @@ from ...generator import Generator
 import random
 
 
-def gen_func(max_num=100, format='string'):
+def gen_func(max_num=100):
     a = random.randint(2, max_num)
-    problem = f"Is {a} prime?"
+    problem = f"Is ${a}$ prime?"
     if a == 2:
-        solution = "Yes"
-        return (problem, solution)
+        return problem, "Yes"
     if a % 2 == 0:
-        solution = "No"
-        return (problem, solution)
+        return problem, "No"
     for i in range(3, a // 2 + 1, 2):
         if a % i == 0:
-            solution = "No"
-            return (problem, solution)
+            return problem, "No"
     solution = "Yes"
 
-    if format == 'string':
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return a, solution
+    return problem, solution
 
 
 is_prime = Generator('isprime', 90, gen_func, ["max_num=100"])

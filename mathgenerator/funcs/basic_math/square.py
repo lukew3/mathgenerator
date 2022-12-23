@@ -2,20 +2,11 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxSquareNum=20, format='string'):
+def gen_func(maxSquareNum=20):
     a = random.randint(1, maxSquareNum)
-    b = a * a
+    b = a ** 2
 
-    if format == 'string':
-        problem = str(a) + "^2" + "="
-        solution = str(b)
-        return problem, solution
-    if format == 'latex':
-        problem = "\\(" + str(a) + "^{2}=\\)"
-        solution = "\\(" + str(b) + "\\)"
-        return problem, solution
-    else:
-        return a, b
+    return f'${a}^2=$', f'${b}$'
 
 
 square = Generator("Square", 8, gen_func, ["maxSquareNum=20"])

@@ -4,8 +4,7 @@ import random
 
 def gen_func(maxd=100,
              maxa=100,
-             maxn=100,
-             format='string'):
+             maxn=100):
     d = random.randint(-1 * maxd, maxd)
     a1 = random.randint(-1 * maxa, maxa)
     a2 = a1 + d
@@ -15,14 +14,8 @@ def gen_func(maxd=100,
     an = a1 + (n - 1) * d
     solution = n * (a1 + an) / 2
 
-    if format == 'string':
-        problem = 'Find the sum of first ' + \
-            str(n) + ' terms of the AP series: ' + apString
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return n, apString, solution
+    problem = f'Find the sum of first ${n}$ terms of the AP series: ${apString}$'
+    return problem, f'${solution}$'
 
 
 arithmetic_progression_sum = Generator("AP Sum Calculation", 83,

@@ -3,7 +3,7 @@ import random
 import math
 
 
-def gen_func(format='string'):
+def gen_func():
     n = random.randint(20, 40)
     j = random.randint(0, 3)
 
@@ -29,15 +29,10 @@ def gen_func(format='string'):
     upper = mean + standard_error
     lower = mean - standard_error
 
-    if format == 'string':
-        problem = 'The confidence interval for sample {} with {}% confidence is'.format(
-            [x for x in lst], lst_per[j])
-        solution = f'({upper}, {lower})'
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return [x for x in lst], lst_per[j], upper, lower
+    problem = 'The confidence interval for sample ${}$ with ${}$% confidence is'.format(
+        [x for x in lst], lst_per[j])
+    solution = f'$({upper}, {lower})$'
+    return problem, solution
 
 
 confidence_interval = Generator("Confidence interval For sample S", 54,

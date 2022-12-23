@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxVal=10, format='string'):
+def gen_func(maxVal=10):
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
 
@@ -25,24 +25,8 @@ def gen_func(maxVal=10, format='string'):
     gcd = calculate_gcd(tmp_n, tmp_d)
     sol_numerator = tmp_n // gcd
     sol_denominator = tmp_d // gcd
-    x = f"{sol_numerator}/{sol_denominator}"
 
-    if (tmp_d == 1 or tmp_d == gcd):
-        x = f"{sol_numerator}"
-
-    if format == 'string':
-        return f"({a}/{b})/({c}/{d})", x
-    elif format == 'latex':
-        problem = "\\(\\frac{" + str(a) + "}{" + str(b) + \
-            "}\\div\\frac{" + str(c) + "}{" + str(d) + "}=\\)"
-        if tmp_d == 1 or tmp_d == gcd:
-            solution = "\\(" + str(sol_numerator) + "\\)"
-        else:
-            solution = "\\(\\frac{" + str(sol_numerator) + \
-                "}{" + str(sol_denominator) + "}\\)"
-        return problem, solution
-    else:
-        return a, b, c, d, x
+    return f'$\\frac{{{a}}}{{{b}}}\\div\\frac{{{c}}}{{{d}}}=$', f'$\\frac{{{sol_numerator}}}{{{sol_denominator}}}$'
 
 
 divide_fractions = Generator("Fraction Division", 16, gen_func,

@@ -2,7 +2,7 @@ from ...generator import Generator
 import random
 
 
-def gen_func(maxDigits=10, format='string'):
+def gen_func(maxDigits=10):
     digits = random.randint(1, maxDigits)
     question = ''.join([str(random.randint(0, 1))
                         for i in range(digits)]).lstrip('0')
@@ -24,14 +24,9 @@ def gen_func(maxDigits=10, format='string'):
     if j == 0 and carry is True:
         answer.insert(0, '1')
 
-    if format == 'string':
-        problem = "2's complement of " + question + " ="
-        solution = ''.join(answer).lstrip('0')
-        return problem, solution
-    elif format == 'latex':
-        return "Latex unavailable"
-    else:
-        return question, answer
+    problem = f"2's complement of ${question} = $"
+    solution = ''.join(answer).lstrip('0')
+    return problem, f'${solution}$'
 
 
 binary_2s_complement = Generator("Binary 2's Complement", 73,
