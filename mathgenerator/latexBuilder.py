@@ -4,12 +4,9 @@ def frac(num, den):
 def bmatrix(lst):
     """Turns 2d matrix into a bmatrix"""
     out = '\\begin{bmatrix} '
-    for row in lst:
-        for item in row:
-            out += str(item) + ' & '
-        out += '\\\\ '
-    out += '\\end{bmatrix}'
-    return out
+    lst = [' & '.join(map(str, row)) for row in lst]
+    out += ' \\\\ '.join(lst)
+    return out + ' \\end{bmatrix}'
 
 def exp(base, exp):
     return f'{base}^{{{exp}}}'
