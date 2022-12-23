@@ -19,4 +19,4 @@ def gen_func():
 
 
 trig_differentiation = Generator("Trigonometric Differentiation", 88, gen_func,
-                            [])
+                                 [])
