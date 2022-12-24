@@ -12,5 +12,4 @@ lint:
 	$(PYTHON) -m flake8 --ignore=$(IGNORE_ERRORS) $(PKG)
 
 docs:
-	pip install -e .
-	pdoc mathgenerator -o docs
+	pdoc mathgenerator --math -o docs
