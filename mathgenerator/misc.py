@@ -1,4 +1,6 @@
 import random
+import math
+import numpy as np
 
 
 def arithmetic_progression_sum(maxd=100,
@@ -17,8 +19,6 @@ def arithmetic_progression_sum(maxd=100,
     problem = f'Find the sum of first ${n}$ terms of the AP series: ${apString}$'
     return problem, f'${solution}$'
 
-import random
-
 
 def arithmetic_progression_term(maxd=100,
                                 maxa=100,
@@ -35,14 +35,9 @@ def arithmetic_progression_term(maxd=100,
     problem = f'Find term number ${n}$ of the AP series: ${apString}$'
     return problem, f'${solution}$'
 
-import random
-
-
-# base from 2 to 36
-alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 
 def fromBaseTenTo(n, toBase):
+    alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     assert type(
         toBase
     ) == int and toBase >= 2 and toBase <= 36, "toBase({}) must be >=2 and <=36"
@@ -90,18 +85,9 @@ def base_conversion(maxNum=60000, maxBase=16):
     ans = fromBaseTenTo(n, bases[1])
     return problem, f'${ans}$'
 
-import random
-
-
-def factorial(n):
-    if n == 1 or n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-
 
 def newton_symbol(n, k):
-    return factorial(n) / (factorial(k) * factorial(n - k))
+    return math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
 
 
 def binomial_distribution():
@@ -125,8 +111,6 @@ def binomial_distribution():
         "rejected pistons?".format(rejected_fraction, batch, rejections)
     return problem, f'${answer}$'
 
-import random
-
 
 def celsius_to_fahrenheit(maxTemp=100):
     """Celsius to Fahrenheit"""
@@ -136,8 +120,6 @@ def celsius_to_fahrenheit(maxTemp=100):
     problem = f"Convert ${celsius}$ degrees Celsius to degrees Fahrenheit"
     solution = f'${fahrenheit}$'
     return problem, solution
-
-import random
 
 
 def common_factors(maxVal=100):
@@ -163,9 +145,6 @@ def common_factors(maxVal=100):
     solution = f'${arr}$'
     return problem, solution
 
-import random
-import math
-
 
 def complex_to_polar(minRealImaginaryNum=-20,
                      maxRealImaginaryNum=20):
@@ -179,9 +158,6 @@ def complex_to_polar(minRealImaginaryNum=-20,
 
     problem = f'${r}({a}\\theta + i{b}\\theta)$'
     return problem, f'${theta}$'
-
-import random
-import math
 
 
 def decimal_to_roman_numerals(maxDecimal=4000):
@@ -217,9 +193,6 @@ def decimal_to_roman_numerals(maxDecimal=4000):
     problem = f"The number ${x}$ in Roman Numerals is: "
     return problem, f'${solution}$'
 
-import random
-import math
-
 
 def euclidian_norm(maxEltAmt=20):
     """Euclidian norm or L2 norm of a vector"""
@@ -230,8 +203,6 @@ def euclidian_norm(maxEltAmt=20):
 
     problem = f"Euclidian norm or L2 norm of the vector ${vec}$ is:"
     return problem, f'${solution}$'
-
-import random
 
 
 def factors(maxVal=1000):
@@ -255,8 +226,6 @@ def factors(maxVal=1000):
     solution = factors
     return problem, f'${solution}$'
 
-import random
-
 
 def gcd(maxVal=20):
     """GCD (Greatest Common Denominator)"""
@@ -270,9 +239,6 @@ def gcd(maxVal=20):
     solution = f'${x}$'
     return problem, solution
 
-import random
-import numpy as np
-
 
 def geometric_mean(maxValue=100, maxCount=4):
     """Geometric Mean of N Numbers"""
@@ -285,8 +251,6 @@ def geometric_mean(maxValue=100, maxCount=4):
     # solution = f"$({'*'.join(map(str, nums))}^{{\\frac{{1}}{{{count}}}}} = {ans}$"
     solution = f"${ans}$"
     return problem, solution
-
-import random
 
 
 def geometric_progression(number_values=6,
@@ -310,8 +274,6 @@ def geometric_progression(number_values=6,
         a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
     return problem, solution
 
-import random
-
 
 def harmonic_mean(maxValue=100, maxCount=4):
     """Harmonic Mean of N Numbers"""
@@ -326,8 +288,6 @@ def harmonic_mean(maxValue=100, maxCount=4):
     solution = f"${ans}$"
     return problem, solution
 
-import random
-
 
 def hcf(maxVal=20):
     """HCF (Highest Common Factor)"""
@@ -340,8 +300,6 @@ def hcf(maxVal=20):
     problem = f"HCF of ${a}$ and ${b} = $"
     solution = f'${x}$'
     return problem, solution
-
-import random
 
 
 def is_leap_year(minNumber=1900, maxNumber=2099):
@@ -362,8 +320,6 @@ def is_leap_year(minNumber=1900, maxNumber=2099):
     solution = f"{year} is{' not' if not ans else ''} a leap year"
     return problem, solution
 
-import random
-
 
 def lcm(maxVal=20):
     """LCM (Least Common Multiple)"""
@@ -380,8 +336,6 @@ def lcm(maxVal=20):
     solution = f'${d}$'
     return problem, solution
 
-import random
-
 
 def minutes_to_hours(maxMinutes=999):
     """Convert minutes to hours and minutes"""
@@ -392,8 +346,6 @@ def minutes_to_hours(maxMinutes=999):
     problem = f"Convert ${minutes}$ minutes to hours & minutes"
     solution = f"${ansHours}$ hours and ${ansMinutes}$ minutes"
     return problem, solution
-
-import random
 
 
 def prime_factors(minVal=1, maxVal=200):
@@ -417,8 +369,6 @@ def prime_factors(minVal=1, maxVal=200):
     solution = f"${', '.join(map(str, factors))}$"
     return problem, solution
 
-import random
-
 
 def product_of_scientific_notations(minExpVal=-100, maxExpVal=100):
     """Product of scientific notations"""
@@ -433,8 +383,6 @@ def product_of_scientific_notations(minExpVal=-100, maxExpVal=100):
     problem = f"Product of scientific notations ${a[0]} \\times 10^{{{a[1]}}}$ and ${b[0]} \\times 10^{{{b[1]}}} = $"
     solution = f'${round(c[0], 2)} \\times 10^{{{c[1]}}}$'
     return problem, solution
-
-import random
 
 
 def profit_loss_percent(maxCP=1000, maxSP=1000):
@@ -451,8 +399,6 @@ def profit_loss_percent(maxCP=1000, maxSP=1000):
     problem = f"{profitOrLoss} percent when $CP = {cP}$ and $SP = {sP}$ is: "
     return problem, f'${percent}$'
 
-import random
-
 
 def quotient_of_power_same_base(maxBase=50, maxPower=10):
     """Quotient of Powers with Same Base"""
@@ -466,8 +412,6 @@ def quotient_of_power_same_base(maxBase=50, maxPower=10):
         f"${base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
     return problem, f'${solution}$'
 
-import random
-
 
 def quotient_of_power_same_power(maxBase=50, maxPower=10):
     """Quotient of Powers with Same Power"""
@@ -480,8 +424,6 @@ def quotient_of_power_same_power(maxBase=50, maxPower=10):
     problem = f"The Quotient of ${base1}^{{{power}}}$ and ${base2}^{{{power}}} = " \
         f"({base1}/{base2})^{power} = {step}^{{{power}}}$"
     return problem, f'${solution}$'
-
-import random
 
 
 def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
@@ -504,8 +446,6 @@ def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
         f" Symmetric difference is ${a.symmetric_difference(b)}$."
     return problem, solution
 
-import random
-
 
 def signum_function(min=-999, max=999):
     """Signum Function"""
@@ -519,9 +459,6 @@ def signum_function(min=-999, max=999):
     problem = f"signum of {a} is ="
     solution = f'${b}$'
     return problem, solution
-
-import random
-import math
 
 
 def surds_comparison(maxValue=100, maxRoot=10):
@@ -539,4 +476,3 @@ def surds_comparison(maxValue=100, maxRoot=10):
 
     problem = f"Fill in the blanks ${radicand1}^{{\\frac{{1}}{{{degree1}}}}}$ _ ${radicand2}^{{\\frac{{1}}{{{degree2}}}}}$"
     return problem, f'${solution}$'
-

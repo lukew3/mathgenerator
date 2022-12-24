@@ -1,4 +1,5 @@
 import random
+import math
 
 
 def bcd_to_decimal(maxNumber=10000):
@@ -19,8 +20,6 @@ def bcd_to_decimal(maxNumber=10000):
     problem = f"Integer of Binary Coded Decimal ${n}$ is $=$ "
     solution = f'${int(binstring, 2)}$'
     return problem, solution
-
-import random
 
 
 def binary_2s_complement(maxDigits=10):
@@ -50,8 +49,6 @@ def binary_2s_complement(maxDigits=10):
     solution = ''.join(answer).lstrip('0')
     return problem, f'${solution}$'
 
-import random
-
 
 def binary_complement_1s(maxDigits=10):
     """Binary Complement 1s"""
@@ -61,8 +58,6 @@ def binary_complement_1s(maxDigits=10):
     problem = f'${question} = $'
     return problem, f'${answer}$'
 
-import random
-
 
 def binary_to_decimal(max_dig=10):
     """Binary to Decimal"""
@@ -70,16 +65,12 @@ def binary_to_decimal(max_dig=10):
     solution = f'${int(problem, 2)}$'
     return f'${problem}$', solution
 
-import random
-
 
 def binary_to_hex(max_dig=10):
     """Binary to Hexidecimal"""
     problem = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
     solution = f'${hex(int(problem, 2))}$'
     return f'${problem}$', solution
-
-import random
 
 
 def decimal_to_bcd(maxNumber=10000):
@@ -96,8 +87,6 @@ def decimal_to_bcd(maxNumber=10000):
     problem = f"BCD of Decimal Number ${n} = $"
     return problem, f'${bcdstring}$'
 
-import random
-
 
 def decimal_to_binary(max_dec=99):
     """Decimal to Binary"""
@@ -107,8 +96,6 @@ def decimal_to_binary(max_dec=99):
     problem = f'Binary of ${a} = $'
     solution = f'${b}$'
     return problem, solution
-
-import random
 
 
 def decimal_to_hexadeci(max_dec=1000):
@@ -120,8 +107,6 @@ def decimal_to_hexadeci(max_dec=1000):
     solution = f"${b}$"
     return problem, solution
 
-import random
-
 
 def decimal_to_octal(maxDecimal=4096):
     """Decimal to Octal"""
@@ -131,8 +116,6 @@ def decimal_to_octal(maxDecimal=4096):
     solution = f'${oct(x)}$'
 
     return problem, solution
-
-import random
 
 
 def fibonacci_series(minNo=1):
@@ -155,8 +138,6 @@ def fibonacci_series(minNo=1):
     solution = ', '.join(map(str, fibList))
     return problem, f'${solution}$'
 
-import random
-
 
 def modulo_division(maxRes=99, maxModulo=99):
     """Modulo Division"""
@@ -168,9 +149,6 @@ def modulo_division(maxRes=99, maxModulo=99):
     solution = f'${c}$'
     return problem, solution
 
-import random
-import math
-
 
 def nth_fibonacci_number(maxN=100):
     """nth Fibonacci number"""
@@ -181,4 +159,3 @@ def nth_fibonacci_number(maxN=100):
     solution = int((math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))
 
     return problem, f'${solution}$'
-

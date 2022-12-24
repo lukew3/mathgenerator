@@ -1,5 +1,6 @@
 import random
 from scipy.integrate import quad
+import sympy
 
 
 def definite_integral(max_coeff=100):
@@ -93,4 +94,3 @@ def trig_differentiation():
     problem = f'$\\frac{{d}}{{dx}}({problem})=$'
 
     return problem, solution
-

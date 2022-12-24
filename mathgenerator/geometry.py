@@ -1,5 +1,6 @@
 import random
 import math
+from math import cos, sin, pi
 
 
 def angle_btw_vectors(maxEltAmt=20):
@@ -28,8 +29,6 @@ def angle_btw_vectors(maxEltAmt=20):
     problem = f"angle between the vectors ${v1}$ and ${v2}$ is:"
     return problem, solution
 
-import random
-
 
 def angle_regular_polygon(minVal=3, maxVal=20, format='string'):
     """Angle of a Regular Polygon"""
@@ -40,9 +39,6 @@ def angle_regular_polygon(minVal=3, maxVal=20, format='string'):
     solution = f'${180 - exteriorAngle}$'
 
     return problem, solution
-
-import random
-import math
 
 
 def arc_length(maxRadius=49, maxAngle=359):
@@ -56,9 +52,6 @@ def arc_length(maxRadius=49, maxAngle=359):
     solution = f"Arc length of the angle $= {formatted_float}$"
     return problem, solution
 
-import random
-from math import pi
-
 
 def area_of_circle(maxRadius=100):
     """Area of Circle"""
@@ -67,9 +60,6 @@ def area_of_circle(maxRadius=100):
 
     problem = f'Area of circle with radius ${r}=$'
     return problem, f'${area}$'
-
-import random
-from math import cos, sin, pi
 
 
 def area_of_circle_given_center_and_point(maxCoordinate=10, maxRadius=10):
@@ -88,8 +78,6 @@ def area_of_circle_given_center_and_point(maxCoordinate=10, maxRadius=10):
     problem = f"Area of circle with center $({center_x},{center_y})$ and passing through $({point_x}, {point_y})$ is"
     return problem, f'${area}$'
 
-import random
-
 
 def area_of_triangle(maxA=20, maxB=20):
     """Area of Triangle"""
@@ -103,9 +91,6 @@ def area_of_triangle(maxA=20, maxB=20):
     problem = f"Area of triangle with side lengths: ${a}, {b} {c} = $"
     solution = f'${round(area, 2)}$'
     return problem, solution
-
-import random
-import math
 
 
 # Handles degrees in quadrant one
@@ -133,9 +118,6 @@ def basic_trigonometry(angles=[0, 30, 45, 60, 90],
 
     return problem, f'${solution}$'
 
-import random
-import math
-
 
 def circumference(maxRadius=100):
     """Circumference of Circle"""
@@ -144,8 +126,6 @@ def circumference(maxRadius=100):
 
     problem = f"Circumference of circle with radius ${r} = $"
     return problem, f'${circumference}$'
-
-import random
 
 
 def complementary_and_supplementary_angle(maxSupp=180, maxComp=90):
@@ -163,9 +143,6 @@ def complementary_and_supplementary_angle(maxSupp=180, maxComp=90):
     solution = f'${angleAns}$'
     return problem, solution
 
-import random
-import math
-
 
 def curved_surface_area_cylinder(maxRadius=49, maxHeight=99):
     """Curved surface area of a cylinder"""
@@ -178,9 +155,6 @@ def curved_surface_area_cylinder(maxRadius=49, maxHeight=99):
     solution = f"${formatted_float}$"
     return problem, solution
 
-import random
-import math
-
 
 def degree_to_rad(max_deg=360):
     """Degrees to Radians"""
@@ -191,9 +165,6 @@ def degree_to_rad(max_deg=360):
     problem = f"Angle ${a}$ degrees in radians is: "
     solution = f'${b}$'
     return problem, solution
-
-import random
-import math
 
 
 def equation_of_line_from_two_points(maxCoordinate=20, minCoordinate=-20):
@@ -250,8 +221,6 @@ def equation_of_line_from_two_points(maxCoordinate=20, minCoordinate=-20):
             solution = str(coeff_y) + "y = " + str(coeff_x) + "x " + str(constant)
     return problem, f'${solution}$'
 
-import random
-
 
 def fourth_angle_of_quadrilateral(maxAngle=180):
     """Fourth Angle of Quadrilateral"""
@@ -266,8 +235,6 @@ def fourth_angle_of_quadrilateral(maxAngle=180):
     solution = f'${angle4}$'
     return problem, solution
 
-import random
-
 
 def perimeter_of_polygons(maxSides=12, maxLength=120):
     """Perimeter of Polygons"""
@@ -278,8 +245,6 @@ def perimeter_of_polygons(maxSides=12, maxLength=120):
     solution = sum(sides)
 
     return problem, f'${solution}$'
-
-import random
 
 
 def pythagorean_theorem(maxLength=20):
@@ -292,9 +257,6 @@ def pythagorean_theorem(maxLength=20):
     solution = f"${c}$"
     return problem, solution
 
-import random
-import math
-
 
 def radian_to_deg(max_rad=6.28):
     """Radians to Degrees"""
@@ -304,9 +266,6 @@ def radian_to_deg(max_rad=6.28):
     problem = f"Angle ${a}$ radians in degrees is: "
     solution = f'${b}$'
     return problem, solution
-
-import random
-import math
 
 
 def sector_area(maxRadius=49, maxAngle=359):
@@ -320,8 +279,6 @@ def sector_area(maxRadius=49, maxAngle=359):
     solution = f"${formatted_float}$"
     return problem, solution
 
-import random
-
 
 def sum_of_polygon_angles(maxSides=12):
     """Sum of Angles of Polygon"""
@@ -330,9 +287,6 @@ def sum_of_polygon_angles(maxSides=12):
 
     problem = f"What is the sum of interior angles of a polygon with ${side_count}$ sides?"
     return problem, f'${sum}$'
-
-import random
-import math
 
 
 def surface_area_cone(maxRadius=20, maxHeight=50, unit='m'):
@@ -347,8 +301,6 @@ def surface_area_cone(maxRadius=20, maxHeight=50, unit='m'):
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
-import random
-
 
 def surface_area_cube(maxSide=20, unit='m'):
     """Surface area of a cube"""
@@ -358,8 +310,6 @@ def surface_area_cube(maxSide=20, unit='m'):
     problem = f"Surface area of cube with side $= {a}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
-
-import random
 
 
 def surface_area_cuboid(maxSide=20, unit='m'):
@@ -373,9 +323,6 @@ def surface_area_cuboid(maxSide=20, unit='m'):
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
-import random
-import math
-
 
 def surface_area_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     """Surface area of a cylinder"""
@@ -387,7 +334,6 @@ def surface_area_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
-import random
 
 # List of Pythagorean triplets
 _PYTHAGOREAN = [(3, 4, 5),
@@ -426,9 +372,6 @@ def surface_area_pyramid(unit='m'):
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
-import random
-import math
-
 
 def surface_area_sphere(maxSide=20, unit='m'):
     """Surface area of a sphere"""
@@ -439,8 +382,6 @@ def surface_area_sphere(maxSide=20, unit='m'):
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
-import random
-
 
 def third_angle_of_triangle(maxAngle=89):
     """Third Angle of Triangle"""
@@ -450,8 +391,6 @@ def third_angle_of_triangle(maxAngle=89):
 
     problem = f"Third angle of triangle with angles ${angle1}$ and ${angle2} = $"
     return problem, f'${angle3}$'
-
-import random
 
 
 def valid_triangle(maxSideLength=50):
@@ -470,9 +409,6 @@ def valid_triangle(maxSideLength=50):
     solution = "Yes" if exists else "No"
     return problem, f'${solution}$'
 
-import random
-import math
-
 
 def volume_cone(maxRadius=20, maxHeight=50, unit='m'):
     """Volume of a cone"""
@@ -484,8 +420,6 @@ def volume_cone(maxRadius=20, maxHeight=50, unit='m'):
     solution = f"${ans} {unit}^3$"
     return problem, solution
 
-import random
-
 
 def volume_cube(maxSide=20, unit='m'):
     """Volume of a cube"""
@@ -495,8 +429,6 @@ def volume_cube(maxSide=20, unit='m'):
     problem = f"Volume of cube with a side length of ${a}{unit}$ is"
     solution = f"${ans} {unit}^3$"
     return problem, solution
-
-import random
 
 
 def volume_cuboid(maxSide=20, unit='m'):
@@ -510,9 +442,6 @@ def volume_cuboid(maxSide=20, unit='m'):
     solution = f"${ans} {unit}^3$"
     return problem, solution
 
-import random
-import math
-
 
 def volume_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     """Volume of a cylinder"""
@@ -523,9 +452,6 @@ def volume_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     problem = f"Volume of cylinder with height $= {a}{unit}$ and radius $= {b}{unit}$ is"
     solution = f"${ans} {unit}^3$"
     return problem, solution
-
-import random
-import math
 
 
 def volume_frustum(maxR1=20, maxR2=20, maxHeight=50, unit='m'):
@@ -539,9 +465,6 @@ def volume_frustum(maxR1=20, maxR2=20, maxHeight=50, unit='m'):
     solution = f"${ans} {unit}^3$"
     return problem, solution
 
-import random
-import math
-
 
 def volume_hemisphere(maxRadius=100):
     """Volume of a hemisphere"""
@@ -551,8 +474,6 @@ def volume_hemisphere(maxRadius=100):
     problem = f"Volume of hemisphere with radius ${r} m =$ "
     solution = f"${ans} m^3$"
     return problem, solution
-
-import random
 
 
 def volume_pyramid(maxLength=20, maxWidth=20, maxHeight=50, unit='m'):
@@ -566,9 +487,6 @@ def volume_pyramid(maxLength=20, maxWidth=20, maxHeight=50, unit='m'):
     problem = f"Volume of pyramid with base length $= {length} {unit}$, base width $= {width} {unit}$ and height $= {height} {unit}$ is"
     solution = f"${ans} {unit}^3$"
     return problem, solution
-
-import random
-import math
 
 
 def volume_sphere(maxRadius=100):

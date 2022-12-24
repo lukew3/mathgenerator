@@ -12,8 +12,6 @@ def combinations(maxlength=20):
     problem = f"Find the number of combinations from ${a}$ objects picked ${b}$ at a time."
     return problem, f'${solution}$'
 
-import random
-
 
 def conditional_probability():
     """Conditional Probability"""
@@ -38,9 +36,6 @@ def conditional_probability():
             P_disease, true_positive, true_negative)
     solution = f'${answer}$%'
     return problem, solution
-
-import random
-import math
 
 
 def confidence_interval():
@@ -75,8 +70,6 @@ def confidence_interval():
     solution = f'$({upper}, {lower})$'
     return problem, solution
 
-import random
-
 
 def data_summary(number_values=15, minval=5, maxval=50):
     """Mean, Standard Deviation and Variance"""
@@ -99,8 +92,6 @@ def data_summary(number_values=15, minval=5, maxval=50):
     problem = f"Find the mean,standard deviation and variance for the data ${', '.join(map(str, random_list))}$"
     solution = f"The Mean is ${mean}$, Standard Deviation is ${standardDeviation}$, Variance is ${variance}$"
     return problem, solution
-
-import random
 
 
 def dice_sum_probability(maxDice=3):
@@ -127,8 +118,6 @@ def dice_sum_probability(maxDice=3):
     solution = f"\\frac{{{count}}}{{{6**a}}}"
     return problem, solution
 
-import random
-
 
 def mean_median(maxlen=10):
     """Mean and Median"""
@@ -143,9 +132,6 @@ def mean_median(maxlen=10):
     problem = f"Given the series of numbers ${randomlist}$. Find the arithmatic mean and mdian of the series"
     solution = f"Arithmetic mean of the series is ${mean}$ and Arithmetic median of this series is ${median}$"
     return problem, solution
-
-import random
-import math
 
 
 def permutation(maxlength=20):
