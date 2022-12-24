@@ -49,7 +49,7 @@ def combine_like_terms(maxCoef=10, maxExp=20, maxTerms=10):
     return f'${problem}$', f'${solution}$'
 
 
-def complex_quadratic(prob_type=0, max_range=10, format='string'):
+def complex_quadratic(prob_type=0, max_range=10):
     """Complex Quadratic Equation"""
     if prob_type < 0 or prob_type > 1:
         print("prob_type not supported")
