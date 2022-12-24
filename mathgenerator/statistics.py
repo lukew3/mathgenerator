@@ -142,4 +142,3 @@ def permutation(maxlength=20):
 
     problem = f"Number of Permutations from ${a}$ objects picked ${b}$ at a time is: "
     return problem, f"${solution}$"
-

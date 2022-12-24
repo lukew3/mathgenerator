@@ -105,8 +105,6 @@ def exponentiation(maxBase=20, maxExpo=10):
 
     return f'${base}^{expo} =$', f'${base**expo}$'
 
-import random
-
 
 def factorial(maxInput=6):
     """Factorial"""
@@ -300,4 +298,3 @@ def subtraction(maxMinuend=99, maxDiff=99):
     c = a - b
 
     return f'${a}-{b}=$', f'${c}$'
-

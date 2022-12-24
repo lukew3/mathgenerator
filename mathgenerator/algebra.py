@@ -615,4 +615,3 @@ def vector_dot(minVal=-20, maxVal=20):
     problem = f'${a}\\cdot{b}=$'
     solution = f'${c}$'
     return problem, solution
-
