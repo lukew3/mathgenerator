@@ -28,7 +28,12 @@ def addition(maxSum=99, maxAddend=50):
 
 
 def compare_fractions(maxVal=10):
-    """Compare Fractions"""
+    r"""Compare Fractions
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Which symbol represents the comparison between $\frac{1}{2}$ and $\frac{3}{4}$? | $>$ |
+    """
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)

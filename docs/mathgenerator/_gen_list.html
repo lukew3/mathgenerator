@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="pdoc 12.3.0"/>
-    <title>mathgenerator API documentation</title>
+    <title>mathgenerator._gen_list API documentation</title>
 
     <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
     <style>/*! syntax-highlighting.css */pre{line-height:125%;}span.linenos{color:inherit; background-color:transparent; padding-left:5px; padding-right:20px;}.pdoc-code .hll{background-color:#ffffcc}.pdoc-code{background:#f8f8f8;}.pdoc-code .c{color:#3D7B7B; font-style:italic}.pdoc-code .err{border:1px solid #FF0000}.pdoc-code .k{color:#008000; font-weight:bold}.pdoc-code .o{color:#666666}.pdoc-code .ch{color:#3D7B7B; font-style:italic}.pdoc-code .cm{color:#3D7B7B; font-style:italic}.pdoc-code .cp{color:#9C6500}.pdoc-code .cpf{color:#3D7B7B; font-style:italic}.pdoc-code .c1{color:#3D7B7B; font-style:italic}.pdoc-code .cs{color:#3D7B7B; font-style:italic}.pdoc-code .gd{color:#A00000}.pdoc-code .ge{font-style:italic}.pdoc-code .gr{color:#E40000}.pdoc-code .gh{color:#000080; font-weight:bold}.pdoc-code .gi{color:#008400}.pdoc-code .go{color:#717171}.pdoc-code .gp{color:#000080; font-weight:bold}.pdoc-code .gs{font-weight:bold}.pdoc-code .gu{color:#800080; font-weight:bold}.pdoc-code .gt{color:#0044DD}.pdoc-code .kc{color:#008000; font-weight:bold}.pdoc-code .kd{color:#008000; font-weight:bold}.pdoc-code .kn{color:#008000; font-weight:bold}.pdoc-code .kp{color:#008000}.pdoc-code .kr{color:#008000; font-weight:bold}.pdoc-code .kt{color:#B00040}.pdoc-code .m{color:#666666}.pdoc-code .s{color:#BA2121}.pdoc-code .na{color:#687822}.pdoc-code .nb{color:#008000}.pdoc-code .nc{color:#0000FF; font-weight:bold}.pdoc-code .no{color:#880000}.pdoc-code .nd{color:#AA22FF}.pdoc-code .ni{color:#717171; font-weight:bold}.pdoc-code .ne{color:#CB3F38; font-weight:bold}.pdoc-code .nf{color:#0000FF}.pdoc-code .nl{color:#767600}.pdoc-code .nn{color:#0000FF; font-weight:bold}.pdoc-code .nt{color:#008000; font-weight:bold}.pdoc-code .nv{color:#19177C}.pdoc-code .ow{color:#AA22FF; font-weight:bold}.pdoc-code .w{color:#bbbbbb}.pdoc-code .mb{color:#666666}.pdoc-code .mf{color:#666666}.pdoc-code .mh{color:#666666}.pdoc-code .mi{color:#666666}.pdoc-code .mo{color:#666666}.pdoc-code .sa{color:#BA2121}.pdoc-code .sb{color:#BA2121}.pdoc-code .sc{color:#BA2121}.pdoc-code .dl{color:#BA2121}.pdoc-code .sd{color:#BA2121; font-style:italic}.pdoc-code .s2{color:#BA2121}.pdoc-code .se{color:#AA5D1F; font-weight:bold}.pdoc-code .sh{color:#BA2121}.pdoc-code .si{color:#A45A77; font-weight:bold}.pdoc-code .sx{color:#008000}.pdoc-code .sr{color:#A45A77}.pdoc-code .s1{color:#BA2121}.pdoc-code .ss{color:#19177C}.pdoc-code .bp{color:#008000}.pdoc-code .fm{color:#0000FF}.pdoc-code .vc{color:#19177C}.pdoc-code .vg{color:#19177C}.pdoc-code .vi{color:#19177C}.pdoc-code .vm{color:#19177C}.pdoc-code .il{color:#666666}</style>
@@ -38,48 +38,20 @@
     <nav class="pdoc">
         <label id="navtoggle" for="togglestate" class="pdoc-button"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke-linecap='round' stroke="currentColor" stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg></label>
         <input id="togglestate" type="checkbox" aria-hidden="true" tabindex="-1">
-        <div>
+        <div>            <a class="pdoc-button module-list-button" href="../mathgenerator.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg>                &nbsp;mathgenerator</a>
+
 
             <input type="search" placeholder="Search..." role="searchbox" aria-label="search"
                    pattern=".+" required>
 
-        <h2>Contents</h2>
-        <ul>
-  <li><a href="#mathgenerator">mathgenerator</a>
-  <ul>
-    <li><a href="#table-of-contents">Table of Contents</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#documentation">Documentation</a></li>
-  </ul></li>
-</ul>
 
-
-        <h2>Submodules</h2>
-        <ul>
-                <li><a href="mathgenerator/algebra.html">algebra</a></li>
-                <li><a href="mathgenerator/basic_math.html">basic_math</a></li>
-                <li><a href="mathgenerator/calculus.html">calculus</a></li>
-                <li><a href="mathgenerator/computer_science.html">computer_science</a></li>
-                <li><a href="mathgenerator/geometry.html">geometry</a></li>
-                <li><a href="mathgenerator/misc.html">misc</a></li>
-                <li><a href="mathgenerator/statistics.html">statistics</a></li>
-        </ul>
 
         <h2>API Documentation</h2>
             <ul class="memberlist">
-            <li>
-                    <a class="function" href="#get_gen_list">get_gen_list</a>
-            </li>
-            <li>
-                    <a class="function" href="#gen_by_id">gen_by_id</a>
-            </li>
-            <li>
-                    <a class="function" href="#getGenList">getGenList</a>
-            </li>
-            <li>
-                    <a class="function" href="#genById">genById</a>
-            </li>
     </ul>
 
 
@@ -94,210 +66,145 @@
     <main class="pdoc">
             <section class="module-info">
                     <h1 class="modulename">
-mathgenerator    </h1>
+<a href="./../mathgenerator.html">mathgenerator</a><wbr>._gen_list    </h1>
 
-                        <div class="docstring"><h1 id="mathgenerator">mathgenerator</h1>
+                
+                        <input id="mod-_gen_list-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
-<p>A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.</p>
+                        <label class="view-source-button" for="mod-_gen_list-view-source"><span>View Source</span></label>
 
-<p>To try out generators, go to <a href="https://lukew3.github.io/mathgenerator">https://lukew3.github.io/mathgenerator</a></p>
-
-<p>See <a href="https://github.com/lukew3/mathgenerator/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for information about how to contribute.</p>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#documentation">Documentation</a></li>
-</ul>
-
-<h2 id="installation">Installation</h2>
-
-<p>The project can be install via pip</p>
-
-<div class="pdoc-code codehilite">
-<pre><span></span><code>pip install mathgenerator
-</code></pre>
-</div>
-
-<h2 id="usage">Usage</h2>
-
-<p>Here is an example of how you would generate an addition problem:</p>
-
-<div class="pdoc-code codehilite">
-<pre><span></span><code><span class="kn">import</span> <span class="nn">mathgenerator</span>
-
-<span class="c1">#generate an addition problem</span>
-<span class="n">problem</span><span class="p">,</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">mathgenerator</span><span class="o">.</span><span class="n">addition</span><span class="p">()</span>
-
-<span class="c1">#another way to generate an addition problem using genById()</span>
-<span class="n">problem</span><span class="p">,</span> <span class="n">solution</span> <span class="o">=</span> <span class="n"><a href="#genById">mathgenerator.genById</a></span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<p>You may prefer to use <code>import mathgenerator as mg</code> and run functions like <code>mg.addition()</code> so that you don't have to type as much.
-<!--</p>
-
-<h3 id="creating-a-worksheet">Creating a worksheet</h3>
-
-<p>If you wish to create a worksheet, you can use the <a href="https://github.com/lukew3/worksheetgen">worksheetgen</a> package. Install this with <code>pip install worksheetgen</code>. Here is an example of how a worksheet would be generated.</p>
-
-<pre><code>from mathgenerator import mathgen
-from worksheetgen.wg import Worksheet
-
-ws = Worksheet("Worksheet title")
-with ws.section('Section 1', description='These are instructions')
-    # Writes 10 problems generated with id 1, [0] at the end specifies to take problem, and not solution.
-    for _ in range(10):
-        ws.add_problem(mathgen.genById(1)[0])
-ws.write_pdf()
-</code></pre>
-
-<p>This creates the pdf <code>ws.pdf</code> in your current directory
--->
-Problem/solution pairs are generated with either:</p>
-
-<ul>
-<li><code>mathgenerator.&lt;generator_name&gt;()</code> - generates a problem, solution set from the given generator name.</li>
-<li><code><a href="#genById">mathgenerator.genById</a>(id)</code> - generates a problem, solution set with generator id provided by the <code>id</code> parameter</li>
-</ul>
-
-<p><!--</p>
-
-<h4 id="format-kwarg"><code>format</code> kwarg</h4>
-
-<ul>
-<li>Pass <code>format=latex</code> to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"</li>
-<li>Pass <code>format=raw</code> to return just the raw data for each generator. An array of each variable necessary to the generator is returned.</li>
-<li>If you don't pass a value to the format kwarg, the generator will return a problem and answer in asciimath format.
--->
-You can also use <code><a href="#getGenList">getGenList()</a></code> to return a list of all generators included in the library in the format:</li>
-</ul>
-
-<pre><code>[id, title, gen_func, funcname, subjectname, kwargs]
-</code></pre>
-
-<h2 id="documentation">Documentation</h2>
-
-<p>Documentation can be found at <a href="https://lukew3.github.io/mathgenerator">https://lukew3.github.io/mathgenerator</a></p>
-</div>
-
-                        <input id="mod-mathgenerator-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-
-                        <label class="view-source-button" for="mod-mathgenerator-view-source"><span>View Source</span></label>
-
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="sd">.. include:: ../README.md</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span> <span class="nn">.algebra</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span> <span class="nn">.basic_math</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span> <span class="nn">.calculus</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="kn">from</span> <span class="nn">.computer_science</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="kn">from</span> <span class="nn">.geometry</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="kn">from</span> <span class="nn">.statistics</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="kn">from</span> <span class="nn">._gen_list</span> <span class="kn">import</span> <span class="n">gen_list</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="c1"># [funcname, subjectname]</span>
-</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="k">def</span> <span class="nf">get_gen_list</span><span class="p">():</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>    <span class="k">return</span> <span class="n">gen_list</span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>
-</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="k">def</span> <span class="nf">gen_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>    <span class="k">return</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">gen_list</span><span class="p">[</span><span class="nb">id</span><span class="p">][</span><span class="mi">0</span><span class="p">]](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>
-</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a>
-</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="c1"># Legacy Functions</span>
-</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a><span class="k">def</span> <span class="nf">getGenList</span><span class="p">():</span>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>    <span class="k">return</span> <span class="n">gen_list</span>
-</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>
-</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>
-</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="k">def</span> <span class="nf">genById</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>    <span class="k">return</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">gen_list</span><span class="p">[</span><span class="nb">id</span><span class="p">][</span><span class="mi">0</span><span class="p">]](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">  1</span></a><span class="n">gen_list</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos">  2</span></a>    <span class="p">(</span><span class="s2">&quot;addition&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos">  3</span></a>    <span class="p">(</span><span class="s2">&quot;subtraction&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos">  4</span></a>    <span class="p">(</span><span class="s2">&quot;multiplication&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos">  5</span></a>    <span class="p">(</span><span class="s2">&quot;division&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>    <span class="p">(</span><span class="s2">&quot;binary_complement_1s&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a>    <span class="p">(</span><span class="s2">&quot;modulo_division&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a>    <span class="p">(</span><span class="s2">&quot;square_root&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a>    <span class="p">(</span><span class="s2">&quot;power_rule_differentiation&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">),</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a>    <span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a>    <span class="p">(</span><span class="s2">&quot;lcm&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a>    <span class="p">(</span><span class="s2">&quot;gcd&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos"> 13</span></a>    <span class="p">(</span><span class="s2">&quot;basic_algebra&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos"> 14</span></a>    <span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-15"><a href="#L-15"><span class="linenos"> 15</span></a>    <span class="p">(</span><span class="s2">&quot;fraction_to_decimal&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos"> 16</span></a>    <span class="p">(</span><span class="s2">&quot;decimal_to_binary&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-17"><a href="#L-17"><span class="linenos"> 17</span></a>    <span class="p">(</span><span class="s2">&quot;binary_to_decimal&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos"> 18</span></a>    <span class="p">(</span><span class="s2">&quot;divide_fractions&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos"> 19</span></a>    <span class="p">(</span><span class="s2">&quot;multiply_int_to_22_matrix&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos"> 20</span></a>    <span class="p">(</span><span class="s2">&quot;area_of_triangle&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-21"><a href="#L-21"><span class="linenos"> 21</span></a>    <span class="p">(</span><span class="s2">&quot;valid_triangle&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos"> 22</span></a>    <span class="p">(</span><span class="s2">&quot;midpoint_of_two_points&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos"> 23</span></a>    <span class="p">(</span><span class="s2">&quot;factoring&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-24"><a href="#L-24"><span class="linenos"> 24</span></a>    <span class="p">(</span><span class="s2">&quot;third_angle_of_triangle&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a>    <span class="p">(</span><span class="s2">&quot;system_of_equations&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a>    <span class="p">(</span><span class="s2">&quot;distance_two_points&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>    <span class="p">(</span><span class="s2">&quot;pythagorean_theorem&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a>    <span class="p">(</span><span class="s2">&quot;linear_equations&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-29"><a href="#L-29"><span class="linenos"> 29</span></a>    <span class="p">(</span><span class="s2">&quot;prime_factors&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-30"><a href="#L-30"><span class="linenos"> 30</span></a>    <span class="p">(</span><span class="s2">&quot;fraction_multiplication&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-31"><a href="#L-31"><span class="linenos"> 31</span></a>    <span class="p">(</span><span class="s2">&quot;angle_regular_polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-32"><a href="#L-32"><span class="linenos"> 32</span></a>    <span class="p">(</span><span class="s2">&quot;combinations&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-33"><a href="#L-33"><span class="linenos"> 33</span></a>    <span class="p">(</span><span class="s2">&quot;factorial&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-34"><a href="#L-34"><span class="linenos"> 34</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_cube&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-35"><a href="#L-35"><span class="linenos"> 35</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_cuboid&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_cylinder&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a>    <span class="p">(</span><span class="s2">&quot;volume_cube&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a>    <span class="p">(</span><span class="s2">&quot;volume_cuboid&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>    <span class="p">(</span><span class="s2">&quot;volume_cylinder&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_cone&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a>    <span class="p">(</span><span class="s2">&quot;volume_cone&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a>    <span class="p">(</span><span class="s2">&quot;common_factors&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-43"><a href="#L-43"><span class="linenos"> 43</span></a>    <span class="p">(</span><span class="s2">&quot;intersection_of_two_lines&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-44"><a href="#L-44"><span class="linenos"> 44</span></a>    <span class="p">(</span><span class="s2">&quot;permutation&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-45"><a href="#L-45"><span class="linenos"> 45</span></a>    <span class="p">(</span><span class="s2">&quot;vector_cross&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-46"><a href="#L-46"><span class="linenos"> 46</span></a>    <span class="p">(</span><span class="s2">&quot;compare_fractions&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-47"><a href="#L-47"><span class="linenos"> 47</span></a>    <span class="p">(</span><span class="s2">&quot;simple_interest&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-48"><a href="#L-48"><span class="linenos"> 48</span></a>    <span class="p">(</span><span class="s2">&quot;matrix_multiplication&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-49"><a href="#L-49"><span class="linenos"> 49</span></a>    <span class="p">(</span><span class="s2">&quot;cube_root&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-50"><a href="#L-50"><span class="linenos"> 50</span></a>    <span class="p">(</span><span class="s2">&quot;power_rule_integration&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">),</span>
+</span><span id="L-51"><a href="#L-51"><span class="linenos"> 51</span></a>    <span class="p">(</span><span class="s2">&quot;fourth_angle_of_quadrilateral&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-52"><a href="#L-52"><span class="linenos"> 52</span></a>    <span class="p">(</span><span class="s2">&quot;quadratic_equation&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos"> 53</span></a>    <span class="p">(</span><span class="s2">&quot;hcf&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-54"><a href="#L-54"><span class="linenos"> 54</span></a>    <span class="p">(</span><span class="s2">&quot;dice_sum_probability&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-55"><a href="#L-55"><span class="linenos"> 55</span></a>    <span class="p">(</span><span class="s2">&quot;exponentiation&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-56"><a href="#L-56"><span class="linenos"> 56</span></a>    <span class="p">(</span><span class="s2">&quot;confidence_interval&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a>    <span class="p">(</span><span class="s2">&quot;surds_comparison&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a>    <span class="p">(</span><span class="s2">&quot;fibonacci_series&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>    <span class="p">(</span><span class="s2">&quot;basic_trigonometry&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a>    <span class="p">(</span><span class="s2">&quot;sum_of_polygon_angles&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>    <span class="p">(</span><span class="s2">&quot;data_summary&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_sphere&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a>    <span class="p">(</span><span class="s2">&quot;volume_sphere&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>    <span class="p">(</span><span class="s2">&quot;nth_fibonacci_number&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>    <span class="p">(</span><span class="s2">&quot;profit_loss_percent&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a>    <span class="p">(</span><span class="s2">&quot;binary_to_hex&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a>    <span class="p">(</span><span class="s2">&quot;multiply_complex_numbers&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-68"><a href="#L-68"><span class="linenos"> 68</span></a>    <span class="p">(</span><span class="s2">&quot;geometric_progression&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a>    <span class="p">(</span><span class="s2">&quot;geometric_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a>    <span class="p">(</span><span class="s2">&quot;harmonic_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-71"><a href="#L-71"><span class="linenos"> 71</span></a>    <span class="p">(</span><span class="s2">&quot;euclidian_norm&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a>    <span class="p">(</span><span class="s2">&quot;angle_btw_vectors&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a>    <span class="p">(</span><span class="s2">&quot;absolute_difference&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a>    <span class="p">(</span><span class="s2">&quot;vector_dot&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>    <span class="p">(</span><span class="s2">&quot;binary_2s_complement&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a>    <span class="p">(</span><span class="s2">&quot;invert_matrix&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a>    <span class="p">(</span><span class="s2">&quot;sector_area&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a>    <span class="p">(</span><span class="s2">&quot;mean_median&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a>    <span class="p">(</span><span class="s2">&quot;int_matrix_22_determinant&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a>    <span class="p">(</span><span class="s2">&quot;compound_interest&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a>    <span class="p">(</span><span class="s2">&quot;decimal_to_hexadeci&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>    <span class="p">(</span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>    <span class="p">(</span><span class="s2">&quot;celsius_to_fahrenheit&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a>    <span class="p">(</span><span class="s2">&quot;arithmetic_progression_term&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a>    <span class="p">(</span><span class="s2">&quot;arithmetic_progression_sum&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>    <span class="p">(</span><span class="s2">&quot;decimal_to_octal&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a>    <span class="p">(</span><span class="s2">&quot;decimal_to_roman_numerals&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>    <span class="p">(</span><span class="s2">&quot;degree_to_rad&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>    <span class="p">(</span><span class="s2">&quot;radian_to_deg&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>    <span class="p">(</span><span class="s2">&quot;trig_differentiation&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">),</span>
+</span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>    <span class="p">(</span><span class="s2">&quot;definite_integral&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">),</span>
+</span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a>    <span class="p">(</span><span class="s2">&quot;is_prime&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a>    <span class="p">(</span><span class="s2">&quot;bcd_to_decimal&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>    <span class="p">(</span><span class="s2">&quot;complex_to_polar&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a>    <span class="p">(</span><span class="s2">&quot;set_operation&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a>    <span class="p">(</span><span class="s2">&quot;base_conversion&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a>    <span class="p">(</span><span class="s2">&quot;curved_surface_area_cylinder&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a>    <span class="p">(</span><span class="s2">&quot;perimeter_of_polygons&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>    <span class="p">(</span><span class="s2">&quot;power_of_powers&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>    <span class="p">(</span><span class="s2">&quot;quotient_of_power_same_base&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>    <span class="p">(</span><span class="s2">&quot;quotient_of_power_same_power&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a>    <span class="p">(</span><span class="s2">&quot;complex_quadratic&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a>    <span class="p">(</span><span class="s2">&quot;is_leap_year&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a>    <span class="p">(</span><span class="s2">&quot;minutes_to_hours&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-105"><a href="#L-105"><span class="linenos">105</span></a>    <span class="p">(</span><span class="s2">&quot;decimal_to_bcd&quot;</span><span class="p">,</span> <span class="s2">&quot;computer_science&quot;</span><span class="p">),</span>
+</span><span id="L-106"><a href="#L-106"><span class="linenos">106</span></a>    <span class="p">(</span><span class="s2">&quot;circumference&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-107"><a href="#L-107"><span class="linenos">107</span></a>    <span class="p">(</span><span class="s2">&quot;combine_like_terms&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>    <span class="p">(</span><span class="s2">&quot;signum_function&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>    <span class="p">(</span><span class="s2">&quot;conditional_probability&quot;</span><span class="p">,</span> <span class="s2">&quot;statistics&quot;</span><span class="p">),</span>
+</span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a>    <span class="p">(</span><span class="s2">&quot;arc_length&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a>    <span class="p">(</span><span class="s2">&quot;binomial_distribution&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-112"><a href="#L-112"><span class="linenos">112</span></a>    <span class="p">(</span><span class="s2">&quot;stationary_points&quot;</span><span class="p">,</span> <span class="s2">&quot;calculus&quot;</span><span class="p">),</span>
+</span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a>    <span class="p">(</span><span class="s2">&quot;expanding&quot;</span><span class="p">,</span> <span class="s2">&quot;algebra&quot;</span><span class="p">),</span>
+</span><span id="L-114"><a href="#L-114"><span class="linenos">114</span></a>    <span class="p">(</span><span class="s2">&quot;area_of_circle&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a>    <span class="p">(</span><span class="s2">&quot;volume_frustum&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a>    <span class="p">(</span><span class="s2">&quot;equation_of_line_from_two_points&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a>    <span class="p">(</span><span class="s2">&quot;area_of_circle_given_center_and_point&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-118"><a href="#L-118"><span class="linenos">118</span></a>    <span class="p">(</span><span class="s2">&quot;factors&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-119"><a href="#L-119"><span class="linenos">119</span></a>    <span class="p">(</span><span class="s2">&quot;volume_hemisphere&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-120"><a href="#L-120"><span class="linenos">120</span></a>    <span class="p">(</span><span class="s2">&quot;percentage_difference&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-121"><a href="#L-121"><span class="linenos">121</span></a>    <span class="p">(</span><span class="s2">&quot;percentage_error&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-122"><a href="#L-122"><span class="linenos">122</span></a>    <span class="p">(</span><span class="s2">&quot;greatest_common_divisor&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-123"><a href="#L-123"><span class="linenos">123</span></a>    <span class="p">(</span><span class="s2">&quot;product_of_scientific_notations&quot;</span><span class="p">,</span> <span class="s2">&quot;misc&quot;</span><span class="p">),</span>
+</span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>    <span class="p">(</span><span class="s2">&quot;volume_pyramid&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-125"><a href="#L-125"><span class="linenos">125</span></a>    <span class="p">(</span><span class="s2">&quot;surface_area_pyramid&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a>    <span class="p">(</span><span class="s2">&quot;is_composite&quot;</span><span class="p">,</span> <span class="s2">&quot;basic_math&quot;</span><span class="p">),</span>
+</span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a>    <span class="p">(</span><span class="s2">&quot;complementary_and_supplementary_angle&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">),</span>
+</span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a><span class="p">]</span>
 </span></pre></div>
 
 
             </section>
-                <section id="get_gen_list">
-                            <input id="get_gen_list-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">get_gen_list</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="get_gen_list-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#get_gen_list"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="get_gen_list-18"><a href="#get_gen_list-18"><span class="linenos">18</span></a><span class="k">def</span> <span class="nf">get_gen_list</span><span class="p">():</span>
-</span><span id="get_gen_list-19"><a href="#get_gen_list-19"><span class="linenos">19</span></a>    <span class="k">return</span> <span class="n">gen_list</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="gen_by_id">
-                            <input id="gen_by_id-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">gen_by_id</span><span class="signature pdoc-code condensed">(<span class="param"><span class="nb">id</span>, </span><span class="param"><span class="o">*</span><span class="n">args</span>, </span><span class="param"><span class="o">**</span><span class="n">kwargs</span></span><span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="gen_by_id-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#gen_by_id"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="gen_by_id-22"><a href="#gen_by_id-22"><span class="linenos">22</span></a><span class="k">def</span> <span class="nf">gen_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="gen_by_id-23"><a href="#gen_by_id-23"><span class="linenos">23</span></a>    <span class="k">return</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">gen_list</span><span class="p">[</span><span class="nb">id</span><span class="p">][</span><span class="mi">0</span><span class="p">]](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="getGenList">
-                            <input id="getGenList-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">getGenList</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="getGenList-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#getGenList"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="getGenList-27"><a href="#getGenList-27"><span class="linenos">27</span></a><span class="k">def</span> <span class="nf">getGenList</span><span class="p">():</span>
-</span><span id="getGenList-28"><a href="#getGenList-28"><span class="linenos">28</span></a>    <span class="k">return</span> <span class="n">gen_list</span>
-</span></pre></div>
-
-
-    
-
-                </section>
-                <section id="genById">
-                            <input id="genById-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">genById</span><span class="signature pdoc-code condensed">(<span class="param"><span class="nb">id</span>, </span><span class="param"><span class="o">*</span><span class="n">args</span>, </span><span class="param"><span class="o">**</span><span class="n">kwargs</span></span><span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="genById-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#genById"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="genById-31"><a href="#genById-31"><span class="linenos">31</span></a><span class="k">def</span> <span class="nf">genById</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="genById-32"><a href="#genById-32"><span class="linenos">32</span></a>    <span class="k">return</span> <span class="nb">globals</span><span class="p">()[</span><span class="n">gen_list</span><span class="p">[</span><span class="nb">id</span><span class="p">][</span><span class="mi">0</span><span class="p">]](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span></pre></div>
-
-
-    
-
-                </section>
     </main>
 <script>
     function escapeHTML(html) {
@@ -351,7 +258,7 @@ You can also use <code><a href="#getGenList">getGenList()</a></code> to return a
                 script.async = true;
                 script.onload = () => resolve(window.pdocSearch);
                 script.onerror = (e) => reject(e);
-                script.src = "search.js";
+                script.src = "../search.js";
                 document.getElementsByTagName("head")[0].appendChild(script);
             });
         } catch (e) {
@@ -393,7 +300,7 @@ You can also use <code><a href="#getGenList">getGenList()</a></code> to return a
             }
             for (let result of results.slice(0, 10)) {
                 let doc = result.doc;
-                let url = `${doc.modulename.replaceAll(".", "/")}.html`;
+                let url = `../${doc.modulename.replaceAll(".", "/")}.html`;
                 if (doc.qualname) {
                     url += `#${doc.qualname}`;
                 }

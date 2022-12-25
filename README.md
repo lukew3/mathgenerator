@@ -63,5 +63,5 @@ You can also use `getGenList()` to return a list of all generators included in t
 [id, title, gen_func, funcname, subjectname, kwargs]
 ```
 
-## Documenation
+## Documentation
 Documentation can be found at https://lukew3.github.io/mathgenerator
