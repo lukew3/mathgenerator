@@ -1,2 +1,2 @@
-pdoc mathgenerator --math -o docs
+pdoc mathgenerator !mathgenerator.mathgen --math -o docs
 python -m http.server -d docs

@@ -1,4 +1,4 @@
-from .latexBuilder import bmatrix
+from ._latexBuilder import bmatrix
 import random
 import math
 import fractions
