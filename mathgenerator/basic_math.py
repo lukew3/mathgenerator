@@ -12,7 +12,7 @@ def absolute_difference(maxA=100, maxB=100):
 
 def addition(maxSum=99, maxAddend=50):
     """Addition of two numbers
-    
+
     ("$22+34=$", "$56$")
     """
     if maxAddend > maxSum:
