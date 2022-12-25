@@ -161,16 +161,16 @@ def fraction_to_decimal(maxRes=99, maxDivid=99):
     return f'${a}\\div{b}=$', f'${c}$'
 
 
-def greatestCommonDivisorOfTwoNumbers(number1, number2):
-    number1 = abs(number1)
-    number2 = abs(number2)
-    while number2 > 0:
-        number1, number2 = number2, number1 % number2
-    return number1
-
-
 def greatest_common_divisor(numbersCount=2, maximalNumberLimit=10**9):
     """Greatest Common Divisor of N Numbers"""
+
+    def greatestCommonDivisorOfTwoNumbers(number1, number2):
+        number1 = abs(number1)
+        number2 = abs(number2)
+        while number2 > 0:
+            number1, number2 = number2, number1 % number2
+        return number1
+
     numbersCount = max(numbersCount, 2)
     numbers = [random.randint(0, maximalNumberLimit)
                for number in range(numbersCount)]

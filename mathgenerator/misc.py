@@ -36,7 +36,9 @@ def arithmetic_progression_term(maxd=100,
     return problem, f'${solution}$'
 
 
-def fromBaseTenTo(n, toBase):
+def _fromBaseTenTo(n, toBase):
+    """Converts a decimal number n to another base, toBase.
+    Utility of base_conversion()"""
     alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     assert type(
         toBase
@@ -58,11 +60,6 @@ def fromBaseTenTo(n, toBase):
     return res
 
 
-# Useful to check answers, but not needed here
-# def toBaseTen(n,fromBase):
-#     return int(n,fromBase)
-
-
 def base_conversion(maxNum=60000, maxBase=16):
     """Base Conversion"""
     assert type(
@@ -81,12 +78,13 @@ def base_conversion(maxNum=60000, maxBase=16):
     while bases[0] == bases[1]:
         bases = random.choices(dist, k=2)
 
-    problem = f"Convert ${fromBaseTenTo(n, bases[0])}$ from base ${bases[0]}$ to base ${bases[1]}$."
-    ans = fromBaseTenTo(n, bases[1])
+    problem = f"Convert ${_fromBaseTenTo(n, bases[0])}$ from base ${bases[0]}$ to base ${bases[1]}$."
+    ans = _fromBaseTenTo(n, bases[1])
     return problem, f'${ans}$'
 
 
-def newton_symbol(n, k):
+def _newton_symbol(n, k):
+    """Utility of binomial_distribution()"""
     return math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
 
 
@@ -99,7 +97,7 @@ def binomial_distribution():
     answer = 0
     rejected_fraction = round(rejected_fraction, 2)
     for i in range(0, rejections + 1):
-        answer += newton_symbol(float(batch), float(i)) * ((rejected_fraction / 100.) ** float(i)) * \
+        answer += _newton_symbol(float(batch), float(i)) * ((rejected_fraction / 100.) ** float(i)) * \
             ((1 - (rejected_fraction / 100.)) ** (float(batch) - float(i)))
 
     answer = round(100 * answer, 2)

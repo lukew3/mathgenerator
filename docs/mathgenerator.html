@@ -43,6 +43,24 @@
             <input type="search" placeholder="Search..." role="searchbox" aria-label="search"
                    pattern=".+" required>
 
+        <h2>Contents</h2>
+        <ul>
+  <li><a href="#mathgenerator">mathgenerator</a>
+  <ul>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#list-of-generators">List of Generators</a></li>
+    <li><a href="#algebra">algebra</a></li>
+    <li><a href="#basic_math">basic_math</a></li>
+    <li><a href="#calculus">calculus</a></li>
+    <li><a href="#computer_science">computer_science</a></li>
+    <li><a href="#geometry">geometry</a></li>
+    <li><a href="#misc">misc</a></li>
+    <li><a href="#statistics">statistics</a></li>
+  </ul></li>
+</ul>
+
 
         <h2>Submodules</h2>
         <ul>
@@ -69,27 +87,1253 @@
                     <h1 class="modulename">
 mathgenerator    </h1>
 
-                
+                        <div class="docstring"><h1 id="mathgenerator">mathgenerator</h1>
+
+<p>A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.</p>
+
+<p>To try out generators, go to <a href="https://lukew3.github.io/mathgenerator">https://lukew3.github.io/mathgenerator</a></p>
+
+<p>See <a href="https://github.com/lukew3/mathgenerator/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for information about how to contribute.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#list-of-generators">List of Generators</a>
+<ul>
+<li><a href="#algebra">algebra</a></li>
+<li><a href="#basic_math">basic_math</a></li>
+<li><a href="#calculus">calculus</a></li>
+<li><a href="#computer_science">computer_science</a></li>
+<li><a href="#geometry">geometry</a></li>
+<li><a href="#misc">misc</a></li>
+<li><a href="#statistics">statistics</a></li>
+</ul></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>The project can be install via pip</p>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code>pip install mathgenerator
+</code></pre>
+</div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Here is an example of how you would generate an addition problem:</p>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="kn">import</span> <span class="nn">mathgenerator</span>
+
+<span class="c1">#generate an addition problem</span>
+<span class="n">problem</span><span class="p">,</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">mathgenerator</span><span class="o">.</span><span class="n">addition</span><span class="p">()</span>
+
+<span class="c1">#another way to generate an addition problem using genById()</span>
+<span class="n">problem</span><span class="p">,</span> <span class="n">solution</span> <span class="o">=</span> <span class="n">mathgenerator</span><span class="o">.</span><span class="n">genById</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>You may prefer to use <code>import mathgenerator as mg</code> and run functions like <code>mg.addition()</code> so that you don't have to type as much.
+<!--</p>
+
+<h3 id="creating-a-worksheet">Creating a worksheet</h3>
+
+<p>If you wish to create a worksheet, you can use the <a href="https://github.com/lukew3/worksheetgen">worksheetgen</a> package. Install this with <code>pip install worksheetgen</code>. Here is an example of how a worksheet would be generated.</p>
+
+<pre><code>from mathgenerator import mathgen
+from worksheetgen.wg import Worksheet
+
+ws = Worksheet("Worksheet title")
+with ws.section('Section 1', description='These are instructions')
+    # Writes 10 problems generated with id 1, [0] at the end specifies to take problem, and not solution.
+    for _ in range(10):
+        ws.add_problem(mathgen.genById(1)[0])
+ws.write_pdf()
+</code></pre>
+
+<p>This creates the pdf <code>ws.pdf</code> in your current directory
+-->
+Problem/solution pairs are generated with either:</p>
+
+<ul>
+<li><code>mathgenerator.&lt;generator_name&gt;()</code> - generates a problem, solution set from the given generator name.</li>
+<li><code>mathgenerator.genById(id)</code> - generates a problem, solution set with generator id provided by the <code>id</code> parameter</li>
+</ul>
+
+<p><!--</p>
+
+<h4 id="format-kwarg"><code>format</code> kwarg</h4>
+
+<ul>
+<li>Pass <code>format=latex</code> to return problem and solution set as latex. If latex is not available for that generator, the problem will return the string "Latex unavailable"</li>
+<li>Pass <code>format=raw</code> to return just the raw data for each generator. An array of each variable necessary to the generator is returned.</li>
+<li>If you don't pass a value to the format kwarg, the generator will return a problem and answer in asciimath format.
+-->
+You can also use <code>getGenList()</code> to return a list of all generators included in the library in the format:</li>
+</ul>
+
+<pre><code>[id, title, gen_func, funcname, subjectname, kwargs]
+</code></pre>
+
+<h2 id="list-of-generators">List of Generators</h2>
+
+<h2 id="algebra">algebra</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>11</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/basic_algebra.py">Basic Algebra</a></td>
+  <td>$9x + 9 = 9$</td>
+  <td>$0$</td>
+  <td>basic_algebra</td>
+  <td><code>maxVariable=10</code></td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/log.py">Logarithm</a></td>
+  <td>$log_{2}(256)=$</td>
+  <td>$8$</td>
+  <td>log</td>
+  <td><code>maxBase=3</code> <code>maxVal=8</code></td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/multiply_int_to_22_matrix.py">Integer Multiplication with 2x2 Matrix</a></td>
+  <td>$2 * \begin{bmatrix} 8 &amp; 0 \ 10 &amp; 10 \end{bmatrix} =$</td>
+  <td>$\begin{bmatrix} 16 &amp; 0 \ 20 &amp; 20 \end{bmatrix}$</td>
+  <td>multiply_int_to_22_matrix</td>
+  <td><code>maxMatrixVal=10</code> <code>maxRes=100</code></td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/midpoint_of_two_points.py">Midpoint of the two point</a></td>
+  <td>The midpoint of $(7,5)$ and $(-17,14) = $</td>
+  <td>$(-5.0,9.5)$</td>
+  <td>midpoint_of_two_points</td>
+  <td><code>maxValue=20</code></td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/factoring.py">Factoring Quadratic</a></td>
+  <td>$x^2-2x$</td>
+  <td>$(x)(x-2)$</td>
+  <td>factoring</td>
+  <td><code>range_x1=10</code> <code>range_x2=10</code></td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/system_of_equations.py">Solve a System of Equations in R^2</a></td>
+  <td>Given $4x - 6y = 36$ and $9x - 2y = 12$, solve for $x$ and $y$.</td>
+  <td>$x = 0$, $y = -6$</td>
+  <td>system_of_equations</td>
+  <td><code>range_x=10</code> <code>range_y=10</code> <code>coeff_mult_range=10</code></td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/distance_two_points.py">Distance between 2 points</a></td>
+  <td>Find the distance between $(7, -15)$ and $(0, -1)$</td>
+  <td>$\sqrt{245}$</td>
+  <td>distance_two_points</td>
+  <td><code>maxValXY=20</code> <code>minValXY=-20</code></td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/linear_equations.py">Linear Equations</a></td>
+  <td>Given the equations $-3x + 10y = -140$ and $-3x + -4y = -28$, solve for $x$ and $y$</td>
+  <td>$x = 20$, $y = -8$</td>
+  <td>linear_equations</td>
+  <td><code>n=2</code> <code>varRange=20</code> <code>coeffRange=20</code></td>
+</tr>
+<tr>
+  <td>41</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/intersection_of_two_lines.py">Intersection of Two Lines</a></td>
+  <td>Find the point of intersection of the two lines: $y = 9/3x - 6$ and $y = 1/3x + 6$</td>
+  <td>$(9/2, 15/2)$</td>
+  <td>intersection_of_two_lines</td>
+  <td><code>minM=-10</code> <code>maxM=10</code> <code>minB=-10</code> <code>maxB=10</code> <code>minDenominator=1</code> <code>maxDenominator=6</code></td>
+</tr>
+<tr>
+  <td>43</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/vector_cross.py">Cross Product of 2 Vectors</a></td>
+  <td>$[-18, 0, 20] \times [-16, -5, 0] = $</td>
+  <td>$[100, -320, 90]$</td>
+  <td>vector_cross</td>
+  <td><code>minVal=-20</code> <code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>45</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/simple_interest.py">Simple Interest</a></td>
+  <td>Simple interest for a principle amount of $9080$ dollars, $3$% rate of interest and for a time period of $6$ years is $=$</td>
+  <td>$1634.4$</td>
+  <td>simple_interest</td>
+  <td><code>maxPrinciple=10000</code> <code>maxRate=10</code> <code>maxTime=10</code></td>
+</tr>
+<tr>
+  <td>46</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/matrix_multiplication.py">Multiplication of two matrices</a></td>
+  <td>Multiply$\begin{bmatrix}0&amp;-1&amp;-9&amp;1\-10&amp;4&amp;3&amp;-10\end{bmatrix}$and$\begin{bmatrix}-4&amp;-2&amp;-4\8&amp;-1&amp;2\-2&amp;6&amp;-5\-10&amp;7&amp;5\end{bmatrix}$</td>
+  <td>$\begin{bmatrix}0&amp;-46&amp;48\166&amp;-36&amp;-17\end{bmatrix}$</td>
+  <td>matrix_multiplication</td>
+  <td><code>maxVal=100</code> <code>max_dim=10</code></td>
+</tr>
+<tr>
+  <td>50</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/quadratic_equation.py">Quadratic Equation</a></td>
+  <td>What are the zeros of the quadratic equation $24x^2+103x+26=0$</td>
+  <td>${-0.27, -4.02}$</td>
+  <td>quadratic_equation</td>
+  <td><code>maxVal=100</code></td>
+</tr>
+<tr>
+  <td>65</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/multiply_complex_numbers.py">Multiplication of 2 complex numbers</a></td>
+  <td>$(17+1j) * (17-1j) = $</td>
+  <td>$(290+0j)$</td>
+  <td>multiply_complex_numbers</td>
+  <td><code>minRealImaginaryNum=-20</code> <code>maxRealImaginaryNum=20</code></td>
+</tr>
+<tr>
+  <td>72</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/vector_dot.py">Dot Product of 2 Vectors</a></td>
+  <td>$[9, 14, -19]\cdot[-8, -9, 10]=$</td>
+  <td>$-388$</td>
+  <td>vector_dot</td>
+  <td><code>minVal=-20</code> <code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>74</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/invert_matrix.py">Inverse of a Matrix</a></td>
+  <td>Inverse of Matrix $\begin{bmatrix} 0 &amp; 0 &amp; 1 \ 1 &amp; 3 &amp; 3 \ 1 &amp; 2 &amp; 2 \end{bmatrix}$ is:</td>
+  <td>\begin{bmatrix} 0 &amp; -2 &amp; 3 \ -1 &amp; 1 &amp; -1 \ 1 &amp; 0 &amp; 0 \end{bmatrix}</td>
+  <td>invert_matrix</td>
+  <td><code>SquareMatrixDimension=3</code> <code>MaxMatrixElement=99</code> <code>OnlyIntegerElementsInInvertedMatrix=True</code></td>
+</tr>
+<tr>
+  <td>77</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/int_matrix_22_determinant.py">Determinant to 2x2 Matrix</a></td>
+  <td>$\det \begin{bmatrix} 24 &amp; 94 \ 21 &amp; 29 \end{bmatrix}= $</td>
+  <td>$-1278$</td>
+  <td>int_matrix_22_determinant</td>
+  <td><code>maxMatrixVal=100</code></td>
+</tr>
+<tr>
+  <td>78</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/compound_interest.py">Compound Interest</a></td>
+  <td>Compound interest for a principle amount of $2004$ dollars, $1$% rate of interest and for a time period of $5$ years is $=$</td>
+  <td>$2106.22$</td>
+  <td>compound_interest</td>
+  <td><code>maxPrinciple=10000</code> <code>maxRate=10</code> <code>maxTime=10</code></td>
+</tr>
+<tr>
+  <td>100</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/complex_quadratic.py">complex Quadratic Equation</a></td>
+  <td>Find the roots of given Quadratic Equation $7x^2 + 7x + 1 = 0$</td>
+  <td>$((-0.173, -0.827)) = (\frac{-7 + \sqrt{21}}{2<em>7}, (\frac{-7 - \sqrt{21}}{2</em>7})$</td>
+  <td>complex_quadratic</td>
+  <td><code>prob_type=0</code> <code>max_range=10</code></td>
+</tr>
+<tr>
+  <td>105</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/combine_like_terms.py">Combine Like terms</a></td>
+  <td>$4x^{13} + 1x^{16}$</td>
+  <td>$4x^{13} + 1x^{16}$</td>
+  <td>combine_like_terms</td>
+  <td><code>maxCoef=10</code> <code>maxExp=20</code> <code>maxTerms=10</code></td>
+</tr>
+<tr>
+  <td>111</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/algebra/expanding.py">Expanding Factored Binomial</a></td>
+  <td>$(-10x-2)(-1x+6)$</td>
+  <td>$10x^2-58x-12$</td>
+  <td>expanding</td>
+  <td><code>range_x1=10</code> <code>range_x2=10</code> <code>range_a=10</code> <code>range_b=10</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="basic_math">basic_math</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/addition.py">Addition</a></td>
+  <td>$40+14=$</td>
+  <td>$54$</td>
+  <td>addition</td>
+  <td><code>maxSum=99</code> <code>maxAddend=50</code></td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/subtraction.py">Subtraction</a></td>
+  <td>$12-2=$</td>
+  <td>$10$</td>
+  <td>subtraction</td>
+  <td><code>maxMinuend=99</code> <code>maxDiff=99</code></td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/multiplication.py">Multiplication</a></td>
+  <td>$7\cdot8$</td>
+  <td>$56$</td>
+  <td>multiplication</td>
+  <td><code>maxMulti=12</code></td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/division.py">Division</a></td>
+  <td>$92\div23=$</td>
+  <td>$4$</td>
+  <td>division</td>
+  <td><code>maxA=25</code> <code>maxB=25</code></td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/square_root.py">Square Root</a></td>
+  <td>$\sqrt{1}=$</td>
+  <td>$1$</td>
+  <td>square_root</td>
+  <td><code>minNo=1</code> <code>maxNo=12</code></td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/square.py">Square</a></td>
+  <td>$9^2=$</td>
+  <td>$81$</td>
+  <td>square</td>
+  <td><code>maxSquareNum=20</code></td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/fraction_to_decimal.py">Fraction to Decimal</a></td>
+  <td>$84\div6=$</td>
+  <td>$14.0$</td>
+  <td>fraction_to_decimal</td>
+  <td><code>maxRes=99</code> <code>maxDivid=99</code></td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/divide_fractions.py">Fraction Division</a></td>
+  <td>$\frac{6}{7}\div\frac{9}{5}=$</td>
+  <td>$\frac{10}{21}$</td>
+  <td>divide_fractions</td>
+  <td><code>maxVal=10</code></td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/fraction_multiplication.py">Fraction Multiplication</a></td>
+  <td>$\frac{3}{9}\cdot\frac{7}{6}=$</td>
+  <td>$\frac{7}{18}$</td>
+  <td>fraction_multiplication</td>
+  <td><code>maxVal=10</code></td>
+</tr>
+<tr>
+  <td>31</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/factorial.py">Factorial</a></td>
+  <td>$5! =$</td>
+  <td>$120$</td>
+  <td>factorial</td>
+  <td><code>maxInput=6</code></td>
+</tr>
+<tr>
+  <td>44</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/compare_fractions.py">Compare Fractions</a></td>
+  <td>Which symbol represents the comparison between $\frac{3}{5}$ and $\frac{3}{9}$?</td>
+  <td>&gt;</td>
+  <td>compare_fractions</td>
+  <td><code>maxVal=10</code></td>
+</tr>
+<tr>
+  <td>47</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/cube_root.py">Cube Root</a></td>
+  <td>What is the cube root of: $\sqrt[3]{30}=$ to 2 decimal places?</td>
+  <td>$3.11$</td>
+  <td>cube_root</td>
+  <td><code>minNo=1</code> <code>maxNo=1000</code></td>
+</tr>
+<tr>
+  <td>53</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/exponentiation.py">Exponentiation</a></td>
+  <td>$4^1 =$</td>
+  <td>$4$</td>
+  <td>exponentiation</td>
+  <td><code>maxBase=20</code> <code>maxExpo=10</code></td>
+</tr>
+<tr>
+  <td>71</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/absolute_difference.py">Absolute difference between two numbers</a></td>
+  <td>$</td>
+  <td>22--59</td>
+  <td>=$</td>
+  <td>$81$</td>
+  <td>absolute_difference</td>
+  <td><code>maxA=100</code> <code>maxB=100</code></td>
+</tr>
+<tr>
+  <td>80</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage.py">Percentage of a number</a></td>
+  <td>What is $5$% of $18$?</td>
+  <td>$0.90$</td>
+  <td>percentage</td>
+  <td><code>maxValue=99</code> <code>maxpercentage=99</code></td>
+</tr>
+<tr>
+  <td>90</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/is_prime.py">isprime</a></td>
+  <td>Is $73$ prime?</td>
+  <td>Yes</td>
+  <td>is_prime</td>
+  <td><code>max_num=100</code></td>
+</tr>
+<tr>
+  <td>97</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/power_of_powers.py">Power of Powers</a></td>
+  <td>Simplify $31^{8^{2}}$</td>
+  <td>$31^{16}$</td>
+  <td>power_of_powers</td>
+  <td><code>maxBase=50</code> <code>maxPower=10</code></td>
+</tr>
+<tr>
+  <td>118</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage_difference.py">Percentage difference</a></td>
+  <td>What is the percentage difference between $66$ and $7$?</td>
+  <td>$161.64$%</td>
+  <td>percentage_difference</td>
+  <td><code>maxValue=200</code> <code>minValue=0</code></td>
+</tr>
+<tr>
+  <td>119</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/percentage_error.py">Percentage error</a></td>
+  <td>Find the percentage error when observed value equals $-44$ and exact value equals $-26$.</td>
+  <td>$69.23\%$</td>
+  <td>percentage_error</td>
+  <td><code>maxValue=100</code> <code>minValue=-100</code></td>
+</tr>
+<tr>
+  <td>120</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/greatest_common_divisor.py">Greatest Common Divisor of N Numbers</a></td>
+  <td>$GCD(860597057,541815762)=$</td>
+  <td>$1$</td>
+  <td>greatest_common_divisor</td>
+  <td><code>numbersCount=2</code> <code>maximalNumberLimit=10**9</code></td>
+</tr>
+<tr>
+  <td>124</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/basic_math/is_composite.py">Is Composite</a></td>
+  <td>Is $144$ composite?</td>
+  <td>Yes</td>
+  <td>is_composite</td>
+  <td><code>maxNum=250</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="calculus">calculus</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>7</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/power_rule_differentiation.py">Power Rule Differentiation</a></td>
+  <td>$2x^{6} + 5x^{4} + 6x^{4} + 9x^{4}$</td>
+  <td>$12x^{5} + 20x^{3} + 24x^{3} + 36x^{3}$</td>
+  <td>power_rule_differentiation</td>
+  <td><code>maxCoef=10</code> <code>maxExp=10</code> <code>maxTerms=5</code></td>
+</tr>
+<tr>
+  <td>48</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/power_rule_integration.py">Power Rule Integration</a></td>
+  <td>$8x^{1} + 1x^{9} + 5x^{1}$</td>
+  <td>$\frac{8}{1}x^{2} + \frac{1}{9}x^{10} + \frac{5}{1}x^{2} + C$</td>
+  <td>power_rule_integration</td>
+  <td><code>maxCoef=10</code> <code>maxExp=10</code> <code>maxTerms=5</code></td>
+</tr>
+<tr>
+  <td>88</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/trig_differentiation.py">Trigonometric Differentiation</a></td>
+  <td>$\frac{d}{dx}(\sin)=$</td>
+  <td>$\cos$</td>
+  <td>trig_differentiation</td>
+  <td></td>
+</tr>
+<tr>
+  <td>89</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/definite_integral.py">Definite Integral of Quadratic Equation</a></td>
+  <td>The definite integral within limits $0$ to $1$ of the equation $24x^2 + 93x + 13 = $</td>
+  <td>$67.5$</td>
+  <td>definite_integral</td>
+  <td><code>max_coeff=100</code></td>
+</tr>
+<tr>
+  <td>110</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/calculus/stationary_points.py">Stationary Points</a></td>
+  <td>$f(x)=10<em>x^3 + 8</em>x^2 + 2*x + 5$</td>
+  <td>${- \frac{1}{3}, - \frac{1}{5}}$</td>
+  <td>stationary_points</td>
+  <td><code>maxExp=3</code> <code>maxCoef=10</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="computer_science">computer_science</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>4</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_complement_1s.py">Binary Complement 1s</a></td>
+  <td>$010 = $</td>
+  <td>$101$</td>
+  <td>binary_complement_1s</td>
+  <td><code>maxDigits=10</code></td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/modulo_division.py">Modulo Division</a></td>
+  <td>$84$ % $20 = $</td>
+  <td>$4$</td>
+  <td>modulo_division</td>
+  <td><code>maxRes=99</code> <code>maxModulo=99</code></td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_binary.py">Decimal to Binary</a></td>
+  <td>Binary of $49 = $</td>
+  <td>$110001$</td>
+  <td>decimal_to_binary</td>
+  <td><code>max_dec=99</code></td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_to_decimal.py">Binary to Decimal</a></td>
+  <td>$00$</td>
+  <td>$0$</td>
+  <td>binary_to_decimal</td>
+  <td><code>max_dig=10</code></td>
+</tr>
+<tr>
+  <td>56</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/fibonacci_series.py">Fibonacci Series</a></td>
+  <td>The Fibonacci Series of the first ${n}$ numbers is ?</td>
+  <td>$0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89$</td>
+  <td>fibonacci_series</td>
+  <td><code>minNo=1</code></td>
+</tr>
+<tr>
+  <td>62</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/nth_fibonacci_number.py">nth Fibonacci number</a></td>
+  <td>What is the 74th Fibonacci number?</td>
+  <td>$1304969544928660$</td>
+  <td>nth_fibonacci_number</td>
+  <td><code>maxN=100</code></td>
+</tr>
+<tr>
+  <td>64</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_to_hex.py">Binary to Hexidecimal</a></td>
+  <td>$11010100$</td>
+  <td>$0xd4$</td>
+  <td>binary_to_hex</td>
+  <td><code>max_dig=10</code></td>
+</tr>
+<tr>
+  <td>73</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/binary_2s_complement.py">Binary 2's Complement</a></td>
+  <td>2's complement of $1 = $</td>
+  <td>$1$</td>
+  <td>binary_2s_complement</td>
+  <td><code>maxDigits=10</code></td>
+</tr>
+<tr>
+  <td>79</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_hexadeci.py">Decimal to Hexadecimal</a></td>
+  <td>Binary of $639 = $</td>
+  <td>$0x27f$</td>
+  <td>decimal_to_hexadeci</td>
+  <td><code>max_dec=1000</code></td>
+</tr>
+<tr>
+  <td>84</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_octal.py">Converts decimal to octal</a></td>
+  <td>The decimal number ${x}$ in Octal is:</td>
+  <td>$0o5206$</td>
+  <td>decimal_to_octal</td>
+  <td><code>maxDecimal=4096</code></td>
+</tr>
+<tr>
+  <td>91</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/bcd_to_decimal.py">Binary Coded Decimal to Integer</a></td>
+  <td>Integer of Binary Coded Decimal $3$ is $=$</td>
+  <td>$12440$</td>
+  <td>bcd_to_decimal</td>
+  <td><code>maxNumber=10000</code></td>
+</tr>
+<tr>
+  <td>103</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/computer_science/decimal_to_bcd.py">Decimal to Binary Coded Decimal</a></td>
+  <td>BCD of Decimal Number $6981 = $</td>
+  <td>$11145$</td>
+  <td>decimal_to_bcd</td>
+  <td><code>maxNumber=10000</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="geometry">geometry</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>18</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_triangle.py">Area of Triangle</a></td>
+  <td>Area of triangle with side lengths: $5, 15 11 = $</td>
+  <td>$19.14$</td>
+  <td>area_of_triangle</td>
+  <td><code>maxA=20</code> <code>maxB=20</code></td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/valid_triangle.py">Triangle exists check</a></td>
+  <td>Does triangle with sides $20, 17$ and $29$ exist?</td>
+  <td>$Yes$</td>
+  <td>valid_triangle</td>
+  <td><code>maxSideLength=50</code></td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/third_angle_of_triangle.py">Third Angle of Triangle</a></td>
+  <td>Third angle of triangle with angles $1$ and $86 = $</td>
+  <td>$93$</td>
+  <td>third_angle_of_triangle</td>
+  <td><code>maxAngle=89</code></td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/pythagorean_theorem.py">Pythagorean Theorem</a></td>
+  <td>What is the hypotenuse of a right triangle given the other two sides have lengths $18$ and $9$?</td>
+  <td>$20.12$</td>
+  <td>pythagorean_theorem</td>
+  <td><code>maxLength=20</code></td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/angle_regular_polygon.py">Angle of a Regular Polygon</a></td>
+  <td>Find the angle of a regular polygon with $7$ sides</td>
+  <td>$128.57$</td>
+  <td>angle_regular_polygon</td>
+  <td><code>minVal=3</code> <code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>32</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cube.py">Surface Area of Cube</a></td>
+  <td>Surface area of cube with side $= 17m$ is</td>
+  <td>$1734 m^2$</td>
+  <td>surface_area_cube</td>
+  <td><code>maxSide=20</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>33</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cuboid.py">Surface Area of Cuboid</a></td>
+  <td>Surface area of cuboid with sides of lengths: $9m, 11m, 20m$ is</td>
+  <td>$998 m^2$</td>
+  <td>surface_area_cuboid</td>
+  <td><code>maxSide=20</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>34</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cylinder.py">Surface Area of Cylinder</a></td>
+  <td>Surface area of cylinder with height $= 25m$ and radius $= 18m$ is</td>
+  <td>$4863 m^2$</td>
+  <td>surface_area_cylinder</td>
+  <td><code>maxRadius=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>35</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cube.py">Volume of Cube</a></td>
+  <td>Volume of cube with a side length of $13m$ is</td>
+  <td>$2197 m^3$</td>
+  <td>volume_cube</td>
+  <td><code>maxSide=20</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>36</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cuboid.py">Volume of Cuboid</a></td>
+  <td>Volume of cuboid with sides = $2m, 6m, 18m$ is</td>
+  <td>$216 m^3$</td>
+  <td>volume_cuboid</td>
+  <td><code>maxSide=20</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>37</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cylinder.py">Volume of cylinder</a></td>
+  <td>Volume of cylinder with height $= 28m$ and radius $= 5m$ is</td>
+  <td>$2199 m^3$</td>
+  <td>volume_cylinder</td>
+  <td><code>maxRadius=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>38</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_cone.py">Surface Area of cone</a></td>
+  <td>Surface area of cone with height $= 37m$ and radius $= 15m$ is</td>
+  <td>$2588 m^2$</td>
+  <td>surface_area_cone</td>
+  <td><code>maxRadius=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>39</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_cone.py">Volume of cone</a></td>
+  <td>Volume of cone with height $= 17m$ and radius $= 1m$ is</td>
+  <td>$17 m^3$</td>
+  <td>volume_cone</td>
+  <td><code>maxRadius=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>49</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/fourth_angle_of_quadrilateral.py">Fourth Angle of Quadrilateral</a></td>
+  <td>Fourth angle of quadrilateral with angles $108 , 35, 117 =$</td>
+  <td>$100$</td>
+  <td>fourth_angle_of_quadrilateral</td>
+  <td><code>maxAngle=180</code></td>
+</tr>
+<tr>
+  <td>57</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/basic_trigonometry.py">Trigonometric Values</a></td>
+  <td>$\tan(0) = $</td>
+  <td>$0$</td>
+  <td>basic_trigonometry</td>
+  <td><code>angles=[0, 30, 45, 60, 90]</code> <code>functions=['sin', 'cos', 'tan']</code></td>
+</tr>
+<tr>
+  <td>58</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/sum_of_polygon_angles.py">Sum of Angles of Polygon</a></td>
+  <td>What is the sum of interior angles of a polygon with $5$ sides?</td>
+  <td>$540$</td>
+  <td>sum_of_polygon_angles</td>
+  <td><code>maxSides=12</code></td>
+</tr>
+<tr>
+  <td>60</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_sphere.py">Surface Area of Sphere</a></td>
+  <td>Surface area of Sphere with radius $= 14m$ is</td>
+  <td>$2463.0086404143976 m^2$</td>
+  <td>surface_area_sphere</td>
+  <td><code>maxSide=20</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>61</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_sphere.py">Volume of Sphere</a></td>
+  <td>Volume of sphere with radius $12 m = $</td>
+  <td>$7238.229473870882 m^3$</td>
+  <td>volume_sphere</td>
+  <td><code>maxRadius=100</code></td>
+</tr>
+<tr>
+  <td>70</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/angle_btw_vectors.py">Angle between 2 vectors</a></td>
+  <td>angle between the vectors $[90.18, 778.39, 6.95, 189.4, 402.86]$ and $[937.62, 966.01, 986.87, 311.51, 725.29]$ is:</td>
+  <td>$0.77$ radians</td>
+  <td>angle_btw_vectors</td>
+  <td><code>maxEltAmt=20</code></td>
+</tr>
+<tr>
+  <td>75</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/sector_area.py">Area of a Sector</a></td>
+  <td>What is the area of a sector with radius $27$ and angle $340$ degrees?</td>
+  <td>$2162.99$</td>
+  <td>sector_area</td>
+  <td><code>maxRadius=49</code> <code>maxAngle=359</code></td>
+</tr>
+<tr>
+  <td>86</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/degree_to_rad.py">Degrees to Radians</a></td>
+  <td>Angle $50$ degrees in radians is:</td>
+  <td>$0.87$</td>
+  <td>degree_to_rad</td>
+  <td><code>max_deg=360</code></td>
+</tr>
+<tr>
+  <td>87</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/radian_to_deg.py">Radians to Degrees</a></td>
+  <td>Angle $1.14$ radians in degrees is:</td>
+  <td>$65.32$</td>
+  <td>radian_to_deg</td>
+  <td><code>max_rad=6.28</code></td>
+</tr>
+<tr>
+  <td>95</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/curved_surface_area_cylinder.py">Curved surface area of a cylinder</a></td>
+  <td>What is the curved surface area of a cylinder of radius, $42$ and height, $28$?</td>
+  <td>$7389.03$</td>
+  <td>curved_surface_area_cylinder</td>
+  <td><code>maxRadius=49</code> <code>maxHeight=99</code></td>
+</tr>
+<tr>
+  <td>96</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/perimeter_of_polygons.py">Perimeter of Polygons</a></td>
+  <td>The perimeter of a $11$ sided polygon with lengths of $16, 109, 106, 37, 3, 59, 49, 1, 88, 43, 42$cm is:</td>
+  <td>$553$</td>
+  <td>perimeter_of_polygons</td>
+  <td><code>maxSides=12</code> <code>maxLength=120</code></td>
+</tr>
+<tr>
+  <td>104</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/circumference.py">Circumference</a></td>
+  <td>Circumference of circle with radius $37 = $</td>
+  <td>$232.48$</td>
+  <td>circumference</td>
+  <td><code>maxRadius=100</code></td>
+</tr>
+<tr>
+  <td>108</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/arc_length.py">Arc length of Angle</a></td>
+  <td>Given radius, $49$ and angle, $13$. Find the arc length of the angle.</td>
+  <td>Arc length of the angle $= 11.11775$</td>
+  <td>arc_length</td>
+  <td><code>maxRadius=49</code> <code>maxAngle=359</code></td>
+</tr>
+<tr>
+  <td>112</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle.py">Area of Circle</a></td>
+  <td>Area of circle with radius $92=$</td>
+  <td>$26590.44$</td>
+  <td>area_of_circle</td>
+  <td><code>maxRadius=100</code></td>
+</tr>
+<tr>
+  <td>113</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_frustum.py">Volume of frustum</a></td>
+  <td>Volume of frustum with height $= 33m$ and $r1 = 7m$ is and $r2 = 7m$ is</td>
+  <td>$6669.0 m^3$</td>
+  <td>volume_frustum</td>
+  <td><code>maxR1=20</code> <code>maxR2=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>114</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/equation_of_line_from_two_points.py">Equation of line from two points</a></td>
+  <td>What is the equation of the line between points $(20,7)$ and $(-12,12)$ in slope-intercept form?</td>
+  <td>$32y = -5x + 324$</td>
+  <td>equation_of_line_from_two_points</td>
+  <td><code>maxCoordinate=20</code> <code>minCoordinate=-20</code></td>
+</tr>
+<tr>
+  <td>115</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/area_of_circle_given_center_and_point.py">Area of Circle given center and a point on circle</a></td>
+  <td>Area of circle with center $(-8,9)$ and passing through $(-4.0, 9.0)$ is</td>
+  <td>$50.27$</td>
+  <td>area_of_circle_given_center_and_point</td>
+  <td><code>maxCoordinate = 10</code> <code>maxRadius=10</code></td>
+</tr>
+<tr>
+  <td>117</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_hemisphere.py">Volume of Hemisphere</a></td>
+  <td>Volume of hemisphere with radius $25 m =$</td>
+  <td>$32724.923 m^3$</td>
+  <td>volume_hemisphere</td>
+  <td><code>maxRadius=100</code></td>
+</tr>
+<tr>
+  <td>122</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/volume_pyramid.py">Volume of pyramid</a></td>
+  <td>Volume of pyramid with base length $= 3 m$, base width $= 1 m$ and height $= 2 m$ is</td>
+  <td>$2.0 m^3$</td>
+  <td>volume_pyramid</td>
+  <td><code>maxLength=20</code> <code>maxWidth=20</code> <code>maxHeight=50</code> <code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>123</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/surface_area_pyramid.py">Surface area of pyramid</a></td>
+  <td>Surface area of pyramid with base length $= 6m$, base width $= 6m$, and height $= 4m$ is</td>
+  <td>$96 m^2$</td>
+  <td>surface_area_pyramid</td>
+  <td><code>unit='m'</code></td>
+</tr>
+<tr>
+  <td>125</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/geometry/complementary_and_supplementary_angle.py">Complementary and Supplementary Angle</a></td>
+  <td>The supplementary angle of 48 =</td>
+  <td>132</td>
+  <td>complementary_and_supplementary_angle</td>
+  <td><code>maxSupp=180</code> <code>maxComp=90</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="misc">misc</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>9</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/lcm.py">LCM (Least Common Multiple)</a></td>
+  <td>LCM of $11$ and $12 =$</td>
+  <td>$132$</td>
+  <td>lcm</td>
+  <td><code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/gcd.py">GCD (Greatest Common Denominator)</a></td>
+  <td>GCD of $20$ and $9 = $</td>
+  <td>$1$</td>
+  <td>gcd</td>
+  <td><code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/prime_factors.py">Prime Factorisation</a></td>
+  <td>Find prime factors of $84$</td>
+  <td>$2, 2, 3, 7$</td>
+  <td>prime_factors</td>
+  <td><code>minVal=1</code> <code>maxVal=200</code></td>
+</tr>
+<tr>
+  <td>40</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/common_factors.py">Common Factors</a></td>
+  <td>Common Factors of $7$ and $44 = $</td>
+  <td>$[1]$</td>
+  <td>common_factors</td>
+  <td><code>maxVal=100</code></td>
+</tr>
+<tr>
+  <td>51</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/hcf.py">HCF (Highest Common Factor)</a></td>
+  <td>HCF of $13$ and $5 = $</td>
+  <td>$1$</td>
+  <td>hcf</td>
+  <td><code>maxVal=20</code></td>
+</tr>
+<tr>
+  <td>55</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/surds_comparison.py">Comparing surds</a></td>
+  <td>Fill in the blanks $23^{\frac{1}{9}}$ _ $63^{\frac{1}{2}}$</td>
+  <td>$<$</td>
+  <td>surds_comparison</td>
+  <td><code>maxValue=100</code> <code>maxRoot=10</code></td>
+</tr>
+<tr>
+  <td>63</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/profit_loss_percent.py">Profit or Loss Percent</a></td>
+  <td>Profit percent when $CP = 145$ and $SP = 782$ is:</td>
+  <td>$439.31$</td>
+  <td>profit_loss_percent</td>
+  <td><code>maxCP=1000</code> <code>maxSP=1000</code></td>
+</tr>
+<tr>
+  <td>66</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/geometric_progression.py">Geometric Progression</a></td>
+  <td>For the given GP $[3, 36, 432, 5184, 62208, 746496]$. Find the value of a common ratio, 10th term value, sum upto 10th term</td>
+  <td>The value of a is $3$, common ratio is $12$ , 10th term is $15479341056$, sum upto 10th term is $16886553879.0$</td>
+  <td>geometric_progression</td>
+  <td><code>number_values=6</code> <code>min_value=2</code> <code>max_value=12</code> <code>n_term=7</code> <code>sum_term=5</code></td>
+</tr>
+<tr>
+  <td>67</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/geometric_mean.py">Geometric Mean of N Numbers</a></td>
+  <td>Geometric mean of $3$ numbers $[15, 90, 74] = $</td>
+  <td>$46.4$</td>
+  <td>geometric_mean</td>
+  <td><code>maxValue=100</code> <code>maxCount=4</code></td>
+</tr>
+<tr>
+  <td>68</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/harmonic_mean.py">Harmonic Mean of N Numbers</a></td>
+  <td>Harmonic mean of $4$ numbers $4, 94, 70, 14 = $</td>
+  <td>$40.42123738481791$</td>
+  <td>harmonic_mean</td>
+  <td><code>maxValue=100</code> <code>maxNum=4</code></td>
+</tr>
+<tr>
+  <td>69</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/euclidian_norm.py">Euclidian norm or L2 norm of a vector</a></td>
+  <td>Euclidian norm or L2 norm of the vector $[667.6348977529038, 679.4272834518646, 255.59424823283462, 642.7158651607829, 619.0578738657584, 693.3434890856785, 107.39417747607006]$ is:</td>
+  <td>$1503.75$</td>
+  <td>euclidian_norm</td>
+  <td><code>maxEltAmt=20</code></td>
+</tr>
+<tr>
+  <td>81</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/celsius_to_fahrenheit.py">Celsius To Fahrenheit</a></td>
+  <td>Convert $2$ degrees Celsius to degrees Fahrenheit</td>
+  <td>$35.6$</td>
+  <td>celsius_to_fahrenheit</td>
+  <td><code>maxTemp=100</code></td>
+</tr>
+<tr>
+  <td>82</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/arithmetic_progression_term.py">AP Term Calculation</a></td>
+  <td>Find term number $67$ of the AP series: $56, 133, 210 ... $</td>
+  <td>$5138$</td>
+  <td>arithmetic_progression_term</td>
+  <td><code>maxd=100</code> <code>maxa=100</code> <code>maxn=100</code></td>
+</tr>
+<tr>
+  <td>83</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/arithmetic_progression_sum.py">AP Sum Calculation</a></td>
+  <td>Find the sum of first $54$ terms of the AP series: $83, 42, 1 ... $</td>
+  <td>$-54189.0$</td>
+  <td>arithmetic_progression_sum</td>
+  <td><code>maxd=100</code> <code>maxa=100</code> <code>maxn=100</code></td>
+</tr>
+<tr>
+  <td>85</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/decimal_to_roman_numerals.py">Converts decimal to Roman Numerals</a></td>
+  <td>The number $0$ in Roman Numerals is:</td>
+  <td>$MMCCCLVI$</td>
+  <td>decimal_to_roman_numerals</td>
+  <td><code>maxDecimal=4000</code></td>
+</tr>
+<tr>
+  <td>92</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/complex_to_polar.py">Complex To Polar Form</a></td>
+  <td>$17.12(2.0\theta + i17.0\theta)$</td>
+  <td>$1.45$</td>
+  <td>complex_to_polar</td>
+  <td><code>minRealImaginaryNum=-20, maxRealImaginaryNum=20</code></td>
+</tr>
+<tr>
+  <td>93</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/set_operation.py">Union,Intersection,Difference of Two Sets</a></td>
+  <td>Given the two sets $a={2, 6, 8, 9, 10}$, $b={8, 10, 4}. Find the Union, intersection, a-b, b-a, and symmetric difference</td>
+  <td>Union is ${2, 4, 6, 8, 9, 10}$. Intersection is ${8, 10}$, a-b is ${9, 2, 6}$, b-a is ${4}$. Symmetric difference is ${2, 4, 6, 9}$.</td>
+  <td>set_operation</td>
+  <td><code>minval=3</code> <code>maxval=7</code> <code>n_a=4</code> <code>n_b=5</code></td>
+</tr>
+<tr>
+  <td>94</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/base_conversion.py">Base Conversion</a></td>
+  <td>Convert $56371$ from base $10$ to base $5$.</td>
+  <td>$3300441$</td>
+  <td>base_conversion</td>
+  <td><code>maxNum=60000</code> <code>maxBase=16</code></td>
+</tr>
+<tr>
+  <td>98</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/quotient_of_power_same_base.py">Quotient of Powers with Same Base</a></td>
+  <td>The Quotient of $17^{1}$ and $17^{9} = $17^{1-9} = 17^{-8}$</td>
+  <td>$1.4335360832968505e-10$</td>
+  <td>quotient_of_power_same_base</td>
+  <td><code>maxBase=50</code> <code>maxPower=10</code></td>
+</tr>
+<tr>
+  <td>99</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/quotient_of_power_same_power.py">Quotient of Powers with Same Power</a></td>
+  <td>The Quotient of $33^{4}$ and $23^{4} = (33/23)^4 = 1.434782608695652^{4}$</td>
+  <td>$4.237838629793346$</td>
+  <td>quotient_of_power_same_power</td>
+  <td><code>maxBase=50</code> <code>maxPower=10</code></td>
+</tr>
+<tr>
+  <td>101</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/is_leap_year.py">Leap Year or Not</a></td>
+  <td>Is 1906 a leap year?</td>
+  <td>1906 is not a leap year</td>
+  <td>is_leap_year</td>
+  <td><code>minNumber=1900</code> <code>maxNumber=2099</code></td>
+</tr>
+<tr>
+  <td>102</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/minutes_to_hours.py">Minute to Hour conversion</a></td>
+  <td>Convert $381$ minutes to hours &amp; minutes</td>
+  <td>$6$ hours and $21$ minutes</td>
+  <td>minutes_to_hours</td>
+  <td><code>maxMinutes=999</code></td>
+</tr>
+<tr>
+  <td>106</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/signum_function.py">signum function</a></td>
+  <td>signum of 985 is =</td>
+  <td>$1$</td>
+  <td>signum_function</td>
+  <td><code>min=-999</code> <code>max=999</code></td>
+</tr>
+<tr>
+  <td>109</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/binomial_distribution.py">Binomial distribution</a></td>
+  <td>A manufacturer of metal pistons finds that, on average, $34.46$% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of $10$ pistons will contain no more than $8$ rejected pistons?</td>
+  <td>$99.95$</td>
+  <td>binomial_distribution</td>
+  <td>``</td>
+</tr>
+<tr>
+  <td>116</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/factors.py">Factors of a number</a></td>
+  <td>Factors of $949 = $</td>
+  <td>$[1, 13, 73, 949]$</td>
+  <td>factors</td>
+  <td><code>maxVal=1000</code></td>
+</tr>
+<tr>
+  <td>121</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/misc/product_of_scientific_notations.py">Product of scientific notations</a></td>
+  <td>Product of scientific notations $7.83 \times 10^{-39}$ and $6.12 \times 10^{-95} = $</td>
+  <td>$4.79 \times 10^{-133}$</td>
+  <td>product_of_scientific_notations</td>
+  <td><code>minExpVal=-100</code> <code>maxExpVal=100</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="statistics">statistics</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Id</th>
+  <th>Skill</th>
+  <th>Example problem</th>
+  <th>Example Solution</th>
+  <th>Function Name</th>
+  <th>Kwargs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>30</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/combinations.py">Combinations of Objects</a></td>
+  <td>Find the number of combinations from $14$ objects picked $6$ at a time.</td>
+  <td>$3003$</td>
+  <td>combinations</td>
+  <td><code>maxlength=20</code></td>
+</tr>
+<tr>
+  <td>42</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/permutation.py">Permutations</a></td>
+  <td>Number of Permutations from $17$ objects picked $6$ at a time is:</td>
+  <td>$8910720$</td>
+  <td>permutation</td>
+  <td><code>maxlength=20</code></td>
+</tr>
+<tr>
+  <td>52</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/dice_sum_probability.py">Probability of a certain sum appearing on faces of dice</a></td>
+  <td>If $3$ dice are rolled at the same time, the probability of getting a sum of $3 =$</td>
+  <td>\frac{1}{216}</td>
+  <td>dice_sum_probability</td>
+  <td><code>maxDice=3</code></td>
+</tr>
+<tr>
+  <td>54</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/confidence_interval.py">Confidence interval For sample S</a></td>
+  <td>The confidence interval for sample $[226, 260, 221, 245, 282, 274, 207, 299, 257, 211, 233, 239, 206, 208, 242, 224, 265, 287, 230, 276, 256, 237, 215, 291, 216, 251, 255, 229, 279, 275, 210, 203, 220, 292]$ with $95$% confidence is</td>
+  <td>$(254.41804694839914, 235.052541286895)$</td>
+  <td>confidence_interval</td>
+  <td>``</td>
+</tr>
+<tr>
+  <td>59</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/data_summary.py">Mean,Standard Deviation,Variance</a></td>
+  <td>Find the mean,standard deviation and variance for the data $48, 38, 10, 5, 24, 46, 50, 17, 20, 13, 17, 14, 5, 20, 34$</td>
+  <td>The Mean is $24.066666666666666$, Standard Deviation is $220.0622222222222$, Variance is $14.834494336586678$</td>
+  <td>data_summary</td>
+  <td><code>number_values=15</code> <code>minval=5</code> <code>maxval=50</code></td>
+</tr>
+<tr>
+  <td>76</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/mean_median.py">Mean and Median</a></td>
+  <td>Given the series of numbers $[6, 30, 32, 39, 42, 65, 72, 80, 84, 85]$. Find the arithmatic mean and mdian of the series</td>
+  <td>Arithmetic mean of the series is $53.5$ and Arithmetic median of this series is $53.5$</td>
+  <td>mean_median</td>
+  <td><code>maxlen=10</code></td>
+</tr>
+<tr>
+  <td>107</td>
+  <td><a href="https://github.com/lukew3/mathgenerator/blob/main/mathgenerator/funcs/statistics/conditional_probability.py">Conditional Probability</a></td>
+  <td>Someone tested positive for a nasty disease which only $1.26\%$ of the population have. Test sensitivity (true positive) is equal to $SN=93.71$% whereas test specificity (true negative) $SP=90.62\%$. What is the probability that this guy really has that disease?</td>
+  <td>$11.31$%</td>
+  <td>conditional_probability</td>
+  <td>``</td>
+</tr>
+</tbody>
+</table>
+</div>
+
                         <input id="mod-mathgenerator-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
                         <label class="view-source-button" for="mod-mathgenerator-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">from</span> <span class="nn">.algebra</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span> <span class="nn">.basic_math</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="kn">from</span> <span class="nn">.calculus</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="kn">from</span> <span class="nn">.computer_science</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span> <span class="nn">.geometry</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span> <span class="nn">.statistics</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="sd">genList = getGenList()</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="sd">.. include:: ../README.md</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span> <span class="nn">.algebra</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span> <span class="nn">.basic_math</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span> <span class="nn">.calculus</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="kn">from</span> <span class="nn">.computer_science</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="kn">from</span> <span class="nn">.geometry</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="kn">from</span> <span class="nn">.statistics</span> <span class="kn">import</span> <span class="o">*</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="sd">def genById(id, *args, **kwargs):</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="sd">    generator = genList[id][2]</span>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="sd">    return (generator(*args, **kwargs))</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="sd">genList = getGenList()</span>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>
+</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">def genById(id, *args, **kwargs):</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">    generator = genList[id][2]</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">    return (generator(*args, **kwargs))</span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">&quot;&quot;&quot;</span>
 </span></pre></div>
 
 

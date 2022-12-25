@@ -1,3 +1,7 @@
+"""
+.. include:: ../README.md
+"""
+
 from .algebra import *
 from .basic_math import *
 from .calculus import *

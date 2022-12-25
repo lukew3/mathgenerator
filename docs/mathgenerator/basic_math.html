@@ -83,9 +83,6 @@
                     <a class="function" href="#fraction_to_decimal">fraction_to_decimal</a>
             </li>
             <li>
-                    <a class="function" href="#greatestCommonDivisorOfTwoNumbers">greatestCommonDivisorOfTwoNumbers</a>
-            </li>
-            <li>
                     <a class="function" href="#greatest_common_divisor">greatest_common_divisor</a>
             </li>
             <li>
@@ -302,16 +299,16 @@
 </span><span id="L-161"><a href="#L-161"><span class="linenos">161</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\\</span><span class="s1">div</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-162"><a href="#L-162"><span class="linenos">162</span></a>
 </span><span id="L-163"><a href="#L-163"><span class="linenos">163</span></a>
-</span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a><span class="k">def</span> <span class="nf">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
-</span><span id="L-165"><a href="#L-165"><span class="linenos">165</span></a>    <span class="n">number1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
-</span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a>    <span class="n">number2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number2</span><span class="p">)</span>
-</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a>    <span class="k">while</span> <span class="n">number2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a>        <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">number2</span><span class="p">,</span> <span class="n">number1</span> <span class="o">%</span> <span class="n">number2</span>
-</span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a>    <span class="k">return</span> <span class="n">number1</span>
-</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a>
-</span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a>
-</span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbersCount</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
-</span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a>    <span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers&quot;&quot;&quot;</span>
+</span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbersCount</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
+</span><span id="L-165"><a href="#L-165"><span class="linenos">165</span></a>    <span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers&quot;&quot;&quot;</span>
+</span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a>
+</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a>    <span class="k">def</span> <span class="nf">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+</span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a>        <span class="n">number1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
+</span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a>        <span class="n">number2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number2</span><span class="p">)</span>
+</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a>        <span class="k">while</span> <span class="n">number2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a>            <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">number2</span><span class="p">,</span> <span class="n">number1</span> <span class="o">%</span> <span class="n">number2</span>
+</span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a>        <span class="k">return</span> <span class="n">number1</span>
+</span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a>
 </span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>    <span class="n">numbersCount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbersCount</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </span><span id="L-175"><a href="#L-175"><span class="linenos">175</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="p">)</span>
 </span><span id="L-176"><a href="#L-176"><span class="linenos">176</span></a>               <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numbersCount</span><span class="p">)]</span>
@@ -778,29 +775,6 @@
 
 
                 </section>
-                <section id="greatestCommonDivisorOfTwoNumbers">
-                            <input id="greatestCommonDivisorOfTwoNumbers-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="def">def</span>
-        <span class="name">greatestCommonDivisorOfTwoNumbers</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">number1</span>, </span><span class="param"><span class="n">number2</span></span><span class="return-annotation">):</span></span>
-
-                <label class="view-source-button" for="greatestCommonDivisorOfTwoNumbers-view-source"><span>View Source</span></label>
-
-    </div>
-    <a class="headerlink" href="#greatestCommonDivisorOfTwoNumbers"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="greatestCommonDivisorOfTwoNumbers-165"><a href="#greatestCommonDivisorOfTwoNumbers-165"><span class="linenos">165</span></a><span class="k">def</span> <span class="nf">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
-</span><span id="greatestCommonDivisorOfTwoNumbers-166"><a href="#greatestCommonDivisorOfTwoNumbers-166"><span class="linenos">166</span></a>    <span class="n">number1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
-</span><span id="greatestCommonDivisorOfTwoNumbers-167"><a href="#greatestCommonDivisorOfTwoNumbers-167"><span class="linenos">167</span></a>    <span class="n">number2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number2</span><span class="p">)</span>
-</span><span id="greatestCommonDivisorOfTwoNumbers-168"><a href="#greatestCommonDivisorOfTwoNumbers-168"><span class="linenos">168</span></a>    <span class="k">while</span> <span class="n">number2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="greatestCommonDivisorOfTwoNumbers-169"><a href="#greatestCommonDivisorOfTwoNumbers-169"><span class="linenos">169</span></a>        <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">number2</span><span class="p">,</span> <span class="n">number1</span> <span class="o">%</span> <span class="n">number2</span>
-</span><span id="greatestCommonDivisorOfTwoNumbers-170"><a href="#greatestCommonDivisorOfTwoNumbers-170"><span class="linenos">170</span></a>    <span class="k">return</span> <span class="n">number1</span>
-</span></pre></div>
-
-
-    
-
-                </section>
                 <section id="greatest_common_divisor">
                             <input id="greatest_common_divisor-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
@@ -812,8 +786,16 @@
 
     </div>
     <a class="headerlink" href="#greatest_common_divisor"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="greatest_common_divisor-173"><a href="#greatest_common_divisor-173"><span class="linenos">173</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbersCount</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
-</span><span id="greatest_common_divisor-174"><a href="#greatest_common_divisor-174"><span class="linenos">174</span></a>    <span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers&quot;&quot;&quot;</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="greatest_common_divisor-165"><a href="#greatest_common_divisor-165"><span class="linenos">165</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbersCount</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
+</span><span id="greatest_common_divisor-166"><a href="#greatest_common_divisor-166"><span class="linenos">166</span></a>    <span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers&quot;&quot;&quot;</span>
+</span><span id="greatest_common_divisor-167"><a href="#greatest_common_divisor-167"><span class="linenos">167</span></a>
+</span><span id="greatest_common_divisor-168"><a href="#greatest_common_divisor-168"><span class="linenos">168</span></a>    <span class="k">def</span> <span class="nf">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+</span><span id="greatest_common_divisor-169"><a href="#greatest_common_divisor-169"><span class="linenos">169</span></a>        <span class="n">number1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
+</span><span id="greatest_common_divisor-170"><a href="#greatest_common_divisor-170"><span class="linenos">170</span></a>        <span class="n">number2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">number2</span><span class="p">)</span>
+</span><span id="greatest_common_divisor-171"><a href="#greatest_common_divisor-171"><span class="linenos">171</span></a>        <span class="k">while</span> <span class="n">number2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="greatest_common_divisor-172"><a href="#greatest_common_divisor-172"><span class="linenos">172</span></a>            <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">number2</span><span class="p">,</span> <span class="n">number1</span> <span class="o">%</span> <span class="n">number2</span>
+</span><span id="greatest_common_divisor-173"><a href="#greatest_common_divisor-173"><span class="linenos">173</span></a>        <span class="k">return</span> <span class="n">number1</span>
+</span><span id="greatest_common_divisor-174"><a href="#greatest_common_divisor-174"><span class="linenos">174</span></a>
 </span><span id="greatest_common_divisor-175"><a href="#greatest_common_divisor-175"><span class="linenos">175</span></a>    <span class="n">numbersCount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbersCount</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </span><span id="greatest_common_divisor-176"><a href="#greatest_common_divisor-176"><span class="linenos">176</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximalNumberLimit</span><span class="p">)</span>
 </span><span id="greatest_common_divisor-177"><a href="#greatest_common_divisor-177"><span class="linenos">177</span></a>               <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numbersCount</span><span class="p">)]</span>

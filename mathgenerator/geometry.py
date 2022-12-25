@@ -335,21 +335,18 @@ def surface_area_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     return problem, solution
 
 
-# List of Pythagorean triplets
-_PYTHAGOREAN = [(3, 4, 5),
-                (6, 8, 10),
-                (9, 12, 15),
-                (12, 16, 20),
-                (15, 20, 25),
-
-                (5, 12, 13),
-                (10, 24, 26),
-
-                (7, 24, 25)]
-
-
 def surface_area_pyramid(unit='m'):
     """Surface area of a pyramid"""
+    # List of Pythagorean triplets
+    _PYTHAGOREAN = [(3, 4, 5),
+                    (6, 8, 10),
+                    (9, 12, 15),
+                    (12, 16, 20),
+                    (15, 20, 25),
+                    (5, 12, 13),
+                    (10, 24, 26),
+                    (7, 24, 25)]
+
     # Generate first triplet
     height, half_width, triangle_height_1 = random.sample(random.choice(_PYTHAGOREAN), 3)
 
