@@ -10,11 +10,22 @@ from .geometry import *
 from .misc import *
 from .statistics import *
 
-"""
-genList = getGenList()
+from ._gen_list import gen_list
+
+
+# [funcname, subjectname]
+def get_gen_list():
+    return gen_list
+
+
+def gen_by_id(id, *args, **kwargs):
+    return globals()[gen_list[id][0]](*args, **kwargs)
+
+
+# Legacy Functions
+def getGenList():
+    return gen_list
 
 
 def genById(id, *args, **kwargs):
-    generator = genList[id][2]
-    return (generator(*args, **kwargs))
-"""
+    return globals()[gen_list[id][0]](*args, **kwargs)
