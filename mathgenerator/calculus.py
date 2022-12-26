@@ -4,7 +4,12 @@ import sympy
 
 
 def definite_integral(max_coeff=100):
-    """Definite Integral of Quadratic Equation"""
+    r"""Definite Integral of Quadratic Equation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The definite integral within limits $0$ to $1$ of the equation $28x^2 + 32x + 66 = $ | $91.33$ |
+    """
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
@@ -13,19 +18,23 @@ def definite_integral(max_coeff=100):
     c = random.randint(0, max_coeff)
 
     result = quad(integrand, 0, 1, args=(a, b, c))[0]
-    S = round(result, 4)
+    solution = round(result, 2)
 
     problem = f"The definite integral within limits $0$ to $1$ of the equation ${a}x^2 + {b}x + {c} = $"
-    solution = f'${S}$'
-    return problem, solution
+    return problem, f'${solution}$'
 
 
 def power_rule_differentiation(maxCoef=10,
                                maxExp=10,
                                maxTerms=5):
-    """Power Rule Differentiation"""
+    r"""Power Rule Differentiation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Differentiate $1x^{5} + 4x^{7} + 4x^{4}$ | $5x^{4} + 28x^{6} + 16x^{3}$ |
+    """
     numTerms = random.randint(1, maxTerms)
-    problem = "$"
+    problem = "Differentiate $"
     solution = "$"
 
     for i in range(numTerms):
@@ -44,9 +53,14 @@ def power_rule_differentiation(maxCoef=10,
 def power_rule_integration(maxCoef=10,
                            maxExp=10,
                            maxTerms=5):
-    """Power Rule Integration"""
+    r"""Power Rule Integration
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Integrate $9x^{6} + 2x^{6} + 4x^{3}$ | $\frac{9}{6}x^{7} + \frac{2}{6}x^{7} + \frac{4}{3}x^{4} + C$ |
+    """
     numTerms = random.randint(1, maxTerms)
-    problem = "$"
+    problem = "Integrate $"
     solution = "$"
 
     for i in range(numTerms):
@@ -65,7 +79,12 @@ def power_rule_integration(maxCoef=10,
 
 
 def stationary_points(maxExp=3, maxCoef=10):
-    """Stationary Points"""
+    r"""Stationary Points
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $f(x)=6*x^3 + 6*x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
+    """
     solution = ''
     while len(solution) == 0:
         x = sympy.symbols('x')
@@ -80,7 +99,12 @@ def stationary_points(maxExp=3, maxCoef=10):
 
 
 def trig_differentiation():
-    """Trigonometric Differentiation"""
+    r"""Trigonometric Differentiation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\frac{d}{dx}(\csc)=$ | $-\csc \cdot \cot$ |
+    """
     pairs = {
         '\\sin': '\\cos',
         '\\cos': '-\\sin',

@@ -3,7 +3,12 @@ import math
 
 
 def bcd_to_decimal(maxNumber=10000):
-    """Binary Coded Decimal to Integer"""
+    r"""Binary Coded Decimal to Integer
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Integer of Binary Coded Decimal $4 =$ | $17801$ |
+    """
     n = random.randint(1000, maxNumber)
     binstring = ''
     while True:
@@ -17,13 +22,18 @@ def bcd_to_decimal(maxNumber=10000):
         else:
             n = q
 
-    problem = f"Integer of Binary Coded Decimal ${n}$ is $=$ "
+    problem = f"Integer of Binary Coded Decimal ${n} =$ "
     solution = f'${int(binstring, 2)}$'
     return problem, solution
 
 
 def binary_2s_complement(maxDigits=10):
-    """Binary 2's Complement"""
+    r"""Binary 2's Complement
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | 2's complement of $1011 = $ | $101$ |
+    """
     digits = random.randint(1, maxDigits)
     question = ''.join([str(random.randint(0, 1))
                         for i in range(digits)]).lstrip('0')
@@ -51,7 +61,12 @@ def binary_2s_complement(maxDigits=10):
 
 
 def binary_complement_1s(maxDigits=10):
-    """Binary Complement 1s"""
+    r"""Binary Complement 1s
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $1111001 = $ | $0000110$ |
+    """
     question = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, maxDigits))])
     answer = ''.join(["0" if digit == "1" else "1" for digit in question])
 
@@ -60,21 +75,36 @@ def binary_complement_1s(maxDigits=10):
 
 
 def binary_to_decimal(max_dig=10):
-    """Binary to Decimal"""
+    r"""Binary to Decimal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $000110$ | $6$ |
+    """
     problem = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
     solution = f'${int(problem, 2)}$'
     return f'${problem}$', solution
 
 
 def binary_to_hex(max_dig=10):
-    """Binary to Hexidecimal"""
+    r"""Binary to Hexidecimal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $010101$ | $0x15$ |
+    """
     problem = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
     solution = f'${hex(int(problem, 2))}$'
     return f'${problem}$', solution
 
 
 def decimal_to_bcd(maxNumber=10000):
-    """Decimal to Binary Coded Decimal"""
+    r"""Decimal to Binary Coded Decimal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | BCD of Decimal Number $6575 = $ | $191015$ |
+    """
     n = random.randint(1000, maxNumber)
     x = n
     # binstring = ''
@@ -89,7 +119,12 @@ def decimal_to_bcd(maxNumber=10000):
 
 
 def decimal_to_binary(max_dec=99):
-    """Decimal to Binary"""
+    r"""Decimal to Binary
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Binary of $4 = $ | $100$ |
+    """
     a = random.randint(1, max_dec)
     b = bin(a).replace("0b", "")
 
@@ -99,27 +134,42 @@ def decimal_to_binary(max_dec=99):
 
 
 def decimal_to_hexadeci(max_dec=1000):
-    """Decimal to Hexadecimal"""
+    r"""Decimal to Hexadecimal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Hexadecimal of $410 = $ | $0x19a$ |
+    """
     a = random.randint(0, max_dec)
     b = hex(a)
 
-    problem = f"Binary of ${a} = $"
+    problem = f"Hexadecimal of ${a} = $"
     solution = f"${b}$"
     return problem, solution
 
 
 def decimal_to_octal(maxDecimal=4096):
-    """Decimal to Octal"""
+    r"""Decimal to Octal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The decimal number $3698$ in octal is: | $0o7162$ |
+    """
     x = random.randint(0, maxDecimal)
 
-    problem = "The decimal number ${x}$ in Octal is: "
+    problem = f"The decimal number ${x}$ in octal is: "
     solution = f'${oct(x)}$'
 
     return problem, solution
 
 
 def fibonacci_series(minNo=1):
-    """Fibonacci Series"""
+    r"""Fibonacci Series
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The Fibonacci Series of the first ${n}$ numbers is ? | $0, 1, 1, 2, 3, 5, 8, 13, 21$ |
+    """
     n = random.randint(minNo, 20)
 
     def createFibList(n):
@@ -140,7 +190,12 @@ def fibonacci_series(minNo=1):
 
 
 def modulo_division(maxRes=99, maxModulo=99):
-    """Modulo Division"""
+    r"""Modulo Division
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $43$ % $33 = $ | $10$ |
+    """
     a = random.randint(0, maxModulo)
     b = random.randint(0, min(maxRes, maxModulo))
     c = a % b if b != 0 else 0
@@ -151,7 +206,12 @@ def modulo_division(maxRes=99, maxModulo=99):
 
 
 def nth_fibonacci_number(maxN=100):
-    """nth Fibonacci number"""
+    r"""nth Fibonacci number
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the 85th Fibonacci number? | $259695496911123328$ |
+    """
     gratio = (1 + math.sqrt(5)) / 2
     n = random.randint(1, maxN)
 

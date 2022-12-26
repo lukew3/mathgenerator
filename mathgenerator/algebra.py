@@ -6,7 +6,12 @@ import sympy
 
 
 def basic_algebra(maxVariable=10):
-    """Basic Algebra"""
+    r"""Basic Algebra
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $1x + 5 = 5$ | $0$ |
+    """
     a = random.randint(1, maxVariable)
     b = random.randint(1, maxVariable)
     c = random.randint(b, maxVariable)
@@ -31,7 +36,12 @@ def basic_algebra(maxVariable=10):
 
 
 def combine_like_terms(maxCoef=10, maxExp=20, maxTerms=10):
-    """Combine Like Terms"""
+    r"""Combine Like Terms
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $6x^{9} + 3x^{2} + 5x^{19} + 3x^{17}$ | $3x^{2} + 6x^{9} + 3x^{17} + 5x^{19}$ |
+    """
     numTerms = random.randint(1, maxTerms)
 
     coefs = [random.randint(1, maxCoef) for _ in range(numTerms)]
@@ -50,7 +60,12 @@ def combine_like_terms(maxCoef=10, maxExp=20, maxTerms=10):
 
 
 def complex_quadratic(prob_type=0, max_range=10):
-    """Complex Quadratic Equation"""
+    r"""Complex Quadratic Equation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the roots of given Quadratic Equation $x^2 + 8x + 8 = 0$ | $((-1.172, -6.828)) = (\frac{-8 + \sqrt{32}}{2*1}, (\frac{-8 - \sqrt{32}}{2*1})$ |
+    """
     if prob_type < 0 or prob_type > 1:
         print("prob_type not supported")
         print("prob_type = 0 for real roots problems ")
@@ -120,7 +135,12 @@ def complex_quadratic(prob_type=0, max_range=10):
 def compound_interest(maxPrinciple=10000,
                       maxRate=10,
                       maxTime=10):
-    """Compound Interest"""
+    r"""Compound Interest
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Compound interest for a principle amount of $2679$ dollars, $9$% rate of interest and for a time period of $3$ years is $=$ | $3469.38$ |
+    """
     p = random.randint(1000, maxPrinciple)
     r = random.randint(1, maxRate)
     n = random.randint(1, maxTime)
@@ -131,7 +151,12 @@ def compound_interest(maxPrinciple=10000,
 
 
 def distance_two_points(maxValXY=20, minValXY=-20):
-    """Distance between 2 points"""
+    r"""Distance between 2 points
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the distance between $(-19, -6)$ and $(15, -16)$ | $\sqrt{1256}$ |
+    """
     point1X = random.randint(minValXY, maxValXY + 1)
     point1Y = random.randint(minValXY, maxValXY + 1)
     point2X = random.randint(minValXY, maxValXY + 1)
@@ -148,7 +173,12 @@ def expanding(range_x1=10,
               range_x2=10,
               range_a=10,
               range_b=10):
-    """Expanding Factored Binomial"""
+    r"""Expanding Factored Binomial
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    |$(x-6)(-3x-3)$ | $x^2+18x+18$ |
+    """
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
     a = random.randint(-range_a, range_a)
@@ -193,8 +223,13 @@ def expanding(range_x1=10,
 
 
 def factoring(range_x1=10, range_x2=10):
-    """Factoring Quadratic
-    Given a quadratic equation in the form x^2 + bx + c, factor it into it's roots (x - x1)(x -x2)"""
+    r"""Factoring Quadratic
+    Given a quadratic equation in the form x^2 + bx + c, factor it into it's roots (x - x1)(x -x2)
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $x^2+2x-24$ | $(x-4)(x+6)$ |
+    """
     x1 = random.randint(-range_x1, range_x1)
     x2 = random.randint(-range_x2, range_x2)
 
@@ -223,7 +258,12 @@ def factoring(range_x1=10, range_x2=10):
 
 
 def int_matrix_22_determinant(maxMatrixVal=100):
-    """Determinant to 2x2 Matrix"""
+    r"""Determinant to 2x2 Matrix
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\det \begin{bmatrix} 88 & 40 \\\ 9 & 91 \end{bmatrix}= $ | $7648$ |
+    """
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -243,7 +283,12 @@ def intersection_of_two_lines(minM=-10,
                               maxB=10,
                               minDenominator=1,
                               maxDenominator=6):
-    """Intersection of two lines"""
+    r"""Intersection of two lines
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the point of intersection of the two lines: $y = 6$ and $y = 7/3x - 4$ | $(30/7, 6)$ |
+    """
     def generateEquationString(m, b):
         """
         Generates an equation given the slope and intercept.
@@ -325,7 +370,12 @@ def intersection_of_two_lines(minM=-10,
 def invert_matrix(SquareMatrixDimension=3,
                   MaxMatrixElement=99,
                   OnlyIntegerElementsInInvertedMatrix=True):
-    """Invert Matrix"""
+    r"""Invert Matrix
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Inverse of Matrix $\begin{bmatrix} 4 & 1 & 4 \\\ 5 & 1 & 5 \\\ 12 & 3 & 13 \end{bmatrix}$ is: | $\begin{bmatrix} 2 & 1 & -1 \\\ 5 & -4 & 0 \\\ -3 & 0 & 1 \end{bmatrix}$ |
+    """
     if OnlyIntegerElementsInInvertedMatrix is True:
         isItOk = False
         Mat = list()
@@ -396,12 +446,17 @@ def invert_matrix(SquareMatrixDimension=3,
         Mat = sympy.Matrix(Mat)
 
     problem = 'Inverse of Matrix $' + bmatrix(Mat.tolist()) + '$ is:'
-    solution = bmatrix(sympy.Matrix.inv(Mat).tolist())
+    solution = f'${bmatrix(sympy.Matrix.inv(Mat).tolist())}$'
     return problem, solution
 
 
 def linear_equations(n=2, varRange=20, coeffRange=20):
-    """Linear Equations"""
+    r"""Linear Equations
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Given the equations $10x + -20y = 310$ and $-16x + -17y = 141$, solve for $x$ and $y$ | $x = 5$, $y = -13$ |
+    """
     if n > 10:
         print("[!] n cannot be greater than 10")
         return None, None
@@ -432,7 +487,12 @@ def linear_equations(n=2, varRange=20, coeffRange=20):
 
 
 def log(maxBase=3, maxVal=8):
-    """Logarithm"""
+    r"""Logarithm
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $log_{3}(243)=$ | $5$ |
+    """
     a = random.randint(1, maxVal)
     b = random.randint(2, maxBase)
     c = pow(b, a)
@@ -443,7 +503,12 @@ def log(maxBase=3, maxVal=8):
 
 
 def matrix_multiplication(maxVal=100, max_dim=10):
-    """Multiply Two Matrices"""
+    r"""Multiply Two Matrices
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Multiply $\begin{bmatrix} 15 & 72 \\\ 64 & -20 \\\ 18 & 59 \\\ -21 & -55 \\\ 20 & -12 \\\ -75 & -42 \\\ 47 & 89 \\\ -53 & 27 \\\ -56 & 44 \end{bmatrix}$ and $\begin{bmatrix} 49 & -2 & 68 & -28 \\\ 49 & 6 & 83 & 42 \end{bmatrix}$ | $\begin{bmatrix} 4263 & 402 & 6996 & 2604 \\\ 2156 & -248 & 2692 & -2632 \\\ 3773 & 318 & 6121 & 1974 \\\ -3724 & -288 & -5993 & -1722 \\\ 392 & -112 & 364 & -1064 \\\ -5733 & -102 & -8586 & 336 \\\ 6664 & 440 & 10583 & 2422 \\\ -1274 & 268 & -1363 & 2618 \\\ -588 & 376 & -156 & 3416 \end{bmatrix}$ | 
+    """
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
@@ -467,7 +532,12 @@ def matrix_multiplication(maxVal=100, max_dim=10):
 
 
 def midpoint_of_two_points(maxValue=20):
-    """Midpoint of two points"""
+    r"""Midpoint of two points
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The midpoint of $(-8,10)$ and $(18,0) = $ | $(5.0,5.0)$ |
+    """
     x1 = random.randint(-20, maxValue)
     y1 = random.randint(-20, maxValue)
     x2 = random.randint(-20, maxValue)
@@ -482,7 +552,12 @@ def midpoint_of_two_points(maxValue=20):
 
 def multiply_complex_numbers(minRealImaginaryNum=-20,
                              maxRealImaginaryNum=20):
-    """Multiplication of 2 complex numbers"""
+    r"""Multiplication of 2 complex numbers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $(14+18j) * (14+15j) = $ | $(-74+462j)$ |
+    """
     num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
                    random.randint(minRealImaginaryNum, maxRealImaginaryNum))
     num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
@@ -495,7 +570,12 @@ def multiply_complex_numbers(minRealImaginaryNum=-20,
 
 
 def multiply_int_to_22_matrix(maxMatrixVal=10, maxRes=100):
-    """Multiply Integer to 2x2 Matrix"""
+    r"""Multiply Integer to 2x2 Matrix
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $5 * \begin{bmatrix} 1 & 0 \\\ 2 & 9 \end{bmatrix} =$ | $\begin{bmatrix} 5 & 0 \\\ 10 & 45 \end{bmatrix}$ |
+    """
     a = random.randint(0, maxMatrixVal)
     b = random.randint(0, maxMatrixVal)
     c = random.randint(0, maxMatrixVal)
@@ -516,7 +596,12 @@ def multiply_int_to_22_matrix(maxMatrixVal=10, maxRes=100):
 
 
 def quadratic_equation(maxVal=100):
-    """Quadratic Equation"""
+    r"""Quadratic Equation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What are the zeros of the quadratic equation $22x^2+137x+25=0$ | ${-0.19, -6.04}$ |
+    """
     a = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
     b = random.randint(
@@ -532,7 +617,12 @@ def quadratic_equation(maxVal=100):
 def simple_interest(maxPrinciple=10000,
                     maxRate=10,
                     maxTime=10):
-    """Simple Interest"""
+    r"""Simple Interest
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Simple interest for a principle amount of $7217$ dollars, $3$% rate of interest and for a time period of $10$ years is $=$ | $2165.1$ |
+    """
     p = random.randint(1000, maxPrinciple)
     r = random.randint(1, maxRate)
     t = random.randint(1, maxTime)
@@ -546,7 +636,12 @@ def simple_interest(maxPrinciple=10000,
 def system_of_equations(range_x=10,
                         range_y=10,
                         coeff_mult_range=10):
-    """Solve a System of Equations in R^2"""
+    r"""Solve a System of Equations in R^2
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Given $-x + 5y = -28$ and $9x + 2y = 64$, solve for $x$ and $y$. | $x = 8$, $y = -4$ |
+    """
     # Generate solution point first
     x = random.randint(-range_x, range_x)
     y = random.randint(-range_y, range_y)
@@ -593,7 +688,12 @@ def system_of_equations(range_x=10,
 
 
 def vector_cross(minVal=-20, maxVal=20):
-    """Cross product of 2 vectors"""
+    r"""Cross product of 2 vectors
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $[-1, -4, 10] \times [-11, 1, -16] = $ | $[54, -126, -45]$ |
+    """
     a = [random.randint(minVal, maxVal) for _ in range(3)]
     b = [random.randint(minVal, maxVal) for _ in range(3)]
     c = [
@@ -607,7 +707,12 @@ def vector_cross(minVal=-20, maxVal=20):
 
 
 def vector_dot(minVal=-20, maxVal=20):
-    """Dot product of 2 vectors"""
+    r"""Dot product of 2 vectors
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $[12, -9, -8]\cdot[-9, 8, 1]=$ | $-188$ |
+    """
     a = [random.randint(minVal, maxVal) for i in range(3)]
     b = [random.randint(minVal, maxVal) for i in range(3)]
     c = a[0] * b[0] + a[1] * b[1] + a[2] * b[2]

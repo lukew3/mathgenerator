@@ -2,7 +2,12 @@ import random
 
 
 def absolute_difference(maxA=100, maxB=100):
-    """Absolute difference between two numbers"""
+    r"""Absolute difference between two numbers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $|22-34|=$ | $12$ |
+    """
     a = random.randint(-1 * maxA, maxA)
     b = random.randint(-1 * maxB, maxB)
     absDiff = abs(a - b)
@@ -11,9 +16,11 @@ def absolute_difference(maxA=100, maxB=100):
 
 
 def addition(maxSum=99, maxAddend=50):
-    """Addition of two numbers
+    r"""Addition of two numbers
 
-    ("$22+34=$", "$56$")
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $22+34=$ | $56$ |
     """
     if maxAddend > maxSum:
         maxAddend = maxSum
@@ -59,7 +66,12 @@ def compare_fractions(maxVal=10):
 
 
 def cube_root(minNo=1, maxNo=1000):
-    """Cube Root"""
+    r"""Cube Root
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the cube root of: $\sqrt[3]{125}=$ to 2 decimal places? | $5$ |
+    """
     b = random.randint(minNo, maxNo)
     a = b**(1 / 3)
 
@@ -67,7 +79,12 @@ def cube_root(minNo=1, maxNo=1000):
 
 
 def divide_fractions(maxVal=10):
-    """Divide Fractions"""
+    r"""Divide Fractions
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\frac{7}{9}\div\frac{4}{1}=$ | $\frac{7}{36}$ |
+    """
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
 
@@ -95,7 +112,12 @@ def divide_fractions(maxVal=10):
 
 
 def division(maxA=25, maxB=25):
-    """Division"""
+    r"""Division
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $216\div24=$ | $9$ |
+    """
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
 
@@ -107,15 +129,25 @@ def division(maxA=25, maxB=25):
 
 
 def exponentiation(maxBase=20, maxExpo=10):
-    """Exponentiation"""
+    r"""Exponentiation
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $9^{5}=$ | $8$ |
+    """
     base = random.randint(1, maxBase)
     expo = random.randint(1, maxExpo)
 
-    return f'${base}^{expo} =$', f'${base**expo}$'
+    return f'${base}^{{{expo}}}=$', f'${base**expo}$'
 
 
 def factorial(maxInput=6):
-    """Factorial"""
+    r"""Factorial
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $4! =$ | $24$ |
+    """
     a = random.randint(0, maxInput)
     n = a
     b = 1
@@ -127,7 +159,12 @@ def factorial(maxInput=6):
 
 
 def fraction_multiplication(maxVal=10):
-    """Fraction Multiplication"""
+    r"""Fraction Multiplication
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35} |
+    """
     a = random.randint(1, maxVal)
     b = random.randint(1, maxVal)
     c = random.randint(1, maxVal)
@@ -158,7 +195,12 @@ def fraction_multiplication(maxVal=10):
 
 
 def fraction_to_decimal(maxRes=99, maxDivid=99):
-    """Fraction to Decimal"""
+    r"""Fraction to Decimal
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $83\div80=$ | $1.04$ |
+    """
     a = random.randint(0, maxDivid)
     b = random.randint(1, min(maxRes, maxDivid))
     c = round(a / b, 2)
@@ -167,7 +209,12 @@ def fraction_to_decimal(maxRes=99, maxDivid=99):
 
 
 def greatest_common_divisor(numbersCount=2, maximalNumberLimit=10**9):
-    """Greatest Common Divisor of N Numbers"""
+    r"""Greatest Common Divisor of N Numbers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $GCD(488075608, 75348096)=$ | $8$ |
+    """
 
     def greatestCommonDivisorOfTwoNumbers(number1, number2):
         number1 = abs(number1)
@@ -191,7 +238,12 @@ def greatest_common_divisor(numbersCount=2, maximalNumberLimit=10**9):
 
 
 def is_composite(maxNum=250):
-    """Is Composite"""
+    r"""Is Composite
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Is $171$ composite? | Yes |
+    """
     a = random.randint(2, maxNum)
 
     problem = f"Is ${a}$ composite?"
@@ -206,7 +258,12 @@ def is_composite(maxNum=250):
 
 
 def is_prime(max_num=100):
-    """Is Prime"""
+    r"""Is Prime
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Is $37$ prime? | Yes |
+    """
     a = random.randint(2, max_num)
     problem = f"Is ${a}$ prime?"
     if a == 2:
@@ -222,16 +279,26 @@ def is_prime(max_num=100):
 
 
 def multiplication(maxMulti=12):
-    """Multiplication"""
+    r"""Multiplication
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $10\cdot9=$ | $90$ |
+    """
     a = random.randint(0, maxMulti)
     b = random.randint(0, maxMulti)
     c = a * b
 
-    return f'${a}\\cdot{b}$', f'${c}$'
+    return f'${a}\\cdot{b}=$', f'${c}$'
 
 
 def percentage(maxValue=99, maxpercentage=99):
-    """Percentage of a number"""
+    r"""Percentage of a number
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is $45$% of $39$? | $17.55$ |
+    """
     a = random.randint(1, maxpercentage)
     b = random.randint(1, maxValue)
     problem = f"What is ${a}$% of ${b}$?"
@@ -243,7 +310,12 @@ def percentage(maxValue=99, maxpercentage=99):
 
 
 def percentage_difference(maxValue=200, minValue=0):
-    """Percentage difference between two numbers"""
+    r"""Percentage difference between two numbers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the percentage difference between $2$ and $10$? | $133.33$ |
+    """
     value_a = random.randint(minValue, maxValue)
     value_b = random.randint(minValue, maxValue)
 
@@ -256,7 +328,12 @@ def percentage_difference(maxValue=200, minValue=0):
 
 
 def percentage_error(maxValue=100, minValue=-100):
-    """Percentage error"""
+    r"""Percentage error
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the percentage error when observed value equals $32$ and exact value equals $81$. | $60.49$% |
+    """
     observed_value = random.randint(minValue, maxValue)
     exact_value = random.randint(minValue, maxValue)
 
@@ -267,12 +344,17 @@ def percentage_error(maxValue=100, minValue=-100):
     error = round(error, 2)
 
     problem = f"Find the percentage error when observed value equals ${observed_value}$ and exact value equals ${exact_value}$."
-    solution = f'${error}\\%$'
+    solution = f'${error}$%'
     return problem, solution
 
 
 def power_of_powers(maxBase=50, maxPower=10):
-    """Power of Powers"""
+    r"""Power of Powers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Simplify $18^{10^{8}}$ | $18^{80}$ |
+    """
     base = random.randint(1, maxBase)
     power1 = random.randint(1, maxPower)
     power2 = random.randint(1, maxPower)
@@ -284,7 +366,12 @@ def power_of_powers(maxBase=50, maxPower=10):
 
 
 def square(maxSquareNum=20):
-    """Square"""
+    r"""Square
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $17^2=$ | $289$ |
+    """
     a = random.randint(1, maxSquareNum)
     b = a ** 2
 
@@ -292,7 +379,12 @@ def square(maxSquareNum=20):
 
 
 def square_root(minNo=1, maxNo=12):
-    """Square Root"""
+    r"""Square Root
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\sqrt{64}=$ | $8$ |
+    """
     b = random.randint(minNo, maxNo)
     a = b ** 2
 
@@ -300,7 +392,12 @@ def square_root(minNo=1, maxNo=12):
 
 
 def subtraction(maxMinuend=99, maxDiff=99):
-    """Subtraction of two numbers"""
+    r"""Subtraction of two numbers
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $54-22=$ | $32$ |
+    """
     a = random.randint(0, maxMinuend)
     b = random.randint(max(0, (a - maxDiff)), a)
     c = a - b
