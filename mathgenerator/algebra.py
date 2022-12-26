@@ -287,7 +287,7 @@ def intersection_of_two_lines(minM=-10,
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Find the point of intersection of the two lines: $y = 6$ and $y = 7/3x - 4$ | $(30/7, 6)$ |
+    | Find the point of intersection of the two lines: $y = \frac{-2}{6}x + 3$ and $y = \frac{3}{6}x - 8$ | $(\frac{66}{5}, \frac{-7}{5})$ |
     """
     def generateEquationString(m, b):
         """
@@ -302,7 +302,7 @@ def intersection_of_two_lines(minM=-10,
         elif m[1] == 1:
             m = m[0]
         else:
-            m = f"{m[0]}/{m[1]}"
+            m = rf"\frac{{{m[0]}}}{{{m[1]}}}"
         base = "y ="
         if m != 0:
             if m == 1:
@@ -334,7 +334,7 @@ def intersection_of_two_lines(minM=-10,
         if x.denominator == 1:
             x = x.numerator
         else:
-            x = f"{x.numerator}/{x.denominator}"
+            x = rf"\frac{{{x.numerator}}}{{{x.denominator}}}"
         return x
 
     m1 = (random.randint(minM,
