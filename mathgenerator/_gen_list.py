@@ -112,7 +112,7 @@ gen_list = [
     ("stationary_points", "calculus"),
     ("expanding", "algebra"),
     ("area_of_circle", "geometry"),
-    ("volume_frustum", "geometry"),
+    ("volume_cone_frustum", "geometry"),
     ("equation_of_line_from_two_points", "geometry"),
     ("area_of_circle_given_center_and_point", "geometry"),
     ("factors", "misc"),

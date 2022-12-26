@@ -3,7 +3,12 @@ import math
 
 
 def combinations(maxlength=20):
-    """Combinations of Objects"""
+    """Combinations of Objects
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the number of combinations from $19$ objects picked $6$ at a time. | $27132$ |
+    """
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
 
@@ -14,7 +19,12 @@ def combinations(maxlength=20):
 
 
 def conditional_probability():
-    """Conditional Probability"""
+    """Conditional Probability
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Someone tested positive for a nasty disease which only $1.18$% of the population have. Test sensitivity (true positive) is equal to $SN=98.73$% whereas test specificity (true negative) $SP=99.99$%. What is the probability that this guy really has that disease? | $99.16$% |
+    """
     P_disease = round(2. * random.random(), 2)
     true_positive = round(random.random() + float(random.randint(90, 99)), 2)
     true_negative = round(random.random() + float(random.randint(90, 99)), 2)
@@ -30,8 +40,8 @@ def conditional_probability():
 
     answer = round(BayesFormula(P_disease, true_positive, true_negative), 2)
 
-    problem = "Someone tested positive for a nasty disease which only ${0:.2f}\\%$ of the population have. " \
-        "Test sensitivity (true positive) is equal to $SN={1:.2f}$% whereas test specificity (true negative) $SP={2:.2f}\\%$. " \
+    problem = "Someone tested positive for a nasty disease which only ${0:.2f}$% of the population have. " \
+        "Test sensitivity (true positive) is equal to $SN={1:.2f}$% whereas test specificity (true negative) $SP={2:.2f}$%. " \
         "What is the probability that this guy really has that disease?".format(
             P_disease, true_positive, true_negative)
     solution = f'${answer}$%'
@@ -39,7 +49,12 @@ def conditional_probability():
 
 
 def confidence_interval():
-    """Confidence interval For sample S"""
+    """Confidence interval For sample S
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The confidence interval for sample $[234, 223, 210, 203, 258, 299, 281, 208, 278, 252, 295, 245, 280, 235, 219, 297, 214, 267, 212, 256, 232, 221]$ with $99$% confidence is | $(263.31, 229.33)$ |
+    """
     n = random.randint(20, 40)
     j = random.randint(0, 3)
 
@@ -62,8 +77,8 @@ def confidence_interval():
 
     sd = sd / n
     standard_error = lst_t[j] * math.sqrt(sd / n)
-    upper = mean + standard_error
-    lower = mean - standard_error
+    upper = round(mean + standard_error, 2)
+    lower = round(mean - standard_error, 2)
 
     problem = 'The confidence interval for sample ${}$ with ${}$% confidence is'.format(
         [x for x in lst], lst_per[j])
@@ -72,7 +87,12 @@ def confidence_interval():
 
 
 def data_summary(number_values=15, minval=5, maxval=50):
-    """Mean, Standard Deviation and Variance"""
+    """Mean, Standard Deviation and Variance
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the mean,standard deviation and variance for the data $9, 29, 46, 27, 46, 15, 10, 44, 19, 33, 38, 7, 34, 28, 8$ | The Mean is $26.2$, Standard Deviation is $186.29$, Variance is $13.65$ |
+    """
     random_list = []
 
     for i in range(number_values):
@@ -80,14 +100,14 @@ def data_summary(number_values=15, minval=5, maxval=50):
         random_list.append(n)
 
     a = sum(random_list)
-    mean = a / number_values
+    mean = round(a / number_values, 2)
 
     var = 0
     for i in range(number_values):
         var += (random_list[i] - mean)**2
 
-    standardDeviation = var / number_values
-    variance = (var / number_values) ** 0.5
+    standardDeviation = round(var / number_values, 2)
+    variance = round((var / number_values) ** 0.5, 2)
 
     problem = f"Find the mean,standard deviation and variance for the data ${', '.join(map(str, random_list))}$"
     solution = f"The Mean is ${mean}$, Standard Deviation is ${standardDeviation}$, Variance is ${variance}$"
@@ -95,7 +115,12 @@ def data_summary(number_values=15, minval=5, maxval=50):
 
 
 def dice_sum_probability(maxDice=3):
-    """Probability of a certain sum appearing on faces of dice"""
+    """Probability of a certain sum appearing on faces of dice
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | If $2$ dice are rolled at the same time, the probability of getting a sum of $5 =$ | $\frac{4}{36}$ |
+    """
     a = random.randint(1, maxDice)
     b = random.randint(a, 6 * a)
 
@@ -120,7 +145,12 @@ def dice_sum_probability(maxDice=3):
 
 
 def mean_median(maxlen=10):
-    """Mean and Median"""
+    """Mean and Median
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Given the series of numbers $[4, 19, 21, 22, 43, 44, 60, 81, 87, 92]$. Find the arithmatic mean and median of the series | Arithmetic mean of the series is $47.3$ and arithmetic median of this series is $43.5$ |
+    """
     randomlist = random.sample(range(1, 99), maxlen)
     total = 0
     for n in randomlist:
@@ -129,13 +159,18 @@ def mean_median(maxlen=10):
     randomlist.sort()
     median = (randomlist[4] + randomlist[5]) / 2
 
-    problem = f"Given the series of numbers ${randomlist}$. Find the arithmatic mean and mdian of the series"
-    solution = f"Arithmetic mean of the series is ${mean}$ and Arithmetic median of this series is ${median}$"
+    problem = f"Given the series of numbers ${randomlist}$. Find the arithmatic mean and median of the series"
+    solution = f"Arithmetic mean of the series is ${mean}$ and arithmetic median of this series is ${median}$"
     return problem, solution
 
 
 def permutation(maxlength=20):
-    """Permutations"""
+    """Permutations
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Number of Permutations from $18$ objects picked $5$ at a time is: | $1028160$ |
+    """
     a = random.randint(10, maxlength)
     b = random.randint(0, 9)
     solution = int(math.factorial(a) / (math.factorial(a - b)))

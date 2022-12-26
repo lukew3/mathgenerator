@@ -4,7 +4,12 @@ from math import cos, sin, pi
 
 
 def angle_btw_vectors(maxEltAmt=20):
-    """Angle between 2 vectors"""
+    r"""Angle between 2 vectors
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | angle between the vectors $[363.84, 195.54, 997.08, 39.26, 60.14, 722.7, 888.57, 713.15, 436.22, 712.23, 349.23, 595.91, 191.8, 824.58, 861.56, 122.73, 815.14, 700.68, 506.5]$ and $[760.85, 934.67, 513.37, 796.93, 809.97, 423.54, 162.69, 758.96, 133.42, 478.14, 771.84, 824.88, 483.07, 134.41, 954.41, 893.42, 191.01, 453.97, 648.59]$ is: | $0.81$ radians |
+    """
     s = 0
     v1 = [
         round(random.uniform(0, 1000), 2)
@@ -31,7 +36,12 @@ def angle_btw_vectors(maxEltAmt=20):
 
 
 def angle_regular_polygon(minVal=3, maxVal=20, format='string'):
-    """Angle of a Regular Polygon"""
+    r"""Angle of a Regular Polygon
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the angle of a regular polygon with $8$ sides | $135.0$ |
+    """
     sideNum = random.randint(minVal, maxVal)
     problem = f"Find the angle of a regular polygon with ${sideNum}$ sides"
 
@@ -42,7 +52,12 @@ def angle_regular_polygon(minVal=3, maxVal=20, format='string'):
 
 
 def arc_length(maxRadius=49, maxAngle=359):
-    """Arc length of Angle"""
+    r"""Arc length of Angle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Given radius, $44$ and angle, $184$. Find the arc length of the angle. | Arc length of the angle $= 141.30186$ |
+    """
     radius = random.randint(1, maxRadius)
     angle = random.randint(1, maxAngle)
     angle_arc_length = float((angle / 360) * 2 * math.pi * radius)
@@ -54,7 +69,12 @@ def arc_length(maxRadius=49, maxAngle=359):
 
 
 def area_of_circle(maxRadius=100):
-    """Area of Circle"""
+    r"""Area of Circle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Area of circle with radius $29=$ | $2642.08$ |
+    """
     r = random.randint(0, maxRadius)
     area = round(pi * r * r, 2)
 
@@ -63,7 +83,12 @@ def area_of_circle(maxRadius=100):
 
 
 def area_of_circle_given_center_and_point(maxCoordinate=10, maxRadius=10):
-    """Area of Circle given center and a point on circle"""
+    r"""Area of Circle given center and a point on circle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Area of circle with center $(7,-6)$ and passing through $(1.0, -6.0)$ is | $113.1$ |
+    """
     r = random.randint(0, maxRadius)
     center_x = random.randint(-maxCoordinate, maxCoordinate)
     center_y = random.randint(-maxCoordinate, maxCoordinate)
@@ -80,7 +105,12 @@ def area_of_circle_given_center_and_point(maxCoordinate=10, maxRadius=10):
 
 
 def area_of_triangle(maxA=20, maxB=20):
-    """Area of Triangle"""
+    r"""Area of Triangle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Area of triangle with side lengths: $8, 1, 8 = $ | $3.99$ |
+    """
     a = random.randint(1, maxA)
     b = random.randint(1, maxB)
     c = random.randint(abs(b - a) + 1, abs(a + b) - 1)
@@ -88,7 +118,7 @@ def area_of_triangle(maxA=20, maxB=20):
     s = (a + b + c) / 2
     area = (s * (s - a) * (s - b) * (s - c))**0.5
 
-    problem = f"Area of triangle with side lengths: ${a}, {b} {c} = $"
+    problem = f"Area of triangle with side lengths: ${a}, {b}, {c} = $"
     solution = f'${round(area, 2)}$'
     return problem, solution
 
@@ -96,7 +126,12 @@ def area_of_triangle(maxA=20, maxB=20):
 # Handles degrees in quadrant one
 def basic_trigonometry(angles=[0, 30, 45, 60, 90],
                        functions=["sin", "cos", "tan"]):
-    """Trigonometric Values"""
+    r"""Trigonometric Values
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\sin(30) = $ | $\frac{1}{2}$ |
+    """
     angle = random.choice(angles)
     function = random.choice(functions)
 
@@ -120,7 +155,12 @@ def basic_trigonometry(angles=[0, 30, 45, 60, 90],
 
 
 def circumference(maxRadius=100):
-    """Circumference of Circle"""
+    r"""Circumference of Circle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Circumference of circle with radius $56 = $ | $351.86$ |
+    """
     r = random.randint(0, maxRadius)
     circumference = round(2 * math.pi * r, 2)
 
@@ -129,7 +169,12 @@ def circumference(maxRadius=100):
 
 
 def complementary_and_supplementary_angle(maxSupp=180, maxComp=90):
-    """Complementary and Supplementary Angle"""
+    r"""Complementary and Supplementary Angle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The complementary angle of $15 =$ | $75$ |
+    """
     angleType = random.choice(["supplementary", "complementary"])
 
     if angleType == "supplementary":
@@ -145,7 +190,12 @@ def complementary_and_supplementary_angle(maxSupp=180, maxComp=90):
 
 
 def curved_surface_area_cylinder(maxRadius=49, maxHeight=99):
-    """Curved surface area of a cylinder"""
+    r"""Curved surface area of a cylinder
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the curved surface area of a cylinder of radius, $44$ and height, $92$? | $25434.33$ |
+    """
     r = random.randint(1, maxRadius)
     h = random.randint(1, maxHeight)
     csa = float(2 * math.pi * r * h)
@@ -157,7 +207,12 @@ def curved_surface_area_cylinder(maxRadius=49, maxHeight=99):
 
 
 def degree_to_rad(max_deg=360):
-    """Degrees to Radians"""
+    r"""Degrees to Radians
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Angle $113$ degrees in radians is: | $1.97$ |
+    """
     a = random.randint(0, max_deg)
     b = (math.pi * a) / 180
     b = round(b, 2)
@@ -168,7 +223,12 @@ def degree_to_rad(max_deg=360):
 
 
 def equation_of_line_from_two_points(maxCoordinate=20, minCoordinate=-20):
-    """Equation of line from two points"""
+    r"""Equation of line from two points
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the equation of the line between points $(13,9)$ and $(6,-19)$ in slope-intercept form? | $y = 4x -43$ |
+    """
     x1 = random.randint(minCoordinate, maxCoordinate)
     x2 = random.randint(minCoordinate, maxCoordinate)
 
@@ -223,7 +283,12 @@ def equation_of_line_from_two_points(maxCoordinate=20, minCoordinate=-20):
 
 
 def fourth_angle_of_quadrilateral(maxAngle=180):
-    """Fourth Angle of Quadrilateral"""
+    r"""Fourth Angle of Quadrilateral
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Fourth angle of quadrilateral with angles $162 , 43, 78 =$ | $77$ |
+    """
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, 240 - angle1)
     angle3 = random.randint(1, 340 - (angle1 + angle2))
@@ -237,7 +302,12 @@ def fourth_angle_of_quadrilateral(maxAngle=180):
 
 
 def perimeter_of_polygons(maxSides=12, maxLength=120):
-    """Perimeter of Polygons"""
+    r"""Perimeter of Polygons
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | The perimeter of a $4$ sided polygon with lengths of $30, 105, 78, 106$cm is: | $319$ |
+    """
     size_of_sides = random.randint(3, maxSides)
     sides = [random.randint(1, maxLength) for _ in range(size_of_sides)]
 
@@ -248,7 +318,12 @@ def perimeter_of_polygons(maxSides=12, maxLength=120):
 
 
 def pythagorean_theorem(maxLength=20):
-    """Pythagorean Theorem"""
+    """Pythagorean Theorem
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the hypotenuse of a right triangle given the other two sides have lengths $9$ and $10$? | $13.45$ |
+    """
     a = random.randint(1, maxLength)
     b = random.randint(1, maxLength)
     c = round((a ** 2 + b ** 2) ** 0.5, 2)
@@ -269,7 +344,12 @@ def radian_to_deg(max_rad=6.28):
 
 
 def sector_area(maxRadius=49, maxAngle=359):
-    """Area of a Sector"""
+    """Area of a Sector
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the area of a sector with radius $42$ and angle $83$ degrees? | $1277.69$ |
+    """
     r = random.randint(1, maxRadius)
     a = random.randint(1, maxAngle)
     secArea = float((a / 360) * math.pi * r * r)
@@ -281,7 +361,12 @@ def sector_area(maxRadius=49, maxAngle=359):
 
 
 def sum_of_polygon_angles(maxSides=12):
-    """Sum of Angles of Polygon"""
+    """Sum of Angles of Polygon
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the sum of interior angles of a polygon with $8$ sides? | $1080$ |
+    """
     side_count = random.randint(3, maxSides)
     sum = (side_count - 2) * 180
 
@@ -290,7 +375,12 @@ def sum_of_polygon_angles(maxSides=12):
 
 
 def surface_area_cone(maxRadius=20, maxHeight=50, unit='m'):
-    """Surface area of a cone"""
+    """Surface area of a cone
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of cone with height $= 26m$ and radius $= 6m$ is | $616 m^2$ |
+    """
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
 
@@ -303,7 +393,12 @@ def surface_area_cone(maxRadius=20, maxHeight=50, unit='m'):
 
 
 def surface_area_cube(maxSide=20, unit='m'):
-    """Surface area of a cube"""
+    """Surface area of a cube
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of cube with side $= 6m$ is | $216 m^2$ |
+    """
     a = random.randint(1, maxSide)
     ans = 6 * (a ** 2)
 
@@ -313,7 +408,12 @@ def surface_area_cube(maxSide=20, unit='m'):
 
 
 def surface_area_cuboid(maxSide=20, unit='m'):
-    """Surface area of a cuboid"""
+    """Surface area of a cuboid
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of cuboid with sides of lengths: $11m, 20m, 8m$ is | $936 m^2$ |
+    """
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
@@ -325,7 +425,12 @@ def surface_area_cuboid(maxSide=20, unit='m'):
 
 
 def surface_area_cylinder(maxRadius=20, maxHeight=50, unit='m'):
-    """Surface area of a cylinder"""
+    """Surface area of a cylinder
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of cylinder with height $= 26m$ and radius $= 15m$ is | $3864 m^2$ |
+    """
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
     ans = int(2 * math.pi * a * b + 2 * math.pi * b * b)
@@ -336,7 +441,12 @@ def surface_area_cylinder(maxRadius=20, maxHeight=50, unit='m'):
 
 
 def surface_area_pyramid(unit='m'):
-    """Surface area of a pyramid"""
+    """Surface area of a pyramid
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of pyramid with base length $= 30m$, base width $= 40m$, and height $= 25m$ is | $2400 m^2$ |
+    """
     # List of Pythagorean triplets
     _PYTHAGOREAN = [(3, 4, 5),
                     (6, 8, 10),
@@ -371,17 +481,27 @@ def surface_area_pyramid(unit='m'):
 
 
 def surface_area_sphere(maxSide=20, unit='m'):
-    """Surface area of a sphere"""
+    """Surface area of a sphere
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Surface area of a sphere with radius $= 8m$ is | $804.25 m^2$ |
+    """
     r = random.randint(1, maxSide)
-    ans = 4 * math.pi * r * r
+    ans = round(4 * math.pi * r * r, 2)
 
-    problem = f"Surface area of Sphere with radius $= {r}{unit}$ is"
+    problem = f"Surface area of a sphere with radius $= {r}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
 
 
 def third_angle_of_triangle(maxAngle=89):
-    """Third Angle of Triangle"""
+    """Third Angle of Triangle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Third angle of triangle with angles $10$ and $22 =$ | $148$ |
+    """
     angle1 = random.randint(1, maxAngle)
     angle2 = random.randint(1, maxAngle)
     angle3 = 180 - (angle1 + angle2)
@@ -391,7 +511,12 @@ def third_angle_of_triangle(maxAngle=89):
 
 
 def valid_triangle(maxSideLength=50):
-    """Valid Triangle"""
+    """Valid Triangle
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Does triangel with sides $10, 31$ and $14$ exist? | No |
+    """
     sideA = random.randint(1, maxSideLength)
     sideB = random.randint(1, maxSideLength)
     sideC = random.randint(1, maxSideLength)
@@ -408,7 +533,12 @@ def valid_triangle(maxSideLength=50):
 
 
 def volume_cone(maxRadius=20, maxHeight=50, unit='m'):
-    """Volume of a cone"""
+    """Volume of a cone
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of cone with height $= 44m$ and radius $= 11m$ is | $5575 m^3$ |
+    """
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
     ans = int(math.pi * b * b * a * (1 / 3))
@@ -419,7 +549,11 @@ def volume_cone(maxRadius=20, maxHeight=50, unit='m'):
 
 
 def volume_cube(maxSide=20, unit='m'):
-    """Volume of a cube"""
+    """Volume of a cube
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of a cube with a side length of $19m$ is | $6859 m^3$ |
+    """
     a = random.randint(1, maxSide)
     ans = a**3
 
@@ -429,7 +563,12 @@ def volume_cube(maxSide=20, unit='m'):
 
 
 def volume_cuboid(maxSide=20, unit='m'):
-    """Volume of a cuboid"""
+    """Volume of a cuboid
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of cuboid with sides = $17m, 11m, 13m$ is | $2431 m^3$ |
+    """
     a = random.randint(1, maxSide)
     b = random.randint(1, maxSide)
     c = random.randint(1, maxSide)
@@ -441,7 +580,12 @@ def volume_cuboid(maxSide=20, unit='m'):
 
 
 def volume_cylinder(maxRadius=20, maxHeight=50, unit='m'):
-    """Volume of a cylinder"""
+    """Volume of a cylinder
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of cylinder with height $= 3m$ and radius $= 10m$ is | $942 m^3$ |
+    """
     a = random.randint(1, maxHeight)
     b = random.randint(1, maxRadius)
     ans = int(math.pi * b * b * a)
@@ -451,22 +595,32 @@ def volume_cylinder(maxRadius=20, maxHeight=50, unit='m'):
     return problem, solution
 
 
-def volume_frustum(maxR1=20, maxR2=20, maxHeight=50, unit='m'):
-    """Volume of a frustum"""
+def volume_cone_frustum(maxR1=20, maxR2=20, maxHeight=50, unit='m'):
+    """Volume of the frustum of a cone
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of frustum with height $= 30m$ and $r1 = 20m$ is and $r2 = 8m$ is | $19603.54 m^3$ |
+    """
     h = random.randint(1, maxHeight)
     r1 = random.randint(1, maxR1)
     r2 = random.randint(1, maxR2)
-    ans = ((math.pi * h) * (r1 ** 2 + r2 ** 2 + r1 * r2)) // 3
+    ans = round(((math.pi * h) * (r1 ** 2 + r2 ** 2 + r1 * r2)) / 3, 2)
 
-    problem = f"Volume of frustum with height $= {h}{unit}$ and $r1 = {r1}{unit}$ is and $r2 = {r1}{unit}$ is "
+    problem = f"Volume of frustum with height $= {h}{unit}$ and $r1 = {r1}{unit}$ is and $r2 = {r2}{unit}$ is "
     solution = f"${ans} {unit}^3$"
     return problem, solution
 
 
 def volume_hemisphere(maxRadius=100):
-    """Volume of a hemisphere"""
+    """Volume of a hemisphere
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of hemisphere with radius $32m =$ | $68629.14 m^3$ |
+    """
     r = random.randint(1, maxRadius)
-    ans = round((2 * math.pi / 3) * r**3, 3)
+    ans = round((2 * math.pi / 3) * r**3, 2)
 
     problem = f"Volume of hemisphere with radius ${r} m =$ "
     solution = f"${ans} m^3$"
@@ -474,12 +628,17 @@ def volume_hemisphere(maxRadius=100):
 
 
 def volume_pyramid(maxLength=20, maxWidth=20, maxHeight=50, unit='m'):
-    """Volume of a pyramid"""
+    """Volume of a pyramid
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of pyramid with base length $= 7 m$, base width $= 18 m$ and height $= 42 m$ is | $1764.0 m^3$ |
+    """
     length = random.randint(1, maxLength)
     width = random.randint(1, maxWidth)
     height = random.randint(1, maxHeight)
 
-    ans = (length * width * height) / 3
+    ans = round((length * width * height) / 3, 2)
 
     problem = f"Volume of pyramid with base length $= {length} {unit}$, base width $= {width} {unit}$ and height $= {height} {unit}$ is"
     solution = f"${ans} {unit}^3$"
@@ -487,9 +646,14 @@ def volume_pyramid(maxLength=20, maxWidth=20, maxHeight=50, unit='m'):
 
 
 def volume_sphere(maxRadius=100):
-    """Volume of a sphere"""
+    """Volume of a sphere
+    
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Volume of sphere with radius $30 m = $ | $113097.36 m^3$ |
+    """
     r = random.randint(1, maxRadius)
-    ans = (4 * math.pi / 3) * r**3
+    ans = round((4 * math.pi / 3) * r**3, 2)
 
     problem = f"Volume of sphere with radius ${r} m = $"
     solution = f"${ans} m^3$"
