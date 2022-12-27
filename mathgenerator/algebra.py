@@ -109,9 +109,9 @@ def complex_quadratic(prob_type=0, max_range=10):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            solution = f'(\\frac{{{-b} + {sqrt_d}i}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}i}}{{2*{a}}})'
+            solution = rf'(\frac{{{-b} + {sqrt_d}i}}{{2*{a}}}, \frac{{{-b} - {sqrt_d}i}}{{2*{a}}})'
         else:
-            solution = f'(\\frac{{{-b} + \\sqrt{{{-d}}}i}}{{2*{a}}}, \\frac{{{-b} - \\sqrt{{{-d}}}i}}{{2*{a}}})'
+            solution = rf'(\frac{{{-b} + \sqrt{{{-d}}}i}}{{2*{a}}}, \frac{{{-b} - \sqrt{{{-d}}}i}}{{2*{a}}})'
 
         return problem, solution
 
@@ -123,9 +123,9 @@ def complex_quadratic(prob_type=0, max_range=10):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            g_sol = f'(\\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \\frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
+            g_sol = rf'(\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
         else:
-            g_sol = f'(\\frac{{{-b} + \\sqrt{{{d}}}}}{{2*{a}}}, (\\frac{{{-b} - \\sqrt{{{d}}}}}{{2*{a}}})'
+            g_sol = f'(\frac{{{-b} + \sqrt{{{d}}}}}{{2*{a}}}, (\frac{{{-b} - \sqrt{{{d}}}}}{{2*{a}}})'
 
         solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
@@ -164,7 +164,7 @@ def distance_two_points(max_val_xy=20, min_val_xy=-20):
 
     distanceSq = (point1X - point2X) ** 2 + (point1Y - point2Y) ** 2
 
-    solution = f"$\\sqrt{{{distanceSq}}}$"
+    solution = rf"$\sqrt{{{distanceSq}}}$"
     problem = f"Find the distance between $({point1X}, {point1Y})$ and $({point2X}, {point2Y})$"
     return problem, solution
 
@@ -272,7 +272,7 @@ def int_matrix_22_determinant(max_matrix_val=100):
     determinant = a * d - b * c
     lst = [[a, b], [c, d]]
 
-    problem = f"$\\det {bmatrix(lst)}= $"
+    problem = rf"$\det {bmatrix(lst)}= $"
     solution = f"${determinant}$"
     return problem, solution
 
@@ -701,7 +701,7 @@ def vector_cross(min_val=-20, max_val=20):
         a[0] * b[1] - a[1] * b[0]
     ]
 
-    problem = f"${a} \\times {b} = $"
+    problem = rf"${a} \times {b} = $"
     solution = f"${c}$"
     return problem, solution
 
@@ -717,6 +717,6 @@ def vector_dot(min_val=-20, max_val=20):
     b = [random.randint(min_val, max_val) for i in range(3)]
     c = a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
 
-    problem = f'${a}\\cdot{b}=$'
+    problem = rf'${a}\cdot{b}=$'
     solution = f'${c}$'
     return problem, solution

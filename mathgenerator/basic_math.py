@@ -61,7 +61,7 @@ def compare_fractions(max_val=10):
     else:
         solution = "="
 
-    problem = f"Which symbol represents the comparison between $\\frac{{{a}}}{{{b}}}$ and $\\frac{{{c}}}{{{d}}}$?"
+    problem = rf"Which symbol represents the comparison between $\frac{{{a}}}{{{b}}}$ and $\frac{{{c}}}{{{d}}}$?"
     return problem, solution
 
 
@@ -75,7 +75,7 @@ def cube_root(min_no=1, max_no=1000):
     b = random.randint(min_no, max_no)
     a = b**(1 / 3)
 
-    return (f"What is the cube root of: $\\sqrt[3]{{{b}}}=$ to 2 decimal places?", f"${round(a, 2)}$")
+    return (rf"What is the cube root of: $\sqrt[3]{{{b}}}=$ to 2 decimal places?", f"${round(a, 2)}$")
 
 
 def divide_fractions(max_val=10):
@@ -108,7 +108,7 @@ def divide_fractions(max_val=10):
     sol_numerator = tmp_n // gcd
     sol_denominator = tmp_d // gcd
 
-    return f'$\\frac{{{a}}}{{{b}}}\\div\\frac{{{c}}}{{{d}}}=$', f'$\\frac{{{sol_numerator}}}{{{sol_denominator}}}$'
+    return rf'$\frac{{{a}}}{{{b}}}\div\frac{{{c}}}{{{d}}}=$', f'$\frac{{{sol_numerator}}}{{{sol_denominator}}}$'
 
 
 def division(max_a=25, max_b=25):
@@ -125,7 +125,7 @@ def division(max_a=25, max_b=25):
     dividend = random.choice([a, b])
     quotient = int(divisor / dividend)
 
-    return f'${divisor}\\div{dividend}=$', f'${quotient}$'
+    return rf'${divisor}\div{dividend}=$', f'${quotient}$'
 
 
 def exponentiation(max_base=20, max_expo=10):
@@ -186,11 +186,11 @@ def fraction_multiplication(max_val=10):
 
     gcd = calculate_gcd(tmp_n, tmp_d)
 
-    problem = f"$\\frac{{{a}}}{{{b}}}\\cdot\\frac{{{c}}}{{{d}}}=$"
+    problem = rf"$\frac{{{a}}}{{{b}}}\cdot\frac{{{c}}}{{{d}}}=$"
     if (tmp_d == 1 or tmp_d == gcd):
-        solution = f"$\\frac{{{tmp_n}}}{{{gcd}}}$"
+        solution = rf"$\frac{{{tmp_n}}}{{{gcd}}}$"
     else:
-        solution = f"$\\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}$"
+        solution = rf"$\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}$"
     return problem, solution
 
 
@@ -205,7 +205,7 @@ def fraction_to_decimal(max_res=99, max_divid=99):
     b = random.randint(1, min(max_res, max_divid))
     c = round(a / b, 2)
 
-    return f'${a}\\div{b}=$', f'${c}$'
+    return rf'${a}\div{b}=$', f'${c}$'
 
 
 def greatest_common_divisor(numbers_count=2, max_number_limit=10**9):
@@ -289,7 +289,7 @@ def multiplication(max_multi=12):
     b = random.randint(0, max_multi)
     c = a * b
 
-    return f'${a}\\cdot{b}=$', f'${c}$'
+    return rf'${a}\cdot{b}=$', f'${c}$'
 
 
 def percentage(max_value=99, max_percentage=99):
@@ -388,7 +388,7 @@ def square_root(min_no=1, max_no=12):
     b = random.randint(min_no, max_no)
     a = b ** 2
 
-    return f'$\\sqrt{{{a}}}=$', f'${b}$'
+    return rf'$\sqrt{{{a}}}=$', f'${b}$'
 
 
 def subtraction(max_minuend=99, max_diff=99):

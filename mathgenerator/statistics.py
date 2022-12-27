@@ -140,7 +140,7 @@ def dice_sum_probability(max_dice=3):
                         count = count + 1
 
     problem = f"If ${a}$ dice are rolled at the same time, the probability of getting a sum of ${b} =$"
-    solution = f"\\frac{{{count}}}{{{6**a}}}"
+    solution = rf"\frac{{{count}}}{{{6**a}}}"
     return problem, solution
 
 

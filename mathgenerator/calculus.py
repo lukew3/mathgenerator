@@ -71,7 +71,7 @@ def power_rule_integration(max_coef=10,
         exponent = random.randint(1, max_exp)
 
         problem += f'{coefficient}x^{{{exponent}}}'
-        solution += f'\\frac{{{coefficient}}}{{{exponent}}}x^{{{exponent + 1}}}'
+        solution += rf'\frac{{{coefficient}}}{{{exponent}}}x^{{{exponent + 1}}}'
 
     solution += " + C"
 
@@ -106,15 +106,15 @@ def trig_differentiation():
     | $\frac{d}{dx}(\csc)=$ | $-\csc \cdot \cot$ |
     """
     pairs = {
-        '\\sin': '\\cos',
-        '\\cos': '-\\sin',
-        '\\tan': '\\sec^{{2}}',
-        '\\cot': '-\\csc^{{2}}',
-        '\\sec': '\\sec \\cdot \\tan',
-        '\\csc': '-\\csc \\cdot \\cot'
+        r'\sin': r'\cos',
+        r'\cos': r'-\sin',
+        r'\tan': r'\sec^{{2}}',
+        r'\cot': r'-\csc^{{2}}',
+        r'\sec': r'\sec \cdot \tan',
+        r'\csc': r'-\csc \cdot \cot'
     }
     problem = random.choice(list(pairs.keys()))
     solution = f'${pairs[problem]}$'
-    problem = f'$\\frac{{d}}{{dx}}({problem})=$'
+    problem = rf'$\frac{{d}}{{dx}}({problem})=$'
 
     return problem, solution

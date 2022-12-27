@@ -190,7 +190,7 @@ def complex_to_polar(min_real_imaginary_num=-20,
     r = round(math.hypot(a, b), 2)
     theta = round(math.atan2(b, a), 2)
 
-    problem = f'${r}({a}\\theta + i{b}\\theta)$'
+    problem = rf'${r}({a}\theta + i{b}\theta)$'
     return problem, f'${theta}$'
 
 
@@ -308,7 +308,7 @@ def geometric_mean(max_value=100, max_count=4):
 
     ans = round(product ** (1 / count), 2)
     problem = f"Geometric mean of ${count}$ numbers ${nums} = $"
-    # solution = f"$({'*'.join(map(str, nums))}^{{\\frac{{1}}{{{count}}}}} = {ans}$"
+    # solution = rf"$({'*'.join(map(str, nums))}^{{\frac{{1}}{{{count}}}}} = {ans}$"
     solution = f"${ans}$"
     return problem, solution
 
@@ -480,8 +480,8 @@ def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
         c[0] /= 10
         c[1] += 1
 
-    problem = f"Product of scientific notations ${a[0]} \\times 10^{{{a[1]}}}$ and ${b[0]} \\times 10^{{{b[1]}}} = $"
-    solution = f'${round(c[0], 2)} \\times 10^{{{c[1]}}}$'
+    problem = rf"Product of scientific notations ${a[0]} \times 10^{{{a[1]}}}$ and ${b[0]} \times 10^{{{b[1]}}} = $"
+    solution = rf'${round(c[0], 2)} \times 10^{{{c[1]}}}$'
     return problem, solution
 
 
@@ -604,5 +604,5 @@ def surds_comparison(max_value=100, max_root=10):
     elif first < second:
         solution = "<"
 
-    problem = f"Fill in the blanks ${radicand1}^{{\\frac{{1}}{{{degree1}}}}}$ _ ${radicand2}^{{\\frac{{1}}{{{degree2}}}}}$"
+    problem = rf"Fill in the blanks ${radicand1}^{{\frac{{1}}{{{degree1}}}}}$ _ ${radicand2}^{{\frac{{1}}{{{degree2}}}}}$"
     return problem, f'${solution}$'
