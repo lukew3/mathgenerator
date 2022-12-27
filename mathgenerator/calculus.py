@@ -3,7 +3,7 @@ from scipy.integrate import quad
 import sympy
 
 
-def definite_integral(max_coeff=100):
+def definite_integral(max_coef=100):
     r"""Definite Integral of Quadratic Equation
     
     | Ex. Problem | Ex. Solution |
@@ -13,9 +13,9 @@ def definite_integral(max_coeff=100):
     def integrand(x, a, b, c):
         return a * x**2 + b * x + c
 
-    a = random.randint(0, max_coeff)
-    b = random.randint(0, max_coeff)
-    c = random.randint(0, max_coeff)
+    a = random.randint(0, max_coef)
+    b = random.randint(0, max_coef)
+    c = random.randint(0, max_coef)
 
     result = quad(integrand, 0, 1, args=(a, b, c))[0]
     solution = round(result, 2)
@@ -24,16 +24,16 @@ def definite_integral(max_coeff=100):
     return problem, f'${solution}$'
 
 
-def power_rule_differentiation(maxCoef=10,
-                               maxExp=10,
-                               maxTerms=5):
+def power_rule_differentiation(max_coef=10,
+                               max_exp=10,
+                               max_terms=5):
     r"""Power Rule Differentiation
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Differentiate $1x^{5} + 4x^{7} + 4x^{4}$ | $5x^{4} + 28x^{6} + 16x^{3}$ |
     """
-    numTerms = random.randint(1, maxTerms)
+    numTerms = random.randint(1, max_terms)
     problem = "Differentiate $"
     solution = "$"
 
@@ -41,8 +41,8 @@ def power_rule_differentiation(maxCoef=10,
         if i > 0:
             problem += " + "
             solution += " + "
-        coefficient = random.randint(1, maxCoef)
-        exponent = random.randint(1, maxExp)
+        coefficient = random.randint(1, max_coef)
+        exponent = random.randint(1, max_exp)
 
         problem += f'{coefficient}x^{{{exponent}}}'
         solution += f'{coefficient * exponent}x^{{{exponent - 1}}}'
@@ -50,16 +50,16 @@ def power_rule_differentiation(maxCoef=10,
     return problem + '$', solution + '$'
 
 
-def power_rule_integration(maxCoef=10,
-                           maxExp=10,
-                           maxTerms=5):
+def power_rule_integration(max_coef=10,
+                           max_exp=10,
+                           max_terms=5):
     r"""Power Rule Integration
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Integrate $9x^{6} + 2x^{6} + 4x^{3}$ | $\frac{9}{6}x^{7} + \frac{2}{6}x^{7} + \frac{4}{3}x^{4} + C$ |
     """
-    numTerms = random.randint(1, maxTerms)
+    numTerms = random.randint(1, max_terms)
     problem = "Integrate $"
     solution = "$"
 
@@ -67,8 +67,8 @@ def power_rule_integration(maxCoef=10,
         if i > 0:
             problem += " + "
             solution += " + "
-        coefficient = random.randint(1, maxCoef)
-        exponent = random.randint(1, maxExp)
+        coefficient = random.randint(1, max_coef)
+        exponent = random.randint(1, max_exp)
 
         problem += f'{coefficient}x^{{{exponent}}}'
         solution += f'\\frac{{{coefficient}}}{{{exponent}}}x^{{{exponent + 1}}}'
@@ -78,7 +78,7 @@ def power_rule_integration(maxCoef=10,
     return problem + '$', solution + '$'
 
 
-def stationary_points(maxExp=3, maxCoef=10):
+def stationary_points(max_exp=3, max_coef=10):
     r"""Stationary Points
     
     | Ex. Problem | Ex. Solution |
@@ -89,8 +89,8 @@ def stationary_points(maxExp=3, maxCoef=10):
     while len(solution) == 0:
         x = sympy.symbols('x')
         problem = 0
-        for exp in range(maxExp + 1):
-            coefficient = random.randint(0, maxCoef)
+        for exp in range(max_exp + 1):
+            coefficient = random.randint(0, max_coef)
             problem += coefficient * pow(x, exp)
         solution = sympy.stationary_points(problem, x)
 

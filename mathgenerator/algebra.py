@@ -5,16 +5,16 @@ import fractions
 import sympy
 
 
-def basic_algebra(maxVariable=10):
+def basic_algebra(max_variable=10):
     r"""Basic Algebra
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $1x + 5 = 5$ | $0$ |
     """
-    a = random.randint(1, maxVariable)
-    b = random.randint(1, maxVariable)
-    c = random.randint(b, maxVariable)
+    a = random.randint(1, max_variable)
+    b = random.randint(1, max_variable)
+    c = random.randint(b, max_variable)
 
     # calculate gcd
     def calculate_gcd(x, y):
@@ -35,17 +35,17 @@ def basic_algebra(maxVariable=10):
     return problem, solution
 
 
-def combine_like_terms(maxCoef=10, maxExp=20, maxTerms=10):
+def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
     r"""Combine Like Terms
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $6x^{9} + 3x^{2} + 5x^{19} + 3x^{17}$ | $3x^{2} + 6x^{9} + 3x^{17} + 5x^{19}$ |
     """
-    numTerms = random.randint(1, maxTerms)
+    numTerms = random.randint(1, max_terms)
 
-    coefs = [random.randint(1, maxCoef) for _ in range(numTerms)]
-    exponents = [random.randint(1, max(maxExp - 1, 2)) for _ in range(numTerms)]
+    coefs = [random.randint(1, max_coef) for _ in range(numTerms)]
+    exponents = [random.randint(1, max(max_exp - 1, 2)) for _ in range(numTerms)]
 
     problem = " + ".join([f"{coefs[i]}x^{{{exponents[i]}}}" for i in range(numTerms)])
     d = {}
@@ -132,35 +132,35 @@ def complex_quadratic(prob_type=0, max_range=10):
         return problem, solution
 
 
-def compound_interest(maxPrinciple=10000,
-                      maxRate=10,
-                      maxTime=10):
+def compound_interest(max_principle=10000,
+                      max_rate=10,
+                      max_time=10):
     r"""Compound Interest
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Compound interest for a principle amount of $2679$ dollars, $9$% rate of interest and for a time period of $3$ years is $=$ | $3469.38$ |
     """
-    p = random.randint(1000, maxPrinciple)
-    r = random.randint(1, maxRate)
-    n = random.randint(1, maxTime)
+    p = random.randint(1000, max_principle)
+    r = random.randint(1, max_rate)
+    n = random.randint(1, max_time)
     a = round(p * (1 + r / 100)**n, 2)
 
     problem = f"Compound interest for a principle amount of ${p}$ dollars, ${r}$% rate of interest and for a time period of ${n}$ years is $=$"
     return problem, f'${a}$'
 
 
-def distance_two_points(maxValXY=20, minValXY=-20):
+def distance_two_points(max_val_xy=20, min_val_xy=-20):
     r"""Distance between 2 points
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the distance between $(-19, -6)$ and $(15, -16)$ | $\sqrt{1256}$ |
     """
-    point1X = random.randint(minValXY, maxValXY + 1)
-    point1Y = random.randint(minValXY, maxValXY + 1)
-    point2X = random.randint(minValXY, maxValXY + 1)
-    point2Y = random.randint(minValXY, maxValXY + 1)
+    point1X = random.randint(min_val_xy, max_val_xy + 1)
+    point1Y = random.randint(min_val_xy, max_val_xy + 1)
+    point2X = random.randint(min_val_xy, max_val_xy + 1)
+    point2Y = random.randint(min_val_xy, max_val_xy + 1)
 
     distanceSq = (point1X - point2X) ** 2 + (point1Y - point2Y) ** 2
 
@@ -257,17 +257,17 @@ def factoring(range_x1=10, range_x2=10):
     return f"${problem}$", solution
 
 
-def int_matrix_22_determinant(maxMatrixVal=100):
+def int_matrix_22_determinant(max_matrix_val=100):
     r"""Determinant to 2x2 Matrix
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\det \begin{bmatrix} 88 & 40 \\\ 9 & 91 \end{bmatrix}= $ | $7648$ |
     """
-    a = random.randint(0, maxMatrixVal)
-    b = random.randint(0, maxMatrixVal)
-    c = random.randint(0, maxMatrixVal)
-    d = random.randint(0, maxMatrixVal)
+    a = random.randint(0, max_matrix_val)
+    b = random.randint(0, max_matrix_val)
+    c = random.randint(0, max_matrix_val)
+    d = random.randint(0, max_matrix_val)
 
     determinant = a * d - b * c
     lst = [[a, b], [c, d]]
@@ -277,12 +277,12 @@ def int_matrix_22_determinant(maxMatrixVal=100):
     return problem, solution
 
 
-def intersection_of_two_lines(minM=-10,
-                              maxM=10,
-                              minB=-10,
-                              maxB=10,
-                              minDenominator=1,
-                              maxDenominator=6):
+def intersection_of_two_lines(min_m=-10,
+                              max_m=10,
+                              min_b=-10,
+                              max_b=10,
+                              min_denominator=1,
+                              max_denominator=6):
     r"""Intersection of two lines
     
     | Ex. Problem | Ex. Solution |
@@ -337,13 +337,13 @@ def intersection_of_two_lines(minM=-10,
             x = rf"\frac{{{x.numerator}}}{{{x.denominator}}}"
         return x
 
-    m1 = (random.randint(minM,
-                         maxM), random.randint(minDenominator, maxDenominator))
-    m2 = (random.randint(minM,
-                         maxM), random.randint(minDenominator, maxDenominator))
+    m1 = (random.randint(min_m,
+                         max_m), random.randint(min_denominator, max_denominator))
+    m2 = (random.randint(min_m,
+                         max_m), random.randint(min_denominator, max_denominator))
 
-    b1 = random.randint(minB, maxB)
-    b2 = random.randint(minB, maxB)
+    b1 = random.randint(min_b, max_b)
+    b2 = random.randint(min_b, max_b)
 
     eq1 = generateEquationString(m1, b1)
     eq2 = generateEquationString(m2, b2)
@@ -367,33 +367,33 @@ def intersection_of_two_lines(minM=-10,
     return problem, solution
 
 
-def invert_matrix(SquareMatrixDimension=3,
-                  MaxMatrixElement=99,
-                  OnlyIntegerElementsInInvertedMatrix=True):
+def invert_matrix(square_matrix_dimension=3,
+                  max_matrix_element=99,
+                  only_integer_elements_in_inverted_matrixe=True):
     r"""Invert Matrix
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Inverse of Matrix $\begin{bmatrix} 4 & 1 & 4 \\\ 5 & 1 & 5 \\\ 12 & 3 & 13 \end{bmatrix}$ is: | $\begin{bmatrix} 2 & 1 & -1 \\\ 5 & -4 & 0 \\\ -3 & 0 & 1 \end{bmatrix}$ |
     """
-    if OnlyIntegerElementsInInvertedMatrix is True:
+    if only_integer_elements_in_inverted_matrixe is True:
         isItOk = False
         Mat = list()
         while (isItOk is False):
             Mat = list()
-            for i in range(0, SquareMatrixDimension):
+            for i in range(0, square_matrix_dimension):
                 z = list()
-                for j in range(0, SquareMatrixDimension):
+                for j in range(0, square_matrix_dimension):
                     z.append(0)
                 z[i] = 1
                 Mat.append(z)
             MaxAllowedMatrixElement = math.ceil(
-                pow(MaxMatrixElement, 1 / (SquareMatrixDimension)))
+                pow(max_matrix_element, 1 / (square_matrix_dimension)))
             randomlist = random.sample(range(0, MaxAllowedMatrixElement + 1),
-                                       SquareMatrixDimension)
+                                       square_matrix_dimension)
 
-            for i in range(0, SquareMatrixDimension):
-                if i == SquareMatrixDimension - 1:
+            for i in range(0, square_matrix_dimension):
+                if i == square_matrix_dimension - 1:
                     Mat[0] = [
                         j + (k * randomlist[i])
                         for j, k in zip(Mat[0], Mat[i])
@@ -404,15 +404,15 @@ def invert_matrix(SquareMatrixDimension=3,
                         for j, k in zip(Mat[i + 1], Mat[i])
                     ]
 
-            for i in range(1, SquareMatrixDimension - 1):
+            for i in range(1, square_matrix_dimension - 1):
                 Mat[i] = [
-                    sum(i) for i in zip(Mat[SquareMatrixDimension - 1], Mat[i])
+                    sum(i) for i in zip(Mat[square_matrix_dimension - 1], Mat[i])
                 ]
 
             isItOk = True
             for i in Mat:
                 for j in i:
-                    if j > MaxMatrixElement:
+                    if j > max_matrix_element:
                         isItOk = False
                         break
                 if isItOk is False:
@@ -427,20 +427,20 @@ def invert_matrix(SquareMatrixDimension=3,
         Mat = sympy.Matrix.transpose(Mat)
 
     else:
-        randomlist = list(sympy.primerange(0, MaxMatrixElement + 1))
-        plist = random.sample(randomlist, SquareMatrixDimension)
+        randomlist = list(sympy.primerange(0, max_matrix_element + 1))
+        plist = random.sample(randomlist, square_matrix_dimension)
         randomlist = random.sample(
-            range(0, MaxMatrixElement + 1),
-            SquareMatrixDimension * SquareMatrixDimension)
+            range(0, max_matrix_element + 1),
+            square_matrix_dimension * square_matrix_dimension)
         randomlist = list(set(randomlist) - set(plist))
         n_list = random.sample(
-            randomlist, SquareMatrixDimension * (SquareMatrixDimension - 1))
+            randomlist, square_matrix_dimension * (square_matrix_dimension - 1))
         Mat = list()
-        for i in range(0, SquareMatrixDimension):
+        for i in range(0, square_matrix_dimension):
             z = list()
             z.append(plist[i])
-            for j in range(0, SquareMatrixDimension - 1):
-                z.append(n_list[(i * SquareMatrixDimension) + j - i])
+            for j in range(0, square_matrix_dimension - 1):
+                z.append(n_list[(i * square_matrix_dimension) + j - i])
             random.shuffle(z)
             Mat.append(z)
         Mat = sympy.Matrix(Mat)
@@ -450,7 +450,7 @@ def invert_matrix(SquareMatrixDimension=3,
     return problem, solution
 
 
-def linear_equations(n=2, varRange=20, coeffRange=20):
+def linear_equations(n=2, var_range=20, coeff_range=20):
     r"""Linear Equations
 
     | Ex. Problem | Ex. Solution |
@@ -462,13 +462,13 @@ def linear_equations(n=2, varRange=20, coeffRange=20):
         return None, None
 
     vars = ['x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g'][:n]
-    soln = [random.randint(-varRange, varRange) for i in range(n)]
+    soln = [random.randint(-var_range, var_range) for i in range(n)]
     problem = list()
     solution = "$, $".join(
         ["{} = {}".format(vars[i], soln[i]) for i in range(n)])
 
     for _ in range(n):
-        coeff = [random.randint(-coeffRange, coeffRange) for i in range(n)]
+        coeff = [random.randint(-coeff_range, coeff_range) for i in range(n)]
         res = sum([coeff[i] * soln[i] for i in range(n)])
         prob = [
             "{}{}".format(coeff[i], vars[i]) if coeff[i] != 0 else ""
@@ -486,15 +486,15 @@ def linear_equations(n=2, varRange=20, coeffRange=20):
     return f'Given the equations ${problem}$, solve for $x$ and $y$', f'${solution}$'
 
 
-def log(maxBase=3, maxVal=8):
+def log(max_base=3, max_val=8):
     r"""Logarithm
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $log_{3}(243)=$ | $5$ |
     """
-    a = random.randint(1, maxVal)
-    b = random.randint(2, maxBase)
+    a = random.randint(1, max_val)
+    b = random.randint(2, max_base)
     c = pow(b, a)
 
     problem = f'$log_{{{b}}}({c})=$'
@@ -502,7 +502,7 @@ def log(maxBase=3, maxVal=8):
     return problem, solution
 
 
-def matrix_multiplication(maxVal=100, max_dim=10):
+def matrix_multiplication(max_val=100, max_dim=10):
     r"""Multiply Two Matrices
     
     | Ex. Problem | Ex. Solution |
@@ -514,8 +514,8 @@ def matrix_multiplication(maxVal=100, max_dim=10):
     k = random.randint(2, max_dim)
 
     # generate matrices a and b
-    a = [[random.randint(-maxVal, maxVal) for _ in range(n)] for _ in range(m)]
-    b = [[random.randint(-maxVal, maxVal) for _ in range(k)] for _ in range(n)]
+    a = [[random.randint(-max_val, max_val) for _ in range(n)] for _ in range(m)]
+    b = [[random.randint(-max_val, max_val) for _ in range(k)] for _ in range(n)]
 
     res = []
     for r in range(m):
@@ -531,17 +531,17 @@ def matrix_multiplication(maxVal=100, max_dim=10):
     return problem, solution
 
 
-def midpoint_of_two_points(maxValue=20):
+def midpoint_of_two_points(max_value=20):
     r"""Midpoint of two points
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The midpoint of $(-8,10)$ and $(18,0) = $ | $(5.0,5.0)$ |
     """
-    x1 = random.randint(-20, maxValue)
-    y1 = random.randint(-20, maxValue)
-    x2 = random.randint(-20, maxValue)
-    y2 = random.randint(-20, maxValue)
+    x1 = random.randint(-20, max_value)
+    y1 = random.randint(-20, max_value)
+    x2 = random.randint(-20, max_value)
+    y2 = random.randint(-20, max_value)
     xm = (x1 + x2) / 2
     ym = (y1 + y2) / 2
 
@@ -550,18 +550,18 @@ def midpoint_of_two_points(maxValue=20):
     return problem, solution
 
 
-def multiply_complex_numbers(minRealImaginaryNum=-20,
-                             maxRealImaginaryNum=20):
+def multiply_complex_numbers(min_real_imaginary_num=-20,
+                             max_real_imaginary_num=20):
     r"""Multiplication of 2 complex numbers
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $(14+18j) * (14+15j) = $ | $(-74+462j)$ |
     """
-    num1 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
-                   random.randint(minRealImaginaryNum, maxRealImaginaryNum))
-    num2 = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
-                   random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    num1 = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
+                   random.randint(min_real_imaginary_num, max_real_imaginary_num))
+    num2 = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
+                   random.randint(min_real_imaginary_num, max_real_imaginary_num))
     product = num1 * num2
 
     problem = f"${num1} * {num2} = $"
@@ -569,19 +569,19 @@ def multiply_complex_numbers(minRealImaginaryNum=-20,
     return problem, solution
 
 
-def multiply_int_to_22_matrix(maxMatrixVal=10, maxRes=100):
+def multiply_int_to_22_matrix(max_matrix_val=10, max_res=100):
     r"""Multiply Integer to 2x2 Matrix
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $5 * \begin{bmatrix} 1 & 0 \\\ 2 & 9 \end{bmatrix} =$ | $\begin{bmatrix} 5 & 0 \\\ 10 & 45 \end{bmatrix}$ |
     """
-    a = random.randint(0, maxMatrixVal)
-    b = random.randint(0, maxMatrixVal)
-    c = random.randint(0, maxMatrixVal)
-    d = random.randint(0, maxMatrixVal)
+    a = random.randint(0, max_matrix_val)
+    b = random.randint(0, max_matrix_val)
+    c = random.randint(0, max_matrix_val)
+    d = random.randint(0, max_matrix_val)
 
-    constant = random.randint(0, int(maxRes / max(a, b, c, d)))
+    constant = random.randint(0, int(max_res / max(a, b, c, d)))
 
     a1 = a * constant
     b1 = b * constant
@@ -595,17 +595,17 @@ def multiply_int_to_22_matrix(maxMatrixVal=10, maxRes=100):
     return problem, solution
 
 
-def quadratic_equation(maxVal=100):
+def quadratic_equation(max_val=100):
     r"""Quadratic Equation
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What are the zeros of the quadratic equation $22x^2+137x+25=0$ | ${-0.19, -6.04}$ |
     """
-    a = random.randint(1, maxVal)
-    c = random.randint(1, maxVal)
+    a = random.randint(1, max_val)
+    c = random.randint(1, max_val)
     b = random.randint(
-        round(math.sqrt(4 * a * c)) + 1, round(math.sqrt(4 * maxVal * maxVal)))
+        round(math.sqrt(4 * a * c)) + 1, round(math.sqrt(4 * max_val * max_val)))
     D = math.sqrt(b * b - 4 * a * c)
     res = {round((-b + D) / (2 * a), 2), round((-b - D) / (2 * a), 2)}
 
@@ -614,18 +614,18 @@ def quadratic_equation(maxVal=100):
     return problem, solution
 
 
-def simple_interest(maxPrinciple=10000,
-                    maxRate=10,
-                    maxTime=10):
+def simple_interest(max_principle=10000,
+                    max_rate=10,
+                    max_time=10):
     r"""Simple Interest
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Simple interest for a principle amount of $7217$ dollars, $3$% rate of interest and for a time period of $10$ years is $=$ | $2165.1$ |
     """
-    p = random.randint(1000, maxPrinciple)
-    r = random.randint(1, maxRate)
-    t = random.randint(1, maxTime)
+    p = random.randint(1000, max_principle)
+    r = random.randint(1, max_rate)
+    t = random.randint(1, max_time)
     s = round((p * r * t) / 100, 2)
 
     problem = f"Simple interest for a principle amount of ${p}$ dollars, ${r}$% rate of interest and for a time period of ${t}$ years is $=$ "
@@ -687,15 +687,15 @@ def system_of_equations(range_x=10,
     # Add random (non-zero) multiple of equations to each other
 
 
-def vector_cross(minVal=-20, maxVal=20):
+def vector_cross(min_val=-20, max_val=20):
     r"""Cross product of 2 vectors
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $[-1, -4, 10] \times [-11, 1, -16] = $ | $[54, -126, -45]$ |
     """
-    a = [random.randint(minVal, maxVal) for _ in range(3)]
-    b = [random.randint(minVal, maxVal) for _ in range(3)]
+    a = [random.randint(min_val, max_val) for _ in range(3)]
+    b = [random.randint(min_val, max_val) for _ in range(3)]
     c = [
         a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2],
         a[0] * b[1] - a[1] * b[0]
@@ -706,15 +706,15 @@ def vector_cross(minVal=-20, maxVal=20):
     return problem, solution
 
 
-def vector_dot(minVal=-20, maxVal=20):
+def vector_dot(min_val=-20, max_val=20):
     r"""Dot product of 2 vectors
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $[12, -9, -8]\cdot[-9, 8, 1]=$ | $-188$ |
     """
-    a = [random.randint(minVal, maxVal) for i in range(3)]
-    b = [random.randint(minVal, maxVal) for i in range(3)]
+    a = [random.randint(min_val, max_val) for i in range(3)]
+    b = [random.randint(min_val, max_val) for i in range(3)]
     c = a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
 
     problem = f'${a}\\cdot{b}=$'

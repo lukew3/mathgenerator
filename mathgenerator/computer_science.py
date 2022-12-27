@@ -2,14 +2,14 @@ import random
 import math
 
 
-def bcd_to_decimal(maxNumber=10000):
+def bcd_to_decimal(max_number=10000):
     r"""Binary Coded Decimal to Integer
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Integer of Binary Coded Decimal $4 =$ | $17801$ |
     """
-    n = random.randint(1000, maxNumber)
+    n = random.randint(1000, max_number)
     binstring = ''
     while True:
         q, r = divmod(n, 10)
@@ -98,14 +98,14 @@ def binary_to_hex(max_dig=10):
     return f'${problem}$', solution
 
 
-def decimal_to_bcd(maxNumber=10000):
+def decimal_to_bcd(max_number=10000):
     r"""Decimal to Binary Coded Decimal
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | BCD of Decimal Number $6575 = $ | $191015$ |
     """
-    n = random.randint(1000, maxNumber)
+    n = random.randint(1000, max_number)
     x = n
     # binstring = ''
     bcdstring = ''
@@ -148,14 +148,14 @@ def decimal_to_hexadeci(max_dec=1000):
     return problem, solution
 
 
-def decimal_to_octal(maxDecimal=4096):
+def decimal_to_octal(max_decimal=4096):
     r"""Decimal to Octal
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The decimal number $3698$ in octal is: | $0o7162$ |
     """
-    x = random.randint(0, maxDecimal)
+    x = random.randint(0, max_decimal)
 
     problem = f"The decimal number ${x}$ in octal is: "
     solution = f'${oct(x)}$'
@@ -163,14 +163,14 @@ def decimal_to_octal(maxDecimal=4096):
     return problem, solution
 
 
-def fibonacci_series(minNo=1):
+def fibonacci_series(min_no=1):
     r"""Fibonacci Series
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The Fibonacci Series of the first ${n}$ numbers is ? | $0, 1, 1, 2, 3, 5, 8, 13, 21$ |
     """
-    n = random.randint(minNo, 20)
+    n = random.randint(min_no, 20)
 
     def createFibList(n):
         list = []
@@ -189,15 +189,15 @@ def fibonacci_series(minNo=1):
     return problem, f'${solution}$'
 
 
-def modulo_division(maxRes=99, maxModulo=99):
+def modulo_division(max_res=99, max_modulo=99):
     r"""Modulo Division
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $43$ % $33 = $ | $10$ |
     """
-    a = random.randint(0, maxModulo)
-    b = random.randint(0, min(maxRes, maxModulo))
+    a = random.randint(0, max_modulo)
+    b = random.randint(0, min(max_res, max_modulo))
     c = a % b if b != 0 else 0
 
     problem = f'${a}$ % ${b} = $'
@@ -205,7 +205,7 @@ def modulo_division(maxRes=99, maxModulo=99):
     return problem, solution
 
 
-def nth_fibonacci_number(maxN=100):
+def nth_fibonacci_number(max_n=100):
     r"""nth Fibonacci number
     
     | Ex. Problem | Ex. Solution |
@@ -213,7 +213,7 @@ def nth_fibonacci_number(maxN=100):
     | What is the 85th Fibonacci number? | $259695496911123328$ |
     """
     gratio = (1 + math.sqrt(5)) / 2
-    n = random.randint(1, maxN)
+    n = random.randint(1, max_n)
 
     problem = f"What is the {n}th Fibonacci number?"
     solution = int((math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))

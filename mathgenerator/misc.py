@@ -3,20 +3,20 @@ import math
 import numpy as np
 
 
-def arithmetic_progression_sum(maxd=100,
-                               maxa=100,
-                               maxn=100):
+def arithmetic_progression_sum(max_d=100,
+                               max_a=100,
+                               max_n=100):
     """Arithmetic Progression Sum
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the sum of first $44$ terms of the AP series: $49, 145, 241 ... $ | $92972.0$ |
     """
-    d = random.randint(-1 * maxd, maxd)
-    a1 = random.randint(-1 * maxa, maxa)
+    d = random.randint(-1 * max_d, max_d)
+    a1 = random.randint(-1 * max_a, max_a)
     a2 = a1 + d
     a3 = a1 + 2 * d
-    n = random.randint(4, maxn)
+    n = random.randint(4, max_n)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
     an = a1 + (n - 1) * d
     solution = n * (a1 + an) / 2
@@ -25,20 +25,20 @@ def arithmetic_progression_sum(maxd=100,
     return problem, f'${solution}$'
 
 
-def arithmetic_progression_term(maxd=100,
-                                maxa=100,
-                                maxn=100):
+def arithmetic_progression_term(max_d=100,
+                                max_a=100,
+                                max_n=100):
     """Arithmetic Progression Term
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find term number $12$ of the AP series: $-54, 24, 102 ... $ | $804$ |
     """
-    d = random.randint(-1 * maxd, maxd)
-    a1 = random.randint(-1 * maxa, maxa)
+    d = random.randint(-1 * max_d, max_d)
+    a1 = random.randint(-1 * max_a, max_a)
     a2 = a1 + d
     a3 = a2 + d
-    n = random.randint(4, maxn)
+    n = random.randint(4, max_n)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
     solution = a1 + ((n - 1) * d)
 
@@ -46,32 +46,32 @@ def arithmetic_progression_term(maxd=100,
     return problem, f'${solution}$'
 
 
-def _fromBaseTenTo(n, toBase):
-    """Converts a decimal number n to another base, toBase.
+def _fromBaseTenTo(n, to_base):
+    """Converts a decimal number n to another base, to_base.
     Utility of base_conversion()
     """
     alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     assert type(
-        toBase
-    ) == int and toBase >= 2 and toBase <= 36, "toBase({}) must be >=2 and <=36"
+        to_base
+    ) == int and to_base >= 2 and to_base <= 36, "to_base({}) must be >=2 and <=36"
     # trivial cases
-    if toBase == 2:
+    if to_base == 2:
         return bin(n)[2:]
-    elif toBase == 8:
+    elif to_base == 8:
         return oct(n)[2:]
-    elif toBase == 10:
+    elif to_base == 10:
         return str(n)
-    elif toBase == 16:
+    elif to_base == 16:
         return hex(n)[2:].upper()
-    res = alpha[n % toBase]
-    n = n // toBase
+    res = alpha[n % to_base]
+    n = n // to_base
     while n > 0:
-        res = alpha[n % toBase] + res
-        n = n // toBase
+        res = alpha[n % to_base] + res
+        n = n // to_base
     return res
 
 
-def base_conversion(maxNum=60000, maxBase=16):
+def base_conversion(max_num=60000, max_base=16):
     """Base Conversion
     
     | Ex. Problem | Ex. Solution |
@@ -79,16 +79,16 @@ def base_conversion(maxNum=60000, maxBase=16):
     | Convert $45204$ from base $10$ to base $4$ | $23002110$ |
     """
     assert type(
-        maxNum
-    ) == int and maxNum >= 100 and maxNum <= 65536, "maxNum({}) must be >=100 and <=65536".format(
-        maxNum)
+        max_num
+    ) == int and max_num >= 100 and max_num <= 65536, "max_num({}) must be >=100 and <=65536".format(
+        max_num)
     assert type(
-        maxBase
-    ) == int and maxBase >= 2 and maxBase <= 36, "maxBase({}) must be >= 2 and <=36".format(
-        maxBase)
+        max_base
+    ) == int and max_base >= 2 and max_base <= 36, "max_base({}) must be >= 2 and <=36".format(
+        max_base)
 
-    n = random.randint(40, maxNum)
-    dist = [10] * 10 + [2] * 5 + [16] * 5 + [i for i in range(2, maxBase + 1)]
+    n = random.randint(40, max_num)
+    dist = [10] * 10 + [2] * 5 + [16] * 5 + [i for i in range(2, max_base + 1)]
     # set this way since converting to/from bases 2,10,16 are more common -- can be changed if needed.
     bases = random.choices(dist, k=2)
     while bases[0] == bases[1]:
@@ -131,14 +131,14 @@ def binomial_distribution():
     return problem, f'${answer}$'
 
 
-def celsius_to_fahrenheit(maxTemp=100):
+def celsius_to_fahrenheit(max_temp=100):
     """Celsius to Fahrenheit
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $-46$ degrees Celsius to degrees Fahrenheit | $-50.8$ |
     """
-    celsius = random.randint(-50, maxTemp)
+    celsius = random.randint(-50, max_temp)
     fahrenheit = (celsius * (9 / 5)) + 32
 
     problem = f"Convert ${celsius}$ degrees Celsius to degrees Fahrenheit"
@@ -146,15 +146,15 @@ def celsius_to_fahrenheit(maxTemp=100):
     return problem, solution
 
 
-def common_factors(maxVal=100):
+def common_factors(max_val=100):
     """Common Factors
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Common Factors of $100$ and $44 = $ | $[1, 2, 4]$ |
     """
-    a = x = random.randint(1, maxVal)
-    b = y = random.randint(1, maxVal)
+    a = x = random.randint(1, max_val)
+    b = y = random.randint(1, max_val)
 
     if (x < y):
         min = x
@@ -175,16 +175,16 @@ def common_factors(maxVal=100):
     return problem, solution
 
 
-def complex_to_polar(minRealImaginaryNum=-20,
-                     maxRealImaginaryNum=20):
+def complex_to_polar(min_real_imaginary_num=-20,
+                     max_real_imaginary_num=20):
     r"""Complex to polar form
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $19.42(-19.0\theta + i-4.0\theta)$ | $-2.93$ |
     """
-    num = complex(random.randint(minRealImaginaryNum, maxRealImaginaryNum),
-                  random.randint(minRealImaginaryNum, maxRealImaginaryNum))
+    num = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
+                  random.randint(min_real_imaginary_num, max_real_imaginary_num))
     a = num.real
     b = num.imag
     r = round(math.hypot(a, b), 2)
@@ -194,14 +194,14 @@ def complex_to_polar(minRealImaginaryNum=-20,
     return problem, f'${theta}$'
 
 
-def decimal_to_roman_numerals(maxDecimal=4000):
+def decimal_to_roman_numerals(max_decimal=4000):
     """Decimal to Roman Numerals
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The number $92$ in roman numerals is:  | $XCII$ |
     """
-    x = random.randint(0, maxDecimal)
+    x = random.randint(0, max_decimal)
     x_copy = x
     roman_dict = {
         1: "I",
@@ -250,14 +250,14 @@ def euclidian_norm(maxEltAmt=20):
     return problem, f'${solution}$'
 
 
-def factors(maxVal=1000):
+def factors(max_val=1000):
     """Factors of a number
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Factors of $176 = $ | $[1, 2, 4, 8, 11, 16, 22, 44, 88, 176]$ |
     """
-    n = random.randint(1, maxVal)
+    n = random.randint(1, max_val)
 
     factors = []
 
@@ -277,15 +277,15 @@ def factors(maxVal=1000):
     return problem, f'${solution}$'
 
 
-def gcd(maxVal=20):
+def gcd(max_val=20):
     """GCD (Greatest Common Denominator)
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | GCD of $18$ and $4 = $ | $2$ |
     """
-    a = random.randint(1, maxVal)
-    b = random.randint(1, maxVal)
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
     x, y = a, b
     while y:
         x, y = y, x % y
@@ -295,15 +295,15 @@ def gcd(maxVal=20):
     return problem, solution
 
 
-def geometric_mean(maxValue=100, maxCount=4):
+def geometric_mean(max_value=100, max_count=4):
     """Geometric Mean of N Numbers
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Geometric mean of $3$ numbers $[72, 21, 87] = $ | $50.86$ |
     """
-    count = random.randint(2, maxCount)
-    nums = [random.randint(1, maxValue) for i in range(count)]
+    count = random.randint(2, max_count)
+    nums = [random.randint(1, max_value) for i in range(count)]
     product = np.prod(nums)
 
     ans = round(product ** (1 / count), 2)
@@ -340,15 +340,15 @@ def geometric_progression(number_values=6,
     return problem, solution
 
 
-def harmonic_mean(maxValue=100, maxCount=4):
+def harmonic_mean(max_value=100, max_count=4):
     """Harmonic Mean of N Numbers
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Harmonic mean of $4$ numbers $52, 56, 25, 57 = $ | $602.33$ |
     """
-    count = random.randint(2, maxCount)
-    nums = [random.randint(1, maxValue) for _ in range(count)]
+    count = random.randint(2, max_count)
+    nums = [random.randint(1, max_value) for _ in range(count)]
     sum = 0
     for num in nums:
         sum += (1 / num)
@@ -359,15 +359,15 @@ def harmonic_mean(maxValue=100, maxCount=4):
     return problem, solution
 
 
-def hcf(maxVal=20):
+def hcf(max_val=20):
     """HCF (Highest Common Factor)
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | HCF of $18$ and $4 = $ | $2$ |
     """
-    a = random.randint(1, maxVal)
-    b = random.randint(1, maxVal)
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
     x, y = a, b
     while (y):
         x, y = y, x % y
@@ -377,14 +377,14 @@ def hcf(maxVal=20):
     return problem, solution
 
 
-def is_leap_year(minNumber=1900, maxNumber=2099):
+def is_leap_year(minNumber=1900, max_number=2099):
     """Is Leap Year or Not
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Is $2000$ a leap year? | $2000$ is a leap year |
     """
-    year = random.randint(minNumber, maxNumber)
+    year = random.randint(minNumber, max_number)
     problem = f"Is {year} a leap year?"
     if (year % 4) == 0:
         if (year % 100) == 0:
@@ -401,15 +401,15 @@ def is_leap_year(minNumber=1900, maxNumber=2099):
     return problem, solution
 
 
-def lcm(maxVal=20):
+def lcm(max_val=20):
     """LCM (Least Common Multiple)
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | LCM of $3$ and $18 = $ | $18$ |
     """
-    a = random.randint(1, maxVal)
-    b = random.randint(1, maxVal)
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
     c = a * b
     x, y = a, b
 
@@ -422,14 +422,14 @@ def lcm(maxVal=20):
     return problem, solution
 
 
-def minutes_to_hours(maxMinutes=999):
+def minutes_to_hours(max_minutes=999):
     """Convert minutes to hours and minutes
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $836$ minutes to hours & minutes | $13$ hours and $56$ minutes |
     """
-    minutes = random.randint(1, maxMinutes)
+    minutes = random.randint(1, max_minutes)
     ansHours = minutes // 60
     ansMinutes = minutes % 60
 
@@ -438,14 +438,14 @@ def minutes_to_hours(maxMinutes=999):
     return problem, solution
 
 
-def prime_factors(minVal=1, maxVal=200):
+def prime_factors(min_val=1, max_val=200):
     """Prime Factors
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find prime factors of $30$ | $2, 3, 5$ |
     """
-    a = random.randint(minVal, maxVal)
+    a = random.randint(min_val, max_val)
     n = a
     i = 2
     factors = []
@@ -465,15 +465,15 @@ def prime_factors(minVal=1, maxVal=200):
     return problem, solution
 
 
-def product_of_scientific_notations(minExpVal=-100, maxExpVal=100):
+def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
     r"""Product of scientific notations
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Product of scientific notations $5.11 \times 10^{67}$ and $3.64 \times 10^{-59} = $ | $1.86 \times 10^{9}$ |
     """
-    a = [round(random.uniform(1, 10), 2), random.randint(minExpVal, maxExpVal)]
-    b = [round(random.uniform(1, 10), 2), random.randint(minExpVal, maxExpVal)]
+    a = [round(random.uniform(1, 10), 2), random.randint(min_exp_val, max_exp_val)]
+    b = [round(random.uniform(1, 10), 2), random.randint(min_exp_val, max_exp_val)]
     c = [a[0] * b[0], a[1] + b[1]]
 
     if c[0] >= 10:
@@ -485,15 +485,15 @@ def product_of_scientific_notations(minExpVal=-100, maxExpVal=100):
     return problem, solution
 
 
-def profit_loss_percent(maxCP=1000, maxSP=1000):
+def profit_loss_percent(max_cp=1000, max_sp=1000):
     """Profit or Loss Percent
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Loss percent when $CP = 751$ and $SP = 290$ is: | $61.38$ |
     """
-    cP = random.randint(1, maxCP)
-    sP = random.randint(1, maxSP)
+    cP = random.randint(1, max_cp)
+    sP = random.randint(1, max_sp)
     diff = abs(sP - cP)
     if (sP - cP >= 0):
         profitOrLoss = "Profit"
@@ -505,16 +505,16 @@ def profit_loss_percent(maxCP=1000, maxSP=1000):
     return problem, f'${percent}$'
 
 
-def quotient_of_power_same_base(maxBase=50, maxPower=10):
+def quotient_of_power_same_base(max_base=50, max_power=10):
     """Quotient of Powers with Same Base
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The Quotient of $5^{6}$ and $5^{8} = $5^{6-8} = 5^{-2}$ | $0.04$ |
     """
-    base = random.randint(1, maxBase)
-    power1 = random.randint(1, maxPower)
-    power2 = random.randint(1, maxPower)
+    base = random.randint(1, max_base)
+    power1 = random.randint(1, max_power)
+    power2 = random.randint(1, max_power)
     step = power1 - power2
     solution = base ** step
 
@@ -523,16 +523,16 @@ def quotient_of_power_same_base(maxBase=50, maxPower=10):
     return problem, f'${solution}$'
 
 
-def quotient_of_power_same_power(maxBase=50, maxPower=10):
+def quotient_of_power_same_power(max_base=50, max_power=10):
     """Quotient of Powers with Same Power
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The quotient of $19^{8}$ and $10^{8} = (19/10)^8 = 1.9^{8}$ | $169.84$ |
     """
-    base1 = random.randint(1, maxBase)
-    base2 = random.randint(1, maxBase)
-    power = random.randint(1, maxPower)
+    base1 = random.randint(1, max_base)
+    base2 = random.randint(1, max_base)
+    power = random.randint(1, max_power)
     step = base1 / base2
     solution = round(step ** power, 2)
 
@@ -541,15 +541,15 @@ def quotient_of_power_same_power(maxBase=50, maxPower=10):
     return problem, f'${solution}$'
 
 
-def set_operation(minval=3, maxval=7, n_a=4, n_b=5):
+def set_operation(min_size=3, max_size=7):
     """Union, Intersection, Difference of Two Sets
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given the two sets $a={1, 2, 4, 5}$, $b={8, 1, 2}. Find the Union, intersection, a-b, b-a, and symmetric difference | Union is ${1, 2, 4, 5, 8}$. Intersection is ${1, 2}$, a-b is ${4, 5}$, b-a is ${8}$. Symmetric difference is ${4, 5, 8}$. |
     """
-    number_variables_a = random.randint(minval, maxval)
-    number_variables_b = random.randint(minval, maxval)
+    number_variables_a = random.randint(min_size, max_size)
+    number_variables_b = random.randint(min_size, max_size)
     a = []
     b = []
     for _ in range(number_variables_a):
@@ -586,15 +586,15 @@ def signum_function(min=-999, max=999):
     return problem, solution
 
 
-def surds_comparison(maxValue=100, maxRoot=10):
+def surds_comparison(max_value=100, max_root=10):
     r"""Comparing Surds
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Fill in the blanks $42^{\frac{1}{2}}$ _ $45^{\frac{1}{5}}$ | $>$ |
     """
-    radicand1, radicand2 = tuple(random.sample(range(1, maxValue), 2))
-    degree1, degree2 = tuple(random.sample(range(1, maxRoot), 2))
+    radicand1, radicand2 = tuple(random.sample(range(1, max_value), 2))
+    degree1, degree2 = tuple(random.sample(range(1, max_root), 2))
     first = math.pow(radicand1, 1 / degree1)
     second = math.pow(radicand2, 1 / degree2)
 

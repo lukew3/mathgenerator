@@ -2,14 +2,14 @@ import random
 import math
 
 
-def combinations(maxlength=20):
+def combinations(max_lengthgth=20):
     """Combinations of Objects
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the number of combinations from $19$ objects picked $6$ at a time. | $27132$ |
     """
-    a = random.randint(10, maxlength)
+    a = random.randint(10, max_lengthgth)
     b = random.randint(0, 9)
 
     solution = int(math.factorial(a) / (math.factorial(b) * math.factorial(a - b)))
@@ -86,7 +86,7 @@ def confidence_interval():
     return problem, solution
 
 
-def data_summary(number_values=15, minval=5, maxval=50):
+def data_summary(number_values=15, min_val=5, max_val=50):
     """Mean, Standard Deviation and Variance
     
     | Ex. Problem | Ex. Solution |
@@ -96,7 +96,7 @@ def data_summary(number_values=15, minval=5, maxval=50):
     random_list = []
 
     for i in range(number_values):
-        n = random.randint(minval, maxval)
+        n = random.randint(min_val, max_val)
         random_list.append(n)
 
     a = sum(random_list)
@@ -114,14 +114,14 @@ def data_summary(number_values=15, minval=5, maxval=50):
     return problem, solution
 
 
-def dice_sum_probability(maxDice=3):
+def dice_sum_probability(max_dice=3):
     """Probability of a certain sum appearing on faces of dice
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | If $2$ dice are rolled at the same time, the probability of getting a sum of $5 =$ | $\frac{4}{36}$ |
     """
-    a = random.randint(1, maxDice)
+    a = random.randint(1, max_dice)
     b = random.randint(a, 6 * a)
 
     count = 0
@@ -144,14 +144,14 @@ def dice_sum_probability(maxDice=3):
     return problem, solution
 
 
-def mean_median(maxlen=10):
+def mean_median(max_length=10):
     """Mean and Median
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given the series of numbers $[4, 19, 21, 22, 43, 44, 60, 81, 87, 92]$. Find the arithmatic mean and median of the series | Arithmetic mean of the series is $47.3$ and arithmetic median of this series is $43.5$ |
     """
-    randomlist = random.sample(range(1, 99), maxlen)
+    randomlist = random.sample(range(1, 99), max_length)
     total = 0
     for n in randomlist:
         total = total + n
@@ -164,14 +164,14 @@ def mean_median(maxlen=10):
     return problem, solution
 
 
-def permutation(maxlength=20):
+def permutation(max_lengthgth=20):
     """Permutations
     
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Number of Permutations from $18$ objects picked $5$ at a time is: | $1028160$ |
     """
-    a = random.randint(10, maxlength)
+    a = random.randint(10, max_lengthgth)
     b = random.randint(0, 9)
     solution = int(math.factorial(a) / (math.factorial(a - b)))
 
