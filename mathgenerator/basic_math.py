@@ -163,7 +163,7 @@ def fraction_multiplication(max_val=10):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35} |
+    | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35}$ |
     """
     a = random.randint(1, max_val)
     b = random.randint(1, max_val)
