@@ -98,14 +98,14 @@
 </span><span id="L-2"><a href="#L-2"><span class="linenos">  2</span></a><span class="kn">import</span> <span class="nn">math</span>
 </span><span id="L-3"><a href="#L-3"><span class="linenos">  3</span></a>
 </span><span id="L-4"><a href="#L-4"><span class="linenos">  4</span></a>
-</span><span id="L-5"><a href="#L-5"><span class="linenos">  5</span></a><span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos">  5</span></a><span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>    <span class="sd">&quot;&quot;&quot;Combinations of Objects</span>
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a><span class="sd">    </span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a><span class="sd">    | Find the number of combinations from $19$ objects picked $6$ at a time. | $27132$ |</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">maxlength</span><span class="p">)</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_lengthgth</span><span class="p">)</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos"> 13</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos"> 14</span></a>
 </span><span id="L-15"><a href="#L-15"><span class="linenos"> 15</span></a>    <span class="n">solution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)))</span>
@@ -182,7 +182,7 @@
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a>
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>
-</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a><span class="k">def</span> <span class="nf">data_summary</span><span class="p">(</span><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">minval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+</span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a><span class="k">def</span> <span class="nf">data_summary</span><span class="p">(</span><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
 </span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>    <span class="sd">&quot;&quot;&quot;Mean, Standard Deviation and Variance</span>
 </span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a><span class="sd">    </span>
 </span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
@@ -192,7 +192,7 @@
 </span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a>    <span class="n">random_list</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a>
 </span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_values</span><span class="p">):</span>
-</span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">)</span>
+</span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
 </span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>        <span class="n">random_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>
 </span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">random_list</span><span class="p">)</span>
@@ -210,14 +210,14 @@
 </span><span id="L-114"><a href="#L-114"><span class="linenos">114</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a>
 </span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a>
-</span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a><span class="k">def</span> <span class="nf">dice_sum_probability</span><span class="p">(</span><span class="n">maxDice</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+</span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a><span class="k">def</span> <span class="nf">dice_sum_probability</span><span class="p">(</span><span class="n">max_dice</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
 </span><span id="L-118"><a href="#L-118"><span class="linenos">118</span></a>    <span class="sd">&quot;&quot;&quot;Probability of a certain sum appearing on faces of dice</span>
 </span><span id="L-119"><a href="#L-119"><span class="linenos">119</span></a><span class="sd">    </span>
 </span><span id="L-120"><a href="#L-120"><span class="linenos">120</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-121"><a href="#L-121"><span class="linenos">121</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-122"><a href="#L-122"><span class="linenos">122</span></a><span class="sd">    | If $2$ dice are rolled at the same time, the probability of getting a sum of $5 =$ | $\frac{4}{36}$ |</span>
 </span><span id="L-123"><a href="#L-123"><span class="linenos">123</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxDice</span><span class="p">)</span>
+</span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_dice</span><span class="p">)</span>
 </span><span id="L-125"><a href="#L-125"><span class="linenos">125</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
 </span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a>
 </span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a>    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -240,14 +240,14 @@
 </span><span id="L-144"><a href="#L-144"><span class="linenos">144</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-145"><a href="#L-145"><span class="linenos">145</span></a>
 </span><span id="L-146"><a href="#L-146"><span class="linenos">146</span></a>
-</span><span id="L-147"><a href="#L-147"><span class="linenos">147</span></a><span class="k">def</span> <span class="nf">mean_median</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="L-147"><a href="#L-147"><span class="linenos">147</span></a><span class="k">def</span> <span class="nf">mean_median</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-148"><a href="#L-148"><span class="linenos">148</span></a>    <span class="sd">&quot;&quot;&quot;Mean and Median</span>
 </span><span id="L-149"><a href="#L-149"><span class="linenos">149</span></a><span class="sd">    </span>
 </span><span id="L-150"><a href="#L-150"><span class="linenos">150</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-151"><a href="#L-151"><span class="linenos">151</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-152"><a href="#L-152"><span class="linenos">152</span></a><span class="sd">    | Given the series of numbers $[4, 19, 21, 22, 43, 44, 60, 81, 87, 92]$. Find the arithmatic mean and median of the series | Arithmetic mean of the series is $47.3$ and arithmetic median of this series is $43.5$ |</span>
 </span><span id="L-153"><a href="#L-153"><span class="linenos">153</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-154"><a href="#L-154"><span class="linenos">154</span></a>    <span class="n">randomlist</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">maxlen</span><span class="p">)</span>
+</span><span id="L-154"><a href="#L-154"><span class="linenos">154</span></a>    <span class="n">randomlist</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">max_length</span><span class="p">)</span>
 </span><span id="L-155"><a href="#L-155"><span class="linenos">155</span></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span id="L-156"><a href="#L-156"><span class="linenos">156</span></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">randomlist</span><span class="p">:</span>
 </span><span id="L-157"><a href="#L-157"><span class="linenos">157</span></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">n</span>
@@ -260,14 +260,14 @@
 </span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-165"><a href="#L-165"><span class="linenos">165</span></a>
 </span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a>
-</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a><span class="k">def</span> <span class="nf">permutation</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a><span class="k">def</span> <span class="nf">permutation</span><span class="p">(</span><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a>    <span class="sd">&quot;&quot;&quot;Permutations</span>
 </span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a><span class="sd">    </span>
 </span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a><span class="sd">    | Number of Permutations from $18$ objects picked $5$ at a time is: | $1028160$ |</span>
 </span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">maxlength</span><span class="p">)</span>
+</span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_lengthgth</span><span class="p">)</span>
 </span><span id="L-175"><a href="#L-175"><span class="linenos">175</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </span><span id="L-176"><a href="#L-176"><span class="linenos">176</span></a>    <span class="n">solution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)))</span>
 </span><span id="L-177"><a href="#L-177"><span class="linenos">177</span></a>
@@ -282,20 +282,20 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">combinations</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span></span><span class="return-annotation">):</span></span>
+        <span class="name">combinations</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="combinations-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#combinations"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="combinations-6"><a href="#combinations-6"><span class="linenos"> 6</span></a><span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="combinations-6"><a href="#combinations-6"><span class="linenos"> 6</span></a><span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="combinations-7"><a href="#combinations-7"><span class="linenos"> 7</span></a>    <span class="sd">&quot;&quot;&quot;Combinations of Objects</span>
 </span><span id="combinations-8"><a href="#combinations-8"><span class="linenos"> 8</span></a><span class="sd">    </span>
 </span><span id="combinations-9"><a href="#combinations-9"><span class="linenos"> 9</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="combinations-10"><a href="#combinations-10"><span class="linenos">10</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="combinations-11"><a href="#combinations-11"><span class="linenos">11</span></a><span class="sd">    | Find the number of combinations from $19$ objects picked $6$ at a time. | $27132$ |</span>
 </span><span id="combinations-12"><a href="#combinations-12"><span class="linenos">12</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="combinations-13"><a href="#combinations-13"><span class="linenos">13</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">maxlength</span><span class="p">)</span>
+</span><span id="combinations-13"><a href="#combinations-13"><span class="linenos">13</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_lengthgth</span><span class="p">)</span>
 </span><span id="combinations-14"><a href="#combinations-14"><span class="linenos">14</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </span><span id="combinations-15"><a href="#combinations-15"><span class="linenos">15</span></a>
 </span><span id="combinations-16"><a href="#combinations-16"><span class="linenos">16</span></a>    <span class="n">solution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)))</span>
@@ -462,13 +462,13 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">data_summary</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span>, </span><span class="param"><span class="n">minval</span><span class="o">=</span><span class="mi">5</span>, </span><span class="param"><span class="n">maxval</span><span class="o">=</span><span class="mi">50</span></span><span class="return-annotation">):</span></span>
+        <span class="name">data_summary</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span>, </span><span class="param"><span class="n">min_val</span><span class="o">=</span><span class="mi">5</span>, </span><span class="param"><span class="n">max_val</span><span class="o">=</span><span class="mi">50</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="data_summary-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#data_summary"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="data_summary-90"><a href="#data_summary-90"><span class="linenos"> 90</span></a><span class="k">def</span> <span class="nf">data_summary</span><span class="p">(</span><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">minval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="data_summary-90"><a href="#data_summary-90"><span class="linenos"> 90</span></a><span class="k">def</span> <span class="nf">data_summary</span><span class="p">(</span><span class="n">number_values</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
 </span><span id="data_summary-91"><a href="#data_summary-91"><span class="linenos"> 91</span></a>    <span class="sd">&quot;&quot;&quot;Mean, Standard Deviation and Variance</span>
 </span><span id="data_summary-92"><a href="#data_summary-92"><span class="linenos"> 92</span></a><span class="sd">    </span>
 </span><span id="data_summary-93"><a href="#data_summary-93"><span class="linenos"> 93</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
@@ -478,7 +478,7 @@
 </span><span id="data_summary-97"><a href="#data_summary-97"><span class="linenos"> 97</span></a>    <span class="n">random_list</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="data_summary-98"><a href="#data_summary-98"><span class="linenos"> 98</span></a>
 </span><span id="data_summary-99"><a href="#data_summary-99"><span class="linenos"> 99</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_values</span><span class="p">):</span>
-</span><span id="data_summary-100"><a href="#data_summary-100"><span class="linenos">100</span></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">)</span>
+</span><span id="data_summary-100"><a href="#data_summary-100"><span class="linenos">100</span></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
 </span><span id="data_summary-101"><a href="#data_summary-101"><span class="linenos">101</span></a>        <span class="n">random_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </span><span id="data_summary-102"><a href="#data_summary-102"><span class="linenos">102</span></a>
 </span><span id="data_summary-103"><a href="#data_summary-103"><span class="linenos">103</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">random_list</span><span class="p">)</span>
@@ -522,20 +522,20 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">dice_sum_probability</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">maxDice</span><span class="o">=</span><span class="mi">3</span></span><span class="return-annotation">):</span></span>
+        <span class="name">dice_sum_probability</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">max_dice</span><span class="o">=</span><span class="mi">3</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="dice_sum_probability-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#dice_sum_probability"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="dice_sum_probability-118"><a href="#dice_sum_probability-118"><span class="linenos">118</span></a><span class="k">def</span> <span class="nf">dice_sum_probability</span><span class="p">(</span><span class="n">maxDice</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="dice_sum_probability-118"><a href="#dice_sum_probability-118"><span class="linenos">118</span></a><span class="k">def</span> <span class="nf">dice_sum_probability</span><span class="p">(</span><span class="n">max_dice</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
 </span><span id="dice_sum_probability-119"><a href="#dice_sum_probability-119"><span class="linenos">119</span></a>    <span class="sd">&quot;&quot;&quot;Probability of a certain sum appearing on faces of dice</span>
 </span><span id="dice_sum_probability-120"><a href="#dice_sum_probability-120"><span class="linenos">120</span></a><span class="sd">    </span>
 </span><span id="dice_sum_probability-121"><a href="#dice_sum_probability-121"><span class="linenos">121</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="dice_sum_probability-122"><a href="#dice_sum_probability-122"><span class="linenos">122</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="dice_sum_probability-123"><a href="#dice_sum_probability-123"><span class="linenos">123</span></a><span class="sd">    | If $2$ dice are rolled at the same time, the probability of getting a sum of $5 =$ | $\frac{4}{36}$ |</span>
 </span><span id="dice_sum_probability-124"><a href="#dice_sum_probability-124"><span class="linenos">124</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="dice_sum_probability-125"><a href="#dice_sum_probability-125"><span class="linenos">125</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxDice</span><span class="p">)</span>
+</span><span id="dice_sum_probability-125"><a href="#dice_sum_probability-125"><span class="linenos">125</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_dice</span><span class="p">)</span>
 </span><span id="dice_sum_probability-126"><a href="#dice_sum_probability-126"><span class="linenos">126</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
 </span><span id="dice_sum_probability-127"><a href="#dice_sum_probability-127"><span class="linenos">127</span></a>
 </span><span id="dice_sum_probability-128"><a href="#dice_sum_probability-128"><span class="linenos">128</span></a>    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -584,20 +584,20 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">mean_median</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">maxlen</span><span class="o">=</span><span class="mi">10</span></span><span class="return-annotation">):</span></span>
+        <span class="name">mean_median</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="mean_median-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#mean_median"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="mean_median-148"><a href="#mean_median-148"><span class="linenos">148</span></a><span class="k">def</span> <span class="nf">mean_median</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="mean_median-148"><a href="#mean_median-148"><span class="linenos">148</span></a><span class="k">def</span> <span class="nf">mean_median</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="mean_median-149"><a href="#mean_median-149"><span class="linenos">149</span></a>    <span class="sd">&quot;&quot;&quot;Mean and Median</span>
 </span><span id="mean_median-150"><a href="#mean_median-150"><span class="linenos">150</span></a><span class="sd">    </span>
 </span><span id="mean_median-151"><a href="#mean_median-151"><span class="linenos">151</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="mean_median-152"><a href="#mean_median-152"><span class="linenos">152</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="mean_median-153"><a href="#mean_median-153"><span class="linenos">153</span></a><span class="sd">    | Given the series of numbers $[4, 19, 21, 22, 43, 44, 60, 81, 87, 92]$. Find the arithmatic mean and median of the series | Arithmetic mean of the series is $47.3$ and arithmetic median of this series is $43.5$ |</span>
 </span><span id="mean_median-154"><a href="#mean_median-154"><span class="linenos">154</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="mean_median-155"><a href="#mean_median-155"><span class="linenos">155</span></a>    <span class="n">randomlist</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">maxlen</span><span class="p">)</span>
+</span><span id="mean_median-155"><a href="#mean_median-155"><span class="linenos">155</span></a>    <span class="n">randomlist</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="n">max_length</span><span class="p">)</span>
 </span><span id="mean_median-156"><a href="#mean_median-156"><span class="linenos">156</span></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span id="mean_median-157"><a href="#mean_median-157"><span class="linenos">157</span></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">randomlist</span><span class="p">:</span>
 </span><span id="mean_median-158"><a href="#mean_median-158"><span class="linenos">158</span></a>        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">n</span>
@@ -636,20 +636,20 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">permutation</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span></span><span class="return-annotation">):</span></span>
+        <span class="name">permutation</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="permutation-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#permutation"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="permutation-168"><a href="#permutation-168"><span class="linenos">168</span></a><span class="k">def</span> <span class="nf">permutation</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="permutation-168"><a href="#permutation-168"><span class="linenos">168</span></a><span class="k">def</span> <span class="nf">permutation</span><span class="p">(</span><span class="n">max_lengthgth</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="permutation-169"><a href="#permutation-169"><span class="linenos">169</span></a>    <span class="sd">&quot;&quot;&quot;Permutations</span>
 </span><span id="permutation-170"><a href="#permutation-170"><span class="linenos">170</span></a><span class="sd">    </span>
 </span><span id="permutation-171"><a href="#permutation-171"><span class="linenos">171</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="permutation-172"><a href="#permutation-172"><span class="linenos">172</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="permutation-173"><a href="#permutation-173"><span class="linenos">173</span></a><span class="sd">    | Number of Permutations from $18$ objects picked $5$ at a time is: | $1028160$ |</span>
 </span><span id="permutation-174"><a href="#permutation-174"><span class="linenos">174</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="permutation-175"><a href="#permutation-175"><span class="linenos">175</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">maxlength</span><span class="p">)</span>
+</span><span id="permutation-175"><a href="#permutation-175"><span class="linenos">175</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_lengthgth</span><span class="p">)</span>
 </span><span id="permutation-176"><a href="#permutation-176"><span class="linenos">176</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </span><span id="permutation-177"><a href="#permutation-177"><span class="linenos">177</span></a>    <span class="n">solution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)))</span>
 </span><span id="permutation-178"><a href="#permutation-178"><span class="linenos">178</span></a>
