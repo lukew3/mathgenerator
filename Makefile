@@ -10,3 +10,6 @@ format:
 
 lint:
 	$(PYTHON) -m flake8 --ignore=$(IGNORE_ERRORS) $(PKG)
+
+docs:
+	pdoc mathgenerator --math -o docs
