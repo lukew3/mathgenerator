@@ -4,7 +4,7 @@ import math
 
 def combinations(max_lengthgth=20):
     """Combinations of Objects
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the number of combinations from $19$ objects picked $6$ at a time. | $27132$ |
@@ -12,7 +12,8 @@ def combinations(max_lengthgth=20):
     a = random.randint(10, max_lengthgth)
     b = random.randint(0, 9)
 
-    solution = int(math.factorial(a) / (math.factorial(b) * math.factorial(a - b)))
+    solution = int(math.factorial(
+        a) / (math.factorial(b) * math.factorial(a - b)))
 
     problem = f"Find the number of combinations from ${a}$ objects picked ${b}$ at a time."
     return problem, f'${solution}$'
@@ -20,7 +21,7 @@ def combinations(max_lengthgth=20):
 
 def conditional_probability():
     """Conditional Probability
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Someone tested positive for a nasty disease which only $1.18$% of the population have. Test sensitivity (true positive) is equal to $SN=98.73$% whereas test specificity (true negative) $SP=99.99$%. What is the probability that this guy really has that disease? | $99.16$% |
@@ -50,7 +51,7 @@ def conditional_probability():
 
 def confidence_interval():
     """Confidence interval For sample S
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The confidence interval for sample $[234, 223, 210, 203, 258, 299, 281, 208, 278, 252, 295, 245, 280, 235, 219, 297, 214, 267, 212, 256, 232, 221]$ with $99$% confidence is | $(263.31, 229.33)$ |
@@ -88,7 +89,7 @@ def confidence_interval():
 
 def data_summary(number_values=15, min_val=5, max_val=50):
     """Mean, Standard Deviation and Variance
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the mean,standard deviation and variance for the data $9, 29, 46, 27, 46, 15, 10, 44, 19, 33, 38, 7, 34, 28, 8$ | The Mean is $26.2$, Standard Deviation is $186.29$, Variance is $13.65$ |
@@ -116,7 +117,7 @@ def data_summary(number_values=15, min_val=5, max_val=50):
 
 def dice_sum_probability(max_dice=3):
     """Probability of a certain sum appearing on faces of dice
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | If $2$ dice are rolled at the same time, the probability of getting a sum of $5 =$ | $\frac{4}{36}$ |
@@ -146,7 +147,7 @@ def dice_sum_probability(max_dice=3):
 
 def mean_median(max_length=10):
     """Mean and Median
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given the series of numbers $[4, 19, 21, 22, 43, 44, 60, 81, 87, 92]$. Find the arithmatic mean and median of the series | Arithmetic mean of the series is $47.3$ and arithmetic median of this series is $43.5$ |
@@ -166,7 +167,7 @@ def mean_median(max_length=10):
 
 def permutation(max_lengthgth=20):
     """Permutations
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Number of Permutations from $18$ objects picked $5$ at a time is: | $1028160$ |

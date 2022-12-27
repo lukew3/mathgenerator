@@ -5,7 +5,7 @@ import sympy
 
 def definite_integral(max_coef=100):
     r"""Definite Integral of Quadratic Equation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The definite integral within limits $0$ to $1$ of the equation $28x^2 + 32x + 66 = $ | $91.33$ |
@@ -28,7 +28,7 @@ def power_rule_differentiation(max_coef=10,
                                max_exp=10,
                                max_terms=5):
     r"""Power Rule Differentiation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Differentiate $1x^{5} + 4x^{7} + 4x^{4}$ | $5x^{4} + 28x^{6} + 16x^{3}$ |
@@ -54,7 +54,7 @@ def power_rule_integration(max_coef=10,
                            max_exp=10,
                            max_terms=5):
     r"""Power Rule Integration
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Integrate $9x^{6} + 2x^{6} + 4x^{3}$ | $\frac{9}{6}x^{7} + \frac{2}{6}x^{7} + \frac{4}{3}x^{4} + C$ |
@@ -80,7 +80,7 @@ def power_rule_integration(max_coef=10,
 
 def stationary_points(max_exp=3, max_coef=10):
     r"""Stationary Points
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $f(x)=6*x^3 + 6*x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
@@ -100,7 +100,7 @@ def stationary_points(max_exp=3, max_coef=10):
 
 def trig_differentiation():
     r"""Trigonometric Differentiation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\frac{d}{dx}(\csc)=$ | $-\csc \cdot \cot$ |

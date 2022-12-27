@@ -4,7 +4,7 @@ import math
 
 def bcd_to_decimal(max_number=10000):
     r"""Binary Coded Decimal to Integer
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Integer of Binary Coded Decimal $4 =$ | $17801$ |
@@ -29,7 +29,7 @@ def bcd_to_decimal(max_number=10000):
 
 def binary_2s_complement(maxDigits=10):
     r"""Binary 2's Complement
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | 2's complement of $1011 = $ | $101$ |
@@ -62,12 +62,13 @@ def binary_2s_complement(maxDigits=10):
 
 def binary_complement_1s(maxDigits=10):
     r"""Binary Complement 1s
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $1111001 = $ | $0000110$ |
     """
-    question = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, maxDigits))])
+    question = ''.join([str(random.randint(0, 1))
+                       for _ in range(random.randint(1, maxDigits))])
     answer = ''.join(["0" if digit == "1" else "1" for digit in question])
 
     problem = f'${question} = $'
@@ -76,31 +77,33 @@ def binary_complement_1s(maxDigits=10):
 
 def binary_to_decimal(max_dig=10):
     r"""Binary to Decimal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $000110$ | $6$ |
     """
-    problem = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
+    problem = ''.join([str(random.randint(0, 1))
+                      for _ in range(random.randint(1, max_dig))])
     solution = f'${int(problem, 2)}$'
     return f'${problem}$', solution
 
 
 def binary_to_hex(max_dig=10):
     r"""Binary to Hexidecimal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $010101$ | $0x15$ |
     """
-    problem = ''.join([str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
+    problem = ''.join([str(random.randint(0, 1))
+                      for _ in range(random.randint(1, max_dig))])
     solution = f'${hex(int(problem, 2))}$'
     return f'${problem}$', solution
 
 
 def decimal_to_bcd(max_number=10000):
     r"""Decimal to Binary Coded Decimal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | BCD of Decimal Number $6575 = $ | $191015$ |
@@ -120,7 +123,7 @@ def decimal_to_bcd(max_number=10000):
 
 def decimal_to_binary(max_dec=99):
     r"""Decimal to Binary
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Binary of $4 = $ | $100$ |
@@ -135,7 +138,7 @@ def decimal_to_binary(max_dec=99):
 
 def decimal_to_hexadeci(max_dec=1000):
     r"""Decimal to Hexadecimal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Hexadecimal of $410 = $ | $0x19a$ |
@@ -150,7 +153,7 @@ def decimal_to_hexadeci(max_dec=1000):
 
 def decimal_to_octal(max_decimal=4096):
     r"""Decimal to Octal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The decimal number $3698$ in octal is: | $0o7162$ |
@@ -165,7 +168,7 @@ def decimal_to_octal(max_decimal=4096):
 
 def fibonacci_series(min_no=1):
     r"""Fibonacci Series
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The Fibonacci Series of the first ${n}$ numbers is ? | $0, 1, 1, 2, 3, 5, 8, 13, 21$ |
@@ -191,7 +194,7 @@ def fibonacci_series(min_no=1):
 
 def modulo_division(max_res=99, max_modulo=99):
     r"""Modulo Division
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $43$ % $33 = $ | $10$ |
@@ -207,7 +210,7 @@ def modulo_division(max_res=99, max_modulo=99):
 
 def nth_fibonacci_number(max_n=100):
     r"""nth Fibonacci number
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the 85th Fibonacci number? | $259695496911123328$ |
@@ -216,6 +219,7 @@ def nth_fibonacci_number(max_n=100):
     n = random.randint(1, max_n)
 
     problem = f"What is the {n}th Fibonacci number?"
-    solution = int((math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))
+    solution = int(
+        (math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))
 
     return problem, f'${solution}$'

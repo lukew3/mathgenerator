@@ -7,7 +7,7 @@ import sympy
 
 def basic_algebra(max_variable=10):
     r"""Basic Algebra
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $1x + 5 = 5$ | $0$ |
@@ -37,7 +37,7 @@ def basic_algebra(max_variable=10):
 
 def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
     r"""Combine Like Terms
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $6x^{9} + 3x^{2} + 5x^{19} + 3x^{17}$ | $3x^{2} + 6x^{9} + 3x^{17} + 5x^{19}$ |
@@ -45,7 +45,8 @@ def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
     numTerms = random.randint(1, max_terms)
 
     coefs = [random.randint(1, max_coef) for _ in range(numTerms)]
-    exponents = [random.randint(1, max(max_exp - 1, 2)) for _ in range(numTerms)]
+    exponents = [random.randint(1, max(max_exp - 1, 2))
+                 for _ in range(numTerms)]
 
     problem = " + ".join([f"{coefs[i]}x^{{{exponents[i]}}}" for i in range(numTerms)])
     d = {}
@@ -61,7 +62,7 @@ def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
 
 def complex_quadratic(prob_type=0, max_range=10):
     r"""Complex Quadratic Equation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the roots of given Quadratic Equation $x^2 + 8x + 8 = 0$ | $((-1.172, -6.828)) = (\frac{-8 + \sqrt{32}}{2*1}, (\frac{-8 - \sqrt{32}}{2*1})$ |
@@ -125,7 +126,7 @@ def complex_quadratic(prob_type=0, max_range=10):
             sqrt_d = int(sqrt_d)
             g_sol = rf'(\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
         else:
-            g_sol = f'(\frac{{{-b} + \sqrt{{{d}}}}}{{2*{a}}}, (\frac{{{-b} - \sqrt{{{d}}}}}{{2*{a}}})'
+            g_sol = rf'(\frac{{{-b} + \sqrt{{{d}}}}}{{2*{a}}}, (\frac{{{-b} - \sqrt{{{d}}}}}{{2*{a}}})'
 
         solution = f'$({s_root1, s_root2}) = {g_sol}$'
 
@@ -136,7 +137,7 @@ def compound_interest(max_principle=10000,
                       max_rate=10,
                       max_time=10):
     r"""Compound Interest
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Compound interest for a principle amount of $2679$ dollars, $9$% rate of interest and for a time period of $3$ years is $=$ | $3469.38$ |
@@ -152,7 +153,7 @@ def compound_interest(max_principle=10000,
 
 def distance_two_points(max_val_xy=20, min_val_xy=-20):
     r"""Distance between 2 points
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the distance between $(-19, -6)$ and $(15, -16)$ | $\sqrt{1256}$ |
@@ -174,7 +175,7 @@ def expanding(range_x1=10,
               range_a=10,
               range_b=10):
     r"""Expanding Factored Binomial
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     |$(x-6)(-3x-3)$ | $x^2+18x+18$ |
@@ -225,7 +226,7 @@ def expanding(range_x1=10,
 def factoring(range_x1=10, range_x2=10):
     r"""Factoring Quadratic
     Given a quadratic equation in the form x^2 + bx + c, factor it into it's roots (x - x1)(x -x2)
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $x^2+2x-24$ | $(x-4)(x+6)$ |
@@ -259,7 +260,7 @@ def factoring(range_x1=10, range_x2=10):
 
 def int_matrix_22_determinant(max_matrix_val=100):
     r"""Determinant to 2x2 Matrix
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\det \begin{bmatrix} 88 & 40 \\\ 9 & 91 \end{bmatrix}= $ | $7648$ |
@@ -284,7 +285,7 @@ def intersection_of_two_lines(min_m=-10,
                               min_denominator=1,
                               max_denominator=6):
     r"""Intersection of two lines
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the point of intersection of the two lines: $y = \frac{-2}{6}x + 3$ and $y = \frac{3}{6}x - 8$ | $(\frac{66}{5}, \frac{-7}{5})$ |
@@ -371,7 +372,7 @@ def invert_matrix(square_matrix_dimension=3,
                   max_matrix_element=99,
                   only_integer_elements_in_inverted_matrixe=True):
     r"""Invert Matrix
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Inverse of Matrix $\begin{bmatrix} 4 & 1 & 4 \\\ 5 & 1 & 5 \\\ 12 & 3 & 13 \end{bmatrix}$ is: | $\begin{bmatrix} 2 & 1 & -1 \\\ 5 & -4 & 0 \\\ -3 & 0 & 1 \end{bmatrix}$ |
@@ -488,7 +489,7 @@ def linear_equations(n=2, var_range=20, coeff_range=20):
 
 def log(max_base=3, max_val=8):
     r"""Logarithm
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $log_{3}(243)=$ | $5$ |
@@ -504,18 +505,20 @@ def log(max_base=3, max_val=8):
 
 def matrix_multiplication(max_val=100, max_dim=10):
     r"""Multiply Two Matrices
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Multiply $\begin{bmatrix} 15 & 72 \\\ 64 & -20 \\\ 18 & 59 \\\ -21 & -55 \\\ 20 & -12 \\\ -75 & -42 \\\ 47 & 89 \\\ -53 & 27 \\\ -56 & 44 \end{bmatrix}$ and $\begin{bmatrix} 49 & -2 & 68 & -28 \\\ 49 & 6 & 83 & 42 \end{bmatrix}$ | $\begin{bmatrix} 4263 & 402 & 6996 & 2604 \\\ 2156 & -248 & 2692 & -2632 \\\ 3773 & 318 & 6121 & 1974 \\\ -3724 & -288 & -5993 & -1722 \\\ 392 & -112 & 364 & -1064 \\\ -5733 & -102 & -8586 & 336 \\\ 6664 & 440 & 10583 & 2422 \\\ -1274 & 268 & -1363 & 2618 \\\ -588 & 376 & -156 & 3416 \end{bmatrix}$ | 
+    | Multiply $\begin{bmatrix} 15 & 72 \\\ 64 & -20 \\\ 18 & 59 \\\ -21 & -55 \\\ 20 & -12 \\\ -75 & -42 \\\ 47 & 89 \\\ -53 & 27 \\\ -56 & 44 \end{bmatrix}$ and $\begin{bmatrix} 49 & -2 & 68 & -28 \\\ 49 & 6 & 83 & 42 \end{bmatrix}$ | $\begin{bmatrix} 4263 & 402 & 6996 & 2604 \\\ 2156 & -248 & 2692 & -2632 \\\ 3773 & 318 & 6121 & 1974 \\\ -3724 & -288 & -5993 & -1722 \\\ 392 & -112 & 364 & -1064 \\\ -5733 & -102 & -8586 & 336 \\\ 6664 & 440 & 10583 & 2422 \\\ -1274 & 268 & -1363 & 2618 \\\ -588 & 376 & -156 & 3416 \end{bmatrix}$ |
     """
     m = random.randint(2, max_dim)
     n = random.randint(2, max_dim)
     k = random.randint(2, max_dim)
 
     # generate matrices a and b
-    a = [[random.randint(-max_val, max_val) for _ in range(n)] for _ in range(m)]
-    b = [[random.randint(-max_val, max_val) for _ in range(k)] for _ in range(n)]
+    a = [[random.randint(-max_val, max_val) for _ in range(n)]
+         for _ in range(m)]
+    b = [[random.randint(-max_val, max_val) for _ in range(k)]
+         for _ in range(n)]
 
     res = []
     for r in range(m):
@@ -533,7 +536,7 @@ def matrix_multiplication(max_val=100, max_dim=10):
 
 def midpoint_of_two_points(max_value=20):
     r"""Midpoint of two points
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The midpoint of $(-8,10)$ and $(18,0) = $ | $(5.0,5.0)$ |
@@ -553,7 +556,7 @@ def midpoint_of_two_points(max_value=20):
 def multiply_complex_numbers(min_real_imaginary_num=-20,
                              max_real_imaginary_num=20):
     r"""Multiplication of 2 complex numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $(14+18j) * (14+15j) = $ | $(-74+462j)$ |
@@ -571,7 +574,7 @@ def multiply_complex_numbers(min_real_imaginary_num=-20,
 
 def multiply_int_to_22_matrix(max_matrix_val=10, max_res=100):
     r"""Multiply Integer to 2x2 Matrix
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $5 * \begin{bmatrix} 1 & 0 \\\ 2 & 9 \end{bmatrix} =$ | $\begin{bmatrix} 5 & 0 \\\ 10 & 45 \end{bmatrix}$ |
@@ -597,7 +600,7 @@ def multiply_int_to_22_matrix(max_matrix_val=10, max_res=100):
 
 def quadratic_equation(max_val=100):
     r"""Quadratic Equation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What are the zeros of the quadratic equation $22x^2+137x+25=0$ | ${-0.19, -6.04}$ |
@@ -618,7 +621,7 @@ def simple_interest(max_principle=10000,
                     max_rate=10,
                     max_time=10):
     r"""Simple Interest
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Simple interest for a principle amount of $7217$ dollars, $3$% rate of interest and for a time period of $10$ years is $=$ | $2165.1$ |
@@ -637,7 +640,7 @@ def system_of_equations(range_x=10,
                         range_y=10,
                         coeff_mult_range=10):
     r"""Solve a System of Equations in R^2
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given $-x + 5y = -28$ and $9x + 2y = 64$, solve for $x$ and $y$. | $x = 8$, $y = -4$ |
@@ -689,7 +692,7 @@ def system_of_equations(range_x=10,
 
 def vector_cross(min_val=-20, max_val=20):
     r"""Cross product of 2 vectors
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $[-1, -4, 10] \times [-11, 1, -16] = $ | $[54, -126, -45]$ |
@@ -708,7 +711,7 @@ def vector_cross(min_val=-20, max_val=20):
 
 def vector_dot(min_val=-20, max_val=20):
     r"""Dot product of 2 vectors
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $[12, -9, -8]\cdot[-9, 8, 1]=$ | $-188$ |

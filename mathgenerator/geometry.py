@@ -5,7 +5,7 @@ from math import cos, sin, pi
 
 def angle_btw_vectors(max_elt_amt=20):
     r"""Angle between 2 vectors
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | angle between the vectors $[363.84, 195.54, 997.08, 39.26, 60.14, 722.7, 888.57, 713.15, 436.22, 712.23, 349.23, 595.91, 191.8, 824.58, 861.56, 122.73, 815.14, 700.68, 506.5]$ and $[760.85, 934.67, 513.37, 796.93, 809.97, 423.54, 162.69, 758.96, 133.42, 478.14, 771.84, 824.88, 483.07, 134.41, 954.41, 893.42, 191.01, 453.97, 648.59]$ is: | $0.81$ radians |
@@ -37,7 +37,7 @@ def angle_btw_vectors(max_elt_amt=20):
 
 def angle_regular_polygon(min_val=3, max_val=20):
     r"""Angle of a Regular Polygon
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the angle of a regular polygon with $8$ sides | $135.0$ |
@@ -53,7 +53,7 @@ def angle_regular_polygon(min_val=3, max_val=20):
 
 def arc_length(max_radius=49, max_angle=359):
     r"""Arc length of Angle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given radius, $44$ and angle, $184$. Find the arc length of the angle. | Arc length of the angle $= 141.30186$ |
@@ -70,7 +70,7 @@ def arc_length(max_radius=49, max_angle=359):
 
 def area_of_circle(max_radius=100):
     r"""Area of Circle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Area of circle with radius $29=$ | $2642.08$ |
@@ -84,7 +84,7 @@ def area_of_circle(max_radius=100):
 
 def area_of_circle_given_center_and_point(max_coordinate=10, max_radius=10):
     r"""Area of Circle given center and a point on circle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Area of circle with center $(7,-6)$ and passing through $(1.0, -6.0)$ is | $113.1$ |
@@ -106,7 +106,7 @@ def area_of_circle_given_center_and_point(max_coordinate=10, max_radius=10):
 
 def area_of_triangle(max_a=20, max_b=20):
     r"""Area of Triangle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Area of triangle with side lengths: $8, 1, 8 = $ | $3.99$ |
@@ -127,7 +127,7 @@ def area_of_triangle(max_a=20, max_b=20):
 def basic_trigonometry(angles=[0, 30, 45, 60, 90],
                        functions=["sin", "cos", "tan"]):
     r"""Trigonometric Values
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\sin(30) = $ | $\frac{1}{2}$ |
@@ -156,7 +156,7 @@ def basic_trigonometry(angles=[0, 30, 45, 60, 90],
 
 def circumference(max_radius=100):
     r"""Circumference of Circle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Circumference of circle with radius $56 = $ | $351.86$ |
@@ -170,7 +170,7 @@ def circumference(max_radius=100):
 
 def complementary_and_supplementary_angle(max_supp=180, max_comp=90):
     r"""Complementary and Supplementary Angle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The complementary angle of $15 =$ | $75$ |
@@ -191,7 +191,7 @@ def complementary_and_supplementary_angle(max_supp=180, max_comp=90):
 
 def curved_surface_area_cylinder(max_radius=49, max_height=99):
     r"""Curved surface area of a cylinder
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the curved surface area of a cylinder of radius, $44$ and height, $92$? | $25434.33$ |
@@ -208,7 +208,7 @@ def curved_surface_area_cylinder(max_radius=49, max_height=99):
 
 def degree_to_rad(max_deg=360):
     r"""Degrees to Radians
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Angle $113$ degrees in radians is: | $1.97$ |
@@ -224,7 +224,7 @@ def degree_to_rad(max_deg=360):
 
 def equation_of_line_from_two_points(max_coordinate=20, min_coordinate=-20):
     r"""Equation of line from two points
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the equation of the line between points $(13,9)$ and $(6,-19)$ in slope-intercept form? | $y = 4x -43$ |
@@ -276,15 +276,17 @@ def equation_of_line_from_two_points(max_coordinate=20, min_coordinate=-20):
         solution = str(coeff_x) + "x = " + str(-constant)
     else:
         if constant > 0:
-            solution = str(coeff_y) + "y = " + str(coeff_x) + "x + " + str(constant)
+            solution = str(coeff_y) + "y = " + str(coeff_x) + \
+                "x + " + str(constant)
         else:
-            solution = str(coeff_y) + "y = " + str(coeff_x) + "x " + str(constant)
+            solution = str(coeff_y) + "y = " + \
+                str(coeff_x) + "x " + str(constant)
     return problem, f'${solution}$'
 
 
 def fourth_angle_of_quadrilateral(max_angle=180):
     r"""Fourth Angle of Quadrilateral
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Fourth angle of quadrilateral with angles $162 , 43, 78 =$ | $77$ |
@@ -303,7 +305,7 @@ def fourth_angle_of_quadrilateral(max_angle=180):
 
 def perimeter_of_polygons(max_sides=12, max_length=120):
     r"""Perimeter of Polygons
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The perimeter of a $4$ sided polygon with lengths of $30, 105, 78, 106$cm is: | $319$ |
@@ -319,7 +321,7 @@ def perimeter_of_polygons(max_sides=12, max_length=120):
 
 def pythagorean_theorem(max_length=20):
     """Pythagorean Theorem
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the hypotenuse of a right triangle given the other two sides have lengths $9$ and $10$? | $13.45$ |
@@ -345,7 +347,7 @@ def radian_to_deg(max_rad=6.28):
 
 def sector_area(max_radius=49, max_angle=359):
     """Area of a Sector
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the area of a sector with radius $42$ and angle $83$ degrees? | $1277.69$ |
@@ -376,7 +378,7 @@ def sum_of_polygon_angles(max_sides=12):
 
 def surface_area_cone(max_radius=20, max_height=50, unit='m'):
     """Surface area of a cone
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of cone with height $= 26m$ and radius $= 6m$ is | $616 m^2$ |
@@ -394,7 +396,7 @@ def surface_area_cone(max_radius=20, max_height=50, unit='m'):
 
 def surface_area_cube(max_side=20, unit='m'):
     """Surface area of a cube
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of cube with side $= 6m$ is | $216 m^2$ |
@@ -409,7 +411,7 @@ def surface_area_cube(max_side=20, unit='m'):
 
 def surface_area_cuboid(max_side=20, unit='m'):
     """Surface area of a cuboid
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of cuboid with sides of lengths: $11m, 20m, 8m$ is | $936 m^2$ |
@@ -426,7 +428,7 @@ def surface_area_cuboid(max_side=20, unit='m'):
 
 def surface_area_cylinder(max_radius=20, max_height=50, unit='m'):
     """Surface area of a cylinder
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of cylinder with height $= 26m$ and radius $= 15m$ is | $3864 m^2$ |
@@ -442,7 +444,7 @@ def surface_area_cylinder(max_radius=20, max_height=50, unit='m'):
 
 def surface_area_pyramid(unit='m'):
     """Surface area of a pyramid
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of pyramid with base length $= 30m$, base width $= 40m$, and height $= 25m$ is | $2400 m^2$ |
@@ -458,14 +460,16 @@ def surface_area_pyramid(unit='m'):
                     (7, 24, 25)]
 
     # Generate first triplet
-    height, half_width, triangle_height_1 = random.sample(random.choice(_PYTHAGOREAN), 3)
+    height, half_width, triangle_height_1 = random.sample(
+        random.choice(_PYTHAGOREAN), 3)
 
     # Calculate first triangle's area
     triangle_1 = half_width * triangle_height_1
 
     # Generate second triplet
     second_triplet = random.choice([i for i in _PYTHAGOREAN if height in i])
-    half_length, triangle_height_2 = random.sample(tuple(i for i in second_triplet if i != height), 2)
+    half_length, triangle_height_2 = random.sample(
+        tuple(i for i in second_triplet if i != height), 2)
 
     # Calculate second triangle's area
     triangle_2 = half_length * triangle_height_2
@@ -482,7 +486,7 @@ def surface_area_pyramid(unit='m'):
 
 def surface_area_sphere(max_side=20, unit='m'):
     """Surface area of a sphere
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Surface area of a sphere with radius $= 8m$ is | $804.25 m^2$ |
@@ -497,7 +501,7 @@ def surface_area_sphere(max_side=20, unit='m'):
 
 def third_angle_of_triangle(max_angle=89):
     """Third Angle of Triangle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Third angle of triangle with angles $10$ and $22 =$ | $148$ |
@@ -512,7 +516,7 @@ def third_angle_of_triangle(max_angle=89):
 
 def valid_triangle(max_side_length=50):
     """Valid Triangle
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Does triangel with sides $10, 31$ and $14$ exist? | No |
@@ -534,7 +538,7 @@ def valid_triangle(max_side_length=50):
 
 def volume_cone(max_radius=20, max_height=50, unit='m'):
     """Volume of a cone
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of cone with height $= 44m$ and radius $= 11m$ is | $5575 m^3$ |
@@ -597,7 +601,7 @@ def volume_cylinder(max_radius=20, max_height=50, unit='m'):
 
 def volume_cone_frustum(max_r1=20, max_r2=20, max_height=50, unit='m'):
     """Volume of the frustum of a cone
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of frustum with height $= 30m$ and $r1 = 20m$ is and $r2 = 8m$ is | $19603.54 m^3$ |
@@ -614,7 +618,7 @@ def volume_cone_frustum(max_r1=20, max_r2=20, max_height=50, unit='m'):
 
 def volume_hemisphere(max_radius=100):
     """Volume of a hemisphere
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of hemisphere with radius $32m =$ | $68629.14 m^3$ |
@@ -629,7 +633,7 @@ def volume_hemisphere(max_radius=100):
 
 def volume_pyramid(max_length=20, max_width=20, max_height=50, unit='m'):
     """Volume of a pyramid
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of pyramid with base length $= 7 m$, base width $= 18 m$ and height $= 42 m$ is | $1764.0 m^3$ |
@@ -647,7 +651,7 @@ def volume_pyramid(max_length=20, max_width=20, max_height=50, unit='m'):
 
 def volume_sphere(max_radius=100):
     """Volume of a sphere
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of sphere with radius $30 m = $ | $113097.36 m^3$ |

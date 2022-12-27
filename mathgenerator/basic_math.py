@@ -3,7 +3,7 @@ import random
 
 def absolute_difference(max_a=100, max_b=100):
     r"""Absolute difference between two numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $|22-34|=$ | $12$ |
@@ -36,7 +36,7 @@ def addition(max_sum=99, max_addend=50):
 
 def compare_fractions(max_val=10):
     r"""Compare Fractions
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Which symbol represents the comparison between $\frac{1}{2}$ and $\frac{3}{4}$? | $>$ |
@@ -67,7 +67,7 @@ def compare_fractions(max_val=10):
 
 def cube_root(min_no=1, max_no=1000):
     r"""Cube Root
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the cube root of: $\sqrt[3]{125}=$ to 2 decimal places? | $5$ |
@@ -80,7 +80,7 @@ def cube_root(min_no=1, max_no=1000):
 
 def divide_fractions(max_val=10):
     r"""Divide Fractions
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\frac{7}{9}\div\frac{4}{1}=$ | $\frac{7}{36}$ |
@@ -113,7 +113,7 @@ def divide_fractions(max_val=10):
 
 def division(max_a=25, max_b=25):
     r"""Division
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $216\div24=$ | $9$ |
@@ -130,7 +130,7 @@ def division(max_a=25, max_b=25):
 
 def exponentiation(max_base=20, max_expo=10):
     r"""Exponentiation
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $9^{5}=$ | $8$ |
@@ -160,7 +160,7 @@ def factorial(max_input=6):
 
 def fraction_multiplication(max_val=10):
     r"""Fraction Multiplication
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35} |
@@ -196,7 +196,7 @@ def fraction_multiplication(max_val=10):
 
 def fraction_to_decimal(max_res=99, max_divid=99):
     r"""Fraction to Decimal
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $83\div80=$ | $1.04$ |
@@ -210,7 +210,7 @@ def fraction_to_decimal(max_res=99, max_divid=99):
 
 def greatest_common_divisor(numbers_count=2, max_number_limit=10**9):
     r"""Greatest Common Divisor of N Numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $GCD(488075608, 75348096)=$ | $8$ |
@@ -239,7 +239,7 @@ def greatest_common_divisor(numbers_count=2, max_number_limit=10**9):
 
 def is_composite(max_num=250):
     r"""Is Composite
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Is $171$ composite? | Yes |
@@ -259,7 +259,7 @@ def is_composite(max_num=250):
 
 def is_prime(max_num=100):
     r"""Is Prime
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Is $37$ prime? | Yes |
@@ -280,7 +280,7 @@ def is_prime(max_num=100):
 
 def multiplication(max_multi=12):
     r"""Multiplication
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $10\cdot9=$ | $90$ |
@@ -294,7 +294,7 @@ def multiplication(max_multi=12):
 
 def percentage(max_value=99, max_percentage=99):
     r"""Percentage of a number
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is $45$% of $39$? | $17.55$ |
@@ -311,7 +311,7 @@ def percentage(max_value=99, max_percentage=99):
 
 def percentage_difference(max_value=200, min_value=0):
     r"""Percentage difference between two numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | What is the percentage difference between $2$ and $10$? | $133.33$ |
@@ -329,7 +329,7 @@ def percentage_difference(max_value=200, min_value=0):
 
 def percentage_error(max_value=100, min_value=-100):
     r"""Percentage error
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the percentage error when observed value equals $32$ and exact value equals $81$. | $60.49$% |
@@ -350,7 +350,7 @@ def percentage_error(max_value=100, min_value=-100):
 
 def power_of_powers(max_base=50, max_power=10):
     r"""Power of Powers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Simplify $18^{10^{8}}$ | $18^{80}$ |
@@ -367,7 +367,7 @@ def power_of_powers(max_base=50, max_power=10):
 
 def square(max_square_num=20):
     r"""Square
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $17^2=$ | $289$ |
@@ -380,7 +380,7 @@ def square(max_square_num=20):
 
 def square_root(min_no=1, max_no=12):
     r"""Square Root
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $\sqrt{64}=$ | $8$ |
@@ -393,7 +393,7 @@ def square_root(min_no=1, max_no=12):
 
 def subtraction(max_minuend=99, max_diff=99):
     r"""Subtraction of two numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $54-22=$ | $32$ |

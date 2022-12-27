@@ -7,7 +7,7 @@ def arithmetic_progression_sum(max_d=100,
                                max_a=100,
                                max_n=100):
     """Arithmetic Progression Sum
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the sum of first $44$ terms of the AP series: $49, 145, 241 ... $ | $92972.0$ |
@@ -29,7 +29,7 @@ def arithmetic_progression_term(max_d=100,
                                 max_a=100,
                                 max_n=100):
     """Arithmetic Progression Term
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find term number $12$ of the AP series: $-54, 24, 102 ... $ | $804$ |
@@ -73,7 +73,7 @@ def _fromBaseTenTo(n, to_base):
 
 def base_conversion(max_num=60000, max_base=16):
     """Base Conversion
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $45204$ from base $10$ to base $4$ | $23002110$ |
@@ -106,7 +106,7 @@ def _newton_symbol(n, k):
 
 def binomial_distribution():
     """Binomial distribution
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | A manufacturer of metal pistons finds that, on average, $30.56$% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of $20$ pistons will contain no more than $2$ rejected pistons? | $3.17$ |
@@ -133,7 +133,7 @@ def binomial_distribution():
 
 def celsius_to_fahrenheit(max_temp=100):
     """Celsius to Fahrenheit
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $-46$ degrees Celsius to degrees Fahrenheit | $-50.8$ |
@@ -148,7 +148,7 @@ def celsius_to_fahrenheit(max_temp=100):
 
 def common_factors(max_val=100):
     """Common Factors
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Common Factors of $100$ and $44 = $ | $[1, 2, 4]$ |
@@ -178,7 +178,7 @@ def common_factors(max_val=100):
 def complex_to_polar(min_real_imaginary_num=-20,
                      max_real_imaginary_num=20):
     r"""Complex to polar form
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $19.42(-19.0\theta + i-4.0\theta)$ | $-2.93$ |
@@ -196,7 +196,7 @@ def complex_to_polar(min_real_imaginary_num=-20,
 
 def decimal_to_roman_numerals(max_decimal=4000):
     """Decimal to Roman Numerals
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The number $92$ in roman numerals is:  | $XCII$ |
@@ -224,7 +224,8 @@ def decimal_to_roman_numerals(max_decimal=4000):
         elif last_value == 4:
             solution += (roman_dict[div] + roman_dict[div * 5])
         elif 5 <= last_value <= 8:
-            solution += (roman_dict[div * 5] + (roman_dict[div] * (last_value - 5)))
+            solution += (roman_dict[div * 5] +
+                         (roman_dict[div] * (last_value - 5)))
         elif last_value == 9:
             solution += (roman_dict[div] + roman_dict[div * 10])
         x = math.floor(x % div)
@@ -236,7 +237,7 @@ def decimal_to_roman_numerals(max_decimal=4000):
 
 def euclidian_norm(maxEltAmt=20):
     """Euclidian norm or L2 norm of a vector
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Euclidian norm or L2 norm of the vector $[659.9225071540442, 243.40887829281564, 128.79950053874424, 263.19226900031344]$ is: | $761.97$ |
@@ -252,7 +253,7 @@ def euclidian_norm(maxEltAmt=20):
 
 def factors(max_val=1000):
     """Factors of a number
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Factors of $176 = $ | $[1, 2, 4, 8, 11, 16, 22, 44, 88, 176]$ |
@@ -279,7 +280,7 @@ def factors(max_val=1000):
 
 def gcd(max_val=20):
     """GCD (Greatest Common Denominator)
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | GCD of $18$ and $4 = $ | $2$ |
@@ -297,7 +298,7 @@ def gcd(max_val=20):
 
 def geometric_mean(max_value=100, max_count=4):
     """Geometric Mean of N Numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Geometric mean of $3$ numbers $[72, 21, 87] = $ | $50.86$ |
@@ -319,7 +320,7 @@ def geometric_progression(number_values=6,
                           n_term=7,
                           sum_term=5):
     """Geometric Progression
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | For the given GP $[11, 44, 176, 704, 2816, 11264]$. Find the value of a common ratio, 7th term value, sum upto 10th term | The value of a is $11$, common ratio is $4$ , 7th term is $45056$, sum upto 10th term is $3844775.0$ |
@@ -342,7 +343,7 @@ def geometric_progression(number_values=6,
 
 def harmonic_mean(max_value=100, max_count=4):
     """Harmonic Mean of N Numbers
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Harmonic mean of $4$ numbers $52, 56, 25, 57 = $ | $602.33$ |
@@ -361,7 +362,7 @@ def harmonic_mean(max_value=100, max_count=4):
 
 def hcf(max_val=20):
     """HCF (Highest Common Factor)
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | HCF of $18$ and $4 = $ | $2$ |
@@ -379,7 +380,7 @@ def hcf(max_val=20):
 
 def is_leap_year(minNumber=1900, max_number=2099):
     """Is Leap Year or Not
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Is $2000$ a leap year? | $2000$ is a leap year |
@@ -403,7 +404,7 @@ def is_leap_year(minNumber=1900, max_number=2099):
 
 def lcm(max_val=20):
     """LCM (Least Common Multiple)
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | LCM of $3$ and $18 = $ | $18$ |
@@ -424,7 +425,7 @@ def lcm(max_val=20):
 
 def minutes_to_hours(max_minutes=999):
     """Convert minutes to hours and minutes
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $836$ minutes to hours & minutes | $13$ hours and $56$ minutes |
@@ -440,7 +441,7 @@ def minutes_to_hours(max_minutes=999):
 
 def prime_factors(min_val=1, max_val=200):
     """Prime Factors
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find prime factors of $30$ | $2, 3, 5$ |
@@ -467,13 +468,15 @@ def prime_factors(min_val=1, max_val=200):
 
 def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
     r"""Product of scientific notations
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Product of scientific notations $5.11 \times 10^{67}$ and $3.64 \times 10^{-59} = $ | $1.86 \times 10^{9}$ |
     """
-    a = [round(random.uniform(1, 10), 2), random.randint(min_exp_val, max_exp_val)]
-    b = [round(random.uniform(1, 10), 2), random.randint(min_exp_val, max_exp_val)]
+    a = [round(random.uniform(1, 10), 2),
+         random.randint(min_exp_val, max_exp_val)]
+    b = [round(random.uniform(1, 10), 2),
+         random.randint(min_exp_val, max_exp_val)]
     c = [a[0] * b[0], a[1] + b[1]]
 
     if c[0] >= 10:
@@ -487,7 +490,7 @@ def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
 
 def profit_loss_percent(max_cp=1000, max_sp=1000):
     """Profit or Loss Percent
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Loss percent when $CP = 751$ and $SP = 290$ is: | $61.38$ |
@@ -507,7 +510,7 @@ def profit_loss_percent(max_cp=1000, max_sp=1000):
 
 def quotient_of_power_same_base(max_base=50, max_power=10):
     """Quotient of Powers with Same Base
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The Quotient of $5^{6}$ and $5^{8} = $5^{6-8} = 5^{-2}$ | $0.04$ |
@@ -525,7 +528,7 @@ def quotient_of_power_same_base(max_base=50, max_power=10):
 
 def quotient_of_power_same_power(max_base=50, max_power=10):
     """Quotient of Powers with Same Power
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The quotient of $19^{8}$ and $10^{8} = (19/10)^8 = 1.9^{8}$ | $169.84$ |
@@ -543,7 +546,7 @@ def quotient_of_power_same_power(max_base=50, max_power=10):
 
 def set_operation(min_size=3, max_size=7):
     """Union, Intersection, Difference of Two Sets
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Given the two sets $a={1, 2, 4, 5}$, $b={8, 1, 2}. Find the Union, intersection, a-b, b-a, and symmetric difference | Union is ${1, 2, 4, 5, 8}$. Intersection is ${1, 2}$, a-b is ${4, 5}$, b-a is ${8}$. Symmetric difference is ${4, 5, 8}$. |
@@ -569,7 +572,7 @@ def set_operation(min_size=3, max_size=7):
 
 def signum_function(min=-999, max=999):
     """Signum Function
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Signum of $-229$ is = | $-1$ |
@@ -588,7 +591,7 @@ def signum_function(min=-999, max=999):
 
 def surds_comparison(max_value=100, max_root=10):
     r"""Comparing Surds
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Fill in the blanks $42^{\frac{1}{2}}$ _ $45^{\frac{1}{5}}$ | $>$ |
