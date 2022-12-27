@@ -60,7 +60,7 @@ Problem/solution pairs are generated with either:
 -->
 You can also use `getGenList()` to return a list of all generators included in the library in the format:
 ```
-[id, title, gen_func, funcname, subjectname, kwargs]
+[funcname, subjectname]
 ```
 
 ## Documentation
