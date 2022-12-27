@@ -141,7 +141,7 @@
 </span><span id="L-3"><a href="#L-3"><span class="linenos">  3</span></a>
 </span><span id="L-4"><a href="#L-4"><span class="linenos">  4</span></a><span class="k">def</span> <span class="nf">absolute_difference</span><span class="p">(</span><span class="n">max_a</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_b</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="L-5"><a href="#L-5"><span class="linenos">  5</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Absolute difference between two numbers</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a><span class="sd">    </span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="sd">    | $|22-34|=$ | $12$ |</span>
@@ -174,7 +174,7 @@
 </span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a>
 </span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a><span class="k">def</span> <span class="nf">compare_fractions</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compare Fractions</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a><span class="sd">    </span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>
 </span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="sd">    | Which symbol represents the comparison between $\frac{1}{2}$ and $\frac{3}{4}$? | $&gt;$ |</span>
@@ -199,13 +199,13 @@
 </span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>    <span class="k">else</span><span class="p">:</span>
 </span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span>
 </span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a>
-</span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Which symbol represents the comparison between $</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">$ and $</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">$?&quot;</span>
+</span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;Which symbol represents the comparison between $\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">$ and $\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">$?&quot;</span>
 </span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a>
 </span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a>
 </span><span id="L-68"><a href="#L-68"><span class="linenos"> 68</span></a><span class="k">def</span> <span class="nf">cube_root</span><span class="p">(</span><span class="n">min_no</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_no</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
 </span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Cube Root</span>
-</span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a><span class="sd">    </span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a>
 </span><span id="L-71"><a href="#L-71"><span class="linenos"> 71</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a><span class="sd">    | What is the cube root of: $\sqrt[3]{125}=$ to 2 decimal places? | $5$ |</span>
@@ -213,12 +213,12 @@
 </span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_no</span><span class="p">,</span> <span class="n">max_no</span><span class="p">)</span>
 </span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
 </span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a>
-</span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a>    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;What is the cube root of: $</span><span class="se">\\</span><span class="s2">sqrt[3]</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$ to 2 decimal places?&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
+</span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a>    <span class="k">return</span> <span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;What is the cube root of: $\sqrt[3]</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$ to 2 decimal places?&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
 </span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a>
 </span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a>
 </span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a><span class="k">def</span> <span class="nf">divide_fractions</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Divide Fractions</span>
-</span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a><span class="sd">    </span>
+</span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>
 </span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a><span class="sd">    | $\frac{7}{9}\div\frac{4}{1}=$ | $\frac{7}{36}$ |</span>
@@ -246,12 +246,12 @@
 </span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>    <span class="n">sol_numerator</span> <span class="o">=</span> <span class="n">tmp_n</span> <span class="o">//</span> <span class="n">gcd</span>
 </span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>    <span class="n">sol_denominator</span> <span class="o">=</span> <span class="n">tmp_d</span> <span class="o">//</span> <span class="n">gcd</span>
 </span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a>
-</span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}\\</span><span class="s1">div</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">sol_numerator</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">sol_denominator</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
+</span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s1">\div\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\f</span><span class="s1">rac</span><span class="se">{{</span><span class="si">{</span><span class="n">sol_numerator</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">sol_denominator</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
 </span><span id="L-112"><a href="#L-112"><span class="linenos">112</span></a>
 </span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a>
 </span><span id="L-114"><a href="#L-114"><span class="linenos">114</span></a><span class="k">def</span> <span class="nf">division</span><span class="p">(</span><span class="n">max_a</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">max_b</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
 </span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Division</span>
-</span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a><span class="sd">    </span>
+</span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a>
 </span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-118"><a href="#L-118"><span class="linenos">118</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-119"><a href="#L-119"><span class="linenos">119</span></a><span class="sd">    | $216\div24=$ | $9$ |</span>
@@ -263,12 +263,12 @@
 </span><span id="L-125"><a href="#L-125"><span class="linenos">125</span></a>    <span class="n">dividend</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
 </span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a>    <span class="n">quotient</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">divisor</span> <span class="o">/</span> <span class="n">dividend</span><span class="p">)</span>
 </span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a>
-</span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">divisor</span><span class="si">}</span><span class="se">\\</span><span class="s1">div</span><span class="si">{</span><span class="n">dividend</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">quotient</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">divisor</span><span class="si">}</span><span class="s1">\div</span><span class="si">{</span><span class="n">dividend</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">quotient</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-129"><a href="#L-129"><span class="linenos">129</span></a>
 </span><span id="L-130"><a href="#L-130"><span class="linenos">130</span></a>
 </span><span id="L-131"><a href="#L-131"><span class="linenos">131</span></a><span class="k">def</span> <span class="nf">exponentiation</span><span class="p">(</span><span class="n">max_base</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_expo</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-132"><a href="#L-132"><span class="linenos">132</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Exponentiation</span>
-</span><span id="L-133"><a href="#L-133"><span class="linenos">133</span></a><span class="sd">    </span>
+</span><span id="L-133"><a href="#L-133"><span class="linenos">133</span></a>
 </span><span id="L-134"><a href="#L-134"><span class="linenos">134</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-135"><a href="#L-135"><span class="linenos">135</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-136"><a href="#L-136"><span class="linenos">136</span></a><span class="sd">    | $9^{5}=$ | $8$ |</span>
@@ -298,7 +298,7 @@
 </span><span id="L-160"><a href="#L-160"><span class="linenos">160</span></a>
 </span><span id="L-161"><a href="#L-161"><span class="linenos">161</span></a><span class="k">def</span> <span class="nf">fraction_multiplication</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-162"><a href="#L-162"><span class="linenos">162</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fraction Multiplication</span>
-</span><span id="L-163"><a href="#L-163"><span class="linenos">163</span></a><span class="sd">    </span>
+</span><span id="L-163"><a href="#L-163"><span class="linenos">163</span></a>
 </span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-165"><a href="#L-165"><span class="linenos">165</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a><span class="sd">    | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35} |</span>
@@ -324,17 +324,17 @@
 </span><span id="L-186"><a href="#L-186"><span class="linenos">186</span></a>
 </span><span id="L-187"><a href="#L-187"><span class="linenos">187</span></a>    <span class="n">gcd</span> <span class="o">=</span> <span class="n">calculate_gcd</span><span class="p">(</span><span class="n">tmp_n</span><span class="p">,</span> <span class="n">tmp_d</span><span class="p">)</span>
 </span><span id="L-188"><a href="#L-188"><span class="linenos">188</span></a>
-</span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}\\</span><span class="s2">cdot</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$&quot;</span>
+</span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">\cdot\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$&quot;</span>
 </span><span id="L-190"><a href="#L-190"><span class="linenos">190</span></a>    <span class="k">if</span> <span class="p">(</span><span class="n">tmp_d</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">tmp_d</span> <span class="o">==</span> <span class="n">gcd</span><span class="p">):</span>
-</span><span id="L-191"><a href="#L-191"><span class="linenos">191</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
+</span><span id="L-191"><a href="#L-191"><span class="linenos">191</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
 </span><span id="L-192"><a href="#L-192"><span class="linenos">192</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">tmp_d</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
+</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">tmp_d</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
 </span><span id="L-194"><a href="#L-194"><span class="linenos">194</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a>
 </span><span id="L-196"><a href="#L-196"><span class="linenos">196</span></a>
 </span><span id="L-197"><a href="#L-197"><span class="linenos">197</span></a><span class="k">def</span> <span class="nf">fraction_to_decimal</span><span class="p">(</span><span class="n">max_res</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_divid</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fraction to Decimal</span>
-</span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a><span class="sd">    </span>
+</span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a>
 </span><span id="L-200"><a href="#L-200"><span class="linenos">200</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-202"><a href="#L-202"><span class="linenos">202</span></a><span class="sd">    | $83\div80=$ | $1.04$ |</span>
@@ -343,12 +343,12 @@
 </span><span id="L-205"><a href="#L-205"><span class="linenos">205</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">max_res</span><span class="p">,</span> <span class="n">max_divid</span><span class="p">))</span>
 </span><span id="L-206"><a href="#L-206"><span class="linenos">206</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </span><span id="L-207"><a href="#L-207"><span class="linenos">207</span></a>
-</span><span id="L-208"><a href="#L-208"><span class="linenos">208</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\\</span><span class="s1">div</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="L-208"><a href="#L-208"><span class="linenos">208</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\div</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-209"><a href="#L-209"><span class="linenos">209</span></a>
 </span><span id="L-210"><a href="#L-210"><span class="linenos">210</span></a>
-</span><span id="L-211"><a href="#L-211"><span class="linenos">211</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_number_limit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
-</span><span id="L-212"><a href="#L-212"><span class="linenos">212</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers</span>
-</span><span id="L-213"><a href="#L-213"><span class="linenos">213</span></a><span class="sd">    </span>
+</span><span id="L-211"><a href="#L-211"><span class="linenos">211</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_num</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">):</span>
+</span><span id="L-212"><a href="#L-212"><span class="linenos">212</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers ( GCD / HCF )</span>
+</span><span id="L-213"><a href="#L-213"><span class="linenos">213</span></a>
 </span><span id="L-214"><a href="#L-214"><span class="linenos">214</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-215"><a href="#L-215"><span class="linenos">215</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-216"><a href="#L-216"><span class="linenos">216</span></a><span class="sd">    | $GCD(488075608, 75348096)=$ | $8$ |</span>
@@ -362,7 +362,7 @@
 </span><span id="L-224"><a href="#L-224"><span class="linenos">224</span></a>        <span class="k">return</span> <span class="n">number1</span>
 </span><span id="L-225"><a href="#L-225"><span class="linenos">225</span></a>
 </span><span id="L-226"><a href="#L-226"><span class="linenos">226</span></a>    <span class="n">numbers_count</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers_count</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</span><span id="L-227"><a href="#L-227"><span class="linenos">227</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_number_limit</span><span class="p">)</span>
+</span><span id="L-227"><a href="#L-227"><span class="linenos">227</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_num</span><span class="p">)</span>
 </span><span id="L-228"><a href="#L-228"><span class="linenos">228</span></a>               <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numbers_count</span><span class="p">)]</span>
 </span><span id="L-229"><a href="#L-229"><span class="linenos">229</span></a>
 </span><span id="L-230"><a href="#L-230"><span class="linenos">230</span></a>    <span class="n">greatestCommonDivisor</span> <span class="o">=</span> <span class="n">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span>
@@ -377,7 +377,7 @@
 </span><span id="L-239"><a href="#L-239"><span class="linenos">239</span></a>
 </span><span id="L-240"><a href="#L-240"><span class="linenos">240</span></a><span class="k">def</span> <span class="nf">is_composite</span><span class="p">(</span><span class="n">max_num</span><span class="o">=</span><span class="mi">250</span><span class="p">):</span>
 </span><span id="L-241"><a href="#L-241"><span class="linenos">241</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Is Composite</span>
-</span><span id="L-242"><a href="#L-242"><span class="linenos">242</span></a><span class="sd">    </span>
+</span><span id="L-242"><a href="#L-242"><span class="linenos">242</span></a>
 </span><span id="L-243"><a href="#L-243"><span class="linenos">243</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-244"><a href="#L-244"><span class="linenos">244</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-245"><a href="#L-245"><span class="linenos">245</span></a><span class="sd">    | Is $171$ composite? | Yes |</span>
@@ -397,7 +397,7 @@
 </span><span id="L-259"><a href="#L-259"><span class="linenos">259</span></a>
 </span><span id="L-260"><a href="#L-260"><span class="linenos">260</span></a><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">max_num</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="L-261"><a href="#L-261"><span class="linenos">261</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Is Prime</span>
-</span><span id="L-262"><a href="#L-262"><span class="linenos">262</span></a><span class="sd">    </span>
+</span><span id="L-262"><a href="#L-262"><span class="linenos">262</span></a>
 </span><span id="L-263"><a href="#L-263"><span class="linenos">263</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-264"><a href="#L-264"><span class="linenos">264</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-265"><a href="#L-265"><span class="linenos">265</span></a><span class="sd">    | Is $37$ prime? | Yes |</span>
@@ -418,7 +418,7 @@
 </span><span id="L-280"><a href="#L-280"><span class="linenos">280</span></a>
 </span><span id="L-281"><a href="#L-281"><span class="linenos">281</span></a><span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">max_multi</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
 </span><span id="L-282"><a href="#L-282"><span class="linenos">282</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multiplication</span>
-</span><span id="L-283"><a href="#L-283"><span class="linenos">283</span></a><span class="sd">    </span>
+</span><span id="L-283"><a href="#L-283"><span class="linenos">283</span></a>
 </span><span id="L-284"><a href="#L-284"><span class="linenos">284</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-285"><a href="#L-285"><span class="linenos">285</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-286"><a href="#L-286"><span class="linenos">286</span></a><span class="sd">    | $10\cdot9=$ | $90$ |</span>
@@ -427,12 +427,12 @@
 </span><span id="L-289"><a href="#L-289"><span class="linenos">289</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_multi</span><span class="p">)</span>
 </span><span id="L-290"><a href="#L-290"><span class="linenos">290</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </span><span id="L-291"><a href="#L-291"><span class="linenos">291</span></a>
-</span><span id="L-292"><a href="#L-292"><span class="linenos">292</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\\</span><span class="s1">cdot</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="L-292"><a href="#L-292"><span class="linenos">292</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\cdot</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-293"><a href="#L-293"><span class="linenos">293</span></a>
 </span><span id="L-294"><a href="#L-294"><span class="linenos">294</span></a>
 </span><span id="L-295"><a href="#L-295"><span class="linenos">295</span></a><span class="k">def</span> <span class="nf">percentage</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_percentage</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="L-296"><a href="#L-296"><span class="linenos">296</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage of a number</span>
-</span><span id="L-297"><a href="#L-297"><span class="linenos">297</span></a><span class="sd">    </span>
+</span><span id="L-297"><a href="#L-297"><span class="linenos">297</span></a>
 </span><span id="L-298"><a href="#L-298"><span class="linenos">298</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-299"><a href="#L-299"><span class="linenos">299</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-300"><a href="#L-300"><span class="linenos">300</span></a><span class="sd">    | What is $45$% of $39$? | $17.55$ |</span>
@@ -449,7 +449,7 @@
 </span><span id="L-311"><a href="#L-311"><span class="linenos">311</span></a>
 </span><span id="L-312"><a href="#L-312"><span class="linenos">312</span></a><span class="k">def</span> <span class="nf">percentage_difference</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </span><span id="L-313"><a href="#L-313"><span class="linenos">313</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage difference between two numbers</span>
-</span><span id="L-314"><a href="#L-314"><span class="linenos">314</span></a><span class="sd">    </span>
+</span><span id="L-314"><a href="#L-314"><span class="linenos">314</span></a>
 </span><span id="L-315"><a href="#L-315"><span class="linenos">315</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-316"><a href="#L-316"><span class="linenos">316</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-317"><a href="#L-317"><span class="linenos">317</span></a><span class="sd">    | What is the percentage difference between $2$ and $10$? | $133.33$ |</span>
@@ -467,7 +467,7 @@
 </span><span id="L-329"><a href="#L-329"><span class="linenos">329</span></a>
 </span><span id="L-330"><a href="#L-330"><span class="linenos">330</span></a><span class="k">def</span> <span class="nf">percentage_error</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=-</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="L-331"><a href="#L-331"><span class="linenos">331</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage error</span>
-</span><span id="L-332"><a href="#L-332"><span class="linenos">332</span></a><span class="sd">    </span>
+</span><span id="L-332"><a href="#L-332"><span class="linenos">332</span></a>
 </span><span id="L-333"><a href="#L-333"><span class="linenos">333</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-334"><a href="#L-334"><span class="linenos">334</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-335"><a href="#L-335"><span class="linenos">335</span></a><span class="sd">    | Find the percentage error when observed value equals $32$ and exact value equals $81$. | $60.49$% |</span>
@@ -488,7 +488,7 @@
 </span><span id="L-350"><a href="#L-350"><span class="linenos">350</span></a>
 </span><span id="L-351"><a href="#L-351"><span class="linenos">351</span></a><span class="k">def</span> <span class="nf">power_of_powers</span><span class="p">(</span><span class="n">max_base</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_power</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="L-352"><a href="#L-352"><span class="linenos">352</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Power of Powers</span>
-</span><span id="L-353"><a href="#L-353"><span class="linenos">353</span></a><span class="sd">    </span>
+</span><span id="L-353"><a href="#L-353"><span class="linenos">353</span></a>
 </span><span id="L-354"><a href="#L-354"><span class="linenos">354</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-355"><a href="#L-355"><span class="linenos">355</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-356"><a href="#L-356"><span class="linenos">356</span></a><span class="sd">    | Simplify $18^{10^{8}}$ | $18^{80}$ |</span>
@@ -505,7 +505,7 @@
 </span><span id="L-367"><a href="#L-367"><span class="linenos">367</span></a>
 </span><span id="L-368"><a href="#L-368"><span class="linenos">368</span></a><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">max_square_num</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="L-369"><a href="#L-369"><span class="linenos">369</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Square</span>
-</span><span id="L-370"><a href="#L-370"><span class="linenos">370</span></a><span class="sd">    </span>
+</span><span id="L-370"><a href="#L-370"><span class="linenos">370</span></a>
 </span><span id="L-371"><a href="#L-371"><span class="linenos">371</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-372"><a href="#L-372"><span class="linenos">372</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-373"><a href="#L-373"><span class="linenos">373</span></a><span class="sd">    | $17^2=$ | $289$ |</span>
@@ -518,7 +518,7 @@
 </span><span id="L-380"><a href="#L-380"><span class="linenos">380</span></a>
 </span><span id="L-381"><a href="#L-381"><span class="linenos">381</span></a><span class="k">def</span> <span class="nf">square_root</span><span class="p">(</span><span class="n">min_no</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_no</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
 </span><span id="L-382"><a href="#L-382"><span class="linenos">382</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Square Root</span>
-</span><span id="L-383"><a href="#L-383"><span class="linenos">383</span></a><span class="sd">    </span>
+</span><span id="L-383"><a href="#L-383"><span class="linenos">383</span></a>
 </span><span id="L-384"><a href="#L-384"><span class="linenos">384</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-385"><a href="#L-385"><span class="linenos">385</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-386"><a href="#L-386"><span class="linenos">386</span></a><span class="sd">    | $\sqrt{64}=$ | $8$ |</span>
@@ -526,12 +526,12 @@
 </span><span id="L-388"><a href="#L-388"><span class="linenos">388</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_no</span><span class="p">,</span> <span class="n">max_no</span><span class="p">)</span>
 </span><span id="L-389"><a href="#L-389"><span class="linenos">389</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span>
 </span><span id="L-390"><a href="#L-390"><span class="linenos">390</span></a>
-</span><span id="L-391"><a href="#L-391"><span class="linenos">391</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="L-391"><a href="#L-391"><span class="linenos">391</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-392"><a href="#L-392"><span class="linenos">392</span></a>
 </span><span id="L-393"><a href="#L-393"><span class="linenos">393</span></a>
 </span><span id="L-394"><a href="#L-394"><span class="linenos">394</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="L-395"><a href="#L-395"><span class="linenos">395</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
-</span><span id="L-396"><a href="#L-396"><span class="linenos">396</span></a><span class="sd">    </span>
+</span><span id="L-396"><a href="#L-396"><span class="linenos">396</span></a>
 </span><span id="L-397"><a href="#L-397"><span class="linenos">397</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-398"><a href="#L-398"><span class="linenos">398</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="L-399"><a href="#L-399"><span class="linenos">399</span></a><span class="sd">    | $54-22=$ | $32$ |</span>
@@ -558,7 +558,7 @@
     <a class="headerlink" href="#absolute_difference"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="absolute_difference-5"><a href="#absolute_difference-5"><span class="linenos"> 5</span></a><span class="k">def</span> <span class="nf">absolute_difference</span><span class="p">(</span><span class="n">max_a</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_b</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="absolute_difference-6"><a href="#absolute_difference-6"><span class="linenos"> 6</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Absolute difference between two numbers</span>
-</span><span id="absolute_difference-7"><a href="#absolute_difference-7"><span class="linenos"> 7</span></a><span class="sd">    </span>
+</span><span id="absolute_difference-7"><a href="#absolute_difference-7"><span class="linenos"> 7</span></a>
 </span><span id="absolute_difference-8"><a href="#absolute_difference-8"><span class="linenos"> 8</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="absolute_difference-9"><a href="#absolute_difference-9"><span class="linenos"> 9</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="absolute_difference-10"><a href="#absolute_difference-10"><span class="linenos">10</span></a><span class="sd">    | $|22-34|=$ | $12$ |</span>
@@ -657,7 +657,7 @@
     <a class="headerlink" href="#compare_fractions"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="compare_fractions-38"><a href="#compare_fractions-38"><span class="linenos">38</span></a><span class="k">def</span> <span class="nf">compare_fractions</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="compare_fractions-39"><a href="#compare_fractions-39"><span class="linenos">39</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compare Fractions</span>
-</span><span id="compare_fractions-40"><a href="#compare_fractions-40"><span class="linenos">40</span></a><span class="sd">    </span>
+</span><span id="compare_fractions-40"><a href="#compare_fractions-40"><span class="linenos">40</span></a>
 </span><span id="compare_fractions-41"><a href="#compare_fractions-41"><span class="linenos">41</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="compare_fractions-42"><a href="#compare_fractions-42"><span class="linenos">42</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="compare_fractions-43"><a href="#compare_fractions-43"><span class="linenos">43</span></a><span class="sd">    | Which symbol represents the comparison between $\frac{1}{2}$ and $\frac{3}{4}$? | $&gt;$ |</span>
@@ -682,7 +682,7 @@
 </span><span id="compare_fractions-62"><a href="#compare_fractions-62"><span class="linenos">62</span></a>    <span class="k">else</span><span class="p">:</span>
 </span><span id="compare_fractions-63"><a href="#compare_fractions-63"><span class="linenos">63</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span>
 </span><span id="compare_fractions-64"><a href="#compare_fractions-64"><span class="linenos">64</span></a>
-</span><span id="compare_fractions-65"><a href="#compare_fractions-65"><span class="linenos">65</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Which symbol represents the comparison between $</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">$ and $</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">$?&quot;</span>
+</span><span id="compare_fractions-65"><a href="#compare_fractions-65"><span class="linenos">65</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;Which symbol represents the comparison between $\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">$ and $\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">$?&quot;</span>
 </span><span id="compare_fractions-66"><a href="#compare_fractions-66"><span class="linenos">66</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span></pre></div>
 
@@ -720,7 +720,7 @@
     <a class="headerlink" href="#cube_root"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="cube_root-69"><a href="#cube_root-69"><span class="linenos">69</span></a><span class="k">def</span> <span class="nf">cube_root</span><span class="p">(</span><span class="n">min_no</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_no</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
 </span><span id="cube_root-70"><a href="#cube_root-70"><span class="linenos">70</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Cube Root</span>
-</span><span id="cube_root-71"><a href="#cube_root-71"><span class="linenos">71</span></a><span class="sd">    </span>
+</span><span id="cube_root-71"><a href="#cube_root-71"><span class="linenos">71</span></a>
 </span><span id="cube_root-72"><a href="#cube_root-72"><span class="linenos">72</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="cube_root-73"><a href="#cube_root-73"><span class="linenos">73</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="cube_root-74"><a href="#cube_root-74"><span class="linenos">74</span></a><span class="sd">    | What is the cube root of: $\sqrt[3]{125}=$ to 2 decimal places? | $5$ |</span>
@@ -728,7 +728,7 @@
 </span><span id="cube_root-76"><a href="#cube_root-76"><span class="linenos">76</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_no</span><span class="p">,</span> <span class="n">max_no</span><span class="p">)</span>
 </span><span id="cube_root-77"><a href="#cube_root-77"><span class="linenos">77</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
 </span><span id="cube_root-78"><a href="#cube_root-78"><span class="linenos">78</span></a>
-</span><span id="cube_root-79"><a href="#cube_root-79"><span class="linenos">79</span></a>    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;What is the cube root of: $</span><span class="se">\\</span><span class="s2">sqrt[3]</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$ to 2 decimal places?&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
+</span><span id="cube_root-79"><a href="#cube_root-79"><span class="linenos">79</span></a>    <span class="k">return</span> <span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;What is the cube root of: $\sqrt[3]</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$ to 2 decimal places?&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -765,7 +765,7 @@
     <a class="headerlink" href="#divide_fractions"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="divide_fractions-82"><a href="#divide_fractions-82"><span class="linenos"> 82</span></a><span class="k">def</span> <span class="nf">divide_fractions</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="divide_fractions-83"><a href="#divide_fractions-83"><span class="linenos"> 83</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Divide Fractions</span>
-</span><span id="divide_fractions-84"><a href="#divide_fractions-84"><span class="linenos"> 84</span></a><span class="sd">    </span>
+</span><span id="divide_fractions-84"><a href="#divide_fractions-84"><span class="linenos"> 84</span></a>
 </span><span id="divide_fractions-85"><a href="#divide_fractions-85"><span class="linenos"> 85</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="divide_fractions-86"><a href="#divide_fractions-86"><span class="linenos"> 86</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="divide_fractions-87"><a href="#divide_fractions-87"><span class="linenos"> 87</span></a><span class="sd">    | $\frac{7}{9}\div\frac{4}{1}=$ | $\frac{7}{36}$ |</span>
@@ -793,7 +793,7 @@
 </span><span id="divide_fractions-109"><a href="#divide_fractions-109"><span class="linenos">109</span></a>    <span class="n">sol_numerator</span> <span class="o">=</span> <span class="n">tmp_n</span> <span class="o">//</span> <span class="n">gcd</span>
 </span><span id="divide_fractions-110"><a href="#divide_fractions-110"><span class="linenos">110</span></a>    <span class="n">sol_denominator</span> <span class="o">=</span> <span class="n">tmp_d</span> <span class="o">//</span> <span class="n">gcd</span>
 </span><span id="divide_fractions-111"><a href="#divide_fractions-111"><span class="linenos">111</span></a>
-</span><span id="divide_fractions-112"><a href="#divide_fractions-112"><span class="linenos">112</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}\\</span><span class="s1">div</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">sol_numerator</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">sol_denominator</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
+</span><span id="divide_fractions-112"><a href="#divide_fractions-112"><span class="linenos">112</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s1">\div\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\f</span><span class="s1">rac</span><span class="se">{{</span><span class="si">{</span><span class="n">sol_numerator</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">sol_denominator</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -830,7 +830,7 @@
     <a class="headerlink" href="#division"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="division-115"><a href="#division-115"><span class="linenos">115</span></a><span class="k">def</span> <span class="nf">division</span><span class="p">(</span><span class="n">max_a</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">max_b</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
 </span><span id="division-116"><a href="#division-116"><span class="linenos">116</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Division</span>
-</span><span id="division-117"><a href="#division-117"><span class="linenos">117</span></a><span class="sd">    </span>
+</span><span id="division-117"><a href="#division-117"><span class="linenos">117</span></a>
 </span><span id="division-118"><a href="#division-118"><span class="linenos">118</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="division-119"><a href="#division-119"><span class="linenos">119</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="division-120"><a href="#division-120"><span class="linenos">120</span></a><span class="sd">    | $216\div24=$ | $9$ |</span>
@@ -842,7 +842,7 @@
 </span><span id="division-126"><a href="#division-126"><span class="linenos">126</span></a>    <span class="n">dividend</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
 </span><span id="division-127"><a href="#division-127"><span class="linenos">127</span></a>    <span class="n">quotient</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">divisor</span> <span class="o">/</span> <span class="n">dividend</span><span class="p">)</span>
 </span><span id="division-128"><a href="#division-128"><span class="linenos">128</span></a>
-</span><span id="division-129"><a href="#division-129"><span class="linenos">129</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">divisor</span><span class="si">}</span><span class="se">\\</span><span class="s1">div</span><span class="si">{</span><span class="n">dividend</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">quotient</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="division-129"><a href="#division-129"><span class="linenos">129</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">divisor</span><span class="si">}</span><span class="s1">\div</span><span class="si">{</span><span class="n">dividend</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">quotient</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -879,7 +879,7 @@
     <a class="headerlink" href="#exponentiation"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="exponentiation-132"><a href="#exponentiation-132"><span class="linenos">132</span></a><span class="k">def</span> <span class="nf">exponentiation</span><span class="p">(</span><span class="n">max_base</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_expo</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="exponentiation-133"><a href="#exponentiation-133"><span class="linenos">133</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Exponentiation</span>
-</span><span id="exponentiation-134"><a href="#exponentiation-134"><span class="linenos">134</span></a><span class="sd">    </span>
+</span><span id="exponentiation-134"><a href="#exponentiation-134"><span class="linenos">134</span></a>
 </span><span id="exponentiation-135"><a href="#exponentiation-135"><span class="linenos">135</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="exponentiation-136"><a href="#exponentiation-136"><span class="linenos">136</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="exponentiation-137"><a href="#exponentiation-137"><span class="linenos">137</span></a><span class="sd">    | $9^{5}=$ | $8$ |</span>
@@ -973,7 +973,7 @@
     <a class="headerlink" href="#fraction_multiplication"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="fraction_multiplication-162"><a href="#fraction_multiplication-162"><span class="linenos">162</span></a><span class="k">def</span> <span class="nf">fraction_multiplication</span><span class="p">(</span><span class="n">max_val</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="fraction_multiplication-163"><a href="#fraction_multiplication-163"><span class="linenos">163</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fraction Multiplication</span>
-</span><span id="fraction_multiplication-164"><a href="#fraction_multiplication-164"><span class="linenos">164</span></a><span class="sd">    </span>
+</span><span id="fraction_multiplication-164"><a href="#fraction_multiplication-164"><span class="linenos">164</span></a>
 </span><span id="fraction_multiplication-165"><a href="#fraction_multiplication-165"><span class="linenos">165</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="fraction_multiplication-166"><a href="#fraction_multiplication-166"><span class="linenos">166</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="fraction_multiplication-167"><a href="#fraction_multiplication-167"><span class="linenos">167</span></a><span class="sd">    | $\frac{3}{10}\cdot\frac{6}{7}=$ | $\frac{9}{35} |</span>
@@ -999,11 +999,11 @@
 </span><span id="fraction_multiplication-187"><a href="#fraction_multiplication-187"><span class="linenos">187</span></a>
 </span><span id="fraction_multiplication-188"><a href="#fraction_multiplication-188"><span class="linenos">188</span></a>    <span class="n">gcd</span> <span class="o">=</span> <span class="n">calculate_gcd</span><span class="p">(</span><span class="n">tmp_n</span><span class="p">,</span> <span class="n">tmp_d</span><span class="p">)</span>
 </span><span id="fraction_multiplication-189"><a href="#fraction_multiplication-189"><span class="linenos">189</span></a>
-</span><span id="fraction_multiplication-190"><a href="#fraction_multiplication-190"><span class="linenos">190</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}\\</span><span class="s2">cdot</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$&quot;</span>
+</span><span id="fraction_multiplication-190"><a href="#fraction_multiplication-190"><span class="linenos">190</span></a>    <span class="n">problem</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s2">\cdot\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="se">}}</span><span class="s2">=$&quot;</span>
 </span><span id="fraction_multiplication-191"><a href="#fraction_multiplication-191"><span class="linenos">191</span></a>    <span class="k">if</span> <span class="p">(</span><span class="n">tmp_d</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">tmp_d</span> <span class="o">==</span> <span class="n">gcd</span><span class="p">):</span>
-</span><span id="fraction_multiplication-192"><a href="#fraction_multiplication-192"><span class="linenos">192</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
+</span><span id="fraction_multiplication-192"><a href="#fraction_multiplication-192"><span class="linenos">192</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
 </span><span id="fraction_multiplication-193"><a href="#fraction_multiplication-193"><span class="linenos">193</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="fraction_multiplication-194"><a href="#fraction_multiplication-194"><span class="linenos">194</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">tmp_d</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
+</span><span id="fraction_multiplication-194"><a href="#fraction_multiplication-194"><span class="linenos">194</span></a>        <span class="n">solution</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;$\frac</span><span class="se">{{</span><span class="si">{</span><span class="n">tmp_n</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}{{</span><span class="si">{</span><span class="n">tmp_d</span><span class="o">//</span><span class="n">gcd</span><span class="si">}</span><span class="se">}}</span><span class="s2">$&quot;</span>
 </span><span id="fraction_multiplication-195"><a href="#fraction_multiplication-195"><span class="linenos">195</span></a>    <span class="k">return</span> <span class="n">problem</span><span class="p">,</span> <span class="n">solution</span>
 </span></pre></div>
 
@@ -1041,7 +1041,7 @@
     <a class="headerlink" href="#fraction_to_decimal"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="fraction_to_decimal-198"><a href="#fraction_to_decimal-198"><span class="linenos">198</span></a><span class="k">def</span> <span class="nf">fraction_to_decimal</span><span class="p">(</span><span class="n">max_res</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_divid</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="fraction_to_decimal-199"><a href="#fraction_to_decimal-199"><span class="linenos">199</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fraction to Decimal</span>
-</span><span id="fraction_to_decimal-200"><a href="#fraction_to_decimal-200"><span class="linenos">200</span></a><span class="sd">    </span>
+</span><span id="fraction_to_decimal-200"><a href="#fraction_to_decimal-200"><span class="linenos">200</span></a>
 </span><span id="fraction_to_decimal-201"><a href="#fraction_to_decimal-201"><span class="linenos">201</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="fraction_to_decimal-202"><a href="#fraction_to_decimal-202"><span class="linenos">202</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="fraction_to_decimal-203"><a href="#fraction_to_decimal-203"><span class="linenos">203</span></a><span class="sd">    | $83\div80=$ | $1.04$ |</span>
@@ -1050,7 +1050,7 @@
 </span><span id="fraction_to_decimal-206"><a href="#fraction_to_decimal-206"><span class="linenos">206</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">max_res</span><span class="p">,</span> <span class="n">max_divid</span><span class="p">))</span>
 </span><span id="fraction_to_decimal-207"><a href="#fraction_to_decimal-207"><span class="linenos">207</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </span><span id="fraction_to_decimal-208"><a href="#fraction_to_decimal-208"><span class="linenos">208</span></a>
-</span><span id="fraction_to_decimal-209"><a href="#fraction_to_decimal-209"><span class="linenos">209</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\\</span><span class="s1">div</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="fraction_to_decimal-209"><a href="#fraction_to_decimal-209"><span class="linenos">209</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\div</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -1079,15 +1079,15 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">greatest_common_divisor</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span>, </span><span class="param"><span class="n">max_number_limit</span><span class="o">=</span><span class="mi">1000000000</span></span><span class="return-annotation">):</span></span>
+        <span class="name">greatest_common_divisor</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span>, </span><span class="param"><span class="n">max_num</span><span class="o">=</span><span class="mi">1000</span></span><span class="return-annotation">):</span></span>
 
                 <label class="view-source-button" for="greatest_common_divisor-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#greatest_common_divisor"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="greatest_common_divisor-212"><a href="#greatest_common_divisor-212"><span class="linenos">212</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_number_limit</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">):</span>
-</span><span id="greatest_common_divisor-213"><a href="#greatest_common_divisor-213"><span class="linenos">213</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers</span>
-</span><span id="greatest_common_divisor-214"><a href="#greatest_common_divisor-214"><span class="linenos">214</span></a><span class="sd">    </span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="greatest_common_divisor-212"><a href="#greatest_common_divisor-212"><span class="linenos">212</span></a><span class="k">def</span> <span class="nf">greatest_common_divisor</span><span class="p">(</span><span class="n">numbers_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_num</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">):</span>
+</span><span id="greatest_common_divisor-213"><a href="#greatest_common_divisor-213"><span class="linenos">213</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Greatest Common Divisor of N Numbers ( GCD / HCF )</span>
+</span><span id="greatest_common_divisor-214"><a href="#greatest_common_divisor-214"><span class="linenos">214</span></a>
 </span><span id="greatest_common_divisor-215"><a href="#greatest_common_divisor-215"><span class="linenos">215</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="greatest_common_divisor-216"><a href="#greatest_common_divisor-216"><span class="linenos">216</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="greatest_common_divisor-217"><a href="#greatest_common_divisor-217"><span class="linenos">217</span></a><span class="sd">    | $GCD(488075608, 75348096)=$ | $8$ |</span>
@@ -1101,7 +1101,7 @@
 </span><span id="greatest_common_divisor-225"><a href="#greatest_common_divisor-225"><span class="linenos">225</span></a>        <span class="k">return</span> <span class="n">number1</span>
 </span><span id="greatest_common_divisor-226"><a href="#greatest_common_divisor-226"><span class="linenos">226</span></a>
 </span><span id="greatest_common_divisor-227"><a href="#greatest_common_divisor-227"><span class="linenos">227</span></a>    <span class="n">numbers_count</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers_count</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</span><span id="greatest_common_divisor-228"><a href="#greatest_common_divisor-228"><span class="linenos">228</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_number_limit</span><span class="p">)</span>
+</span><span id="greatest_common_divisor-228"><a href="#greatest_common_divisor-228"><span class="linenos">228</span></a>    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_num</span><span class="p">)</span>
 </span><span id="greatest_common_divisor-229"><a href="#greatest_common_divisor-229"><span class="linenos">229</span></a>               <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numbers_count</span><span class="p">)]</span>
 </span><span id="greatest_common_divisor-230"><a href="#greatest_common_divisor-230"><span class="linenos">230</span></a>
 </span><span id="greatest_common_divisor-231"><a href="#greatest_common_divisor-231"><span class="linenos">231</span></a>    <span class="n">greatestCommonDivisor</span> <span class="o">=</span> <span class="n">greatestCommonDivisorOfTwoNumbers</span><span class="p">(</span>
@@ -1115,7 +1115,7 @@
 </span></pre></div>
 
 
-            <div class="docstring"><p>Greatest Common Divisor of N Numbers</p>
+            <div class="docstring"><p>Greatest Common Divisor of N Numbers ( GCD / HCF )</p>
 
 <table>
 <thead>
@@ -1148,7 +1148,7 @@
     <a class="headerlink" href="#is_composite"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="is_composite-241"><a href="#is_composite-241"><span class="linenos">241</span></a><span class="k">def</span> <span class="nf">is_composite</span><span class="p">(</span><span class="n">max_num</span><span class="o">=</span><span class="mi">250</span><span class="p">):</span>
 </span><span id="is_composite-242"><a href="#is_composite-242"><span class="linenos">242</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Is Composite</span>
-</span><span id="is_composite-243"><a href="#is_composite-243"><span class="linenos">243</span></a><span class="sd">    </span>
+</span><span id="is_composite-243"><a href="#is_composite-243"><span class="linenos">243</span></a>
 </span><span id="is_composite-244"><a href="#is_composite-244"><span class="linenos">244</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="is_composite-245"><a href="#is_composite-245"><span class="linenos">245</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="is_composite-246"><a href="#is_composite-246"><span class="linenos">246</span></a><span class="sd">    | Is $171$ composite? | Yes |</span>
@@ -1200,7 +1200,7 @@
     <a class="headerlink" href="#is_prime"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="is_prime-261"><a href="#is_prime-261"><span class="linenos">261</span></a><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">max_num</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="is_prime-262"><a href="#is_prime-262"><span class="linenos">262</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Is Prime</span>
-</span><span id="is_prime-263"><a href="#is_prime-263"><span class="linenos">263</span></a><span class="sd">    </span>
+</span><span id="is_prime-263"><a href="#is_prime-263"><span class="linenos">263</span></a>
 </span><span id="is_prime-264"><a href="#is_prime-264"><span class="linenos">264</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="is_prime-265"><a href="#is_prime-265"><span class="linenos">265</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="is_prime-266"><a href="#is_prime-266"><span class="linenos">266</span></a><span class="sd">    | Is $37$ prime? | Yes |</span>
@@ -1253,7 +1253,7 @@
     <a class="headerlink" href="#multiplication"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="multiplication-282"><a href="#multiplication-282"><span class="linenos">282</span></a><span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">max_multi</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
 </span><span id="multiplication-283"><a href="#multiplication-283"><span class="linenos">283</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multiplication</span>
-</span><span id="multiplication-284"><a href="#multiplication-284"><span class="linenos">284</span></a><span class="sd">    </span>
+</span><span id="multiplication-284"><a href="#multiplication-284"><span class="linenos">284</span></a>
 </span><span id="multiplication-285"><a href="#multiplication-285"><span class="linenos">285</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="multiplication-286"><a href="#multiplication-286"><span class="linenos">286</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="multiplication-287"><a href="#multiplication-287"><span class="linenos">287</span></a><span class="sd">    | $10\cdot9=$ | $90$ |</span>
@@ -1262,7 +1262,7 @@
 </span><span id="multiplication-290"><a href="#multiplication-290"><span class="linenos">290</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_multi</span><span class="p">)</span>
 </span><span id="multiplication-291"><a href="#multiplication-291"><span class="linenos">291</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </span><span id="multiplication-292"><a href="#multiplication-292"><span class="linenos">292</span></a>
-</span><span id="multiplication-293"><a href="#multiplication-293"><span class="linenos">293</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">\\</span><span class="s1">cdot</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="multiplication-293"><a href="#multiplication-293"><span class="linenos">293</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\cdot</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -1299,7 +1299,7 @@
     <a class="headerlink" href="#percentage"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="percentage-296"><a href="#percentage-296"><span class="linenos">296</span></a><span class="k">def</span> <span class="nf">percentage</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_percentage</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="percentage-297"><a href="#percentage-297"><span class="linenos">297</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage of a number</span>
-</span><span id="percentage-298"><a href="#percentage-298"><span class="linenos">298</span></a><span class="sd">    </span>
+</span><span id="percentage-298"><a href="#percentage-298"><span class="linenos">298</span></a>
 </span><span id="percentage-299"><a href="#percentage-299"><span class="linenos">299</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="percentage-300"><a href="#percentage-300"><span class="linenos">300</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="percentage-301"><a href="#percentage-301"><span class="linenos">301</span></a><span class="sd">    | What is $45$% of $39$? | $17.55$ |</span>
@@ -1348,7 +1348,7 @@
     <a class="headerlink" href="#percentage_difference"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="percentage_difference-313"><a href="#percentage_difference-313"><span class="linenos">313</span></a><span class="k">def</span> <span class="nf">percentage_difference</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </span><span id="percentage_difference-314"><a href="#percentage_difference-314"><span class="linenos">314</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage difference between two numbers</span>
-</span><span id="percentage_difference-315"><a href="#percentage_difference-315"><span class="linenos">315</span></a><span class="sd">    </span>
+</span><span id="percentage_difference-315"><a href="#percentage_difference-315"><span class="linenos">315</span></a>
 </span><span id="percentage_difference-316"><a href="#percentage_difference-316"><span class="linenos">316</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="percentage_difference-317"><a href="#percentage_difference-317"><span class="linenos">317</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="percentage_difference-318"><a href="#percentage_difference-318"><span class="linenos">318</span></a><span class="sd">    | What is the percentage difference between $2$ and $10$? | $133.33$ |</span>
@@ -1398,7 +1398,7 @@
     <a class="headerlink" href="#percentage_error"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="percentage_error-331"><a href="#percentage_error-331"><span class="linenos">331</span></a><span class="k">def</span> <span class="nf">percentage_error</span><span class="p">(</span><span class="n">max_value</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=-</span><span class="mi">100</span><span class="p">):</span>
 </span><span id="percentage_error-332"><a href="#percentage_error-332"><span class="linenos">332</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Percentage error</span>
-</span><span id="percentage_error-333"><a href="#percentage_error-333"><span class="linenos">333</span></a><span class="sd">    </span>
+</span><span id="percentage_error-333"><a href="#percentage_error-333"><span class="linenos">333</span></a>
 </span><span id="percentage_error-334"><a href="#percentage_error-334"><span class="linenos">334</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="percentage_error-335"><a href="#percentage_error-335"><span class="linenos">335</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="percentage_error-336"><a href="#percentage_error-336"><span class="linenos">336</span></a><span class="sd">    | Find the percentage error when observed value equals $32$ and exact value equals $81$. | $60.49$% |</span>
@@ -1451,7 +1451,7 @@
     <a class="headerlink" href="#power_of_powers"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="power_of_powers-352"><a href="#power_of_powers-352"><span class="linenos">352</span></a><span class="k">def</span> <span class="nf">power_of_powers</span><span class="p">(</span><span class="n">max_base</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_power</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 </span><span id="power_of_powers-353"><a href="#power_of_powers-353"><span class="linenos">353</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Power of Powers</span>
-</span><span id="power_of_powers-354"><a href="#power_of_powers-354"><span class="linenos">354</span></a><span class="sd">    </span>
+</span><span id="power_of_powers-354"><a href="#power_of_powers-354"><span class="linenos">354</span></a>
 </span><span id="power_of_powers-355"><a href="#power_of_powers-355"><span class="linenos">355</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="power_of_powers-356"><a href="#power_of_powers-356"><span class="linenos">356</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="power_of_powers-357"><a href="#power_of_powers-357"><span class="linenos">357</span></a><span class="sd">    | Simplify $18^{10^{8}}$ | $18^{80}$ |</span>
@@ -1500,7 +1500,7 @@
     <a class="headerlink" href="#square"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="square-369"><a href="#square-369"><span class="linenos">369</span></a><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">max_square_num</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
 </span><span id="square-370"><a href="#square-370"><span class="linenos">370</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Square</span>
-</span><span id="square-371"><a href="#square-371"><span class="linenos">371</span></a><span class="sd">    </span>
+</span><span id="square-371"><a href="#square-371"><span class="linenos">371</span></a>
 </span><span id="square-372"><a href="#square-372"><span class="linenos">372</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="square-373"><a href="#square-373"><span class="linenos">373</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="square-374"><a href="#square-374"><span class="linenos">374</span></a><span class="sd">    | $17^2=$ | $289$ |</span>
@@ -1545,7 +1545,7 @@
     <a class="headerlink" href="#square_root"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="square_root-382"><a href="#square_root-382"><span class="linenos">382</span></a><span class="k">def</span> <span class="nf">square_root</span><span class="p">(</span><span class="n">min_no</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_no</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
 </span><span id="square_root-383"><a href="#square_root-383"><span class="linenos">383</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Square Root</span>
-</span><span id="square_root-384"><a href="#square_root-384"><span class="linenos">384</span></a><span class="sd">    </span>
+</span><span id="square_root-384"><a href="#square_root-384"><span class="linenos">384</span></a>
 </span><span id="square_root-385"><a href="#square_root-385"><span class="linenos">385</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="square_root-386"><a href="#square_root-386"><span class="linenos">386</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="square_root-387"><a href="#square_root-387"><span class="linenos">387</span></a><span class="sd">    | $\sqrt{64}=$ | $8$ |</span>
@@ -1553,7 +1553,7 @@
 </span><span id="square_root-389"><a href="#square_root-389"><span class="linenos">389</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_no</span><span class="p">,</span> <span class="n">max_no</span><span class="p">)</span>
 </span><span id="square_root-390"><a href="#square_root-390"><span class="linenos">390</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span>
 </span><span id="square_root-391"><a href="#square_root-391"><span class="linenos">391</span></a>
-</span><span id="square_root-392"><a href="#square_root-392"><span class="linenos">392</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="square_root-392"><a href="#square_root-392"><span class="linenos">392</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -1590,7 +1590,7 @@
     <a class="headerlink" href="#subtraction"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="subtraction-395"><a href="#subtraction-395"><span class="linenos">395</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
 </span><span id="subtraction-396"><a href="#subtraction-396"><span class="linenos">396</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
-</span><span id="subtraction-397"><a href="#subtraction-397"><span class="linenos">397</span></a><span class="sd">    </span>
+</span><span id="subtraction-397"><a href="#subtraction-397"><span class="linenos">397</span></a>
 </span><span id="subtraction-398"><a href="#subtraction-398"><span class="linenos">398</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="subtraction-399"><a href="#subtraction-399"><span class="linenos">399</span></a><span class="sd">    | --- | --- |</span>
 </span><span id="subtraction-400"><a href="#subtraction-400"><span class="linenos">400</span></a><span class="sd">    | $54-22=$ | $32$ |</span>

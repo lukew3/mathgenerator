@@ -277,24 +277,6 @@ def factors(max_val=1000):
     return problem, f'${solution}$'
 
 
-def gcd(max_val=20):
-    """GCD (Greatest Common Denominator)
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | GCD of $18$ and $4 = $ | $2$ |
-    """
-    a = random.randint(1, max_val)
-    b = random.randint(1, max_val)
-    x, y = a, b
-    while y:
-        x, y = y, x % y
-
-    problem = f"GCD of ${a}$ and ${b} = $"
-    solution = f'${x}$'
-    return problem, solution
-
-
 def geometric_mean(max_value=100, max_count=4):
     """Geometric Mean of N Numbers
 
@@ -356,24 +338,6 @@ def harmonic_mean(max_value=100, max_count=4):
 
     problem = f"Harmonic mean of ${count}$ numbers ${', '.join(map(str, nums))} = $"
     solution = f"${ans}$"
-    return problem, solution
-
-
-def hcf(max_val=20):
-    """HCF (Highest Common Factor)
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | HCF of $18$ and $4 = $ | $2$ |
-    """
-    a = random.randint(1, max_val)
-    b = random.randint(1, max_val)
-    x, y = a, b
-    while (y):
-        x, y = y, x % y
-
-    problem = f"HCF of ${a}$ and ${b} = $"
-    solution = f'${x}$'
     return problem, solution
 
 

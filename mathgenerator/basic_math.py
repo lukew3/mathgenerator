@@ -208,8 +208,8 @@ def fraction_to_decimal(max_res=99, max_divid=99):
     return rf'${a}\div{b}=$', f'${c}$'
 
 
-def greatest_common_divisor(numbers_count=2, max_number_limit=10**9):
-    r"""Greatest Common Divisor of N Numbers
+def greatest_common_divisor(numbers_count=2, max_num=10**3):
+    r"""Greatest Common Divisor of N Numbers ( GCD / HCF )
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
@@ -224,7 +224,7 @@ def greatest_common_divisor(numbers_count=2, max_number_limit=10**9):
         return number1
 
     numbers_count = max(numbers_count, 2)
-    numbers = [random.randint(0, max_number_limit)
+    numbers = [random.randint(0, max_num)
                for _ in range(numbers_count)]
 
     greatestCommonDivisor = greatestCommonDivisorOfTwoNumbers(
