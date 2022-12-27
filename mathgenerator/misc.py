@@ -224,8 +224,7 @@ def decimal_to_roman_numerals(max_decimal=4000):
         elif last_value == 4:
             solution += (roman_dict[div] + roman_dict[div * 5])
         elif 5 <= last_value <= 8:
-            solution += (roman_dict[div * 5] + \
-                         (roman_dict[div] * (last_value - 5)))
+            solution += (roman_dict[div * 5] + (roman_dict[div] * (last_value - 5)))
         elif last_value == 9:
             solution += (roman_dict[div] + roman_dict[div * 10])
         x = math.floor(x % div)
