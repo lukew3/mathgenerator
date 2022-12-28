@@ -13,6 +13,9 @@ See [CONTRIBUTING.md](https://github.com/lukew3/mathgenerator/blob/main/CONTRIBU
 
 ## Installation
 
+Install rust: https://www.rust-lang.org/learn/get-started
+Install wasm pack: https://rustwasm.github.io/wasm-pack/installer/
+
 The project can be install via pip
 
 ```bash
