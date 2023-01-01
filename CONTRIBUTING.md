@@ -17,3 +17,8 @@ If you have never contributed to open source before here is a quick explanation 
 * Navigate to your fork and make your changes. This could be done by cloning and making changes locally on your computer. You can find many tutorials on this online. You could also edit directly on Github if you don't have access to a text editor but doing this, you will not be able to test your function.
 * Create a pull request. Navigate to (the math generator repository pull request tab)[https://github.com/Todarith/mathGenerator/pulls] and click New Pull Request. Then click compare accross forks. Select your fork and branch as the head branch and leave a description. Then click Create Pull Request.
 * If all goes well, your request will be approved and your generator added. Congratulations!
+
+## Project Setup
+1. [Install emscripten](https://emscripten.org/docs/getting_started/downloads.html?ref=hackernoon.com).
+2. Build the project by running `make`.
+3. Run an http server using something like `python -m http.server` and navigate to the created html page to ensure the generator works.
