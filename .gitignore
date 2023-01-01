@@ -141,3 +141,8 @@ cython_debug/
 .vscode/
 
 test.py
+
+# Wasm build
+mathgenerator.wasm
+mathgenerator.html
+mathgenerator.js

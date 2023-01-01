@@ -1,2 +1,2 @@
 make:
-	emcc main.c -o main.js
+	emcc mathgenerator.c -o mathgenerator.html
