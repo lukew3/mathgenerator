@@ -411,11 +411,11 @@ def simplify_square_root(max_variable=100):
             f += 1
     a = b = 1
     for i in factors.keys():
-        if factors[i]&1 == 0:
-           a *= i ** (factors[i] // 2)
+        if factors[i] & 1 == 0:
+            a *= i ** (factors[i] // 2)
         else:
-           a *= i ** ((factors[i]-1) // 2)
-           b *= i
+            a *= i ** ((factors[i]-1) // 2)
+            b *= i
     if a == 1 or b == 1:
         return simplify_square_root(max_variable)
     else:
