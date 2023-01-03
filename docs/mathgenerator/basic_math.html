@@ -113,6 +113,9 @@
                     <a class="function" href="#square_root">square_root</a>
             </li>
             <li>
+                    <a class="function" href="#simplify_square_root">simplify_square_root</a>
+            </li>
+            <li>
                     <a class="function" href="#subtraction">subtraction</a>
             </li>
     </ul>
@@ -529,18 +532,49 @@
 </span><span id="L-391"><a href="#L-391"><span class="linenos">391</span></a>    <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="se">}}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span><span id="L-392"><a href="#L-392"><span class="linenos">392</span></a>
 </span><span id="L-393"><a href="#L-393"><span class="linenos">393</span></a>
-</span><span id="L-394"><a href="#L-394"><span class="linenos">394</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
-</span><span id="L-395"><a href="#L-395"><span class="linenos">395</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
+</span><span id="L-394"><a href="#L-394"><span class="linenos">394</span></a><span class="k">def</span> <span class="nf">simplify_square_root</span><span class="p">(</span><span class="n">max_variable</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span id="L-395"><a href="#L-395"><span class="linenos">395</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Simplify Square Root</span>
 </span><span id="L-396"><a href="#L-396"><span class="linenos">396</span></a>
 </span><span id="L-397"><a href="#L-397"><span class="linenos">397</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
 </span><span id="L-398"><a href="#L-398"><span class="linenos">398</span></a><span class="sd">    | --- | --- |</span>
-</span><span id="L-399"><a href="#L-399"><span class="linenos">399</span></a><span class="sd">    | $54-22=$ | $32$ |</span>
+</span><span id="L-399"><a href="#L-399"><span class="linenos">399</span></a><span class="sd">    | $\sqrt{63}$ | $3\sqrt{7}$ |</span>
 </span><span id="L-400"><a href="#L-400"><span class="linenos">400</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-401"><a href="#L-401"><span class="linenos">401</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_minuend</span><span class="p">)</span>
-</span><span id="L-402"><a href="#L-402"><span class="linenos">402</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">max_diff</span><span class="p">)),</span> <span class="n">a</span><span class="p">)</span>
-</span><span id="L-403"><a href="#L-403"><span class="linenos">403</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
-</span><span id="L-404"><a href="#L-404"><span class="linenos">404</span></a>
-</span><span id="L-405"><a href="#L-405"><span class="linenos">405</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+</span><span id="L-401"><a href="#L-401"><span class="linenos">401</span></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_variable</span><span class="p">)</span>
+</span><span id="L-402"><a href="#L-402"><span class="linenos">402</span></a>    <span class="n">factors</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="L-403"><a href="#L-403"><span class="linenos">403</span></a>    <span class="n">f</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="L-404"><a href="#L-404"><span class="linenos">404</span></a>    <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-405"><a href="#L-405"><span class="linenos">405</span></a>        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">f</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="L-406"><a href="#L-406"><span class="linenos">406</span></a>            <span class="k">if</span> <span class="n">f</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">:</span>
+</span><span id="L-407"><a href="#L-407"><span class="linenos">407</span></a>                <span class="n">factors</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="L-408"><a href="#L-408"><span class="linenos">408</span></a>            <span class="n">factors</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="L-409"><a href="#L-409"><span class="linenos">409</span></a>            <span class="n">x</span> <span class="o">/=</span> <span class="n">f</span>
+</span><span id="L-410"><a href="#L-410"><span class="linenos">410</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="L-411"><a href="#L-411"><span class="linenos">411</span></a>            <span class="n">f</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="L-412"><a href="#L-412"><span class="linenos">412</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="L-413"><a href="#L-413"><span class="linenos">413</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">factors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span><span id="L-414"><a href="#L-414"><span class="linenos">414</span></a>        <span class="k">if</span> <span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&amp;</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="L-415"><a href="#L-415"><span class="linenos">415</span></a>           <span class="n">a</span> <span class="o">*=</span> <span class="n">i</span> <span class="o">**</span> <span class="p">(</span><span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="L-416"><a href="#L-416"><span class="linenos">416</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="L-417"><a href="#L-417"><span class="linenos">417</span></a>           <span class="n">a</span> <span class="o">*=</span> <span class="n">i</span> <span class="o">**</span> <span class="p">((</span><span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="L-418"><a href="#L-418"><span class="linenos">418</span></a>           <span class="n">b</span> <span class="o">*=</span> <span class="n">i</span>
+</span><span id="L-419"><a href="#L-419"><span class="linenos">419</span></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-420"><a href="#L-420"><span class="linenos">420</span></a>        <span class="k">return</span> <span class="n">simplify_square_root</span><span class="p">(</span><span class="n">max_variable</span><span class="p">)</span>
+</span><span id="L-421"><a href="#L-421"><span class="linenos">421</span></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="L-422"><a href="#L-422"><span class="linenos">422</span></a>        <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
+</span><span id="L-423"><a href="#L-423"><span class="linenos">423</span></a>
+</span><span id="L-424"><a href="#L-424"><span class="linenos">424</span></a>
+</span><span id="L-425"><a href="#L-425"><span class="linenos">425</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
+</span><span id="L-426"><a href="#L-426"><span class="linenos">426</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
+</span><span id="L-427"><a href="#L-427"><span class="linenos">427</span></a>
+</span><span id="L-428"><a href="#L-428"><span class="linenos">428</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
+</span><span id="L-429"><a href="#L-429"><span class="linenos">429</span></a><span class="sd">    | --- | --- |</span>
+</span><span id="L-430"><a href="#L-430"><span class="linenos">430</span></a><span class="sd">    | $54-22=$ | $32$ |</span>
+</span><span id="L-431"><a href="#L-431"><span class="linenos">431</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-432"><a href="#L-432"><span class="linenos">432</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_minuend</span><span class="p">)</span>
+</span><span id="L-433"><a href="#L-433"><span class="linenos">433</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">max_diff</span><span class="p">)),</span> <span class="n">a</span><span class="p">)</span>
+</span><span id="L-434"><a href="#L-434"><span class="linenos">434</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</span><span id="L-435"><a href="#L-435"><span class="linenos">435</span></a>
+</span><span id="L-436"><a href="#L-436"><span class="linenos">436</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 
@@ -1577,6 +1611,69 @@
 
 
                 </section>
+                <section id="simplify_square_root">
+                            <input id="simplify_square_root-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">simplify_square_root</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">max_variable</span><span class="o">=</span><span class="mi">100</span></span><span class="return-annotation">):</span></span>
+
+                <label class="view-source-button" for="simplify_square_root-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#simplify_square_root"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="simplify_square_root-395"><a href="#simplify_square_root-395"><span class="linenos">395</span></a><span class="k">def</span> <span class="nf">simplify_square_root</span><span class="p">(</span><span class="n">max_variable</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span id="simplify_square_root-396"><a href="#simplify_square_root-396"><span class="linenos">396</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Simplify Square Root</span>
+</span><span id="simplify_square_root-397"><a href="#simplify_square_root-397"><span class="linenos">397</span></a>
+</span><span id="simplify_square_root-398"><a href="#simplify_square_root-398"><span class="linenos">398</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
+</span><span id="simplify_square_root-399"><a href="#simplify_square_root-399"><span class="linenos">399</span></a><span class="sd">    | --- | --- |</span>
+</span><span id="simplify_square_root-400"><a href="#simplify_square_root-400"><span class="linenos">400</span></a><span class="sd">    | $\sqrt{63}$ | $3\sqrt{7}$ |</span>
+</span><span id="simplify_square_root-401"><a href="#simplify_square_root-401"><span class="linenos">401</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="simplify_square_root-402"><a href="#simplify_square_root-402"><span class="linenos">402</span></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_variable</span><span class="p">)</span>
+</span><span id="simplify_square_root-403"><a href="#simplify_square_root-403"><span class="linenos">403</span></a>    <span class="n">factors</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="simplify_square_root-404"><a href="#simplify_square_root-404"><span class="linenos">404</span></a>    <span class="n">f</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="simplify_square_root-405"><a href="#simplify_square_root-405"><span class="linenos">405</span></a>    <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="simplify_square_root-406"><a href="#simplify_square_root-406"><span class="linenos">406</span></a>        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">f</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="simplify_square_root-407"><a href="#simplify_square_root-407"><span class="linenos">407</span></a>            <span class="k">if</span> <span class="n">f</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">:</span>
+</span><span id="simplify_square_root-408"><a href="#simplify_square_root-408"><span class="linenos">408</span></a>                <span class="n">factors</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="simplify_square_root-409"><a href="#simplify_square_root-409"><span class="linenos">409</span></a>            <span class="n">factors</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="simplify_square_root-410"><a href="#simplify_square_root-410"><span class="linenos">410</span></a>            <span class="n">x</span> <span class="o">/=</span> <span class="n">f</span>
+</span><span id="simplify_square_root-411"><a href="#simplify_square_root-411"><span class="linenos">411</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="simplify_square_root-412"><a href="#simplify_square_root-412"><span class="linenos">412</span></a>            <span class="n">f</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="simplify_square_root-413"><a href="#simplify_square_root-413"><span class="linenos">413</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="simplify_square_root-414"><a href="#simplify_square_root-414"><span class="linenos">414</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">factors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span><span id="simplify_square_root-415"><a href="#simplify_square_root-415"><span class="linenos">415</span></a>        <span class="k">if</span> <span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&amp;</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="simplify_square_root-416"><a href="#simplify_square_root-416"><span class="linenos">416</span></a>           <span class="n">a</span> <span class="o">*=</span> <span class="n">i</span> <span class="o">**</span> <span class="p">(</span><span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="simplify_square_root-417"><a href="#simplify_square_root-417"><span class="linenos">417</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="simplify_square_root-418"><a href="#simplify_square_root-418"><span class="linenos">418</span></a>           <span class="n">a</span> <span class="o">*=</span> <span class="n">i</span> <span class="o">**</span> <span class="p">((</span><span class="n">factors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="simplify_square_root-419"><a href="#simplify_square_root-419"><span class="linenos">419</span></a>           <span class="n">b</span> <span class="o">*=</span> <span class="n">i</span>
+</span><span id="simplify_square_root-420"><a href="#simplify_square_root-420"><span class="linenos">420</span></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="simplify_square_root-421"><a href="#simplify_square_root-421"><span class="linenos">421</span></a>        <span class="k">return</span> <span class="n">simplify_square_root</span><span class="p">(</span><span class="n">max_variable</span><span class="p">)</span>
+</span><span id="simplify_square_root-422"><a href="#simplify_square_root-422"><span class="linenos">422</span></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="simplify_square_root-423"><a href="#simplify_square_root-423"><span class="linenos">423</span></a>        <span class="k">return</span> <span class="sa">rf</span><span class="s1">&#39;$\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">rf</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">\sqrt</span><span class="se">{{</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="se">}}</span><span class="s1">$&#39;</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Simplify Square Root</p>
+
+<table>
+<thead>
+<tr>
+  <th>Ex. Problem</th>
+  <th>Ex. Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>$\sqrt{63}$</td>
+  <td>$3\sqrt{7}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+                </section>
                 <section id="subtraction">
                             <input id="subtraction-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
@@ -1588,18 +1685,18 @@
 
     </div>
     <a class="headerlink" href="#subtraction"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="subtraction-395"><a href="#subtraction-395"><span class="linenos">395</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
-</span><span id="subtraction-396"><a href="#subtraction-396"><span class="linenos">396</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
-</span><span id="subtraction-397"><a href="#subtraction-397"><span class="linenos">397</span></a>
-</span><span id="subtraction-398"><a href="#subtraction-398"><span class="linenos">398</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
-</span><span id="subtraction-399"><a href="#subtraction-399"><span class="linenos">399</span></a><span class="sd">    | --- | --- |</span>
-</span><span id="subtraction-400"><a href="#subtraction-400"><span class="linenos">400</span></a><span class="sd">    | $54-22=$ | $32$ |</span>
-</span><span id="subtraction-401"><a href="#subtraction-401"><span class="linenos">401</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="subtraction-402"><a href="#subtraction-402"><span class="linenos">402</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_minuend</span><span class="p">)</span>
-</span><span id="subtraction-403"><a href="#subtraction-403"><span class="linenos">403</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">max_diff</span><span class="p">)),</span> <span class="n">a</span><span class="p">)</span>
-</span><span id="subtraction-404"><a href="#subtraction-404"><span class="linenos">404</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
-</span><span id="subtraction-405"><a href="#subtraction-405"><span class="linenos">405</span></a>
-</span><span id="subtraction-406"><a href="#subtraction-406"><span class="linenos">406</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="subtraction-426"><a href="#subtraction-426"><span class="linenos">426</span></a><span class="k">def</span> <span class="nf">subtraction</span><span class="p">(</span><span class="n">max_minuend</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
+</span><span id="subtraction-427"><a href="#subtraction-427"><span class="linenos">427</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Subtraction of two numbers</span>
+</span><span id="subtraction-428"><a href="#subtraction-428"><span class="linenos">428</span></a>
+</span><span id="subtraction-429"><a href="#subtraction-429"><span class="linenos">429</span></a><span class="sd">    | Ex. Problem | Ex. Solution |</span>
+</span><span id="subtraction-430"><a href="#subtraction-430"><span class="linenos">430</span></a><span class="sd">    | --- | --- |</span>
+</span><span id="subtraction-431"><a href="#subtraction-431"><span class="linenos">431</span></a><span class="sd">    | $54-22=$ | $32$ |</span>
+</span><span id="subtraction-432"><a href="#subtraction-432"><span class="linenos">432</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="subtraction-433"><a href="#subtraction-433"><span class="linenos">433</span></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_minuend</span><span class="p">)</span>
+</span><span id="subtraction-434"><a href="#subtraction-434"><span class="linenos">434</span></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">max_diff</span><span class="p">)),</span> <span class="n">a</span><span class="p">)</span>
+</span><span id="subtraction-435"><a href="#subtraction-435"><span class="linenos">435</span></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</span><span id="subtraction-436"><a href="#subtraction-436"><span class="linenos">436</span></a>
+</span><span id="subtraction-437"><a href="#subtraction-437"><span class="linenos">437</span></a>    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">=$&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">$&#39;</span>
 </span></pre></div>
 
 

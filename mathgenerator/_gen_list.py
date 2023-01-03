@@ -125,4 +125,5 @@ gen_list = [
     ("surface_area_pyramid", "geometry"),
     ("is_composite", "basic_math"),
     ("complementary_and_supplementary_angle", "geometry"),
+    ("simplify_square_root", "basic_math"),
 ]
