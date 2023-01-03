@@ -391,6 +391,37 @@ def square_root(min_no=1, max_no=12):
     return rf'$\sqrt{{{a}}}=$', f'${b}$'
 
 
+def simplify_square_root(max_variable=100):
+    r"""Simplify Square Root
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\sqrt{63}$ | $3\sqrt{7}$ |
+    """
+    y = x = random.randint(1, max_variable)
+    factors = {}
+    f = 2
+    while x != 1:
+        if x % f == 0:
+            if f not in factors:
+                factors[f] = 0
+            factors[f] += 1
+            x /= f
+        else:
+            f += 1
+    a = b = 1
+    for i in factors.keys():
+        if factors[i]&1 == 0:
+           a *= i ** (factors[i] // 2)
+        else:
+           a *= i ** ((factors[i]-1) // 2)
+           b *= i
+    if a == 1 or b == 1:
+        return simplify_square_root(max_variable)
+    else:
+        return rf'$\sqrt{{{y}}}$', rf'${a}\sqrt{{{b}}}$'
+
+
 def subtraction(max_minuend=99, max_diff=99):
     r"""Subtraction of two numbers
 
