@@ -414,7 +414,7 @@ def simplify_square_root(max_variable=100):
         if factors[i] & 1 == 0:
             a *= i ** (factors[i] // 2)
         else:
-            a *= i ** ((factors[i]-1) // 2)
+            a *= i ** ((factors[i] - 1) // 2)
             b *= i
     if a == 1 or b == 1:
         return simplify_square_root(max_variable)
