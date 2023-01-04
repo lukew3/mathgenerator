@@ -1,0 +1,38 @@
+import random, math
+def line_equation():
+    x1=random.randint(-20,20)
+    x2=random.randint(-20,20)
+    if x1==x2:
+        return line_equation()
+    y1=random.randint(-20,20)
+    y2=random.randint(-20,20)
+    m1=int((y2-y1)/math.gcd(y2-y1,x2-x1))
+    m2=int((x2-x1)/math.gcd(y2-y1,x2-x1))
+    c="+"+str()+"/"+str()
+    c1=int((y1*(x2-x1)-(y2-y1)*x1)/math.gcd(y1*(x2-x1)-(y2-y1)*x1,(x2-x1)))
+    c2=int((x2-x1)/math.gcd(y1*(x2-x1)-(y2-y1)*x1,(x2-x1)))
+    c="%+d"%c1+"/"+str(c2)
+    if c1==0:   c=""
+    if c2<0:
+        c2=-c2
+        c1=-c1
+        c="%+d"%(c1)+"/"+str(c2)    
+    if c2==1:
+        if c1==(1 or -1):
+            c="%+d"%(c1//c2)
+        c="%+d"%(c1)
+    
+    if m1==0:   return "("+str(x1)+","+str(y1)+"), ("+str(x2)+","+str(y2)+")","y="+c
+    
+    if m2<0:
+        m1=-m1
+        m2=-m2
+    
+    if m2==1:
+        if m1==1:
+            return "("+str(x1)+","+str(y1)+"), ("+str(x2)+","+str(y2)+")","y=x"+c
+        if m1==-1:
+            return "("+str(x1)+","+str(y1)+"), ("+str(x2)+","+str(y2)+")","y=-x"+c
+        return "("+str(x1)+","+str(y1)+"), ("+str(x2)+","+str(y2)+")","y="+str(m1)+"x"+c
+            
+    return "("+str(x1)+","+str(y1)+"), ("+str(x2)+","+str(y2)+")", "y="+str(m1)+"/"+str(m2)+"x"+c
