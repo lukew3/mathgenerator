@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <emscripten.h>
 
-EMSCRIPTEN_KEEPALIVE int square(int n) {
-    return n*n;
-}
-
-EMSCRIPTEN_KEEPALIVE int add(int a, int b) {
-    return a + b;
+EMSCRIPTEN_KEEPALIVE float absolute_difference() {
+    float rand_num = emscripten_random();
+    return rand_num;
 }
 
 int main() {

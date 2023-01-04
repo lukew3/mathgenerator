@@ -1,5 +1,8 @@
 const $ = (id) => document.getElementById(id);
 const importObject = {
+  env: {
+    emscripten_random: () => Math.random(),
+  },
   wasi_snapshot_preview1: {
     proc_exit: (i) => console.log(i),
   },
@@ -7,7 +10,8 @@ const importObject = {
 
 (async function main() {
   const mathgenerator = (await WebAssembly.instantiateStreaming(fetch("mathgenerator.wasm"), importObject)).instance.exports
-
+  console.log(mathgenerator);
+  
   document.getElementById("testForm").addEventListener("submit", (e) => {
     e.preventDefault();
     let func = $('functionInput').value;
