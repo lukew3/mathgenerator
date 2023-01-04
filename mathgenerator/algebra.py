@@ -498,8 +498,8 @@ def line_equation_from_2_points(max_val=20):
     x2 = random.randint(-max_val, max_val)
     if x1 == x2:
         return line_equation_from_2_points(max_val=max_val)
-    y1 = random.randint(-max_val,max_val)
-    y2 = random.randint(-max_val,max_val)
+    y1 = random.randint(-max_val, max_val)
+    y2 = random.randint(-max_val, max_val)
     m1 = (y2 - y1) // math.gcd(y2 - y1, x2 - x1)
     m2 = (x2 - x1) // math.gcd(y2 - y1, x2 - x1)
     c1 = (y1 * (x2 - x1) - (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
@@ -507,13 +507,13 @@ def line_equation_from_2_points(max_val=20):
     if c2 < 0:
         c2 = -c2
         c1 = -c1
-        c = "%+d"%(c1)+"/"+str(c2)
+        c = "%+d"%(c1) + "/" + str(c2)
     c = rf"{'+' if c1 >= 0 else '-'}\frac{{{c1}}}{{{c2}}}" if c1 != 0 else ""
     if c2 == 1:
         if c1 == (1 or -1):
             c = "%+d"%(c1 // c2)
         c = "%+d"%(c1)
-    
+
     problem = f'Find the equation of the line passing through the points $({x1},{y1})$ and $({x2},{y2})$.'
 
     if m1 == 0:
@@ -521,13 +521,13 @@ def line_equation_from_2_points(max_val=20):
     if m2 < 0:
         m1 = -m1
         m2 = -m2
-    if m2==1:
-        if m1==1:
+    if m2 == 1:
+        if m1 == 1:
             return problem, f"$y=x{c}$"
-        if m1==-1:
+        if m1 == -1:
             return problem, f"$y=-x{c}$"
         return problem, f"y={m1}x{c}"
-            
+
     return problem, rf"$y=\frac{{{m1}}}{{{m2}}}x{c}$"
 
 
