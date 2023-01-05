@@ -504,15 +504,13 @@ def line_equation_from_2_points(max_val=20):
     m2 = (x2 - x1) // math.gcd(y2 - y1, x2 - x1)
     c1 = (y1 * (x2 - x1) - (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
     c2 = (x2 - x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
+    c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}" if c1 != 0 else ""
     if c2 < 0:
         c2 = -c2
         c1 = -c1
-        c = "%+d"%(c1) + "/" + str(c2)
-    c = rf"{'+' if c1 >= 0 else '-'}\frac{{{c1}}}{{{c2}}}" if c1 != 0 else ""
+        c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}"
     if c2 == 1:
-        if c1 == (1 or -1):
-            c = "%+d"%(c1 // c2)
-        c = "%+d"%(c1)
+        c = f"{c1:+}"
 
     problem = f'Find the equation of the line passing through the points $({x1},{y1})$ and $({x2},{y2})$.'
 
