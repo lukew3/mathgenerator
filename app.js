@@ -1,17 +1,13 @@
+import * as mathgenerator from './pkg/mathgenerator.js';
+
 const $ = (id) => document.getElementById(id);
-const importObject = {
-  env: {
-    emscripten_random: () => Math.random(),
-  },
-  wasi_snapshot_preview1: {
-    proc_exit: (i) => console.log(i),
-  },
-};
 
 (async function main() {
-  const mathgenerator = (await WebAssembly.instantiateStreaming(fetch("mathgenerator.wasm"), importObject)).instance.exports
   console.log(mathgenerator);
-  
+
+  // This shouldn't be necessary right?
+  mathgenerator.default();
+
   document.getElementById("testForm").addEventListener("submit", (e) => {
     e.preventDefault();
     let func = $('functionInput').value;
