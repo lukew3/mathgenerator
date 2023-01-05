@@ -487,6 +487,48 @@ def linear_equations(n=2, var_range=20, coeff_range=20):
     return f'Given the equations ${problem}$, solve for $x$ and $y$', f'${solution}$'
 
 
+def line_equation_from_2_points(max_val=20):
+    r"""Equation of Line from Two Points
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the equation of the line passing through the points $(-19,-8)$ and $(-2,0)$. | $y=\frac{8}{17}x+\frac{16}{17}$ |
+    """
+    x1 = random.randint(-max_val, max_val)
+    x2 = random.randint(-max_val, max_val)
+    if x1 == x2:
+        return line_equation_from_2_points(max_val=max_val)
+    y1 = random.randint(-max_val, max_val)
+    y2 = random.randint(-max_val, max_val)
+    m1 = (y2 - y1) // math.gcd(y2 - y1, x2 - x1)
+    m2 = (x2 - x1) // math.gcd(y2 - y1, x2 - x1)
+    c1 = (y1 * (x2 - x1) - (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
+    c2 = (x2 - x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
+    c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}" if c1 != 0 else ""
+    if c2 < 0:
+        c2 = -c2
+        c1 = -c1
+        c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}"
+    if c2 == 1:
+        c = f"{c1:+}"
+
+    problem = f'Find the equation of the line passing through the points $({x1},{y1})$ and $({x2},{y2})$.'
+
+    if m1 == 0:
+        return problem, f"$y={c}$"
+    if m2 < 0:
+        m1 = -m1
+        m2 = -m2
+    if m2 == 1:
+        if m1 == 1:
+            return problem, f"$y=x{c}$"
+        if m1 == -1:
+            return problem, f"$y=-x{c}$"
+        return problem, f"y={m1}x{c}"
+
+    return problem, rf"$y=\frac{{{m1}}}{{{m2}}}x{c}$"
+
+
 def log(max_base=3, max_val=8):
     r"""Logarithm
 
