@@ -1,3 +1,3 @@
 
 make:
-	emcc mathgenerator.c -s WASM=1 -o mathgenerator.wasm
+	emcc mathgenerator.cpp -s WASM=1 -o mathgenerator.wasm --bind
