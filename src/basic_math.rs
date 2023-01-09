@@ -21,12 +21,12 @@ pub fn greet() {
 
 #[wasm_bindgen]
 /// Adds two numbers
-pub fn addition(max_term : u8) -> String {
+pub fn addition(max_term : u8) -> Vec<String> {
     let mut rng = rand::thread_rng();
     let a : u8 = rng.gen_range(0..max_term);
     let b : u8 = rng.gen_range(0..max_term);
     let prob : String = format!("${} + {} =$", a, b);
-    // let sum : String = format!("${}$", a + b);
-    return prob;
+    let sol : String = format!("${}$", a + b);
+    return vec![prob, sol];
 }
 
