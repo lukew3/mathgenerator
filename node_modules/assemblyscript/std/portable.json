@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig-base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "allowJs": true,
+    "typeRoots": [ "types" ],
+    "types": [ "portable" ],
+    "lib": ["esnext", "esnext.string"]
+  }
+}

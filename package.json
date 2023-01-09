@@ -1,0 +1,33 @@
+{
+  "name": "mathgenerator",
+  "version": "1.0.0",
+  "description": "A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukew3/mathgenerator.git"
+  },
+  "author": "Luke Weiler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukew3/mathgenerator/issues"
+  },
+  "homepage": "https://github.com/lukew3/mathgenerator#readme",
+  "devDependencies": {
+    "assemblyscript": "^0.26.1"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
