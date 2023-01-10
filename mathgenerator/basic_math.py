@@ -70,12 +70,12 @@ def cube_root(min_no=1, max_no=1000):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | What is the cube root of: $\sqrt[3]{125}=$ to 2 decimal places? | $5$ |
+    | Solve for $\sqrt[3]{125}=$ to 2 decimal places. | $5$ |
     """
-    b = random.randint(min_no, max_no)
-    a = b**(1 / 3)
+    a = random.randint(min_no, max_no)
+    b = a ** (1 / 3)
 
-    return (rf"What is the cube root of: $\sqrt[3]{{{b}}}=$ to 2 decimal places?", f"${round(a, 2)}$")
+    return (rf"Solve for $\sqrt[3]{{{a}}}=$ to 2 decimal places.", f"${round(b, 2)}$")
 
 
 def divide_fractions(max_val=10):

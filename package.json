@@ -1,0 +1,24 @@
+{
+  "name": "mathgenerator",
+  "version": "1.0.0",
+  "description": "A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukew3/mathgenerator.git"
+  },
+  "author": "Luke Weiler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukew3/mathgenerator/issues"
+  },
+  "homepage": "https://github.com/lukew3/mathgenerator#readme"
+}
