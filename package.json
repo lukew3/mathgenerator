@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
