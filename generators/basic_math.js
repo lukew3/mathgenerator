@@ -145,7 +145,7 @@ export function fraction_to_decimal(max_res=99, max_divid=99) {
 }
 
 export function greatest_common_divisor(numbers_count=2, max_num=10**3) {
-    const numbers_count = Math.max(numbers_count, 2);
+    numbers_count = Math.max(numbers_count, 2);
     let numbers = [];
     for (let i = 0; i < numbers_count; i++) {
         numbers.push(randint(0, max_num));
