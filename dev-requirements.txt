@@ -1,6 +1,0 @@
-pytest
-flake8
-autopep8
-sympy
-scipy
-pdoc
