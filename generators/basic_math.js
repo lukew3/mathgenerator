@@ -1,19 +1,4 @@
-function randint(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
-
-function randomchoice(a, b) {
-    return Math.random() > 0.5 ? a : b;
-}
-
-function calculate_gcd(x, y) {
-    while (y) {
-        var t = y;
-        y = x % y;
-        x = t;
-    }
-    return x;
-}
+import {randint, randomchoice, calculate_gcd} from '../utils.js';
 
 export function absolute_difference(max_a=100, max_b=100) {
     const a = randint(-1 * max_a, max_a);
