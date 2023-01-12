@@ -1,0 +1,19 @@
+{
+  "name": "mathgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukew3/mathgenerator.git"
+  },
+  "author": "Luke Weiler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukew3/mathgenerator/issues"
+  },
+  "homepage": "https://github.com/lukew3/mathgenerator#readme"
+}
