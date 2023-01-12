@@ -20,3 +20,13 @@ export {
     simplify_square_root,
     subtraction
 } from './generators/basic_math.js';
+
+export {
+    basic_algebra,
+    combine_like_terms,
+    complex_quadratic,
+    compound_interest,
+    distance_two_points,
+    expanding,
+    factoring
+} from './generators/algebra.js';

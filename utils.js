@@ -14,4 +14,13 @@ export function calculate_gcd(x, y) {
     }
     return x;
 }
-  
+
+export function intParser(z) {
+    if (z > 0) {
+        return `+${z}`;
+    } else if (z < 0) {
+        return `-${abs(z)}`;
+    } else {
+        return '';
+    }
+}
