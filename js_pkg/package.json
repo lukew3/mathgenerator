@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lukew3/mathgenerator/issues"
   },
-  "homepage": "https://github.com/lukew3/mathgenerator#readme"
+  "homepage": "https://github.com/lukew3/mathgenerator#readme",
+  "dependencies": {
+    "mathjs": "^11.5.0"
+  }
 }
