@@ -765,3 +765,27 @@ def vector_dot(min_val=-20, max_val=20):
     problem = rf'${a}\cdot{b}=$'
     solution = f'${c}$'
     return problem, solution
+
+
+def orthogonal_projection(min_val=-10, max_val=10):
+    r"""Orthogonal Projection
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the orthogonal projection of $[2, 3]$ onto $[4, -7]$ | $[\frac{-4}{5}, \frac{7}{5}]$ |
+    """
+    v = [random.randint(min_val, max_val) for _ in range(2)]
+    u = [random.randint(min_val, max_val) for _ in range(2)]
+    dot_t = v[0] * u[0] + v[1] * u[1]
+    dot_b = u[0] * u[0] + u[1] * u[1]
+    frac = fractions.Fraction(dot_t, dot_b).limit_denominator()
+    y = [frac * u[0], frac * u[1]]
+
+    if y[0].denominator != 1:
+        y[0] = rf'\frac{{{y[0].numerator}}}{{{y[0].denominator}}}'
+    if y[1].denominator != 1:
+        y[1] = rf'\frac{{{y[1].numerator}}}{{{y[1].denominator}}}'
+
+    problem = f'Find the orthogonal projection of ${v}$ onto ${u}$'
+    solution = f'$[{y[0]}, {y[1]}]$'
+    return problem, solution
