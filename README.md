@@ -19,6 +19,19 @@ The project can be install via pip
 pip install mathgenerator
 ```
 
+### Install clang
+https://00f.net/2019/04/07/compiling-to-webassembly-with-llvm-and-clang/
+
+### Install llvm
+```
+bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+```
+
+### make
+Just run
+```
+make
+```
 ## Usage
 Here is an example of how you would generate an addition problem:
 
