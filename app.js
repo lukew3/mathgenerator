@@ -1,4 +1,15 @@
 const $ = (id) => document.getElementById(id);
+
+// This is a helper function to read a null-terminated string from C
+let module;
+const textDecoder = new TextDecoder();
+const readStaticCString = (address) => {
+  const buffer = module.instance.exports.memory.buffer;
+  const encodedStringLength = (new Uint8Array(buffer, address)).indexOf(0);
+  const encodedStringBuffer = new Uint8Array(buffer, address, encodedStringLength);
+  return textDecoder.decode(encodedStringBuffer);
+};
+
 const importObject = {
   env: {
     emscripten_random: () => Math.random(),
@@ -9,7 +20,8 @@ const importObject = {
 };
 
 (async function main() {
-  const mathgenerator = (await WebAssembly.instantiateStreaming(fetch("mathgenerator.wasm"), importObject)).instance.exports
+  module = await WebAssembly.instantiateStreaming(fetch("mathgenerator.wasm"), importObject);
+  const mathgenerator = module.instance.exports
   console.log(mathgenerator);
   
   document.getElementById("testForm").addEventListener("submit", (e) => {
@@ -20,11 +32,11 @@ const importObject = {
     if (func == '') {
       $('result').textContent = "Please provide a function";
     } else if (arg2 != "") {
-      $('result').textContent = mathgenerator[func](Number(arg1), Number(arg2));
+      $('result').textContent = readStaticCString(mathgenerator[func](Number(arg1), Number(arg2)));
     } else if (arg1 != "") {
-      $('result').textContent = mathgenerator[func](Number(arg1));
+      $('result').textContent = readStaticCString(mathgenerator[func](Number(arg1)));
     } else {
-      $('result').textContent = mathgenerator[func]();
+      $('result').textContent = readStaticCString(mathgenerator[func]());
     }
   })
 })()
