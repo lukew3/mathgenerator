@@ -26,7 +26,11 @@ pub fn addition(max_term : u8) -> String {
     let a : u8 = rng.gen_range(0..max_term);
     let b : u8 = rng.gen_range(0..max_term);
     let prob : String = format!("${} + {} =$", a, b);
-    // let sum : String = format!("${}$", a + b);
-    return prob;
+    let sum : String = format!("${}$", a + b);
+    return format!("{}|||{}", prob, sum);
 }
 
+#[wasm_bindgen]
+pub fn addition_default() -> String {
+    return addition(10)
+}
