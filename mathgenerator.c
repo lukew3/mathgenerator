@@ -9,7 +9,7 @@ EMSCRIPTEN_KEEPALIVE char* absolute_difference() {
     float rand_num = emscripten_random();
     char* prob = "prob";
     char* ans = "ans";
-    // snprintf(prob, 100, "What is the absolute difference between %f and %f?", rand_num, rand_num);
+    sprintf(prob, "What is the absolute difference between %f and %f?", rand_num, rand_num);
     // std::vector<std::string> vec = {prob, ans};
     return prob;
 }

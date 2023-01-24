@@ -13,6 +13,7 @@ const readStaticCString = (address) => {
 const importObject = {
   env: {
     emscripten_random: () => Math.random(),
+    emscripten_memcpy_big: (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num)
   },
   wasi_snapshot_preview1: {
     proc_exit: (i) => console.log(i),
