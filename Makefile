@@ -1,6 +1,6 @@
 
 make:
-	emcc mathgenerator.c -s WASM=1 -o mathgenerator.wasm
+	clang mathgenerator.c -o demo/mathgenerator.wasm
 
 serve:
-	python3 -m http.server 8000
+	cd demo && python3 -m http.server 8000
