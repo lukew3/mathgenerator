@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Mathgenerator WASM</title>
+  <style>
+    #functionInput {
+      width: 10em;
+    }
+    .argInput {
+      width: 3em;
+    }
+  </style>
+</head>
+<body>
+  <h1>mathgenerator.wasm</h1>
+  <p>Open the console to see tests.</p>
+  <form id="testForm">
+    <label>mathgenerator.</label>
+    <input type="text" id="functionInput">
+    <label>(</label>
+    <input type="text" id="arg1Input" class="argInput">
+    <label>, </label>
+    <input type="text" id="arg2Input" class="argInput">
+    <label>)</label>
+    <input type="submit" value=" = ">
+  </form>
+  <p id="result">Result will appear here</p>
+  <script src="bundle.js" type="module"></script>
+</body>
+</html>
