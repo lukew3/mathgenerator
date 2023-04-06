@@ -128,4 +128,6 @@ gen_list = [
     ("simplify_square_root", "basic_math"),
     ("line_equation_from_2_points", "algebra"),
     ("orthogonal_projection", "algebra"),
+    ("tribonacci_series", "computer_science"),
+    ("nth_tribonacci_number", "computer_science"),
 ]
