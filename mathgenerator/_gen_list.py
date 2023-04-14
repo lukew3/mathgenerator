@@ -17,6 +17,7 @@ gen_list = [
     ("binary_to_decimal", "computer_science"),
     ("divide_fractions", "basic_math"),
     ("multiply_int_to_22_matrix", "algebra"),
+    ("area_of_trapezoid", "geometry"),
     ("area_of_triangle", "geometry"),
     ("valid_triangle", "geometry"),
     ("midpoint_of_two_points", "algebra"),
