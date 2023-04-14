@@ -121,6 +121,7 @@ def area_of_trapezoid(max_len=20):
     solution = f'${round(area, 2)}$'
     return problem, solution
 
+
 def area_of_triangle(max_a=20, max_b=20):
     r"""Area of Triangle
 
