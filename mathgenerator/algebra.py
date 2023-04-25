@@ -158,6 +158,8 @@ def distance_two_points(max_val_xy=20, min_val_xy=-20):
     | --- | --- |
     | Find the distance between $(-19, -6)$ and $(15, -16)$ | $\sqrt{1256}$ |
     """
+    if max_val_xy < min_val_xy: max_val_xy, min_val_xy = min_val_xy, max_val_xy
+
     point1X = random.randint(min_val_xy, max_val_xy + 1)
     point1Y = random.randint(min_val_xy, max_val_xy + 1)
     point2X = random.randint(min_val_xy, max_val_xy + 1)
