@@ -572,3 +572,21 @@ def surds_comparison(max_value=100, max_root=10):
 
     problem = rf"Fill in the blanks ${radicand1}^{{\frac{{1}}{{{degree1}}}}}$ _ ${radicand2}^{{\frac{{1}}{{{degree2}}}}}$"
     return problem, f'${solution}$'
+
+
+def velocity_of_object(max_displacement=1000,max_time=100):
+
+    """Velocity of object
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | A object travels at uniform velocity a distance of 100 m in 4 seconds. What is the velocity of the car? | 25 m/s |
+    """
+
+
+    displacement = random.randint(1,max_displacement)
+    time_taken = random.randint(1, max_time)
+    velocity = "{} m/s".format(round(displacement/time_taken, 2))
+    
+    problem = f"An object travels at uniform velocity a distance of {displacement} m in {time_taken} seconds. What is the velocity of the car? "
+    return problem , velocity

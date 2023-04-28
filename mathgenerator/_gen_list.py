@@ -128,4 +128,5 @@ gen_list = [
     ("simplify_square_root", "basic_math"),
     ("line_equation_from_2_points", "algebra"),
     ("orthogonal_projection", "algebra"),
+    ("velocity_of_object","misc"),
 ]
