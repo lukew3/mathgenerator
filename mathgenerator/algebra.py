@@ -65,7 +65,7 @@ def complex_quadratic(prob_type=0, max_range=10):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Find the roots of given Quadratic Equation $x^2 + 8x + 8 = 0$ | $((-1.172, -6.828)) = (\frac{-8 + \sqrt{32}}{2*1}, (\frac{-8 - \sqrt{32}}{2*1})$ |
+    | Find the roots of given Quadratic Equation $x^2 + 8x + 8 = 0$ | $((-1.172, -6.828)) = (\frac{-8 + \sqrt{32}}{2}, (\frac{-8 - \sqrt{32}}{2})$ |
     """
     if prob_type < 0 or prob_type > 1:
         print("prob_type not supported")
@@ -110,9 +110,9 @@ def complex_quadratic(prob_type=0, max_range=10):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            solution = rf'(\frac{{{-b} + {sqrt_d}i}}{{2*{a}}}, \frac{{{-b} - {sqrt_d}i}}{{2*{a}}})'
+            solution = rf'(\frac{{{-b} + {sqrt_d}i}}{{{2*a}}}, \frac{{{-b} - {sqrt_d}i}}{{{2*a}}})'
         else:
-            solution = rf'(\frac{{{-b} + \sqrt{{{-d}}}i}}{{2*{a}}}, \frac{{{-b} - \sqrt{{{-d}}}i}}{{2*{a}}})'
+            solution = rf'(\frac{{{-b} + \sqrt{{{-d}}}i}}{{{2*a}}}, \frac{{{-b} - \sqrt{{{-d}}}i}}{{{2*a}}})'
 
         return problem, solution
 
@@ -124,9 +124,9 @@ def complex_quadratic(prob_type=0, max_range=10):
 
         if sqrt_d - int(sqrt_d) == 0:
             sqrt_d = int(sqrt_d)
-            g_sol = rf'(\frac{{{-b} + {sqrt_d}}}{{2*{a}}}, \frac{{{-b} - {sqrt_d}}}{{2*{a}}})'
+            g_sol = rf'(\frac{{{-b} + {sqrt_d}}}{{{2*a}}}, \frac{{{-b} - {sqrt_d}}}{{{2*a}}})'
         else:
-            g_sol = rf'(\frac{{{-b} + \sqrt{{{d}}}}}{{2*{a}}}, (\frac{{{-b} - \sqrt{{{d}}}}}{{2*{a}}})'
+            g_sol = rf'(\frac{{{-b} + \sqrt{{{d}}}}}{{{2*a}}}, (\frac{{{-b} - \sqrt{{{d}}}}}{{{2*a}}})'
 
         solution = f'$({s_root1, s_root2}) = {g_sol}$'
 

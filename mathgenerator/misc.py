@@ -476,7 +476,7 @@ def quotient_of_power_same_base(max_base=50, max_power=10):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | The Quotient of $5^{6}$ and $5^{8} = $5^{6-8} = 5^{-2}$ | $0.04$ |
+    | The Quotient of $5^{6}$ and $5^{8} = 5^{6-8} = 5^{-2}$ | $0.04$ |
     """
     base = random.randint(1, max_base)
     power1 = random.randint(1, max_power)
@@ -485,7 +485,7 @@ def quotient_of_power_same_base(max_base=50, max_power=10):
     solution = base ** step
 
     problem = f"The Quotient of ${base}^{{{power1}}}$ and ${base}^{{{power2}}} = " \
-        f"${base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
+        f"{base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
     return problem, f'${solution}$'
 
 
@@ -512,7 +512,7 @@ def set_operation(min_size=3, max_size=7):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Given the two sets $a={1, 2, 4, 5}$, $b={8, 1, 2}. Find the Union, intersection, a-b, b-a, and symmetric difference | Union is ${1, 2, 4, 5, 8}$. Intersection is ${1, 2}$, a-b is ${4, 5}$, b-a is ${8}$. Symmetric difference is ${4, 5, 8}$. |
+    | Given the two sets $a={1, 2, 4, 5}$, $b={8, 1, 2}$. Find the Union, intersection, $a-b$, $b-a$, and symmetric difference | Union is ${1, 2, 4, 5, 8}$. Intersection is ${1, 2}$, $a-b$ is ${4, 5}$, $b-a$ is ${8}$. Symmetric difference is ${4, 5, 8}$. |
     """
     number_variables_a = random.randint(min_size, max_size)
     number_variables_b = random.randint(min_size, max_size)
@@ -525,10 +525,10 @@ def set_operation(min_size=3, max_size=7):
     a = set(a)
     b = set(b)
 
-    problem = f"Given the two sets $a={a}$, $b={b}. " + \
-        "Find the Union, intersection, a-b, b-a, and symmetric difference"
+    problem = f"Given the two sets $a={a}$, $b={b}$. " + \
+        "Find the Union, intersection, $a-b$, $b-a$, and symmetric difference"
     solution = f"Union is ${a.union(b)}$. Intersection is ${a.intersection(b)}$" + \
-        f", a-b is ${a.difference(b)}$, b-a is ${b.difference(a)}$." + \
+        f", $a-b$ is ${a.difference(b)}$, $b-a$ is ${b.difference(a)}$." + \
         f" Symmetric difference is ${a.symmetric_difference(b)}$."
     return problem, solution
 
