@@ -94,7 +94,7 @@ def stationary_points(max_exp=3, max_coef=10):
             problem += coefficient * pow(x, exp)
         solution = sympy.stationary_points(problem, x)
 
-    problem = 'f(x)=' + str(problem).replace('**', '^').replace('*','')
+    problem = 'f(x)=' + str(problem).replace('**', '^').replace('*', '')
     return f'${problem}$', f'${sympy.latex(solution)[6:-8]}}}$'
 
 

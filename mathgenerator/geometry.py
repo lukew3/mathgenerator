@@ -554,7 +554,7 @@ def volume_cone(max_radius=20, max_height=50, unit='m'):
 
 def volume_cube(max_side=20, unit='m'):
     """Volume of a cube
-    
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of a cube with a side length of $19m$ is | $6859 m^3$ |
