@@ -224,6 +224,27 @@ def nth_fibonacci_number(max_n=100):
 
     return problem, f'${solution}$'
 
+
+def nth_tribonacci_number(min_length=1, max_length=80):
+    r"""nth Tribonacci number
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the 14th Tribonacci number? | $504$ |
+    """
+    
+    tribDict = {0:0, 1:0, 2:1}  
+    def recTrib(i):
+        if i not in tribDict:
+            tribDict[i] = recTrib(i-1) + recTrib(i-2) + recTrib(i-3)
+        return tribDict[i]
+    
+    n = random.randint(min_length, max_length)
+    problem = f"What is the {n}th Tribonacci number?"
+    solution = recTrib(n-1)
+    return problem, f'${solution}$'
+
+
 def tribonacci_series(min_length=1, max_length=80):
     r"""Fibonacci Series
 
@@ -245,23 +266,4 @@ def tribonacci_series(min_length=1, max_length=80):
     tribSeries = createTribSeries(n)
     problem = "The Tribonacci Series of the first ${n}$ numbers is ?"
     solution = ', '.join(map(str, tribSeries))
-    return problem, f'${solution}$'
-
-def nth_tribonacci_number(min_length=1, max_length=80):
-    r"""nth Tribonacci number
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | What is the 14th Tribonacci number? | $504$ |
-    """
-    
-    tribDict = {0:0, 1:0, 2:1}  
-    def recTrib(i):
-        if i not in tribDict:
-            tribDict[i] = recTrib(i-1) + recTrib(i-2) + recTrib(i-3)
-        return tribDict[i]
-    
-    n = random.randint(min_length, max_length)
-    problem = f"What is the {n}th Tribonacci number?"
-    solution = recTrib(n-1)
     return problem, f'${solution}$'
