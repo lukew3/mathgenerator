@@ -18,15 +18,17 @@ def get_filepaths(subject_name):
             # Join the two strings in order to form the full filepath.
             filepath = os.path.join(root, filename)
 
-            front_len = 24+len(subject_name)
+            front_len = 24 + len(subject_name)
             filename = filepath[front_len:-3]
             file_paths.append(filename)  # Add it to the list.
 
     return file_paths
 
 
-subjects = ['algebra', 'basic_math', 'calculus',
-            'computer_science', 'geometry', 'misc', 'statistics']
+subjects = [
+    'algebra', 'basic_math', 'calculus', 'computer_science', 'geometry',
+    'misc', 'statistics'
+]
 for subject in subjects:
     full_file_paths = get_filepaths(subject)
     full_file_paths.sort()

@@ -131,5 +131,5 @@ gen_list = [
     ("area_of_trapezoid", "geometry"),
     ("tribonacci_series", "computer_science"),
     ("nth_tribonacci_number", "computer_science"),
-    ("velocity_of_object","misc"),
+    ("velocity_of_object", "misc"),
 ]

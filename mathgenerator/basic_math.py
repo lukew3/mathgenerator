@@ -75,7 +75,9 @@ def cube_root(min_no=1, max_no=1000):
     b = random.randint(min_no, max_no)
     a = b**(1 / 3)
 
-    return (rf"What is the cube root of: $\sqrt[3]{{{b}}}=$ to 2 decimal places?", f"${round(a, 2)}$")
+    return (
+        rf"What is the cube root of: $\sqrt[3]{{{b}}}=$ to 2 decimal places?",
+        f"${round(a, 2)}$")
 
 
 def divide_fractions(max_val=10):
@@ -215,7 +217,6 @@ def greatest_common_divisor(numbers_count=2, max_num=10**3):
     | --- | --- |
     | $GCD(488075608, 75348096)=$ | $8$ |
     """
-
     def greatestCommonDivisorOfTwoNumbers(number1, number2):
         number1 = abs(number1)
         number2 = abs(number2)
@@ -224,8 +225,7 @@ def greatest_common_divisor(numbers_count=2, max_num=10**3):
         return number1
 
     numbers_count = max(numbers_count, 2)
-    numbers = [random.randint(0, max_num)
-               for _ in range(numbers_count)]
+    numbers = [random.randint(0, max_num) for _ in range(numbers_count)]
 
     greatestCommonDivisor = greatestCommonDivisorOfTwoNumbers(
         numbers[0], numbers[1])
@@ -373,7 +373,7 @@ def square(max_square_num=20):
     | $17^2=$ | $289$ |
     """
     a = random.randint(1, max_square_num)
-    b = a ** 2
+    b = a**2
 
     return f'${a}^2=$', f'${b}$'
 
@@ -386,7 +386,7 @@ def square_root(min_no=1, max_no=12):
     | $\sqrt{64}=$ | $8$ |
     """
     b = random.randint(min_no, max_no)
-    a = b ** 2
+    a = b**2
 
     return rf'$\sqrt{{{a}}}=$', f'${b}$'
 
@@ -412,9 +412,9 @@ def simplify_square_root(max_variable=100):
     a = b = 1
     for i in factors.keys():
         if factors[i] & 1 == 0:
-            a *= i ** (factors[i] // 2)
+            a *= i**(factors[i] // 2)
         else:
-            a *= i ** ((factors[i] - 1) // 2)
+            a *= i**((factors[i] - 1) // 2)
             b *= i
     if a == 1 or b == 1:
         return simplify_square_root(max_variable)

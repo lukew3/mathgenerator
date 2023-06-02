@@ -45,10 +45,12 @@ def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
     numTerms = random.randint(1, max_terms)
 
     coefs = [random.randint(1, max_coef) for _ in range(numTerms)]
-    exponents = [random.randint(1, max(max_exp - 1, 2))
-                 for _ in range(numTerms)]
+    exponents = [
+        random.randint(1, max(max_exp - 1, 2)) for _ in range(numTerms)
+    ]
 
-    problem = " + ".join([f"{coefs[i]}x^{{{exponents[i]}}}" for i in range(numTerms)])
+    problem = " + ".join(
+        [f"{coefs[i]}x^{{{exponents[i]}}}" for i in range(numTerms)])
     d = {}
     for i in range(numTerms):
         if exponents[i] in d:
@@ -133,9 +135,7 @@ def complex_quadratic(prob_type=0, max_range=10):
         return problem, solution
 
 
-def compound_interest(max_principle=10000,
-                      max_rate=10,
-                      max_time=10):
+def compound_interest(max_principle=10000, max_rate=10, max_time=10):
     r"""Compound Interest
 
     | Ex. Problem | Ex. Solution |
@@ -165,17 +165,14 @@ def distance_two_points(max_val_xy=20, min_val_xy=-20):
     point2X = random.randint(min_val_xy, max_val_xy + 1)
     point2Y = random.randint(min_val_xy, max_val_xy + 1)
 
-    distanceSq = (point1X - point2X) ** 2 + (point1Y - point2Y) ** 2
+    distanceSq = (point1X - point2X)**2 + (point1Y - point2Y)**2
 
     solution = rf"$\sqrt{{{distanceSq}}}$"
     problem = f"Find the distance between $({point1X}, {point1Y})$ and $({point2X}, {point2Y})$"
     return problem, solution
 
 
-def expanding(range_x1=10,
-              range_x2=10,
-              range_a=10,
-              range_b=10):
+def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
     r"""Expanding Factored Binomial
 
     | Ex. Problem | Ex. Solution |
@@ -340,10 +337,10 @@ def intersection_of_two_lines(min_m=-10,
             x = rf"\frac{{{x.numerator}}}{{{x.denominator}}}"
         return x
 
-    m1 = (random.randint(min_m,
-                         max_m), random.randint(min_denominator, max_denominator))
-    m2 = (random.randint(min_m,
-                         max_m), random.randint(min_denominator, max_denominator))
+    m1 = (random.randint(min_m, max_m),
+          random.randint(min_denominator, max_denominator))
+    m2 = (random.randint(min_m, max_m),
+          random.randint(min_denominator, max_denominator))
 
     b1 = random.randint(min_b, max_b)
     b2 = random.randint(min_b, max_b)
@@ -409,7 +406,8 @@ def invert_matrix(square_matrix_dimension=3,
 
             for i in range(1, square_matrix_dimension - 1):
                 Mat[i] = [
-                    sum(i) for i in zip(Mat[square_matrix_dimension - 1], Mat[i])
+                    sum(i)
+                    for i in zip(Mat[square_matrix_dimension - 1], Mat[i])
                 ]
 
             isItOk = True
@@ -437,7 +435,8 @@ def invert_matrix(square_matrix_dimension=3,
             square_matrix_dimension * square_matrix_dimension)
         randomlist = list(set(randomlist) - set(plist))
         n_list = random.sample(
-            randomlist, square_matrix_dimension * (square_matrix_dimension - 1))
+            randomlist,
+            square_matrix_dimension * (square_matrix_dimension - 1))
         Mat = list()
         for i in range(0, square_matrix_dimension):
             z = list()
@@ -504,7 +503,9 @@ def line_equation_from_2_points(max_val=20):
     y2 = random.randint(-max_val, max_val)
     m1 = (y2 - y1) // math.gcd(y2 - y1, x2 - x1)
     m2 = (x2 - x1) // math.gcd(y2 - y1, x2 - x1)
-    c1 = (y1 * (x2 - x1) - (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
+    c1 = (y1 * (x2 - x1) -
+          (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1,
+                                      (x2 - x1))
     c2 = (x2 - x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
     c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}" if c1 != 0 else ""
     if c2 < 0:
@@ -605,10 +606,12 @@ def multiply_complex_numbers(min_real_imaginary_num=-20,
     | --- | --- |
     | $(14+18j) * (14+15j) = $ | $(-74+462j)$ |
     """
-    num1 = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
-                   random.randint(min_real_imaginary_num, max_real_imaginary_num))
-    num2 = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
-                   random.randint(min_real_imaginary_num, max_real_imaginary_num))
+    num1 = complex(
+        random.randint(min_real_imaginary_num, max_real_imaginary_num),
+        random.randint(min_real_imaginary_num, max_real_imaginary_num))
+    num2 = complex(
+        random.randint(min_real_imaginary_num, max_real_imaginary_num),
+        random.randint(min_real_imaginary_num, max_real_imaginary_num))
     product = num1 * num2
 
     problem = f"${num1} * {num2} = $"
@@ -652,7 +655,8 @@ def quadratic_equation(max_val=100):
     a = random.randint(1, max_val)
     c = random.randint(1, max_val)
     b = random.randint(
-        round(math.sqrt(4 * a * c)) + 1, round(math.sqrt(4 * max_val * max_val)))
+        round(math.sqrt(4 * a * c)) + 1,
+        round(math.sqrt(4 * max_val * max_val)))
     D = math.sqrt(b * b - 4 * a * c)
     res = {round((-b + D) / (2 * a), 2), round((-b - D) / (2 * a), 2)}
 
@@ -661,9 +665,7 @@ def quadratic_equation(max_val=100):
     return problem, solution
 
 
-def simple_interest(max_principle=10000,
-                    max_rate=10,
-                    max_time=10):
+def simple_interest(max_principle=10000, max_rate=10, max_time=10):
     r"""Simple Interest
 
     | Ex. Problem | Ex. Solution |
@@ -680,9 +682,7 @@ def simple_interest(max_principle=10000,
     return problem, solution
 
 
-def system_of_equations(range_x=10,
-                        range_y=10,
-                        coeff_mult_range=10):
+def system_of_equations(range_x=10, range_y=10, coeff_mult_range=10):
     r"""Solve a System of Equations in R^2
 
     | Ex. Problem | Ex. Solution |

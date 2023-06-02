@@ -166,8 +166,10 @@ def basic_trigonometry(angles=[0, 30, 45, 60, 90],
         1.73: r"\sqrt{3}",
     }
 
-    solution = result_fraction_map[round(eval(expression), 2)] if round(
-        eval(expression), 2) <= 99999 else r"\infty"  # for handling the ∞ condition
+    solution = result_fraction_map[round(
+        eval(expression),
+        2)] if round(eval(expression),
+                     2) <= 99999 else r"\infty"  # for handling the ∞ condition
 
     return problem, f'${solution}$'
 
@@ -346,7 +348,7 @@ def pythagorean_theorem(max_length=20):
     """
     a = random.randint(1, max_length)
     b = random.randint(1, max_length)
-    c = round((a ** 2 + b ** 2) ** 0.5, 2)
+    c = round((a**2 + b**2)**0.5, 2)
 
     problem = f"What is the hypotenuse of a right triangle given the other two sides have lengths ${a}$ and ${b}$?"
     solution = f"${c}$"
@@ -420,7 +422,7 @@ def surface_area_cube(max_side=20, unit='m'):
     | Surface area of cube with side $= 6m$ is | $216 m^2$ |
     """
     a = random.randint(1, max_side)
-    ans = 6 * (a ** 2)
+    ans = 6 * (a**2)
 
     problem = f"Surface area of cube with side $= {a}{unit}$ is"
     solution = f"${ans} {unit}^2$"
@@ -468,14 +470,8 @@ def surface_area_pyramid(unit='m'):
     | Surface area of pyramid with base length $= 30m$, base width $= 40m$, and height $= 25m$ is | $2400 m^2$ |
     """
     # List of Pythagorean triplets
-    _PYTHAGOREAN = [(3, 4, 5),
-                    (6, 8, 10),
-                    (9, 12, 15),
-                    (12, 16, 20),
-                    (15, 20, 25),
-                    (5, 12, 13),
-                    (10, 24, 26),
-                    (7, 24, 25)]
+    _PYTHAGOREAN = [(3, 4, 5), (6, 8, 10), (9, 12, 15), (12, 16, 20),
+                    (15, 20, 25), (5, 12, 13), (10, 24, 26), (7, 24, 25)]
 
     # Generate first triplet
     height, half_width, triangle_height_1 = random.sample(
@@ -628,7 +624,7 @@ def volume_cone_frustum(max_r1=20, max_r2=20, max_height=50, unit='m'):
     h = random.randint(1, max_height)
     r1 = random.randint(1, max_r1)
     r2 = random.randint(1, max_r2)
-    ans = round(((math.pi * h) * (r1 ** 2 + r2 ** 2 + r1 * r2)) / 3, 2)
+    ans = round(((math.pi * h) * (r1**2 + r2**2 + r1 * r2)) / 3, 2)
 
     problem = f"Volume of frustum with height $= {h}{unit}$ and $r1 = {r1}{unit}$ is and $r2 = {r2}{unit}$ is "
     solution = f"${ans} {unit}^3$"

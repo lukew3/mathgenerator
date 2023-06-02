@@ -1,6 +1,7 @@
 import os
 
-print("You are about to add a new generator to the table in futureGenerators.md")
+print(
+    "You are about to add a new generator to the table in futureGenerators.md")
 print("Please fill out the following:")
 title = input("> Title: ")
 example_problem = input("> Example Problem: ")
@@ -14,4 +15,5 @@ else:
 
 with open(file, 'a') as f:
     f.writelines(
-        f'| {title} | {example_problem} | {example_solution} | {further_explanation} |\n')
+        f'| {title} | {example_problem} | {example_solution} | {further_explanation} |\n'
+    )

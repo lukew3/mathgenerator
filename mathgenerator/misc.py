@@ -3,9 +3,7 @@ import math
 import numpy as np
 
 
-def arithmetic_progression_sum(max_d=100,
-                               max_a=100,
-                               max_n=100):
+def arithmetic_progression_sum(max_d=100, max_a=100, max_n=100):
     """Arithmetic Progression Sum
 
     | Ex. Problem | Ex. Solution |
@@ -25,9 +23,7 @@ def arithmetic_progression_sum(max_d=100,
     return problem, f'${solution}$'
 
 
-def arithmetic_progression_term(max_d=100,
-                                max_a=100,
-                                max_n=100):
+def arithmetic_progression_term(max_d=100, max_a=100, max_n=100):
     """Arithmetic Progression Term
 
     | Ex. Problem | Ex. Solution |
@@ -175,16 +171,16 @@ def common_factors(max_val=100):
     return problem, solution
 
 
-def complex_to_polar(min_real_imaginary_num=-20,
-                     max_real_imaginary_num=20):
+def complex_to_polar(min_real_imaginary_num=-20, max_real_imaginary_num=20):
     r"""Complex to polar form
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | $19.42(-19.0\theta + i-4.0\theta)$ | $-2.93$ |
     """
-    num = complex(random.randint(min_real_imaginary_num, max_real_imaginary_num),
-                  random.randint(min_real_imaginary_num, max_real_imaginary_num))
+    num = complex(
+        random.randint(min_real_imaginary_num, max_real_imaginary_num),
+        random.randint(min_real_imaginary_num, max_real_imaginary_num))
     a = num.real
     b = num.imag
     r = round(math.hypot(a, b), 2)
@@ -224,7 +220,8 @@ def decimal_to_roman_numerals(max_decimal=4000):
         elif last_value == 4:
             solution += (roman_dict[div] + roman_dict[div * 5])
         elif 5 <= last_value <= 8:
-            solution += (roman_dict[div * 5] + (roman_dict[div] * (last_value - 5)))
+            solution += (roman_dict[div * 5] + (roman_dict[div] *
+                                                (last_value - 5)))
         elif last_value == 9:
             solution += (roman_dict[div] + roman_dict[div * 10])
         x = math.floor(x % div)
@@ -288,7 +285,7 @@ def geometric_mean(max_value=100, max_count=4):
     nums = [random.randint(1, max_value) for i in range(count)]
     product = np.prod(nums)
 
-    ans = round(product ** (1 / count), 2)
+    ans = round(product**(1 / count), 2)
     problem = f"Geometric mean of ${count}$ numbers ${nums} = $"
     # solution = rf"$({'*'.join(map(str, nums))}^{{\frac{{1}}{{{count}}}}} = {ans}$"
     solution = f"${ans}$"
@@ -436,10 +433,14 @@ def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
     | --- | --- |
     | Product of scientific notations $5.11 \times 10^{67}$ and $3.64 \times 10^{-59} = $ | $1.86 \times 10^{9}$ |
     """
-    a = [round(random.uniform(1, 10), 2),
-         random.randint(min_exp_val, max_exp_val)]
-    b = [round(random.uniform(1, 10), 2),
-         random.randint(min_exp_val, max_exp_val)]
+    a = [
+        round(random.uniform(1, 10), 2),
+        random.randint(min_exp_val, max_exp_val)
+    ]
+    b = [
+        round(random.uniform(1, 10), 2),
+        random.randint(min_exp_val, max_exp_val)
+    ]
     c = [a[0] * b[0], a[1] + b[1]]
 
     if c[0] >= 10:
@@ -482,7 +483,7 @@ def quotient_of_power_same_base(max_base=50, max_power=10):
     power1 = random.randint(1, max_power)
     power2 = random.randint(1, max_power)
     step = power1 - power2
-    solution = base ** step
+    solution = base**step
 
     problem = f"The Quotient of ${base}^{{{power1}}}$ and ${base}^{{{power2}}} = " \
         f"{base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
@@ -500,7 +501,7 @@ def quotient_of_power_same_power(max_base=50, max_power=10):
     base2 = random.randint(1, max_base)
     power = random.randint(1, max_power)
     step = base1 / base2
-    solution = round(step ** power, 2)
+    solution = round(step**power, 2)
 
     problem = f"The quotient of ${base1}^{{{power}}}$ and ${base2}^{{{power}}} = " \
         f"({base1}/{base2})^{power} = {step}^{{{power}}}$"
@@ -574,8 +575,7 @@ def surds_comparison(max_value=100, max_root=10):
     return problem, f'${solution}$'
 
 
-def velocity_of_object(max_displacement=1000,max_time=100):
-
+def velocity_of_object(max_displacement=1000, max_time=100):
     """Velocity of object
 
     | Ex. Problem | Ex. Solution |
@@ -583,10 +583,9 @@ def velocity_of_object(max_displacement=1000,max_time=100):
     | An object travels at uniform velocity a distance of $100 m$ in $4$ seconds. What is the velocity of the car? | $25 m/s$ |
     """
 
-
-    displacement = random.randint(1,max_displacement)
+    displacement = random.randint(1, max_displacement)
     time_taken = random.randint(1, max_time)
-    velocity = "${} m/s$".format(round(displacement/time_taken, 2))
-    
+    velocity = "${} m/s$".format(round(displacement / time_taken, 2))
+
     problem = f"An object travels at uniform velocity a distance of ${displacement} m$ in ${time_taken}$ seconds. What is the velocity of the car? "
-    return problem , velocity
+    return problem, velocity

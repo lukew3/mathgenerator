@@ -12,8 +12,8 @@ def combinations(max_lengthgth=20):
     a = random.randint(10, max_lengthgth)
     b = random.randint(0, 9)
 
-    solution = int(math.factorial(
-        a) / (math.factorial(b) * math.factorial(a - b)))
+    solution = int(
+        math.factorial(a) / (math.factorial(b) * math.factorial(a - b)))
 
     problem = f"Find the number of combinations from ${a}$ objects picked ${b}$ at a time."
     return problem, f'${solution}$'
@@ -108,7 +108,7 @@ def data_summary(number_values=15, min_val=5, max_val=50):
         var += (random_list[i] - mean)**2
 
     standardDeviation = round(var / number_values, 2)
-    variance = round((var / number_values) ** 0.5, 2)
+    variance = round((var / number_values)**0.5, 2)
 
     problem = f"Find the mean,standard deviation and variance for the data ${', '.join(map(str, random_list))}$"
     solution = f"The Mean is ${mean}$, Standard Deviation is ${standardDeviation}$, Variance is ${variance}$"

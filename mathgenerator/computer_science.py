@@ -67,8 +67,9 @@ def binary_complement_1s(maxDigits=10):
     | --- | --- |
     | $1111001 = $ | $0000110$ |
     """
-    question = ''.join([str(random.randint(0, 1))
-                       for _ in range(random.randint(1, maxDigits))])
+    question = ''.join([
+        str(random.randint(0, 1)) for _ in range(random.randint(1, maxDigits))
+    ])
     answer = ''.join(["0" if digit == "1" else "1" for digit in question])
 
     problem = f'${question} = $'
@@ -82,8 +83,8 @@ def binary_to_decimal(max_dig=10):
     | --- | --- |
     | $000110$ | $6$ |
     """
-    problem = ''.join([str(random.randint(0, 1))
-                      for _ in range(random.randint(1, max_dig))])
+    problem = ''.join(
+        [str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
     solution = f'${int(problem, 2)}$'
     return f'${problem}$', solution
 
@@ -95,8 +96,8 @@ def binary_to_hex(max_dig=10):
     | --- | --- |
     | $010101$ | $0x15$ |
     """
-    problem = ''.join([str(random.randint(0, 1))
-                      for _ in range(random.randint(1, max_dig))])
+    problem = ''.join(
+        [str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
     solution = f'${hex(int(problem, 2))}$'
     return f'${problem}$', solution
 
@@ -232,16 +233,17 @@ def nth_tribonacci_number(min_length=1, max_length=80):
     | --- | --- |
     | What is the 14th Tribonacci number? | $504$ |
     """
-    
-    tribDict = {0:0, 1:0, 2:1}  
+
+    tribDict = {0: 0, 1: 0, 2: 1}
+
     def recTrib(i):
         if i not in tribDict:
-            tribDict[i] = recTrib(i-1) + recTrib(i-2) + recTrib(i-3)
+            tribDict[i] = recTrib(i - 1) + recTrib(i - 2) + recTrib(i - 3)
         return tribDict[i]
-    
+
     n = random.randint(min_length, max_length)
     problem = f"What is the {n}th Tribonacci number?"
-    solution = recTrib(n-1)
+    solution = recTrib(n - 1)
     return problem, f'${solution}$'
 
 
@@ -252,16 +254,19 @@ def tribonacci_series(min_length=1, max_length=80):
     | --- | --- |
     | The Tribonacci Series of the first $8$ numbers is ? | $0, 0, 1, 1, 2, 4, 7, 13$ |
     """
-    
-    tribDict = {0:0, 1:0, 2:1}  
+
+    tribDict = {0: 0, 1: 0, 2: 1}
+
     def createTribSeries(i):
         tribSeries = []
         for idx in range(i):
             if idx not in tribDict:
-                tribDict[idx] = tribDict[idx-1] + tribDict[idx-2] + tribDict[idx-3]
+                tribDict[idx] = tribDict[idx -
+                                         1] + tribDict[idx -
+                                                       2] + tribDict[idx - 3]
             tribSeries.append(tribDict[idx])
         return tribSeries
-    
+
     n = random.randint(min_length, max_length)
     tribSeries = createTribSeries(n)
     problem = "The Tribonacci Series of the first ${n}$ numbers is ?"

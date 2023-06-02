@@ -24,9 +24,7 @@ def definite_integral(max_coef=100):
     return problem, f'${solution}$'
 
 
-def power_rule_differentiation(max_coef=10,
-                               max_exp=10,
-                               max_terms=5):
+def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
     r"""Power Rule Differentiation
 
     | Ex. Problem | Ex. Solution |
@@ -50,9 +48,7 @@ def power_rule_differentiation(max_coef=10,
     return problem + '$', solution + '$'
 
 
-def power_rule_integration(max_coef=10,
-                           max_exp=10,
-                           max_terms=5):
+def power_rule_integration(max_coef=10, max_exp=10, max_terms=5):
     r"""Power Rule Integration
 
     | Ex. Problem | Ex. Solution |
