@@ -116,7 +116,7 @@ def data_summary(number_values=15, min_val=5, max_val=50):
 
 
 def dice_sum_probability(max_dice=3):
-    """Probability of a certain sum appearing on faces of dice
+    r"""Probability of a certain sum appearing on faces of dice
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
