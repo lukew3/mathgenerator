@@ -83,7 +83,7 @@ def stationary_points(max_exp=3, max_coef=10):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | $f(x)=6*x^3 + 6*x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
+    | $f(x)=6x^3 + 6x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
     """
     solution = ''
     while len(solution) == 0:
@@ -94,7 +94,7 @@ def stationary_points(max_exp=3, max_coef=10):
             problem += coefficient * pow(x, exp)
         solution = sympy.stationary_points(problem, x)
 
-    problem = 'f(x)=' + str(problem).replace('**', '^')
+    problem = 'f(x)=' + str(problem).replace('**', '^').replace('*', '')
     return f'${problem}$', f'${sympy.latex(solution)[6:-8]}}}$'
 
 

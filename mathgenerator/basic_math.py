@@ -6,7 +6,7 @@ def absolute_difference(max_a=100, max_b=100):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | $|22-34|=$ | $12$ |
+    | $\|22-34\|=$ | $12$ |
     """
     a = random.randint(-1 * max_a, max_a)
     b = random.randint(-1 * max_b, max_b)

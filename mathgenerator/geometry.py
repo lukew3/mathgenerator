@@ -104,6 +104,24 @@ def area_of_circle_given_center_and_point(max_coordinate=10, max_radius=10):
     return problem, f'${area}$'
 
 
+def area_of_trapezoid(max_len=20):
+    r"""Area of Trapezoid
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Area of trapezoid with height $12$ and base lengths: $3, 7, = $ | $60$ |
+    """
+    a = random.randint(1, max_len)
+    b = random.randint(1, max_len)
+    h = random.randint(1, max_len)
+
+    area = (a + b) * h / 2
+
+    problem = f"Area of trapezoid with height ${h}$ and base lengths: ${a}, {b}, = $"
+    solution = f'${round(area, 2)}$'
+    return problem, solution
+
+
 def area_of_triangle(max_a=20, max_b=20):
     r"""Area of Triangle
 
@@ -554,6 +572,7 @@ def volume_cone(max_radius=20, max_height=50, unit='m'):
 
 def volume_cube(max_side=20, unit='m'):
     """Volume of a cube
+
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Volume of a cube with a side length of $19m$ is | $6859 m^3$ |
