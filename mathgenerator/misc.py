@@ -580,13 +580,13 @@ def velocity_of_object(max_displacement=1000,max_time=100):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | A object travels at uniform velocity a distance of 100 m in 4 seconds. What is the velocity of the car? | 25 m/s |
+    | An object travels at uniform velocity a distance of $100 m$ in $4$ seconds. What is the velocity of the car? | $25 m/s$ |
     """
 
 
     displacement = random.randint(1,max_displacement)
     time_taken = random.randint(1, max_time)
-    velocity = "{} m/s".format(round(displacement/time_taken, 2))
+    velocity = "${} m/s$".format(round(displacement/time_taken, 2))
     
-    problem = f"An object travels at uniform velocity a distance of {displacement} m in {time_taken} seconds. What is the velocity of the car? "
+    problem = f"An object travels at uniform velocity a distance of ${displacement} m$ in ${time_taken}$ seconds. What is the velocity of the car? "
     return problem , velocity
