@@ -17,7 +17,6 @@ gen_list = [
     ("binary_to_decimal", "computer_science"),
     ("divide_fractions", "basic_math"),
     ("multiply_int_to_22_matrix", "algebra"),
-    ("area_of_trapezoid", "geometry"),
     ("area_of_triangle", "geometry"),
     ("valid_triangle", "geometry"),
     ("midpoint_of_two_points", "algebra"),
@@ -129,4 +128,5 @@ gen_list = [
     ("simplify_square_root", "basic_math"),
     ("line_equation_from_2_points", "algebra"),
     ("orthogonal_projection", "algebra"),
+    ("area_of_trapezoid", "geometry"),
 ]
