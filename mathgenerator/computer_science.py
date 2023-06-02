@@ -261,9 +261,7 @@ def tribonacci_series(min_length=1, max_length=80):
         tribSeries = []
         for idx in range(i):
             if idx not in tribDict:
-                tribDict[idx] = tribDict[idx -
-                                         1] + tribDict[idx -
-                                                       2] + tribDict[idx - 3]
+                tribDict[idx] = tribDict[idx - 1] + tribDict[idx - 2] + tribDict[idx - 3]
             tribSeries.append(tribDict[idx])
         return tribSeries
 

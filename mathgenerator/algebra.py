@@ -158,7 +158,8 @@ def distance_two_points(max_val_xy=20, min_val_xy=-20):
     | --- | --- |
     | Find the distance between $(-19, -6)$ and $(15, -16)$ | $\sqrt{1256}$ |
     """
-    if max_val_xy < min_val_xy: max_val_xy, min_val_xy = min_val_xy, max_val_xy
+    if max_val_xy < min_val_xy:
+        max_val_xy, min_val_xy = min_val_xy, max_val_xy
 
     point1X = random.randint(min_val_xy, max_val_xy + 1)
     point1Y = random.randint(min_val_xy, max_val_xy + 1)
@@ -503,9 +504,7 @@ def line_equation_from_2_points(max_val=20):
     y2 = random.randint(-max_val, max_val)
     m1 = (y2 - y1) // math.gcd(y2 - y1, x2 - x1)
     m2 = (x2 - x1) // math.gcd(y2 - y1, x2 - x1)
-    c1 = (y1 * (x2 - x1) -
-          (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1,
-                                      (x2 - x1))
+    c1 = (y1 * (x2 - x1) - (y2 - y1) * x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
     c2 = (x2 - x1) // math.gcd(y1 * (x2 - x1) - (y2 - y1) * x1, (x2 - x1))
     c = rf"{'+' if c1 >= 0 else '-'}\frac{{{abs(c1)}}}{{{c2}}}" if c1 != 0 else ""
     if c2 < 0:
