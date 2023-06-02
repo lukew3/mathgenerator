@@ -129,4 +129,6 @@ gen_list = [
     ("line_equation_from_2_points", "algebra"),
     ("orthogonal_projection", "algebra"),
     ("area_of_trapezoid", "geometry"),
+    ("tribonacci_series", "computer_science"),
+    ("nth_tribonacci_number", "computer_science"),
 ]
