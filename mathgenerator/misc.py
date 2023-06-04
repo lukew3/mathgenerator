@@ -97,6 +97,9 @@ def base_conversion(max_num=60000, max_base=16):
 
 def _newton_symbol(n, k):
     """Utility of binomial_distribution()"""
+    # math.factorial only works with integers starting python 3.9
+    # ref: https://docs.python.org/3/library/math.html#math.factorial
+    n, k = int(n), int(k)   
     return math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
 
 
