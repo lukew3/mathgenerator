@@ -82,7 +82,12 @@ def stationary_points(max_exp=3, max_coef=10):
     | $f(x)=6x^3 + 6x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
     """
     solution = ''
-    while len(solution) == 0:
+
+    # A constant function has no stationary points, and the answer will be Reals. e.g.: 
+    #   x = sympy.symbols('x')
+    #   s = sympy.stationary_points(1 + 0 * x , x)
+    #   assert s == sympy.Reals
+    while solution == sympy.Reals or len(solution) == 0:
         x = sympy.symbols('x')
         problem = 0
         for exp in range(max_exp + 1):
