@@ -312,7 +312,7 @@ def factoring_complex_quadratic(range_x1=10, range_x2=10, range_d=10, range_e = 
     return f"${problem}$", solution
 
 
-def factoring_difference_of_squares(range_a = 12, range_b = 12, num_variables = 3, max_start_power = 2):
+def factoring_difference_of_squares(range_a=12, range_b=12, num_variables=1, max_start_power=2):
     r"""Factoring the difference of two squares in the form (ax)^2 - (by)^2
     into the form (ax-by)(ax+by)
     Where a and b are any integers in a given range passed as a parameter. x,y are any algebraic variables squared.
@@ -323,44 +323,62 @@ def factoring_difference_of_squares(range_a = 12, range_b = 12, num_variables = 
     | --- | --- |
     | Factor 9x^2 - 36y^2z^2 | (3x - 6yz)(3x + 6yz) |
         """
-    def assign_power(max_start_power):
-        return random.randint(1,max_start_power)
 
-    a = random.randint(range_a)
-    b = random.randint(range_b)
+    def assign_power(l_max_start_power):
+        return random.randint(1, l_max_start_power)
+
+    a = random.randint(1, range_a)
+    b = random.randint(1, range_b)
 
     alphabet_string = "abcdefghijklmnopqrstuvwxyz"
     variable_int = random.randint(0, 25)
-    variable_list = [alphabet_string[variable_int], assign_power(max_start_power)]
-    for i in range(num_variables-1):
+    variable_list = [[alphabet_string[variable_int], assign_power(max_start_power)]]
+    for i in range(num_variables - 1):
         variable_int += 1
-        if variable_int>25:
-            variable_int=0
+        if variable_int > 25:
+            variable_int = 0
         variable_list.append([alphabet_string[variable_int], assign_power(max_start_power)])
 
     split_value = random.randint(0, num_variables)
     a_variables = variable_list[0:split_value]
-    b_variables = variable_list[split_value]
+    b_variables = variable_list[split_value:]
 
     a_variable_strings = ""
-    for i in range(len(a_variables)):
-        a_variable_strings = a_variable_strings + f"{a_variables[i][0]}^{a_variables[i][1]}"
+    for variable in a_variables:
+        a_variable_strings += f"{variable[0]}^{variable[1]}"
 
     b_variable_strings = ""
-    for i in range(len(b_variables)):
-        b_variable_strings = b_variable_strings + f"{b_variables[i][0]}^{b_variables[i][1]}"
+    for variable in b_variables:
+        b_variable_strings += f"{variable[0]}^{variable[1]}"
 
-    solution = f"({a}{a_variable_strings}+{b}{b_variable_strings})({a}{a_variable_strings}-{b}{b_variable_strings})"
+    if a == 1 and a_variable_strings != "" and b == 1 and b_variable_strings != "":
+        solution = f"({a_variable_strings}+{b_variable_strings})({a_variable_strings}-{b_variable_strings})"
+    elif a == 1 and a_variable_strings != "":
+        solution = f"({a_variable_strings}+{b}{b_variable_strings})({a_variable_strings}-{b}{b_variable_strings})"
+    elif b == 1 and b_variable_strings != "":
+        solution = f"({a}{a_variable_strings}+{b_variable_strings})({a}{a_variable_strings}-{b_variable_strings})"
+    else:
+        solution = f"({a}{a_variable_strings}+{b}{b_variable_strings})({a}{a_variable_strings}-{b}{b_variable_strings})"
+    solution = solution.replace("^1", "")
 
     a_variable_strings_squared = ""
-    for i in range(len(a_variables)):
-        a_variable_strings = a_variable_strings + f"{a_variables[i][0]}^{a_variables[i][1]*2}"
+    for variable in a_variables:
+        a_variable_strings_squared += f"{variable[0]}^{variable[1] * 2}"
 
     b_variable_strings_squared = ""
-    for i in range(len(b_variables)):
-        b_variable_strings = b_variable_strings + f"{b_variables[i][0]}^{b_variables[i][1]*2}"
+    for variable in b_variables:
+        b_variable_strings_squared += f"{variable[0]}^{variable[1] * 2}"
 
-    problem = f"{a**2}{a_variable_strings_squared}-{b**2}{b_variable_strings_squared}"
+    if a == 1 and b == 1 and a_variable_strings_squared != "" and b_variable_strings_squared != "":
+        problem = f"{a_variable_strings_squared}-{b_variable_strings_squared}"
+    elif a == 1 and a_variable_strings_squared != "":
+        problem = f"{a_variable_strings_squared}-{b ** 2}{b_variable_strings_squared}"
+    elif b == 1 and b_variable_strings_squared != "":
+        problem = f"{a ** 2}{a_variable_strings_squared}-{b_variable_strings_squared}"
+    else:
+        problem = f"{a ** 2}{a_variable_strings_squared}-{b ** 2}{b_variable_strings_squared}"
+
+    return f"${problem}$", f"${solution}$"
 
 
 def int_matrix_22_determinant(max_matrix_val=100):
