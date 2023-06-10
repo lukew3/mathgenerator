@@ -223,7 +223,7 @@ def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
     return problem, solution
 
 
-def factoring(range_x1=10, range_x2=10):
+def factoring_quadratic(range_x1=10, range_x2=10):
     r"""Factoring Quadratic
     Given a quadratic equation in the form x^2 + bx + c, factor it into it's roots (x - x1)(x -x2)
 
@@ -255,6 +255,60 @@ def factoring(range_x1=10, range_x2=10):
     x1 = intParser(x1)
     x2 = intParser(x2)
     solution = f"$(x{x1})(x{x2})$"
+    return f"${problem}$", solution
+
+
+def factoring_complex_quadratic(range_x1=10, range_x2=10, range_d=10, range_e = 10):
+    r"""Factoring Quadratic
+    Given a quadratic equation in the form ax^2 + bx + c, factor it into it's roots (dx - x1)(ex -x2)
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $3x^2+2x-8$ | $(3x-4)(x+2)$ |
+    """
+    x1 = random.randint(-range_x1, range_x1)
+    x2 = random.randint(-range_x2, range_x2)
+
+    d = random.randint(-range_d, range_d)
+    while d==0:
+        d = random.randint(-range_d, range_d)
+
+    e = random.randint(-range_e, range_e)
+    while e==0:
+        e = random.randint(-range_e, range_e)
+
+    def intParser(z):
+        if (z > 0):
+            return f"+{z}"
+        elif (z < 0):
+            return f"-{abs(z)}"
+        else:
+            return ""
+
+    a = d*e
+    b = intParser(e*x1 + d*x2)
+    c = intParser(x1 * x2)
+
+    if b == "+1":
+        b = "+"
+    if a == 1:
+        a = ""
+    if b == "":
+        problem = f"{a}x^2{c}"
+    else:
+        problem = f"{a}x^2{b}x{c}"
+
+    x1 = intParser(x1)
+    x2 = intParser(x2)
+    if d == -1:
+        d = "-"
+    if d == 1:
+        d = ""
+    if e == -1:
+        e = "-"
+    if e == 1:
+        e = ""
+    solution = f"$({d}x{x1})({e}x{x2})$"
     return f"${problem}$", solution
 
 
@@ -790,3 +844,4 @@ def orthogonal_projection(min_val=-10, max_val=10):
     problem = f'Find the orthogonal projection of ${v}$ onto ${u}$'
     solution = f'$[{y[0]}, {y[1]}]$'
     return problem, solution
+
