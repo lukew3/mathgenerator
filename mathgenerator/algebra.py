@@ -15,23 +15,12 @@ def basic_algebra(max_variable=10):
     a = random.randint(1, max_variable)
     b = random.randint(1, max_variable)
     c = random.randint(b, max_variable)
+    sign_b = random.choice(['+', '-'])
+    
+    x = (c - sign_b * b) / a
 
-    # calculate gcd
-    def calculate_gcd(x, y):
-        while (y):
-            x, y = y, x % y
-        return x
-
-    i = calculate_gcd((c - b), a)
-    x = f"{(c - b)//i}/{a//i}"
-
-    if (c - b == 0):
-        x = "0"
-    elif a == 1 or a == i:
-        x = f"{c - b}"
-
-    problem = f"${a}x + {b} = {c}$"
-    solution = f"${x}$"
+    problem = f"${a}x {sign_b} {b} = {c}$"
+    solution = f"${int(x) if x.is_integer() else round(x, 1)}$"
     return problem, solution
 
 
