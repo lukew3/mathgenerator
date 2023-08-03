@@ -32,11 +32,11 @@ def binary_2s_complement(maxDigits=10):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | 2's complement of $1011 = $ | $101$ |
+    | 2's complement of $1011 = $ | $0101$ |
     """
     digits = random.randint(1, maxDigits)
     question = ''.join([str(random.randint(0, 1))
-                        for i in range(digits)]).lstrip('0')
+                        for i in range(digits)])
 
     answer = []
     for i in question:
@@ -56,7 +56,7 @@ def binary_2s_complement(maxDigits=10):
         answer.insert(0, '1')
 
     problem = f"2's complement of ${question} = $"
-    solution = ''.join(answer).lstrip('0')
+    solution = ''.join(answer)
     return problem, f'${solution}$'
 
 
