@@ -185,6 +185,11 @@ def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
     a = random.randint(-range_a, range_a)
     b = random.randint(-range_b, range_b)
 
+    #make sure we only get valid algebraic expressions for expanding  
+    while a == 0 and b == 0: b = random.randint(-range_b, range_b) #redo if both are zero
+    while a == 0 and x1 == 0: a = random.randint(-range_a, range_a) #redo if both are zero
+    while b == 0 and x2 == 0: b = random.randint(-range_b, range_b) #redo if both are zero
+
     def intParser(z):
         if (z > 0):
             return f"+{z}"
@@ -202,24 +207,50 @@ def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
     p3 = intParser(b)
     p4 = intParser(x2)
 
-    if p1 == "+1":
-        p1 = ""
-    elif len(p1) > 0 and p1[0] == "+":
-        p1 = p1[1:]
-    if p3 == "+1":
-        p3 = ""
-    elif p3[0] == "+":
-        p3 = p3[1:]
+    #for problem 
+    if p1 == "+1" or p1 == "-1":
+        p1 =  "-x" if p1[0] == "-" else "x"
+    elif len(p1) > 0:
+        if p1[0] == "+": p1 = p1[1:]  #cut off plus for readibility
+        p1 += "x"
+    else:
+        if len(p2)> 0: 
+            if p2[0] == "+": p2 = p2[1:] #cut off plus in p2 for readibility if p1 is zero
+    if p3 == "+1" or p3 == "-1":
+        p3 =  "-x" if p3[0] == "-" else "x"
+    elif len(p3) > 0:
+        if p3[0] == "+": p3 = p3[1:]  #cut off plus for readibility
+        p3 += "x"
+    else:
+        if len(p4)> 0: 
+            if p4[0] == "+": p4 = p4[1:]  #cut off plus in p4 for readibility if p3 is zero
 
-    if c1 == "+1":
-        c1 = ""
-    elif len(c1) > 0 and c1[0] == "+":
-        c1 = c1[1:]  # Cuts off the plus for readability
-    if c2 == "+1":
-        c2 = ""
+        
+    #for solution 
+    if c1 == "+1" or c1 == "-1":
+        c1 = "-x^2" if c1[0] == "-" else "x^2"
+    elif len(c1) > 0:
+        if c1[0] == "+": c1 = c1[1:]  #cut off plus for readibility
+        c1+="x^2"
 
-    problem = f"$({p1}x{p2})({p3}x{p4})$"
-    solution = f"${c1}x^2{c2}x{c3}$"
+    if c2 == "+1" or c2 == "-1":
+        if c1 == "": #if c1 is empty, cut off plus in c2 for readibility
+            c2 =  "-x" if c2[0] == "-" else "x"
+        else:
+            c2 =  "-x" if c2[0] == "-" else "+x"
+    elif len(c2) > 0:
+        c2+="x"
+        if c1 == "": #if c1 is empty, cut off plus in c2 for readibility
+            if c2[0] == "+": c2 = c2[1:] 
+
+    if c1=="" and c2=="" and len(c3) > 0:
+        if c3[0] == "+": c3 = c3[1:] #cut off plus in c3 for readibility if c1 and c2 is zero
+    elif c1=="" and c2=="" and c3=="":
+        c3 = "0" #if all empty then the answer is zero
+        
+
+    problem = f"$({p1}{p2})({p3}{p4})$"
+    solution = f"${c1}{c2}{c3}$"
     return problem, solution
 
 
