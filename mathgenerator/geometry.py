@@ -677,3 +677,19 @@ def volume_sphere(max_radius=100):
     problem = f"Volume of sphere with radius ${r} m = $"
     solution = f"${ans} m^3$"
     return problem, solution
+
+def value_of_linear_function_with_slope_and_y_intercept(max_slope_and_y_intercept=10, min_slope_and_y_intercept=-10, max_f_of_x=20, min_f_of_x=-20) :
+    """Value of linear function with slopeand y-intercept
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | In the linear function f with a slope of $1$ and a y-intercept of $-4$, what is the value of $f(-5)$? | $9$ |
+    """
+    
+    slope = random.randint(min_slope_and_y_intercept, max_slope_and_y_intercept)
+    y_intercept = random.randint(min_slope_and_y_intercept, max_slope_and_y_intercept)
+    x = random.randint(min_f_of_x, max_f_of_x)
+    
+    problem = f"In the linear function f with a slope of ${slope}$ and a y-intercept of ${y_intercept}$, what is the value of $f({x})$?"
+    solution = (slope * x) + y_intercept
+    return problem, f"${solution}$"
