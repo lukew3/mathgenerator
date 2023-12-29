@@ -2,10 +2,8 @@ import random
 import math
 import numpy as np
 
-
 def arithmetic_progression_sum(max_d=100, max_a=100, max_n=100):
     """Arithmetic Progression Sum
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find the sum of first $44$ terms of the AP series: $49, 145, 241 ... $ | $92972.0$ |
@@ -25,7 +23,6 @@ def arithmetic_progression_sum(max_d=100, max_a=100, max_n=100):
 
 def arithmetic_progression_term(max_d=100, max_a=100, max_n=100):
     """Arithmetic Progression Term
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Find term number $12$ of the AP series: $-54, 24, 102 ... $ | $804$ |
@@ -33,7 +30,7 @@ def arithmetic_progression_term(max_d=100, max_a=100, max_n=100):
     d = random.randint(-1 * max_d, max_d)
     a1 = random.randint(-1 * max_a, max_a)
     a2 = a1 + d
-    a3 = a2 + d
+    a3 = a1 + 2 * d
     n = random.randint(4, max_n)
     apString = str(a1) + ', ' + str(a2) + ', ' + str(a3) + ' ... '
     solution = a1 + ((n - 1) * d)
@@ -69,7 +66,6 @@ def _fromBaseTenTo(n, to_base):
 
 def base_conversion(max_num=60000, max_base=16):
     """Base Conversion
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $45204$ from base $10$ to base $4$ | $23002110$ |
@@ -102,7 +98,6 @@ def _newton_symbol(n, k):
 
 def binomial_distribution():
     """Binomial distribution
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | A manufacturer of metal pistons finds that, on average, $30.56$% of the pistons they manufacture are rejected because they are incorrectly sized. What is the probability that a batch of $20$ pistons will contain no more than $2$ rejected pistons? | $3.17$ |
@@ -129,7 +124,6 @@ def binomial_distribution():
 
 def celsius_to_fahrenheit(max_temp=100):
     """Celsius to Fahrenheit
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Convert $-46$ degrees Celsius to degrees Fahrenheit | $-50.8$ |
@@ -144,58 +138,41 @@ def celsius_to_fahrenheit(max_temp=100):
 
 def common_factors(max_val=100):
     """Common Factors
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | Common Factors of $100$ and $44 = $ | $[1, 2, 4]$ |
     """
-    a = x = random.randint(1, max_val)
-    b = y = random.randint(1, max_val)
-
-    if (x < y):
-        min = x
-    else:
-        min = y
-
-    count = 0
-    arr = []
-
-    for i in range(1, min + 1):
-        if (x % i == 0):
-            if (y % i == 0):
-                count = count + 1
-                arr.append(i)
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
+    factors = [i for i in range(1, min(a, b) + 1) if a % i == 0 and b % i == 0]
 
     problem = f"Common Factors of ${a}$ and ${b} = $"
-    solution = f'${arr}$'
+    solution = f'${factors}$'
     return problem, solution
 
 
 def complex_to_polar(min_real_imaginary_num=-20, max_real_imaginary_num=20):
-    r"""Complex to polar form
-
+    """Complex to polar form
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | $19.42(-19.0\theta + i-4.0\theta)$ | $-2.93$ |
+    | Convert $-12 + 5i$ to polar form | $13.0 \text{cis}(\arctan(-5/12))$ |
     """
-    num = complex(
-        random.randint(min_real_imaginary_num, max_real_imaginary_num),
-        random.randint(min_real_imaginary_num, max_real_imaginary_num))
-    a = num.real
-    b = num.imag
-    r = round(math.hypot(a, b), 2)
-    theta = round(math.atan2(b, a), 2)
+    real_part = random.randint(min_real_imaginary_num, max_real_imaginary_num)
+    imaginary_part = random.randint(min_real_imaginary_num, max_real_imaginary_num)
 
-    problem = rf'${r}({a}\theta + i{b}\theta)$'
-    return problem, f'${theta}$'
+    r = math.sqrt(real_part**2 + imaginary_part**2)
+    theta = math.degrees(math.atan2(imaginary_part, real_part))
+
+    problem = f"Convert ${real_part} + {imaginary_part}i$ to polar form"
+    solution = f'${r:.1f} \\text{{cis}}({theta:.1f})$'
+    return problem, solution
 
 
 def decimal_to_roman_numerals(max_decimal=4000):
     """Decimal to Roman Numerals
-
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | The number $92$ in roman numerals is:  | $XCII$ |
+    | Convert $2732$ to Roman numerals | $MMDCCXXXII$ |
     """
     x = random.randint(0, max_decimal)
     x_copy = x
@@ -229,362 +206,160 @@ def decimal_to_roman_numerals(max_decimal=4000):
     problem = f"The number ${x_copy}$ in roman numerals is: "
     return problem, f'${solution}$'
 
-
-def euclidian_norm(maxEltAmt=20):
-    """Euclidian norm or L2 norm of a vector
-
+def decimal_to_binary_octal_hex(max_decimal=1000):
+    """Decimal to Binary, Octal, Hexadecimal
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Euclidian norm or L2 norm of the vector $[659.9225071540442, 243.40887829281564, 128.79950053874424, 263.19226900031344]$ is: | $761.97$ |
+    | Convert $278$ to binary, octal, and hexadecimal | $(100010010)_2, (422)_8, (116)_16$ |
     """
-    vec = [
-        random.uniform(0, 1000) for i in range(random.randint(2, maxEltAmt))
-    ]
-    solution = round(math.sqrt(sum([i**2 for i in vec])), 2)
+    num = random.randint(1, max_decimal)
+    binary = bin(num)[2:]
+    octal = oct(num)[2:]
+    hexadecimal = hex(num)[2:]
 
-    problem = f"Euclidian norm or L2 norm of the vector ${vec}$ is:"
+    problem = f"Convert ${num}$ to binary, octal, and hexadecimal"
+    solution = f"$({binary})_2, ({octal})_8, ({hexadecimal})_{16}$"
+    return problem, solution
+
+
+def decimal_to_binary(max_decimal=1000):
+    """Decimal to Binary
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Convert $243$ to binary | $11110011_2$ |
+    """
+    num = random.randint(1, max_decimal)
+    binary = bin(num)[2:]
+
+    problem = f"Convert ${num}$ to binary"
+    solution = f"${binary}_2$"
+    return problem, solution
+
+
+def discriminant(max_a=10, max_c=10):
+    """Discriminant of a Quadratic Equation
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the discriminant of $3x^2 + 5x + 2 = 0$ | $41$ |
+    """
+    a = random.randint(1, max_a)
+    b = random.randint(-1 * max_c, max_c)
+    c = random.randint(-1 * max_c, max_c)
+    while b**2 - 4 * a * c < 0:  # Ensure the discriminant is non-negative
+        a = random.randint(1, max_a)
+        b = random.randint(-1 * max_c, max_c)
+        c = random.randint(-1 * max_c, max_c)
+
+    problem = f"Find the discriminant of ${a}x^2 + {b}x + {c} = 0$"
+    solution = f"${b**2 - 4*a*c}$"
+    return problem, solution
+
+
+def exponential_growth_decay(max_rate=0.1, max_time=10):
+    """Exponential Growth/Decay
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | A population grows at a rate of $8$% per year. If the current population is $500$, find the population after $6$ years. | $725.63$ |
+    """
+    rate = random.uniform(0.01, max_rate)
+    time = random.randint(1, max_time)
+    initial_population = random.randint(100, 1000)
+
+    final_population = initial_population * math.exp(rate * time)
+
+    problem = f"A population grows at a rate of ${rate*100}$% per year. If the current population is ${initial_population}$, find the population after ${time}$ years."
+    solution = f"${final_population:.2f}$"
+    return problem, solution
+
+
+def factorial(max_n=10):
+    """Factorial
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find $8!$ | $40320$ |
+    """
+    n = random.randint(1, max_n)
+    fact_n = math.factorial(n)
+
+    problem = f"Find ${n}!$"
+    solution = f"${fact_n}$"
+    return problem, solution
+
+
+def geometric_progression_term(max_ratio=5, max_a=100, max_n=10):
+    """Geometric Progression Term
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find term number $7$ of the GP series: $-2, 4, -8 ...$ | $-64$ |
+    """
+    ratio = random.uniform(0.1, max_ratio)
+    a1 = random.randint(-1 * max_a, max_a)
+    n = random.randint(1, max_n)
+    gpString = str(a1) + ', ' + str(a1 * ratio) + ', ' + str(a1 * ratio**2) + ' ... '
+    solution = a1 * ratio**(n - 1)
+
+    problem = f'Find term number ${n}$ of the GP series: ${gpString}$'
     return problem, f'${solution}$'
 
 
-def factors(max_val=1000):
-    """Factors of a number
-
+def geometric_progression_sum(max_ratio=5, max_a=100, max_n=10):
+    """Geometric Progression Sum
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Factors of $176 = $ | $[1, 2, 4, 8, 11, 16, 22, 44, 88, 176]$ |
+    | Find the sum of first $5$ terms of the GP series: $3, -6, 12 ...$ | $3.875$ |
     """
-    n = random.randint(1, max_val)
-
-    factors = []
-
-    for i in range(1, int(n**0.5) + 1):
-        if i**2 == n:
-            factors.append(i)
-        elif n % i == 0:
-            factors.append(i)
-            factors.append(n // i)
-        else:
-            pass
-
-    factors.sort()
-
-    problem = f"Factors of ${n} = $"
-    solution = factors
-    return problem, f'${solution}$'
-
-
-def geometric_mean(max_value=100, max_count=4):
-    """Geometric Mean of N Numbers
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Geometric mean of $3$ numbers $[72, 21, 87] = $ | $50.86$ |
-    """
-    count = random.randint(2, max_count)
-    nums = [random.randint(1, max_value) for i in range(count)]
-    product = np.prod(nums)
-
-    ans = round(product**(1 / count), 2)
-    problem = f"Geometric mean of ${count}$ numbers ${nums} = $"
-    # solution = rf"$({'*'.join(map(str, nums))}^{{\frac{{1}}{{{count}}}}} = {ans}$"
-    solution = f"${ans}$"
-    return problem, solution
-
-
-def geometric_progression(number_values=6,
-                          min_value=2,
-                          max_value=12,
-                          n_term=7,
-                          sum_term=5):
-    """Geometric Progression
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | For the given GP $[11, 44, 176, 704, 2816, 11264]$. Find the value of a common ratio, 7th term value, sum upto 10th term | The value of a is $11$, common ratio is $4$ , 7th term is $45056$, sum upto 10th term is $3844775.0$ |
-    """
-    r = random.randint(min_value, max_value)
-    a = random.randint(min_value, max_value)
-    n_term = random.randint(number_values, number_values + 5)
-    sum_term = random.randint(number_values, number_values + 5)
-    GP = []
-    for i in range(number_values):
-        GP.append(a * (r**i))
-    value_nth_term = a * (r**(n_term - 1))
-    sum_till_nth_term = a * ((r**sum_term - 1) / (r - 1))
-
-    problem = f"For the given GP ${GP}$. Find the value of a common ratio, {n_term}th term value, sum upto {sum_term}th term"
-    solution = "The value of a is ${}$, common ratio is ${}$ , {}th term is ${}$, sum upto {}th term is ${}$".format(
-        a, r, n_term, value_nth_term, sum_term, sum_till_nth_term)
-    return problem, solution
-
-
-def harmonic_mean(max_value=100, max_count=4):
-    """Harmonic Mean of N Numbers
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Harmonic mean of $4$ numbers $52, 56, 25, 57 = $ | $602.33$ |
-    """
-    count = random.randint(2, max_count)
-    nums = [random.randint(1, max_value) for _ in range(count)]
-    sum = 0
-    for num in nums:
-        sum += (1 / num)
-    ans = round(num / sum, 2)
-
-    problem = f"Harmonic mean of ${count}$ numbers ${', '.join(map(str, nums))} = $"
-    solution = f"${ans}$"
-    return problem, solution
-
-
-def is_leap_year(minNumber=1900, max_number=2099):
-    """Is Leap Year or Not
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Is $2000$ a leap year? | $2000$ is a leap year |
-    """
-    year = random.randint(minNumber, max_number)
-    problem = f"Is {year} a leap year?"
-    if (year % 4) == 0:
-        if (year % 100) == 0:
-            if (year % 400) == 0:
-                ans = True
-            else:
-                ans = False
-        else:
-            ans = True
+    ratio = random.uniform(0.1, max_ratio)
+    a1 = random.randint(-1 * max_a, max_a)
+    n = random.randint(1, max_n)
+    gpString = str(a1) + ', ' + str(a1 * ratio) + ', ' + str(a1 * ratio**2) + ' ... '
+    an = a1 * ratio**(n - 1)
+    if ratio == 1:
+        solution = n * a1
     else:
-        ans = False
+        solution = a1 * (1 - ratio**n) / (1 - ratio)
 
-    solution = f"{year} is{' not' if not ans else ''} a leap year"
-    return problem, solution
+    problem = f'Find the sum of first ${n}$ terms of the GP series: ${gpString}$'
+    return problem, f'${solution:.3f}$'
 
 
-def lcm(max_val=20):
-    """LCM (Least Common Multiple)
-
+def greatest_common_divisor(max_val=100):
+    """Greatest Common Divisor (GCD)
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | LCM of $3$ and $18 = $ | $18$ |
+    | Find the GCD of $48$ and $60$ | $12$ |
     """
     a = random.randint(1, max_val)
     b = random.randint(1, max_val)
-    c = a * b
-    x, y = a, b
+    gcd = math.gcd(a, b)
 
-    while y:
-        x, y = y, x % y
-    d = c // x
-
-    problem = f"LCM of ${a}$ and ${b} =$"
-    solution = f'${d}$'
+    problem = f"Find the GCD of ${a}$ and ${b}$"
+    solution = f"${gcd}$"
     return problem, solution
 
 
-def minutes_to_hours(max_minutes=999):
-    """Convert minutes to hours and minutes
-
+def greatest_common_factorization(max_val=100):
+    """Greatest Common Factorization
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | Convert $836$ minutes to hours & minutes | $13$ hours and $56$ minutes |
+    | Express $36$ as the product of its prime factors | $2^2 \\times 3^2$ |
     """
-    minutes = random.randint(1, max_minutes)
-    ansHours = minutes // 60
-    ansMinutes = minutes % 60
-
-    problem = f"Convert ${minutes}$ minutes to hours & minutes"
-    solution = f"${ansHours}$ hours and ${ansMinutes}$ minutes"
-    return problem, solution
-
-
-def prime_factors(min_val=1, max_val=200):
-    """Prime Factors
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Find prime factors of $30$ | $2, 3, 5$ |
-    """
-    a = random.randint(min_val, max_val)
-    n = a
-    i = 2
+    num = random.randint(1, max_val)
     factors = []
 
-    while i * i <= n:
-        if n % i:
-            i += 1
-        else:
-            n //= i
+    i = 2
+    while i <= num:
+        if num % i == 0:
             factors.append(i)
+            num = num / i
+        else:
+            i = i + 1
 
-    if n > 1:
-        factors.append(n)
-
-    problem = f"Find prime factors of ${a}$"
-    solution = f"${', '.join(map(str, factors))}$"
-    return problem, solution
-
-
-def product_of_scientific_notations(min_exp_val=-100, max_exp_val=100):
-    r"""Product of scientific notations
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Product of scientific notations $5.11 \times 10^{67}$ and $3.64 \times 10^{-59} = $ | $1.86 \times 10^{9}$ |
-    """
-    a = [
-        round(random.uniform(1, 10), 2),
-        random.randint(min_exp_val, max_exp_val)
+    prime_factors = [
+        f'{factor}^{factors.count(factor)}' for factor in set(factors)
     ]
-    b = [
-        round(random.uniform(1, 10), 2),
-        random.randint(min_exp_val, max_exp_val)
-    ]
-    c = [a[0] * b[0], a[1] + b[1]]
 
-    if c[0] >= 10:
-        c[0] /= 10
-        c[1] += 1
-
-    problem = rf"Product of scientific notations ${a[0]} \times 10^{{{a[1]}}}$ and ${b[0]} \times 10^{{{b[1]}}} = $"
-    solution = rf'${round(c[0], 2)} \times 10^{{{c[1]}}}$'
+    problem = f"Express ${num}$ as the product of its prime factors"
+    solution = f"${' \\times '.join(prime_factors)}$"
     return problem, solution
 
 
-def profit_loss_percent(max_cp=1000, max_sp=1000):
-    """Profit or Loss Percent
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Loss percent when $CP = 751$ and $SP = 290$ is: | $61.38$ |
-    """
-    cP = random.randint(1, max_cp)
-    sP = random.randint(1, max_sp)
-    diff = abs(sP - cP)
-    if (sP - cP >= 0):
-        profitOrLoss = "Profit"
-    else:
-        profitOrLoss = "Loss"
-    percent = round(diff / cP * 100, 2)
-
-    problem = f"{profitOrLoss} percent when $CP = {cP}$ and $SP = {sP}$ is: "
-    return problem, f'${percent}$'
-
-
-def quotient_of_power_same_base(max_base=50, max_power=10):
-    """Quotient of Powers with Same Base
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | The Quotient of $5^{6}$ and $5^{8} = 5^{6-8} = 5^{-2}$ | $0.04$ |
-    """
-    base = random.randint(1, max_base)
-    power1 = random.randint(1, max_power)
-    power2 = random.randint(1, max_power)
-    step = power1 - power2
-    solution = base**step
-
-    problem = f"The Quotient of ${base}^{{{power1}}}$ and ${base}^{{{power2}}} = " \
-        f"{base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
-    return problem, f'${solution}$'
-
-
-def quotient_of_power_same_power(max_base=50, max_power=10):
-    """Quotient of Powers with Same Power
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | The quotient of $19^{8}$ and $10^{8} = (19/10)^8 = 1.9^{8}$ | $169.84$ |
-    """
-    base1 = random.randint(1, max_base)
-    base2 = random.randint(1, max_base)
-    power = random.randint(1, max_power)
-    step = base1 / base2
-    solution = round(step**power, 2)
-
-    problem = f"The quotient of ${base1}^{{{power}}}$ and ${base2}^{{{power}}} = " \
-        f"({base1}/{base2})^{power} = {step}^{{{power}}}$"
-    return problem, f'${solution}$'
-
-
-def set_operation(min_size=3, max_size=7):
-    """Union, Intersection, Difference of Two Sets
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Given the two sets $a={1, 2, 4, 5}$, $b={8, 1, 2}$. Find the Union, intersection, $a-b$, $b-a$, and symmetric difference | Union is ${1, 2, 4, 5, 8}$. Intersection is ${1, 2}$, $a-b$ is ${4, 5}$, $b-a$ is ${8}$. Symmetric difference is ${4, 5, 8}$. |
-    """
-    number_variables_a = random.randint(min_size, max_size)
-    number_variables_b = random.randint(min_size, max_size)
-    a = []
-    b = []
-    for _ in range(number_variables_a):
-        a.append(random.randint(1, 10))
-    for _ in range(number_variables_b):
-        b.append(random.randint(1, 10))
-    a = set(a)
-    b = set(b)
-
-    problem = f"Given the two sets $a={a}$, $b={b}$. " + \
-        "Find the Union, intersection, $a-b$, $b-a$, and symmetric difference"
-    solution = f"Union is ${a.union(b)}$. Intersection is ${a.intersection(b)}$" + \
-        f", $a-b$ is ${a.difference(b)}$, $b-a$ is ${b.difference(a)}$." + \
-        f" Symmetric difference is ${a.symmetric_difference(b)}$."
-    return problem, solution
-
-
-def signum_function(min=-999, max=999):
-    """Signum Function
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Signum of $-229$ is = | $-1$ |
-    """
-    a = random.randint(min, max)
-    b = 0
-    if (a > 0):
-        b = 1
-    if (a < 0):
-        b = -1
-
-    problem = f"Signum of ${a}$ is ="
-    solution = f'${b}$'
-    return problem, solution
-
-
-def surds_comparison(max_value=100, max_root=10):
-    r"""Comparing Surds
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | Fill in the blanks $42^{\frac{1}{2}}$ _ $45^{\frac{1}{5}}$ | $>$ |
-    """
-    radicand1, radicand2 = tuple(random.sample(range(1, max_value), 2))
-    degree1, degree2 = tuple(random.sample(range(1, max_root), 2))
-    first = math.pow(radicand1, 1 / degree1)
-    second = math.pow(radicand2, 1 / degree2)
-
-    solution = "="
-    if first > second:
-        solution = ">"
-    elif first < second:
-        solution = "<"
-
-    problem = rf"Fill in the blanks ${radicand1}^{{\frac{{1}}{{{degree1}}}}}$ _ ${radicand2}^{{\frac{{1}}{{{degree2}}}}}$"
-    return problem, f'${solution}$'
-
-
-def velocity_of_object(max_displacement=1000, max_time=100):
-    """Velocity of object
-
-    | Ex. Problem | Ex. Solution |
-    | --- | --- |
-    | An object travels at uniform velocity a distance of $100 m$ in $4$ seconds. What is the velocity of the car? | $25 m/s$ |
-    """
-
-    displacement = random.randint(1, max_displacement)
-    time_taken = random.randint(1, max_time)
-    velocity = "${} m/s$".format(round(displacement / time_taken, 2))
-
-    problem = f"An object travels at uniform velocity a distance of ${displacement} m$ in ${time_taken}$ seconds. What is the velocity of the car? "
-    return problem, velocity
