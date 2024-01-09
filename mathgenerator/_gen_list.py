@@ -12,6 +12,7 @@ gen_list = [
     ("DELETED", "DELETED"),
     ("basic_algebra", "algebra"),
     ("log", "algebra"),
+    ("arrays_transpose", "algebra"),
     ("fraction_to_decimal", "basic_math"),
     ("decimal_to_binary", "computer_science"),
     ("binary_to_decimal", "computer_science"),

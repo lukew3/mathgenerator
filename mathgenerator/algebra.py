@@ -3,6 +3,7 @@ import random
 import math
 import fractions
 import sympy
+import numpy as np
 
 
 def basic_algebra(max_variable=10):
@@ -789,4 +790,28 @@ def orthogonal_projection(min_val=-10, max_val=10):
 
     problem = f'Find the orthogonal projection of ${v}$ onto ${u}$'
     solution = f'$[{y[0]}, {y[1]}]$'
+    return problem, solution
+
+
+
+def arrays_transpose(max_dim=5, max_value=100):
+    r""" Transpose Arrays: In this case, 3-5 dimensional. 
+   | Ex. Problem |  Ex. Solution      |
+    | --------- | ------------------- |
+    | What is the transpose of this 2-dimensional matrix: $\|[[73 61]
+                                                             [50 69]] \|=$ | $[[73 50]
+                                                                              [61 69]]$ |
+    """
+    a = random.randint(2, max_dim)
+    # Generate a random matrix dimension with NumPy (between 2 and 5) and random integers between 0 and 101 (inclusive).
+    original_array = np.random.randint(low=0, high=max_value, size=(a, a))
+
+    # Convert the original array to a string without '\n'
+    original_array_str = str(original_array).replace('\n', ',')
+
+    # Transpose original array without '\n'
+    transposed_array = str(original_array.transpose()).replace('\n', ',')
+    
+    problem = f"What is the transpose of this {a}-dimensional array: {original_array_str}?"
+    solution = f"$The transpose is: {transposed_array}$"
     return problem, solution
