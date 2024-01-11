@@ -176,7 +176,7 @@ def complex_to_polar(min_real_imaginary_num=-20, max_real_imaginary_num=20):
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
-    | $19.42(-19.0\theta + i-4.0\theta)$ | $-2.93$ |
+    | Convert $-14.0+13.0i$ into polar form | $19.1(cos(2.39)+isin(2.39))$ |
     """
     num = complex(
         random.randint(min_real_imaginary_num, max_real_imaginary_num),
@@ -185,9 +185,13 @@ def complex_to_polar(min_real_imaginary_num=-20, max_real_imaginary_num=20):
     b = num.imag
     r = round(math.hypot(a, b), 2)
     theta = round(math.atan2(b, a), 2)
+    print(a)
+    print(b)
 
-    problem = rf'${r}({a}\theta + i{b}\theta)$'
-    return problem, f'${theta}$'
+
+    solution = rf'${r}(cos({theta})+isin({theta}))$'
+    problem = rf'Convert ${a}+{b}i$ into polar form'
+    return problem, solution
 
 
 def decimal_to_roman_numerals(max_decimal=4000):
