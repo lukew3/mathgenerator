@@ -1,0 +1,15 @@
+#import the library necessary
+import random as r
+
+#using built in function of the library
+x=r.randrange(1,1000)
+y=r.randrange(1,1000)
+print("Here is a question for you find the correct answer")
+g=x+y
+print(g)
+
+#Checking if statement
+if g==x+y:
+    print("Correct Answer ")
+else:
+    print("Sorry the answer is incorrect")
