@@ -97,6 +97,9 @@ def base_conversion(max_num=60000, max_base=16):
 
 def _newton_symbol(n, k):
     """Utility of binomial_distribution()"""
+    # math.factorial only works with integers starting python 3.9
+    # ref: https://docs.python.org/3/library/math.html#math.factorial
+    n, k = int(n), int(k)   
     return math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
 
 
@@ -190,13 +193,14 @@ def complex_to_polar(min_real_imaginary_num=-20, max_real_imaginary_num=20):
     return problem, f'${theta}$'
 
 
-def decimal_to_roman_numerals(max_decimal=4000):
+def decimal_to_roman_numerals(max_decimal=3999):
     """Decimal to Roman Numerals
 
     | Ex. Problem | Ex. Solution |
     | --- | --- |
     | The number $92$ in roman numerals is:  | $XCII$ |
     """
+    assert 0 <= max_decimal <= 3999, f"max_decimal({max_decimal}) must be <= 3999"
     x = random.randint(0, max_decimal)
     x_copy = x
     roman_dict = {
