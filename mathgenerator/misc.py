@@ -486,7 +486,7 @@ def quotient_of_power_same_base(max_base=50, max_power=10):
 
     problem = f"The Quotient of ${base}^{{{power1}}}$ and ${base}^{{{power2}}} = " \
         f"{base}^{{{power1}-{power2}}} = {base}^{{{step}}}$"
-    return problem, f'${solution}$'
+    return problem, f'{solution}'
 
 
 def quotient_of_power_same_power(max_base=50, max_power=10):
@@ -504,7 +504,7 @@ def quotient_of_power_same_power(max_base=50, max_power=10):
 
     problem = f"The quotient of ${base1}^{{{power}}}$ and ${base2}^{{{power}}} = " \
         f"({base1}/{base2})^{power} = {step}^{{{power}}}$"
-    return problem, f'${solution}$'
+    return problem, f'{solution}'
 
 
 def set_operation(min_size=3, max_size=7):
@@ -548,7 +548,7 @@ def signum_function(min=-999, max=999):
         b = -1
 
     problem = f"Signum of ${a}$ is ="
-    solution = f'${b}$'
+    solution = f'{b}'
     return problem, solution
 
 

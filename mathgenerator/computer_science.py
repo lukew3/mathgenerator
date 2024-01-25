@@ -85,7 +85,7 @@ def binary_to_decimal(max_dig=10):
     """
     problem = ''.join(
         [str(random.randint(0, 1)) for _ in range(random.randint(1, max_dig))])
-    solution = f'${int(problem, 2)}$'
+    solution = f'{int(problem, 2)}'
     return f'${problem}$', solution
 
 
@@ -223,7 +223,7 @@ def nth_fibonacci_number(max_n=100):
     solution = int(
         (math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))
 
-    return problem, f'${solution}$'
+    return problem, f'{solution}'
 
 
 def nth_tribonacci_number(min_length=1, max_length=80):
