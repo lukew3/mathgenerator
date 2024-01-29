@@ -31,8 +31,15 @@ def basic_algebra(max_variable=10):
     elif a == 1 or a == i:
         x = f"{c - b}"
 
-    problem = f"${a}x + {b} = {c}$"
-    solution = f"x"
+    #Have to add this and I don't know why
+    try:
+        if x*int(a) != int(c)-int(b):
+            x = f"{c - b}/{a}"
+    except:
+        return basic_algebra(max_variable)
+
+    problem = f"Solve for x: ${a}x + {b} = {c}$"
+    solution = f"{eval(x)}"
     return problem, solution
 
 
