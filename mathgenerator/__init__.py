@@ -34,7 +34,14 @@ def generate_context(seed = None):
     if seed is not None:
         random.seed(seed)
     choice = random.choice(gen_list)
-    problem, solution = globals()[choice[0]]()
+    _ = globals()[choice[0]]()
+    problem, solution = _[0], _[1]
+    if len(_) == 3:
+        forward_words = _[2]
+    else:
+        forward_words = []
+    forward_words.extend(choice[0].split('_')).extend(choice[1].split('_'))
+    problem = str(problem)
     solution = str(solution)
     try:
         # See if the solution is a float
@@ -45,6 +52,7 @@ def generate_context(seed = None):
             "reward_type": 'float',
             'topic': choice[1],
             'subtopic': choice[0],
+            'forward_words': forward_words
         }
     except:
         if solution.lower().replace('$', '') in ['yes', 'no']:
@@ -54,6 +62,7 @@ def generate_context(seed = None):
                 "reward_type": 'binary',
                 'topic': choice[1],
                 'subtopic': choice[0],
+                'forward_words': forward_words
             }
         return {
             "problem": problem,
@@ -61,4 +70,5 @@ def generate_context(seed = None):
             "reward_type": 'string',
             'topic': choice[1],
             'subtopic': choice[0],
+            'forward_words': forward_words
         }
