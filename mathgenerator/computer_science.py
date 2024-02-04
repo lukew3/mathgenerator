@@ -223,7 +223,7 @@ def nth_fibonacci_number(max_n=100):
     solution = int(
         (math.pow(gratio, n) - math.pow(-gratio, -n)) / (math.sqrt(5)))
 
-    return problem, f'{solution}'
+    return problem, f'${solution}$'
 
 
 def nth_tribonacci_number(min_length=1, max_length=80):

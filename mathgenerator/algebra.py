@@ -71,7 +71,7 @@ def combine_like_terms(max_coef=10, max_exp=20, max_terms=10, max_x=10):
     problem = problem + " for x = " + str(x)
     solution = sympy.sympify(solution.replace("x", "*" + str(x)).replace('{', '').replace('}', ''), evaluate=True)
 
-    return f'${problem}$', f'{solution}'
+    return f'Simplify: ${problem}$', f'{solution}'
 
 
 def complex_quadratic(prob_type=0, max_range=10):
@@ -498,10 +498,10 @@ def linear_equations(n=2, var_range=20, coeff_range=20):
     # problem = "\n".join(problem)
     problem = "$ and $".join(problem)
 
-    if random.randint(0, 1) == 0:
-        return f'Given the equations ${problem}$, solve for $x$', f'{soln[0]}'
-    else:
-        return f'Given the equations ${problem}$, solve for $y$', f'{soln[1]}'
+    
+    vopts = ['x','y']
+    vsolve = random.choice(vopts)
+    return f'Given the equations ${problem}$, solve for {vsolve}', f'{soln[vopts.index(vsolve)]}'
 
 
 def line_equation_from_2_points(max_val=20):
