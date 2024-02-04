@@ -166,12 +166,12 @@ def basic_trigonometry(angles=[0, 30, 45, 60, 90],
         1.73: r"\sqrt{3}",
     }
 
-    solution = result_fraction_map[round(
-        eval(expression),
-        2)] if round(eval(expression),
-                     2) <= 99999 else r"\infty"  # for handling the ∞ condition
+    #solution = result_fraction_map[round(
+    #    eval(expression),
+    #    2)] if round(eval(expression),
+    #                 2) <= 99999 else r"\infty"  # for handling the ∞ condition
 
-    return problem, f'${solution}$'
+    return problem, f'{round(eval(expression))}'
 
 
 def circumference(max_radius=100):

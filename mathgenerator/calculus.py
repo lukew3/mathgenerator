@@ -21,10 +21,10 @@ def definite_integral(max_coef=100):
     solution = round(result, 2)
 
     problem = f"The definite integral within limits $0$ to $1$ of the equation ${a}x^2 + {b}x + {c} = $"
-    return problem, f'${solution}$'
+    return problem, f'{solution}'
 
 
-def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
+def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5, max_x = 20):
     r"""Power Rule Differentiation
 
     | Ex. Problem | Ex. Solution |
@@ -32,8 +32,8 @@ def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
     | Differentiate $1x^{5} + 4x^{7} + 4x^{4}$ | $5x^{4} + 28x^{6} + 16x^{3}$ |
     """
     numTerms = random.randint(1, max_terms)
-    problem = "Differentiate $"
-    solution = "$"
+    problem = "Find the derivative of  $"
+    solution = ""
 
     for i in range(numTerms):
         if i > 0:
@@ -44,8 +44,11 @@ def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
 
         problem += f'{coefficient}x^{{{exponent}}}'
         solution += f'{coefficient * exponent}x^{{{exponent - 1}}}'
+        x = random.randint(1, max_x)
+        solution = solution.replace('^', '**').replace('x', '*' + str(x)).replace('{', '').replace('}', '')
+        solution = str(eval(solution))
 
-    return problem + '$', solution + '$'
+    return problem + f'$ at x = {x}', solution
 
 
 def power_rule_integration(max_coef=10, max_exp=10, max_terms=5):

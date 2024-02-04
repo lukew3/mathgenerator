@@ -1,4 +1,5 @@
 import random
+import sympy
 
 
 def absolute_difference(max_a=100, max_b=100):
@@ -12,7 +13,7 @@ def absolute_difference(max_a=100, max_b=100):
     b = random.randint(-1 * max_b, max_b)
     absDiff = abs(a - b)
 
-    return f'$|{a}-{b}|=$', f"${absDiff}$"
+    return f'$|{a}-{b}|=$', f"{absDiff}"
 
 
 def addition(max_sum=99, max_addend=50):
@@ -30,7 +31,7 @@ def addition(max_sum=99, max_addend=50):
     c = a + b
 
     problem = f'${a}+{b}=$'
-    solution = f'${c}$'
+    solution = f'{c}'
     return problem, solution
 
 
@@ -77,7 +78,7 @@ def cube_root(min_no=1, max_no=1000):
 
     return (
         rf"What is the cube root of: $\sqrt[3]{{{b}}}=$ to 2 decimal places?",
-        f"${round(a, 2)}$")
+        f"{round(a, 2)}")
 
 
 def divide_fractions(max_val=10):
@@ -110,7 +111,9 @@ def divide_fractions(max_val=10):
     sol_numerator = tmp_n // gcd
     sol_denominator = tmp_d // gcd
 
-    return rf'$\frac{{{a}}}{{{b}}}\div\frac{{{c}}}{{{d}}}=$', f'$\frac{{{sol_numerator}}}{{{sol_denominator}}}$'
+    
+
+    return rf'$\frac{{{a}}}{{{b}}}\div\frac{{{c}}}{{{d}}}=$', str(sol_numerator/sol_denominator)
 
 
 def division(max_a=25, max_b=25):
@@ -127,7 +130,7 @@ def division(max_a=25, max_b=25):
     dividend = random.choice([a, b])
     quotient = int(divisor / dividend)
 
-    return rf'${divisor}\div{dividend}=$', f'${quotient}$'
+    return rf'${divisor}\div{dividend}=$', f'{quotient}'
 
 
 def exponentiation(max_base=20, max_expo=10):
@@ -140,7 +143,7 @@ def exponentiation(max_base=20, max_expo=10):
     base = random.randint(1, max_base)
     expo = random.randint(1, max_expo)
 
-    return f'${base}^{{{expo}}}=$', f'${base**expo}$'
+    return f'${base}^{{{expo}}}=$', f'{base**expo}'
 
 
 def factorial(max_input=6):
@@ -157,7 +160,7 @@ def factorial(max_input=6):
         b *= n
         n -= 1
 
-    return f'${a}! =$', f'${b}$'
+    return f'{a}!', f'{b}'
 
 
 def fraction_multiplication(max_val=10):
@@ -190,9 +193,9 @@ def fraction_multiplication(max_val=10):
 
     problem = rf"$\frac{{{a}}}{{{b}}}\cdot\frac{{{c}}}{{{d}}}=$"
     if (tmp_d == 1 or tmp_d == gcd):
-        solution = rf"$\frac{{{tmp_n}}}{{{gcd}}}$"
+        solution = tmp_n/gcd
     else:
-        solution = rf"$\frac{{{tmp_n//gcd}}}{{{tmp_d//gcd}}}$"
+        solution = (tmp_n//gcd)/(tmp_d//gcd)
     return problem, solution
 
 
@@ -207,7 +210,7 @@ def fraction_to_decimal(max_res=99, max_divid=99):
     b = random.randint(1, min(max_res, max_divid))
     c = round(a / b, 2)
 
-    return rf'${a}\div{b}=$', f'${c}$'
+    return rf'${a}\div{b}=$', f'{c}'
 
 
 def greatest_common_divisor(numbers_count=2, max_num=10**3):
@@ -234,7 +237,7 @@ def greatest_common_divisor(numbers_count=2, max_num=10**3):
         greatestCommonDivisor = greatestCommonDivisorOfTwoNumbers(
             numbers[index], greatestCommonDivisor)
 
-    return f'$GCD({",".join(map(str, numbers))})=$', f"${greatestCommonDivisor}$"
+    return f'$GCD({",".join(map(str, numbers))})=$', f"{greatestCommonDivisor}"
 
 
 def is_composite(max_num=250):
@@ -289,7 +292,7 @@ def multiplication(max_multi=12):
     b = random.randint(0, max_multi)
     c = a * b
 
-    return rf'${a}\cdot{b}=$', f'${c}$'
+    return rf'${a}\cdot{b}=$', f'{c}'
 
 
 def percentage(max_value=99, max_percentage=99):
@@ -304,7 +307,7 @@ def percentage(max_value=99, max_percentage=99):
     problem = f"What is ${a}$% of ${b}$?"
     percentage = a / 100 * b
     formatted_float = "{:.2f}".format(percentage)
-    solution = f"${formatted_float}$"
+    solution = f"{formatted_float}"
 
     return problem, solution
 
@@ -323,7 +326,7 @@ def percentage_difference(max_value=200, min_value=0):
     diff = round(diff, 2)
 
     problem = f"What is the percentage difference between ${value_a}$ and ${value_b}$?"
-    solution = f'${diff}$%'
+    solution = f'{diff}'
     return problem, solution
 
 
@@ -344,7 +347,7 @@ def percentage_error(max_value=100, min_value=-100):
     error = round(error, 2)
 
     problem = f"Find the percentage error when observed value equals ${observed_value}$ and exact value equals ${exact_value}$."
-    solution = f'${error}$%'
+    solution = f'{error}'
     return problem, solution
 
 
@@ -361,7 +364,7 @@ def power_of_powers(max_base=50, max_power=10):
     step = power1 * power2
 
     problem = f"Simplify ${base}^{{{power1}^{{{power2}}}}}$"
-    solution = f"${base}^{{{step}}}$"
+    solution = f"{base**step}"
     return problem, solution
 
 
@@ -375,7 +378,7 @@ def square(max_square_num=20):
     a = random.randint(1, max_square_num)
     b = a**2
 
-    return f'${a}^2=$', f'${b}$'
+    return f'${a}^2=$', f'{b}'
 
 
 def square_root(min_no=1, max_no=12):
@@ -388,7 +391,7 @@ def square_root(min_no=1, max_no=12):
     b = random.randint(min_no, max_no)
     a = b**2
 
-    return rf'$\sqrt{{{a}}}=$', f'${b}$'
+    return rf'$\sqrt{{{a}}}=$', f'{b}'
 
 
 def simplify_square_root(max_variable=100):
@@ -433,4 +436,4 @@ def subtraction(max_minuend=99, max_diff=99):
     b = random.randint(max(0, (a - max_diff)), a)
     c = a - b
 
-    return f'${a}-{b}=$', f'${c}$'
+    return f'${a}-{b}=$', f'{c}'

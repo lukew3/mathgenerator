@@ -4,6 +4,7 @@ import math
 import fractions
 import sympy
 
+FILENAME = "algebra"
 
 def basic_algebra(max_variable=10):
     r"""Basic Algebra
@@ -30,12 +31,19 @@ def basic_algebra(max_variable=10):
     elif a == 1 or a == i:
         x = f"{c - b}"
 
-    problem = f"${a}x + {b} = {c}$"
-    solution = f"${x}$"
+    #Have to add this and I don't know why
+    try:
+        if x*int(a) != int(c)-int(b):
+            x = f"{c - b}/{a}"
+    except:
+        return basic_algebra(max_variable)
+
+    problem = f"Solve for x: ${a}x + {b} = {c}$"
+    solution = f"{eval(x)}"
     return problem, solution
 
 
-def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
+def combine_like_terms(max_coef=10, max_exp=20, max_terms=10, max_x=10):
     r"""Combine Like Terms
 
     | Ex. Problem | Ex. Solution |
@@ -59,7 +67,11 @@ def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
             d[exponents[i]] = coefs[i]
     solution = " + ".join([f"{d[k]}x^{{{k}}}" for k in sorted(d)])
 
-    return f'${problem}$', f'${solution}$'
+    x = random.randint(1, max_x)
+    problem = problem + " for x = " + str(x)
+    solution = sympy.sympify(solution.replace("x", "*" + str(x)).replace('{', '').replace('}', ''), evaluate=True)
+
+    return f'Simplify: ${problem}$', f'{solution}'
 
 
 def complex_quadratic(prob_type=0, max_range=10):
@@ -148,7 +160,7 @@ def compound_interest(max_principle=10000, max_rate=10, max_time=10):
     a = round(p * (1 + r / 100)**n, 2)
 
     problem = f"Compound interest for a principle amount of ${p}$ dollars, ${r}$% rate of interest and for a time period of ${n}$ years is $=$"
-    return problem, f'${a}$'
+    return problem, f'{a}'
 
 
 def distance_two_points(max_val_xy=20, min_val_xy=-20):
@@ -168,7 +180,7 @@ def distance_two_points(max_val_xy=20, min_val_xy=-20):
 
     distanceSq = (point1X - point2X)**2 + (point1Y - point2Y)**2
 
-    solution = rf"$\sqrt{{{distanceSq}}}$"
+    solution = str(round(distanceSq**0.5, 2))
     problem = f"Find the distance between $({point1X}, {point1Y})$ and $({point2X}, {point2Y})$"
     return problem, solution
 
@@ -273,8 +285,8 @@ def int_matrix_22_determinant(max_matrix_val=100):
     determinant = a * d - b * c
     lst = [[a, b], [c, d]]
 
-    problem = rf"$\det {bmatrix(lst)}= $"
-    solution = f"${determinant}$"
+    problem = rf"Find the determinant of ${bmatrix(lst)}$"
+    solution = f"{determinant}"
     return problem, solution
 
 
@@ -486,7 +498,10 @@ def linear_equations(n=2, var_range=20, coeff_range=20):
     # problem = "\n".join(problem)
     problem = "$ and $".join(problem)
 
-    return f'Given the equations ${problem}$, solve for $x$ and $y$', f'${solution}$'
+    
+    vopts = ['x','y']
+    vsolve = random.choice(vopts)
+    return f'Given the equations ${problem}$, solve for {vsolve}', f'{soln[vopts.index(vsolve)]}'
 
 
 def line_equation_from_2_points(max_val=20):
@@ -543,7 +558,7 @@ def log(max_base=3, max_val=8):
     c = pow(b, a)
 
     problem = f'$log_{{{b}}}({c})=$'
-    solution = f'${a}$'
+    solution = f'{a}'
     return problem, solution
 
 
@@ -677,7 +692,7 @@ def simple_interest(max_principle=10000, max_rate=10, max_time=10):
     s = round((p * r * t) / 100, 2)
 
     problem = f"Simple interest for a principle amount of ${p}$ dollars, ${r}$% rate of interest and for a time period of ${t}$ years is $=$ "
-    solution = f'${s}$'
+    solution = f'{s}'
     return problem, solution
 
 
@@ -727,8 +742,12 @@ def system_of_equations(range_x=10, range_y=10, coeff_mult_range=10):
             '' if x_str != '' else '0')
         return f'{x_str}{op}{y_str} = {coeffs[2]}'
 
-    problem = f"Given ${coeffToFuncString(new_c1)}$ and ${coeffToFuncString(new_c2)}$, solve for $x$ and $y$."
-    solution = f"$x = {x}$, $y = {y}$"
+    if random.randint(0, 1) == 0:
+        problem = f"Given ${coeffToFuncString(new_c1)}$ and ${coeffToFuncString(new_c2)}$, solve for $x$"
+        solution = f'{x}'
+    else:
+        problem = f"Given ${coeffToFuncString(new_c1)}$ and ${coeffToFuncString(new_c2)}$, solve for $y$"
+        solution = f'{y}'
     return problem, solution
     # Add random (non-zero) multiple of equations to each other
 
@@ -764,7 +783,7 @@ def vector_dot(min_val=-20, max_val=20):
     c = a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
 
     problem = rf'${a}\cdot{b}=$'
-    solution = f'${c}$'
+    solution = f'{c}'
     return problem, solution
 
 
