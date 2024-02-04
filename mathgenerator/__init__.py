@@ -33,18 +33,18 @@ def genById(id, *args, **kwargs):
 def generate_context(seed = None, question_type = None, question_kwargs = None):
     if seed is not None:
         random.seed(seed)
-        
+
+    choice = random.choice(gen_list)
     if question_type is not None:
         generation = globals()[question_type](**question_kwargs)
     else:
-        choice = random.choice(gen_list)
         generation = globals()[choice[0]]()
         
     # If the function returns 3 values, the third value is the forward words (otherwise it will be an empty list)
     problem, solution, *forward_words = generation
-    
+
     # Add the forward words from the subtopic and topic
-    forward_words.extend(choice[0].split('_')).extend(choice[1].split('_'))
+    forward_words += choice[0].split('_') + choice[1].split('_')
     
     problem = str(problem)
     solution = str(solution)
