@@ -188,8 +188,8 @@ def fibonacci_series(min_no=1):
 
     fibList = createFibList(n)
 
-    problem = "The Fibonacci Series of the first ${n}$ numbers is ?"
-    solution = ', '.join(map(str, fibList))
+    problem = "The sum of the first ${n}$ numbers of the Fibonacci Series is ?"
+    solution = sum(fibList)
     return problem, f'${solution}$'
 
 
@@ -267,6 +267,6 @@ def tribonacci_series(min_length=1, max_length=80):
 
     n = random.randint(min_length, max_length)
     tribSeries = createTribSeries(n)
-    problem = "The Tribonacci Series of the first ${n}$ numbers is ?"
-    solution = ', '.join(map(str, tribSeries))
+    problem = "The sum of the first ${n}$ numbers in the Tribonacci Series is ?"
+    solution = sum(tribSeries)
     return problem, f'${solution}$'

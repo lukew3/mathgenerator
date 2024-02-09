@@ -84,8 +84,8 @@ def stationary_points(max_exp=3, max_coef=10):
     | --- | --- |
     | $f(x)=6x^3 + 6x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
     """
-    solution = ''
-    while len(solution) == 0:
+    solution = ""
+    while solution == "" or solution == "[]":
         x = sympy.symbols('x')
         problem = 0
         for exp in range(max_exp + 1):
@@ -94,7 +94,7 @@ def stationary_points(max_exp=3, max_coef=10):
         solution = sympy.stationary_points(problem, x)
 
     problem = 'f(x)=' + str(problem).replace('**', '^').replace('*', '')
-    return f'${problem}$', f'${sympy.latex(solution)[6:-8]}}}$'
+    return f'${problem}$', f'${sympy.latex(solution)[6:-8]}$'
 
 
 def trig_differentiation():
