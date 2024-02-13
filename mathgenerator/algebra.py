@@ -218,6 +218,7 @@ def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
         p1 = ""
     elif len(p1) > 0 and p1[0] == "+":
         p1 = p1[1:]
+    # Protect against attempting to index an empty list
     if p3 == "+1" or len(p3) == 0:
         p3 = ""
     elif p3[0] == "+":
@@ -798,6 +799,7 @@ def orthogonal_projection(min_val=-10, max_val=10):
     u = [random.randint(min_val, max_val) for _ in range(2)]
     dot_t = v[0] * u[0] + v[1] * u[1]
     dot_b = u[0] * u[0] + u[1] * u[1]
+    # Protect against divide by 0 errors by recursively calling function
     if dot_b == 0:
         return orthogonal_projection(min_val=min_val, max_val=max_val)
     frac = fractions.Fraction(dot_t, dot_b).limit_denominator()
