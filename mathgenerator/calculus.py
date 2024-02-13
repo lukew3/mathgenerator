@@ -85,6 +85,7 @@ def stationary_points(max_exp=3, max_coef=10):
     | $f(x)=6x^3 + 6x^2 + x + 8$ | ${- \frac{1}{3} - \frac{\sqrt{2}}{6}, - \frac{1}{3} + \frac{\sqrt{2}}{6}}$ |
     """
     solution = ""
+    #Protect against indexing an empty string or list
     while solution == "" or solution == "[]":
         x = sympy.symbols('x')
         problem = 0
