@@ -420,8 +420,8 @@ def prime_factors(min_val=1, max_val=200):
     if n > 1:
         factors.append(n)
 
-    problem = f"Find prime factors of ${a}$"
-    solution = f"${', '.join(map(str, factors))}$"
+    problem = f"What's the largest prime factor of ${a}$"
+    solution = f"${factors[-1]}$"
     return problem, solution
 
 

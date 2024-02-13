@@ -339,6 +339,9 @@ def percentage_error(max_value=100, min_value=-100):
     """
     observed_value = random.randint(min_value, max_value)
     exact_value = random.randint(min_value, max_value)
+    # Protect against divide by 0 errors
+    if exact_value == 0:
+        exact_value = 1
 
     if observed_value * exact_value < 0:
         observed_value *= -1
