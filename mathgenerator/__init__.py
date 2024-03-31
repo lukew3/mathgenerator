@@ -9,6 +9,7 @@ from .computer_science import *
 from .geometry import *
 from .misc import *
 from .statistics import *
+from .solve_word_problem import *
 
 from ._gen_list import gen_list
 
