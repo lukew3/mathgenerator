@@ -474,25 +474,28 @@ def surface_area_pyramid(unit='m'):
                     (15, 20, 25), (5, 12, 13), (10, 24, 26), (7, 24, 25)]
 
     # Generate first triplet
-    height, half_width, triangle_height_1 = random.sample(
+    height, half_width, _ = random.sample(
         random.choice(_PYTHAGOREAN), 3)
-
-    # Calculate first triangle's area
-    triangle_1 = half_width * triangle_height_1
+    
+    # Calculate the first triangle height
+    triangle_height_1 = math.sqrt((half_width)**2 + height**2)
 
     # Generate second triplet
     second_triplet = random.choice([i for i in _PYTHAGOREAN if height in i])
-    half_length, triangle_height_2 = random.sample(
+    half_length, _ = random.sample(
         tuple(i for i in second_triplet if i != height), 2)
-
-    # Calculate second triangle's area
-    triangle_2 = half_length * triangle_height_2
+    
+    # Calculate the second triangle height
+    triangle_height_2 = math.sqrt((half_length)**2 + height**2)
+    
+    # Calculate triangles area
+    triangle_1 = half_length * triangle_height_1
+    triangle_2 = half_width * triangle_height_2
 
     # Calculate base area
     base = 4 * half_width * half_length
-
     ans = base + 2 * triangle_1 + 2 * triangle_2
-
+    
     problem = f"Surface area of pyramid with base length $= {2*half_length}{unit}$, base width $= {2*half_width}{unit}$, and height $= {height}{unit}$ is"
     solution = f"${ans} {unit}^2$"
     return problem, solution
