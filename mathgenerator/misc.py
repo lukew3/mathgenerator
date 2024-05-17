@@ -44,7 +44,7 @@ def arithmetic_progression_term(max_d=100, max_a=100, max_n=100):
 
 def _fromBaseTenTo(n, to_base):
     """Converts a decimal number n to another base, to_base.
-    Utility of base_conversion()
+    Utility of base_conversion() and base_b_given_two_nums()
     """
     alpha = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     assert type(
@@ -94,6 +94,27 @@ def base_conversion(max_num=60000, max_base=16):
     ans = _fromBaseTenTo(n, bases[1])
     return problem, f'${ans}$'
 
+def base_b_given_two_nums(max_num=1000, max_base=16):
+    """Base b Given Two Numbers
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the value of b if $10$ base $2$ is equal to $2$ base b | $10$ |
+    """
+    #derive a random number
+    val = random.randint(2, max_num)
+    #derive 2 unequal random bases
+    base1 = random.randint(2, max_base)
+    base2 = random.randint(2, max_base) #base b
+    while base1 == base2: base2 = random.randint(2, max_base) #recalculate bases if they are equal
+
+    #find the numbers in the given bases
+    num1 = _fromBaseTenTo(val, base1)
+    num2 = _fromBaseTenTo(val, base2)
+
+    problem = f"Find the value of b if ${num1}$ base ${base1}$ is equal to ${num2}$ base b"
+    solution = f'${base2}$'
+    return problem, solution
 
 def _newton_symbol(n, k):
     """Utility of binomial_distribution()"""

@@ -132,4 +132,5 @@ gen_list = [
     ("tribonacci_series", "computer_science"),
     ("nth_tribonacci_number", "computer_science"),
     ("velocity_of_object", "misc"),
+    ("base_b_given_two_nums", "misc"),
 ]
