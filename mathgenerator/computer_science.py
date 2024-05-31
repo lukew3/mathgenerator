@@ -270,3 +270,35 @@ def tribonacci_series(min_length=1, max_length=80):
     problem = "The Tribonacci Series of the first ${n}$ numbers is ?"
     solution = ', '.join(map(str, tribSeries))
     return problem, f'${solution}$'
+
+
+def generate_random_word(length):
+    # Generate a random word of given length
+    letters = math.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+def find_anagrams(words):
+    anagrams = {}
+
+    # Iterate through each word in the input list
+    for word in words:
+        # Sort the characters of the word to create a key for the anagrams dictionary
+        sorted_word = ''.join(sorted(word))
+
+        # Check to see if sorted_word is already a key in the dictionary
+        if sorted_word in anagrams:
+            # If it is, add the word to the set of anagrams for that key
+            anagrams[sorted_word].add(word)
+        else:
+            # If it isn't, create a new set with the word as the first element
+            anagrams[sorted_word] = {word}
+
+    # Convert the dictionary values to a list and return
+    return list(anagrams.values())
+
+def generate_anagrams_problem(num_words, word_length):
+    words = [generate_random_word(word_length) for _ in range(num_words)]
+    anagrams_sets = find_anagrams(words)
+    problem = "Find the sets of anagrams for the following words:\n" + ', '.join(words) + "?"
+    solution = "\n\n".join([', '.join(anagram_set) for anagram_set in anagrams_sets])
+    return problem, solution
