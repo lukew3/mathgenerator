@@ -42,8 +42,15 @@ def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
         coefficient = random.randint(1, max_coef)
         exponent = random.randint(1, max_exp)
 
-        problem += f'{coefficient}x^{{{exponent}}}'
-        solution += f'{coefficient * exponent}x^{{{exponent - 1}}}'
+        problem += f'{coefficient}x^{{{exponent}}}' if exponent>1 else f'{coefficient}x'
+        # solution += f'{coefficient * exponent}x^{{{exponent - 1}}}'
+        if exponent==1:
+            solution+=f'{coefficient * exponent}'
+        elif exponent==2:
+            solution+=f'{coefficient * exponent}x'
+        else:
+            solution+=f'{coefficient * exponent}x^{{{exponent - 1}}}'
+    
 
     return problem + '$', solution + '$'
 
