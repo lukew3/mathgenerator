@@ -44,7 +44,11 @@ def power_rule_differentiation(max_coef=10, max_exp=10, max_terms=5):
 
         problem += f'{coefficient}x^{{{exponent}}}'
         solution += f'{coefficient * exponent}x^{{{exponent - 1}}}'
-
+    
+    problem = problem.replace('x^{1}', 'x')
+    problem = problem.replace('x^{0}', '')
+    solution = solution.replace('x^{1}', 'x')
+    solution = solution.replace('x^{0}', '')
     return problem + '$', solution + '$'
 
 
