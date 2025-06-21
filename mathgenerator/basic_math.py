@@ -34,6 +34,50 @@ def addition(max_sum=99, max_addend=50):
     return problem, solution
 
 
+def add_fractions(max_val=10):
+    r"""Add Fractions
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\frac{1}{2}+\frac{3}{4}=$ | $\frac{5}{4}$ |
+    """
+    def calculate_gcd(x, y):
+        while y:
+            x, y = y, x % y
+        return x
+
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
+    c = random.randint(1, max_val)
+    d = random.randint(1, max_val)
+
+    # Ensure denominators are not zero and different for variety
+    while b == 0:
+        b = random.randint(1, max_val)
+    while d == 0:
+        d = random.randint(1, max_val)
+
+    common_denominator = (b * d) // calculate_gcd(b, d)
+    
+    numerator1 = a * (common_denominator // b)
+    numerator2 = c * (common_denominator // d)
+    
+    result_numerator = numerator1 + numerator2
+    
+    gcd_result = calculate_gcd(result_numerator, common_denominator)
+    simplified_numerator = result_numerator // gcd_result
+    simplified_denominator = common_denominator // gcd_result
+
+    problem = rf'$\frac{{{a}}}{{{b}}}+\frac{{{c}}}{{{d}}}=$'
+    
+    if simplified_numerator == 0:
+        solution = '$0$'
+    else:
+        solution = rf'$\frac{{{simplified_numerator}}}{{{simplified_denominator}}}$'
+    
+    return problem, solution
+
+
 def compare_fractions(max_val=10):
     r"""Compare Fractions
 
@@ -391,6 +435,38 @@ def square_root(min_no=1, max_no=12):
     return rf'$\sqrt{{{a}}}=$', f'${b}$'
 
 
+def simplify_fraction(max_num=100, max_den=100):
+    r"""Simplifying Fractions
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Simplify the fraction $\frac{42}{56}$ | $\frac{3}{4}$ |
+    """
+    
+    simple_num = random.randint(1, max_num // 4)
+    simple_den = random.randint(1, max_den // 4)
+    
+    max_factor = min(max_num // simple_num, max_den // simple_den, 10)
+    factor = random.randint(2, max_factor) if max_factor >= 2 else 2
+    
+    num = simple_num * factor
+    den = simple_den * factor
+
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    g = gcd(num, den)
+    verified_simple_num = num // g
+    verified_simple_den = den // g
+
+    problem = rf"Simplify the fraction $\frac{{{num}}}{{{den}}}$"
+    solution = rf"$\frac{{{verified_simple_num}}}{{{verified_simple_den}}}$"
+
+    return problem, solution
+
+
 def simplify_square_root(max_variable=100):
     r"""Simplify Square Root
 
@@ -422,6 +498,52 @@ def simplify_square_root(max_variable=100):
         return rf'$\sqrt{{{y}}}$', rf'${a}\sqrt{{{b}}}$'
 
 
+def subtract_fractions(max_val=10):
+    r"""Subtract Fractions
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $\frac{3}{4}-\frac{1}{2}=$ | $\frac{1}{4}$ |
+    """
+    def calculate_gcd(x, y):
+        while y:
+            x, y = y, x % y
+        return x
+
+    a = random.randint(1, max_val)
+    b = random.randint(1, max_val)
+    c = random.randint(1, max_val)
+    d = random.randint(1, max_val)
+
+    while b == 0:
+        b = random.randint(1, max_val)
+    while d == 0:
+        d = random.randint(1, max_val)
+
+    common_denominator = (b * d) // calculate_gcd(b, d)
+    
+    numerator1 = a * (common_denominator // b)
+    numerator2 = c * (common_denominator // d)
+    
+    result_numerator = numerator1 - numerator2
+    
+    if result_numerator < 0:
+        return subtract_fractions(max_val)
+
+    gcd_result = calculate_gcd(result_numerator, common_denominator) if result_numerator != 0 else common_denominator
+    simplified_numerator = result_numerator // gcd_result
+    simplified_denominator = common_denominator // gcd_result
+
+    problem = rf'$\frac{{{a}}}{{{b}}}-\frac{{{c}}}{{{d}}}=$'
+    
+    if simplified_numerator == 0:
+        solution = '$0$'
+    else:
+        solution = rf'$\frac{{{simplified_numerator}}}{{{simplified_denominator}}}$'
+        
+    return problem, solution
+
+
 def subtraction(max_minuend=99, max_diff=99):
     r"""Subtraction of two numbers
 
@@ -434,3 +556,4 @@ def subtraction(max_minuend=99, max_diff=99):
     c = a - b
 
     return f'${a}-{b}=$', f'${c}$'
+

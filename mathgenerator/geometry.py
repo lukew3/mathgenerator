@@ -103,6 +103,47 @@ def area_of_circle_given_center_and_point(max_coordinate=10, max_radius=10):
     problem = f"Area of circle with center $({center_x},{center_y})$ and passing through $({point_x}, {point_y})$ is"
     return problem, f'${area}$'
 
+def area_of_ellipse(max_axis_len=50):
+    r"""Area of Ellipse
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | What is the area of an ellipse with semi-major axis $15$ and semi-minor axis $8$? | $376.99$ |
+    """
+    a = random.randint(1, max_axis_len)  # Semi-major axis
+    b = random.randint(1, max_axis_len)  # Semi-minor axis
+
+    area = round(math.pi * a * b, 2)
+
+    problem = f"What is the area of an ellipse with semi-major axis ${a}$ and semi-minor axis ${b}$?"
+    solution = f"${area}$"
+    return problem, solution
+
+if __name__ == "__main__":
+    problem, solution = area_of_ellipse()
+    print(problem)
+    print("Solution:", solution)
+
+
+def area_of_parallelogram(max_base=50, max_height=50):
+    r"""Area of Parallelogram
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | Find the area of a parallelogram with base $12$ units and height $7$ units | $84$ |
+    """
+    import random
+
+    base = random.randint(1, max_base)
+    height = random.randint(1, max_height)
+
+    area = base * height
+
+    problem = rf"Find the area of a parallelogram with base ${base}$ units and height ${height}$ units"
+    solution = f"${area}$"
+
+    return problem, solution
+
 
 def area_of_trapezoid(max_len=20):
     r"""Area of Trapezoid
