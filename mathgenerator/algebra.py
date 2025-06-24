@@ -27,8 +27,8 @@ def basic_algebra(max_variable=10):
 
     if (c - b == 0):
         x = "0"
-    elif a == 1 or a == i:
-        x = f"{c - b}"
+    elif a//i == 1:
+        x = f"{(c - b)//i}"
 
     problem = f"${a}x + {b} = {c}$"
     solution = f"${x}$"
