@@ -223,7 +223,7 @@ def expanding(range_x1=10, range_x2=10, range_a=10, range_b=10):
     return problem, solution
 
 
-def factoring(range_x1=10, range_x2=10):
+def factoring_quadratic(range_x1=10, range_x2=10):
     r"""Factoring Quadratic
     Given a quadratic equation in the form x^2 + bx + c, factor it into it's roots (x - x1)(x -x2)
 
@@ -256,6 +256,129 @@ def factoring(range_x1=10, range_x2=10):
     x2 = intParser(x2)
     solution = f"$(x{x1})(x{x2})$"
     return f"${problem}$", solution
+
+
+def factoring_complex_quadratic(range_x1=10, range_x2=10, range_d=10, range_e = 10):
+    r"""Factoring Quadratic
+    Given a quadratic equation in the form ax^2 + bx + c, factor it into it's roots (dx - x1)(ex -x2)
+
+    | Ex. Problem | Ex. Solution |
+    | --- | --- |
+    | $3x^2+2x-8$ | $(3x-4)(x+2)$ |
+    """
+    x1 = random.randint(-range_x1, range_x1)
+    x2 = random.randint(-range_x2, range_x2)
+
+    d = random.randint(-range_d, range_d)
+    while d==0:
+        d = random.randint(-range_d, range_d)
+
+    e = random.randint(-range_e, range_e)
+    while e==0:
+        e = random.randint(-range_e, range_e)
+
+    def intParser(z):
+        if (z > 0):
+            return f"+{z}"
+        elif (z < 0):
+            return f"-{abs(z)}"
+        else:
+            return ""
+
+    a = d*e
+    b = intParser(e*x1 + d*x2)
+    c = intParser(x1 * x2)
+
+    if b == "+1":
+        b = "+"
+    if a == 1:
+        a = ""
+    if b == "":
+        problem = f"{a}x^2{c}"
+    else:
+        problem = f"{a}x^2{b}x{c}"
+
+    x1 = intParser(x1)
+    x2 = intParser(x2)
+    if d == -1:
+        d = "-"
+    if d == 1:
+        d = ""
+    if e == -1:
+        e = "-"
+    if e == 1:
+        e = ""
+    solution = f"$({d}x{x1})({e}x{x2})$"
+    return f"${problem}$", solution
+
+
+def factoring_difference_of_squares(range_a=12, range_b=12, num_variables=1, max_start_power=2):
+    r"""Factoring the difference of two squares in the form (ax)^2 - (by)^2
+    into the form (ax-by)(ax+by)
+    Where a and b are any integers in a given range passed as a parameter. x,y are any algebraic variables squared.
+    the number of algebraic variables to be included in the solution is also passed as parameter num_variables
+    (default = 3)
+
+    | Ex. problem | Ex. solution |
+    | --- | --- |
+    | Factor 9x^2 - 36y^2z^2 | (3x - 6yz)(3x + 6yz) |
+        """
+
+    def assign_power(l_max_start_power):
+        return random.randint(1, l_max_start_power)
+
+    a = random.randint(1, range_a)
+    b = random.randint(1, range_b)
+
+    alphabet_string = "abcdefghijklmnopqrstuvwxyz"
+    variable_int = random.randint(0, 25)
+    variable_list = [[alphabet_string[variable_int], assign_power(max_start_power)]]
+    for i in range(num_variables - 1):
+        variable_int += 1
+        if variable_int > 25:
+            variable_int = 0
+        variable_list.append([alphabet_string[variable_int], assign_power(max_start_power)])
+
+    split_value = random.randint(0, num_variables)
+    a_variables = variable_list[0:split_value]
+    b_variables = variable_list[split_value:]
+
+    a_variable_strings = ""
+    for variable in a_variables:
+        a_variable_strings += f"{variable[0]}^{variable[1]}"
+
+    b_variable_strings = ""
+    for variable in b_variables:
+        b_variable_strings += f"{variable[0]}^{variable[1]}"
+
+    if a == 1 and a_variable_strings != "" and b == 1 and b_variable_strings != "":
+        solution = f"({a_variable_strings}+{b_variable_strings})({a_variable_strings}-{b_variable_strings})"
+    elif a == 1 and a_variable_strings != "":
+        solution = f"({a_variable_strings}+{b}{b_variable_strings})({a_variable_strings}-{b}{b_variable_strings})"
+    elif b == 1 and b_variable_strings != "":
+        solution = f"({a}{a_variable_strings}+{b_variable_strings})({a}{a_variable_strings}-{b_variable_strings})"
+    else:
+        solution = f"({a}{a_variable_strings}+{b}{b_variable_strings})({a}{a_variable_strings}-{b}{b_variable_strings})"
+    solution = solution.replace("^1", "")
+
+    a_variable_strings_squared = ""
+    for variable in a_variables:
+        a_variable_strings_squared += f"{variable[0]}^{variable[1] * 2}"
+
+    b_variable_strings_squared = ""
+    for variable in b_variables:
+        b_variable_strings_squared += f"{variable[0]}^{variable[1] * 2}"
+
+    if a == 1 and b == 1 and a_variable_strings_squared != "" and b_variable_strings_squared != "":
+        problem = f"{a_variable_strings_squared}-{b_variable_strings_squared}"
+    elif a == 1 and a_variable_strings_squared != "":
+        problem = f"{a_variable_strings_squared}-{b ** 2}{b_variable_strings_squared}"
+    elif b == 1 and b_variable_strings_squared != "":
+        problem = f"{a ** 2}{a_variable_strings_squared}-{b_variable_strings_squared}"
+    else:
+        problem = f"{a ** 2}{a_variable_strings_squared}-{b ** 2}{b_variable_strings_squared}"
+
+    return f"${problem}$", f"${solution}$"
 
 
 def int_matrix_22_determinant(max_matrix_val=100):
@@ -790,3 +913,4 @@ def orthogonal_projection(min_val=-10, max_val=10):
     problem = f'Find the orthogonal projection of ${v}$ onto ${u}$'
     solution = f'$[{y[0]}, {y[1]}]$'
     return problem, solution
+
