@@ -1,5 +1,8 @@
 # mathgenerator
 
+> [!WARNING]
+> I (lukew3), no longer am interested in maintaining this project. If you have a use case for this project and have the abilities to grow it and ensure/improve it's quality, email me at lukew25073@gmail.com and I will consider adding you as a maintainer. Thanks!
+
 A math problem generator, created for the purpose of giving teachers and students the means to easily get access to random math exercises to suit their needs.
 
 To try out generators, go to <https://mathgenerator-demo.netlify.app>
