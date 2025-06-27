@@ -56,6 +56,7 @@ gen_list = [
     ("DELETED", "DELETED"),
     ("dice_sum_probability", "statistics"),
     ("exponentiation", "basic_math"),
+    ("algebraic_exponentiation", "algebra"),
     ("confidence_interval", "statistics"),
     ("surds_comparison", "misc"),
     ("fibonacci_series", "computer_science"),
