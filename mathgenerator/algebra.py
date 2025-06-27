@@ -34,6 +34,49 @@ def basic_algebra(max_variable=10):
     solution = f"${x}$"
     return problem, solution
 
+#Made to comply with CACCS_NRN(Real numbers and exponents Common Core)
+def algebraic_exponentiation(difficulty=2):
+    base = random.choice([2, 3, 4, 5, 7, 8, 9])
+    numerator = random.randint(1, 5)
+    denominator = random.randint(2, 5)
+    exponent = f"{numerator}/{denominator}"
+
+    if difficulty == 2:
+        return {
+            "problem": f"Rewrite \\( \\sqrt[{denominator}]{{{base}^{numerator}}} \\) using a rational exponent.",
+            "solution": f"\\( {base}^{{{exponent}}} \\)"
+        }
+
+    elif difficulty == 3:
+        exp1 = f"{random.randint(1, 3)}/{denominator}"
+        exp2 = f"{random.randint(1, 3)}/{denominator}"
+        return {
+            "problem": f"Simplify \\( {base}^{exp1} \\cdot {base}^{exp2} \\)",
+            "solution": f"\\( {base}^{{{add_fractions(exp1, exp2)}}} \\)"
+        }
+
+    elif difficulty == 4:
+        outer = random.randint(2, 4)
+        return {
+            "problem": f"Simplify \\( ({base}^{{{exponent}}})^{outer} \\)",
+            "solution": f"\\( {base}^{{{multiply_fraction(exponent, outer)}}} \\)"
+        }
+
+    elif difficulty == 5:
+        return {
+            "problem": f"Explain why \\( ({base}^{{1/{denominator}}})^{denominator} = {base} \\)",
+            "solution": f"Because \\( ({base}^{{1/{denominator}}})^{denominator} = {base}^{{(1/{denominator}) \\cdot {denominator}}} = {base}^1 = {base} \\)"
+        }
+
+def add_fractions(frac1, frac2):
+    n1, d1 = map(int, frac1.split("/"))
+    n2, d2 = map(int, frac2.split("/"))
+    common_d = d1 * d2
+    return f"{n1 * d2 + n2 * d1}/{common_d}"
+
+def multiply_fraction(frac, multiplier):
+    n, d = map(int, frac.split("/"))
+    return f"{n * multiplier}/{d}"
 
 def combine_like_terms(max_coef=10, max_exp=20, max_terms=10):
     r"""Combine Like Terms
