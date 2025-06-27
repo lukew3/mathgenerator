@@ -40,6 +40,14 @@ def algebraic_exponentiation(difficulty=2):
     numerator = random.randint(1, 5)
     denominator = random.randint(2, 5)
     exponent = f"{numerator}/{denominator}"
+    if difficulty == 1:
+        root = denominator
+        power = f"{numerator}/{denominator}"
+        radical = f"\\sqrt[{root}]{{{base}^{numerator}}}" if root != 2 else f"\\sqrt{{{base}^{numerator}}}"
+        return {
+            "problem": f"Rewrite \\( {radical} \\) using a rational exponent.",
+            "solution": f"\\( {base}^{power} \\)"
+        }
 
     if difficulty == 2:
         return {
